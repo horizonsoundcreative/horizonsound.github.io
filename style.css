@@ -1,27 +1,37 @@
-/* HEADER LAYOUT */
+/* HEADER */
 .site-header {
-  background: #111;
+  background: #000;        /* solid black header */
   color: white;
   padding: 20px;
+  border-bottom: 2px solid #222;
 }
 
+/* Branding row: logo left, title right */
 .branding {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 20px;
 }
 
 .branding h1 {
   margin: 0;
   font-size: 2rem;
+  font-weight: 700;
 }
 
-/* NAVIGATION */
+/* Navigation bar under branding */
+.main-nav {
+  margin-top: 15px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+}
+
 .main-nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
-  margin: 15px 0 0 0;
+  gap: 25px;
+  margin: 0;
   padding: 0;
 }
 
@@ -31,7 +41,13 @@
   font-weight: bold;
 }
 
-/* TILE GRID */
+/* Logo sizing */
+.logo {
+  width: 80px;
+  height: auto;
+}
+
+/* Tile grid */
 .tile-grid {
   max-width: 1000px;
   margin: 40px auto;
@@ -47,19 +63,14 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* IMAGES */
+/* Hero image */
 .hero-image {
-  max-width: 100%;
+  width: 100%;
   border-radius: 8px;
   margin-bottom: 20px;
 }
 
-.logo {
-  width: 80px;
-  height: auto;
-}
-
-/* FOOTER */
+/* Footer */
 footer {
   text-align: center;
   padding: 30px;

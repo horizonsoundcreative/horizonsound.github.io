@@ -61,22 +61,6 @@
   border-radius: 0 !important;
 }
 
-/* Tile grid */
-.tile-grid {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
-  display: grid;
-  gap: 30px;
-}
-
-.tile {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
 /* Footer */
 footer {
   text-align: center;
@@ -86,3 +70,53 @@ footer {
   font-size: 0.9rem;
 }
 
+/* Section headers */
+.section-header {
+  font-size: 1.6rem;
+  margin: 40px 0 15px;
+  color: #ffffff;
+}
+
+/* Tile grid layout */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+/* Tile container */
+.tile {
+  display: block;
+  background: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover animation */
+.tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+/* Tile image */
+.tile img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Tile title */
+.tile-title {
+  padding: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* If you want to hide the title for YouTube thumbnails */
+.tile.no-title .tile-title {
+  display: none;
+}

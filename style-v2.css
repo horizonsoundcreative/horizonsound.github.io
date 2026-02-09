@@ -77,13 +77,6 @@ footer {
   color: #ffffff;
 }
 
-/* Tile grid layout */
-.tile-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 20px;
-}
-
 /* Tile container */
 .tile {
   display: block;
@@ -119,4 +112,38 @@ footer {
 /* If you want to hide the title for YouTube thumbnails */
 .tile.no-title .tile-title {
   display: none;
+}
+
+.tile-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+/* Large tablets */
+@media (max-width: 1200px) {
+  .tile-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Small tablets */
+@media (max-width: 900px) {
+  .tile-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .tile-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Very narrow phones */
+@media (max-width: 400px) {
+  .tile-grid {
+    grid-template-columns: 1fr;
+  }
 }

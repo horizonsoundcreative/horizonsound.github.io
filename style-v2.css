@@ -46,6 +46,10 @@ body {
   grid-column: 2; /* forces content into the center column */
 }
 
+.centered-column.lyrics-center {
+  grid-template-columns: 1fr minmax(300px, 700px) 1fr;
+}
+
 .branding {
   display: flex;
   align-items: center;

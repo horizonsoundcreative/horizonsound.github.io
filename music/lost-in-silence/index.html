@@ -1,3 +1,133 @@
-<h1>Lost in Silence</h1>
-<p>This page is under development. More coming soon.</p>
-<a href="/">Back to Home</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lost in Silence | Horizon Sound</title>
+  <link rel="stylesheet" href="/style-v2.css?v=17" />
+</head>
+
+<body>
+
+  <!-- HEADER (same as homepage) -->
+  <header class="site-header">
+    <div class="branding">
+      <img src="/assets/horizon-logo.svg" class="logo" alt="Horizon Sound Logo" />
+      <h1>Horizon Sound</h1>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/music">Music</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero-banner">
+    <img src="/assets/lost-in-silence.jpg" class="hero-image" alt="Lost in Silence" />
+  </div>
+
+  <main>
+
+    <!-- SONG TITLE -->
+    <section class="homepage-section">
+      <h2 class="section-header">Lost in Silence</h2>
+      <p style="text-align:center; opacity:0.8; margin-top:-10px;">
+        A Way Back – Trilogy | Part I
+      </p>
+    </section>
+
+    <!-- VIDEO EMBED -->
+    <section class="homepage-section">
+      <div class="video-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+          title="Lost in Silence"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="homepage-section">
+      <h2 class="section-header">About the Song</h2>
+      <p class="song-description">
+        This is a placeholder description for Lost in Silence. A short paragraph will go here 
+        describing the meaning, story, and creative process behind the track.
+      </p>
+    </section>
+
+    <!-- LYRICS -->
+    <section class="homepage-section">
+      <h2 class="section-header">Lyrics</h2>
+      <div class="lyrics-box">
+        <p>[Lyrics will go here]</p>
+      </div>
+    </section>
+
+    <!-- TRILOGY NAVIGATION -->
+    <section class="homepage-section">
+      <h2 class="section-header">Part of the A Way Back Trilogy</h2>
+
+      <div class="tile-grid">
+
+        <!-- Choosing Me (Her Version) -->
+        <a class="tile" href="/music/choosing-me-her-version/">
+          <img src="/assets/choosing-me-her-version.jpg" alt="Choosing Me (Her Version)">
+          <h3 class="tile-title">Choosing Me (Her Version)</h3>
+        </a>
+
+        <!-- Choosing Me (His Version) -->
+        <a class="tile" href="/music/choosing-me-his-version/">
+          <img src="/assets/choosing-me-his-version.jpg" alt="Choosing Me (His Version)">
+          <h3 class="tile-title">Choosing Me (His Version)</h3>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- NEXT TRACK BUTTON -->
+    <section class="homepage-section" style="text-align:center; margin-top:40px;">
+      <a href="/music/choosing-me-her-version/" 
+         style="
+           display:inline-block;
+           background:#1a73e8;
+           padding:12px 28px;
+           border-radius:6px;
+           color:white;
+           text-decoration:none;
+           font-weight:bold;
+           font-size:1.1rem;
+         ">
+        Next Track → Choosing Me (Her Version)
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Horizon Sound</p>
+    <p>Contact: HorizonSoundCreative@gmail.com</p>
+    <p>All music, lyrics, and creative works on this site are original and owned by Horizon Sound.</p>
+
+    <p style="opacity:0.5; font-size:0.8rem;">
+      Screen width: <span id="device-width"></span>
+    </p>
+  </footer>
+
+  <script>
+    function updateWidth() {
+      const w = window.innerWidth;
+      document.getElementById("device-width").textContent = w + "px";
+    }
+    window.addEventListener("resize", updateWidth);
+    window.addEventListener("load", updateWidth);
+  </script>
+
+</body>
+</html>

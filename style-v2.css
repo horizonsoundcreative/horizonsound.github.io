@@ -14,6 +14,8 @@ body {
 .homepage-section:first-of-type .section-header {
   margin-top: 0px;
   margin: 5px 0 10px;
+  position: relative;
+  z-index: 2;
 }
 
 /* HEADER */
@@ -164,6 +166,8 @@ footer {
   width: 100%;
   max-width: 1800px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 
   /* Mobile first */
   grid-template-columns: repeat(2, 1fr);

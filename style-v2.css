@@ -1,3 +1,8 @@
+body {
+  background: linear-gradient(to bottom, #000 0%, #0a0a0a 100%);
+  color: #fff;
+}
+
 /* HEADER */
 .site-header {
   background: #000;

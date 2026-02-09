@@ -52,7 +52,7 @@
   padding: 0;
 }
 
-.hero-banner > img.hero-image {
+.hero-banner img.hero-image {
   width: 100% !important;
   height: 200px !important;
   object-fit: cover !important;
@@ -60,8 +60,6 @@
   margin: 0 !important;
   border-radius: 0 !important;
 }
-
-.hero-banner { background: red !important; }
 
 /* Tile grid */
 .tile-grid {

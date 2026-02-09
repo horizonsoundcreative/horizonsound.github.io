@@ -132,7 +132,7 @@ footer {
 }
 
 /* Large desktops */
-@media (min-width: 1800px) {
+@media (min-width: 1600px) {
   .tile-grid {
     grid-template-columns: repeat(6, 1fr);
   }

@@ -27,6 +27,23 @@ body {
   padding: 0 40px;
 }
 
+.song-about {
+  margin: 20px 0 10px;
+  padding: 0 40px;
+}
+.song-lyrics {
+  margin: 20px 0 10px;
+  padding: 0 40px;
+}
+.song-next-track {
+  margin: 20px 0 10px;
+  padding: 0 40px;
+}
+.song-project {
+  margin: 20px 0 10px;
+  padding: 0 40px;
+}
+
 .lyrics-box { 
   max-width: 600px; margin: 0 auto; 
 }

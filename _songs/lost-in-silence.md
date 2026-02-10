@@ -19,24 +19,6 @@ tiles:
     image: "/assets/choosing-me-his-version.jpg"
 ---
 
-<!-- SONG TITLE -->
-<section class="homepage-section">
-  <h2 class="section-header">{{ page.title }}</h2>
-  <p class="song-subtitle">{{ page.subtitle }}</p>
-</section>
-
-<!-- VIDEO EMBED -->
-<section class="homepage-section video-section">
-  <div class="video-wrapper">
-    <iframe 
-      src="https://www.youtube.com/embed/{{ page.youtube_id }}"
-      title="{{ page.title }}"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
 <!-- ABOUT SECTION -->
  <section class="homepage-section">
   <div class="centered-column">

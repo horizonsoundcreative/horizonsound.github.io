@@ -1,12 +1,12 @@
 songs:
   - title: "Lost in Silence"
-    url: "/_songs/lost-in-silence/"
+    url: "/music/lost-in-silence/"
     image: "/assets/lost-in-silence.jpg"
 
   - title: "Choosing Me (Her Version)"
-    url: "/_songs/choosing-me-her-version/"
+    url: "/music/choosing-me-her-version/"
     image: "/assets/choosing-me-her-version.jpg"
 
   - title: "Choosing Me (His Version)"
-    url: "/_songs/choosing-me-his-version/"
+    url: "/music/choosing-me-his-version/"
     image: "/assets/choosing-me-his-version.jpg"

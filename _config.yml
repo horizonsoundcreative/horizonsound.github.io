@@ -1,0 +1,4 @@
+collections:
+  songs:
+    output: true
+    permalink: /music/:name/

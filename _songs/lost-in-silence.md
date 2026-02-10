@@ -38,6 +38,11 @@ tiles:
 </section>
 
 <!-- ABOUT SECTION -->
+ <section class="homepage-section">
+  <div class="centered-column">
+    <h2 class="section-header">About the Song</h2>
+    <p class="song-description">
+
     <strong>Official audio for "Lost in Silence" by Horizon Sound.</strong><br><br>
 
     “Lost in Silence” is a warm, modern acoustic‑pop duet built on bright guitar, soft indie‑pop percussion, 
@@ -54,6 +59,10 @@ tiles:
     <strong>🎤 Vocals:</strong> expressive female lead + soft male duet, airy harmonies<br>
     <strong>🎛️ Production:</strong> bright acoustic guitar, light indie‑pop percussion, warm bass, clean modern polish<br>
     <strong>⚡ Mood:</strong> bittersweet, honest, gentle, quietly hopeful<br><br>
+    </p>
+  </div>
+</section>
+
 
 
 <!-- LYRICS SECTION -->

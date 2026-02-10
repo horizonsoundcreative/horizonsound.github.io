@@ -8,6 +8,10 @@ body {
   line-height: 1.6;
 }
 
+.video-section .video-wrapper {
+  grid-column: 1 / -1 !important; /* force full width */
+}
+
 /* --------------------------------------------------
    HOMEPAGE SECTIONS (NOT USED ON SONG PAGES)
 -------------------------------------------------- */
@@ -269,6 +273,17 @@ footer {
 
 .tile.no-title .tile-title {
   display: none;
+}
+
+.tile-grid {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  max-width: 1800px;   /* THIS is what prevents stretching */
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 /* --------------------------------------------------

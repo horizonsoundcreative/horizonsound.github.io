@@ -127,8 +127,4 @@ tiles:
 {% include project-nav.html %}
 
 <!-- NEXT TRACK BUTTON -->
-<section class="homepage-section" style="text-align:center; margin-top:40px;">
-  <a href="{{ page.next_track_url }}" class="btn-primary">
-    Next Track → {{ page.next_track_label }}
-  </a>
-</section>
+{% include next-track.html %}

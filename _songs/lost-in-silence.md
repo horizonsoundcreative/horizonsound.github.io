@@ -50,11 +50,7 @@ tiles:
 
 
 <!-- LYRICS SECTION -->
-<section class="homepage-section">
-  <div class="centered-column lyrics-center">
-    <div class="lyrics-box">
-      <h2 class="section-header">Lyrics</h2>
-      <pre style="white-space: pre-wrap; font-family: inherit; margin: 0;">
+lyrics: |
 [Intro]
 We try so hard, but sometimes love just fades,
 Two honest hearts walking different ways.
@@ -136,10 +132,6 @@ We’re moving on, and maybe that’s alright,
 Two honest hearts stepping into new light.
 No hard feelings, just a quiet release—
 And we’re both finding our own kind of peace.
-      </pre>
-    </div>
-  </div>
-</section>
 
 <!-- PROJECT NAV -->
 {% include project-nav.html %}

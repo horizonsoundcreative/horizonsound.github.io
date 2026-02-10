@@ -33,7 +33,7 @@ playlists:
 
   - title: "Shorts"
     youtube_url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1PzlnfVBkVKn_E5GccT7JiVk"
-    image: "/assets/lost-in-silence.jpg"
+    image: "/assets/"
     
   - title: "Electro‑Pop & Dance‑Pop"
     youtube_url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1PzQeXDhkhPH792NQONQ0SU5"

@@ -2,10 +2,12 @@
 <section class="song-next-track">
   <div class="next-track-center">
 
+    <!-- Optional custom header (falls back to default if not provided) -->
     {% if page.next_track_title %}
       <h2 class="next-track-header">{{ page.next_track_title }}</h2>
     {% endif %}
 
+    <!-- Next Track Button -->
     <a href="{{ page.next_track_url }}" class="btn-primary next-track-button">
       {{ page.next_track_label }}
     </a>

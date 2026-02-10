@@ -10,9 +10,7 @@ hero_image: "/assets/Temp.jpg"
 
 about: |
   **Official audio for "Lost in Silence" by Horizon Sound.**
-
   “Lost in Silence” is a warm, modern acoustic‑pop duet built on bright guitar, soft indie‑pop percussion, and a smooth, uplifting groove. The track blends expressive female vocals with a gentle male counterpoint, layered over subtle electric guitar textures and a polished, radio‑ready mix. Emotional yet hopeful, it captures the quiet ache of two people drifting apart while still wishing each other peace.
-
   The song follows a couple facing the truth that love has faded, even though the care remains. Through shared verses and mirrored perspectives, they navigate distance, unspoken hurt, and the painful honesty of letting go. Their final chorus becomes a mutual release — not out of anger, but acceptance — as they step into new light with gratitude and clarity.
 
   **🎧 Vibe:** acoustic‑pop, warm, emotional, reflective  

@@ -48,6 +48,7 @@ body {
 
 .next-track-center {
   text-align: center;
+  padding: 0 40px;
 }
 
 .next-track-header {
@@ -57,8 +58,8 @@ body {
 }
 
 .next-track-button {
-  display: inline-block;   /* ensures button only fits its text */
-  width: auto;             /* prevents stretching */
+  display: inline-block;
+  width: auto;
 }
 
 .song-next-track {

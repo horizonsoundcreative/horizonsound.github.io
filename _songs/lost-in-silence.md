@@ -1,5 +1,4 @@
 ---
-<!-- SONG DETAIL SECTION -->
 layout: song
 title: "Lost in Silence"
 subtitle: "A Way Back – Trilogy | Part I"

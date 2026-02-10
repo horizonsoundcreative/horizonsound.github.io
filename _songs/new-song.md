@@ -3,13 +3,19 @@ layout: song
 title: "SONG TITLE"
 subtitle: "PROJECT NAME | Part X"
 project_title: "PROJECT NAME"
-
 youtube_id: "YOUTUBE_ID"
 hero_image: "/assets/IMAGE.jpg"
 
-next_track_title: "Press to hear the next track in the series"
-next_track_url: "/music/NEXT-SONG/"
-next_track_label: "Next Song Title"
+about: |
+  Your description goes here.
+  Use Markdown formatting.
+  Line breaks are preserved.
+  Bold, italics, lists — all work.
+  
+lyrics: |
+  Paste lyrics here.
+  Every line indented two spaces.
+  Blank lines indented too.
 
 tiles:
   - title: "Song A"
@@ -19,17 +25,11 @@ tiles:
   - title: "Song B"
     url: "/music/song-b/"
     image: "/assets/song-b.jpg"
+    
+next_track_title: "Press to hear the next track in the series"
+next_track_url: "/music/NEXT-SONG/"
+next_track_label: "Next Song Title"
 
-about: |
-  Your description goes here.
-  Use Markdown formatting.
-  Line breaks are preserved.
-  Bold, italics, lists — all work.
-
-lyrics: |
-  Paste lyrics here.
-  Every line indented two spaces.
-  Blank lines indented too.
 ---
 <!-- ABOUT SECTION -->
 {% include about.html %}

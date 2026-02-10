@@ -8,10 +8,6 @@ body {
   line-height: 1.6;
 }
 
-.video-section .video-wrapper {
-  grid-column: 1 / -1 !important; /* force full width */
-}
-
 /* --------------------------------------------------
    HOMEPAGE SECTIONS (NOT USED ON SONG PAGES)
 -------------------------------------------------- */
@@ -45,6 +41,13 @@ body {
   opacity: 0.8;
   margin-top: -10px;
   margin-bottom: 0;
+}
+/* --------------------------------------------------
+   SONG PAGE: VIDEO SECTION
+-------------------------------------------------- */
+
+.video-section .video-wrapper {
+  grid-column: 1 / -1 !important; /* force full width */
 }
 
 /* --------------------------------------------------

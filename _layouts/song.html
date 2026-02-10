@@ -1,75 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>{{ page.title }} | Horizon Sound</title>
-  <link rel="stylesheet" href="/style-v2.css?v=18" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ page.title }} | Horizon Sound</title>
 
-<body>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="/style-v2.css?v=21" />
+  </head>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="branding">
-      <img src="/assets/horizon-logo.svg" class="logo" alt="Horizon Sound Logo" />
-      <h1>Horizon Sound</h1>
+  <body>
+
+    <!-- --------------------------------------------------
+         GLOBAL HEADER (Branding + Navigation)
+    -------------------------------------------------- -->
+    <header class="site-header">
+      <div class="branding">
+        <img src="/assets/horizon-logo.svg" class="logo" alt="Horizon Sound Logo" />
+        <h1>Horizon Sound</h1>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/music">Music</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- --------------------------------------------------
+         HERO BANNER
+    -------------------------------------------------- -->
+    <div class="hero-banner">
+      <img src="{{ page.hero_image }}" class="hero-image" alt="{{ page.title }}" />
     </div>
 
-    <nav class="main-nav">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/music">Music</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/about">About</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- --------------------------------------------------
+         MAIN CONTENT
+    -------------------------------------------------- -->
+    <main>
 
-  <!-- HERO -->
-  <div class="hero-banner">
-     <img src="{{ page.hero_image }}" class="hero-image" alt="{{ page.title }}" />
-  </div>
+      <!-- SONG TITLE + SUBTITLE -->
+      <section class="song-header">
+        <h2 class="section-header">{{ page.title }}</h2>
+        <p class="song-subtitle">{{ page.subtitle }}</p>
+      </section>
 
-  <main>
-    <!-- SONG TITLE -->
-    <section class="song-header">
-      <h2 class="section-header">{{ page.title }}</h2>
-      <p class="song-subtitle">{{ page.subtitle }}</p>
-    </section>
-  
-    <!-- VIDEO EMBED -->
-    <section class="homepage-section video-section">
-      <div class="video-wrapper">
-        <iframe 
-          src="https://www.youtube.com/embed/{{ page.youtube_id }}"
-          title="{{ page.title }}"
-          frameborder="0"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </section>
-    {{ content }}
-  </main>
+      <!-- VIDEO EMBED -->
+      <section class="homepage-section video-section">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/{{ page.youtube_id }}"
+            title="{{ page.title }}"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2026 Horizon Sound</p>
-    <p>Contact: HorizonSoundCreative@gmail.com</p>
-    <p>All music, lyrics, and creative works on this site are original and owned by Horizon Sound.</p>
+      <!-- Dynamic content from includes (About, Lyrics, Project Tiles, Next Track) -->
+      {{ content }}
 
-    <p style="opacity:0.5; font-size:0.8rem;">
-      Screen width: <span id="device-width"></span>
-    </p>
-  </footer>
+    </main>
 
-  <script>
-    function updateWidth() {
-      const w = window.innerWidth;
-      document.getElementById("device-width").textContent = w + "px";
-    }
-    window.addEventListener("resize", updateWidth);
-    window.addEventListener("load", updateWidth);
-  </script>
+    <!-- --------------------------------------------------
+         FOOTER
+    -------------------------------------------------- -->
+    <footer>
+      <p>&copy; 2026 Horizon Sound</p>
+      <p>Contact: HorizonSoundCreative@gmail.com</p>
+      <p>All music, lyrics, and creative works on this site are original and owned by Horizon Sound.</p>
 
-</body>
+      <!-- Device width debug (optional) -->
+      <p style="opacity:0.5; font-size:0.8rem;">
+        Screen width: <span id="device-width"></span>
+      </p>
+    </footer>
+
+    <!-- Device width script (optional) -->
+    <script>
+      function updateWidth() {
+        const w = window.innerWidth;
+        document.getElementById("device-width").textContent = w + "px";
+      }
+      window.addEventListener("resize", updateWidth);
+      window.addEventListener("load", updateWidth);
+    </script>
+
+  </body>
 </html>

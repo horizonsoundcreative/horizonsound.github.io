@@ -1,16 +1,12 @@
 <section class="song-project">
   <h2 class="section-header">{{ page.project_title }}</h2>
 
-  <div style="display: flex; justify-content: center;">
-    <div style="display: grid; gap: 20px; grid-template-columns: repeat(2, 1fr); width: auto;">
-
-      {% for tile in page.tiles %}
-        <a class="tile" href="{{ tile.url }}">
-          <img src="{{ tile.image }}" alt="{{ tile.title }}">
-          <h3 class="tile-title">{{ tile.title }}</h3>
-        </a>
-      {% endfor %}
-
-    </div>
+  <div class="tile-grid">
+    {% for tile in page.tiles %}
+      <a class="tile" href="{{ tile.url }}">
+        <img src="{{ tile.image }}" alt="{{ tile.title }}">
+        <h3 class="tile-title">{{ tile.title }}</h3>
+      </a>
+    {% endfor %}
   </div>
 </section>

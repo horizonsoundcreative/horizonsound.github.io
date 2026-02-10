@@ -72,6 +72,7 @@ body {
   text-align: center;
   opacity: 0.8;
   margin-top: -10px;
+  margin-bottom: 0;
 }
 
 .centered-column > * {
@@ -241,6 +242,7 @@ footer {
 /* Override homepage-section padding for the video */
 .video-section {
   padding: 0 !important;
+  margin-top: 0;
 }
 
 /* Full-width cinematic video */

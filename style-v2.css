@@ -64,7 +64,7 @@ body {
 
 /* Full-width YouTube embed */
 .video-section iframe {
-  width: 100%;
+  width: 900px;
   height: 520px;
   max-width: 900px;
   display: block;

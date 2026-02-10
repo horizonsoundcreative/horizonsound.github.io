@@ -116,7 +116,6 @@ tiles:
     url: "/music/choosing-me-his-version/"
     image: "/assets/choosing-me-his-version.jpg"
 ---
-
 <!-- ABOUT SECTION -->
 {% include about.html %}
 

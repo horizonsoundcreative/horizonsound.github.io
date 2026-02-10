@@ -3,18 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <title>Horizon Sound</title>
+
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style-v2.css?v=21" />
   </head>
 
   <body>
 
-    <!-- HEADER -->
+    <!-- --------------------------------------------------
+         GLOBAL HEADER (Branding + Navigation)
+    -------------------------------------------------- -->
     <header class="site-header">
       <div class="branding">
         <img src="/assets/horizon-logo.svg" class="logo" alt="Horizon Sound Logo" />
         <h1>Horizon Sound</h1>
       </div>
-    
+
       <nav class="main-nav">
         <ul>
           <li><a href="/">Home</a></li>
@@ -24,74 +28,84 @@
         </ul>
       </nav>
     </header>
-    
-    <!-- HERO TILE -->
+
+    <!-- --------------------------------------------------
+         HERO BANNER
+    -------------------------------------------------- -->
     <div class="hero-banner">
-       <img src="/assets/Temp.jpg" class="hero-image" alt="Horizon Sound" />
+      <img src="/assets/Temp.jpg" class="hero-image" alt="Horizon Sound" />
     </div>
 
-    <!-- TILE GRID -->
+    <!-- --------------------------------------------------
+         MAIN CONTENT
+    -------------------------------------------------- -->
     <main>
 
-    <section class="homepage-section">
-      <h2 class="section-header">New Releases...</h2>
-      <div class="tile-grid">
-    
-        <a class="tile" href="/music/lost-in-silence/">
-          <img src="/assets/lost-in-silence.jpg" alt="Lost in Silence">
-          <h3 class="tile-title">Lost in Silence</h3>
-        </a>
+      <!-- NEW RELEASES -->
+      <section class="homepage-section">
+        <h2 class="section-header">New Releases...</h2>
 
-        <a class="tile" href="/music/choosing-me-her-version/">
-          <img src="/assets/choosing-me-her-version.jpg" alt="Choosing Me (Her Version)">
-          <h3 class="tile-title">Choosing Me (Her Version)</h3>
-        </a>
-    
-        <a class="tile" href="/music/choosing-me-his-version/">
-          <img src="/assets/choosing-me-his-version.jpg" alt="Choosing Me (His Version)">
-          <h3 class="tile-title">Choosing Me (His Version)</h3>
-        </a>
-    
-      </div>
-    </section>
-    
-    <section class="homepage-section">
-      <h2 class="section-header">Spotlight Music</h2>
-      <div class="tile-grid">
+        <div class="tile-grid">
+          <a class="tile" href="/music/lost-in-silence/">
+            <img src="/assets/lost-in-silence.jpg" alt="Lost in Silence">
+            <h3 class="tile-title">Lost in Silence</h3>
+          </a>
 
-      
-      </div>
-    </section>
-    
-    <section class="homepage-section">
-      <h2 class="section-header">In‑Flight Projects</h2>
-      <div class="tile-grid">
-     
-      </div>
-    </section>
+          <a class="tile" href="/music/choosing-me-her-version/">
+            <img src="/assets/choosing-me-her-version.jpg" alt="Choosing Me (Her Version)">
+            <h3 class="tile-title">Choosing Me (Her Version)</h3>
+          </a>
+
+          <a class="tile" href="/music/choosing-me-his-version/">
+            <img src="/assets/choosing-me-his-version.jpg" alt="Choosing Me (His Version)">
+            <h3 class="tile-title">Choosing Me (His Version)</h3>
+          </a>
+        </div>
+      </section>
+
+      <!-- SPOTLIGHT MUSIC -->
+      <section class="homepage-section">
+        <h2 class="section-header">Spotlight Music</h2>
+        <div class="tile-grid">
+          <!-- Add spotlight tiles here -->
+        </div>
+      </section>
+
+      <!-- IN-FLIGHT PROJECTS -->
+      <section class="homepage-section">
+        <h2 class="section-header">In‑Flight Projects</h2>
+        <div class="tile-grid">
+          <!-- Add project tiles here -->
+        </div>
+      </section>
 
     </main>
 
-    <!-- FOOTER -->
+    <!-- --------------------------------------------------
+         FOOTER
+    -------------------------------------------------- -->
     <footer>
       <p>&copy; 2026 Horizon Sound</p>
       <p>Contact: HorizonSoundCreative@gmail.com</p>
       <p>All music, lyrics, and creative works on this site are original and owned by Horizon Sound.</p>
 
+      <!-- Device width debug (optional) -->
       <p style="opacity:0.5; font-size:0.8rem;">
-      Screen width: <span id="device-width"></span>
+        Screen width: <span id="device-width"></span>
       </p>
-
     </footer>
-<script>
-  function updateWidth() {
-    const w = window.innerWidth;
-    document.getElementById("device-width").textContent = w + "px";
-  }
 
-  window.addEventListener("resize", updateWidth);
-  window.addEventListener("load", updateWidth);
-</script>
+    <!-- Device width script (optional) -->
+    <script>
+      function updateWidth() {
+        const w = window.innerWidth;
+        document.getElementById("device-width").textContent = w + "px";
+      }
+
+      window.addEventListener("resize", updateWidth);
+      window.addEventListener("load", updateWidth);
+    </script>
 
   </body>
 </html>
+

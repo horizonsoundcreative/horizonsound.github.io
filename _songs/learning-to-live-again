@@ -1,34 +1,103 @@
 ---
 layout: song
-title: "SONG TITLE"
-subtitle: "PROJECT NAME | Part X"
-project_title: "PROJECT NAME"
-youtube_id: "YOUTUBE_ID"
+title: "Learning to Live Again"
+subtitle: ""
+project_title: ""
+youtube_id: "NVG_qw_51RQ"
 hero_image: "/assets/hero.jpg"
 
 about: |
-  Your description goes here.
-  Use Markdown formatting.
-  Line breaks are preserved.
-  Bold, italics, lists — all work.
+  Official audio for "Learning to Live Again" by Horizon Sound.
+  
+  “Learning to Live Again” is a soft, emotional electro‑pop ballad shaped by warm synth textures, airy pads, and a breathy, intimate female vocal. Subtle percussion and spacious production create a dreamy, reflective atmosphere, letting every lyric land with quiet honesty. The chorus rises with layered harmonies and gentle bass, lifting the song into a calm but confident sense of renewal.
+  
+  This track follows the journey of someone rebuilding themselves after hitting rock bottom — learning to breathe, feel, and hope again. From fragile first steps to the moment strength returns, the song captures the slow, courageous process of healing. Tender verses, shimmering synths, and a steady emotional climb make “Learning to Live Again” a comforting soundtrack for anyone finding their way out of the dark.
+  
+  🎧 Vibe: soft electro‑pop, dreamy, reflective, emotional
+  🎤 Vocals: warm, breathy female lead, gentle vibrato, intimate delivery
+  🎛️ Production: atmospheric pads, subtle synths, light percussion, smooth harmonies, spacious mix
+  ⚡ Mood: hopeful, vulnerable, uplifting, quietly powerful
   
 lyrics: |
-  Paste lyrics here.
-  Every line indented two spaces.
-  Blank lines indented too.
-
-tiles:
-  - title: "Song A"
-    url: "/music/song-a/"
-    image: "/assets/song-a.jpg"
-
-  - title: "Song B"
-    url: "/music/song-b/"
-    image: "/assets/song-b.jpg"
-    
-next_track_title: "Press to hear the next track in the series"
-next_track_url: "/music/NEXT-SONG/"
-next_track_label: "Next Song Title"
+  [Intro]
+  I was standing in the shadows,
+  Feeling lost and terrified —
+  
+  [Verse 1] 
+  I was fading in the darkness, couldn’t recognize myself,
+  Every sunrise felt like nothing, every heartbeat felt flat.
+  I was drowning in the silence, losing pieces of my mind,
+  Trying hard to feel like someone, but the truth was never kind.
+  I swore that I would stop, I would turn my life around,
+  But every promise that I made kept crashing to the ground.
+  And I knew I couldn’t keep on living trapped inside this pain,
+  Had to find a spark of hope if I would ever truly live again.
+  
+  [Pre‑Chorus 1] 
+  I hit the ground so hard it shook me,
+  Saw the truth I couldn’t hide.
+  If I didn’t choose to change now,
+  I knew I would never survive.
+  
+  [Chorus]
+  So I’m learning how to live again,
+  Learning how to breathe again,
+  Stepping out of all the darkness I’d been existing in.
+  I’m reaching for the light again,
+  Fighting for my life again,
+  Finding strength in places I thought I’d never find.
+  I’m not who I was —
+  I’m learning how to live.
+  
+  [Verse 2] 
+  Every morning felt uncertain, like a stranger in my skin,
+  But I held on to the small things just to feel myself again.
+  I was shaky, I was fragile, but I kept on standing tall,
+  Every stumble taught me something, every step a kind of call.
+  And the colors started coming back in ways I’d never seen,
+  Little victories reminding me of who I could be.
+  
+  [Pre‑Chorus 2] 
+  I’m not the same as when I started,
+  I’m stronger than the fear inside.
+  Every day I choose the future,
+  Every day I choose to try.
+  
+  [Chorus] 
+  So I’m learning how to live again,
+  Learning how to breathe again,
+  Stepping out of all the darkness I’d been existing in.
+  I’m reaching for the light again,
+  Fighting for my life again,
+  Finding strength in places I thought I’d never find.
+  I’m not who I was —
+  I’m learning how to live.
+  
+  [Bridge]
+  Now the sky feels wide and open,
+  And the world feels new and kind.
+  I can hear my heartbeat steady,
+  Feel the hope I’d left behind.
+  I’m not perfect, but I’m standing,
+  And I’m proud of what I’ve done —
+  I survived the storm inside me,
+  Now I’m stepping toward the sun.
+  
+  [Final Chorus]
+  Yeah, I’m learning how to live again,
+  Learning how to breathe again,
+  Walking forward with a strength I never knew I had within.
+  I’m reaching for the light again,
+  Fighting for my life again,
+  And every day I’m proving I can leave the dark behind.
+  I’m not who I was —
+  I’m learning how to live.
+  
+  [Outro] 
+  And if you’re standing in the shadows,
+  Feeling lost and terrified —
+  Take my hand, I’ll walk beside you.
+  Together we can learn to live.
 
 ---
 <!-- ABOUT SECTION -->

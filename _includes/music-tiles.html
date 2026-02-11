@@ -1,5 +1,5 @@
 <section class="music-tiles-view">
-  {% assign public_songs = include.items | where: "videostatus", "Public" %}
+
   {% assign sorted = public_songs | sort: "title" %}
 
   <div class="tile-grid">

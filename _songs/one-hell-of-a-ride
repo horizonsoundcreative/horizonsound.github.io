@@ -1,34 +1,82 @@
 ---
 layout: song
-title: "SONG TITLE"
-subtitle: "PROJECT NAME | Part X"
-project_title: "PROJECT NAME"
-youtube_id: "YOUTUBE_ID"
+title: "One Hell of a Ride"
+subtitle: ""
+project_title: ""
+youtube_id: "3iAmG5GLC7k"
 hero_image: "/assets/hero.jpg"
 
 about: |
-  Your description goes here.
-  Use Markdown formatting.
-  Line breaks are preserved.
-  Bold, italics, lists — all work.
+  Official audio for "One Hell of a Ride" by Horizon Sound.
+  
+  “One Hell of a Ride” is a gritty southern‑rock anthem packed with swagger, highway‑freedom energy, and live‑show intensity. Crunchy blues‑rock guitar riffs, warm Hammond organ, punchy live drums, and a raw, charismatic male lead vocal drive the track with attitude. The production blends classic southern‑rock grit with modern polish, delivering a rowdy, rebellious, road‑tested sound.
+  
+  The song follows a touring rock band tearing across the world — raising hell, trashing hotel rooms, playing wild shows, and living fast without crossing into explicit territory. It’s loud, loose, and full of momentum, capturing the chaos, camaraderie, and adrenaline of life on the road.
+  
+  🎧 Vibe: southern rock, blues‑rock, gritty, energetic, rebellious
+  🎤 Vocals: raw, swagger‑filled male lead
+  🎸 Production: crunchy riffs, blues‑rock harmonies, Hammond organ, punchy drums
+  🚗 Mood: highway freedom, rowdy, live‑show intensity
   
 lyrics: |
-  Paste lyrics here.
-  Every line indented two spaces.
-  Blank lines indented too.
-
-tiles:
-  - title: "Song A"
-    url: "/music/song-a/"
-    image: "/assets/song-a.jpg"
-
-  - title: "Song B"
-    url: "/music/song-b/"
-    image: "/assets/song-b.jpg"
-    
-next_track_title: "Press to hear the next track in the series"
-next_track_url: "/music/NEXT-SONG/"
-next_track_label: "Next Song Title"
+  [Verse 1]
+  Hit London city in a rust‑bucket ride,
+  Road dust on our boots, trouble in our eyes.
+  The clerk at the counter mutters, “Oh no,”
+  ‘Cause he’s seen our kind, the chaos we sow.
+  We ain’t built for quiet, ain’t wired to behave,
+  Just chasin’ that wild streak the good Lord gave.
+  
+  [Pre‑Chorus]
+  Last night’s just a haze we can’t recall,
+  But the crowd keeps roarin’, so we give ’em our all.
+  
+  [Chorus]
+  ’Cause we’re a long‑haired band on a runaway ride,
+  Burnin’ up the map with the wind at our side.
+  Raise a glass, raise some hell, let the good times roll,
+  Leavin’ miles of trouble behind us wherever we go.
+  Yeah, we live loud, love wild, and sleep when we’re old.
+  
+  [Verse 2]
+  From Tokyo to Rio, we’re raisin’ up dust,
+  Hotel staff bangin’ like they don’t trust us.
+  Hallway’s a mess now, lamps shattered on the floor,
+  We swear we’ll behave — then we’re breakin’ down the door.
+  There’s a grin in the shadows, someone hummin’ our tune,
+  And we’re gone with the sunrise, leavin’ way too soon.
+  
+  [Pre‑Chorus]
+  Every night’s a story with a twist at the end,
+  But the road keeps callin’ like a long‑lost friend.
+  
+  [Chorus]
+  ’Cause we’re a long‑haired band on a runaway ride,
+  Burnin’ up the map with the wind at our side.
+  Raise a glass, raise some hell, let the good times roll,
+  Leavin’ miles of trouble behind us wherever we go.
+  Yeah, we live loud, love wild, and sleep when we’re old.
+  
+  [Bridge]
+  Some folks say we’re reckless, some say we’re blessed,
+  But we just keep movin’ and doin’ our best.
+  If the night gets rowdy, well, that’s how it goes —
+  You can’t cage a wildfire that’s out of control.
+  
+  [Pre‑Chorus]
+  We’ve been raisin’ hell nightly from coast to coast,
+  And we’re hitting’ that stage givin’ everything we’ve got.
+  
+  [Final Chorus]
+  ’Cause we’re a long‑haired band on a runaway ride,
+  Burnin’ up the map with the wind at our side.
+  Raise a glass, raise some hell, let the good times roll,
+  Leavin’ miles of trouble behind us wherever we go.
+  Yeah, we live loud, love wild, and sleep when we’re old.
+  
+  [Outro]
+  Dust in the rearview, moon on the chrome,
+  We ain’t slowin’ down till the good Lord calls us home.
 
 ---
 <!-- ABOUT SECTION -->

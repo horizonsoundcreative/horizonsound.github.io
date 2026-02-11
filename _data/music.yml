@@ -54,3 +54,84 @@ songs:
   - title: "Kaleidoscope"
     url: "/music/kaleidoscope/"
     image: "/assets/Kaleidoscope.jpeg"
+
+  - title: "Not So Smart Home"
+    url: "/music/not-so-smart-home/"
+    image: "/assets/Not So Smart Home.jpeg"
+
+- title: "New Again"
+    url: "/music/new-again/"
+    image: "/assets/New Again.jpeg"
+
+- title: "All Around the World"
+    url: "/music/all-around-the-world/"
+    image: "/assets/All Around the World.jpeg"
+
+  - title: "Makin' our way to California"
+    url: "/music/makin-our-way-to-california/"
+    image: "/assets/Making our way to California.jpeg"
+
+- title: "Don't Let the Summer End"
+    url: "/music/dont-let-the-summer-end/"
+    image: "/assets/Don't Let the Summer End.jpeg"
+
+- title: "Hold On"
+    url: "/music/hold-on/"
+    image: "/assets/Hold On.jpeg"
+
+- title: "Nineteen Summers"
+    url: "/music/nineteen-summers/"
+    image: "/assets/Nineteen Summers.jpeg"
+
+- title: "Put You Down"
+    url: "/music/put-you-down/"
+    image: "/assets/Put You Down.jpeg"
+
+- title: "Never Let Each Other Down"
+    url: "/music/never-let-each-other-down/"
+    image: "/assets/Never Let Each Other Down.jpeg"
+
+- title: "I'm Holding On"
+    url: "/music/im-holding-on/"
+    image: "/assets/Im Holding On.jpeg"
+
+- title: "Bottle on the Table"
+    url: "/music/bottle-on-the-table/"
+    image: "/assets/Bottle on the Table.jpeg"
+
+- title: "Rising Up"
+    url: "/music/rising-up/"
+    image: "/assets/Rising Up.jpeg"
+
+- title: "Becoming Me"
+    url: "/music/becoming-me/"
+    image: "/assets/Becoming Me.jpeg"
+
+- title: "Fixed it Mostly Right"
+    url: "/music/fixed-it-mostly-right/"
+    image: "/assets/Fixed it Mostly Right.jpeg"
+
+- title: "Midnight Mayhem"
+    url: "/music/midnight-mayhem/"
+    image: "/assets/Midnight Mayhem Orig.jpeg"
+
+- title: "Gimme Three Steps, and I'm Gone"
+    url: "/music/gimme-three-steps-and-im-gone/"
+    image: "/assets/Gimme Three Steps and Im Gone.jpeg"
+
+- title: "Barroom Brawl"
+    url: "/music/barroom-brawl/"
+    image: "/assets/Barroom Brawl.jpeg"
+
+- title: "Oh, Amber"
+    url: "/music/oh-amber/"
+    image: "/assets/Oh Amber.jpeg"
+
+- title: "Here's to Us!"
+    url: "/music/heres-to-us/"
+    image: "/assets/Heres to Us.jpeg"
+
+- title: "Rusty"
+    url: "/music/rusty/"
+    image: "/assets/Rusty.jpeg"
+

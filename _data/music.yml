@@ -2,17 +2,14 @@ songs:
   - title: "Lost in Silence"
     url: "/music/lost-in-silence/"
     image: "/assets/lost-in-silence.jpg"
-    videostatus: "Public"
 
   - title: "Choosing Me (Her Version)"
     url: "/music/choosing-me-her-version/"
     image: "/assets/choosing-me-her-version.jpg"
-    videostatus: "Public"
 
   - title: "Choosing Me (His Version)"
     url: "/music/choosing-me-his-version/"
     image: "/assets/choosing-me-his-version.jpg"
-    videostatus: "Private"
 
   - title: "A Quiet Little Voice"
     url: "/music/a-quiet-little-voice/"

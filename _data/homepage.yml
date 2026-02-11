@@ -9,17 +9,14 @@ new_releases:
   - title: "Lost in Silence"
     url: "/music/lost-in-silence/"
     image: "/assets/lost-in-silence.jpg"
-    videostatus: "Public"
 
   - title: "Choosing Me (Her Version)"
     url: "/music/choosing-me-her-version/"
     image: "/assets/choosing-me-her-version.jpg"
-    videostatus: "Private"
 
   - title: "Choosing Me (His Version)"
     url: "/music/choosing-me-his-version/"
     image: "/assets/choosing-me-his-version.jpg"
-    videostatus: "Public"
 
 spotlight:
   - title: "The Man Behind the Bar"

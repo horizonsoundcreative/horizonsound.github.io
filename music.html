@@ -3,7 +3,7 @@ layout: default
 title: Horizon Sound Music Library
 ---
 
-{% assign songs_public = site.data.music.songs | where: "videostatus", "Public" %}
+{% assign songs_public = site.data.music.songs | where_exp: "song", "song.videostatus == 'Public' or preview_mode" %}
 
 <div class="view-toggle">
   <button id="tilesBtn">Tiles</button>

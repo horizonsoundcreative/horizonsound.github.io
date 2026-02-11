@@ -1,0 +1,11 @@
+<section class="music-tiles-view">
+  <div class="tile-grid">
+    {% assign sorted = include.items | sort: "title" %}
+    {% for song in sorted %}
+      <a class="tile" href="{{ song.url }}">
+        <img src="{{ song.image }}" alt="{{ song.title }}">
+        <h3 class="tile-title">{{ song.title }}</h3>
+      </a>
+    {% endfor %}
+  </div>
+</section>

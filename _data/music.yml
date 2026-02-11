@@ -12,7 +12,7 @@ songs:
   - title: "Choosing Me (His Version)"
     url: "/music/choosing-me-his-version/"
     image: "/assets/choosing-me-his-version.jpg"
-    videostatus: "Private"
+    videostatus: "Public"
 
   - title: "A Quiet Little Voice"
     url: "/music/a-quiet-little-voice/"

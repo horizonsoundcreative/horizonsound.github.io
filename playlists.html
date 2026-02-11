@@ -3,4 +3,6 @@ layout: default
 title: Horizon Sound Playlist Collection
 ---
 
-{% include playlist-tiles.html items=site.data.playlists.playlists %}
+{% assign playlists_public = site.data.playlists.playlists | where: "videostatus", "Public" %}
+
+{% include playlist-tiles.html items=playlists_public %}

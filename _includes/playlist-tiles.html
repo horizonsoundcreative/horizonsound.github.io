@@ -1,8 +1,6 @@
 <section class="playlist-section">
   <h2 class="section-header">YouTube Playlists</h2>
 
-  {% assign playlists_public = include.items | where: "videostatus", "Public" %}
-
   <div class="tile-grid">
     {% for p in playlists_public %}
       <a class="tile" href="{{ p.youtube_url }}" target="_blank">

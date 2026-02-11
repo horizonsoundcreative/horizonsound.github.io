@@ -100,7 +100,7 @@ tiles:
 
 next_track_url: "/music/lost-in-silence/"
 next_track_label: "Lost in Silence"
-next_track_title: "Press to hear the next track in the series"
+next_track_title: "Press to hear the first track in the series"
 
 ---
 <!-- ABOUT SECTION -->

@@ -1,34 +1,102 @@
 ---
 layout: song
-title: "SONG TITLE"
-subtitle: "PROJECT NAME | Part X"
-project_title: "PROJECT NAME"
-youtube_id: "YOUTUBE_ID"
+title: "Here's To Us"
+subtitle: ""
+project_title: ""
+youtube_id: "aY8-o0Scmjg"
 hero_image: "/assets/hero.jpg"
 
 about: |
-  Your description goes here.
-  Use Markdown formatting.
-  Line breaks are preserved.
-  Bold, italics, lists — all work.
+  Official audio for "Here's to Us!" by Horizon Sound.
+  
+  “Here’s to Us!” is a gritty, emotional 90s‑rock anthem with soaring guitars, punchy drums, and powerful female vocals. Raw but polished, the track blends bar‑toast energy with heartfelt verses, a shout‑along chorus, and a triumphant crowd‑chant bridge. Controlled grit, gang vocals, and a spoken intro give the song a communal, resilient spirit — perfect for anyone who’s pushed through a tough week and still showed up.
+  
+  This song celebrates the strength it takes to keep going when everything feels stacked against you. From burnout and deadlines to emotional exhaustion, “Here’s to Us!” raises a glass to the fighters, the survivors, and the ones who never gave up. Anthemic, uplifting, and defiant, it’s a rock‑driven tribute to resilience and togetherness.
+  
+  🎧 Vibe: anthemic 90s rock, gritty, emotional, communal
+  🎤 Vocals: controlled female grit, gang vocals, spoken intro, shout‑along chorus
+  🎛️ Production: soaring guitars, punchy drums, crowd‑chant bridge, raw but polished mix
+  ⚡ Mood: triumphant, resilient, heartfelt, uplifting
   
 lyrics: |
-  Paste lyrics here.
-  Every line indented two spaces.
-  Blank lines indented too.
-
-tiles:
-  - title: "Song A"
-    url: "/music/song-a/"
-    image: "/assets/song-a.jpg"
-
-  - title: "Song B"
-    url: "/music/song-b/"
-    image: "/assets/song-b.jpg"
-    
-next_track_title: "Press to hear the next track in the series"
-next_track_url: "/music/NEXT-SONG/"
-next_track_label: "Next Song Title"
+  [Intro]
+  Raise a glass…
+  To every long day
+  That got us here.
+  
+  [Verse 1]
+  We’ve been battered,
+  We’ve been bruised,
+  We’ve been running on fumes.
+  We’ve been overworked and silent,
+  We’ve been screaming in our heads.
+  But somehow we’re still standing,
+  Even when the week got tough —
+  Guess the world can try to break us,
+  But together we’re enough!
+  
+  [Pre‑Chorus]
+  So here’s to every long week 
+  That somehow we survived.
+  
+  [Chorus]
+  Here’s to us!
+  All those that keep going,
+  When the going gets tough.
+  All those that never give up, 
+  Here’s to us!
+  To the times we thought we’d lose —
+  But we somehow made it through.
+  So raise ’em up…
+  Here’s to us!
+  
+  [Verse 2]
+  We’ve been lost, we’ve been restless,
+  We’ve been trying just to cope.
+  We’ve been drowning in the deadlines,
+  We’ve been clinging onto hope.
+  But every time we stumbled,
+  We got back up again—
+  Now we’re stronger for the pressure
+  And together we’re enough!
+  
+  [Pre‑Chorus]
+  So here’s to every long week 
+  That somehow we survived.
+  
+  [Chorus]
+  Here’s to us!
+  All those that keep going,
+  When the going gets tough.
+  All those that never give up, 
+  Here’s to us!
+  To the times we thought we’d lose —
+  But we somehow made it through.
+  So raise ’em up…
+  Here’s to us!
+  
+  [Bridge]
+  We’re still here
+  (We’re still here)
+  We’re still strong
+  (We’re still strong)
+  We pushed through all week long
+  (all week long)
+  
+  [Chorus]
+  Here’s to us!
+  All those that keep going,
+  When the going gets tough.
+  All those that never give up, 
+  Here’s to us!
+  To the times we thought we’d lose —
+  But we somehow made it through.
+  So raise ’em up…
+  Here’s to us!
+  
+  [Outro]
+  Raise a glass…
+  We earned this.
 
 ---
 <!-- ABOUT SECTION -->

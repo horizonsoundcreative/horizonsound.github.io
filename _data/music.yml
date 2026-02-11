@@ -14,3 +14,43 @@ songs:
   - title: "A Quiet Little Voice"
     url: "/music/a-quiet-little-voice/"
     image: "/assets/A Quiet Little Voice.jpeg"
+
+  - title: "The Man Behind the Bar"
+    url: "/music/the-man-behind-the-bar/"
+    image: "/assets/The Man Behind the Bar.jpeg"
+
+  - title: "Until the Nightmare Ends"
+    url: "/music/until-the-nightmare-ends/"
+    image: "/assets/Until the Nightmare Ends.jpg"
+
+  - title: "Total Eclipse (Years Later)"
+    url: "/music/total-eclipse-years-later/"
+    image: "/assets/Total Eclipse.jpeg"
+
+  - title: "Already out the door"
+    url: "/music/already-out-the-door/"
+    image: "/assets/Already Out the Door.jpeg"
+
+  - title: "Nineteen Summers"
+    url: "/music/nineteen-summers/"
+    image: "/assets/Nineteen Summers New.jpeg"
+
+  - title: "Rise Like Thunder"
+    url: "/music/rise-like-thunder/"
+    image: "/assets/Rise Like Thunder New.jpeg"
+
+  - title: "One Hell of a Ride"
+    url: "/music/one-hell-of-a-ride/"
+    image: "/assets/One Hell of a Ride.jpeg"
+
+  - title: "Time Capsule"
+    url: "/music/time-capsule/"
+    image: "/assets/Time Capsule.jpeg"
+
+  - title: "Learning to Live Again"
+    url: "/music/learning-to-live-again/"
+    image: "/assets/Learning to Live Again.jpeg"
+
+  - title: "Kaleidoscope"
+    url: "/music/kaleidoscope/"
+    image: "/assets/Kaleidoscope.jpeg"

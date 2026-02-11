@@ -4,7 +4,7 @@
 
   {% for tile in page.tiles %}
     {% assign match = site.data.music.songs | where: "url", tile.url | first %}
-    {% if match and match.videostatus == "Public" %}
+    {% if match and (match.videostatus == "Public" or preview_mode) %}
       {% assign project_tiles_public = project_tiles_public | push: tile %}
     {% endif %}
   {% endfor %}

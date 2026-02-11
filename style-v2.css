@@ -299,7 +299,7 @@ footer {
 .tile {
   display: block;
   background: #111;
-  border-radius: 8px;
+  border-radius: 0px;
   overflow: hidden;
   text-decoration: none;
   color: #fff;
@@ -330,7 +330,7 @@ footer {
 
 .tile-grid {
   display: grid;
-  gap: 20px;
+  gap: 5px;
   width: 100%;
   max-width: 1800px;   /* THIS is what prevents stretching */
   margin: 0 auto;

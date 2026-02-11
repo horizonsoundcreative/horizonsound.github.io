@@ -187,6 +187,12 @@ body {
   background: #2a82f0;
 }
 
+nav a.active {
+  opacity: 1;          /* makes it less transparent */
+  font-weight: 600;    /* subtle emphasis */
+  border-bottom: 2px solid #fff; /* optional underline */
+}
+
 /* --------------------------------------------------
    HEADER (GLOBAL)
 -------------------------------------------------- */

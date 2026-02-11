@@ -7,15 +7,12 @@
 </head>
 
 <body>
-<li><a href="/" class="{% if page.url == '/' %}active{% endif %}">Home</a></li>
-<li><a href="/music/" class="{% if page.url contains '/music' %}active{% endif %}">Music</a></li>
-<li><a href="/playlists/" class="{% if page.url contains '/playlists' %}active{% endif %}">Playlists</a></li>
-<li><a href="/about/" class="{% if page.url contains '/about' %}active{% endif %}">About</a></li>
-<h1 class="page-title">{{ page.title }}</h1>
 
   {% include header.html %}
 
   {% include hero.html %}
+
+  <h1 class="page-title">{{ page.title }}</h1>
 
   <main>
     {{ content }}

@@ -2,7 +2,7 @@
 
   {% assign next = site.data.music.songs | where: "url", page.next_track_url | first %}
 
-  {% if next and (next.videostatus == "Public" or preview_mode) %}
+  {% if next and (next.videostatus == "Public") %}
   <section class="song-next-track">
     <div class="next-track-center">
 

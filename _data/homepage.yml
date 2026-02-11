@@ -16,7 +16,40 @@ spotlight:
     url: "/music/the-man-behind-the-bar/"
     image: "/assets/The Man Behind the Bar.jpeg"
 
+  - title: "Until the NightMare Ends"
+    url: "/music/the-man-behind-the-bar/"
+    image: "/assets/Until the Nightmare Ends.jpg"
+
+  - title: "Total Eclipse (Years Later)"
+    url: "/music/the-man-behind-the-bar/"
+    image: "/assets/Total Eclipse.jpeg"
+
+  - title: "Already out the door"
+    url: "/music/the-man-behind-the-bar/"
+    image: "/assets/Already Out the Door.jpeg"
+
+  - title: "Nineteen Summers"
+    url: "/music/the-man-behind-the-bar/"
+    image: "/assets/Nineteen summers New.jpeg"
+
+  - title: "Rise Like Thunder"
+    url: "/music/the-man-behind-the-bar/"
+    image: "/assets/Rise Like Thunder New.jpeg"
+
+  - title: "One Hell of a Ride"
+    url: "/music/the-man-behind-the-bar/"
+    image: "/assets/One Hell of s Ride.jpeg"
+
+  - title: "Time Capsule"
+    url: "/music/the-man-behind-the-bar/"
+    image: "/assets/Time Capsule.jpeg"
+
+  - title: "Learning to Live Again"
+    url: "/music/the-man-behind-the-bar/"
+    image: "/assets/Learning to Live Again.jpeg"
+
+  - title: "Kaleidoscope"
+    url: "/music/the-man-behind-the-bar/"
+    image: "/assets/Kaleidoscope.jpeg"
+
 projects:
-  - title: "A Quiet Little Voice"
-    url: "/music/a-quiet-little-voice/"
-    image: "/assets/A Quiet Little Voice.jpeg"

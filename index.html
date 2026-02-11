@@ -6,7 +6,7 @@ title: Horizon Sound
 {% include home-teaser.html %}
 
 {% assign new_releases_public = site.data.homepage.new_releases 
-     | where_exp: "item", "item.videostatus == 'Public' or preview_mode" %}
+     | where_exp: "item", "item.videostatus == 'Public'  %}
 {% include homepage-tiles.html 
      title="New Releases..." 
      items=new_releases_public 

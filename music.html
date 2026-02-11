@@ -3,17 +3,19 @@ layout: default
 title: Horizon Sound Music Library
 ---
 
+{% assign songs_public = site.data.music.songs | where: "videostatus", "Public" %}
+
 <div class="view-toggle">
   <button id="tilesBtn">Tiles</button>
   <button id="listBtn">List</button>
 </div>
 
 <div id="tilesView">
-  {% include music-tiles.html items=site.data.music.songs %}
+  {% include music-tiles.html items=songs_public %}
 </div>
 
 <div id="listView" style="display:none;">
-  {% include music-list.html items=site.data.music.songs %}
+  {% include music-list.html items=songs_public %}
 </div>
 
 <script>

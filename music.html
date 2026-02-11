@@ -2,6 +2,33 @@
 layout: default
 title: Music
 ---
-View: [ Tiles ] [ List ]
 
-{% include music-list.html items=site.data.music.songs %}
+<div class="view-toggle">
+  <button id="tilesBtn">Tiles</button>
+  <button id="listBtn">List</button>
+</div>
+
+<div id="tilesView">
+  {% include music-tiles.html items=site.data.music.songs %}
+</div>
+
+<div id="listView" style="display:none;">
+  {% include music-list.html items=site.data.music.songs %}
+</div>
+
+<script>
+  const tilesBtn = document.getElementById('tilesBtn');
+  const listBtn = document.getElementById('listBtn');
+  const tilesView = document.getElementById('tilesView');
+  const listView = document.getElementById('listView');
+
+  tilesBtn.addEventListener('click', () => {
+    tilesView.style.display = 'block';
+    listView.style.display = 'none';
+  });
+
+  listBtn.addEventListener('click', () => {
+    tilesView.style.display = 'none';
+    listView.style.display = 'block';
+  });
+</script>

@@ -1,26 +1,22 @@
----
 layout: default
 title: Horizon Sound
 ---
 
 {% include home-teaser.html %}
 
-{% assign new_releases_public = site.data.homepage.new_releases 
-     | where_exp: "item", "item.videostatus == 'Public'" %}
+{% assign new_releases_public = site.data.homepage.new_releases | where: "videostatus", "Public" %}
 {% include homepage-tiles.html 
      title="New Releases..." 
      items=new_releases_public 
 %}
 
-{% assign spotlight_public = site.data.homepage.spotlight 
-     | where_exp: "item", "item.videostatus == 'Public' or preview_mode" %}
+{% assign spotlight_public = site.data.homepage.spotlight | where: "videostatus", "Public" %}
 {% include homepage-tiles.html 
      title="Spotlight Music" 
      items=spotlight_public 
 %}
 
-{% assign projects_public = site.data.homepage.projects 
-     | where_exp: "item", "item.videostatus == 'Public' or preview_mode" %}
+{% assign projects_public = site.data.homepage.projects | where: "videostatus", "Public" %}
 {% include homepage-tiles.html 
      title="Collections" 
      items=projects_public 

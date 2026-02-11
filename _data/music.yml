@@ -181,7 +181,7 @@ songs:
 
   - title: "The Moment You Breathe"
     url: "/music//"
-    image: "/assets/The Moment You Breathe.jpeg"
+    image: "/assets/The Moment You Breathe.jpg"
     videostatus: "Public"
 
   - title: "Homesick For You"
@@ -276,17 +276,17 @@ songs:
 
   - title: "A Touch of Light"
     url: "/music//"
-    image: "/assets/A Touch of Light.jpeg"
+    image: "/assets/A Touch of Light.jpg"
     videostatus: "Public"
 
   - title: "Forever in a Moment"
     url: "/music//"
-    image: "/assets/Forever in a Moment.jpeg"
+    image: "/assets/Forever in a Moment.jpg"
     videostatus: "Public"
 
   - title: "Back to Amarillo"
     url: "/music//"
-    image: "/assets/Back to Amarillo.jpeg"
+    image: "/assets/Back to Amarillo.jpg"
     videostatus: "Public"
 
   - title: "Ninteen Summers - Short"
@@ -296,22 +296,22 @@ songs:
 
   - title: "Wildfire"
     url: "/music//"
-    image: "/assets/Wildfire.jpeg"
+    image: "/assets/Wildfire.jpg"
     videostatus: "Public"
 
   - title: "Lines of Light"
     url: "/music//"
-    image: "/assets/Lines of Light.jpeg"
+    image: "/assets/Lines of Light.jpg"
     videostatus: "Public"
 
   - title: "The Way Water Moves"
     url: "/music//"
-    image: "/assets/The Way Water Moves.jpeg"
+    image: "/assets/The Way Water Moves.jpg"
     videostatus: "Public"
 
   - title: "Sheriff for a Night"
     url: "/music//"
-    image: "/assets/Sheriff for a Night.jpeg"
+    image: "/assets/Sheriff for the Night.jpeg"
     videostatus: "Public"
 
   - title: "Nineteen Summers"
@@ -321,6 +321,6 @@ songs:
 
   - title: "Held in the Moment"
     url: "/music//"
-    image: "/assets/Held in the Moment.jpeg"
+    image: "/assets/Held in the Moment.jpg"
     videostatus: "Public"
 

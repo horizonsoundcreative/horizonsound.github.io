@@ -12,7 +12,9 @@ new_releases:
     image: "/assets/choosing-me-his-version.jpg"
 
 spotlight:
-
+  - title: "The Man Behind the Bar"
+    url: "/music/the-man-behind-the-bar/"
+    image: "/assets/the-man-behind-the-bar.jpeg"
 
 projects:
   - title: "A Quiet Little Voice"

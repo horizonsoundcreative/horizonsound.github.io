@@ -28,6 +28,20 @@ body {
   z-index: 2;
 }
 
+.home-teaser {
+  padding: 20px 40px;
+  margin: 20px auto 10px;
+  max-width: 900px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.home-teaser p {
+  margin: 0;
+}
+
 /* --------------------------------------------------
    SONG PAGE: HEADER + SUBTITLE
 -------------------------------------------------- */

@@ -1,34 +1,85 @@
 ---
 layout: song
-title: "SONG TITLE"
-subtitle: "PROJECT NAME | Part X"
-project_title: "PROJECT NAME"
-youtube_id: "YOUTUBE_ID"
+title: "Makin’ Our Way to California"
+subtitle: ""
+project_title: ""
+youtube_id: "cU4c2_3ITP8"
 hero_image: "/assets/hero.jpg"
 
 about: |
-  Your description goes here.
-  Use Markdown formatting.
-  Line breaks are preserved.
-  Bold, italics, lists — all work.
+  Official audio for "Makin’ Our Way to California" by Horizon Sound.
+  
+  “Makin’ Our Way to California” is a bright, upbeat pop-folk anthem full of movement, memory, and sunlit emotion. Crisp acoustic guitars, shimmering harmonies, and modern pop drums support an energetic female vocal that captures the joy of a family road trip across America. With polished production and a youthful tone, the track blends folk storytelling with pop clarity.
+  
+  This song follows the story of a summer journey down Route 66 — from Chicago to the Santa Monica Pier — told through the eyes of a daughter watching the world go by. From roadside treasures to desert snapshots, every lyric is a postcard from the past. Nostalgic, warm, and emotionally open, “Makin’ Our Way to California” is a celebration of family, freedom, and the kind of trip that stays with you forever.
+  
+  🎧 Vibe: bright pop-folk, summery, nostalgic, upbeat
+  🎤 Vocals: energetic female lead, youthful tone, emotional clarity
+  🎛️ Production: acoustic guitars, modern pop drums, shimmering harmonies, clean stereo mix
+  ⚡ Mood: adventurous, warm, reflective, joyful
   
 lyrics: |
-  Paste lyrics here.
-  Every line indented two spaces.
-  Blank lines indented too.
-
-tiles:
-  - title: "Song A"
-    url: "/music/song-a/"
-    image: "/assets/song-a.jpg"
-
-  - title: "Song B"
-    url: "/music/song-b/"
-    image: "/assets/song-b.jpg"
-    
-next_track_title: "Press to hear the next track in the series"
-next_track_url: "/music/NEXT-SONG/"
-next_track_label: "Next Song Title"
+  [Intro]
+  Makin' our way to California
+  Makin' our way to California
+  
+  [Verse 1]
+  In a rented car we hit the road 
+  My big brother sits in the passenger seat
+  Dad has one hand on the wheel 
+  Laughing at something Chris said
+  And I lay my head against the window
+  Watching as the world goes by
+  And I see the road signs
+  
+  [Pre-Chorus]
+  Illinois, Missouri, Oklahoma, Texas, New Mexico, Arizona, California
+  
+  [Chorus]
+  We’re riding down old Route 66,
+  From Chicago to the coast on a summer trip.
+  Stopping at the Wigwam,
+  Snapping photos in the desert,
+  Where the big meteor hit.
+  Yeah, we’re chasing that west‑bound bliss
+  ’Til we reach the Santa Monica Pier.
+  And I’d do it all again
+  Just to feel that time rewind,
+  Makin’ our way to California.
+  
+  [Verse 2]
+  Looking for buried treasure,
+  Doing nothing, doing something all together.
+  Getting sunburned on the side of the road,
+  Me and my brother splashing in the Colorado.
+  Dad drives us into another small town,
+  We’re seeing everything before it’s torn down,
+  Reading every road sign.
+  
+  [Pre-Chorus]
+  Illinois, Missouri, Oklahoma, Texas, New Mexico, Arizona, California
+  
+  [Bridge]
+  I didn’t know then what it meant,
+  How fast those summers came and went.
+  But every mile we drove back then
+  Still feels like going home again.
+  
+  [Chorus]
+  We’re riding down old Route 66,
+  From Chicago to the coast on a summer trip.
+  Stopping at the Wigwam,
+  Snapping photos in the desert,
+  Where the big meteor hit.
+  Yeah, we’re chasing that west‑bound bliss
+  ’Til we reach the Santa Monica Pier.
+  And I’d do it all again
+  Just to feel that time rewind,
+  Makin’ our way to California.
+  
+  [Intro]
+  Makin' our way to California
+  Makin' our way to California
 
 ---
 <!-- ABOUT SECTION -->

@@ -2,57 +2,70 @@ playlists:
   - title: "Pop"
     youtube_url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1Pzgel83xUYhwppTDYuYxVHE"
     image: "/assets/Playlist - Pop.jpg"
+    videostatus: "Public"
 
   - title: "Modern Country"
     youtube_url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1Pw9sRUaBV_izyIqwOcwAKMz"
     image: "/assets/Playlist - Modern Country.jpg"
+    videostatus: "Public"
 
   - title: "Calm & Cinematic – Horizon Sound Instrumentals"
     youtube_url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1PyTxIEXEolv_F5r7xqRr8TU"
     image: "/assets/Playlist - Calm & Cinematic – Horizon Sound Instrumentals.jpg"
+    videostatus: "Public"
 
   - title: "Acoustic / Singer‑Songwriter"
     youtube_url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1PxC_S8buSFa962RiMQCacXW"
     image: "/assets/Playlist - Acoustic - Singer-Songwriter.jpg"
+    videostatus: "Public"
 
   - title: "Emotional Ballads"
     youtube_url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1PzzBjl-mSFvM2oM_wWIHHsi"
     image: "/assets/Playlist - Emotional Ballads.jpg"
+    videostatus: "Public"
 
   - title: "Venice Trilogy"
     youtube_url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1PyAbowXjZwZ_Zhzu8eOzQnN"
     image: "/assets/Playlist - Venice Trilogy.jpg"
+    videostatus: "Private"
 
   - title: "After the Silence – Full Album"
     youtube_url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1Pz6NzlQFL-96c_9VIgXwuVh"
     image: "/assets/Playlist - After the Silence.jpg"
+    videostatus: "Public"
 
   - title: "90s Pop & Pop‑Rock"
     youtube_url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1PzBqW6Niq31vWxQjOLfdZHO"
     image: "/assets/Playlist - 90s Pop & Pop-Rock.jpg"
+    videostatus: "Public"
 
   - title: "Shorts"
     youtube_url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1PzlnfVBkVKn_E5GccT7JiVk"
     image: "/assets/Playlist - Shorts.jpg"
+    videostatus: "Private"
     
   - title: "Electro‑Pop & Dance‑Pop"
     youtube_url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1PzQeXDhkhPH792NQONQ0SU5"
     image: "/assets/Playlist - Electro-Pop & Dance-Pop.jpg"
+    videostatus: "Public"
 
   - title: "Midnight Saga"
     youtube_url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1PzhwIF1yE_gEUS1kZoW6oiH"
     image: "/assets/Playlist - Midnight Saga.jpg"
+    videostatus: "Private"
 
   - title: "A Way Back"
     youtube_url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1PzZpPNcgo40R2K0pbfTuZaH"
     image: "/assets/lost-in-silence.jpg"
+    videostatus: "Public"
 
   - title: "80s Rock & Pop"
     youtube_url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1PziRS7yrFMWKrxbgQUnw_k0"
     image: "/assets/Playlist - 80s Rock & Pop.jpg"
+    videostatus: "Public"
 
   - title: "Southern Rock"
     youtube_url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1Pwdl4fpEbkxORvona6pl8hA"
-    image: "/assets/Playlist - Southern Rock.jpg
-"
+    image: "/assets/Playlist - Southern Rock.jpg"
+    videostatus: "Public"
 

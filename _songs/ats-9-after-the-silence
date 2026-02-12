@@ -86,10 +86,6 @@ lyrics: |
   The quiet feels unfamiliar…
   But it’s starting to feel like mine.
 
-next_track_title: "Press to hear the next track in the After the Silence Album"
-next_track_url: "/music/ats-10-saltwater/"
-next_track_label: "10. Saltwater"
-
 ---
 <!-- ABOUT SECTION -->
 {% include about.html %}

@@ -1,19 +1,26 @@
-{% if page.primary_playlist %}
+{% comment %}
+1. Identify the current song by matching page.url to the data file
+{% endcomment %}
+{% assign current_url = page.url %}
+{% assign current_song = site.data.music.songs | where: "url", current_url | first %}
 
-  {%- comment -%}
-  1. Pull all songs from the same playlist
-  {%- endcomment -%}
-  {% assign playlist_name = page.primary_playlist %}
+{% if current_song and current_song.primary_playlist != "" %}
+
+  {% assign playlist_name = current_song.primary_playlist %}
+
+  {% comment %}
+  2. Pull all songs from the same playlist
+  {% endcomment %}
   {% assign related = site.data.music.songs | where: "primary_playlist", playlist_name %}
 
-  {%- comment -%}
-  2. Filter to Public only
-  {%- endcomment -%}
+  {% comment %}
+  3. Filter to Public only
+  {% endcomment %}
   {% assign related = related | where: "videostatus", "Public" %}
 
-  {%- comment -%}
-  3. Sort by sequence if present, otherwise by title
-  {%- endcomment -%}
+  {% comment %}
+  4. Sort by sequence if present, otherwise by title
+  {% endcomment %}
   {% assign sorted_by_sequence = related | sort: "sequence" %}
   {% assign first_item = sorted_by_sequence | first %}
 
@@ -23,19 +30,15 @@
     {% assign playlist_sorted = related | sort: "title" %}
   {% endif %}
 
-  {%- comment -%}
-  4. Hide the entire section if no public songs exist
-  {%- endcomment -%}
   {% if playlist_sorted.size > 0 %}
-
   <section class="song-project">
     <h2 class="section-header">{{ playlist_name }}</h2>
 
     <div class="tile-grid">
 
-      {%- comment -%}
+      {% comment %}
       5. Limit visible tiles (e.g., first 6)
-      {%- endcomment -%}
+      {% endcomment %}
       {% assign max_tiles = 6 %}
       {% for song in playlist_sorted %}
         <a class="tile playlist-tile {% if forloop.index > max_tiles %}hidden-tile{% endif %}"
@@ -46,14 +49,13 @@
       {% endfor %}
     </div>
 
-    {%- comment -%}
+    {% comment %}
     6. Show More button if there are more than max_tiles
-    {%- endcomment -%}
+    {% endcomment %}
     {% if playlist_sorted.size > max_tiles %}
       <button id="show-more-tiles" class="btn-secondary">Show More</button>
     {% endif %}
 
   </section>
-
   {% endif %}
 {% endif %}

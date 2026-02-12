@@ -300,17 +300,17 @@ songs:
 
 
   - title: "Back to Amarillo"
-    url: "/music//"
+    url: "/music/back-to-amarillo/"
     image: "/assets/Back to Amarillo.jpg"
     videostatus: "Public"
 
   - title: "Sheriff for a Night"
-    url: "/music//"
+    url: "/music/sheriff-for-a-night/"
     image: "/assets/Sheriff for the Night.jpeg"
     videostatus: "Public"
 
   - title: "Wildfire"
-    url: "/music//"
+    url: "/music/wildfire/"
     image: "/assets/Wildfire.jpg"
     videostatus: "Public"
 

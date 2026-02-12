@@ -89,10 +89,6 @@ lyrics: |
   I close the door…
   And walk away. 
 
-next_track_title: "Press to hear the next track in the After the Silence Album"
-next_track_url: "/music/ats-12-unsent-letters/"
-next_track_label: "12. Unsent Letters"
-
 ---
 <!-- ABOUT SECTION -->
 {% include about.html %}

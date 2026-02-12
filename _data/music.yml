@@ -243,22 +243,19 @@ songs:
     url: "/music/ats-12-unsent-letters/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Private"
-
-
- 
   
   - title: "Someday"
-    url: "/music//"
+    url: "/music/venice-1-someday/"
     image: "/assets/Someday.jpeg"
     videostatus: "Public"
 
   - title: "Missing Stamp"
-    url: "/music//"
+    url: "/music/venice-2-missing-stamp/"
     image: "/assets/Missing Stamp.jpeg"
     videostatus: "Public"
 
   - title: "Venice Waters"
-    url: "/music//"
+    url: "/music/venice-3-venice-waters/"
     image: "/assets/Venice Waters.jpeg"
     videostatus: "Public"
 

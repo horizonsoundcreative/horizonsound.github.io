@@ -1,9 +1,5 @@
 ---
 layout: song
-title: "Bottle on the Table"
-subtitle: ""
-project_title: ""
-youtube_id: "lUa9SbvKg_4"
 hero_image: "/assets/hero.jpg"
 
 about: |
@@ -69,8 +65,8 @@ lyrics: |
 <!-- LYRICS SECTION -->
 {% include lyrics.html %}
 
-<!-- PROJECT NAV -->
-{% include project-nav.html %}
+<!-- SONG PLAYLIST (now playlist-driven) -->
+{% include song-playlist.html %}
 
 <!-- NEXT TRACK BUTTON -->
 {% include next-track.html %}

@@ -1,9 +1,5 @@
 ---
 layout: song
-title: "Choosing Me (His Version)"
-subtitle: "A Way Back | Part 3"
-project_title: "A Way Back"
-youtube_id: "nudUc7DezM0"
 hero_image: "/assets/hero.jpg"
 
 about: |
@@ -89,15 +85,6 @@ lyrics: |
   No hard feelings, just a quiet release—
   And we’re both finding our own kind of peace.
 
-tiles:
-  - title: "Lost in Silence"
-    url: "/music/lost-in-silence/"
-    image: "/assets/lost-in-silence.jpg"
-
-  - title: "Choosing Me (Her Version)"
-    url: "/music/choosing-me-her-version/"
-    image: "/assets/choosing-me-her-version.jpg" 
-
 next_track_url: "/music/lost-in-silence/"
 next_track_label: "Lost in Silence"
 next_track_title: "Press to hear the first track in the series"
@@ -109,8 +96,8 @@ next_track_title: "Press to hear the first track in the series"
 <!-- LYRICS SECTION -->
 {% include lyrics.html %}
 
-<!-- PROJECT NAV -->
-{% include project-nav.html %}
+<!-- SONG PLAYLIST (now playlist-driven) -->
+{% include song-playlist.html %}
 
 <!-- NEXT TRACK BUTTON -->
 {% include next-track.html %}

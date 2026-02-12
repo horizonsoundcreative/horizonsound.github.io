@@ -89,10 +89,6 @@ lyrics: |
   After midnight, I breathe again—
   Yeah, this is how the best nights end.
 
-next_track_title: "Press to hear the next track in the Midnight Saga"
-next_track_url: "/music/midnight-saga-before-midnight/"
-next_track_label: "Before Midnight"
-
 ---
 <!-- ABOUT SECTION -->
 {% include about.html %}

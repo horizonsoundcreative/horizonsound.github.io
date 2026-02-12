@@ -1,34 +1,49 @@
 ---
 layout: song
-title: "SONG TITLE"
-subtitle: "PROJECT NAME | Part X"
-project_title: "PROJECT NAME"
-youtube_id: "YOUTUBE_ID"
+title: "A Touch of Light"
+subtitle: ""
+project_title: ""
+youtube_id: "5bfNeRr2UHI"
 hero_image: "/assets/hero.jpg"
 
 about: |
-  Your description goes here.
-  Use Markdown formatting.
-  Line breaks are preserved.
-  Bold, italics, lists — all work.
+  Official audio for “A Touch of Light” by Horizon Sound.
   
-lyrics: |
-  Paste lyrics here.
-  Every line indented two spaces.
-  Blank lines indented too.
-
+  “A Touch of Light” is a gentle, uplifting instrumental built around soft glow, warm ambience, and a sense of quiet hope. Subtle chords and airy textures create the feeling of a single sunbeam breaking through clouds — small, delicate, but powerful enough to change everything. It’s peaceful, bright, and emotionally soothing.
+  
+  🎧 Vibe: warm, uplifting, cinematic
+  🎼 Style: ambient instrumental, emotional score
+  🎛️ Production: glowing pads, soft textures, gentle lift
+  ✨ Mood: hopeful, comforting, serene
+  
 tiles:
-  - title: "Song A"
-    url: "/music/song-a/"
-    image: "/assets/song-a.jpg"
+  - title: "A Touch of Light"
+    url: "/music/instrumental-a-touch-of-light/"
+    image: "/assets/A Touch of Light.jpg"
 
-  - title: "Song B"
-    url: "/music/song-b/"
-    image: "/assets/song-b.jpg"
-    
+  - title: "Forever in a Moment"
+    url: "/music/instrumental-forever-in-a-moment/"
+    image: "/assets/Forever in a Moment.jpg"
+
+  - title: "Lines of Light"
+    url: "/music/instrumental-lines-of-light/"
+    image: "/assets/Lines of Light.jpg"
+
+  - title: "The Way Water Moves"
+    url: "/music/instrumental-the-way-water-moves/"
+    image: "/assets/The Way Water Moves.jpg"
+
+  - title: "Held in the Moment"
+    url: "/music/instrumental-held-in-the-moment/"
+    image: "/assets/Held in the Moment.jpg"
+
+  - title: "The Moment You Breathe"
+    url: "/music/instrumental-the-moment-you-breathe/"
+    image: "/assets/The Moment You Breathe.jpg"
+
 next_track_title: "Press to hear the next track in the series"
 next_track_url: "/music/NEXT-SONG/"
-next_track_label: "Next Song Title"
+next_track_label: "Forever in a Moment"
 
 ---
 <!-- ABOUT SECTION -->

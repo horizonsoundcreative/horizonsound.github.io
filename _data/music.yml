@@ -108,7 +108,7 @@ songs:
     sequence: 1
   
   - title: "Unsent Letters" # After the Silence Album track
-    subtitle: "After the Silence | Part 12” 
+    subtitle: "After the Silence | Part 12”
     youtube_id: "H4y2StKkPyw" 
     url: "/music/ats-12-unsent-letters/"
     image: "/assets/After the Silence.jpeg"
@@ -117,7 +117,7 @@ songs:
     sequence: 12
   
   - title: "The Dress I Never Wore" # After the Silence Album track
-    subtitle: "After the Silence | Part 11” 
+    subtitle: "After the Silence | Part 11”
     youtube_id: "S40NUKvFhAc" 
     url: "/music/ats-11-the-dress-i-never-wore/"
     image: "/assets/After the Silence.jpeg"
@@ -135,7 +135,7 @@ songs:
     sequence: 4
 
   - title: "Saltwater" # After the Silence Album track
-    subtitle: "After the Silence | Part 10” 
+    subtitle: "After the Silence | Part 10”
     youtube_id: "-yaZGULOHA0" 
     url: "/music/ats-10-saltwater/"
     image: "/assets/After the Silence.jpeg"
@@ -153,7 +153,7 @@ songs:
     sequence: 9
 
   - title: "Midnight Madness" # Midnight Saga track
-    subtitle: "Midnight Saga | Part 3” 
+    subtitle: "Midnight Saga | Part 3“
     youtube_id: "HeD2WbErCKg" 
     url: "/music/midnight-saga-midnight-madness/"
     image: "/assets/Midnight Madness.jpeg"
@@ -227,7 +227,7 @@ songs:
     sequence: 4
 
   - title: "Homesick For You" # After the Silence Album track
-    subtitle: "After the Silence | Part 3” 
+    subtitle: "After the Silence | Part 3”
     youtube_id: "8QgA5YL9nIA" 
     url: "/music/ats-3-homesick-for-you/"
     image: "/assets/After the Silence.jpeg"
@@ -296,7 +296,7 @@ songs:
     primary_playlist: "Pop"
 
   - title: "Lost in Silence" # A Way Back Trilogy track
-    subtitle: "A Way Back | Part 1” 
+    subtitle: "A Way Back | Part 1" 
     youtube_id: "59teEpeHah8" 
     url: "/music/lost-in-silence/"
     image: "/assets/lost-in-silence.jpg"

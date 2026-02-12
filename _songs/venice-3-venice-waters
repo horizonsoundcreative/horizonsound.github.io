@@ -99,10 +99,6 @@ lyrics: |
   And as the plane touched down, 
   you whispered, “Next time… where should we go?”
 
-next_track_title: "Press to hear the first track in the Venice series"
-next_track_url: "/music/venice-1-someday/"
-next_track_label: "Someday"
-
 ---
 <!-- ABOUT SECTION -->
 {% include about.html %}

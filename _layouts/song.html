@@ -1,9 +1,8 @@
+{% assign current_song = site.data.music.songs | where: "url", page.url | first %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    {% assign current_song = site.data.music.songs | where: "url", page.url | first %}
 
     <title>{{ current_song.title }} | Horizon Sound</title>
 
@@ -66,8 +65,14 @@
         </div>
       </section>
 
-      <!-- Dynamic content from includes (About, Lyrics, Playlist Tiles, Next Track) -->
+      <!-- Dynamic content from includes -->
       {{ content }}
+
+      <!-- PLAYLIST TILES -->
+      {% include song-playlist.html current_song=current_song %}
+
+      <!-- NEXT TRACK -->
+      {% include next-track.html current_song=current_song %}
 
     </main>
 
@@ -79,13 +84,11 @@
       <p>Contact: HorizonSoundCreative@gmail.com</p>
       <p>All music, lyrics, and creative works on this site are original and owned by Horizon Sound.</p>
 
-      <!-- Device width debug (optional) -->
       <p style="opacity:0.5; font-size:0.8rem;">
         Screen width: <span id="device-width"></span>
       </p>
     </footer>
 
-    <!-- Device width script (optional) -->
     <script>
       function updateWidth() {
         const w = window.innerWidth;
@@ -95,7 +98,6 @@
       window.addEventListener("load", updateWidth);
     </script>
 
-    <!-- Show More Tiles -->
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         const btn = document.getElementById("show-more-tiles");

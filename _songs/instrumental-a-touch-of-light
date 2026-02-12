@@ -41,10 +41,6 @@ tiles:
     url: "/music/instrumental-the-moment-you-breathe/"
     image: "/assets/The Moment You Breathe.jpg"
 
-next_track_title: "Press to hear the next track in the series"
-next_track_url: "/music/NEXT-SONG/"
-next_track_label: "Forever in a Moment"
-
 ---
 <!-- ABOUT SECTION -->
 {% include about.html %}

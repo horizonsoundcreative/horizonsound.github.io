@@ -1,9 +1,5 @@
 ---
 layout: song
-title: "The Moment You Breathe"
-subtitle: ""
-project_title: ""
-youtube_id: "YNrpz2S--Yk"
 hero_image: "/assets/hero.jpg"
 
 about: |
@@ -16,31 +12,6 @@ about: |
   🎛️ Production: soft pads, airy textures, subtle motion, warm tonal palette
   ✨ Mood: peaceful, introspective, luminous, grounding
     
-tiles:
-  - title: "A Touch of Light"
-    url: "/music/instrumental-a-touch-of-light/"
-    image: "/assets/A Touch of Light.jpg"
-
-  - title: "Forever in a Moment"
-    url: "/music/instrumental-forever-in-a-moment/"
-    image: "/assets/Forever in a Moment.jpg"
-
-  - title: "Lines of Light"
-    url: "/music/instrumental-lines-of-light/"
-    image: "/assets/Lines of Light.jpg"
-
-  - title: "The Way Water Moves"
-    url: "/music/instrumental-the-way-water-moves/"
-    image: "/assets/The Way Water Moves.jpg"
-
-  - title: "Held in the Moment"
-    url: "/music/instrumental-held-in-the-moment/"
-    image: "/assets/Held in the Moment.jpg"
-
-  - title: "The Moment You Breathe"
-    url: "/music/instrumental-the-moment-you-breathe/"
-    image: "/assets/The Moment You Breathe.jpg"
-
 ---
 <!-- ABOUT SECTION -->
 {% include about.html %}
@@ -48,8 +19,8 @@ tiles:
 <!-- LYRICS SECTION -->
 {% include lyrics.html %}
 
-<!-- PROJECT NAV -->
-{% include project-nav.html %}
+<!-- SONG PLAYLIST (now playlist-driven) -->
+{% include song-playlist.html %}
 
 <!-- NEXT TRACK BUTTON -->
 {% include next-track.html %}

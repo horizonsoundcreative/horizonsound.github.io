@@ -1,26 +1,12 @@
-{% comment %}
-1. Identify the current song by matching page.url to the data file
-{% endcomment %}
-{% assign current_url = page.url %}
 {% assign current_song = include.current_song %}
 
 {% if current_song and current_song.primary_playlist != "" %}
 
   {% assign playlist_name = current_song.primary_playlist %}
 
-  {% comment %}
-  2. Pull all songs from the same playlist
-  {% endcomment %}
   {% assign related = site.data.music.songs | where: "primary_playlist", playlist_name %}
-
-  {% comment %}
-  3. Filter to Public only
-  {% endcomment %}
   {% assign related = related | where: "videostatus", "Public" %}
 
-  {% comment %}
-  4. Sort by sequence if present, otherwise by title
-  {% endcomment %}
   {% assign sorted_by_sequence = related | sort: "sequence" %}
   {% assign first_item = sorted_by_sequence | first %}
 
@@ -36,9 +22,6 @@
 
     <div class="tile-grid">
 
-      {% comment %}
-      5. Limit visible tiles (e.g., first 6)
-      {% endcomment %}
       {% assign max_tiles = 6 %}
       {% for song in playlist_sorted %}
         <a class="tile playlist-tile {% if forloop.index > max_tiles %}hidden-tile{% endif %}"
@@ -49,9 +32,6 @@
       {% endfor %}
     </div>
 
-    {% comment %}
-    6. Show More button if there are more than max_tiles
-    {% endcomment %}
     {% if playlist_sorted.size > max_tiles %}
       <button id="show-more-tiles" class="btn-secondary">Show More</button>
     {% endif %}

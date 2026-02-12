@@ -294,42 +294,32 @@ songs:
     image: "/assets/The Moment You Breathe.jpg"
     videostatus: "Public"
 
-
-
-
-
-
   - title: "Back to Amarillo"
     url: "/music/back-to-amarillo/"
     image: "/assets/Back to Amarillo.jpg"
-    videostatus: "Public"
+    videostatus: "Private"
 
   - title: "Sheriff for a Night"
     url: "/music/sheriff-for-a-night/"
     image: "/assets/Sheriff for the Night.jpeg"
-    videostatus: "Public"
+    videostatus: "Private"
 
   - title: "Wildfire"
     url: "/music/wildfire/"
     image: "/assets/Wildfire.jpg"
-    videostatus: "Public"
+    videostatus: "Private"
 
 
   
-  - title: "Ninteen Summers - Short"
-    url: "/music//"
-    image: "/assets/Nineteen Summers New.jpeg"
-    videostatus: "Private"
-
   - title: "Nineteen Summers"
     url: "/music//"
     image: "/assets/Nineteen Summers New.jpeg"
-    videostatus: "Private"
+    videostatus: "Public"
 
   - title: "Nineteen Summers"
     url: "/music/nineteen-summers/"
     image: "/assets/Nineteen Summers New.jpeg"
-    videostatus: "Private"
+    videostatus: "Public"
 
 
 

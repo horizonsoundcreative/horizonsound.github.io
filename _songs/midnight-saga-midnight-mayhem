@@ -1,9 +1,5 @@
 ---
 layout: song
-title: "Midnight Mayhem"
-subtitle: "Midnight Saga | Part 2"
-project_title: "Midnight Saga"
-youtube_id: "Z6AGhE0K-Ro"
 hero_image: "/assets/hero.jpg"
 
 about: |
@@ -86,24 +82,6 @@ lyrics: |
   Let the chaos flow, let the chaos flow—
   One spark, one night, and we’re ready to blow.
 
-
-tiles:
-  - title: "Before Midnight"
-    url: "/music/midnight-saga-before-midnight/"
-    image: "/assets/Before Midnight.jpeg"
-
-  - title: "Midnight Mayhem"
-    url: "/music/midnight-saga-midnight-mayhem/"
-    image: "/assets/Midnight Mayhem.jpeg"
-
-  - title: "Midnight Madness"
-    url: "/music/midnight-saga-midnight-madness/"
-    image: "/assets/Midnight Madness.jpeg"
-
-  - title: "After Midnight"
-    url: "/music/midnight-saga-after-midnight/"
-    image: "/assets/After Midnight.jpeg"
-
 next_track_title: "Press to hear the next track in the Midnight Saga"
 next_track_url: "/music/midnight-saga-midnight-madness/"
 next_track_label: "Midnight Madness"
@@ -115,8 +93,8 @@ next_track_label: "Midnight Madness"
 <!-- LYRICS SECTION -->
 {% include lyrics.html %}
 
-<!-- PROJECT NAV -->
-{% include project-nav.html %}
+<!-- SONG PLAYLIST (now playlist-driven) -->
+{% include song-playlist.html %}
 
 <!-- NEXT TRACK BUTTON -->
 {% include next-track.html %}

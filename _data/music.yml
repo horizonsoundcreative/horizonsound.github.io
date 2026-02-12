@@ -1,5 +1,5 @@
 songs:
-  - title: "Held in the Moment"
+  - title: "Held in the Moment" # Instrumental track
     url: "/music/instrumental-held-in-the-moment/"
     image: "/assets/Held in the Moment.jpg"
     videostatus: "Private"
@@ -14,12 +14,12 @@ songs:
     image: "/assets/Sheriff for the Night.jpeg"
     videostatus: "Private"
 
-  - title: "The Way Water Moves"
+  - title: "The Way Water Moves" # Instrumental track
     url: "/music/instrumental-the-way-water-moves/"
     image: "/assets/The Way Water Moves.jpg"
     videostatus: "Private"
 
-  - title: "Lines of Light"
+  - title: "Lines of Light" # Instrumental track
     url: "/music/instrumental-lines-of-light/"
     image: "/assets/Lines of Light.jpg"
     videostatus: "Private"
@@ -34,127 +34,129 @@ songs:
     image: "/assets/Back to Amarillo.jpg"
     videostatus: "Private"
 
-  - title: "Forever in a Moment"
+  - title: "Forever in a Moment" # Instrumental track
     url: "/music/instrumental-forever-in-a-moment/"
     image: "/assets/Forever in a Moment.jpg"
     videostatus: "Private"
 
-  - title: "A Touch of Light"
+  - title: "A Touch of Light" # Instrumental track
     url: "/music/instrumental-a-touch-of-light/"
     image: "/assets/A Touch of Light.jpg"
     videostatus: "Private"
 
-  - title: "Venice Waters"
+  - title: "Venice Waters" # Venice-Missing Stamp track
     url: "/music/venice-3-venice-waters/"
     image: "/assets/Venice Waters.jpeg"
     videostatus: "Private"
 
-  - title: "Missing Stamp"
+  - title: "Missing Stamp" # Venice-Missing Stamp track
     url: "/music/venice-2-missing-stamp/"
     image: "/assets/Missing Stamp.jpeg"
     videostatus: "Private"
 
-  - title: "Rise Again"
+  - title: "Rise Again" # After the Silence Album track
     url: "/music/ats-13-rise-again/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Private"
 
-  - title: "Someday"
+  - title: "Someday" # Venice-Missing Stamp track
     url: "/music/venice-1-someday/"
     image: "/assets/Someday.jpeg"
     videostatus: "Private"
   
-  - title: "Unsent Letters"
+  - title: "Unsent Letters" # After the Silence Album track
     url: "/music/ats-12-unsent-letters/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Private"
   
-  - title: "The Dress I Never Wore"
+  - title: "The Dress I Never Wore" # After the Silence Album track
     url: "/music/ats-11-the-dress-i-never-wore/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Private"
 
-  - title: "After Midnight"
+  - title: "After Midnight" # Midnight Saga track
     url: "/music/midnight-saga-after-midnight/"
     image: "/assets/After Midnight.jpeg"
     videostatus: "Private"
 
-  - title: "Saltwater"
+  - title: "Saltwater" # After the Silence Album track
     url: "/music/ats-10-saltwater/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Private"
 
-  - title: "After the Silence"
+  - title: "After the Silence" # After the Silence Album track
     url: "/music/ats-9-after-the-silence/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Private"
 
-  - title: "Midnight Madness"
+  - title: "Midnight Madness" # Midnight Saga track
     url: "/music/midnight-saga-midnight-madness/"
     image: "/assets/Midnight Madness.jpeg"
     videostatus: "Private"
 
-  - title: "Ghostlight"
+  - title: "Ghostlight" # After the Silence Album track
     url: "/music/ats-8-ghostlight/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Private"
 
-  - title: "If You'd Asked"
+  - title: "If You'd Asked" # After the Silence Album track
     url: "/music/ats-7-if-youd-asked/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Private"
 
-  - title: "Midnight Mayhem"
+  - title: "Midnight Mayhem" # Midnight Saga track
     url: "/music/midnight-saga-midnight-mayhem/"
     image: "/assets/Midnight Mayhem.jpeg"
     videostatus: "Private"
 
-  - title: "Half of Me"
+  - title: "Half of Me" # After the Silence Album track
     url: "/music/ats-6-half-of-me/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Private"
 
-  - title: "Paper Walls"
+  - title: "Paper Walls" # After the Silence Album track
     url: "/music/ats-5-paper-walls/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Private"
 
-  - title: "Before Midnight"
+  - title: "Before Midnight" # Midnight Saga track
     url: "/music/midnight-saga-before-midnight/"
     image: "/assets/Before Midnight.jpeg"
     videostatus: "Private"
 
-  - title: "The Way We Lied"
+# Everything below this point is live and public in YouTube - Everything above is scheduled but has not gone live yet.
+
+  - title: "The Way We Lied" # After the Silence Album track
     url: "/music/ats-4-the-way-we-lied/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Public"
 
-  - title: "Homesick For You"
+  - title: "Homesick For You" # After the Silence Album track
     url: "/music/ats-3-homesick-for-you/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Public"
 
-  - title: "The Moment You Breathe"
+  - title: "The Moment You Breathe" # Instrumental track
     url: "/music/instrumental-the-moment-you-breathe/"
     image: "/assets/The Moment You Breathe.jpg"
     videostatus: "Public"
 
-  - title: "Choosing Me (His Version)"
+  - title: "Choosing Me (His Version)" # A Way Back Trilogy track
     url: "/music/choosing-me-his-version/"
     image: "/assets/choosing-me-his-version.jpg"
     videostatus: "Public"
 
-  - title: "Borrowed Time"
+  - title: "Borrowed Time" # After the Silence Album track
     url: "/music/ats-2-borrowed-time/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Public"
 
-  - title: "The Quiet After"
+  - title: "The Quiet After" # After the Silence Album track
     url: "/music/ats-1-the-quiet-after/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Public"
 
-  - title: "Choosing Me (Her Version)"
+  - title: "Choosing Me (Her Version)" # A Way Back Trilogy track
     url: "/music/choosing-me-her-version/"
     image: "/assets/choosing-me-her-version.jpg"
     videostatus: "Public"
@@ -169,7 +171,7 @@ songs:
     image: "/assets/Hold On New.jpeg*"
     videostatus: "Public"
 
-  - title: "Lost in Silence"
+  - title: "Lost in Silence" # A Way Back Trilogy track
     url: "/music/lost-in-silence/"
     image: "/assets/lost-in-silence.jpg"
     videostatus: "Public"

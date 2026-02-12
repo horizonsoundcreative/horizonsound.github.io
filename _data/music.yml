@@ -168,7 +168,7 @@ songs:
 
   - title: "Hold On"
     url: "/music/hold-on-revised/"
-    image: "/assets/Hold On New.jpeg*"
+    image: "/assets/Hold On New.jpeg"
     videostatus: "Public"
 
   - title: "Lost in Silence" # A Way Back Trilogy track

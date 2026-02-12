@@ -1,0 +1,120 @@
+---
+layout: song
+title: "Someday"
+subtitle: "Venice | Part 1"
+project_title: "Venice"
+youtube_id: "2cv-H5tTygs"
+hero_image: "/assets/hero.jpg"
+
+about: |
+  Official audio for “Someday” by Horizon Sound.
+
+  “Someday” is a warm, nostalgic acoustic‑pop track built on gentle guitars, soft drums, and bright female vocals. The production leans intimate and cinematic, capturing the innocence of two best friends dreaming of a future adventure they’re too young to understand. Light percussion and airy harmonies give the song a hopeful lift, while the storytelling stays grounded and heartfelt.
+  
+  This song follows two girls who make a promise — one day, they’ll see Venice together. Life is simple, the world feels big, and the dream feels even bigger. “Someday” captures the magic of childhood imagination, the kind of promise you whisper with absolute certainty, not knowing how long life will take to fulfill it. It’s the beginning of a lifelong story, the first chapter of a dream that waits patiently for decades.
+  
+  🎧 Vibe: warm acoustic‑pop, nostalgic, hopeful
+  🎤 Vocals: bright female lead, soft harmonies, expressive phrasing
+  🎛️ Production: acoustic guitars, light percussion, gentle lift, cinematic warmth
+  ⚡ Mood: innocent, dreamy, heartfelt, reflective
+  
+lyrics: |
+  [Verse 1]
+  We were twelve and always together,
+  maps spread on the floor,
+  Circling places we wanted to see, 
+  imagining all those far off cities.
+  They’d talk about visiting Venice canals, 
+  their middle school plans in sync,
+  Two girls with the whole world waiting, 
+  believing we had endless time.
+  
+  [Pre Chorus]
+  We planned out our lives in homeroom, 
+  sketched gondolas in the margins,
+  Promised we’d go together, 
+  we swore we’d never forget.
+  
+  [Chorus]
+  Someday we’ll ride those Venice canals,  
+  Someday we’ll chase, the sun to the sea.
+  Two girls with a map and a promise between us,  
+  Someday feels close when it’s you and me.  
+  We’re only kids and the world feels easy,  
+  Someday is calling — and we can hardly wait.
+  
+  [Verse 2]
+  We’d practiced saying “Ciao” in accents we thought were right, 
+  Pretended the hallway was a bridge in soft Italian light. 
+  Every idea felt possible when we were together, 
+  Two curious hearts reaching for new heights.
+  
+  [Pre‑Chorus]
+  We’d talked about the places we’d see, 
+  checking out cities while searching online.
+  Every plan felt right in our middle school minds, 
+  two kids convinced we’d see the world.
+  
+  [Chorus]
+  Someday we’ll ride those Venice canals,  
+  Someday we’ll chase, the sun to the sea.
+  Two girls with a map and a promise between us,  
+  Someday feels close when it’s you and me.  
+  We’re only kids and the world feels easy,  
+  Someday is calling — and we can hardly wait.
+  
+  [Bridge]
+  We begged our parents for passports, 
+  said we needed them “just in case.” 
+  Held them like precious gifts the day they finally came. 
+  Two girls with brand new passports, 
+  empty but full of promise, 
+  ready to chase the world together, 
+  hearts wide open to what comes next.
+  
+  [Chorus]
+  Someday we’ll ride those Venice canals,  
+  Someday we’ll chase, the sun to the sea. 
+  Two girls with a map and a promise between us,  
+  Someday feels close when it’s you and me.  
+  We’re only kids and the world feels easy,  
+  Someday is calling — and we can hardly wait.
+  
+  [Outro]
+  Two girls with brand new passports, 
+  believing someday every page would be filled.
+  Just two kids and the world feels easy,  
+  Someday is calling
+  We can hardly wait…
+
+
+tiles:
+  - title: "Someday"
+    url: "/music/venice-1-someday/"
+    image: "/assets/Someday.jpeg"
+
+  - title: "Missing Stamp"
+    url: "/music/venice-2-missing-stamp/"
+    image: "/assets/Missing Stamp.jpeg"
+
+  - title: "Venice Waters"
+    url: "/music/venice-3-venice-waters/"
+    image: "/assets/Venice Waters.jpeg"
+    
+next_track_title: "Press to hear the next track in the Venice series"
+next_track_url: "/music/venice-2-missing-stamp/"
+next_track_label: "Missing Stamp"
+
+---
+<!-- ABOUT SECTION -->
+{% include about.html %}
+
+<!-- LYRICS SECTION -->
+{% include lyrics.html %}
+
+<!-- PROJECT NAV -->
+{% include project-nav.html %}
+
+<!-- NEXT TRACK BUTTON -->
+{% include next-track.html %}
+

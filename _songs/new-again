@@ -1,9 +1,5 @@
 ---
 layout: song
-title: "New Again"
-subtitle: ""
-project_title: ""
-youtube_id: "y4pym_HVGJA"
 hero_image: "/assets/hero.jpg"
 
 about: |
@@ -87,8 +83,8 @@ lyrics: |
 <!-- LYRICS SECTION -->
 {% include lyrics.html %}
 
-<!-- PROJECT NAV -->
-{% include project-nav.html %}
+<!-- SONG PLAYLIST (now playlist-driven) -->
+{% include song-playlist.html %}
 
 <!-- NEXT TRACK BUTTON -->
 {% include next-track.html %}

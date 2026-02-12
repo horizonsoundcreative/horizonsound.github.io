@@ -1,8 +1,5 @@
 ---
 layout: song
-title: "A Quiet Little Voice"
-subtitle: ""
-youtube_id: "_YvJOMi6lP0"
 hero_image: "/assets/hero.jpg"
 
 about: |

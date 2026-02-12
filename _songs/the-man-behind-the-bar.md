@@ -1,9 +1,5 @@
 ---
 layout: song
-title: "The Man Behind the Bar"
-subtitle: ""
-project_title: ""
-youtube_id: "3EOLlL-P120"
 hero_image: "/assets/hero.jpg"
 
 about: |
@@ -84,8 +80,8 @@ lyrics: |
 <!-- LYRICS SECTION -->
 {% include lyrics.html %}
 
-<!-- PROJECT NAV -->
-{% include project-nav.html %}
+<!-- SONG PLAYLIST (now playlist-driven) -->
+{% include song-playlist.html %}
 
 <!-- NEXT TRACK BUTTON -->
 {% include next-track.html %}

@@ -83,10 +83,6 @@ lyrics: |
   Someday is calling
   We can hardly wait…
 
-next_track_title: "Press to hear the next track in the Venice series"
-next_track_url: "/music/venice-2-missing-stamp/"
-next_track_label: "Missing Stamp"
-
 ---
 <!-- ABOUT SECTION -->
 {% include about.html %}

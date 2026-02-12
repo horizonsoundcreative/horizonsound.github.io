@@ -2,7 +2,6 @@
 layout: song
 title: "A Quiet Little Voice"
 subtitle: ""
-project_title: ""
 youtube_id: "_YvJOMi6lP0"
 hero_image: "/assets/hero.jpg"
 
@@ -60,6 +59,7 @@ lyrics: |
   
   [Outro]
   A new beginning
+
 ---
 <!-- ABOUT SECTION -->
 {% include about.html %}
@@ -67,8 +67,8 @@ lyrics: |
 <!-- LYRICS SECTION -->
 {% include lyrics.html %}
 
-<!-- PROJECT NAV -->
-{% include project-nav.html %}
+<!-- SONG PLAYLIST (now playlist-driven) -->
+{% include song-playlist.html %}
 
 <!-- NEXT TRACK BUTTON -->
 {% include next-track.html %}

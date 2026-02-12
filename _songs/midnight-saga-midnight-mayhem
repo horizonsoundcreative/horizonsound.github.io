@@ -1,34 +1,120 @@
 ---
 layout: song
-title: "SONG TITLE"
-subtitle: "PROJECT NAME | Part X"
-project_title: "PROJECT NAME"
-youtube_id: "YOUTUBE_ID"
+title: "Before Midnight"
+subtitle: "Midnight Saga | Part 1"
+project_title: "Midnight Saga"
+youtube_id: "VXQKpK56MCI"
 hero_image: "/assets/hero.jpg"
 
 about: |
-  Your description goes here.
-  Use Markdown formatting.
-  Line breaks are preserved.
-  Bold, italics, lists — all work.
+  Official audio for "Before Midnight" by Horizon Sound.
+  
+  “Before Midnight” opens The Midnight Saga with a warm, cinematic blend of pop, synth, and late‑night atmosphere. Soft neon textures, steady drums, and smooth female vocals set the tone for a night that’s just beginning — full of possibility, tension, and the quiet electricity of what might unfold. The track carries a sense of anticipation, capturing that moment when the world feels suspended and anything could happen.
+  
+  This chapter follows someone stepping into the night with equal parts excitement and uncertainty. The verses glow with introspection, while the chorus lifts into a confident stride — the feeling of crossing a threshold, leaving the familiar behind, and letting the night pull you forward. “Before Midnight” sets the emotional foundation for the journey ahead, where curiosity becomes momentum and momentum becomes mayhem.
+  
+  🎧 Vibe: cinematic pop, neon‑lit, atmospheric, anticipatory
+  🎤 Vocals: smooth female lead, soft intensity, late‑night tone
+  🎛️ Production: warm synths, steady drums, glowing textures
+  ⚡ Mood: curious, electric, suspended, ready‑to‑ignite
   
 lyrics: |
-  Paste lyrics here.
-  Every line indented two spaces.
-  Blank lines indented too.
+  [Intro]
+  My phone’s blowing up, I can barely hear,
+  My girls on FaceTime screaming in my ear.
+  My lip gloss shining, catching the light—
+  Yeah, we’re trouble, we were made to ignite.
+  
+  [Verse 1]
+  Clothes on the floor, I’ve tried on twenty fits,
+  Someone’s crying, someone’s drunk, someone’s losing it.
+  Music blasting, neighbors banging on the door,
+  But tonight we’re legends, — 
+  We won’t be ignored!
+  
+  [Pre-Chorus]
+  Mirror saying “Girl, you’re the main event,”
+  Spent all day on my look, this glow’s no accident.
+  Heels too high, but I’ll make ’em mine—
+  Countdown’s starting, and we’re right on time.
+  
+  [Chorus]
+  Before midnight, we’re glowing, glowing,
+  Swagger is rising and it’s showing, showing. 
+  Group chat going wild, and we’re losing our minds—
+  We’re the flame that’s gonna light up the night.
+  Before midnight, we’re reckless, reckless,
+  Insanity breaking loose and it’s endless, endless. 
+  One last look, then we step outside—
+  Yeah, the world won’t see me coming tonight.
+  
+  
+  [Verse 2]
+  Glitter on my skin, I’m ready to rage,
+  Girls gather around, about to engage.
+  “Take a pic!” “No, delete!” “Wait, I look insane!”
+  We’re magic in the madness — that’s the whole damn thing.
+  
+  [Pre-Chorus]
+  Uber’s waiting, someone’s yelling “GO!”
+  We’re late as hell, but we still steal the show.
+  Heels on pavement, neon lighting up our eyes—
+  Tonight we’re trouble and we don’t apologize.
+  
+  [Chorus]
+  Before midnight, we’re glowing, glowing,
+  Swagger is rising and it’s showing, showing. 
+  Group chat going wild, and we’re losing our minds—
+  We’re the flame that’s gonna light up the night.
+  Before midnight, we’re reckless, reckless,
+  Insanity breaking loose and it’s endless, endless. 
+  One last look, then we step outside—
+  Yeah, the world won’t see me coming tonight.
+  
+  [Bridge]
+  Laughter spilling over, we’re drawing a crowd,
+  Yelling “Drive faster!” — we’re losing it now.
+  Girls all screaming, we’re alive, alive—
+  We’re all preparing to dive.
+  
+  [Chorus]
+  Before midnight, we’re glowing, glowing,
+  Swagger is rising and it’s showing, showing. 
+  Group chat going wild, and we’re losing our minds—
+  We’re the flame that’s gonna light up the night.
+  Before midnight, we’re reckless, reckless,
+  Insanity breaking loose and it’s endless, endless. 
+  One last look, then we step outside—
+  Yeah, the world won’t see me coming tonight.
+  
+  [Outro]
+  The Uber pulls up and my girls spill out,
+  The bass is thumping as we rush inside.
+  We get in for free ’cause we’re what it’s about—
+  This club is so damn epic, yeah—
+  We’re losing our minds tonight.
+
 
 tiles:
-  - title: "Song A"
-    url: "/music/song-a/"
-    image: "/assets/song-a.jpg"
+  - title: "Before Midnight"
+    url: "/music/midnight-saga-before-midnight/"
+    image: "/assets/Before Midnight.jpeg"
 
-  - title: "Song B"
-    url: "/music/song-b/"
-    image: "/assets/song-b.jpg"
-    
-next_track_title: "Press to hear the next track in the series"
-next_track_url: "/music/NEXT-SONG/"
-next_track_label: "Next Song Title"
+  - title: "Midnight Mayhem"
+    url: "/music/midnight-saga-midnight-mayhem/"
+    image: "/assets/Midnight Mayhem.jpeg"
+
+  - title: "Midnight Madness"
+    url: "/music/midnight-saga-midnight-madness/"
+    image: "/assets/Midnight Madness.jpeg"
+
+  - title: "After Midnight"
+    url: "/music/midnight-saga-after-midnight/"
+    image: "/assets/After Midnight.jpeg"
+
+next_track_title: "Press to hear the next track in the Midnight Saga"
+next_track_url: "/music/midnight-saga-midnight-mayhem/"
+next_track_label: "Midnight Mayhem"
 
 ---
 <!-- ABOUT SECTION -->

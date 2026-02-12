@@ -195,22 +195,22 @@ songs:
     videostatus: "Private"
 
   - title: "Before Midnight"
-    url: "/music//"
+    url: "/music/midnight-saga-before-midnight/"
     image: "/assets/Before Midnight.jpeg"
     videostatus: "Public"
 
   - title: "Midnight Mayhem"
-    url: "/music//"
+    url: "/music/midnight-saga-midnight-mayhem/"
     image: "/assets/Midnight Mayhem.jpeg"
     videostatus: "Public"
 
   - title: "Midnight Madness"
-    url: "/music//"
+    url: "/music/midnight-saga-midnight-madness/"
     image: "/assets/Midnight Madness.jpeg"
     videostatus: "Public"
 
   - title: "After Midnight"
-    url: "/music//"
+    url: "/music/midnight-saga-after-midnight/"
     image: "/assets/After Midnight.jpeg"
     videostatus: "Public"
 

@@ -4,9 +4,9 @@ songs:
     image: "/assets/Held in the Moment.jpg"
     videostatus: "Private"
 
-  - title: "Nineteen Summers"
+  - title: "Nineteen Summers Revised"
     url: "/music/nineteen-summers-revised/"
-    image: "/assets/Nineteen Summers New.jpeg*"
+    image: "/assets/Nineteen Summers New.jpeg"
     videostatus: "Public"
   
   - title: "Sheriff for a Night"
@@ -166,7 +166,7 @@ songs:
     image: "/assets/Keep the Light On.jpeg"
     videostatus: "Public"
 
-  - title: "Hold On"
+  - title: "Hold On Revised"
     url: "/music/hold-on-revised/"
     image: "/assets/Hold On New.jpeg"
     videostatus: "Public"
@@ -306,9 +306,9 @@ songs:
     image: "/assets/One Hell of a Ride.jpeg"
     videostatus: "Public"
 
-  - title: "Nineteen Summers"
+  - title: "Nineteen Summers Original"
     url: "/music/nineteen-summers/"
-    image: "/assets/Nineteen Summers.jpeg*"
+    image: "/assets/Nineteen Summers.jpeg"
     videostatus: "Public"
 
   - title: "A Quiet Little Voice"

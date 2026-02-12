@@ -1,0 +1,80 @@
+---
+layout: song
+title: "The Quiet After"
+subtitle: "After the Silence | Part 1"
+project_title: "After the Silence"
+youtube_id: "-Yxig5Mq9u4"
+hero_image: "/assets/hero.jpg"
+
+about: |
+  
+lyrics: |
+
+tiles:
+  - title: "1. The Quiet After"
+    url: "/music/ats-1-the-quiet-after/"
+    image: "/assets/After the Silence.jpg"
+
+  - title: "2. Borrowed Time"
+    url: "/music/ats-2-borrowed-time/"
+    image: "/assets/After the Silence.jpg"
+
+  - title: "3. Homesick for You"
+    url: "/music/ats-3-homesick-for-you/"
+    image: "/assets/After the Silence.jpg"
+
+  - title: "4. The Way We Lied"
+    url: "/music/ats-4-the-way-we-lied/"
+    image: "/assets/After the Silence.jpg"
+
+  - title: "5. Paper Walls"
+    url: "/music/ats-5-paper-walls/"
+    image: "/assets/After the Silence.jpg"
+
+  - title: "6. Half of Me"
+    url: "/music/ats-6-half-of-me/"
+    image: "/assets/After the Silence.jpg"
+
+  - title: "7. If You'd Asked"
+    url: "/music/ats-7-if-youd-asked/"
+    image: "/assets/After the Silence.jpg"
+
+  - title: "8. Ghostlight"
+    url: "/music/ats-8-ghostlight/"
+    image: "/assets/After the Silence.jpg"
+
+  - title: "9. After the Silence"
+    url: "/music/ats-9-after-the-silence/"
+    image: "/assets/After the Silence.jpg"
+
+  - title: "10. Saltwater"
+    url: "/music/ats-10-saltwater/"
+    image: "/assets/After the Silence.jpg"
+
+  - title: "11. The Dress I Never Wore"
+    url: "/music/ats-11-the-dress-i-never-wore/"
+    image: "/assets/After the Silence.jpg"
+
+  - title: "12. Unsent Letters"
+    url: "/music/ats-12-unsent-letters/"
+    image: "/assets/After the Silence.jpg"
+
+  - title: "13. Rise Again"
+    url: "/music/ats-13-rise-again/"
+    image: "/assets/After the Silence.jpg"
+
+next_track_title: "Press to hear the next track in the After the Silence Album"
+next_track_url: "/music/ats-2-borrowed-time/"
+next_track_label: "2. Borrowed Time"
+
+---
+<!-- ABOUT SECTION -->
+{% include about.html %}
+
+<!-- LYRICS SECTION -->
+{% include lyrics.html %}
+
+<!-- PROJECT NAV -->
+{% include project-nav.html %}
+
+<!-- NEXT TRACK BUTTON -->

@@ -4,7 +4,10 @@ songs:
     image: "/assets/Held in the Moment.jpg"
     videostatus: "Private"
 
-*****
+  - title: "Nineteen Summers"
+    url: "/music/nineteen-summers-revised/"
+    image: "/assets/Nineteen Summers New.jpeg*"
+    videostatus: "Public"
   
     - title: "Sheriff for a Night"
     url: "/music/sheriff-for-a-night/"
@@ -156,10 +159,15 @@ songs:
     image: "/assets/choosing-me-her-version.jpg"
     videostatus: "Public"
 
-********
+  - title: "Keep the Light On"
+    url: "/music/keep-the-light-on/"
+    image: "/assets/Keep the Light On.jpeg*"
+    videostatus: "Public"
 
-
-********
+  - title: "Hold On"
+    url: "/music/hold-on-revised/"
+    image: "/assets/Hold On New.jpeg*"
+    videostatus: "Public"
 
   - title: "Lost in Silence"
     url: "/music/lost-in-silence/"
@@ -296,7 +304,10 @@ songs:
     image: "/assets/One Hell of a Ride.jpeg"
     videostatus: "Public"
 
-**********
+  - title: "Nineteen Summers"
+    url: "/music/nineteen-summers/"
+    image: "/assets/Nineteen Summers.jpeg*"
+    videostatus: "Public"
 
   - title: "A Quiet Little Voice"
     url: "/music/a-quiet-little-voice/"
@@ -312,26 +323,3 @@ songs:
     url: "/music/until-the-nightmare-ends/"
     image: "/assets/Until the Nightmare Ends.JPG"
     videostatus: "Public"
-
-
-
-
-
-  - title: "Nineteen Summers"
-    url: "/music/nineteen-summers/"
-    image: "/assets/Nineteen Summers.jpeg"
-    videostatus: "Public"
-  
-  - title: "Nineteen Summers"
-    url: "/music//"
-    image: "/assets/Nineteen Summers New.jpeg"
-    videostatus: "Public"
-
-  - title: "Nineteen Summers"
-    url: "/music/nineteen-summers/"
-    image: "/assets/Nineteen Summers New.jpeg"
-    videostatus: "Public"
-
-
-
-

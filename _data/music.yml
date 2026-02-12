@@ -58,7 +58,9 @@ songs:
     url: "/music/ats-13-rise-again/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Private"
-
+    primary_playlist: "After the Silence"
+    sequence: 13
+    
   - title: "Someday" # Venice-Missing Stamp track
     url: "/music/venice-1-someday/"
     image: "/assets/Someday.jpeg"
@@ -68,11 +70,15 @@ songs:
     url: "/music/ats-12-unsent-letters/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Private"
+    primary_playlist: "After the Silence"
+    sequence: 12
   
   - title: "The Dress I Never Wore" # After the Silence Album track
     url: "/music/ats-11-the-dress-i-never-wore/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Private"
+    primary_playlist: "After the Silence"
+    sequence: 11
 
   - title: "After Midnight" # Midnight Saga track
     url: "/music/midnight-saga-after-midnight/"
@@ -83,11 +89,15 @@ songs:
     url: "/music/ats-10-saltwater/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Private"
+    primary_playlist: "After the Silence"
+    sequence: 10
 
   - title: "After the Silence" # After the Silence Album track
     url: "/music/ats-9-after-the-silence/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Private"
+    primary_playlist: "After the Silence"
+    sequence: 9
 
   - title: "Midnight Madness" # Midnight Saga track
     url: "/music/midnight-saga-midnight-madness/"
@@ -98,11 +108,15 @@ songs:
     url: "/music/ats-8-ghostlight/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Private"
+    primary_playlist: "After the Silence"
+    sequence: 8
 
   - title: "If You'd Asked" # After the Silence Album track
     url: "/music/ats-7-if-youd-asked/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Private"
+    primary_playlist: "After the Silence"
+    sequence: 7
 
   - title: "Midnight Mayhem" # Midnight Saga track
     url: "/music/midnight-saga-midnight-mayhem/"
@@ -113,11 +127,15 @@ songs:
     url: "/music/ats-6-half-of-me/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Private"
+    primary_playlist: "After the Silence"
+    sequence: 6
 
   - title: "Paper Walls" # After the Silence Album track
     url: "/music/ats-5-paper-walls/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Private"
+    primary_playlist: "After the Silence"
+    sequence: 5
 
   - title: "Before Midnight" # Midnight Saga track
     url: "/music/midnight-saga-before-midnight/"
@@ -130,11 +148,15 @@ songs:
     url: "/music/ats-4-the-way-we-lied/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Public"
+    primary_playlist: "After the Silence"
+    sequence: 4
 
   - title: "Homesick For You" # After the Silence Album track
     url: "/music/ats-3-homesick-for-you/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Public"
+    primary_playlist: "After the Silence"
+    sequence: 3
 
   - title: "The Moment You Breathe" # Instrumental track
     url: "/music/instrumental-the-moment-you-breathe/"
@@ -150,11 +172,15 @@ songs:
     url: "/music/ats-2-borrowed-time/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Public"
+    primary_playlist: "After the Silence"
+    sequence: 2
 
   - title: "The Quiet After" # After the Silence Album track
     url: "/music/ats-1-the-quiet-after/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Public"
+    primary_playlist: "After the Silence"
+    sequence: 1
 
   - title: "Choosing Me (Her Version)" # A Way Back Trilogy track
     url: "/music/choosing-me-her-version/"

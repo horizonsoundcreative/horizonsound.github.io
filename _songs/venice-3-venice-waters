@@ -1,9 +1,5 @@
 ---
 layout: song
-title: "Venice Waters"
-subtitle: "Venice | Part 3"
-project_title: "Venice"
-youtube_id: "LzfM1PRxpVU"
 hero_image: "/assets/hero.jpg"
 
 about: |
@@ -103,21 +99,6 @@ lyrics: |
   And as the plane touched down, 
   you whispered, “Next time… where should we go?”
 
-
-
-tiles:
-  - title: "Someday"
-    url: "/music/venice-1-someday/"
-    image: "/assets/Someday.jpeg"
-
-  - title: "Missing Stamp"
-    url: "/music/venice-2-missing-stamp/"
-    image: "/assets/Missing Stamp.jpeg"
-
-  - title: "Venice Waters"
-    url: "/music/venice-3-venice-waters/"
-    image: "/assets/Venice Waters.jpeg"
-    
 next_track_title: "Press to hear the first track in the Venice series"
 next_track_url: "/music/venice-1-someday/"
 next_track_label: "Someday"
@@ -129,8 +110,8 @@ next_track_label: "Someday"
 <!-- LYRICS SECTION -->
 {% include lyrics.html %}
 
-<!-- PROJECT NAV -->
-{% include project-nav.html %}
+<!-- SONG PLAYLIST (now playlist-driven) -->
+{% include song-playlist.html %}
 
 <!-- NEXT TRACK BUTTON -->
 {% include next-track.html %}

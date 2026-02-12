@@ -5,7 +5,6 @@ subtitle: "A Way Back | Track 2"
 project_title: "A Way Back"
 youtube_id: "ddDkZl0GrWU"
 hero_image: "/assets/hero.jpg"
-primary_playlist: "A Way Back Trilogy"
 
 about: |
   Official audio for "Choosing Me (Her Version)" by Horizon Sound.

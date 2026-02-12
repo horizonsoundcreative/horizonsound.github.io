@@ -163,3 +163,4 @@ next_track_label: "9. After the Silence"
 {% include project-nav.html %}
 
 <!-- NEXT TRACK BUTTON -->
+{% include next-track.html %}

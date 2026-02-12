@@ -96,10 +96,6 @@ lyrics: |
 
 
 tiles:
-  - title: "Before Midnight"
-    url: "/music/midnight-saga-before-midnight/"
-    image: "/assets/Before Midnight.jpeg"
-
   - title: "Midnight Mayhem"
     url: "/music/midnight-saga-midnight-mayhem/"
     image: "/assets/Midnight Mayhem.jpeg"

@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>{{ page.title }} | Horizon Sound</title>
+
+    {% assign current_song = site.data.music.songs | where: "url", page.url | first %}
+
+    <title>{{ current_song.title }} | Horizon Sound</title>
 
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="/style-v2.css?v=22" />
@@ -33,7 +36,9 @@
          HERO BANNER
     -------------------------------------------------- -->
     <div class="hero-banner">
-      <img src="{{ page.hero_image }}" class="hero-image" alt="{{ page.title }}" />
+      <img src="{{ page.hero_image | default: current_song.image }}" 
+           class="hero-image" 
+           alt="{{ current_song.title }}" />
     </div>
 
     <!-- --------------------------------------------------
@@ -43,23 +48,25 @@
 
       <!-- SONG TITLE + SUBTITLE -->
       <section class="song-header">
-        <h2 class="section-header">{{ page.title }}</h2>
-        <p class="song-subtitle">{{ page.subtitle }}</p>
+        <h2 class="section-header">{{ current_song.title }}</h2>
+        {% if current_song.subtitle %}
+          <p class="song-subtitle">{{ current_song.subtitle }}</p>
+        {% endif %}
       </section>
 
       <!-- VIDEO EMBED -->
       <section class="homepage-section video-section">
         <div class="video-wrapper">
           <iframe
-            src="https://www.youtube.com/embed/{{ page.youtube_id }}"
-            title="{{ page.title }}"
+            src="https://www.youtube.com/embed/{{ current_song.youtube_id }}"
+            title="{{ current_song.title }}"
             frameborder="0"
             allowfullscreen>
           </iframe>
         </div>
       </section>
 
-      <!-- Dynamic content from includes (About, Lyrics, Project Tiles, Next Track) -->
+      <!-- Dynamic content from includes (About, Lyrics, Playlist Tiles, Next Track) -->
       {{ content }}
 
     </main>
@@ -87,18 +94,21 @@
       window.addEventListener("resize", updateWidth);
       window.addEventListener("load", updateWidth);
     </script>
+
+    <!-- Show More Tiles -->
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const btn = document.getElementById("show-more-tiles");
-      if (!btn) return;
-    
-      btn.addEventListener("click", function() {
-        document.querySelectorAll(".hidden-tile").forEach(tile => {
-          tile.style.display = "block";
+      document.addEventListener("DOMContentLoaded", function() {
+        const btn = document.getElementById("show-more-tiles");
+        if (!btn) return;
+
+        btn.addEventListener("click", function() {
+          document.querySelectorAll(".hidden-tile").forEach(tile => {
+            tile.style.display = "block";
+          });
+          btn.style.display = "none";
         });
-        btn.style.display = "none";
       });
-    });
     </script>
+
   </body>
 </html>

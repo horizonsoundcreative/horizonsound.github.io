@@ -1,9 +1,5 @@
 ---
 layout: song
-title: "After Midnight"
-subtitle: "Midnight Saga | Part 4"
-project_title: "Midnight Saga"
-youtube_id: "iGt2wtH6orc"
 hero_image: "/assets/hero.jpg"
 
 about: |
@@ -93,23 +89,6 @@ lyrics: |
   After midnight, I breathe again—
   Yeah, this is how the best nights end.
 
-tiles:
-  - title: "Before Midnight"
-    url: "/music/midnight-saga-before-midnight/"
-    image: "/assets/Before Midnight.jpeg"
-
-  - title: "Midnight Mayhem"
-    url: "/music/midnight-saga-midnight-mayhem/"
-    image: "/assets/Midnight Mayhem.jpeg"
-
-  - title: "Midnight Madness"
-    url: "/music/midnight-saga-midnight-madness/"
-    image: "/assets/Midnight Madness.jpeg"
-
-  - title: "After Midnight"
-    url: "/music/midnight-saga-after-midnight/"
-    image: "/assets/After Midnight.jpeg"
-
 next_track_title: "Press to hear the next track in the Midnight Saga"
 next_track_url: "/music/midnight-saga-before-midnight/"
 next_track_label: "Before Midnight"
@@ -121,8 +100,8 @@ next_track_label: "Before Midnight"
 <!-- LYRICS SECTION -->
 {% include lyrics.html %}
 
-<!-- PROJECT NAV -->
-{% include project-nav.html %}
+<!-- SONG PLAYLIST (now playlist-driven) -->
+{% include song-playlist.html %}
 
 <!-- NEXT TRACK BUTTON -->
 {% include next-track.html %}

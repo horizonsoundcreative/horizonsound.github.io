@@ -88,28 +88,25 @@ layout: none
         Screen width: <span id="device-width"></span>
       </p>
     </footer>
-
+    
     <script>
     document.addEventListener("DOMContentLoaded", function () {
       const strip = document.querySelector(".horizontal-strip");
       const leftArrow = document.querySelector(".left-arrow");
       const rightArrow = document.querySelector(".right-arrow");
     
-      if (!strip || !leftArrow || !rightArrow) {
-        console.log("Carousel elements not found");
-        return;
-      }
+      if (!strip || !leftArrow || !rightArrow) return;
     
       const TILE_WIDTH = 180;
       const TILE_GAP = 16;
       const SCROLL_AMOUNT = TILE_WIDTH + TILE_GAP;
     
+      /* -------------------------------
+         ARROW ENABLE / DISABLE LOGIC
+      --------------------------------*/
       function updateArrows() {
         const maxScroll = strip.scrollWidth - strip.clientWidth;
         const current = strip.scrollLeft;
-    
-        // Debug
-        console.log("scrollLeft:", current, "maxScroll:", maxScroll);
     
         if (current <= 0) {
           leftArrow.classList.add("disabled");
@@ -124,6 +121,9 @@ layout: none
         }
       }
     
+      /* -------------------------------
+         ARROW CLICK BEHAVIOR
+      --------------------------------*/
       leftArrow.addEventListener("click", () => {
         strip.scrollBy({ left: -SCROLL_AMOUNT, behavior: "smooth" });
       });
@@ -132,19 +132,24 @@ layout: none
         strip.scrollBy({ left: SCROLL_AMOUNT, behavior: "smooth" });
       });
     
-      strip.addEventListener("scroll", updateArrows);
-    
-      // Initial state
-      updateArrows();
-
-      // Auto-scroll to active tile on load
+      /* -------------------------------
+         AUTO-SCROLL TO ACTIVE TILE
+      --------------------------------*/
       const activeTile = document.querySelector(".playlist-tile.active-tile");
       if (activeTile) {
-        const offset = activeTile.offsetLeft - (strip.clientWidth / 2) + (activeTile.clientWidth / 2);
+        const offset =
+          activeTile.offsetLeft -
+          strip.clientWidth / 2 +
+          activeTile.clientWidth / 2;
+    
         strip.scrollTo({ left: offset, behavior: "smooth" });
       }
-       let isSnapping = false;
-
+    
+      /* -------------------------------
+         SNAP-TO-TILE BEHAVIOR
+      --------------------------------*/
+      let isSnapping = false;
+    
       strip.addEventListener("scroll", () => {
         if (isSnapping) return;
     
@@ -153,14 +158,20 @@ layout: none
           isSnapping = true;
     
           const scrollLeft = strip.scrollLeft;
-          const tileWidth = 180 + 16; // width + gap
+          const tileWidth = TILE_WIDTH + TILE_GAP;
           const nearest = Math.round(scrollLeft / tileWidth) * tileWidth;
     
           strip.scrollTo({ left: nearest, behavior: "smooth" });
     
-          setTimeout(() => { isSnapping = false; }, 300);
+          setTimeout(() => (isSnapping = false), 300);
         }, 120);
       });
+    
+      /* -------------------------------
+         INITIAL ARROW STATE
+      --------------------------------*/
+      strip.addEventListener("scroll", updateArrows);
+      updateArrows();
     });
     </script>
    

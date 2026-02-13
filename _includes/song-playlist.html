@@ -1,31 +1,23 @@
-<!-- DEBUG START -->
+{% assign current_song = include.current_song %}
+
+<!-- DEBUG BLOCK (TOP) -->
 <div style="background:#222; color:#0f0; padding:1rem; margin:1rem 0; font-family:monospace;">
+  <h3>DEBUG: song_playlist.html (TOP)</h3>
 
-  <h3>DEBUG: song_playlist.html</h3>
+  <p><strong>current_song:</strong> {{ current_song | inspect }}</p>
+  <p><strong>current_song.url:</strong> {{ current_song.url }}</p>
+  <p><strong>current_song.primary_playlist:</strong> {{ current_song.primary_playlist }}</p>
+</div>
 
-  <p><strong>current_song:</strong> {{ include.current_song | inspect }}</p>
-  <p><strong>current_song.url:</strong> {{ include.current_song.url }}</p>
-  <p><strong>current_song.primary_playlist:</strong> {{ include.current_song.primary_playlist }}</p>
+{% if current_song and current_song.primary_playlist != "" %}
 
-  {% assign current_song = include.current_song %}
   {% assign playlist_name = current_song.primary_playlist %}
-  <p><strong>playlist_name:</strong> {{ playlist_name }}</p>
 
   {% assign related = site.data.music.songs | where: "primary_playlist", playlist_name %}
-  <p><strong>related.size:</strong> {{ related.size }}</p>
-
-  <p><strong>related URLs:</strong></p>
-  <ul>
-    {% for s in related %}
-      <li>{{ s.url }}</li>
-    {% endfor %}
-  </ul>
+  {% assign related = related | where: "videostatus", "Public" %}
 
   {% assign sorted_by_sequence = related | sort: "sequence" %}
-  <p><strong>sorted_by_sequence.size:</strong> {{ sorted_by_sequence.size }}</p>
-
   {% assign first_item = sorted_by_sequence | first %}
-  <p><strong>first_item.sequence:</strong> {{ first_item.sequence }}</p>
 
   {% if first_item.sequence %}
     {% assign playlist_sorted = sorted_by_sequence %}
@@ -33,14 +25,63 @@
     {% assign playlist_sorted = related | sort: "title" %}
   {% endif %}
 
-  <p><strong>playlist_sorted.size:</strong> {{ playlist_sorted.size }}</p>
+  <!-- DEBUG BLOCK (AFTER FILTERING) -->
+  <div style="background:#222; color:#0f0; padding:1rem; margin:1rem 0; font-family:monospace;">
+    <h3>DEBUG: After Filtering & Sorting</h3>
 
-  <p><strong>playlist_sorted URLs:</strong></p>
-  <ul>
-    {% for s in playlist_sorted %}
-      <li>{{ s.url }}</li>
-    {% endfor %}
-  </ul>
+    <p><strong>playlist_name:</strong> {{ playlist_name }}</p>
+    <p><strong>related.size:</strong> {{ related.size }}</p>
 
-</div>
-<!-- DEBUG END -->
+    <p><strong>related URLs:</strong></p>
+    <ul>
+      {% for s in related %}
+        <li>{{ s.url }}</li>
+      {% endfor %}
+    </ul>
+
+    <p><strong>playlist_sorted.size:</strong> {{ playlist_sorted.size }}</p>
+
+    <p><strong>playlist_sorted URLs:</strong></p>
+    <ul>
+      {% for s in playlist_sorted %}
+        <li>{{ s.url }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% if playlist_sorted.size > 0 %}
+  <section class="song-project">
+    <h2 class="section-header">{{ playlist_name }}</h2>
+
+    <div class="tile-grid">
+
+      {% assign max_tiles = 6 %}
+
+      {% for song in playlist_sorted %}
+        {% assign index = forloop.index %}
+
+        <!-- DEBUG FOR EACH TILE -->
+        <div style="background:#333; color:#0ff; padding:0.5rem; margin:0.5rem 0; font-family:monospace;">
+          <strong>Tile Debug:</strong><br>
+          index: {{ index }}<br>
+          song.url: {{ song.url }}<br>
+          song.title: {{ song.title }}<br>
+          hidden? {% if index > max_tiles %}YES{% else %}NO{% endif %}
+        </div>
+
+        <a class="tile playlist-tile {% if index > max_tiles %}hidden-tile{% endif %}"
+           href="{{ song.url }}">
+          <img src="{{ song.image }}" alt="{{ song.title }}">
+          <h3 class="tile-title">{{ song.title }}</h3>
+        </a>
+
+      {% endfor %}
+    </div>
+
+    {% if playlist_sorted.size > max_tiles %}
+      <button id="show-more-tiles" class="btn-secondary">Show More</button>
+    {% endif %}
+
+  </section>
+  {% endif %}
+{% endif %}

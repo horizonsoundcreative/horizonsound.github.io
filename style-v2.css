@@ -24,6 +24,10 @@
   transition: transform 0.2s ease;
 }
 
+.carousel-arrow:hover {
+  background: #f0f0f0;
+}
+
 .playlist-carousel {
   display: flex;
   align-items: stretch;   /* arrows stretch to match strip height */

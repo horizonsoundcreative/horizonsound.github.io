@@ -30,7 +30,7 @@
 
 .playlist-carousel {
   display: flex;
-  align-items: stretch;   /* arrows stretch to match strip height */
+  align-items: center;   /* center arrows vs strip */
   width: 100%;
   position: relative;
   margin-top: 10px;
@@ -40,8 +40,8 @@
   background: #ffffff;
   border: none;
   color: #333;
-  width: 40px;              /* narrow but tall */
-  height: 100%;             /* match strip height */
+  width: 40px;              /* narrow */
+  height: 120px;            /* tall, but fixed */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,7 +50,7 @@
   cursor: pointer;
   flex-shrink: 0;
   transition: background 0.2s ease, opacity 0.2s ease;
-  border-radius: 6px;       /* subtle rounding */
+  border-radius: 6px;
 }
 
 /* Hover effect (premium but subtle) */

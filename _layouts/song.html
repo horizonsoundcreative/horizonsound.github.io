@@ -93,40 +93,46 @@ layout: none
     </footer>
 
     <script>
-      function updateWidth() {
-        const w = window.innerWidth;
-        document.getElementById("device-width").textContent = w + "px";
-      }
-      window.addEventListener("resize", updateWidth);
-      window.addEventListener("load", updateWidth);
-    </script>
-    
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const strip = document.querySelector(".horizontal-strip");
-      const leftArrow = document.querySelector(".left-arrow");
-      const rightArrow = document.querySelector(".right-arrow");
-    
-      const TILE_WIDTH = 180;     // your tile width
-      const TILE_GAP = 16;        // your CSS gap
-      const SCROLL_AMOUNT = TILE_WIDTH + TILE_GAP;
-    
-      leftArrow.addEventListener("click", () => {
-        strip.scrollBy({
-          left: -SCROLL_AMOUNT,
-          behavior: "smooth"
+      document.addEventListener("DOMContentLoaded", function () {
+        const strip = document.querySelector(".horizontal-strip");
+        const leftArrow = document.querySelector(".left-arrow");
+        const rightArrow = document.querySelector(".right-arrow");
+      
+        const TILE_WIDTH = 180;
+        const TILE_GAP = 16;
+        const SCROLL_AMOUNT = TILE_WIDTH + TILE_GAP;
+      
+        function updateArrows() {
+          const maxScroll = strip.scrollWidth - strip.clientWidth;
+      
+          if (strip.scrollLeft <= 0) {
+            leftArrow.classList.add("disabled");
+          } else {
+            leftArrow.classList.remove("disabled");
+          }
+      
+          if (strip.scrollLeft >= maxScroll - 1) {
+            rightArrow.classList.add("disabled");
+          } else {
+            rightArrow.classList.remove("disabled");
+          }
+        }
+      
+        leftArrow.addEventListener("click", () => {
+          strip.scrollBy({ left: -SCROLL_AMOUNT, behavior: "smooth" });
+          setTimeout(updateArrows, 300);
         });
-      });
-    
-      rightArrow.addEventListener("click", () => {
-        strip.scrollBy({
-          left: SCROLL_AMOUNT,
-          behavior: "smooth"
+      
+        rightArrow.addEventListener("click", () => {
+          strip.scrollBy({ left: SCROLL_AMOUNT, behavior: "smooth" });
+          setTimeout(updateArrows, 300);
         });
+      
+        strip.addEventListener("scroll", updateArrows);
+      
+        updateArrows();
       });
-    });
     </script>
-
-    
+   
   </body>
 </html>

@@ -4,6 +4,7 @@ title: Temp – Horizon Sound
 ---
 
 <div class="temp-page">
+  {% assign spotlight_public = site.data.homepage.spotlight | where: "videostatus", "Public" %}
 
   <!-- Title ABOVE everything -->
   <h2 class="page-title">Temp Page</h2>
@@ -15,20 +16,25 @@ title: Temp – Horizon Sound
     <button class="view-toggle-button" data-view="carousel">Carousel View</button>
   </div>
 
-    <!-- First panel (empty for now) -->
-  <section class="temp-panel">
     <!-- First panel -->
-    <section class="homepage-section">
-      <h2 class="section-header">{{ include.title }}</h2>
+    <section class="temp-panel">
+      <h2 class="section-header">Example Panel</h2>
     
-      <div class="tile-grid">
-        {% for tile in include.items %}
-          <a class="tile" href="{{ tile.url }}">
-            <img src="{{ tile.image }}" alt="{{ tile.title }}">
-            <h3 class="tile-title">{{ tile.title }}</h3>
-          </a>
-        {% endfor %}
+      <div class="tile-grid temp-tiles">
+        <a class="tile" href="#">
+          <img src="https://via.placeholder.com/300x180?text=Tile+1" alt="Tile 1">
+          <h3 class="tile-title">Tile One</h3>
+        </a>
+    
+        <a class="tile" href="#">
+          <img src="https://via.placeholder.com/300x180?text=Tile+2" alt="Tile 2">
+          <h3 class="tile-title">Tile Two</h3>
+        </a>
+    
+        <a class="tile" href="#">
+          <img src="https://via.placeholder.com/300x180?text=Tile+3" alt="Tile 3">
+          <h3 class="tile-title">Tile Three</h3>
+        </a>
       </div>
     </section>
-  </section>
 </div>

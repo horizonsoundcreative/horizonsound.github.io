@@ -101,31 +101,35 @@ layout: none
       window.addEventListener("load", updateWidth);
     </script>
     
-    <script>
-    document.addEventListener("click", function (event) {
-      const btn = event.target.closest("#show-more-tiles");
-      if (!btn) return;
-    
-      const hiddenTiles = document.querySelectorAll(".hidden-tile");
-    
-      // If tiles are currently hidden → show them
-      if (btn.dataset.state !== "expanded") {
-        hiddenTiles.forEach(tile => {
-          tile.style.display = "block";
-        });
-        btn.textContent = "Show Less";
-        btn.dataset.state = "expanded";
-        return;
-      }
-    
-      // If tiles are currently shown → hide them again
-      hiddenTiles.forEach(tile => {
-        tile.style.display = "none";
-      });
-      btn.textContent = "Show More";
-      btn.dataset.state = "collapsed";
+<script>
+document.addEventListener("click", function (event) {
+  const btn = event.target.closest("#show-more-tiles");
+  if (!btn) return;
+
+  const hiddenTiles = document.querySelectorAll(".hidden-tile");
+
+  // EXPAND
+  if (btn.dataset.state !== "expanded") {
+    hiddenTiles.forEach(tile => {
+      tile.classList.remove("hidden-tile");
     });
-    </script>
+    btn.textContent = "Show Less";
+    btn.dataset.state = "expanded";
+    return;
+  }
+
+  // COLLAPSE
+  const allTiles = document.querySelectorAll(".tile.playlist-tile");
+  allTiles.forEach((tile, index) => {
+    if (index >= 6) {
+      tile.classList.add("hidden-tile");
+    }
+  });
+
+  btn.textContent = "Show More";
+  btn.dataset.state = "collapsed";
+});
+</script>
 
   </body>
 </html>

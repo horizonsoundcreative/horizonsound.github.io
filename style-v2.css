@@ -689,5 +689,35 @@ footer {
   margin-bottom: 10px !important;
 }
 
+/* --------------------------------------------------
+   TEMP PAGE — CLEAN TITLE + BUTTONS ABOVE PANEL
+-------------------------------------------------- */
+
+.temp-page {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  box-sizing: border-box;
+  background: none !important; /* ensure no panel look */
+}
+
+/* Title ABOVE everything */
+.temp-page .page-title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  opacity: 0.9;
+}
+
+/* Buttons BELOW title, ABOVE panel */
+.temp-page .view-toggle {
+  display: flex;
+  gap: 10px;
+  padding-left: 0;   /* align with panel left edge */
+  padding-right: 0;
+  margin-bottom: 20px; /* creates visual separation */
+}
+
 
 

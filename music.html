@@ -2,25 +2,18 @@
 layout: default
 title: Music – Horizon Sound
 ---
-{% assign all_songs = site.data.music.songs | where: "videostatus", "Public" %}
 
+{% assign all_songs = site.data.music.songs | where: "videostatus", "Public" %}
 {% assign playlists = all_songs | map: "primary_playlist" | uniq | reject: "" | sort %}
 
-<!DOCTYPE html>
-<html lang="en">
-  <body>
-    <!-- --------------------------------------------------
-         MAIN CONTENT
-    -------------------------------------------------- -->
-    <main>
-      <h2 class="page-title">Music</h2>
-
-      <!-- VIEW TOGGLE -->
-      <div class="view-toggle">
-        <button class="view-toggle-button active" data-view="grouped">Grouped by Playlist</button>
-        <button class="view-toggle-button" data-view="all">All Songs</button>
-        <button class="view-toggle-button" data-view="carousel">Carousel View</button>
-      </div>
+<div class="music-page">
+  <h2 class="page-title">Music</h2>
+    <!-- VIEW TOGGLE -->
+    <div class="view-toggle">
+      <button class="view-toggle-button active" data-view="grouped">Grouped by Playlist</button>
+      <button class="view-toggle-button" data-view="all">All Songs</button>
+      <button class="view-toggle-button" data-view="carousel">Carousel View</button>
+    </div>
 
       <!-- ------------------------------------------------
            VIEW 1: GROUPED BY PRIMARY PLAYLIST (DEFAULT)
@@ -201,5 +194,4 @@ title: Music – Horizon Sound
       });
     });
     </script>
-  </body>
-</html>
+</div> <!-- end .music-page -->

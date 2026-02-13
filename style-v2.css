@@ -25,8 +25,7 @@
 
 .playlist-carousel {
   display: flex;
-  flex-direction: row;   /* force arrows + strip into one line */
-  align-items: center;   /* vertically center arrows with tiles */
+  align-items: stretch;   /* arrows stretch to match strip height */
   width: 100%;
   position: relative;
   margin-top: 10px;

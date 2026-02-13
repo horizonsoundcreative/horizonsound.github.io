@@ -80,7 +80,7 @@ body {
 
 .video-wrapper iframe {
   width: 100%;
-  height: 640px;
+  height: 400px;
   max-width: 100%;
   display: block;
 }

@@ -1,45 +1,119 @@
-{% assign current_song = include.current_song %}
+---
+layout: none
+---
+{% assign current_song = site.data.music.songs | where: "url", page.url | first %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-{% if current_song and current_song.primary_playlist != "" %}
+    <title>{{ current_song.title }} | Horizon Sound</title>
 
-  {% assign playlist_name = current_song.primary_playlist %}
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="/style-v2.css?v=22" />
+  </head>
 
-  {% assign related = site.data.music.songs | where: "primary_playlist", playlist_name %}
-  {% assign related = related | where: "videostatus", "Public" %}
+  <body>
 
-  {% assign sorted_by_sequence = related | sort: "sequence" %}
-  {% assign first_item = sorted_by_sequence | first %}
+    <!-- --------------------------------------------------
+         GLOBAL HEADER
+    -------------------------------------------------- -->
+    <header class="site-header">
+      <div class="branding">
+        <img src="/assets/horizon-logo.svg" class="logo" alt="Horizon Sound Logo" />
+        <h1>Horizon Sound</h1>
+      </div>
 
-  {% if first_item.sequence %}
-    {% assign playlist_sorted = sorted_by_sequence %}
-  {% else %}
-    {% assign playlist_sorted = related | sort: "title" %}
-  {% endif %}
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/music">Music</a></li>
+          <li><a href="/playlists">Playlists</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  {% if playlist_sorted.size > 0 %}
-  <section class="song-project">
-    <h2 class="section-header">{{ playlist_name }}</h2>
-
-    <div class="tile-grid">
-
-      {% assign max_tiles = 6 %}
-
-      {% for song in playlist_sorted %}
-        {% assign index = forloop.index %}
-
-        <a class="tile playlist-tile {% if index > max_tiles %}hidden-tile{% endif %}"
-           href="{{ song.url }}">
-          <img src="{{ song.image }}" alt="{{ song.title }}">
-          <h3 class="tile-title">{{ song.title }}</h3>
-        </a>
-
-      {% endfor %}
+    <!-- --------------------------------------------------
+         HERO BANNER
+    -------------------------------------------------- -->
+    <div class="hero-banner">
+      <img src="{{ page.hero_image | default: current_song.image }}" 
+           class="hero-image" 
+           alt="{{ current_song.title }}" />
     </div>
 
-    {% if playlist_sorted.size > max_tiles %}
-      <button id="show-more-tiles" class="btn-secondary">Show More</button>
-    {% endif %}
+    <!-- --------------------------------------------------
+         MAIN CONTENT
+    -------------------------------------------------- -->
+    <main>
 
-  </section>
-  {% endif %}
-{% endif %}
+      <!-- SONG TITLE + SUBTITLE -->
+      <section class="song-header">
+        <h2 class="section-header">{{ current_song.title }}</h2>
+        {% if current_song.subtitle %}
+          <p class="song-subtitle">{{ current_song.subtitle }}</p>
+        {% endif %}
+      </section>
+
+      <!-- VIDEO EMBED -->
+      <section class="homepage-section video-section">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/{{ current_song.youtube_id }}"
+            title="{{ current_song.title }}"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </section>
+
+      <!-- ABOUT + LYRICS (from the song file) -->
+      {{ content }}
+
+      <!-- PLAYLIST TILES -->
+      {% include song-playlist.html current_song=current_song %}
+
+      <!-- NEXT TRACK -->
+      {% include next-track.html current_song=current_song %}
+
+    </main>
+
+    <!-- --------------------------------------------------
+         FOOTER
+    -------------------------------------------------- -->
+    <footer>
+      <p>&copy; 2026 Horizon Sound</p>
+      <p>Contact: HorizonSoundCreative@gmail.com</p>
+      <p>All music, lyrics, and creative works on this site are original and owned by Horizon Sound.</p>
+
+      <p style="opacity:0.5; font-size:0.8rem;">
+        Screen width: <span id="device-width"></span>
+      </p>
+    </footer>
+
+    <script>
+      function updateWidth() {
+        const w = window.innerWidth;
+        document.getElementById("device-width").textContent = w + "px";
+      }
+      window.addEventListener("resize", updateWidth);
+      window.addEventListener("load", updateWidth);
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const btn = document.getElementById("show-more-tiles");
+        if (!btn) return;
+
+        btn.addEventListener("click", function() {
+          document.querySelectorAll(".hidden-tile").forEach(tile => {
+            tile.style.display = "block";
+          });
+          btn.style.display = "none";
+        });
+      });
+    </script>
+
+  </body>
+</html>

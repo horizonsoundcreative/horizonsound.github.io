@@ -1,14 +1,5 @@
 {% assign current_song = include.current_song %}
 
-<!-- DEBUG BLOCK (TOP) -->
-<div style="background:#222; color:#0f0; padding:1rem; margin:1rem 0; font-family:monospace;">
-  <h3>DEBUG: song_playlist.html (TOP)</h3>
-
-  <p><strong>current_song:</strong> {{ current_song | inspect }}</p>
-  <p><strong>current_song.url:</strong> {{ current_song.url }}</p>
-  <p><strong>current_song.primary_playlist:</strong> {{ current_song.primary_playlist }}</p>
-</div>
-
 {% if current_song and current_song.primary_playlist != "" %}
 
   {% assign playlist_name = current_song.primary_playlist %}
@@ -25,30 +16,6 @@
     {% assign playlist_sorted = related | sort: "title" %}
   {% endif %}
 
-  <!-- DEBUG BLOCK (AFTER FILTERING) -->
-  <div style="background:#222; color:#0f0; padding:1rem; margin:1rem 0; font-family:monospace;">
-    <h3>DEBUG: After Filtering & Sorting</h3>
-
-    <p><strong>playlist_name:</strong> {{ playlist_name }}</p>
-    <p><strong>related.size:</strong> {{ related.size }}</p>
-
-    <p><strong>related URLs:</strong></p>
-    <ul>
-      {% for s in related %}
-        <li>{{ s.url }}</li>
-      {% endfor %}
-    </ul>
-
-    <p><strong>playlist_sorted.size:</strong> {{ playlist_sorted.size }}</p>
-
-    <p><strong>playlist_sorted URLs:</strong></p>
-    <ul>
-      {% for s in playlist_sorted %}
-        <li>{{ s.url }}</li>
-      {% endfor %}
-    </ul>
-  </div>
-
   {% if playlist_sorted.size > 0 %}
   <section class="song-project">
     <h2 class="section-header">{{ playlist_name }}</h2>
@@ -59,15 +26,6 @@
 
       {% for song in playlist_sorted %}
         {% assign index = forloop.index %}
-
-        <!-- DEBUG FOR EACH TILE -->
-        <div style="background:#333; color:#0ff; padding:0.5rem; margin:0.5rem 0; font-family:monospace;">
-          <strong>Tile Debug:</strong><br>
-          index: {{ index }}<br>
-          song.url: {{ song.url }}<br>
-          song.title: {{ song.title }}<br>
-          hidden? {% if index > max_tiles %}YES{% else %}NO{% endif %}
-        </div>
 
         <a class="tile playlist-tile {% if index > max_tiles %}hidden-tile{% endif %}"
            href="{{ song.url }}">
@@ -85,3 +43,4 @@
   </section>
   {% endif %}
 {% endif %}
+

@@ -194,6 +194,12 @@ body {
   border: 2px solid red;
 }
 
+#show-more-tiles {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
+
 /* --------------------------------------------------
    BUTTONS
 -------------------------------------------------- */

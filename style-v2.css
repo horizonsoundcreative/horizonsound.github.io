@@ -571,6 +571,12 @@ main {
   box-sizing: border-box;
 }
 
+.view-toggle {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 10px; /* also brings them closer to the grid */
+}
+
 /* Playlist section container */
 .playlist-section {
   margin: 40px 0;
@@ -582,7 +588,6 @@ main {
   width: 100%;
   box-sizing: border-box;
 }
-
 
 /* Responsive gutters */
 @media (max-width: 600px) {

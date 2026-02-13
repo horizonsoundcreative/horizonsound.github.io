@@ -1,3 +1,24 @@
+.playlist-carousel::before,
+.playlist-carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.playlist-carousel::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.8), transparent);
+}
+
+.playlist-carousel::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0,0,0,0.8), transparent);
+}
+
 /* Phase 1: Horizontal strip playlist */
 .horizontal-strip {
   display: flex;

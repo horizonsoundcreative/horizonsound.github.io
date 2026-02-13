@@ -3,22 +3,35 @@ layout: default
 title: Horizon Sound
 ---
 
-{% include home-teaser.html %}
+<div class="homepage-wrapper">
 
-{% assign new_releases_public = site.data.homepage.new_releases | where: "videostatus", "Public" %}
-{% include homepage-tiles.html 
-     title="New Releases..." 
-     items=new_releases_public 
-%}
+  {% include home-teaser.html %}
 
-{% assign spotlight_public = site.data.homepage.spotlight | where: "videostatus", "Public" %}
-{% include homepage-tiles.html 
-     title="Spotlight Music" 
-     items=spotlight_public 
-%}
+  {% assign new_releases_public = site.data.homepage.new_releases | where: "videostatus", "Public" %}
+  <section class="homepage-section">
+    <h2 class="section-header">New Releases...</h2>
+    {% include homepage-tiles.html 
+         title=""
+         items=new_releases_public 
+    %}
+  </section>
 
-{% assign projects_public = site.data.homepage.projects | where: "videostatus", "Public" %}
-{% include homepage-tiles.html 
-     title="Collections" 
-     items=projects_public 
-%}
+  {% assign spotlight_public = site.data.homepage.spotlight | where: "videostatus", "Public" %}
+  <section class="homepage-section">
+    <h2 class="section-header">Spotlight Music</h2>
+    {% include homepage-tiles.html 
+         title=""
+         items=spotlight_public 
+    %}
+  </section>
+
+  {% assign projects_public = site.data.homepage.projects | where: "videostatus", "Public" %}
+  <section class="homepage-section">
+    <h2 class="section-header">Collections</h2>
+    {% include homepage-tiles.html 
+         title=""
+         items=projects_public 
+    %}
+  </section>
+
+</div>

@@ -1,9 +1,7 @@
 ---
 layout: default
-title: Music
-permalink: /music/
+title: Music – Horizon Sound
 ---
-
 {% assign all_songs = site.data.music.songs | where: "videostatus", "Public" %}
 
 {% assign playlists = all_songs | map: "primary_playlist" | uniq | reject: "" | sort %}

@@ -561,24 +561,21 @@ footer {
 }
 
 /* --------------------------------------------------
-   MUSIC PAGE: PLAYLIST GROUP SECTIONS
+   MUSIC PAGE: PLAYLIST GROUP SECTIONS (FINAL POLISH)
 -------------------------------------------------- */
 
 .playlist-section {
-  margin: 40px 0;
-  padding: 20px 30px;
-  background: rgba(255, 255, 255, 0.03); /* subtle translucent panel */
-  border-radius: 8px;
+  margin: 40px auto;
+  padding: 25px 40px; /* gutter on both sides */
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
   border-top: 1px solid rgba(255,255,255,0.08);
 
-  /* NEW: horizontal gutters so the section doesn't touch the page edges */
-  padding-left: 40px;
-  padding-right: 40px;
-
-  /* Match tile grid max width */
+  /* Match the tile grid max width */
   max-width: 1800px;
-  margin-left: auto;
-  margin-right: auto; /* ensures centering */
+
+  /* Center the whole block */
+  box-sizing: border-box;
 }
 
 /* Responsive gutters */
@@ -589,17 +586,18 @@ footer {
   }
 }
 
-/* Left-align the playlist titles */
+/* Left-align playlist titles */
 .playlist-section .section-header {
   text-align: left;
-  margin: 0 0 18px 0;
+  margin-bottom: 18px;
   font-size: 1.4rem;
   opacity: 0.9;
 }
 
-/* Left-align the tile grid inside the section */
+/* Left-align tiles inside the grid */
 .playlist-section .tile-grid {
-  justify-content: flex-start;   /* ensures tiles align left */
+  justify-items: start;
+  justify-content: start;
 }
 
 /* --------------------------------------------------

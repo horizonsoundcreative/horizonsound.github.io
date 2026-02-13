@@ -78,19 +78,30 @@ body {
   margin: 20px 0;
 }
 
-.video-wrapper iframe {
-  width: 100%;
-  height: 400px;
-  max-width: 100%;
-  display: block;
-}
-
 /* Full-width YouTube embed */
 .video-section iframe {
   width: 100%;
   height: 800px;
   max-width: 100%;
   display: block;
+  border: none;
+}
+
+/* Responsive 16:9 YouTube embed */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: none;
 }
 

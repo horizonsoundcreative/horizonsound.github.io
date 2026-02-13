@@ -583,18 +583,18 @@ footer {
    MUSIC PAGE — MATCH HOMEPAGE PANEL STYLE
 -------------------------------------------------- */
 
-/* Outer wrapper for the entire Music page */
+/* Outer wrapper matches homepage gutters */
 .music-page {
   padding-left: 40px;
   padding-right: 40px;
   box-sizing: border-box;
 }
 
-/* Playlist sections now match homepage-section styling */
+/* Playlist sections match homepage-section styling */
 .playlist-section {
   margin: 40px 0;
   padding: 25px 40px;
-  background: rgba(255, 255, 255, 0.03); /* same translucent panel */
+  background: rgba(255, 255, 255, 0.03);
   border-radius: 10px;
   border-top: 1px solid rgba(255,255,255,0.08);
   width: 100%;
@@ -609,7 +609,7 @@ footer {
   opacity: 0.9;
 }
 
-/* Tile grid alignment identical to homepage + music page */
+/* Tile grid alignment identical to homepage */
 .playlist-section .tile-grid {
   margin-left: 0 !important;
   margin-right: 0 !important;

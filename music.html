@@ -1,36 +1,240 @@
 ---
-layout: default
-title: Horizon Sound Music Library
+layout: none
+title: Music
+permalink: /music/
 ---
 
-{% assign songs_public = site.data.music.songs | where_exp: "song", "song.videostatus == 'Public'" %}
+{% assign all_songs = site.data.music.songs | where: "videostatus", "Public" %}
 
-<div class="view-toggle">
-  <button id="tilesBtn">Tiles</button>
-  <button id="listBtn">List</button>
-</div>
+{% assign playlists = all_songs | map: "primary_playlist" | uniq | reject: "" | sort %}
 
-<div id="tilesView">
-  {% include music-tiles.html items=songs_public %}
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Music | Horizon Sound</title>
+    <link rel="stylesheet" href="/style-v2.css?v=22" />
+  </head>
 
-<div id="listView" style="display:none;">
-  {% include music-list.html items=songs_public %}
-</div>
+  <body>
+    <!-- --------------------------------------------------
+         GLOBAL HEADER
+    -------------------------------------------------- -->
+    <header class="site-header">
+      <div class="branding">
+        <img src="/assets/horizon-logo.svg" class="logo" alt="Horizon Sound Logo" />
+        <h1>Horizon Sound</h1>
+      </div>
 
-<script>
-  const tilesBtn = document.getElementById('tilesBtn');
-  const listBtn = document.getElementById('listBtn');
-  const tilesView = document.getElementById('tilesView');
-  const listView = document.getElementById('listView');
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/music" class="active">Music</a></li>
+          <!-- Playlists tab no longer needed -->
+          <!-- <li><a href="/playlists">Playlists</a></li> -->
+          <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  tilesBtn.addEventListener('click', () => {
-    tilesView.style.display = 'block';
-    listView.style.display = 'none';
-  });
+    <!-- --------------------------------------------------
+         HERO BANNER (OPTIONAL STATIC OR GENERIC)
+    -------------------------------------------------- -->
+    <div class="hero-banner">
+      <img src="/assets/music-hero.jpg" class="hero-image" alt="Horizon Sound Music" />
+    </div>
 
-  listBtn.addEventListener('click', () => {
-    tilesView.style.display = 'none';
-    listView.style.display = 'block';
-  });
-</script>
+    <!-- --------------------------------------------------
+         MAIN CONTENT
+    -------------------------------------------------- -->
+    <main>
+      <h2 class="page-title">Music</h2>
+
+      <!-- VIEW TOGGLE -->
+      <div class="view-toggle">
+        <button class="view-toggle-button active" data-view="grouped">Grouped by Playlist</button>
+        <button class="view-toggle-button" data-view="all">All Songs</button>
+        <button class="view-toggle-button" data-view="carousel">Carousel View</button>
+      </div>
+
+      <!-- ------------------------------------------------
+           VIEW 1: GROUPED BY PRIMARY PLAYLIST (DEFAULT)
+      ------------------------------------------------- -->
+      <section id="music-view-grouped">
+        {% for list in playlists %}
+          {% assign songs_in_list = all_songs | where: "primary_playlist", list %}
+          {% assign sorted_by_sequence = songs_in_list | sort: "sequence" %}
+          {% assign first_item = sorted_by_sequence | first %}
+
+          {% if first_item.sequence %}
+            {% assign playlist_sorted = sorted_by_sequence %}
+          {% else %}
+            {% assign playlist_sorted = songs_in_list | sort: "title" %}
+          {% endif %}
+
+          {% if playlist_sorted.size > 0 %}
+          <section class="playlist-section">
+            <h2 class="section-header">{{ list }}</h2>
+
+            <div class="tile-grid">
+              {% for song in playlist_sorted %}
+                <a class="tile" href="{{ song.url }}">
+                  <img src="{{ song.image }}" alt="{{ song.title }}">
+                  <h3 class="tile-title">{{ song.title }}</h3>
+                </a>
+              {% endfor %}
+            </div>
+          </section>
+          {% endif %}
+        {% endfor %}
+      </section>
+
+      <!-- ------------------------------------------------
+           VIEW 2: ALL SONGS (FLAT TILE GRID)
+      ------------------------------------------------- -->
+      <section id="music-view-all" style="display:none;">
+        <section class="playlist-section">
+          <h2 class="section-header">All Songs</h2>
+
+          {% assign all_sorted = all_songs | sort: "title" %}
+          <div class="tile-grid">
+            {% for song in all_sorted %}
+              <a class="tile" href="{{ song.url }}">
+                <img src="{{ song.image }}" alt="{{ song.title }}">
+                <h3 class="tile-title">{{ song.title }}</h3>
+              </a>
+            {% endfor %}
+          </div>
+        </section>
+      </section>
+
+      <!-- ------------------------------------------------
+           VIEW 3: CAROUSEL ROWS BY PLAYLIST
+      ------------------------------------------------- -->
+      <section id="music-view-carousel" style="display:none;">
+        {% for list in playlists %}
+          {% assign songs_in_list = all_songs | where: "primary_playlist", list %}
+          {% assign sorted_by_sequence = songs_in_list | sort: "sequence" %}
+          {% assign first_item = sorted_by_sequence | first %}
+
+          {% if first_item.sequence %}
+            {% assign playlist_sorted = sorted_by_sequence %}
+          {% else %}
+            {% assign playlist_sorted = songs_in_list | sort: "title" %}
+          {% endif %}
+
+          {% if playlist_sorted.size > 0 %}
+          <section class="playlist-section">
+            <h2 class="section-header">{{ list }}</h2>
+
+            <div class="playlist-carousel" data-carousel>
+              <button class="carousel-arrow left-arrow" data-arrow="left">◀</button>
+
+              <div class="horizontal-strip" data-strip>
+                {% for song in playlist_sorted %}
+                  <a class="tile playlist-tile"
+                     href="{{ song.url }}">
+                    <img src="{{ song.image }}" alt="{{ song.title }}">
+                    <h3 class="tile-title">{{ song.title }}</h3>
+                  </a>
+                {% endfor %}
+              </div>
+
+              <button class="carousel-arrow right-arrow" data-arrow="right">▶</button>
+            </div>
+          </section>
+          {% endif %}
+        {% endfor %}
+      </section>
+    </main>
+
+    <!-- --------------------------------------------------
+         FOOTER
+    -------------------------------------------------- -->
+    <footer>
+      <p>&copy; 2026 Horizon Sound</p>
+      <p>Contact: HorizonSoundCreative@gmail.com</p>
+      <p>All music, lyrics, and creative works on this site are original and owned by Horizon Sound.</p>
+      <p style="opacity:0.5; font-size:0.8rem;">
+        Screen width: <span id="device-width"></span>
+      </p>
+    </footer>
+
+    <!-- --------------------------------------------------
+         SCRIPT: VIEW TOGGLE + CAROUSEL ROWS
+    -------------------------------------------------- -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      /* -------------------------------
+         VIEW TOGGLE
+      --------------------------------*/
+      const buttons = document.querySelectorAll(".view-toggle-button");
+      const views = {
+        grouped: document.getElementById("music-view-grouped"),
+        all: document.getElementById("music-view-all"),
+        carousel: document.getElementById("music-view-carousel"),
+      };
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const view = btn.getAttribute("data-view");
+
+          // button active state
+          buttons.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          // show/hide views
+          Object.keys(views).forEach(key => {
+            views[key].style.display = (key === view) ? "" : "none";
+          });
+        });
+      });
+
+      /* -------------------------------
+         CAROUSEL ROWS (MULTIPLE INSTANCES)
+      --------------------------------*/
+      const carousels = document.querySelectorAll("[data-carousel]");
+
+      carousels.forEach((carousel) => {
+        const strip = carousel.querySelector("[data-strip]");
+        const leftArrow = carousel.querySelector('[data-arrow="left"]');
+        const rightArrow = carousel.querySelector('[data-arrow="right"]');
+
+        if (!strip || !leftArrow || !rightArrow) return;
+
+        const TILE_WIDTH = 180;
+        const TILE_GAP = 16;
+        const SCROLL_AMOUNT = TILE_WIDTH + TILE_GAP;
+
+        function updateArrows() {
+          const maxScroll = strip.scrollWidth - strip.clientWidth;
+          const current = strip.scrollLeft;
+
+          if (current <= 0) {
+            leftArrow.classList.add("disabled");
+          } else {
+            leftArrow.classList.remove("disabled");
+          }
+
+          if (current >= maxScroll - 1) {
+            rightArrow.classList.add("disabled");
+          } else {
+            rightArrow.classList.remove("disabled");
+          }
+        }
+
+        leftArrow.addEventListener("click", () => {
+          strip.scrollBy({ left: -SCROLL_AMOUNT, behavior: "smooth" });
+        });
+
+        rightArrow.addEventListener("click", () => {
+          strip.scrollBy({ left: SCROLL_AMOUNT, behavior: "smooth" });
+        });
+
+        strip.addEventListener("scroll", updateArrows);
+        updateArrows();
+      });
+    });
+    </script>
+  </body>
+</html>

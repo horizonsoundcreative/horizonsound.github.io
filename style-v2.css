@@ -179,7 +179,7 @@ body {
 }
 
 .hidden-tile {
-  display: none;
+  display: none !important;
 }
 
 /* --------------------------------------------------

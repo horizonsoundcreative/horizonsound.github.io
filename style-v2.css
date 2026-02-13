@@ -119,40 +119,6 @@ body {
 }
 
 /* --------------------------------------------------
-   HOMEPAGE SECTIONS (NOT USED ON SONG PAGES)
--------------------------------------------------- */
-.homepage-section {
-  margin: 60px 0;
-  padding: 0 40px;
-}
-
-.homepage-section:first-of-type {
-  padding: 0 40px;
-  margin-top: -40px;
-}
-
-.homepage-section:first-of-type .section-header {
-  margin: 5px 0 10px;
-  position: relative;
-  z-index: 2;
-}
-
-.home-teaser {
-  padding: 20px 40px;
-  margin: 20px auto 10px;
-  max-width: 900px;
-  text-align: left;
-  color: #fff;
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
-
-.home-teaser p {
-  margin: 0 0 0.75rem;
-  text-align: left;
-}
-
-/* --------------------------------------------------
    SONG PAGE: HEADER + SUBTITLE
 -------------------------------------------------- */
 .song-header {
@@ -516,6 +482,67 @@ footer {
 
 .view-toggle button:hover {
   background: #444;
+}
+
+/* --------------------------------------------------
+   HOMEPAGE — MATCH MUSIC PAGE VISUAL SYSTEM
+-------------------------------------------------- */
+
+/* Page-level gutters */
+.homepage-wrapper {
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+/* Homepage sections match playlist-section */
+.homepage-section {
+  margin: 40px 0;
+  padding: 25px 40px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Section headers match Music page */
+.homepage-section .section-header {
+  text-align: left;
+  margin-bottom: 18px;
+  font-size: 1.4rem;
+  opacity: 0.9;
+}
+
+/* Tile grid alignment identical to Music page */
+.homepage-section .tile-grid {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  justify-items: start !important;
+  justify-content: start !important;
+}
+
+/* Tighten homepage title spacing */
+.homepage-title {
+  text-align: center;
+  margin: 20px 0 10px;
+  font-size: 2rem;
+  opacity: 0.9;
+}
+
+.home-teaser {
+  padding: 20px 40px;
+  margin: 20px auto 10px;
+  max-width: 900px;
+  text-align: left;
+  color: #fff;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.home-teaser p {
+  margin: 0 0 0.75rem;
+  text-align: left;
 }
 
 /* --------------------------------------------------

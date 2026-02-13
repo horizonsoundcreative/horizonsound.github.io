@@ -74,6 +74,11 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.carousel-arrow.disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
 
 
 

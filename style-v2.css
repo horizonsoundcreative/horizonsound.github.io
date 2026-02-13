@@ -10,6 +10,7 @@
   width: 100%;            /* full width under player */
   margin-top: 10px;       /* comfortable spacing under the player */
   box-sizing: border-box;
+  flex: 1;
 }
 
 .horizontal-strip::-webkit-scrollbar {
@@ -63,17 +64,6 @@
   margin-left: 10px;
 }
 
-/* Ensure the strip still scrolls */
-.horizontal-strip {
-  flex: 1;
-  overflow-x: auto;
-  overflow-y: hidden;
-  display: flex;
-  gap: 16px;
-  white-space: nowrap;
-  padding: 12px 0;
-  box-sizing: border-box;
-}
 
 
 

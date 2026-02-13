@@ -118,14 +118,6 @@ body {
   line-height: 1.6;
 }
 
-.page-title {
-  text-align: center;
-  margin: 20px 0 10px;
-  font-size: 2rem;
-  color: #fff;
-  opacity: 0.9;
-}
-
 /* --------------------------------------------------
    HOMEPAGE SECTIONS (NOT USED ON SONG PAGES)
 -------------------------------------------------- */
@@ -563,18 +555,42 @@ footer {
 /* --------------------------------------------------
    MUSIC PAGE — FINAL, CONSOLIDATED, POLISHED LAYOUT
 -------------------------------------------------- */
+/* Tighter spacing around the Music title */
+.page-title {
+  margin-top: 10px;   /* was 20–40px */
+  margin-bottom: 5px; /* was 10–20px */
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* Align buttons perfectly with tile grid + tighten spacing */
+.view-toggle {
+  display: flex;
+  gap: 10px;
+
+  /* Match playlist-section internal padding */
+  padding-left: 40px;
+  padding-right: 40px;
+
+  /* Pull buttons closer to the first playlist section */
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  box-sizing: border-box;
+}
+
+/* Reduce button padding so they feel tighter and more intentional */
+.view-toggle button {
+  padding: 6px 14px;
+}
 
 /* Page-level gutters so content never touches edges */
 main {
   padding-left: 40px;
   padding-right: 40px;
   box-sizing: border-box;
-}
-
-.view-toggle {
-  display: flex;
-  gap: 10px;
-  padding: 10px 40px 0 40px; /* top padding reduced, bottom removed */
 }
 
 /* Playlist section container */

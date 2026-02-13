@@ -580,36 +580,32 @@ footer {
 }
 
 /* --------------------------------------------------
-   MUSIC PAGE — MATCH HOMEPAGE PANEL STYLE
+   MUSIC PAGE — FORCE HOMEPAGE PANEL STYLE
 -------------------------------------------------- */
 
-/* Outer wrapper matches homepage gutters */
 .music-page {
-  padding-left: 40px;
-  padding-right: 40px;
-  box-sizing: border-box;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+  box-sizing: border-box !important;
 }
 
-/* Playlist sections match homepage-section styling */
 .playlist-section {
-  margin: 40px 0;
-  padding: 25px 40px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 10px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  width: 100%;
-  box-sizing: border-box;
+  margin: 40px 0 !important;
+  padding: 25px 40px !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-radius: 10px !important;
+  border-top: 1px solid rgba(255,255,255,0.08) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
-/* Playlist titles match homepage section headers */
 .playlist-section .section-header {
-  text-align: left;
-  margin-bottom: 18px;
-  font-size: 1.4rem;
-  opacity: 0.9;
+  text-align: left !important;
+  margin-bottom: 18px !important;
+  font-size: 1.4rem !important;
+  opacity: 0.9 !important;
 }
 
-/* Tile grid alignment identical to homepage */
 .playlist-section .tile-grid {
   margin-left: 0 !important;
   margin-right: 0 !important;

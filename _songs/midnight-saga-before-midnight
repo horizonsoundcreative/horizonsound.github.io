@@ -44,7 +44,6 @@ lyrics: |
   One last look, then we step outside—
   Yeah, the world won’t see me coming tonight.
   
-  
   [Verse 2]
   Glitter on my skin, I’m ready to rage,
   Girls gather around, about to engage.
@@ -96,9 +95,3 @@ lyrics: |
 
 <!-- LYRICS SECTION -->
 {% include lyrics.html %}
-
-<!-- SONG PLAYLIST (now playlist-driven) -->
-{% include song-playlist.html %}
-
-<!-- NEXT TRACK BUTTON -->
-{% include next-track.html %}

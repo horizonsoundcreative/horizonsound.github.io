@@ -24,14 +24,11 @@
       <div class="horizontal-strip">
           {% for song in playlist_sorted %}
             {% assign index = forloop.index %}
-              <a class="tile playlist-tile {% if song.url == current_song.url %}active-tile{% endif %}"
-              href="{{ song.url }}">
-
-              <a class="tile playlist-tile" href="{{ song.url }}">
+            <a class="tile playlist-tile {% if song.url == current_song.url %}active-tile{% endif %}"
+               href="{{ song.url }}">
               <img src="{{ song.image }}" alt="{{ song.title }}">
               <h3 class="tile-title">{{ song.title }}</h3>
             </a>
-    
           {% endfor %}
       </div>
     

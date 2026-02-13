@@ -695,10 +695,10 @@ footer {
 
 .temp-page {
   padding-left: 40px;
-  /*padding-right: 40px;*/
-  /*padding-top: 40px;*/
-  /*box-sizing: border-box;*/
-  /*background: none !important; /* ensure no panel look */
+  padding-right: 40px;
+  padding-top: 40px;
+  box-sizing: border-box;
+  background: none !important; /* ensure no panel look 
 }
 
 /* Title ABOVE everything */

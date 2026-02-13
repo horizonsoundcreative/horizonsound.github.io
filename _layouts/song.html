@@ -139,6 +139,14 @@ layout: none
     
       // Initial state
       updateArrows();
+
+      // Auto-scroll to active tile on load
+      const activeTile = document.querySelector(".playlist-tile.active-tile");
+      if (activeTile) {
+        const offset = activeTile.offsetLeft - (strip.clientWidth / 2) + (activeTile.clientWidth / 2);
+        strip.scrollTo({ left: offset, behavior: "smooth" });
+      }
+     
     });
     </script>
    

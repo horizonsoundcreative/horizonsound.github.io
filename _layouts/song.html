@@ -101,25 +101,19 @@ layout: none
       window.addEventListener("load", updateWidth);
     </script>
 
-
     <script>
-window.addEventListener("load", function () {
-const btn = document.getElementById("show-more-tiles");
-if (!btn) return;
-
-btn.addEventListener("click", function () {
-  const hiddenTiles = document.querySelectorAll(".hidden-tile");
-
-  console.log("Found hidden tiles:", hiddenTiles.length);
-
-  hiddenTiles.forEach(tile => {
-    tile.style.display = "block";
-  });
-
-  btn.style.display = "none";
-});
-});
-</script>
+    document.addEventListener("click", function (event) {
+      if (!event.target.matches("#show-more-tiles")) return;
+    
+      const hiddenTiles = document.querySelectorAll(".hidden-tile");
+    
+      hiddenTiles.forEach(tile => {
+        tile.style.display = "block";
+      });
+    
+      event.target.style.display = "none";
+    });
+    </script>
 
   </body>
 </html>

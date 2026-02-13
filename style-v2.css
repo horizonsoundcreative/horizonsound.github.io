@@ -40,7 +40,7 @@
   border: none;
   color: #333;
   width: 40px;              /* narrow */
-  height: 160px;            /* tall, but fixed */
+  height: 180px;            /* tall, but fixed */
   display: flex;
   align-items: center;
   justify-content: center;

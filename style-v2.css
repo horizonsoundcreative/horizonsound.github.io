@@ -690,11 +690,44 @@ footer {
 }
 
 
-/* TEMP PAGE TEST */
+/* --------------------------------------------------
+   TEMP PAGE — BUTTON + TITLE BASELINE
+-------------------------------------------------- */
+
 .temp-page {
-  padding: 40px;
-  background: rgba(255,255,255,0.05);
-  margin: 40px;
-  border-radius: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  box-sizing: border-box;
+}
+
+.temp-page .page-title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 2rem;
+  opacity: 0.9;
+}
+
+.temp-page .view-toggle {
+  display: flex;
+  gap: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.temp-page .view-toggle-button {
+  padding: 8px 16px;
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.temp-page .view-toggle-button:hover {
+  background: #444;
 }
 

@@ -652,7 +652,7 @@ footer {
   padding-right: 0 !important;
   margin-left: 0px !important; /* aligns with outer panel */
   margin-top: -100px !important;
-  margin-bottom: -60px !important; /* removes the phantom space */
+  margin-bottom: -20px !important; /* removes the phantom space */
   /* box-sizing: border-box !important; */
   z-index: 20 !important;
 }

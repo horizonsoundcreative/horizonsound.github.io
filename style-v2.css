@@ -609,14 +609,17 @@ footer {
 
 /* Title */
 .music-page .page-title {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  top: -5px !important; /* slight upward nudge */
+  margin: 0 !important;
   text-align: center !important;
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-  font-size: 2rem !important;
-  opacity: 0.9 !important;
+  width: max-content !important;
 }
 
 .music-page .view-toggle {
+  position: relative !important;
   display: flex !important;
   gap: 10px !important;
   padding-left: 0 !important;   /* remove inherited page padding */
@@ -624,7 +627,7 @@ footer {
   margin-left: 0px !important; /* aligns with outer panel */
   margin-top: 5px !important;
   margin-bottom: 5px !important;
-  box-sizing: border-box !important;
+  /* box-sizing: border-box !important; */
 }
 
 .music-page .view-toggle button {

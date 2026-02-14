@@ -6,6 +6,11 @@ teaser_message: |
   Kesha-inspired anthems ready to light up the channel.
 
 new_releases:
+  - title: "Before Midnight" # Midnight Saga track
+    url: "/music/midnight-saga-before-midnight/"
+    image: "/assets/Before Midnight.jpeg"
+    videostatus: "Public"
+
   - title: "Lost in Silence"
     url: "/music/lost-in-silence/"
     image: "/assets/lost-in-silence.jpg"

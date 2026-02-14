@@ -663,7 +663,7 @@ footer {
 
 /* Playlist panels (OUTER PANEL — RED BORDER) */
 .music-page .playlist-section {
-  margin-top: 5px !important;  /* was 40px */
+  margin-top: 0 !important;  /* was 40px */
   margin: 40px 0 !important;
   padding: 25px 40px !important;
   background: rgba(255, 255, 255, 0.03) !important;

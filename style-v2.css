@@ -557,14 +557,15 @@ footer {
   margin: 0 0 1rem;
   text-align: left;
   position: relative;
-  padding-left: 24px;
+  padding-left: 28px;
 }
 
 .home-teaser p::before {
-  content: "★  ";
+  content: "★";
   position: absolute;
   left: 0;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);  /* centers the star vertically */
   color: #fff;
   font-size: 1em;
   line-height: 1;

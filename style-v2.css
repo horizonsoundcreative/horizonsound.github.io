@@ -678,14 +678,17 @@ footer {
   opacity: 0.9 !important;
 }
 
-/* View toggle */
 .music-page .view-toggle {
   display: flex !important;
   gap: 10px !important;
-  padding-left: 40px !important; 
-  padding-right: 40px !important;
+
+  padding-left: 0 !important;   /* remove inherited page padding */
+  padding-right: 0 !important;
+
+  margin-left: 40px !important; /* aligns with outer panel */
   margin-top: 5px !important;
   margin-bottom: 5px !important;
+
   box-sizing: border-box !important;
 }
 
@@ -716,6 +719,9 @@ footer {
 
 /* Tile grid alignment (INNER PANEL — BLUE BORDER) */
 .music-page .playlist-section .tile-grid {
+  width: auto !important;        /* prevents overflow */
+  max-width: 100% !important;    /* stays inside outer panel */
+  box-sizing: border-box !important;
   background: rgba(255, 255, 255, 0.02); /* subtle inner layer */
   padding: 20px 30px !important;
   border-radius: 8px;
@@ -731,5 +737,6 @@ footer {
   justify-content: start !important;
 
    /* DEBUG */
-  border: 2px solid blue !important;
+  border: 2px solid green !important;
 }
+

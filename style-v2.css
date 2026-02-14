@@ -564,7 +564,7 @@ footer {
   content: "★";
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 90%;
   transform: translateY(-50%);  /* centers the star vertically */
   color: #fff;
   font-size: 1em;

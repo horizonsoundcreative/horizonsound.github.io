@@ -317,7 +317,6 @@ nav a.active {
   margin: 0;
   padding: 0;
   position: relative;
-  z-index: 1 !important;
 }
 
 .hero-banner img.hero-image {
@@ -676,6 +675,7 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.08) !important;
   width: 100% !important;
   box-sizing: border-box !important;
+  position: relative; 
   z-index: 30 !important;
 }
 

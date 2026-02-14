@@ -722,3 +722,53 @@ footer {
   aspect-ratio: auto !important; /* prevents square forcing */
   height: auto !important;
 }
+
+/* --------------------------------------------------
+   PLAYLIST PAGE 
+-------------------------------------------------- */
+
+/* Playlist Page Layout */
+.playlist-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Narrative at the top */
+.playlist-narrative {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+/* Player spacing */
+.playlist-player {
+  margin-bottom: 25px;
+}
+
+/* Playlist carousel row */
+.playlist-carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+/* Playlist tiles (reuse your .tile styles but add active state) */
+.playlist-tile {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.playlist-tile.active {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Dynamic details section */
+.song-details {
+  margin-top: 20px;
+}
+

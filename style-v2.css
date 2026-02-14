@@ -685,6 +685,7 @@ footer {
   margin-bottom: 18px !important;
   font-size: 1.4rem !important;
   opacity: 0.9 !important;
+  margin-top: 0 !important;
 }
 
 /* Tile grid alignment (INNER PANEL — BLUE BORDER) */

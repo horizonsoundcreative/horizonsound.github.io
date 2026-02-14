@@ -211,7 +211,7 @@ songs:
     youtube_id: "VXQKpK56MCI" 
     url: "/music/midnight-saga-before-midnight/"
     image: "/assets/Before Midnight.jpeg"
-    videostatus: "Private"
+    videostatus: "Public"
     primary_playlist: "Midnight Saga"
     sequence: 1
 

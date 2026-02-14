@@ -609,6 +609,9 @@ footer {
    ABOUT PAGE
 -------------------------------------------------- */
 .about-page {
+  margin-top: -120px !important;   /* adjust until perfect */
+  position: relative;
+  z-index: 20;
   padding: 40px;
   max-width: 900px;
   margin: 0 auto;

@@ -655,9 +655,10 @@ footer {
   width: auto !important;        /* prevents overflow */
   max-width: 100% !important;    /* stays inside outer panel */
   box-sizing: border-box !important;
-  background: rgba(255, 255, 255, 0.02); /* subtle inner layer */
+  background: rgba(255, 255, 255, 0.035) !important; /* darker = raised */
   padding: 20px 30px !important;
-  border-radius: 10px;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35); /* homepage-style lift */
   /* Tile layout — match homepage proportions */
   grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)) !important;
   gap: 20px !important;
@@ -666,3 +667,6 @@ footer {
   justify-items: start !important;
   justify-content: start !important;
 }
+
+
+

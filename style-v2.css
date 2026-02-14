@@ -702,7 +702,6 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.08) !important;
   width: 100% !important;
   box-sizing: border-box !important;
-  /* DEBUG - border: 2px solid red !important; */
 }
 
 /* Playlist section headers */
@@ -731,6 +730,6 @@ footer {
   margin-right: 0 !important;
   justify-items: start !important;
   justify-content: start !important;
-  /* DEBUG -   border: 2px solid green !important; */
+  border: 2px solid yellow !important;
 }
 

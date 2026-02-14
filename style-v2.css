@@ -672,5 +672,15 @@ footer {
   justify-content: start !important;
 }
 
+/* Make Music page tiles landscape like homepage */
+.music-page .tile img {
+  height: 180px !important;   /* same as homepage */
+  object-fit: cover !important;
+}
+
+.music-page .tile {
+  aspect-ratio: auto !important; /* prevents square forcing */
+}
+
 
 

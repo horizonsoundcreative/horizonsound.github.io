@@ -677,7 +677,7 @@ footer {
   box-sizing: border-box !important;
   position: relative; 
   z-index: 30 !important;
-  padding-top: 2px !important; /* was 20px */
+  padding-top: 8px !important; /* was 20px */
 }
 
 /* Playlist section headers */

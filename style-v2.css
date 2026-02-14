@@ -695,9 +695,6 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.08) !important;
   width: 100% !important;
   box-sizing: border-box !important;
-
-  /* DEBUG */
-  border: 2px solid red !important;
 }
 
 /* Playlist section headers */
@@ -714,7 +711,13 @@ footer {
   padding: 20px; /* creates breathing room */
   border-radius: 8px;
 
-  /* existing debug border */
-  border: 2px solid green !important;
-}
+   /* Tile layout — match homepage proportions */
+  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)) !important;
+  gap: 20px !important;
 
+  /* Alignment */
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  justify-items: start !important;
+  justify-content: start !important;
+}

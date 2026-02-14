@@ -621,7 +621,7 @@ footer {
   gap: 10px !important;
   padding-left: 0 !important;   /* remove inherited page padding */
   padding-right: 0 !important;
-  margin-left: 40px !important; /* aligns with outer panel */
+  margin-left: 0px !important; /* aligns with outer panel */
   margin-top: 5px !important;
   margin-bottom: 5px !important;
   box-sizing: border-box !important;

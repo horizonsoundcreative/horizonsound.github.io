@@ -580,7 +580,7 @@ footer {
 }
 
 /* --------------------------------------------------
-   MUSIC PAGE — CLEAN FINAL OVERRIDES
+   MUSIC PAGE — CLEAN FINAL OVERRIDES + DEBUG BORDERS
 -------------------------------------------------- */
 
 /* Title */
@@ -607,7 +607,7 @@ footer {
   padding: 6px 14px !important;
 }
 
-/* Playlist panels */
+/* Playlist panels (OUTER PANEL — RED BORDER) */
 .music-page .playlist-section {
   margin: 40px 0 !important;
   padding: 25px 40px !important;
@@ -616,6 +616,9 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.08) !important;
   width: 100% !important;
   box-sizing: border-box !important;
+
+  /* DEBUG */
+  border: 2px solid red !important;
 }
 
 /* Playlist section headers */
@@ -626,13 +629,17 @@ footer {
   opacity: 0.9 !important;
 }
 
-/* Tile grid alignment */
+/* Tile grid alignment (INNER PANEL — BLUE BORDER) */
 .music-page .playlist-section .tile-grid {
   margin-left: 0 !important;
   margin-right: 0 !important;
   justify-items: start !important;
   justify-content: start !important;
+
+  /* DEBUG */
+  border: 2px solid blue !important;
 }
+
 
 /* --------------------------------------------------
    ABOUT PAGE

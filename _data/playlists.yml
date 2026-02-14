@@ -10,7 +10,7 @@
 
 - id: midnight-saga
   title: "Midnight Saga"
-  image: "/images/playlists/midnight-saga.jpg"
+  image: "/assets/Midnight Saga.jpeg"
   description: "A cinematic late-night journey through identity and transformation."
   songs:
     - before-midnight

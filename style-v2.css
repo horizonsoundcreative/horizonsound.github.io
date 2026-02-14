@@ -662,6 +662,13 @@ footer {
    MUSIC PAGE — CLEAN FINAL OVERRIDES + DEBUG BORDERS
 -------------------------------------------------- */
 
+/* Music page gutters (match homepage) */
+.music-page {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+  box-sizing: border-box !important;
+}
+
 /* Title */
 .music-page .page-title {
   text-align: center !important;
@@ -724,5 +731,5 @@ footer {
   justify-content: start !important;
 
    /* DEBUG */
-  border: 2px solid green !important;
+  border: 2px solid blue !important;
 }

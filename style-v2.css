@@ -676,7 +676,7 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.08) !important;
   width: 100% !important;
   box-sizing: border-box !important;
-  z-index: 20 !important;
+  z-index: 30 !important;
 }
 
 /* Playlist section headers */

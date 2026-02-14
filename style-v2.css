@@ -596,7 +596,7 @@ footer {
 .music-page .view-toggle {
   display: flex !important;
   gap: 10px !important;
-  padding-left: 40px !important;
+  padding-left: 0px !important;
   padding-right: 40px !important;
   margin-top: 5px !important;
   margin-bottom: 5px !important;
@@ -682,7 +682,7 @@ footer {
 .music-page .view-toggle {
   display: flex !important;
   gap: 10px !important;
-  /* padding-left: 40px !important; */
+  padding-left: 40px !important; 
   padding-right: 40px !important;
   margin-top: 5px !important;
   margin-bottom: 5px !important;
@@ -717,7 +717,7 @@ footer {
 /* Tile grid alignment (INNER PANEL — BLUE BORDER) */
 .music-page .playlist-section .tile-grid {
   background: rgba(255, 255, 255, 0.02); /* subtle inner layer */
-  padding: 20px; /* creates breathing room */
+  padding: 20px 30px !important;
   border-radius: 8px;
 
    /* Tile layout — match homepage proportions */

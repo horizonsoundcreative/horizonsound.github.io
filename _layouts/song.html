@@ -6,6 +6,20 @@ layout: default
 {% assign url = current_song.url %}
 {% assign meta = site.data.music.songs | where: "url", url | first %}
 
+{%- comment -%}
+BUILD PLAYLIST FOR CAROUSEL
+{%- endcomment -%}
+{% assign related = site.data.music.songs | where: "primary_playlist", meta.primary_playlist %}
+{% assign related_public = related | where: "videostatus", "Public" %}
+{% assign sorted_by_sequence = related_public | sort: "sequence" %}
+{% assign first_item = sorted_by_sequence | first %}
+
+{% if first_item.sequence %}
+  {% assign playlist_sorted = sorted_by_sequence %}
+{% else %}
+  {% assign playlist_sorted = related_public | sort: "title" %}
+{% endif %}
+
 <main>
 
   <!-- DEBUG BLOCK -->
@@ -34,6 +48,10 @@ resolved.youtube_id: {{ current_song.youtube_id | default: meta.youtube_id }}
 resolved.image:      {{ meta.image }}
 resolved.primary_playlist: {{ meta.primary_playlist }}
 
+PLAYLIST SORTED (final list for carousel)
+-----------------------------------------
+{{ playlist_sorted | jsonify }}
+
     </pre>
   </div>
 
@@ -58,8 +76,8 @@ resolved.primary_playlist: {{ meta.primary_playlist }}
     </iframe>
   </div>
 
-  <!-- CAROUSEL (inline for now) -->
-  {% if current_song.carousel %}
+  <!-- CAROUSEL (rebuilt from meta.primary_playlist) -->
+  {% if meta.primary_playlist %}
     <div class="playlist-carousel">
 
       <!-- LEFT ARROW -->
@@ -67,11 +85,12 @@ resolved.primary_playlist: {{ meta.primary_playlist }}
 
       <!-- SCROLLING STRIP -->
       <div class="horizontal-strip">
-        {% for id in current_song.carousel %}
-          {% assign song = site.songs | where: "song_id", id | first %}
+        {% for item in playlist_sorted %}
+          {% assign song_id = item.url | split: "/" | last %}
+          {% assign song = site.songs | where: "song_id", song_id | first %}
           {% if song %}
             <div class="playlist-tile" data-song="{{ song.song_id }}">
-              <img src="{{ song.image }}" alt="{{ song.title }}">
+              <img src="{{ item.image }}" alt="{{ song.title }}">
               <h3 class="tile-title">{{ song.title }}</h3>
             </div>
           {% endif %}

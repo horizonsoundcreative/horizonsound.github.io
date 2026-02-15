@@ -63,14 +63,6 @@ songs:
     videostatus: "Private"
     primary_playlist: "Instrumentals"
 
-  - title: "A Touch of Light" # Instrumental track
-    subtitle: "" 
-    youtube_id: "5bfNeRr2UHI" 
-    url: "/music/instrumental-a-touch-of-light/"
-    image: "/assets/A Touch of Light.jpg"
-    videostatus: "Private"
-    primary_playlist: "Instrumentals"
-
   - title: "Venice Waters" # Venice-Missing Stamp track
     subtitle: "Venice | Part 3" 
     youtube_id: "LzfM1PRxpVU" 
@@ -206,6 +198,16 @@ songs:
     primary_playlist: "After the Silence"
     sequence: 5
 
+# Everything below this point is live and public in YouTube - Everything above is scheduled but has not gone live yet.
+
+  - title: "A Touch of Light" # Instrumental track
+    subtitle: "" 
+    youtube_id: "5bfNeRr2UHI" 
+    url: "/music/instrumental-a-touch-of-light/"
+    image: "/assets/A Touch of Light.jpg"
+    videostatus: "Public"
+    primary_playlist: "Instrumentals"
+
   - title: "Before Midnight" # Midnight Saga track
     subtitle: "Midnight Saga | Part 1" 
     youtube_id: "VXQKpK56MCI" 
@@ -214,8 +216,6 @@ songs:
     videostatus: "Public"
     primary_playlist: "Midnight Saga"
     sequence: 1
-
-# Everything below this point is live and public in YouTube - Everything above is scheduled but has not gone live yet.
 
   - title: "The Way We Lied" # After the Silence Album track
     subtitle: "After the Silence | Part 4" 

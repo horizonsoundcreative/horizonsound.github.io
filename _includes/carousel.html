@@ -1,3 +1,26 @@
+{% if site.debug %}
+<div class="debug-block">
+<pre style="background:#222; color:#0f0; padding:1rem; margin:1rem 0; white-space:pre-wrap;">
+
+CAROUSEL DEBUG
+====================
+
+mode:
+{{ include.mode }}
+
+public_only:
+{{ include.public_only }}
+
+current (active song):
+{{ include.current | jsonify }}
+
+songs (raw input list):
+{{ include.songs | jsonify }}
+
+</pre>
+</div>
+{% endif %}
+
 {% for item in songs %}
 
   {%- comment -%}

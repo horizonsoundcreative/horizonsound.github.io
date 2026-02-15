@@ -72,12 +72,21 @@ PLAYLIST SORTED (final list for carousel)
   
   <!-- CAROUSEL (old structure, old CSS) -->
   {% assign playlist_with_ids = "" | split: "" %}
+  
   {% for item in playlist_sorted %}
     {% assign id = item.url | split: "/" | last %}
     {% assign song = site.songs | where: "song_id", id | first %}
   
     {% if song %}
-      {% assign enriched = song | merge: item %}
+      {% assign enriched = 
+        {
+          "song_id": id,
+          "title": song.title | default: item.title,
+          "youtube_id": song.youtube_id | default: item.youtube_id,
+          "image": item.image,
+          "url": item.url
+        }
+      %}
       {% assign playlist_with_ids = playlist_with_ids | push: enriched %}
     {% endif %}
   {% endfor %}

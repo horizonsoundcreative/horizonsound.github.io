@@ -4,6 +4,31 @@ layout: default
 
 <main>
 
+  <!-- DEBUG BLOCK -->
+  <div class="debug-block">
+    <pre style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; white-space:pre-wrap;">
+
+SONG PAGE DEBUG
+==============================
+
+page.url:
+{{ page.url }}
+
+page.title:
+{{ page.title }}
+
+page.song_id:
+{{ page.song_id }}
+
+page.youtube_id:
+{{ page.youtube_id }}
+
+page.carousel (raw list):
+{{ page.carousel | jsonify }}
+
+    </pre>
+  </div>
+
   <!-- SONG TITLE -->
   <section class="song-header">
     <h2 class="section-header">{{ page.title }}</h2>
@@ -23,7 +48,7 @@ layout: default
     </iframe>
   </div>
 
-  <!-- CAROUSEL (original version, using original CSS) -->
+  <!-- CAROUSEL (original version, inline) -->
   {% if page.carousel %}
     <div class="playlist-carousel">
 

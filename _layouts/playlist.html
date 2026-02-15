@@ -8,54 +8,58 @@ layout: default
 {% assign first_song_id = playlist.songs | first %}
 {% assign first_song = all_songs | where: "id", first_song_id | first %}
 
+<div class="playlist-page">
 
+  <!-- ============================
+       PLAYLIST TITLE + NARRATIVE
+  ============================= -->
+  <h1 class="playlist-title">{{ playlist.title }}</h1>
+
+  {% if playlist.description %}
+    <p class="playlist-narrative">{{ playlist.description }}</p>
+  {% endif %}
+
+  <!-- ============================
+       ACTIVE YOUTUBE PLAYER
+  ============================= -->
+  <div id="playlist-player" class="playlist-player">
+    <iframe
+      id="playlist-iframe"
+      width="100%"
+      height="360"
+      src="https://www.youtube.com/embed/{{ first_song.youtube_id }}"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- ============================
+       PLAYLIST CAROUSEL
+  ============================= -->
+  <div class="playlist-carousel" id="playlist-carousel">
+    {% for song_id in playlist.songs %}
+      {% assign song = all_songs | where: "id", song_id | first %}
+      <div class="playlist-tile {% if forloop.first %}active{% endif %}"
+           data-song="{{ song.id }}">
+        <img src="{{ song.image }}" alt="{{ song.title }}">
+        <h3>{{ song.title }}</h3>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- ============================
+       DYNAMIC TRACK DETAILS
+  ============================= -->
+  <div id="song-details" class="song-details">
+    <h2 id="song-title">{{ first_song.title }}</h2>
+    <p id="song-description">{{ first_song.description }}</p>
+    <div id="song-lyrics">
+      {{ first_song.lyrics | markdownify }}
+    </div>
+  </div>
+
+</div>
 
 <!-- ============================
      SCRIPT: DYNAMIC TRACK SWITCHING
 ============================= -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const allSongs = {{ site.songs | jsonify }};
-  const playlistSongs = {{ playlist.songs | jsonify }};
-
-  const iframe = document.getElementById("playlist-iframe");
-  const titleEl = document.getElementById("song-title");
-  const descEl = document.getElementById("song-description");
-  const lyricsEl = document.getElementById("song-lyrics");
-
-  const tiles = document.querySelectorAll(".playlist-tile");
-
-  function getSongData(id) {
-    return allSongs.find(s => s.id === id);
-  }
-
-  tiles.forEach(tile => {
-    tile.addEventListener("click", () => {
-      const songId = tile.dataset.song;
-      const song = getSongData(songId);
-
-      if (!song) return;
-
-      // Update active tile
-      tiles.forEach(t => t.classList.remove("active"));
-      tile.classList.add("active");
-
-      // Update YouTube embed
-      iframe.src = "https://www.youtube.com/embed/" + song.youtube_id;
-
-      // Update details
-      titleEl.textContent = song.title;
-      descEl.textContent = song.description || "";
-      lyricsEl.innerHTML = song.lyrics || "";
-
-      // Smooth scroll to details
-      document.getElementById("song-details").scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-    });
-  });
-
-});
-</script>

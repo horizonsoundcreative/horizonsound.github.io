@@ -15,23 +15,24 @@ layout: default
 SONG PAGE DEBUG
 ==============================
 
-page.url:
-{{ current_song.url }}
+PAGE OBJECT
+-----------
+page.url:          {{ current_song.url }}
+page.title:        {{ current_song.title }}
+page.song_id:      {{ current_song.song_id }}
+page.youtube_id:   {{ current_song.youtube_id }}
+page.carousel:     {{ current_song.carousel | jsonify }}
 
-page.title:
-{{ current_song.title }}
+META OBJECT (from music.yml)
+----------------------------
+meta:              {{ meta | jsonify }}
 
-page.song_id:
-{{ current_song.song_id }}
-
-page.youtube_id:
-{{ current_song.youtube_id }}
-
-page.carousel (raw list):
-{{ current_song.carousel | jsonify }}
-
-meta (from music.yml):
-{{ meta | jsonify }}
+RESOLVED VALUES
+---------------
+resolved.title:     {{ current_song.title | default: meta.title }}
+resolved.youtube_id: {{ current_song.youtube_id | default: meta.youtube_id }}
+resolved.image:      {{ meta.image }}
+resolved.primary_playlist: {{ meta.primary_playlist }}
 
     </pre>
   </div>
@@ -46,7 +47,7 @@ meta (from music.yml):
     {% endif %}
   </section>
 
-  <!-- EMBED (now using meta.youtube_id if page.youtube_id is blank) -->
+  <!-- EMBED -->
   <div id="playlist-player" class="playlist-player">
     <iframe
       width="100%"
@@ -57,7 +58,7 @@ meta (from music.yml):
     </iframe>
   </div>
 
-  <!-- CAROUSEL (still using page.carousel for now) -->
+  <!-- CAROUSEL (inline for now) -->
   {% if current_song.carousel %}
     <div class="playlist-carousel">
 

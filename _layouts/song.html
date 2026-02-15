@@ -99,3 +99,34 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const tiles = document.querySelectorAll(".playlist-tile");
+  const iframe = document.querySelector(".video-wrapper iframe");
+
+  if (!tiles.length || !iframe) return;
+
+  tiles.forEach(tile => {
+    tile.addEventListener("click", () => {
+      const songId = tile.dataset.song;
+
+      // Find the matching song in window.allSongs (if available)
+      const song = window.allSongs?.find(s => s.song_id === songId);
+
+      if (!song) return;
+
+      // Update the embed
+      iframe.src = "https://www.youtube.com/embed/" + song.youtube_id;
+
+      // Update active tile highlight
+      document.querySelectorAll(".playlist-tile").forEach(t => t.classList.remove("active-tile"));
+      tile.classList.add("active-tile");
+
+      // Scroll tile into view
+      tile.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    });
+  });
+});
+</script>
+

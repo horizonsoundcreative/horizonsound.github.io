@@ -1,7 +1,12 @@
 - id: a-way-back
   title: "A Way Back Trilogy"
   image: "/assets/Choosing Me (Her Version).jpeg"
-  description: "A three-part emotional arc exploring silence, self-worth, and choosing love from two perspectives."
+  description: >
+    A three-part emotional arc exploring silence, self-worth, and the courage
+    to choose yourself — or choose your way back home. Told from two
+    perspectives, this trilogy follows the quiet unraveling of a relationship,
+    the rediscovery of identity, and the moment two people decide whether to
+    walk away or walk toward each other again.
   songs:
     - lost-in-silence
     - choosing-me-her
@@ -11,7 +16,11 @@
 - id: midnight-saga
   title: "Midnight Saga"
   image: "/assets/Midnight Saga.jpeg"
-  description: "A cinematic late-night journey through identity and transformation."
+  description: >
+    A cinematic late-night journey through identity, chaos, temptation, and
+    transformation. The Midnight Saga follows a character through escalating
+    emotional turbulence — from the moment before midnight, into mayhem and
+    madness, and finally into the clarity that comes after the storm breaks.
   songs:
     - before-midnight
     - midnight-mayhem
@@ -22,8 +31,11 @@
 - id: after-the-silence
   title: "After the Silence"
   image: "/assets/After the Silence Track List.jpeg"
-  description: ""
+  description: >
+    A reflective, emotional collection exploring the quiet moments after a
+    heartbreak — the healing, the reckoning, and the rediscovery of hope.
+    These songs live in the space between what was lost and what comes next.
   songs:
     - the-quiet-after
     - borrowed-time
-  order: 1
+  order: 3

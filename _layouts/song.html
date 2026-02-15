@@ -71,8 +71,14 @@ PLAYLIST SORTED (final list for carousel)
   {% include embed.html youtube_id=resolved_youtube_id %}
   
   <!-- CAROUSEL (old structure, old CSS) -->
+  {% assign playlist_with_ids = "" | split: "" %}
+  {% for item in playlist_sorted %}
+    {% assign id = item.url | split: "/" | last %}
+    {% assign enriched = item | merge: {"song_id": id} %}
+    {% assign playlist_with_ids = playlist_with_ids | push: enriched %}
+  {% endfor %}
   <script>
-    window.allSongs = {{ playlist_sorted | jsonify }};
+    window.allSongs = {{ playlist_with_ids | jsonify }};
   </script>
   {% include carousel.html playlist=playlist_sorted %}
   

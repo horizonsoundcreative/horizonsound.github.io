@@ -23,8 +23,31 @@ layout: default
     </iframe>
   </div>
 
-  <!-- CAROUSEL (original version) -->
-  {% include carousel.html songs=page.carousel %}
+  <!-- CAROUSEL (original version, using original CSS) -->
+  {% if page.carousel %}
+    <div class="playlist-carousel">
+
+      <!-- LEFT ARROW -->
+      <button class="carousel-arrow left-arrow">‹</button>
+
+      <!-- SCROLLING STRIP -->
+      <div class="horizontal-strip">
+        {% for id in page.carousel %}
+          {% assign song = site.songs | where: "song_id", id | first %}
+          {% if song %}
+            <div class="playlist-tile" data-song="{{ song.song_id }}">
+              <img src="{{ song.image }}" alt="{{ song.title }}">
+              <h3 class="tile-title">{{ song.title }}</h3>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <!-- RIGHT ARROW -->
+      <button class="carousel-arrow right-arrow">›</button>
+
+    </div>
+  {% endif %}
 
   <!-- ABOUT + LYRICS -->
   <div id="song-details" class="song-details">
@@ -36,3 +59,22 @@ layout: default
   </div>
 
 </main>
+
+<!-- ORIGINAL SIMPLE CAROUSEL JS -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const strip = document.querySelector(".horizontal-strip");
+  const left = document.querySelector(".left-arrow");
+  const right = document.querySelector(".right-arrow");
+
+  if (!strip || !left || !right) return;
+
+  left.addEventListener("click", () => {
+    strip.scrollBy({ left: -300, behavior: "smooth" });
+  });
+
+  right.addEventListener("click", () => {
+    strip.scrollBy({ left: 300, behavior: "smooth" });
+  });
+});
+</script>

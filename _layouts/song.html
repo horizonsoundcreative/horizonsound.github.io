@@ -118,13 +118,31 @@ current_song.primary_playlist:
       </section>
 
       <!-- PLAYLIST TILES -->
-      {% include carousel.html 
-           songs=playlist_sorted 
-           current=current_song 
-           mode="song" 
-           public_only=true 
-      %}
-
+     {% assign url = current_song.url %}
+     {% assign meta = site.data.music.songs | where: "url", url | first %}
+     {% assign playlist_name = meta.primary_playlist %}
+     
+     {% if playlist_name %}
+       {% assign related = site.data.music.songs | where: "primary_playlist", playlist_name %}
+       {% assign related = related | where: "videostatus", "Public" %}
+     
+       {% assign sorted_by_sequence = related | sort: "sequence" %}
+       {% assign first_item = sorted_by_sequence | first %}
+     
+       {% if first_item.sequence %}
+         {% assign playlist_sorted = sorted_by_sequence %}
+       {% else %}
+         {% assign playlist_sorted = related | sort: "title" %}
+       {% endif %}
+     
+       {% include carousel.html 
+            songs=playlist_sorted 
+            current=current_song 
+            public_only=true 
+            mode="song" 
+       %}
+     {% endif %}
+         
       <!-- ABOUT + LYRICS (from the song file) -->
       {{ content }}
 

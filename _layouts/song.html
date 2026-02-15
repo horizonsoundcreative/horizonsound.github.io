@@ -104,15 +104,10 @@ PLAYLIST SORTED (final list for carousel)
     </div>
   {% endif %}
 
-  <!-- ABOUT SECTION (old structure restored) -->
-  <section class="song-about">
-    <h2 class="section-header">About</h2>
-    <p class="song-description">
-      {{ current_song.about }}
-    </p>
-  </section>
+  <!-- ABOUT SECTION (Pulled from about.html include) -->
+  {% include about.html about=current_song.about %}
 
-  <!-- LYRICS SECTION (old structure restored) -->
+  <!-- LYRICS SECTION (Pulled from lyrics.html include) -->
   {% include lyrics.html lyrics=current_song.lyrics %}
   
 </main>

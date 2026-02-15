@@ -794,22 +794,3 @@ footer {
   outline-offset: 2px;
   border-radius: 6px;
 }
-
-/* SONG PAGE VISUAL ORDER FIX */
-main {
-  display: flex;
-  flex-direction: column;
-}
-
-#playlist-player {
-  order: 1;
-}
-
-.carousel-wrapper {
-  order: 2;
-  margin-top: -10px; /* tighten spacing under embed */
-}
-
-#song-details {
-  order: 3;
-}

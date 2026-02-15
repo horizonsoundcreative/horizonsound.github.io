@@ -52,7 +52,7 @@ layout: default
   ============================= -->
   <div id="song-details" class="song-details">
     <h2 id="song-title">{{ first_song.title }}</h2>
-    <p id="song-description">{{ first_song.description }}</p>
+    <p id="song-description">{{ first_song.about }}</p>
     <div id="song-lyrics">
       {{ first_song.lyrics | markdownify }}
     </div>
@@ -63,3 +63,64 @@ layout: default
 <!-- ============================
      SCRIPT: DYNAMIC TRACK SWITCHING
 ============================= -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* -----------------------------------------
+     SAFE, ESCAPED SONG DATA (NO JSONIFY BUG)
+  ----------------------------------------- */
+  const allSongs = [
+    {% for song in site.songs %}
+      {
+        id: "{{ song.id }}",
+        title: {{ song.title | jsonify }},
+        youtube_id: {{ song.youtube_id | jsonify }},
+        image: {{ song.image | jsonify }},
+        description: {{ song.about | jsonify }},
+        lyrics: {{ song.lyrics | jsonify }}
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+  const playlistSongs = {{ playlist.songs | jsonify }};
+
+  const iframe = document.getElementById("playlist-iframe");
+  const titleEl = document.getElementById("song-title");
+  const descEl = document.getElementById("song-description");
+  const lyricsEl = document.getElementById("song-lyrics");
+
+  const tiles = document.querySelectorAll(".playlist-tile");
+
+  function getSongData(id) {
+    return allSongs.find(s => s.id === id);
+  }
+
+  tiles.forEach(tile => {
+    tile.addEventListener("click", () => {
+      const songId = tile.dataset.song;
+      const song = getSongData(songId);
+
+      if (!song) return;
+
+      // Update active tile
+      tiles.forEach(t => t.classList.remove("active"));
+      tile.classList.add("active");
+
+      // Update YouTube embed
+      iframe.src = "https://www.youtube.com/embed/" + song.youtube_id;
+
+      // Update details
+      titleEl.textContent = song.title;
+      descEl.textContent = song.description || "";
+      lyricsEl.innerHTML = song.lyrics || "";
+
+      // Smooth scroll to details
+      document.getElementById("song-details").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+  });
+
+});
+</script>

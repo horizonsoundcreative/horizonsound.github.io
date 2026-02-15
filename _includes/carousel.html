@@ -10,7 +10,7 @@
       {% assign song_id = item.url | split: "/" | last %}
       {% assign song = site.songs | where: "song_id", song_id | first %}
       {% if song %}
-        <div class="playlist-tile" data-song="{{ song.song_id }}">
+        <div class="playlist-tile" data-url="{{ item.url }}">
           <img src="{{ item.image }}" alt="{{ song.title }}">
           <h3 class="tile-title">{{ song.title }}</h3>
         </div>

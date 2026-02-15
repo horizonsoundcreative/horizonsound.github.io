@@ -66,7 +66,7 @@ layout: default
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  const allSongs = {{ site.data.music.songs | jsonify }};
+  const allSongs = {{ site.songs | jsonify }};
   const playlistSongs = {{ playlist.songs | jsonify }};
 
   const iframe = document.getElementById("playlist-iframe");

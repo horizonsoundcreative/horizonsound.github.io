@@ -108,6 +108,13 @@
   pointer-events: none;
 }
 
+.playlist-tile img {
+  width: 100%;
+  height: 180px;   /* or 160px if that was your old height */
+  object-fit: cover;
+  display: block;
+}
+
 /* --------------------------------------------------
    GLOBAL BASE STYLES
 -------------------------------------------------- */

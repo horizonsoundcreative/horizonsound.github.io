@@ -104,38 +104,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const tiles = document.querySelectorAll(".playlist-tile");
-  const iframe = document.querySelector(".video-wrapper iframe");
-
-  if (!tiles.length || !iframe) return;
-
-  tiles.forEach(tile => {
-    tile.addEventListener("click", () => {
-      console.log("TILE CLICKED:", tile);
-
-      const url = tile.dataset.url;
-      console.log("URL:", url);
-
-      const song = window.allSongs?.find(s => s.url === url);
-      console.log("MATCHED SONG:", song);
-
-      if (!song) {
-        console.warn("NO MATCHING SONG FOUND FOR:", url);
-        return;
-      }
-
-      console.log("UPDATING EMBED TO:", song.youtube_id);
-
-      iframe.src = "https://www.youtube.com/embed/" + song.youtube_id;
-
-      document.querySelectorAll(".playlist-tile").forEach(t => t.classList.remove("active-tile"));
-      tile.classList.add("active-tile");
-
-      tile.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-    });
-  });
-});
-</script>
-

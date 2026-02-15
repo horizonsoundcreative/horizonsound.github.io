@@ -72,8 +72,6 @@ PLAYLIST SORTED (final list for carousel)
   
   <!-- CAROUSEL (old structure, old CSS) -->
   {% assign playlist_with_ids = "" | split: "" %}
-  {% assign playlist_with_ids = "" | split: "" %}
-  
   {% for item in playlist_sorted %}
     {% assign id = item.url | split: "/" | last %}
     {% assign song = site.songs | where: "song_id", id | first %}

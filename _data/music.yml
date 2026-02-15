@@ -158,7 +158,7 @@ songs:
     youtube_id: "8ArjDO_Lkz0" 
     url: "/music/ats-8-ghostlight/"
     image: "/assets/After the Silence.jpeg"
-    videostatus: "Private"
+    videostatus: "Public"
     primary_playlist: "After the Silence"
     sequence: 8
 
@@ -167,7 +167,7 @@ songs:
     youtube_id: "YgcaebCs-LY" 
     url: "/music/ats-7-if-youd-asked/"
     image: "/assets/After the Silence.jpeg"
-    videostatus: "Private"
+    videostatus: "Public"
     primary_playlist: "After the Silence"
     sequence: 7
 
@@ -185,7 +185,7 @@ songs:
     youtube_id: "ZJgHgGT0-5g" 
     url: "/music/ats-6-half-of-me/"
     image: "/assets/After the Silence.jpeg"
-    videostatus: "Private"
+    videostatus: "Public"
     primary_playlist: "After the Silence"
     sequence: 6
 
@@ -194,7 +194,7 @@ songs:
     youtube_id: "hYWaf4MIfM0" 
     url: "/music/ats-5-paper-walls/"
     image: "/assets/After the Silence.jpeg"
-    videostatus: "Private"
+    videostatus: "Public"
     primary_playlist: "After the Silence"
     sequence: 5
 

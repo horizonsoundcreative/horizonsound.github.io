@@ -67,12 +67,7 @@ first_meta (from music.yml):
   <!-- ============================
        PLAYLIST CAROUSEL
   ============================= -->
-  {% include carousel.html 
-       songs=playlist.songs 
-       current=first_song 
-       mode="playlist" 
-       public_only=true 
-  %}
+  {% include carousel.html songs=playlist.songs current=first_song mode="playlist" public_only=true %}
 
   <!-- ============================
        DYNAMIC TRACK DETAILS

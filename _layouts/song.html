@@ -100,17 +100,14 @@ meta.image:
 
   <!-- UNIFIED CAROUSEL -->
   {% if meta.primary_playlist %}
-    {% include carousel.html 
-         songs=playlist_sorted 
-         current=current_song 
-         public_only=true 
-         mode="song" 
-    %}
-  {% endif %}
-
-  <!-- OPTIONAL: extra content from the song file -->
-  {% if page.extra_content %}
-    {{ content }}
+    <div class="carousel-wrapper">
+      {% include carousel.html 
+           songs=playlist_sorted 
+           current=current_song 
+           public_only=true 
+           mode="song" 
+      %}
+    </div>
   {% endif %}
 
 </main>

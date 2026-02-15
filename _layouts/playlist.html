@@ -23,49 +23,44 @@ layout: default
      DEBUG BLOCK (TEMPORARY)
 ============================= -->
 <div style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; font-family:monospace; white-space:pre-wrap;">
+<!-- ============================
+     DEBUG BLOCK (TEMPORARY)
+============================= -->
+<div style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; font-family:monospace; white-space:pre-wrap;">
   <strong>DEBUG:</strong>
 
-  playlist.songs (raw):
-  {{ playlist.songs | inspect }}
-
-  playlist.songs (quoted, one per line):
+  playlist.songs (quoted):
   {% for sid in playlist.songs %}
     - "[{{ sid }}]"
   {% endfor %}
 
-  site.songs (song_id only, quoted):
+  site.songs (song_id only):
   {% for s in site.songs %}
     - "[{{ s.song_id }}]"
   {% endfor %}
 
-  first_song_id (quoted):
+  first_song_id:
   "[{{ first_song_id }}]"
 
-  first_song exists?
-  {% if first_song %}
-    YES → "[{{ first_song.song_id }}]"
+  {% assign first_url = "/music/" | append: first_song_id | append: "/" %}
+  {% assign first_meta = site.data.music.songs | where: "url", first_url | first %}
+
+  first_song youtube_id from music.yml:
+  {% if first_meta %}
+    "[{{ first_meta.youtube_id }}]"
   {% else %}
-    NO (first_song is NIL)
+    "[NOT FOUND]"
   {% endif %}
 
-  first_song.youtube_id (quoted):
-  {% if first_song %}
-    "[{{ first_song.youtube_id }}]"
-  {% else %}
-    "[NO FIRST SONG]"
-  {% endif %}
-
-  iframe src (fully rendered):
-  "[https://www.youtube.com/embed/{{ first_song.youtube_id }}]"
-
-  carousel tracks (song_id + youtube_id):
-  {% for song_id in playlist.songs %}
-    {% assign song = all_songs | where: "song_id", song_id | first %}
-    - song_id: "[{{ song.song_id }}]"
-      youtube_id: "[{{ song.youtube_id }}]"
+  carousel tracks (song_id + youtube_id from music.yml):
+  {% for sid in playlist.songs %}
+    {% assign url = "/music/" | append: sid | append: "/" %}
+    {% assign meta = site.data.music.songs | where: "url", url | first %}
+    - song_id: "[{{ sid }}]"
+      url: "[{{ url }}]"
+      youtube_id: "[{% if meta %}{{ meta.youtube_id }}{% else %}NOT FOUND{% endif %}]"
   {% endfor %}
 </div>
-
 
   {% if playlist.description %}
     <p class="playlist-narrative">{{ playlist.description }}</p>
@@ -79,7 +74,9 @@ layout: default
       id="playlist-iframe"
       width="100%"
       height="360"
-      src="https://www.youtube.com/embed/{{ first_song.youtube_id }}"
+      {% assign first_url = "/music/" | append: first_song.song_id | append: "/" %}
+      {% assign first_meta = site.data.music.songs | where: "url", first_url | first %}
+      src="https://www.youtube.com/embed/{{ first_meta.youtube_id }}"
       frameborder="0"
       allowfullscreen>
     </iframe>
@@ -91,6 +88,8 @@ layout: default
   <div class="playlist-carousel" id="playlist-carousel">
     {% for song_id in playlist.songs %}
       {% assign song = all_songs | where: "song_id", song_id | first %}
+      {% assign url = "/music/" | append: song.song_id | append: "/" %} 
+      {% assign meta = site.data.music.songs | where: "url", url | first %}
       <div class="playlist-tile {% if forloop.first %}active{% endif %}"
            data-song="{{ song.song_id }}">
         <img src="{{ song.image }}" alt="{{ song.title }}">
@@ -126,7 +125,9 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         song_id: "{{ song.song_id }}",
         title: {{ song.title | jsonify }},
-        youtube_id: {{ song.youtube_id | jsonify }},
+        {% assign url = "/music/" | append: song.song_id | append: "/" %}
+        {% assign meta = site.data.music.songs | where: "url", url | first %}
+        youtube_id: "{{ meta.youtube_id }}",
         image: {{ song.image | jsonify }},
         description: {{ song.about | jsonify }},
         lyrics: {{ song.lyrics | jsonify }}

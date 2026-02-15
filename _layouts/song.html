@@ -50,10 +50,6 @@ playlist_sorted (final list passed to carousel):
     {% endif %}
   </section>
 
-  <!-- LOOKUP META FROM music.yml -->
-  {% assign url = current_song.url %}
-  {% assign meta = site.data.music.songs | where: "url", url | first %}
-
   <!-- EMBED -->
   <div id="playlist-player" class="playlist-player">
     <iframe
@@ -66,18 +62,7 @@ playlist_sorted (final list passed to carousel):
     </iframe>
   </div>
 
-  <!-- CAROUSEL (RIGHT UNDER EMBED) -->
-  {% assign related = site.data.music.songs | where: "primary_playlist", meta.primary_playlist %}
-  {% assign related_public = related | where: "videostatus", "Public" %}
-  {% assign sorted_by_sequence = related_public | sort: "sequence" %}
-  {% assign first_item = sorted_by_sequence | first %}
-
-  {% if first_item.sequence %}
-    {% assign playlist_sorted = sorted_by_sequence %}
-  {% else %}
-    {% assign playlist_sorted = related_public | sort: "title" %}
-  {% endif %}
-
+  <!-- CAROUSEL -->
   {% if meta.primary_playlist %}
     {% include carousel.html 
          songs=playlist_sorted 

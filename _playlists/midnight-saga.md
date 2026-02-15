@@ -9,8 +9,8 @@ description: >
   madness, and finally into the clarity that comes after the storm breaks.
 
 songs:
-  - before-midnight
-  - midnight-mayhem
-  - midnight-madness
-  - after-midnight
+  - midnight-saga-before-midnight
+  - midnight-saga-midnight-mayhem
+  - midnight-saga-midnight-madness
+  - midnight-saga-after-midnight
 ---

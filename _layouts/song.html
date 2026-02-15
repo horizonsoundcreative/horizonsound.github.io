@@ -1,7 +1,8 @@
 ---
-layout: none
+layout: default
 ---
-{% assign current_song = site.data.music.songs | where: "url", page.url | first %}
+
+{% assign current_song = page %}
 <!DOCTYPE html>
 <html lang="en">
   <head>

@@ -1,8 +1,18 @@
+---
+layout: default
+---
+
 {% assign current_song = page %}
 
+{%- comment -%}
+LOOKUP META FROM music.yml
+{%- endcomment -%}
 {% assign url = current_song.url %}
 {% assign meta = site.data.music.songs | where: "url", url | first %}
 
+{%- comment -%}
+BUILD PLAYLIST FOR CAROUSEL
+{%- endcomment -%}
 {% assign related = site.data.music.songs | where: "primary_playlist", meta.primary_playlist %}
 {% assign related_public = related | where: "videostatus", "Public" %}
 {% assign sorted_by_sequence = related_public | sort: "sequence" %}
@@ -14,9 +24,14 @@
   {% assign playlist_sorted = related_public | sort: "title" %}
 {% endif %}
 
-{% if site.debug %}
-<div class="debug-block">
-<pre style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; white-space:pre-wrap;">
+<main>
+
+  {%- comment -%}
+  DEBUG BLOCK — must be inside <main> so it renders
+  {%- endcomment -%}
+  {% if site.debug %}
+  <div class="debug-block">
+  <pre style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; white-space:pre-wrap;">
 
 SONG PAGE DEBUG
 ====================
@@ -30,11 +45,9 @@ meta:
 playlist_sorted:
 {{ playlist_sorted | jsonify }}
 
-</pre>
-</div>
-{% endif %} 
-
-<main>
+  </pre>
+  </div>
+  {% endif %}
 
   <!-- SONG TITLE + SUBTITLE -->
   <section class="song-header">
@@ -76,3 +89,4 @@ playlist_sorted:
   </div>
 
 </main>
+

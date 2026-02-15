@@ -7,7 +7,7 @@ layout: default
 {% assign meta = site.data.music.songs | where: "url", url | first %}
 
 {%- comment -%}
-BUILD PLAYLIST FOR CAROUSEL
+BUILD PLAYLIST FOR CAROUSEL (old system)
 {%- endcomment -%}
 {% assign related = site.data.music.songs | where: "primary_playlist", meta.primary_playlist %}
 {% assign related_public = related | where: "videostatus", "Public" %}
@@ -35,11 +35,10 @@ page.url:          {{ current_song.url }}
 page.title:        {{ current_song.title }}
 page.song_id:      {{ current_song.song_id }}
 page.youtube_id:   {{ current_song.youtube_id }}
-page.carousel:     {{ current_song.carousel | jsonify }}
 
 META OBJECT (from music.yml)
 ----------------------------
-meta:              {{ meta | jsonify }}
+{{ meta | jsonify }}
 
 RESOLVED VALUES
 ---------------
@@ -65,7 +64,7 @@ PLAYLIST SORTED (final list for carousel)
     {% endif %}
   </section>
 
-  <!-- EMBED -->
+  <!-- EMBED (old structure) -->
   <div id="playlist-player" class="playlist-player">
     <iframe
       width="100%"
@@ -76,7 +75,7 @@ PLAYLIST SORTED (final list for carousel)
     </iframe>
   </div>
 
-  <!-- CAROUSEL (rebuilt from meta.primary_playlist) -->
+  <!-- CAROUSEL (old structure, old CSS) -->
   {% if meta.primary_playlist %}
     <div class="playlist-carousel">
 

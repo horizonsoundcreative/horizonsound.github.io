@@ -1,12 +1,7 @@
 collections:
   songs:
     output: true
-    permalink: /xmusic/:name/
-collections:
+    permalink: /music/:name/
   playlists:
     output: true
     permalink: /playlists/:name/
-collections:
-  playlists:
-    output: true
-    permalink: /songs/:name/

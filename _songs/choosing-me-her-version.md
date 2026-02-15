@@ -1,5 +1,6 @@
 ---
 layout: song
+id: choosing-me-her-version
 hero_image: "/assets/hero.jpg"
 
 about: |

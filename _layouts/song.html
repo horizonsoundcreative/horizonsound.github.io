@@ -4,67 +4,9 @@ layout: default
 
 {% assign current_song = page %}
 
-<!-- ============================
-     DEBUG BLOCK — SONG PAGE
-============================= -->
+<!-- DEBUG BLOCK (keep as-is) -->
 <div style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; font-family:monospace; white-space:pre-wrap;">
-
-<strong>SONG PAGE DEBUG</strong>
-
-current_song.song_id:
-[{{ current_song.song_id }}]
-
-current_song.url:
-[{{ current_song.url }}]
-
---- metadata from music.yml ---
-{% assign url = current_song.url %}
-{% assign meta = site.data.music.songs | where: "url", url | first %}
-
-meta.primary_playlist:
-[{{ meta.primary_playlist }}]
-
-meta.sequence:
-[{{ meta.sequence }}]
-
-meta.videostatus:
-[{{ meta.videostatus }}]
-
-meta.youtube_id:
-[{{ meta.youtube_id }}]
-
-meta.image:
-[{{ meta.image }}]
-
---- related songs (raw from music.yml) ---
-{% assign related = site.data.music.songs | where: "primary_playlist", meta.primary_playlist %}
-{% for s in related %}
-- title: "{{ s.title }}"
-  url: "{{ s.url }}"
-  sequence: "{{ s.sequence }}"
-  videostatus: "{{ s.videostatus }}"
-{% endfor %}
-
---- related PUBLIC songs ---
-{% assign related_public = related | where: "videostatus", "Public" %}
-{% for s in related_public %}
-- "{{ s.title }}"
-{% endfor %}
-
---- playlist_sorted (final order) ---
-{% assign sorted_by_sequence = related_public | sort: "sequence" %}
-{% assign first_item = sorted_by_sequence | first %}
-
-{% if first_item.sequence %}
-  {% assign playlist_sorted = sorted_by_sequence %}
-{% else %}
-  {% assign playlist_sorted = related_public | sort: "title" %}
-{% endif %}
-
-{% for s in playlist_sorted %}
-- "{{ s.title }}" ({{ s.url }})
-{% endfor %}
-
+  <!-- your existing debug content -->
 </div>
 
 <main>
@@ -77,7 +19,11 @@ meta.image:
     {% endif %}
   </section>
 
-  <!-- UNIFIED VIEWER -->
+  <!-- LOOKUP META FROM music.yml -->
+  {% assign url = current_song.url %}
+  {% assign meta = site.data.music.songs | where: "url", url | first %}
+
+  <!-- EMBED -->
   <div id="playlist-player" class="playlist-player">
     <iframe
       id="playlist-iframe"
@@ -89,7 +35,28 @@ meta.image:
     </iframe>
   </div>
 
-  <!-- UNIFIED DETAILS (title, description, lyrics) -->
+  <!-- CAROUSEL (RIGHT UNDER EMBED) -->
+  {% assign related = site.data.music.songs | where: "primary_playlist", meta.primary_playlist %}
+  {% assign related_public = related | where: "videostatus", "Public" %}
+  {% assign sorted_by_sequence = related_public | sort: "sequence" %}
+  {% assign first_item = sorted_by_sequence | first %}
+
+  {% if first_item.sequence %}
+    {% assign playlist_sorted = sorted_by_sequence %}
+  {% else %}
+    {% assign playlist_sorted = related_public | sort: "title" %}
+  {% endif %}
+
+  {% if meta.primary_playlist %}
+    {% include carousel.html 
+         songs=playlist_sorted 
+         current=current_song 
+         public_only=true 
+         mode="song" 
+    %}
+  {% endif %}
+
+  <!-- ABOUT + LYRICS -->
   <div id="song-details" class="song-details">
     <h2 id="song-title">{{ current_song.title }}</h2>
     <p id="song-description">{{ current_song.about }}</p>
@@ -98,12 +65,4 @@ meta.image:
     </div>
   </div>
 
-  <!-- UNIFIED CAROUSEL -->
-  {% include carousel.html 
-     songs=playlist_sorted 
-     current=current_song 
-     public_only=true 
-     mode="song" 
-  %}
 </main>
-

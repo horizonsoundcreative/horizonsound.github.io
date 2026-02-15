@@ -6,7 +6,7 @@ layout: default
 {% assign all_songs = site.songs %}
 
 {% assign first_song_id = playlist.songs | first %}
-{% assign first_song = all_songs | where: "id", first_song_id | first %}
+{% assign first_song = all_songs | where: "song_id", first_song_id | first %}
 
 <div class="playlist-page">
 
@@ -16,32 +16,32 @@ layout: default
   <h1 class="playlist-title">{{ playlist.title }}</h1>
 
   <!-- ============================
-     DEBUG BLOCK (TEMPORARY)
-============================= -->
-<div style="background:#222; color:#0ff; padding:1rem; margin:1rem 0; font-family:monospace; white-space:pre-wrap;">
-  <strong>DEBUG:</strong>
+       DEBUG BLOCK (TEMPORARY)
+  ============================= -->
+  <div style="background:#222; color:#0ff; padding:1rem; margin:1rem 0; font-family:monospace; white-space:pre-wrap;">
+    <strong>DEBUG:</strong>
 
-  playlist.songs:
-  {{ playlist.songs | inspect }}
+    playlist.songs:
+    {{ playlist.songs | inspect }}
 
-  site.songs (IDs only):
-  {% for s in site.songs %}
-    - {{ s.id }}
-  {% endfor %}
+    site.songs (song_id only):
+    {% for s in site.songs %}
+      - {{ s.song_id }}
+    {% endfor %}
 
-  first_song_id:
-  {{ first_song_id }}
+    first_song_id:
+    {{ first_song_id }}
 
-  first_song exists?
-  {% if first_song %}
-    YES → {{ first_song.id }}
-  {% else %}
-    NO (first_song is NIL)
-  {% endif %}
+    first_song exists?
+    {% if first_song %}
+      YES → {{ first_song.song_id }}
+    {% else %}
+      NO (first_song is NIL)
+    {% endif %}
 
-  Raw site.songs object:
-  {{ site.songs | inspect }}
-</div>
+    Raw site.songs object:
+    {{ site.songs | inspect }}
+  </div>
 
   {% if playlist.description %}
     <p class="playlist-narrative">{{ playlist.description }}</p>
@@ -66,9 +66,9 @@ layout: default
   ============================= -->
   <div class="playlist-carousel" id="playlist-carousel">
     {% for song_id in playlist.songs %}
-      {% assign song = all_songs | where: "id", song_id | first %}
+      {% assign song = all_songs | where: "song_id", song_id | first %}
       <div class="playlist-tile {% if forloop.first %}active{% endif %}"
-           data-song="{{ song.id }}">
+           data-song="{{ song.song_id }}">
         <img src="{{ song.image }}" alt="{{ song.title }}">
         <h3>{{ song.title }}</h3>
       </div>
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const allSongs = [
     {% for song in site.songs %}
       {
-        id: "{{ song.id }}",
+        song_id: "{{ song.song_id }}",
         title: {{ song.title | jsonify }},
         youtube_id: {{ song.youtube_id | jsonify }},
         image: {{ song.image | jsonify }},
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const tiles = document.querySelectorAll(".playlist-tile");
 
   function getSongData(id) {
-    return allSongs.find(s => s.id === id);
+    return allSongs.find(s => s.song_id === id);
   }
 
   tiles.forEach(tile => {
@@ -152,3 +152,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+

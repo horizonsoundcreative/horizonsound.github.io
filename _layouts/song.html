@@ -23,8 +23,9 @@ BUILD PLAYLIST FOR CAROUSEL (old system)
 <main>
 
   <!-- DEBUG BLOCK -->
-  <div class="debug-block">
-    <pre style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; white-space:pre-wrap;">
+{% if site.debug %}
+<div class="debug-block">
+  <pre style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; white-space:pre-wrap;">
 
 SONG PAGE DEBUG
 ==============================
@@ -51,8 +52,9 @@ PLAYLIST SORTED (final list for carousel)
 -----------------------------------------
 {{ playlist_sorted | jsonify }}
 
-    </pre>
-  </div>
+  </pre>
+</div>
+{% endif %}
 
   <!-- SONG TITLE -->
   <section class="song-header">

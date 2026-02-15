@@ -119,9 +119,9 @@ document.addEventListener("DOMContentLoaded", function () {
   
       console.log("window.allSongs:", window.allSongs);
   
-      const song = window.allSongs?.find(s => s.song_id === songId);
-      console.log("MATCHED SONG:", song);
-  
+      const url = tile.dataset.url;
+      const song = window.allSongs?.find(s => s.url === url);
+
       if (!song) {
         console.warn("NO MATCHING SONG FOUND FOR:", songId);
         return;

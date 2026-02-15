@@ -7,6 +7,38 @@ layout: default
 {% assign playlist_sorted = playlist_public | sort: "sequence" %}
 
 <main>
+  {% if site.debug %}
+  <div class="debug-block">
+    <pre style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; white-space:pre-wrap;">
+  
+  PLAYLIST PAGE DEBUG
+  ==============================
+  
+  PAGE OBJECT
+  -----------
+  page.url:          {{ page.url }}
+  page.title:        {{ page.title }}
+  page.playlist_id:  {{ page.playlist_id }}
+  
+  RAW SONG DATA (from music.yml)
+  ------------------------------
+  Total songs in site.data.music.songs: {{ site.data.music.songs | size }}
+  
+  FILTERED SONGS (primary_playlist == page.playlist_id)
+  ------------------------------------------------------
+  {{ playlist | jsonify }}
+  
+  PUBLIC ONLY (videostatus == "Public")
+  -------------------------------------
+  {{ playlist_public | jsonify }}
+  
+  SORTED PLAYLIST (final list for carousel)
+  -----------------------------------------
+  {{ playlist_sorted | jsonify }}
+  
+    </pre>
+  </div>
+  {% endif %}
 
   <!-- PLAYLIST TITLE -->
   <section class="playlist-header">

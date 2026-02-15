@@ -1,6 +1,6 @@
 ---
 layout: song
-id: bottle-on-the-table
+song_id: bottle-on-the-table
 hero_image: "/assets/hero.jpg"
 
 about: |

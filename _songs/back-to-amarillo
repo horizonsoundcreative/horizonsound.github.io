@@ -1,6 +1,6 @@
 ---
 layout: song
-id: back-to-amarillo
+song_id: back-to-amarillo
 hero_image: "/assets/hero.jpg"
 
 about: |

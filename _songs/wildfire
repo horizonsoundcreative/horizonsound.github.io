@@ -1,6 +1,6 @@
 ---
 layout: song
-id: wildfire
+song_id: wildfire
 hero_image: "/assets/hero.jpg"
 
 about: |

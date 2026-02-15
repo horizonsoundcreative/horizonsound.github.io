@@ -1,6 +1,6 @@
 ---
 layout: song
-id: new-again
+song_id: new-again
 hero_image: "/assets/hero.jpg"
 
 about: |

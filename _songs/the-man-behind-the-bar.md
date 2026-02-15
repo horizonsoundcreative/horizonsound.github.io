@@ -1,6 +1,6 @@
 ---
 layout: song
-id: the-man-behind-the-bar
+song_id: the-man-behind-the-bar
 hero_image: "/assets/hero.jpg"
 
 about: |

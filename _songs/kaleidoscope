@@ -1,6 +1,6 @@
 ---
 layout: song
-id: kaleidoscope
+song_id: kaleidoscope
 hero_image: "/assets/hero.jpg"
 
 about: |

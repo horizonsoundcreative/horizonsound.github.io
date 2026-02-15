@@ -1,6 +1,6 @@
 ---
 layout: song
-id: rising-up
+song_id: rising-up
 hero_image: "/assets/hero.jpg"
 
 about: |

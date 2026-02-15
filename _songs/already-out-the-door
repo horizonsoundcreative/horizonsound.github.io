@@ -1,6 +1,6 @@
 ---
 layout: song
-id: already-out-the-door
+song_id: already-out-the-door
 hero_image: "/assets/hero.jpg"
 
 about: |

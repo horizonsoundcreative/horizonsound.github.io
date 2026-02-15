@@ -1,6 +1,6 @@
 ---
 layout: song
-id: all-around-the-world
+song_id: all-around-the-world
 hero_image: "/assets/hero.jpg"
 
 about: |

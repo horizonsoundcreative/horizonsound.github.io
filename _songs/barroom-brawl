@@ -1,6 +1,6 @@
 ---
 layout: song
-id: barroom-brawl
+song_id: barroom-brawl
 hero_image: "/assets/hero.jpg"
 
 about: |

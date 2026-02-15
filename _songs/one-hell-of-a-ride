@@ -1,6 +1,6 @@
 ---
 layout: song
-id: one-hell-of-a-ride
+song_id: one-hell-of-a-ride
 hero_image: "/assets/hero.jpg"
 
 about: |

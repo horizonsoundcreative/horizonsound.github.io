@@ -1,6 +1,6 @@
 ---
 layout: song
-id: gimme-three-steps-and-im-gone
+song_id: gimme-three-steps-and-im-gone
 hero_image: "/assets/hero.jpg"
 
 about: |

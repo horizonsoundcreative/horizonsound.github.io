@@ -1,6 +1,6 @@
 ---
 layout: song
-id: choosing-me-his-version
+song_id: choosing-me-his-version
 hero_image: "/assets/hero.jpg"
 
 about: |

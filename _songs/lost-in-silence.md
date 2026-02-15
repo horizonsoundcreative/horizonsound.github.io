@@ -1,6 +1,6 @@
 ---
 layout: song
-id: lost-in-silence
+song_id: lost-in-silence
 hero_image: "/assets/hero.jpg"
 
 about: |

@@ -1,6 +1,6 @@
 ---
 layout: song
-id: becoming-me
+song_id: becoming-me
 hero_image: "/assets/hero.jpg"
 
 about: |

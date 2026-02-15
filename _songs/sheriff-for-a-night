@@ -1,6 +1,6 @@
 ---
 layout: song
-id: sheriff-for-a-night
+song_id: sheriff-for-a-night
 hero_image: "/assets/hero.jpg"
 
 about: |

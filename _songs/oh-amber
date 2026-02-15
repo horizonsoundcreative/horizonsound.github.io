@@ -1,6 +1,6 @@
 ---
 layout: song
-id: oh-amber
+song_id: oh-amber
 hero_image: "/assets/hero.jpg"
 
 about: |

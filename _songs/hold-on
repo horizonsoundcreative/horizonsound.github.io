@@ -1,6 +1,6 @@
 ---
 layout: song
-id: hold-on
+song_id: hold-on
 hero_image: "/assets/hero.jpg"
 
 about: |

@@ -1,6 +1,6 @@
 ---
 layout: song
-id: rusty
+song_id: rusty
 hero_image: "/assets/hero.jpg"
 
 about: |

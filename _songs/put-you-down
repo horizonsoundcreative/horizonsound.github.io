@@ -1,6 +1,6 @@
 ---
 layout: song
-id: put-you-down
+song_id: put-you-down
 hero_image: "/assets/hero.jpg"
 
 about: |

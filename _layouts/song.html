@@ -29,7 +29,7 @@ BUILD PLAYLIST FOR CAROUSEL
   {%- comment -%}
   DEBUG BLOCK — must be inside <main> so it renders
   {%- endcomment -%}
-  {% if site.debug %}
+
   <div class="debug-block">
   <pre style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; white-space:pre-wrap;">
 
@@ -47,7 +47,6 @@ playlist_sorted:
 
   </pre>
   </div>
-  {% endif %}
 
   <!-- SONG TITLE + SUBTITLE -->
   <section class="song-header">
@@ -57,9 +56,7 @@ playlist_sorted:
     {% endif %}
   </section>
 
-    {{ site.debug }}
-
-  <!-- EMBED -->
+    <!-- EMBED -->
   <div id="playlist-player" class="playlist-player">
     <iframe
       id="playlist-iframe"

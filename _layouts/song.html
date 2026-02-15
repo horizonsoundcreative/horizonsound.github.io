@@ -66,17 +66,11 @@ PLAYLIST SORTED (final list for carousel)
     {% endif %}
   </section>
 
-<!-- EMBED (old structure restored) -->
-<section class="video-section">
-  <div class="video-wrapper">
-    <iframe
-      src="https://www.youtube.com/embed/{{ current_song.youtube_id | default: meta.youtube_id }}"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
+  <!-- EMBED SECTION (Pulled from embed.html include) -->
+  {% assign resolved_youtube_id = current_song.youtube_id | default: meta.youtube_id %}
+  {% include embed.html youtube_id=current_song.youtube_id | default: meta.youtube_id %}
+  {% include embed.html youtube_id=resolved_youtube_id %}
+  
   <!-- CAROUSEL (old structure, old CSS) -->
   {% if meta.primary_playlist %}
     <div class="playlist-carousel">

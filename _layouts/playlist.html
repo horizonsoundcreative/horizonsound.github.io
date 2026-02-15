@@ -52,14 +52,15 @@ layout: default
     "[NOT FOUND]"
   {% endif %}
 
-  carousel tracks (song_id + youtube_id from music.yml):
-  {% for sid in playlist.songs %}
-    {% assign url = "/music/" | append: sid | append: "/" %}
-    {% assign meta = site.data.music.songs | where: "url", url | first %}
-    - song_id: "[{{ sid }}]"
-      url: "[{{ url }}]"
-      youtube_id: "[{% if meta %}{{ meta.youtube_id }}{% else %}NOT FOUND{% endif %}]"
-  {% endfor %}
+carousel tracks (song_id + youtube_id + image from music.yml):
+{% for sid in playlist.songs %}
+  {% assign url = "/music/" | append: sid | append: "/" %}
+  {% assign meta = site.data.music.songs | where: "url", url | first %}
+  - song_id: "[{{ sid }}]"
+    url: "[{{ url }}]"
+    youtube_id: "[{% if meta %}{{ meta.youtube_id }}{% else %}NOT FOUND{% endif %}]"
+    image: "[{% if meta %}{{ meta.image }}{% else %}NOT FOUND{% endif %}]"
+{% endfor %}
 </div>
 
   {% if playlist.description %}
@@ -85,18 +86,19 @@ layout: default
   <!-- ============================
        PLAYLIST CAROUSEL
   ============================= -->
-  <div class="playlist-carousel" id="playlist-carousel">
-    {% for song_id in playlist.songs %}
-      {% assign song = all_songs | where: "song_id", song_id | first %}
-      {% assign url = "/music/" | append: song.song_id | append: "/" %} 
-      {% assign meta = site.data.music.songs | where: "url", url | first %}
-      <div class="playlist-tile {% if forloop.first %}active{% endif %}"
-           data-song="{{ song.song_id }}">
-        <img src="{{ song.image }}" alt="{{ song.title }}">
-        <h3>{{ song.title }}</h3>
-      </div>
-    {% endfor %}
-  </div>
+<div class="playlist-carousel" id="playlist-carousel">
+  {% for song_id in playlist.songs %}
+    {% assign song = all_songs | where: "song_id", song_id | first %}
+    {% assign url = "/music/" | append: song.song_id | append: "/" %}
+    {% assign meta = site.data.music.songs | where: "url", url | first %}
+
+    <div class="playlist-tile {% if forloop.first %}active{% endif %}"
+         data-song="{{ song.song_id }}">
+      <img src="{{ meta.image }}" alt="{{ song.title }}">
+      <h3>{{ song.title }}</h3>
+    </div>
+  {% endfor %}
+</div>
 
   <!-- ============================
        DYNAMIC TRACK DETAILS

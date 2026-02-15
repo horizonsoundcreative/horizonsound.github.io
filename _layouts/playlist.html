@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% assign playlist = page %}
-{% assign all_songs = site.data.music.songs %}
+{% assign all_songs = site.songs %}
 
 {% assign first_song_id = playlist.songs | first %}
 {% assign first_song = all_songs | where: "id", first_song_id | first %}

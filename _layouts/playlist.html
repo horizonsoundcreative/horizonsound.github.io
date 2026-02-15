@@ -15,6 +15,34 @@ layout: default
   ============================= -->
   <h1 class="playlist-title">{{ playlist.title }}</h1>
 
+  <!-- ============================
+     DEBUG BLOCK (TEMPORARY)
+============================= -->
+<div style="background:#222; color:#0ff; padding:1rem; margin:1rem 0; font-family:monospace; white-space:pre-wrap;">
+  <strong>DEBUG:</strong>
+
+  playlist.songs:
+  {{ playlist.songs | inspect }}
+
+  site.songs (IDs only):
+  {% for s in site.songs %}
+    - {{ s.id }}
+  {% endfor %}
+
+  first_song_id:
+  {{ first_song_id }}
+
+  first_song exists?
+  {% if first_song %}
+    YES → {{ first_song.id }}
+  {% else %}
+    NO (first_song is NIL)
+  {% endif %}
+
+  Raw site.songs object:
+  {{ site.songs | inspect }}
+</div>
+
   {% if playlist.description %}
     <p class="playlist-narrative">{{ playlist.description }}</p>
   {% endif %}

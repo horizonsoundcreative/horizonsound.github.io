@@ -69,7 +69,7 @@ title: Music – Horizon Sound
   
           <div class="tile-grid">
             {% for song in playlist_sorted %}
-              <a class="carousel-tile" href="{{ item.url }}">
+              <a class="carousel-tile" href="{{ song.url }}">
                 <img src="{{ song.image }}" alt="{{ song.title }}">
                 <h3 class="tile-title">{{ song.title }}</h3>
               </a>

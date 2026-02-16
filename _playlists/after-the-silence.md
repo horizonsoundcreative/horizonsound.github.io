@@ -2,4 +2,5 @@
 layout: playlist
 playlist_id: after-the-silence
 title: "After the Silence"
+permalink: /playlists/after-the-silence/
 ---

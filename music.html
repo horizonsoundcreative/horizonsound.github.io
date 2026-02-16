@@ -34,14 +34,14 @@ title: Music – Horizon Sound
     <section class="playlist-section">
       <h2 class="section-header">Playlists</h2>
   
-      <div class="tile-grid">
-        {% for p in playlist_data %}
-          <a class="tile" href="/playlists/{{ p.playlist_id }}/">
-            <img src="{{ p.image }}" alt="{{ p.title }}">
-            <h3 class="tile-title">{{ p.title }}</h3>
-          </a>
-        {% endfor %}
-      </div>
+        <div class="tile-grid">
+          {% for song in playlist_sorted %}
+            <a class="tile" href="{{ song.url }}">
+              <img src="{{ song.image }}" alt="{{ song.title }}">
+              <h3 class="tile-title">{{ song.title }}</h3>
+            </a>
+          {% endfor %}
+        </div>
     </section>
     {% endif %}
   

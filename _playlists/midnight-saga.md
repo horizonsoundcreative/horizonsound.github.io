@@ -1,6 +1,6 @@
 ---
-playlist_id: midnight-saga
 layout: playlist
+playlist_id: midnight-saga
 title: "Midnight Saga"
 
 description: >

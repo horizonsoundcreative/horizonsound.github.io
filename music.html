@@ -116,7 +116,7 @@ title: Music – Horizon Sound
       {% assign song = site.data.music.songs | where: "song_id", song_id | first %}
 
       {% if song %}
-        <a class="carousel-tile" href="{{ item.url }}">
+        <a class="tile" href="{{ song.url }}">
           <img src="{{ song.image }}" alt="{{ song.title }}">
           <h3 class="tile-title">{{ song.title }}</h3>
         </a>

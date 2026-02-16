@@ -400,7 +400,6 @@ footer {
 .view-toggle {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0;
   margin-bottom: 20px;
 }
@@ -417,6 +416,16 @@ footer {
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.view-toggle .page-title {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+}
+
+.view-toggle-spacer {
+  width: 1px; /* invisible but occupies space */
 }
 
 .view-toggle-buttons {

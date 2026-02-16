@@ -1,4 +1,5 @@
 ---
+playlist_id: midnight-saga
 layout: playlist
 title: "Midnight Saga"
 
@@ -7,10 +8,4 @@ description: >
   transformation. The Midnight Saga follows a character through escalating
   emotional turbulence — from the moment before midnight, into mayhem and
   madness, and finally into the clarity that comes after the storm breaks.
-
-songs:
-  - midnight-saga-before-midnight
-  - midnight-saga-midnight-mayhem
-  - midnight-saga-midnight-madness
-  - midnight-saga-after-midnight
 ---

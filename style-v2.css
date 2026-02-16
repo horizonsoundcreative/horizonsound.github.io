@@ -487,6 +487,10 @@ footer {
   margin: 0;
 }
 
+.homepage-section + .homepage-section {
+  margin-top: 32px;
+}
+
 .homepage-section .section-header {
   margin-top: 0;
   margin-bottom: 12px;

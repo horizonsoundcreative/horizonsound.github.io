@@ -2,61 +2,72 @@
 layout: default
 ---
 
-{% assign playlist = site.data.music.songs | where: "primary_playlist", page.playlist_id %}
-{% assign playlist_public = playlist | where: "videostatus", "Public" %}
-{% assign playlist_sorted = playlist_public | sort: "sequence" %}
+{% comment %}
+  1. Load the playlist entry from playlists.yml
+{% endcomment %}
+{% assign playlist = site.data.playlists | where: "playlist_id", page.playlist_id | first %}
 
-<main>
+<main class="playlist-page">
+
   {% if site.debug %}
   <div class="debug-block">
-    <pre style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; white-space:pre-wrap;">
-  
-  PLAYLIST PAGE DEBUG
-  ==============================
-  
-  PAGE OBJECT
-  -----------
-  page.url:          {{ page.url }}
-  page.title:        {{ page.title }}
-  page.playlist_id:  {{ page.playlist_id }}
-  
-  RAW SONG DATA (from music.yml)
-  ------------------------------
-  Total songs in site.data.music.songs: {{ site.data.music.songs | size }}
-  
-  FILTERED SONGS (primary_playlist == page.playlist_id)
-  ------------------------------------------------------
-  {{ playlist | jsonify }}
-  
-  PUBLIC ONLY (videostatus == "Public")
-  -------------------------------------
-  {{ playlist_public | jsonify }}
-  
-  SORTED PLAYLIST (final list for carousel)
-  -----------------------------------------
-  {{ playlist_sorted | jsonify }}
-  
+    <pre style="background:#111; color:#0ff; padding:1rem; white-space:pre-wrap;">
+PLAYLIST PAGE DEBUG
+==============================
+
+page.playlist_id: {{ page.playlist_id }}
+
+PLAYLIST YAML ENTRY:
+{{ playlist | jsonify }}
+
+SONG IDS FROM PLAYLIST:
+{{ playlist.songs | jsonify }}
+
     </pre>
   </div>
   {% endif %}
 
-  <!-- PLAYLIST TITLE -->
+  <!-- PLAYLIST HEADER -->
   <section class="playlist-header">
-    <h2 class="section-header">{{ page.title }}</h2>
-    {% if page.subtitle %}
-      <p class="playlist-subtitle">{{ page.subtitle }}</p>
+    <h2 class="section-header">{{ playlist.title }}</h2>
+    {% if playlist.description %}
+      <p class="playlist-description">{{ playlist.description }}</p>
     {% endif %}
   </section>
 
-  <!-- EMBED -->
-  {% assign first_song = playlist_sorted | first %}
+  {% comment %}
+    2. Build the list of songs for this playlist
+  {% endcomment %}
+  {% assign playlist_songs = "" | split: "" %}
+
+  {% for sid in playlist.songs %}
+    {% assign song = site.data.music.songs | where: "song_id", sid | first %}
+    {% if song %}
+      {% assign playlist_songs = playlist_songs | push: song %}
+    {% endif %}
+  {% endfor %}
+
+  {% comment %}
+    3. Sort playlist songs by sequence if present
+  {% endcomment %}
+  {% assign sorted = playlist_songs | sort: "sequence" %}
+
+  {% comment %}
+    4. Embed first song
+  {% endcomment %}
+  {% assign first_song = sorted | first %}
   {% include embed.html youtube_id=first_song.youtube_id %}
 
-  <!-- CAROUSEL -->
+  {% comment %}
+    5. Inject JSON for JS click handler
+  {% endcomment %}
   <script>
-    window.allSongs = {{ playlist_sorted | jsonify }};
+    window.allSongs = {{ sorted | jsonify }};
   </script>
 
-  {% include carousel.html playlist=playlist_sorted %}
+  {% comment %}
+    6. Render carousel
+  {% endcomment %}
+  {% include carousel.html playlist=sorted %}
 
 </main>

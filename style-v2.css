@@ -404,9 +404,14 @@ footer {
   margin-bottom: 20px;
 }
 
-.view-toggle-button {
+/* Left group of buttons */
+.view-toggle-buttons {
   display: flex;
   gap: 12px;
+}
+
+/* Individual buttons */
+.view-toggle-button {
   padding: 10px 20px;
   background: #222;
   border: 1px solid #444;
@@ -416,21 +421,6 @@ footer {
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease;
-}
-
-.view-toggle .page-title {
-  flex: 1;
-  text-align: center;
-  margin: 0;
-}
-
-.view-toggle-spacer {
-  width: 1px; /* invisible but occupies space */
-}
-
-.view-toggle-buttons {
-  display: flex;
-  gap: 12px;
 }
 
 .view-toggle-button:hover {
@@ -444,10 +434,16 @@ footer {
   color: #fff;
 }
 
+/* Center title */
 .view-toggle .page-title {
   flex: 1;
   text-align: center;
-  margin: 0 auto;
+  margin: 0; /* IMPORTANT: remove margin auto */
+}
+
+/* Right-side spacer */
+.view-toggle-spacer {
+  width: 1px;
 }
 
 .music-page .section-header {

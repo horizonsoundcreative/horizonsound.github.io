@@ -32,7 +32,7 @@ title: Music – Horizon Sound
   
       <div class="tile-grid">
         {% for p in playlist_data %}
-          <a class="tile" href="/playlists/{{ p.id }}/">
+          <a class="tile" href="/playlists/{{ p.playlist_id }}/">
             <img src="{{ p.image }}" alt="{{ p.title }}">
             <h3 class="tile-title">{{ p.title }}</h3>
           </a>

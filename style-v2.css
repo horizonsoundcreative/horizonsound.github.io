@@ -1,251 +1,28 @@
-/* --------------------------------------------------
-   SONG PAGE: PLAYLIST CAROUSEL (NEW SYSTEM)
--------------------------------------------------- */
-
-/* Fade-out gradients */
-.playlist-carousel::before,
-.playlist-carousel::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 60px;
-  height: 100%;
-  pointer-events: none;
-  z-index: 5;
-}
-
-.playlist-carousel::before {
-  left: 0;
-  background: linear-gradient(to right, rgba(0,0,0,0.8), transparent);
-}
-
-.playlist-carousel::after {
-  right: 0;
-  background: linear-gradient(to left, rgba(0,0,0,0.8), transparent);
-}
-
-/* Horizontal strip */
-.horizontal-strip {
-  display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  gap: 16px;
-  padding: 12px 0;
-  width: 100%;
-  margin-top: 10px;
-  box-sizing: border-box;
-  flex: 1;
-}
-
-.horizontal-strip::-webkit-scrollbar {
-  height: 10px; /* visible scrollbar for debugging */
-}
-
-/* Tiles */
-.playlist-tile {
-  flex: 0 0 180px;
-  height: auto;
-  transition: transform 0.2s ease;
-}
-
-/* Carousel container */
-.playlist-carousel {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  position: relative;
-  margin-top: 10px;
-}
-
-/* Arrows */
-.carousel-arrow {
-  background: #ffffff;
-  border: none;
-  color: #333;
-  width: 40px;
-  height: 180px; /* matches tile height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  font-weight: bold;
-  cursor: pointer;
-  flex-shrink: 0;
-  transition: background 0.2s ease, opacity 0.2s ease;
-  border-radius: 6px;
-}
-
-/* Hover effect */
-.carousel-arrow:hover {
-  background: #f0f0f0;
-  border-color: #999;
-}
-
-/* Arrow spacing */
-.left-arrow {
-  margin-right: 10px;
-}
-
-.right-arrow {
-  margin-left: 10px;
-}
-
-/* Active tile highlight */
-.playlist-tile.active-tile {
-  border: 3px solid #4da3ff;
-  border-radius: 8px;
-  transform: scale(1.05);
-  box-shadow: 0 0 12px rgba(77, 163, 255, 0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Disabled arrows */
-.carousel-arrow.disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
-
-.playlist-tile img {
-  width: 100%;
-  height: 180px;   /* or 160px if that was your old height */
-  object-fit: cover;
-  display: block;
-}
-
-/* --------------------------------------------------
-   GLOBAL BASE STYLES
--------------------------------------------------- */
+/* ============================================
+   GLOBAL RESET + BASE TYPOGRAPHY
+============================================ */
 body {
   background: linear-gradient(to bottom, #000 0%, #0a0a0a 100%);
   color: #fff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
-/* --------------------------------------------------
-   SONG PAGE: HEADER + SUBTITLE
--------------------------------------------------- */
-.song-header {
-  margin: 20px 0 10px;
-  padding: 0 40px;
+/* ============================================
+   GLOBAL LAYOUT + UTILITIES
+============================================ */
+.section-header {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 16px;
 }
 
-.song-subtitle {
-  text-align: center;
-  opacity: 0.8;
-  margin-top: -10px;
-  margin-bottom: 0;
-}
-
-/* --------------------------------------------------
-   SONG PAGE: VIDEO SECTION
--------------------------------------------------- */
-.video-section .video-wrapper {
-  grid-column: 1 / -1 !important;
-}
-
-.video-section {
-  padding: 0 !important;
-  margin: 20px 0;
-}
-
-.video-section iframe {
-  width: 100%;
-  height: 800px;
-  max-width: 100%;
-  display: block;
-  border: none;
-}
-
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* --------------------------------------------------
-   SONG PAGE: ABOUT SECTION
--------------------------------------------------- */
-.song-about {
-  margin: 20px 0 10px;
-  padding: 0 40px;
-}
-
-.song-about .section-header {
-  margin-bottom: 6px;
-}
-
-.song-description {
-  margin-top: 0 !important;
-  margin: 0 6px;
-}
-
-/* --------------------------------------------------
-   SONG PAGE: LYRICS SECTION
--------------------------------------------------- */
-.song-lyrics {
-  margin: 20px 0 10px;
-  padding: 0 40px;
-}
-
-.lyrics-box {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.lyrics-pre {
-  margin-top: 10px;
-  white-space: pre-wrap;
-  font-family: inherit;
-  margin-bottom: 0;
-  line-height: 1.55;
-}
-
-.lyrics-box pre {
-  font-size: 0.95rem;
-}
-
-.lyrics-box .lyrics-header {
-  margin: 0 0 8px 0;
-  text-align: left;
-}
-
-/* --------------------------------------------------
-   SONG PAGE: PROJECT TILE SECTION
--------------------------------------------------- */
-.song-project {
-  padding-left: 0;
-  padding-right: 0;
-  text-align: center;
-}
-
-#show-more-tiles {
-  display: block;
-  margin: 12px auto;
-  text-align: center;
-}
-
-/* --------------------------------------------------
-   BUTTONS
--------------------------------------------------- */
 .btn-primary {
   display: inline-block;
   background: #1a73e8;
-  padding: 12px 28px;
+  padding: 12px 24px;
   border-radius: 6px;
   color: white;
   text-decoration: none;
@@ -263,9 +40,9 @@ nav a.active {
   border-bottom: 2px solid #fff;
 }
 
-/* --------------------------------------------------
-   HEADER (GLOBAL)
--------------------------------------------------- */
+/* ============================================
+   GLOBAL HEADER
+============================================ */
 .site-header {
   position: absolute;
   top: 0;
@@ -275,13 +52,14 @@ nav a.active {
   background: rgba(0, 0, 0, 0.28);
   backdrop-filter: blur(6px);
   color: white;
-  padding: 20px;
+  padding: 20px 40px;
+  box-sizing: border-box;
 }
 
 .branding {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 16px;
 }
 
 .logo {
@@ -298,13 +76,13 @@ nav a.active {
 .main-nav {
   margin-top: 20px;
   border-top: 1px solid #333;
-  padding-top: 15px;
+  padding-top: 16px;
 }
 
 .main-nav ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 24px;
   margin: 0;
   padding: 0;
 }
@@ -315,9 +93,9 @@ nav a.active {
   font-weight: bold;
 }
 
-/* --------------------------------------------------
-   HERO BANNER
--------------------------------------------------- */
+/* ============================================
+   GLOBAL HERO
+============================================ */
 .hero-banner {
   width: 100%;
   overflow: hidden;
@@ -327,12 +105,10 @@ nav a.active {
 }
 
 .hero-banner img.hero-image {
-  width: 100% !important;
-  height: 320px !important;
-  object-fit: cover !important;
-  display: block !important;
-  margin: 0 !important;
-  border-radius: 0 !important;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
 }
 
 .hero-banner::after {
@@ -346,32 +122,24 @@ nav a.active {
   pointer-events: none;
 }
 
-/* --------------------------------------------------
-   FOOTER
--------------------------------------------------- */
+/* ============================================
+   GLOBAL FOOTER
+============================================ */
 footer {
   text-align: center;
-  padding: 30px;
+  padding: 32px;
   background-color: transparent;
-  margin-top: 10px;
+  margin-top: 32px;
   font-size: 0.9rem;
 }
 
-/* --------------------------------------------------
-   SECTION HEADERS
--------------------------------------------------- */
-.section-header {
-  font-size: 1.6rem;
-  color: #ffffff;
-}
-
-/* --------------------------------------------------
-   TILE SYSTEM (SHARED WITH HOMEPAGE)
--------------------------------------------------- */
+/* ============================================
+   COMPONENTS — TILE SYSTEM
+============================================ */
 .tile {
   display: block;
   background: #111;
-  border-radius: 0px;
+  border-radius: 4px;
   overflow: hidden;
   text-decoration: none;
   color: #fff;
@@ -391,7 +159,7 @@ footer {
 }
 
 .tile-title {
-  padding: 10px;
+  padding: 12px;
   font-size: 1rem;
   text-align: center;
 }
@@ -402,13 +170,11 @@ footer {
 
 .tile-grid {
   display: grid;
-  gap: 5px;
+  gap: 12px;
   width: 100%;
   max-width: 1800px;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
 
 @media (min-width: 1100px) {
@@ -429,14 +195,182 @@ footer {
   }
 }
 
-/* --------------------------------------------------
-   CENTERED COLUMN LAYOUT (SONG PAGES)
--------------------------------------------------- */
+/* ============================================
+   COMPONENTS — CAROUSEL
+============================================ */
+.carousel {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+}
+
+.carousel::before,
+.carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.carousel::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.8), transparent);
+}
+
+.carousel::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0,0,0,0.8), transparent);
+}
+
+.horizontal-strip {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  gap: 16px;
+  padding: 12px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.horizontal-strip::-webkit-scrollbar {
+  height: 10px;
+}
+
+.carousel-tile {
+  flex: 0 0 180px;
+  transition: transform 0.2s ease;
+}
+
+.carousel-tile img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-tile.active {
+  border: 3px solid #4da3ff;
+  border-radius: 8px;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(77, 163, 255, 0.4);
+}
+
+.carousel-arrow {
+  background: #ffffff;
+  border: none;
+  color: #333;
+  width: 40px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.carousel-arrow:hover {
+  background: #f0f0f0;
+}
+
+.carousel-arrow.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.left-arrow {
+  margin-right: 12px;
+}
+
+.right-arrow {
+  margin-left: 12px;
+}
+
+/* ============================================
+   COMPONENTS — EMBED / VIDEO
+============================================ */
+.video-section {
+  margin: 32px 0;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ============================================
+   COMPONENTS — ABOUT BLOCK
+============================================ */
+.about-block {
+  margin: 32px 0;
+  padding: 0 40px;
+}
+
+.about-block .section-header {
+  margin-bottom: 12px;
+}
+
+.about-text {
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* ============================================
+   COMPONENTS — LYRICS BLOCK
+============================================ */
+.lyrics-block {
+  margin: 32px 0;
+  padding: 0 40px;
+}
+
+.lyrics-box {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.lyrics-pre {
+  margin-top: 12px;
+  white-space: pre-wrap;
+  font-family: inherit;
+  line-height: 1.55;
+}
+
+.lyrics-box pre {
+  font-size: 0.95rem;
+}
+
+.lyrics-box .lyrics-header {
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+/* ============================================
+   COMPONENTS — CENTERED COLUMN LAYOUT
+============================================ */
 .centered-column {
   display: grid;
   grid-template-columns: 1fr minmax(300px, 900px) 1fr;
   column-gap: 20px;
-  row-gap: 0;
   width: 100%;
   margin: 0 auto;
 }
@@ -445,41 +379,50 @@ footer {
   grid-column: 2;
 }
 
-/* --------------------------------------------------
-   MUSIC PAGE
--------------------------------------------------- */
-.music-list {
+/* ============================================
+   PAGE: SONG PAGE
+============================================ */
+.song-header {
+  margin: 32px 0 16px;
   padding: 0 40px;
-  margin: 40px 0;
 }
 
-.song-list {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0 0;
+.song-subtitle {
+  text-align: center;
+  opacity: 0.8;
+  margin-top: -8px;
 }
 
-.song-list-item {
-  margin: 6px 0;
+.song-project {
+  text-align: center;
+  margin-top: 32px;
 }
 
-.song-list-item a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.1rem;
+#show-more-tiles {
+  display: block;
+  margin: 16px auto;
 }
 
-.song-list-item a:hover {
-  text-decoration: underline;
+/* ============================================
+   PAGE: MUSIC INDEX PAGE
+============================================ */
+.music-page {
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
-.view-toggle {
+.music-page .page-title {
+  text-align: center;
+  margin: 32px 0;
+}
+
+.music-view-toggle {
   display: flex;
-  gap: 10px;
-  padding: 20px 40px;
+  gap: 12px;
+  margin: 24px 0;
 }
 
-.view-toggle button {
+.music-view-toggle button {
   padding: 8px 16px;
   background: #333;
   color: #fff;
@@ -487,114 +430,112 @@ footer {
   cursor: pointer;
 }
 
-.view-toggle button:hover {
+.music-view-toggle button:hover {
   background: #444;
 }
 
-/* --------------------------------------------------
-   HOMEPAGE — MATCH MUSIC PAGE VISUAL SYSTEM
--------------------------------------------------- */
-
-/* Page-level gutters */
-.homepage-wrapper {
-  padding-left: 40px;
-  padding-right: 40px;
-  box-sizing: border-box;
+.music-list {
+  margin: 32px 0;
 }
 
-/* Homepage sections match playlist-section */
-.homepage-section {
-  margin: 20px 0;
-  padding: 20px 20px;
+.music-song-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+}
+
+.music-song-list-item {
+  margin: 8px 0;
+}
+
+.music-song-list-item a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.music-song-list-item a:hover {
+  text-decoration: underline;
+}
+
+.music-page .playlist-section {
+  margin: 32px 0;
+  padding: 24px;
   background: rgba(255, 255, 255, 0.03);
   border-radius: 10px;
   border-top: 1px solid rgba(255,255,255,0.08);
-  width: 100%;
+}
+
+.music-page .playlist-section .tile-grid {
+  background: rgba(255, 255, 255, 0.035);
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+}
+
+/* ============================================
+   PAGE: HOMEPAGE
+============================================ */
+.homepage-wrapper {
+  padding: 0 40px;
   box-sizing: border-box;
-  padding-top: 8px !important;   /* was 25px */
-  padding-left: 20px !important;   /* was 40px */
-  padding-right: 20px !important;
 }
 
-
-/* Section headers match Music page */
-.homepage-section .section-header {
-  text-align: left;
-  margin-bottom: 18px;
-  font-size: 1.4rem;
-  opacity: 0.9;
+.homepage-section {
+  margin: 32px 0;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
-/* Tile grid alignment identical to Music page */
-.homepage-section .tile-grid {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  justify-items: start !important;
-  justify-content: start !important;
-}
-
-/* Tighten homepage title spacing */
 .homepage-title {
   text-align: center;
-  margin: 10px 0 10px;
+  margin: 16px 0;
   font-size: 2rem;
   opacity: 0.9;
-  margin-bottom: 2px !important;   /* was 10px */
 }
 
-/* Raise teaser over hero */
-.home-teaser {
+.homepage-teaser {
   position: relative;
   z-index: 20;
-  margin-top: -120px; /* adjust until perfect */
-  padding: 25px 40px;
+  margin-top: -120px;
+  padding: 32px 40px;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-
-  background: transparent !important;
-  backdrop-filter: none !important;
-  /* background: rgba(0, 0, 0, 0.45); /* subtle overlay for readability
-  backdrop-filter: blur(6px); */
-  border-radius: 10px;
-
   font-size: 1.35rem;
   line-height: 1.55;
   font-weight: 500;
-  opacity: 1; /* stronger presence */
   text-align: center;
 }
 
-.home-teaser p {
-  margin: 0 0 1rem;
+.homepage-teaser p {
+  margin: 0 0 16px;
   text-align: left;
-  position: relative;
   padding-left: 28px;
 }
 
-.home-teaser p::before {
+.homepage-teaser p::before {
   content: "★";
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%);  /* centers the star vertically */
-  color: #fff;
-  font-size: 1em;
-  line-height: 1;
+  transform: translateY(-50%);
 }
 
-/* --------------------------------------------------
-   PLAYLIST PAGE
--------------------------------------------------- */
+/* ============================================
+   PAGE: PLAYLIST PAGE
+============================================ */
 .playlist-list {
   padding: 0 40px;
-  margin: 40px 0;
+  margin: 32px 0;
 }
 
 .playlist-items {
   list-style: none;
   padding: 0;
-  margin: 20px 0 0;
+  margin: 16px 0 0;
 }
 
 .playlist-item {
@@ -611,122 +552,28 @@ footer {
   text-decoration: underline;
 }
 
-/* Fix tile alignment inside playlist sections */
 .playlist-section .tile-grid {
-  justify-items: start;     /* aligns each tile to the left */
-  justify-content: start;   /* aligns the whole grid to the left */
+  justify-items: start;
+  justify-content: start;
 }
 
-/* --------------------------------------------------
-   ABOUT PAGE
--------------------------------------------------- */
+/* ============================================
+   PAGE: ABOUT PAGE
+============================================ */
 .about-page {
-  margin-top: -120px !important;   /* adjust until perfect */
+  margin-top: -120px;
   position: relative;
   z-index: 20;
   padding: 40px;
   max-width: 900px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-page h1 {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .about-page h2 {
   margin-top: 40px;
 }
-
-/* --------------------------------------------------
-   MUSIC PAGE — CLEAN FINAL OVERRIDES + DEBUG BORDERS
--------------------------------------------------- */
-
-/* Music page gutters (match homepage) */
-.music-page {
-  padding-left: 40px !important;
-  padding-right: 40px !important;
-  box-sizing: border-box !important;
-}
-
-/* Title */
-.music-page .page-title {
-  position: absolute !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  top: -5px !important; /* slight upward nudge */
-  margin: 0 !important;
-  text-align: center !important;
-  width: max-content !important;
-}
-
-.music-page .view-toggle {
-  position: relative !important;
-  display: flex !important;
-  gap: 10px !important;
-  padding-left: 0 !important;   /* remove inherited page padding */
-  padding-right: 0 !important;
-  margin-left: 0px !important; /* aligns with outer panel */
-  margin-top: -100px !important;
-  margin-bottom: -20px !important; /* removes the phantom space */
-  /* box-sizing: border-box !important; */
-  z-index: 20 !important;
-}
-
-.music-page .view-toggle button {
-  padding: 6px 14px !important;
-}
-
-/* Playlist panels (OUTER PANEL — RED BORDER) */
-.music-page .playlist-section {
-  margin-top: 5px !important;  /* was 40px */
-  margin: 20px 0 !important;
-  padding: 20px 20px !important;
-  background: rgba(255, 255, 255, 0.03) !important;
-  border-radius: 10px !important;
-  border-top: 1px solid rgba(255,255,255,0.08) !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-  position: relative; 
-  z-index: 30 !important;
-  padding-top: 8px !important; /* was 20px */
-}
-
-/* Playlist section headers */
-.music-page .playlist-section .section-header {
-  text-align: left !important;
-  margin-bottom: 18px !important;
-  font-size: 1.4rem !important;
-  opacity: 0.9 !important;
-  margin-top: 0 !important;
-}
-
-/* Tile grid alignment (INNER PANEL — BLUE BORDER) */
-.music-page .playlist-section .tile-grid {
-  width: auto !important;        /* prevents overflow */
-  max-width: 100% !important;    /* stays inside outer panel */
-  box-sizing: border-box !important;
-  background: rgba(255, 255, 255, 0.035) !important; /* darker = raised */
-  padding: 20px 30px !important;
-  border-radius: 10px !important;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.35); /* homepage-style lift */
-  /* Tile layout — match homepage proportions */
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) !important;
-  gap: 5px !important; /* homepage uses 5px */
-  /* Alignment */
-  margin: 0 !important;
-  justify-items: start !important;
-  justify-content: start !important;
-}
-
-
-/* Make Music page tiles landscape like homepage */
-.music-page .tile img {
-  height: 180px !important;   /* same as homepage */
-  object-fit: cover !important;
-}
-
-.music-page .tile {
-  aspect-ratio: auto !important; /* prevents square forcing */
-  height: auto !important;
-}
-

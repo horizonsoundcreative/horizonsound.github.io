@@ -415,6 +415,11 @@ footer {
   background: #444;
 }
 
+.music-page .section-header {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
 .music-list {
   margin: 32px 0;
 }

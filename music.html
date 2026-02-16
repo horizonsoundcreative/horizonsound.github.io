@@ -104,38 +104,7 @@ title: Music – Horizon Sound
   <!-- ------------------------------------------------
        VIEW 3: CAROUSEL ROWS BY PLAYLIST
   ------------------------------------------------- -->
-  <section id="music-view-carousel" style="display:none;">
-    {% for list in playlists %}
-      {% assign songs_in_list = all_songs | where: "primary_playlist", list %}
-      {% assign sorted_by_sequence = songs_in_list | sort: "sequence" %}
-      {% assign first_item = sorted_by_sequence | first %}
-
-      {% if first_item.sequence %}
-        {% assign playlist_sorted = sorted_by_sequence %}
-      {% else %}
-        {% assign playlist_sorted = songs_in_list | sort: "title" %}
-      {% endif %}
-
-      {% if playlist_sorted.size > 0 %}
-      <section class="playlist-section">
-        <h2 class="section-header">{{ list }}</h2>
-          <div class="carousel">
-            <button class="carousel-arrow left-arrow" data-arrow="left">◀</button>
-          
-            <div class="horizontal-strip">
-              {% for song in playlist_sorted %}
-                <a class="carousel-tile playlist-tile" href="{{ song.url }}">
-                  <img src="{{ song.image }}" alt="{{ song.title }}">
-                  <h3 class="tile-title">{{ song.title }}</h3>
-                </a>
-              {% endfor %}
-            </div>
-            <button class="carousel-arrow right-arrow" data-arrow="right">▶</button>
-          </div>
-      </section>
-      {% endif %}
-    {% endfor %}
-  </section>
+  {% include carousel.html playlist=playlist_sorted %}
 
 </div> <!-- end .music-page -->
 

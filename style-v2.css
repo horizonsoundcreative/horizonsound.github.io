@@ -172,8 +172,6 @@ footer {
   display: grid;
   gap: 12px;
   width: 100%;
-  max-width: 1800px;
-  margin: 0 auto;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
 
@@ -518,6 +516,7 @@ footer {
 }
 
 .homepage-teaser p {
+  position: relative;
   margin: 0 0 16px;
   text-align: left;
   padding-left: 28px;

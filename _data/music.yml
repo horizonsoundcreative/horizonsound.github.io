@@ -82,6 +82,7 @@ songs:
     sequence: 2
 
   - title: "Rise Again" # After the Silence Album track
+    song_id: "ats-13-rise-again"
     subtitle: "After the Silence | Part 13" 
     youtube_id: "QI30nFvACnI" 
     url: "/music/ats-13-rise-again/"
@@ -100,6 +101,7 @@ songs:
     sequence: 1
   
   - title: "Unsent Letters" # After the Silence Album track
+    song_id: "ats-12-unsent-leters"
     subtitle: "After the Silence | Part 12"
     youtube_id: "H4y2StKkPyw" 
     url: "/music/ats-12-unsent-letters/"
@@ -109,6 +111,7 @@ songs:
     sequence: 12
   
   - title: "The Dress I Never Wore" # After the Silence Album track
+    song_id: "ats-11-the-dress-i-never-wore"
     subtitle: "After the Silence | Part 11"
     youtube_id: "S40NUKvFhAc" 
     url: "/music/ats-11-the-dress-i-never-wore/"
@@ -118,6 +121,7 @@ songs:
     sequence: 11
 
   - title: "After Midnight" # Midnight Saga track
+    song_id: "midnight-saga-after-midnight"
     subtitle: "Midnight Saga | Part 4" 
     youtube_id: "iGt2wtH6orc" 
     url: "/music/midnight-saga-after-midnight/"
@@ -127,6 +131,7 @@ songs:
     sequence: 4
 
   - title: "Saltwater" # After the Silence Album track
+    song_id: "ats-10-saltwater"
     subtitle: "After the Silence | Part 10"
     youtube_id: "-yaZGULOHA0" 
     url: "/music/ats-10-saltwater/"
@@ -136,6 +141,7 @@ songs:
     sequence: 10
 
   - title: "After the Silence" # After the Silence Album track
+    song_id: "ats-9-after-the-silence"
     subtitle: "After the Silence | Part 9"
     youtube_id: "kmQsqEg8ryA" 
     url: "/music/ats-9-after-the-silence/"
@@ -145,6 +151,7 @@ songs:
     sequence: 9
 
   - title: "Midnight Madness" # Midnight Saga track
+    song_id: "midnight-saga-midnight-madness"
     subtitle: "Midnight Saga | Part 3"
     youtube_id: "HeD2WbErCKg" 
     url: "/music/midnight-saga-midnight-madness/"
@@ -154,6 +161,7 @@ songs:
     sequence: 3
 
   - title: "Ghostlight" # After the Silence Album track
+    song_id: "ats-8-ghostlight"
     subtitle: "After the Silence | Part 8"
     youtube_id: "8ArjDO_Lkz0" 
     url: "/music/ats-8-ghostlight/"
@@ -163,6 +171,7 @@ songs:
     sequence: 8
 
   - title: "If You'd Asked" # After the Silence Album track
+    song_id: "ats-7-if-youd-asked"
     subtitle: "After the Silence | Part 7" 
     youtube_id: "YgcaebCs-LY" 
     url: "/music/ats-7-if-youd-asked/"
@@ -172,6 +181,7 @@ songs:
     sequence: 7
 
   - title: "Midnight Mayhem" # Midnight Saga track
+    song_id: "midnight-saga-midnight-mayhem"
     subtitle: "Midnight Saga | Part 2" 
     youtube_id: "Z6AGhE0K-Ro" 
     url: "/music/midnight-saga-midnight-mayhem/"
@@ -181,6 +191,7 @@ songs:
     sequence: 2
 
   - title: "Half of Me" # After the Silence Album track
+    song_id: "ats-6-half-of-me"
     subtitle: "After the Silence | Part 6" 
     youtube_id: "ZJgHgGT0-5g" 
     url: "/music/ats-6-half-of-me/"
@@ -190,6 +201,7 @@ songs:
     sequence: 6
 
   - title: "Paper Walls" # After the Silence Album track
+    song_id: "ats-5-paper-walls"
     subtitle: "After the Silence | Part 5" 
     youtube_id: "hYWaf4MIfM0" 
     url: "/music/ats-5-paper-walls/"
@@ -209,6 +221,7 @@ songs:
     primary_playlist: "Instrumentals"
 
   - title: "Before Midnight" # Midnight Saga track
+    song_id: "midnight-saga-before-midnight"
     subtitle: "Midnight Saga | Part 1" 
     youtube_id: "VXQKpK56MCI" 
     url: "/music/midnight-saga-before-midnight/"
@@ -218,6 +231,7 @@ songs:
     sequence: 1
 
   - title: "The Way We Lied" # After the Silence Album track
+    song_id: "ats-4-the-way-we-lied"
     subtitle: "After the Silence | Part 4" 
     youtube_id: "ZPqhUzybOIg" 
     url: "/music/ats-4-the-way-we-lied/"
@@ -227,6 +241,7 @@ songs:
     sequence: 4
 
   - title: "Homesick For You" # After the Silence Album track
+    song_id: "ats-3-homesick-for-you"
     subtitle: "After the Silence | Part 3"
     youtube_id: "8QgA5YL9nIA" 
     url: "/music/ats-3-homesick-for-you/"
@@ -244,6 +259,7 @@ songs:
     primary_playlist: "Instrumentals"
 
   - title: "Choosing Me (His Version)" # A Way Back Trilogy track
+    song_id: "choosing-me-his-version"
     subtitle: "A Way Back | Part 3" 
     youtube_id: "nudUc7DezM0" 
     url: "/music/choosing-me-his-version/"
@@ -253,6 +269,7 @@ songs:
     sequence: 3
 
   - title: "Borrowed Time" # After the Silence Album track
+    song_id: "ats-2-borrowed-time"
     subtitle: "After the Silence | Part 2" 
     youtube_id: "BrZ1VWJ2lso" 
     url: "/music/ats-2-borrowed-time/"
@@ -262,6 +279,7 @@ songs:
     sequence: 2
 
   - title: "The Quiet After" # After the Silence Album track
+    song_id: "ats-1-the-quiet-after"
     subtitle: "After the Silence | Part 1" 
     youtube_id: "-Yxig5Mq9u4" 
     url: "/music/ats-1-the-quiet-after/"
@@ -271,6 +289,7 @@ songs:
     sequence: 1
 
   - title: "Choosing Me (Her Version)" # A Way Back Trilogy track
+    song_id: "choosing-me-her-version"
     subtitle: "A Way Back | Part 2" 
     youtube_id: "ddDkZl0GrWU" 
     url: "/music/choosing-me-her-version/"
@@ -296,6 +315,7 @@ songs:
     primary_playlist: "Pop"
 
   - title: "Lost in Silence" # A Way Back Trilogy track
+    song_id: "lost-in-silence"
     subtitle: "A Way Back | Part 1" 
     youtube_id: "59teEpeHah8" 
     url: "/music/lost-in-silence/"

@@ -50,7 +50,7 @@ title: Music – Horizon Sound
          Excluding playlists already in playlist_data
     =========================================== -->
     {% assign playlist_names = playlist_data | map: "title" %}
-  
+   
     {% for list in playlists %}
       {% unless playlist_names contains list %}
         {% assign songs_in_list = all_songs | where: "primary_playlist", list %}
@@ -69,8 +69,8 @@ title: Music – Horizon Sound
   
           <div class="tile-grid">
             {% for song in playlist_sorted %}
-              <a class="tile" href="{{ song.url }}">
-                <img src="{{ song.image }}" alt="{{ song.title }}">
+              <a class="carousel-tile" href="{{ item.url }}">
+                <img src="{{ item.image }}" alt="{{ song.title }}">
                 <h3 class="tile-title">{{ song.title }}</h3>
               </a>
             {% endfor %}

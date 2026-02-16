@@ -119,10 +119,10 @@ title: Music – Horizon Sound
       {% if playlist_sorted.size > 0 %}
       <section class="playlist-section">
         <h2 class="section-header">{{ list }}</h2>
-          <div class="playlist-carousel" data-carousel>
+          <div class="carousel">
             <button class="carousel-arrow left-arrow" data-arrow="left">◀</button>
           
-            <div class="carousel-container" data-strip>
+            <div class="horizontal-strip">
               {% for song in playlist_sorted %}
                 <a class="carousel-tile playlist-tile" href="{{ song.url }}">
                   <img src="{{ song.image }}" alt="{{ song.title }}">

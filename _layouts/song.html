@@ -85,10 +85,22 @@ PLAYLIST SORTED (final list for carousel)
   <!-- ⭐ PLAYER FRAME WRAPPER ENDS HERE ⭐ -->
 
   <!-- ABOUT SECTION -->
-  {% include about.html about=current_song.about %}
+  <section class="song-about">
+    <div class="centered-column">
+      <h2 class="section-header">About the Song</h2>
+      <div class="song-description">
+        {{ page.about | markdownify }}
+      </div>
+    </div>
+  </section>
 
   <!-- LYRICS SECTION -->
-  {% include lyrics.html lyrics=current_song.lyrics %}
+  <section class="song-lyrics">
+    <h2 class="section-header">Lyrics</h2>
+    <div class="lyrics-block">
+      {{ page.lyrics | markdownify }}
+    </div>
+  </section>
   
 </main>
 

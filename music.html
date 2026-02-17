@@ -109,7 +109,7 @@ title: Music – Horizon Sound
       
           {% assign first_song = playlist_sorted | first %}
           {% if first_song %}
-            <a class="tile" href="/playlists/{{ pl.id }}/"
+            <a class="tile" href="/playlists/{{ pl.playlist_id }}/">
               <img src="{{ first_song.image }}" alt="{{ pl.title }}">
               <h3 class="tile-title">{{ pl.title }}</h3>
             </a>

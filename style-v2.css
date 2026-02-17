@@ -172,7 +172,7 @@ footer {
 
 .tile .tile-title,
 .carousel-tile .tile-title {
-  display: block;
+  display: flex;
   width: 100%;
   text-align: center;
   background: rgba(255, 255, 255, 0.18);
@@ -184,11 +184,13 @@ footer {
   box-sizing: border-box;
   font-weight: 500;
 
-  /* ⭐ NEW: consistent height */
-  min-height: 48px;        /* adjust to taste */
-  display: flex;           /* vertically center text */
+  /* Consistent height + vertical centering */
+  min-height: 48px;
   align-items: center;
   justify-content: center;
+
+  /* ⭐ NEW: consistent text block height */
+  line-height: 1.3;
 }
 
 /* ============================================

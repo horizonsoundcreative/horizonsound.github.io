@@ -681,7 +681,7 @@ footer {
 
 /* Dark theme (Song Page) */
 .player-frame--dark {
-  background: rgba(0, 0, 0, 0.35);
+  background: blue /* rgba(0, 0, 0, 0.35); */
 }
 
 /* Purple theme (Playlist Page, Collections aesthetic) */

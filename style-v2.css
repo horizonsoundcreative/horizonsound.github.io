@@ -584,6 +584,10 @@ footer {
   transform: translateY(-50%);
 }
 
+.homepage .playlist-section.collections-panel { 
+   background: rgba(255, 255, 255, 0.05); 
+}
+
 /* ============================================
    PAGE: PLAYLIST PAGE
 ============================================ */

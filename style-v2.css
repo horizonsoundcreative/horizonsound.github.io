@@ -711,6 +711,21 @@ footer {
   backdrop-filter: blur(10px);
 }
 
+.player-frame--dark .tile-title {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(4px);
+  padding: 8px 10px;
+  border-radius: 0 0 8px 8px;
+  color: #fff;
+  height: 70px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: center;
+  font-weight: 500;
+}
+
 /* Purple theme (Playlist Page, Collections aesthetic) */
 .player-frame--purple {
   background: rgba(47, 18, 61, 0.35);

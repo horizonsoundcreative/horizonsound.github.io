@@ -384,67 +384,6 @@ footer {
 }
 
 /* ============================================
-   SONG PAGE — TYPOGRAPHY POLISH
-============================================ */
-
-/* Increase readability for About + Lyrics */
-.song-description,
-.lyrics-block {
-  font-size: 1.2rem;      /* slightly larger, more premium */
-  line-height: 1.55;       /* consistent rhythm */
-  max-width: 700px;        /* keeps text in a readable column */
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Improve paragraph spacing inside About */
-.song-description p {
-  margin-bottom: 14px;     /* clean breathing room */
-}
-
-/* Improve spacing between vibe lines */
-.song-description .vibe-line {
-  line-height: 1.35;
-  margin-bottom: 6px;
-}
-
-/* Improve spacing above section headers */
-.song-about .section-header,
-.song-lyrics .section-header {
-  margin-top: 40px;        /* gives each section presence */
-  margin-bottom: 16px;     /* clean separation from text */
-}
-
-/* Lyrics formatting */
-.lyrics-block {
-  white-space: pre-wrap;
-  padding: 0 40px;
-}
-
-/* Optional: slightly larger section headers on song pages */
-.song-about .section-header,
-.song-lyrics .section-header {
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 12px; /* was 16px */
-}
-
-
-.song-description,
-.lyrics-block {
-  color: #e8e8e8; /* slightly softer white */
-}
-
-/* Reduce space between About and Lyrics */
-.song-about {
-  margin-bottom: 20px; /* was 32px */
-}
-
-.song-lyrics .section-header {
-  margin-top: 20px; /* was 40px after earlier tuning */
-}
-
-/* ============================================
    PAGE: MUSIC INDEX PAGE
 ============================================ */
 .music-page {
@@ -767,3 +706,44 @@ footer {
   box-shadow: 0 0 12px rgba(180, 120, 220, 0.45);
 }
 
+/* ============================================
+   SONG PAGE — FINAL TYPOGRAPHY OVERRIDES
+   (Placed at the bottom so they always win)
+============================================ */
+
+/* 1. Tighten spacing between About → Lyrics */
+.song-about {
+  margin-bottom: 12px !important;
+}
+
+.song-lyrics .section-header {
+  margin-top: 12px !important;
+}
+
+/* 2. Fix vibe list spacing */
+.song-description .vibe-line {
+  line-height: 1.25 !important;
+  margin-bottom: 4px !important;
+}
+
+/* 3. Fix stanza spacing in lyrics */
+.lyrics-block p {
+  margin-bottom: 6px !important;
+  line-height: 1.35 !important;
+}
+
+/* 4. Improve About + Lyrics readability */
+.song-description,
+.lyrics-block {
+  font-size: 1.15rem !important;
+  line-height: 1.5 !important;
+  max-width: 700px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* 5. Section headers spacing */
+.song-about .section-header,
+.song-lyrics .section-header {
+  margin-bottom: 10px !important;
+}

@@ -44,13 +44,20 @@ title: Music – Horizon Sound
     {% endif %}
     {{ playlist_sorted | jsonify }}
   
-    --- URL → song_id resolution test ---
+   --- URL → song_id resolution test ---
     {% for item in playlist_sorted %}
       URL: {{ item.url }}
-      Segments: {{ item.url | split: "/" | jsonify }}
-      song_id: {{ item.url | split: "/" | slice: -2, 1 }}
+      {% assign clean_url = item.url | replace: '//', '/' %}
+      {% assign segments = clean_url | split: "/" %}
+      {% assign last = segments | last %}
+      {% if last == "" %}
+        {% assign song_id = segments[segments.size - 2] %}
+      {% else %}
+        {% assign song_id = last %}
+      {% endif %}
+      Segments: {{ segments | jsonify }}
+      song_id: {{ song_id }}
     {% endfor %}
-  
     -------------------------------
   {% endfor %}
   

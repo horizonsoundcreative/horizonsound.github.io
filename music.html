@@ -155,28 +155,28 @@ title: Music – Horizon Sound
   <!-- ------------------------------------------------
        VIEW 3: CAROUSEL ROWS BY PLAYLIST
   ------------------------------------------------- -->
-<section id="music-view-carousel" style="display:none;">
-  {% for list in playlists %}
-    {% assign songs_in_list = all_songs | where: "primary_playlist", list %}
-    {% assign sorted_by_sequence = songs_in_list | sort: "sequence" %}
-    {% assign first_item = sorted_by_sequence | first %}
+  <section id="music-view-carousel" style="display:none;">
+    {% for list in playlists %}
+      {% assign songs_in_list = all_songs | where: "primary_playlist", list %}
+      {% assign sorted_by_sequence = songs_in_list | sort: "sequence" %}
+      {% assign first_item = sorted_by_sequence | first %}
 
-    {% if first_item.sequence %}
-      {% assign playlist_sorted = sorted_by_sequence %}
-    {% else %}
-      {% assign playlist_sorted = songs_in_list | sort: "title" %}
-    {% endif %}
+      {% if first_item.sequence %}
+        {% assign playlist_sorted = sorted_by_sequence %}
+      {% else %}
+        {% assign playlist_sorted = songs_in_list | sort: "title" %}
+      {% endif %}
 
-    {% if playlist_sorted.size > 0 %}
-    <section class="playlist-section">
-      <h2 class="section-header">{{ list }}</h2>
+      {% if playlist_sorted.size > 0 %}
+      <section class="playlist-section">
+        <h2 class="section-header">{{ list }}</h2>
 
-      {% include carousel.html playlist=playlist_sorted %}
+        {% include carousel.html playlist=playlist_sorted %}
 
-    </section>
-    {% endif %}
-  {% endfor %}
-</section>
+      </section>
+      {% endif %}
+    {% endfor %}
+  </section>
 </div> <!-- end .music-page -->
 
 <!-- --------------------------------------------------
@@ -203,6 +203,14 @@ document.addEventListener("DOMContentLoaded", function () {
       Object.keys(views).forEach(key => {
         views[key].style.display = (key === view) ? "" : "none";
       });
+
+      // 🔹 When switching to carousel view, refresh all carousels
+      if (view === "carousel") {
+        const carousels = document.querySelectorAll("[data-carousel]");
+        carousels.forEach(c => {
+          c.dispatchEvent(new Event("carousel:refresh"));
+        });
+      }
     });
   });
 
@@ -241,12 +249,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     strip.addEventListener("scroll", updateArrows);
 
-    // 🔹 NEW: wait for images to load, then initialize arrows
+    // optional: keep this if you like, but it's no longer critical
     const images = strip.querySelectorAll("img");
     let loaded = 0;
 
     if (images.length === 0) {
-      // no images, just initialize immediately
       updateArrows();
     } else {
       images.forEach(img => {
@@ -261,6 +268,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
+
+    // 🔹 NEW: allow external refresh when view becomes visible
+    carousel.addEventListener("carousel:refresh", updateArrows);
   });
 }); 
 </script>

@@ -17,7 +17,7 @@
     {% endif %}
       {% assign song = site.songs | where: "song_id", song_id | first %}
       {% if song %}
-        <a class="carousel-tile" href="{{ item.url }}">
+        <a class="carousel-tile" data-song="{{ song.song_id }}" href="{{ item.url }}">
           <img src="{{ item.image }}" alt="{{ song.title }}">
           <h3 class="tile-title">{{ song.title }}</h3>
         </a>

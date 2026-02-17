@@ -168,28 +168,34 @@ title: Music – Horizon Sound
   <!-- ------------------------------------------------
        VIEW 3: CAROUSEL ROWS BY PLAYLIST
   ------------------------------------------------- -->
-  <section id="music-view-carousel" style="display:none;">
-    {% for list in playlists %}
-      {% assign songs_in_list = all_songs | where: "primary_playlist", list %}
-      {% assign sorted_by_sequence = songs_in_list | sort: "sequence" %}
-      {% assign first_item = sorted_by_sequence | first %}
+  {% if include.playlist %}
+  <div class="carousel" data-carousel>
+  
+    <!-- LEFT ARROW -->
+    <button class="carousel-arrow left-arrow" data-arrow="left">‹</button>
+  
+    <!-- SCROLLING STRIP -->
+    <div class="horizontal-strip" data-strip>
+      {% for item in include.playlist %}
+        {% assign segments = item.url | split: "/" %}
+        {% assign song_id = segments[segments.size - 2] %}
+        {% assign song = site.songs | where: "song_id", song_id | first %}
+  
+        {% if song %}
+          <a class="carousel-tile" href="{{ item.url }}">
+            <img src="{{ item.image }}" alt="{{ song.title }}">
+            <h3 class="tile-title">{{ song.title }}</h3>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  
+    <!-- RIGHT ARROW -->
+    <button class="carousel-arrow right-arrow" data-arrow="right">›</button>
+  
+  </div>
+  {% endif %}
 
-      {% if first_item.sequence %}
-        {% assign playlist_sorted = sorted_by_sequence %}
-      {% else %}
-        {% assign playlist_sorted = songs_in_list | sort: "title" %}
-      {% endif %}
-
-      {% if playlist_sorted.size > 0 %}
-      <section class="playlist-section">
-        <h2 class="section-header">{{ list }}</h2>
-
-        {% include carousel.html playlist=playlist_sorted %}
-
-      </section>
-      {% endif %}
-    {% endfor %}
-  </section>
 </div> <!-- end .music-page -->
 
 <!-- --------------------------------------------------

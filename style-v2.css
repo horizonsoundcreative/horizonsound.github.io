@@ -585,7 +585,9 @@ footer {
 }
 
 .homepage-collections {
-  background: rgba(47, 18, 61, 0.75);
+  background: rgba(47, 18, 61, 0.35);   /* softer, less opaque */
+  backdrop-filter: blur(8px);           /* premium glassy feel */
+  border-radius: 12px;
 }
 
 /* ============================================

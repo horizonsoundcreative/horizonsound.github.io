@@ -43,7 +43,7 @@ ITEMS (titles + URLs):
       {% else %}
         {% assign song_id = last %}
       {% endif %}
-      {% assign song = site.songs | where: "song_id", song_id | first %}
+      {% assign song = site.data.music.songs | where: "song_id", song_id | first %}
 
       {% if include.playlist %}
         <!-- PLAYLIST MODE -->

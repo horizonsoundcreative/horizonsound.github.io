@@ -41,10 +41,10 @@ SONG IDS FROM PLAYLIST:
   {% assign playlist_songs = "" | split: "" %}
 
   {% for sid in playlist.songs %}
-  {% assign expected_song = site.data.music.songs | where: "song_id", sid | first %}
-  {% if expected_song and expected_song.videostatus == "Public" %}
-    {% assign playlist_songs = playlist_songs | push: expected_song %}
-  {% endif %}
+    {% assign expected_song = site.data.music.songs | where: "song_id", sid | first %}
+    {% if expected_song and expected_song.videostatus == "Public" %}
+      {% assign playlist_songs = playlist_songs | push: expected_song %}
+    {% endif %}
   {% endfor %}
   
   {% comment %}
@@ -52,22 +52,23 @@ SONG IDS FROM PLAYLIST:
   {% endcomment %}
   {% assign sorted = playlist_songs | sort: "sequence" %}
 
-  {% comment %}
-    4. Embed first song
-  {% endcomment %}
   {% assign first_song = sorted | first %}
-  {% include embed.html youtube_id=first_song.youtube_id %}
 
-  {% comment %}
-    5. Inject JSON for JS click handler
-  {% endcomment %}
-  <script>
-    window.allSongs = {{ sorted | jsonify }};
-  </script>
+  <!-- ⭐ PLAYER FRAME WRAPPER (PURPLE THEME) ⭐ -->
+  <div class="player-frame player-frame--purple">
 
-  {% comment %}
-    6. Render carousel
-  {% endcomment %}
-  {% include carousel.html playlist=sorted %}
+    <!-- EMBED -->
+    {% include embed.html youtube_id=first_song.youtube_id %}
+
+    <!-- JS DATA -->
+    <script>
+      window.allSongs = {{ sorted | jsonify }};
+    </script>
+
+    <!-- CAROUSEL -->
+    {% include carousel.html playlist=sorted %}
+
+  </div>
+  <!-- ⭐ END PLAYER FRAME ⭐ -->
 
 </main>

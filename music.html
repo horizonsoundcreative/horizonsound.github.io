@@ -84,18 +84,31 @@ title: Music – Horizon Sound
     {% if playlist_data.size > 0 %}
     <section class="playlist-section">
       <h2 class="section-header">Collections</h2>
-  
-        <div class="tile-grid">
-          {% for song in playlist_sorted %}
-            <a class="tile" href="{{ song.url }}">
-              <img src="{{ song.image }}" alt="{{ song.title }}">
-              <h3 class="tile-title">{{ song.title }}</h3>
+    
+      <div class="tile-grid">
+        {% for pl in playlist_data %}
+          {% assign songs_in_list = all_songs | where: "primary_playlist", pl.title %}
+          {% assign sorted_by_sequence = songs_in_list | sort: "sequence" %}
+          {% assign first_item = sorted_by_sequence | first %}
+    
+          {% if first_item.sequence %}
+            {% assign playlist_sorted = sorted_by_sequence %}
+          {% else %}
+            {% assign playlist_sorted = songs_in_list | sort: "title" %}
+          {% endif %}
+    
+          {% assign first_song = playlist_sorted | first %}
+          {% if first_song %}
+            <a class="tile" href="/playlists/{{ pl.id }}/">
+              <img src="{{ first_song.image }}" alt="{{ pl.title }}">
+              <h3 class="tile-title">{{ pl.title }}</h3>
             </a>
-          {% endfor %}
-        </div>
+          {% endif %}
+        {% endfor %}
+      </div>
     </section>
     {% endif %}
-  
+    
     <!-- ==========================================
          GENRE / PRIMARY PLAYLIST GROUPS (Existing)
          Excluding playlists already in playlist_data

@@ -66,21 +66,28 @@ PLAYLIST SORTED (final list for carousel)
     {% endif %}
   </section>
 
-  <!-- EMBED SECTION (Pulled from embed.html include) -->
-  {% assign resolved_youtube_id = current_song.youtube_id | default: meta.youtube_id %}
-  {% include embed.html youtube_id=resolved_youtube_id %}
-  
-  <!-- CAROUSEL (old structure, old CSS) -->
-  <script>
-    window.allSongs = {{ playlist_sorted | jsonify }};
-  </script>
-  
-  {% include carousel.html playlist=playlist_sorted %}
-  
-  <!-- ABOUT SECTION (Pulled from about.html include) -->
+  <!-- ⭐ PLAYER FRAME WRAPPER STARTS HERE ⭐ -->
+  <div class="player-frame player-frame--dark">
+
+    <!-- EMBED SECTION -->
+    {% assign resolved_youtube_id = current_song.youtube_id | default: meta.youtube_id %}
+    {% include embed.html youtube_id=resolved_youtube_id %}
+
+    <!-- CAROUSEL DATA -->
+    <script>
+      window.allSongs = {{ playlist_sorted | jsonify }};
+    </script>
+
+    <!-- CAROUSEL -->
+    {% include carousel.html playlist=playlist_sorted %}
+
+  </div>
+  <!-- ⭐ PLAYER FRAME WRAPPER ENDS HERE ⭐ -->
+
+  <!-- ABOUT SECTION -->
   {% include about.html about=current_song.about %}
 
-  <!-- LYRICS SECTION (Pulled from lyrics.html include) -->
+  <!-- LYRICS SECTION -->
   {% include lyrics.html lyrics=current_song.lyrics %}
   
 </main>
@@ -103,4 +110,3 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
-

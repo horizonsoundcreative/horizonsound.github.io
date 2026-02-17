@@ -384,7 +384,7 @@ footer {
 /* Increase readability for About + Lyrics */
 .song-description,
 .lyrics-block {
-  font-size: 1.05rem;      /* slightly larger, more premium */
+  font-size: 1.2rem;      /* slightly larger, more premium */
   line-height: 1.55;       /* consistent rhythm */
   max-width: 700px;        /* keeps text in a readable column */
   margin-left: auto;
@@ -419,6 +419,7 @@ footer {
 .song-about .section-header,
 .song-lyrics .section-header {
   font-size: 1.8rem;
+  text-align: center;
 }
 
 .song-description,

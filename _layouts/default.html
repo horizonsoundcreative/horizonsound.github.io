@@ -16,32 +16,30 @@
   <link rel="stylesheet" href="/style-v2.css?v=1" />
 </head>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const tiles = document.querySelectorAll(".carousel-tile, .playlist-tile");
-  const iframe = document.querySelector(".video-wrapper iframe");
-
-  if (!tiles.length) return;
-
-  tiles.forEach(tile => {
-    tile.addEventListener("click", () => {
-      const songId = tile.dataset.song;
-      const song = window.allSongs?.find(s => s.song_id === songId);
-
-      if (iframe && song?.youtube_id) {
-        iframe.src = "https://www.youtube.com/embed/" + song.youtube_id;
-      }
-
-      // Remove active from all tiles
-      tiles.forEach(t => t.classList.remove("active"));
-
-      // Add active to clicked tile
-      tile.classList.add("active");
-
-      // Scroll into view
-      tile.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+  document.addEventListener("DOMContentLoaded", function () {
+    if (window.isPlaylistPage) return; // ← Skip global behavior on playlist page
+  
+    const tiles = document.querySelectorAll(".carousel-tile, .playlist-tile");
+    const iframe = document.querySelector(".video-wrapper iframe");
+  
+    if (!tiles.length) return;
+  
+    tiles.forEach(tile => {
+      tile.addEventListener("click", () => {
+        const songId = tile.dataset.song;
+        const song = window.allSongs?.find(s => s.song_id === songId);
+  
+        if (iframe && song?.youtube_id) {
+          iframe.src = "https://www.youtube.com/embed/" + song.youtube_id;
+        }
+  
+        tiles.forEach(t => t.classList.remove("active"));
+        tile.classList.add("active");
+  
+        tile.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      });
     });
   });
-});
 </script>
 <body>
   {% include header.html %}

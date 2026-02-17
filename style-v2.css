@@ -529,6 +529,12 @@ footer {
   margin-bottom: 32px;
 }
 
+.music-collections .tile-title {
+  background: rgba(47, 18, 61, 0.28);   /* soft purple glass */
+  backdrop-filter: blur(6px);           /* subtle, not too strong */
+  color: #fff;
+}
+
 /* ============================================
    PAGE: HOMEPAGE
 ============================================ */

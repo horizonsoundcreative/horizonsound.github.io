@@ -25,13 +25,15 @@ title: Horizon Sound
     %}
   </section>
 
-  {% assign projects_public = site.data.homepage.projects | where: "videostatus", "Public" %}
-  <section class="homepage-section">
-    <h2 class="section-header">Collections</h2>
-    {% include homepage-tiles.html 
-         title=""
-         items=projects_public 
-    %}
-  </section>
+  <section class="playlist-section collections-panel">
+      {% assign projects_public = site.data.homepage.projects | where: "videostatus", "Public" %}
+      <section class="homepage-section">
+        <h2 class="section-header">Collections</h2>
+        {% include homepage-tiles.html 
+             title=""
+             items=projects_public 
+        %}
+      </section>
+    </section>
 
 </div>

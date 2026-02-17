@@ -184,7 +184,7 @@ footer {
   text-align: center;
 
   /* fixed visual height */
-  height: 60px;                 /* adjust to taste */
+  height: 70px;                 /* adjust to taste */
   display: -webkit-box;
   -webkit-line-clamp: 2;        /* max 2 lines */
   -webkit-box-orient: vertical;

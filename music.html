@@ -15,50 +15,50 @@ title: Music – Horizon Sound
   MUSIC PAGE DEBUG
   ==============================
   
-  PLAYLISTS (from all_songs):
-  {{ playlists | jsonify }}
+  PLAYLIST DATA (from playlists.yml):
+  {{ playlist_data | jsonify }}
   
   ALL SONGS (public only):
   {{ all_songs | jsonify }}
   
-  --- PER-PLAYLIST SORT CHECK ---
-  {% for list in playlists %}
-    Playlist: {{ list }}
-    Songs in list:
-    {% assign songs_in_list = all_songs | where: "primary_playlist", list %}
-    {{ songs_in_list | jsonify }}
+  --- COLLECTIONS GRID MATCH TEST ---
+  {% for pl in playlist_data %}
+  ------------------------------------------------------------
+  PLAYLIST ENTRY
+    playlist_id: {{ pl.playlist_id }}
+    title:       {{ pl.title }}
+    order:       {{ pl.order }}
+    songs (YAML): {{ pl.songs | jsonify }}
   
-    Sorted by sequence:
-    {% assign sorted_by_sequence = songs_in_list | sort: "sequence" %}
-    {{ sorted_by_sequence | jsonify }}
+  MATCHING LOGIC
+    Matching songs where:
+      primary_playlist == "{{ pl.title }}"
   
-    First item:
-    {% assign first_item = sorted_by_sequence | first %}
-    {{ first_item | jsonify }}
+  RESULTS
+  {% assign songs_in_list = all_songs | where: "primary_playlist", pl.title %}
+    songs_in_list.size: {{ songs_in_list.size }}
+    songs_in_list: {{ songs_in_list | jsonify }}
   
-    Final playlist_sorted:
-    {% if first_item.sequence %}
-      {% assign playlist_sorted = sorted_by_sequence %}
+  {% if songs_in_list.size == 0 %}
+    ⚠️ WARNING: No songs matched this playlist title!
+  {% endif %}
+  
+  SORTED RESULTS
+  {% assign sorted_by_sequence = songs_in_list | sort: "sequence" %}
+    sorted_by_sequence: {{ sorted_by_sequence | jsonify }}
+  
+  FIRST SONG
+  {% assign first_song = sorted_by_sequence | first %}
+    first_song: {{ first_song | jsonify }}
+  
+  IMAGE USED
+    {% if first_song %}
+      image: {{ first_song.image }}
     {% else %}
-      {% assign playlist_sorted = songs_in_list | sort: "title" %}
+      ⚠️ No first_song — image will be blank
     {% endif %}
-    {{ playlist_sorted | jsonify }}
   
-   --- URL → song_id resolution test ---
-    {% for item in playlist_sorted %}
-      URL: {{ item.url }}
-      {% assign clean_url = item.url | replace: '//', '/' %}
-      {% assign segments = clean_url | split: "/" %}
-      {% assign last = segments | last %}
-      {% if last == "" %}
-        {% assign song_id = segments[segments.size - 2] %}
-      {% else %}
-        {% assign song_id = last %}
-      {% endif %}
-      Segments: {{ segments | jsonify }}
-      song_id: {{ song_id }}
-    {% endfor %}
-    -------------------------------
+  ------------------------------------------------------------
   {% endfor %}
   
   </pre>

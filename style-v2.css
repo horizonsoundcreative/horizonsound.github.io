@@ -530,9 +530,10 @@ footer {
 }
 
 .music-collections .tile-title {
-  background: rgba(47, 18, 61, 0.28);   /* soft purple glass */
-  backdrop-filter: blur(6px);           /* subtle, not too strong */
+  background: rgba(255, 255, 255, 0.18);   /* light, soft, premium */
+  backdrop-filter: blur(6px);             /* keeps the glass feel */
   color: #fff;
+  border-radius: 0 0 10px 10px;
 }
 
 /* ============================================

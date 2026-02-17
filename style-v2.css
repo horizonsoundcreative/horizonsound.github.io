@@ -354,6 +354,23 @@ footer {
   line-height: 1.45;   /* slightly tighter */
 }
 
+.playlist-lyrics-text {
+  margin: 32px 0;
+  padding: 0 40px;
+  white-space: pre-wrap;   /* THIS restores all line breaks */
+  line-height: 1.55;       /* Matches your old .lyrics-pre line height */
+  font-size: 0.95rem;      /* Matches your old pre font size */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Reduce spacing between lyric paragraphs */
+.playlist-lyrics-text p {
+  margin-bottom: 10px; /* was default ~16px */
+  line-height: 1.45;   /* slightly tighter */
+}
+
 .lyrics-box {
   max-width: 600px;
   margin: 0 auto;
@@ -789,6 +806,16 @@ footer {
 
 /* Improve paragraph spacing inside About */
 .song-description p {
+  margin-bottom: 14px !important;
+}
+
+/* Restore vibe list line breaks */
+.playlist-about-text {
+  white-space: pre-line !important;
+}
+
+/* Improve paragraph spacing inside About */
+.playlist-about-text p {
   margin-bottom: 14px !important;
 }
 

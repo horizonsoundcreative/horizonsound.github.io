@@ -333,6 +333,12 @@ footer {
 .lyrics-block {
   margin: 32px 0;
   padding: 0 40px;
+  white-space: pre-wrap;   /* THIS restores all line breaks */
+  line-height: 1.55;       /* Matches your old .lyrics-pre line height */
+  font-size: 0.95rem;      /* Matches your old pre font size */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .lyrics-box {

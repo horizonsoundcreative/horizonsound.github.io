@@ -17,6 +17,8 @@ body {
   font-size: 1.6rem;
   color: #ffffff;
   margin-bottom: 16px;
+  letter-spacing: 0.5px; 
+  font-weight: 600;
 }
 
 .btn-primary {
@@ -129,7 +131,7 @@ footer {
   text-align: center;
   padding: 32px;
   background-color: transparent;
-  margin-top: 32px;
+  margin-top: 40px;
   font-size: 0.9rem;
 }
 
@@ -526,6 +528,7 @@ footer {
   border-radius: 10px;
   border-top: 1px solid rgba(255,255,255,0.08);
   margin: 0;
+  margin-bottom: 32px;
 }
 
 .homepage-section + .homepage-section {

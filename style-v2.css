@@ -634,6 +634,13 @@ footer {
   justify-content: start;
 }
 
+/* Make playlist tiles show the active state */
+.playlist-tile.active,
+.carousel-tile.active {
+  border: 3px solid rgba(180, 120, 220, 0.65);
+  box-shadow: 0 0 12px rgba(180, 120, 220, 0.45);
+}
+
 /* ============================================
    PAGE: ABOUT PAGE
 ============================================ */

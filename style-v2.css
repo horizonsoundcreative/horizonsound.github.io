@@ -243,6 +243,7 @@ footer {
 .carousel-tile {
   flex: 0 0 240px;
   transition: transform 0.2s ease;
+  border: 3px solid transparent;
 }
 
 /* Ensure tiles always have a baseline border so active state persists */

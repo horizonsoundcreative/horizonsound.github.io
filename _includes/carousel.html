@@ -7,8 +7,10 @@
   <!-- SCROLLING STRIP -->
   <div class="horizontal-strip" data-strip>
     {% for item in include.playlist %}
-      {% assign song_id = item.url | split: "/" | last %}
+      {% assign segments = item.url | split: "/" %}
+      {% assign song_id = segments[segments.size - 2] %}
       {% assign song = site.songs | where: "song_id", song_id | first %}
+
       {% if song %}
         <a class="carousel-tile" href="{{ item.url }}">
           <img src="{{ item.image }}" alt="{{ song.title }}">

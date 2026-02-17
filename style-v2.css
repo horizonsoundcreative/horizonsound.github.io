@@ -520,6 +520,15 @@ footer {
   border-radius: 12px;                  /* matches homepage */
 }
 
+.music-section {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin: 0;
+  margin-bottom: 32px;
+}
+
 /* ============================================
    PAGE: HOMEPAGE
 ============================================ */

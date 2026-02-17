@@ -68,7 +68,46 @@ SONG IDS FROM PLAYLIST:
     <!-- CAROUSEL -->
     {% include carousel.html playlist=sorted %}
 
+    <section class="song-about">
+      <div class="centered-column">
+        <h2 class="section-header">About the Song</h2>
+        <div id="playlist-about" class="song-description"></div>
+      </div>
+    </section>
+
+    <section class="song-lyrics">
+      <div class="lyrics-block">
+        <h2 class="section-header">Lyrics</h2>
+        <div id="playlist-lyrics"></div>
+      </div>
+    </section>
+
   </div>
   <!-- ⭐ END PLAYER FRAME ⭐ -->
 
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const aboutEl = document.getElementById("playlist-about");
+    const lyricsEl = document.getElementById("playlist-lyrics");
+  
+    // Load first song on page load
+    const first = window.allSongs[0];
+    if (first) {
+      aboutEl.innerHTML = first.description || "";
+      lyricsEl.innerHTML = first.lyrics || "";
+    }
+  
+    // Update on tile click
+    document.querySelectorAll(".carousel-tile").forEach(tile => {
+      tile.addEventListener("click", () => {
+        const id = tile.dataset.song;
+        const song = window.allSongs.find(s => s.song_id === id);
+        if (!song) return;
+  
+        aboutEl.innerHTML = song.description || "";
+        lyricsEl.innerHTML = song.lyrics || "";
+      });
+    });
+  });
+  </script>
 </main>

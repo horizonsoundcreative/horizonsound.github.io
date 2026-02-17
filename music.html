@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     strip.addEventListener("scroll", updateArrows);
-    updateArrows();
+    setTimeout(updateArrows, 50);
   });
 });
 </script>

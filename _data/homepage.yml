@@ -86,12 +86,12 @@ projects:
   - title: "After the Silence – Full Album"
     url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1Pz6NzlQFL-96c_9VIgXwuVh"
     image: "/assets/Playlist - After the Silence.jpg"
-    videostatus: "Private"
+    videostatus: "Public"
 
   - title: "Midnight Saga"
     url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1PzhwIF1yE_gEUS1kZoW6oiH"
     image: "/assets/Playlist - Midnight Saga.jpg"
-    videostatus: "Private"
+    videostatus: "Public"
 
   - title: "A Way Back"
     url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1PzZpPNcgo40R2K0pbfTuZaH"

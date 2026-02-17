@@ -79,21 +79,21 @@ spotlight:
 
 projects:
   - title: "Venice Trilogy"
-    url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1PyAbowXjZwZ_Zhzu8eOzQnN"
+    playlist_id: "venice"
     image: "/assets/Playlist - Venice Trilogy.jpg"
     videostatus: "Private"
 
   - title: "After the Silence – Full Album"
-    url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1Pz6NzlQFL-96c_9VIgXwuVh"
+    playlist_id: "after-the-silence"
     image: "/assets/Playlist - After the Silence.jpg"
     videostatus: "Public"
 
   - title: "Midnight Saga"
-    url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1PzhwIF1yE_gEUS1kZoW6oiH"
+    playlist_id: "midnight-saga"
     image: "/assets/Playlist - Midnight Saga.jpg"
     videostatus: "Public"
 
   - title: "A Way Back"
-    url: "https://www.youtube.com/playlist?list=PLcKs1ONZE1PzZpPNcgo40R2K0pbfTuZaH"
+    playlist_id: "a-way-back"
     image: "/assets/lost-in-silence.jpg"
     videostatus: "Public"

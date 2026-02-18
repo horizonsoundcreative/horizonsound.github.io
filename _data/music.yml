@@ -462,6 +462,83 @@ songs:
     image: "/assets/All Around the World.jpeg"
     videostatus: "Public"
     primary_playlist: "Pop"
+    description_html: |
+      <p><strong>Official audio for "All Around the World" by Horizon Sound.</strong></p>
+      
+      <p>"All Around the World" is a high‑energy acoustic‑pop journey with bright guitars, handclaps, warm harmonies, and youthful female vocals. Breezy strumming, airy textures, and light percussion create a sunlit, feel‑good atmosphere. Emotional yet uplifting, the track blends modern pop polish with organic folk elements, capturing the rush of wanderlust and the ache of growing apart.</p>
+      
+      <p>This song follows the story of someone learning to see the world again after losing the person they once explored it with. Heartfelt verses, shimmering production, and a soaring chorus bring together vulnerability, nostalgia, and the spark of rediscovery. Warm, adventurous, and emotionally open, "All Around the World" is a soundtrack for anyone finding themselves after letting go.</p>
+      
+      <p>🎧 Vibe: bright acoustic pop, breezy, youthful, heartfelt
+      🎤 Vocals: warm female lead, airy harmonies, emotional delivery
+      🎛️ Production: acoustic guitars, handclaps, tambourine, light percussion, wide stereo layers
+      ⚡ Mood: nostalgic, hopeful, adventurous, vulnerable</p>
+      
+    lyrics_html: |
+      <p>[Verse]<br>
+      You say the world is a place to explore,
+      You get a thrill from the race and the roar.
+      Then you’re in it,
+      We’re so in it…
+      Then suddenly you leave—
+      A summer you swore you’d never forget,
+      When fall comes around, you don’t feel it yet.
+      How do I take that? 
+      I’m so displaced now,
+      When you leave me.</p>
+      
+      <p>[Chorus]<br>
+      You know
+      I can't see all around the world
+      Can't see all around the world without you
+      (All around the world)
+      Can't see all around the world
+      You know
+      I can't see all around the world
+      Can't see all around the world without you
+      (All around the world)
+      Can't see all around the world</p>
+      
+      <p>[Verse]<br>
+      I have a routine when I put on my face,
+      Try to cover it up so I don’t look the same.
+      Then it’s foundation,
+      Eyes,
+      Lips…
+      Then I’m brand new.
+      But you show up saying, “Hey,
+      I’ve got someone in mind for you today —
+      The one you think of
+      All of the time,
+      Who would take you out,
+      Who would treat you right…
+      The way he should.”</p>
+      
+      <p>[Bridge]<br>
+      Maybe I was chasing you too far,
+      Running circles ’round your shooting star.
+      But every place you showed me how to see
+      Is still a map that leads me back to me.
+      
+      <p>[Chorus]<br>
+      You know
+      I can see all around the world,
+      But it’s different than it was with you.
+      (All around the world)
+      I’m learning what is true.
+      You know
+      I can see all around the world,
+      Even if I miss the view I knew.
+      (All around the world)
+      I’m finding something new.</p>
+      
+      <p>[Outro]<br>
+      All around the world…
+      I’m still moving.
+      All around the world…
+      I’m still choosing.
+      All around the world…
+      I’m finding me.</p>
 
   - title: "Already out the door"
     subtitle: "" 

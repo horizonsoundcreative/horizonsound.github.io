@@ -847,6 +847,11 @@ footer {
   margin-left: 40px !important;
 }
 
+.song-header .song-subtitle {
+  text-align: left !important;
+  margin-left: 40px !important;
+}
+
 /* ============================================
    PLAYLIST PAGE — DESCRIPTION TYPOGRAPHY
 ============================================ */

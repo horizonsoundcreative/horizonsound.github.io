@@ -874,21 +874,27 @@ footer {
 ============================================ */
 @media (max-width: 600px) {
 
-  /* Override the more specific selectors */
+  /* Reduce padding so the carousel has more room */
+  .player-frame {
+    padding: 12px !important;
+    margin: 16px 12px !important;
+  }
+
+  /* Now the tile scaling becomes visible */
   .player-frame .carousel-tile {
-    flex: 0 0 34vw !important;
+    flex: 0 0 32vw !important; /* smaller tiles */
   }
 
   .player-frame .carousel-tile img {
-    height: 20vw !important;
+    height: 22vw !important; /* proportional image */
   }
 
   .player-frame .carousel-tile .tile-title {
-    height: 48px !important;
-    font-size: 0.85rem !important;
+    height: 42px !important;
+    font-size: 0.8rem !important;
   }
 
   .player-frame .carousel-arrow {
-    height: 120px !important;
+    height: 100px !important;
   }
 }

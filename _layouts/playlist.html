@@ -87,7 +87,6 @@ SONG IDS FROM PLAYLIST:
   </section>
 
   <!-- ⭐ END PLAYER FRAME ⭐ -->
-  
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       console.log("=== PLAYLIST INIT START ===");
@@ -112,8 +111,8 @@ SONG IDS FROM PLAYLIST:
       console.log("First song keys:", Object.keys(first));
     
       if (first) {
-        const initialDescription = first.description || "";
-        const initialLyrics = first.lyrics || "";
+        const initialDescription = first.description_html || "";
+        const initialLyrics = first.lyrics_html || "";
     
         console.log("Setting initial About:", initialDescription);
         console.log("Setting initial Lyrics:", initialLyrics);
@@ -172,9 +171,9 @@ SONG IDS FROM PLAYLIST:
             console.warn("No iframe or youtube_id available for clicked song.");
           }
     
-          // Update About + Lyrics
-          const newDescription = song.description || "";
-          const newLyrics = song.lyrics || "";
+          // ⭐ Update About + Lyrics using new HTML fields
+          const newDescription = song.description_html || "";
+          const newLyrics = song.lyrics_html || "";
     
           console.log("Updating About to:", newDescription);
           console.log("Updating Lyrics to:", newLyrics);

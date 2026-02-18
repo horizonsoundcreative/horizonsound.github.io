@@ -89,28 +89,49 @@ SONG IDS FROM PLAYLIST:
   <!-- ⭐ END PLAYER FRAME ⭐ -->
   
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const aboutEl = document.getElementById("playlist-about");
-      const lyricsEl = document.getElementById("playlist-lyrics");
-      const iframe = document.querySelector(".video-wrapper iframe");
-    
-      const first = window.allSongs[0];
-      if (first) {
-        // Load About + Lyrics
-        aboutEl.innerHTML = first.description || "";
-        lyricsEl.innerHTML = first.lyrics || "";
-    
-        // Load video
-        if (iframe) {
-          iframe.src = `https://www.youtube.com/embed/${first.youtube_id}`;
+      document.addEventListener("DOMContentLoaded", function () {
+        const aboutEl = document.getElementById("playlist-about");
+        const lyricsEl = document.getElementById("playlist-lyrics");
+        const iframe = document.querySelector(".video-wrapper iframe");
+      
+        // ⭐ Load the first song on page load
+        const first = window.allSongs[0];
+        if (first) {
+          aboutEl.innerHTML = first.description || "";
+          lyricsEl.innerHTML = first.lyrics || "";
+      
+          if (iframe) {
+            iframe.src = `https://www.youtube.com/embed/${first.youtube_id}`;
+          }
+      
+          const firstTile = document.querySelector(`.carousel-tile[data-song="${first.song_id}"]`);
+          if (firstTile) {
+            firstTile.classList.add("active");
+          }
         }
-    
-        // Mark first tile active
-        const firstTile = document.querySelector(`.carousel-tile[data-song="${first.song_id}"]`);
-        if (firstTile) {
-          firstTile.classList.add("active");
-        }
-      }
+      
+        // ⭐ Tile click handler
+        document.querySelectorAll(".carousel-tile").forEach(tile => {
+          tile.addEventListener("click", () => {
+            const id = tile.dataset.song;
+            const song = window.allSongs.find(s => s.song_id === id);
+            if (!song) return;
+      
+            // Update video
+            if (iframe) {
+              iframe.src = `https://www.youtube.com/embed/${song.youtube_id}`;
+            }
+      
+            // Update About + Lyrics
+            aboutEl.innerHTML = song.description || "";
+            lyricsEl.innerHTML = song.lyrics || "";
+      
+            // Update active tile
+            document.querySelectorAll(".carousel-tile").forEach(t => t.classList.remove("active"));
+            tile.classList.add("active");
+          });
+        });
+      });
     
       // Tile click handler
       document.querySelectorAll(".carousel-tile").forEach(tile => {

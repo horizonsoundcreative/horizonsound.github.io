@@ -147,6 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       tiles.forEach(t => t.classList.remove("active"));
       tile.classList.add("active");
+      tile.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
 
       console.log("Active tile applied.");
     });
@@ -167,6 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (initialTile) {
     initialTile.classList.add("active");
+    initialTile.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
 
     const song = window.allSongs?.find(s => s.song_id === initialId);
     if (iframe && song?.youtube_id) {

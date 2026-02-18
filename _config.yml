@@ -5,4 +5,4 @@ collections:
     permalink: /music/:name/
   playlists:
     output: true
-    permalink: /playlists/:name/
+    permalink: /music/playlists/:name/

@@ -21,7 +21,6 @@ ITEMS (titles + URLs):
 {% for item in items %}
   - title: {{ item.title }}
     url:   {{ item.url }}
-  song_id:   {{ item.song_id }}
 {% endfor %}
 
   </pre>
@@ -54,7 +53,7 @@ ITEMS (titles + URLs):
         </div>
       {% else %}
         <!-- SONG PAGE MODE -->
-        <a class="carousel-tile" data-song="{{ item.song_id }}" href="{{ item.url }}">
+        <a class="carousel-tile" data-song="{{ song_id }}" href="{{ item.url }}">
           <img src="{{ item.image }}" alt="{{ song.title }}">
           <h3 class="tile-title">{{ song.title }}</h3>
         </a>

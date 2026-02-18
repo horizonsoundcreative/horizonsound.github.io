@@ -63,7 +63,7 @@ new_releases:
 
   - title: "After the Silence - Half of Me - Track 6" # After the Silence Album track
     url: "/music/ats-6-half-of-me/"
-    image: "/assets/After the Silence.jpeg - Track 7"
+    image: "/assets/After the Silence.jpeg"
     videostatus: "Public"
 
 spotlight:

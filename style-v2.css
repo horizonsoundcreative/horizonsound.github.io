@@ -669,12 +669,28 @@ footer {
 .playlist-lyrics .section-header {
   text-align: center;
   font-size: 1.8rem;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 
 .playlist-about,
 .playlist-lyrics {
   margin-top: 1.5rem;
+}
+
+.playlist-about-text p,
+.playlist-lyrics-text p {
+  margin: 0.4rem 0;
+  line-height: 1.35;
+}
+
+.playlist-about .centered-column,
+.playlist-lyrics .lyrics-block {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.playlist-lyrics {
+  margin-top: 1.25rem;
 }
 
 /* ============================================

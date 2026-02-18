@@ -143,7 +143,7 @@ title: Music – Horizon Sound
   
           <div class="tile-grid">
             {% for song in playlist_sorted %}
-              <a class="tile" href="{{ song.url }}">
+              <a class="tile" href="{{ song.url | append: '/' | replace: '//', '/' }}">
                 <img src="{{ song.image }}" alt="{{ song.title }}">
                 <h3 class="tile-title">{{ song.title }}</h3>
               </a>
@@ -166,7 +166,7 @@ title: Music – Horizon Sound
       {% assign all_sorted = all_songs | sort: "title" %}
       <div class="tile-grid">
         {% for song in all_sorted %}
-          <a class="tile" href="{{ song.url }}">
+          <a class="tile" href="{{ song.url | append: '/' | replace: '//', '/' }}">
             <img src="{{ song.image }}" alt="{{ song.title }}">
             <h3 class="tile-title">{{ song.title }}</h3>
           </a>

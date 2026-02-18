@@ -4,7 +4,7 @@
   <div class="tile-grid">
     {% for tile in include.items %}
       {% if tile.playlist_id %}
-        <a class="tile" href="/playlists/{{ tile.playlist_id }}/">
+        <a class="tile" href="/music/playlists/{{ tile.playlist_id }}/">
       {% else %}
         <a class="tile" href="{{ tile.url }}">
       {% endif %}

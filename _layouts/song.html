@@ -22,6 +22,9 @@ BUILD PLAYLIST FOR CAROUSEL (old system)
 
 <main>
   <script>
+    window.currentSongId = "{{ page.song_id }}";
+  </script>
+  <script>
     window.allSongs = {{ site.data.music.songs | jsonify }};
   </script>
 
@@ -123,6 +126,27 @@ document.addEventListener("DOMContentLoaded", function () {
   tiles.forEach(tile => {
     tile.addEventListener("click", () => {
 
+        
+      // ⭐ INITIAL SELECTION LOGIC
+      let initialId = window.currentSongId;
+      
+      // If no specific song is passed, default to the first tile
+      if (!initialId && tiles.length > 0) {
+        initialId = tiles[0].dataset.song;
+      }
+      
+      const initialTile = [...tiles].find(t => t.dataset.song === initialId);
+      
+      if (initialTile) {
+        initialTile.classList.add("active");
+      
+        const song = window.allSongs?.find(s => s.song_id === initialId);
+        if (iframe && song?.youtube_id) {
+          iframe.src = "https://www.youtube.com/embed/" + song.youtube_id;
+        }
+      }
+  
+        
       console.log("=== SONG PAGE TILE CLICKED ===");
       console.log("Tile element:", tile);
       console.log("dataset.song:", tile.dataset.song);

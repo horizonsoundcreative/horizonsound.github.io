@@ -89,46 +89,51 @@ SONG IDS FROM PLAYLIST:
   <!-- ⭐ END PLAYER FRAME ⭐ -->
   
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const aboutEl = document.getElementById("playlist-about");
-    const lyricsEl = document.getElementById("playlist-lyrics");
+    document.addEventListener("DOMContentLoaded", function () {
+      const aboutEl = document.getElementById("playlist-about");
+      const lyricsEl = document.getElementById("playlist-lyrics");
+      const iframe = document.querySelector(".video-wrapper iframe");
+    
+      // Load first song
+      const first = window.allSongs[0];
+      if (first) {
+        aboutEl.innerHTML = first.description || "";
+        lyricsEl.innerHTML = first.lyrics || "";
+      }
+    
+      // Tile click handler
+      document.querySelectorAll(".carousel-tile").forEach(tile => {
+        tile.addEventListener("click", () => {
+          const id = tile.dataset.song;
+          const song = window.allSongs.find(s => s.song_id === id);
   
-    const first = window.allSongs[0];
-    if (first) {
-      aboutEl.innerHTML = first.description || "";
-      lyricsEl.innerHTML = first.lyrics || "";
-    }
-      
-    document.querySelectorAll(".carousel-tile").forEach(tile => {
-      tile.addEventListener("click", () => {
+          console.log("=== PLAYLIST TILE CLICKED ===");
+          console.log("Tile element:", tile);
+          console.log("dataset.song:", tile.dataset.song);
+          console.log("window.allSongs:", window.allSongs);
+          console.log("Matched song:", song);
   
-        console.log("=== PLAYLIST TILE CLICKED ===");
-        console.log("Tile element:", tile);
-        console.log("dataset.song:", tile.dataset.song);
-        console.log("window.allSongs:", window.allSongs);
+          if (!song) {
+            console.warn("NO SONG FOUND FOR ID:", id);
+            return;
+          }
+    
+          // ⭐ Update video
+          if (iframe) {
+            iframe.src = `https://www.youtube.com/embed/${song.youtube_id}`;
+          }
+    
+          // ⭐ Update About + Lyrics
+          aboutEl.innerHTML = song.description || "";
+          lyricsEl.innerHTML = song.lyrics || "";
+    
+          // ⭐ Update active tile
+          document.querySelectorAll(".carousel-tile").forEach(t => t.classList.remove("active"));
+          tile.classList.add("active");
   
-        const id = tile.dataset.song;
-        const song = window.allSongs.find(s => s.song_id === id);
-  
-        console.log("Matched song:", song);
-  
-        if (!song) {
-          console.warn("NO SONG FOUND FOR ID:", id);
-          return;
-        }
-  
-        // ⭐ ADD THIS ⭐
-        const iframe = document.querySelector(".video-wrapper iframe");
-        if (iframe) {
-          iframe.src = `https://www.youtube.com/embed/${song.youtube_id}`;
-        }
-
-        aboutEl.innerHTML = song.description || "";
-        lyricsEl.innerHTML = song.lyrics || "";
-  
-        console.log("About/Lyrics updated.");
+          console.log("About/Lyrics updated.");
+        });
       });
     });
-  });
   </script>
 </main>

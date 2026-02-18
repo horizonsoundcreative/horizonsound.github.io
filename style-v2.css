@@ -869,6 +869,17 @@ footer {
   text-align: left !important;
 }
 
+/* PLAYLIST PAGE — align playlist title with player left edge */
+.playlist-header .section-header {
+  text-align: left !important;
+  margin-left: 40px !important;
+}
+
+.playlist-header .playlist-subtitle {
+  text-align: left !important;
+  margin-left: 40px !important;
+}
+
 /* ============================================
    MOBILE — CAROUSEL TILE RESIZE (FINAL)
 ============================================ */

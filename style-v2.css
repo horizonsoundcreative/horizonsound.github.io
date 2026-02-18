@@ -259,27 +259,6 @@ footer {
   display: block;
 }
 
-@media (max-width: 600px) {
-  .carousel-tile {
-    flex: 0 0 40vw;
-  }
-
-  .carousel-tile img {
-    height: 28vw;
-  }
-
-  /* Reduce title height */
-  .carousel-tile .tile-title {
-    height: 48px;
-    font-size: 0.85rem;
-  }
-
-  /* Reduce arrow height */
-  .carousel-arrow {
-    height: 120px;
-  }
-}
-
 .carousel-tile.active {
   border: 3px solid rgba(180, 120, 220, 0.65);
   box-shadow: 0 0 12px rgba(180, 120, 220, 0.45);
@@ -888,4 +867,26 @@ footer {
   color: #e8e8e8 !important;
   white-space: pre-line !important;
   text-align: left !important;
+}
+
+/* ============================================
+   MOBILE — CAROUSEL TILE RESIZE
+============================================ */
+@media (max-width: 600px) {
+  .carousel-tile {
+    flex: 0 0 40vw !important;
+  }
+
+  .carousel-tile img {
+    height: 28vw !important;
+  }
+
+  .carousel-tile .tile-title {
+    height: 48px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .carousel-arrow {
+    height: 120px !important;
+  }
 }

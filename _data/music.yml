@@ -543,13 +543,70 @@ songs:
     videostatus: "Public"
     primary_playlist: "Emotional Ballads"
 
-  - title: "A Quiet Little Voice"
-    subtitle: "" 
-    youtube_id: "_YvJOMi6lP0" 
+  - song_id: "a-quiet-little-voice"
+    title: "A Quiet Little Voice"
+    subtitle: ""
+    youtube_id: "_YvJOMi6lP0"
     url: "/music/a-quiet-little-voice/"
     image: "/assets/A Quiet Little Voice.jpeg"
     videostatus: "Public"
     primary_playlist: "Emotional Ballads"
+    sequence: 1
+  
+    description_html: |
+      <p><strong>Official audio for "A Quiet Little Voice" by Horizon Sound.</strong></p>
+  
+      <p>“A Quiet Little Voice” is an upbeat, empowering pop track with a bright, confident female vocal and modern, energetic production. Crisp drums, warm synths, rhythmic guitars, and uplifting melodic hooks create a polished, radio‑ready sound with a feel‑good, celebratory mood. The song features expressive female vocals only — no male vocals.</p>
+  
+      <p>This track tells the story of a girl who always knew who she was — beginning with a quiet inner voice that guided her through self‑discovery, transformation, love, and the creation of her own family. It’s a song about courage, identity, and the beauty of becoming yourself. Hopeful, emotional, and full of forward momentum, “New Beginnings” celebrates the journey toward living openly and joyfully.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> empowering pop, uplifting, emotional, modern<br>
+      🎤 <strong>Vocals:</strong> bright, expressive female lead<br>
+      🎹 <strong>Production:</strong> crisp drums, warm synths, rhythmic guitars, shimmering textures<br>
+      🌈 <strong>Mood:</strong> celebratory, heartfelt, confident, inspiring</p>
+  
+    lyrics_html: |
+      <p>[Verse]<br>
+      In a crowded delivery room<br>
+      A nurse says to the new mother “Congratulations, It's a boy."<br>
+      But if they had been listening<br>
+      They would have heard her little voice saying<br>
+      "Mama, It's me. It's your daughter, the one you always wanted."<br>
+      It's been a journey to here, but she's here now<br>
+      Laying in your arms—<br>
+      A new beginning</p>
+  
+      <p>[Chorus]<br>
+      But it all began with that quiet little voice that always knew who she was<br>
+      And it was the courage to listen that got her here today</p>
+  
+      <p>[Verse]<br>
+      And that quiet little voice turned into hormones that slowly started to soften her features<br>
+      She began to see herself for the first time<br>
+      Her new reflection began to match her soul<br>
+      That quiet little voice was replaced with the confidence to speak up and be heard<br>
+      The confidence to finally say yes to the boy that she had been seeing and to love him fully<br>
+      To let herself be loved<br>
+      The quiet little voice turned into their loud declaration of love</p>
+  
+      <p>[Chorus]<br>
+      And that love turned into an engagement<br>
+      And the engagement will turn into a marriage<br>
+      And one day<br>
+      That marriage will bring forth new life</p>
+  
+      <p>[Verse]<br>
+      In a crowded delivery room<br>
+      A nurse will say to her<br>
+      "Congratulations<br>
+      It's a girl."<br>
+      But she'll already know<br>
+      Because she learned a long time ago to always listen to that quiet little voice<br>
+      Because it was that voice that knew the whole time<br>
+      And it was that voice that got her here today</p>
+  
+      <p>[Outro]<br>
+      A new beginning</p>
 
   - title: "Becoming Me"
     subtitle: "" 

@@ -109,6 +109,7 @@ SONG IDS FROM PLAYLIST:
       // ⭐ Load the first song on page load
       const first = window.allSongs[0];
       console.log("First song object:", first);
+      console.log("First song keys:", Object.keys(first));
     
       if (first) {
         const initialDescription = first.description || "";
@@ -155,6 +156,7 @@ SONG IDS FROM PLAYLIST:
           const song = window.allSongs.find(s => s.song_id === id);
     
           console.log("Matched song for click:", song);
+          console.log("Clicked song keys:", Object.keys(song));
     
           if (!song) {
             console.warn("NO SONG FOUND FOR ID:", id);

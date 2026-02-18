@@ -90,7 +90,7 @@ PLAYLIST SORTED (final list for carousel)
     <div class="centered-column">
       <h2 class="section-header">About the Song</h2>
       <div class="song-description">
-        {{ page.about | markdownify }}
+        {{ meta.description_html }}
       </div>
     </div>
   </section>
@@ -99,7 +99,7 @@ PLAYLIST SORTED (final list for carousel)
   <section class="song-lyrics">
     <div class="lyrics-block">
       <h2 class="section-header">Lyrics</h2>
-      {{ page.lyrics | markdownify }}
+      {{ meta.lyrics_html }}
     </div>
   </section>
   

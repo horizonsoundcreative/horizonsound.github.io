@@ -872,15 +872,15 @@ footer {
 /* ============================================
    MOBILE — CAROUSEL TILE RESIZE (FINAL)
 ============================================ */
-@media (max-width: 100px) {
+@media (max-width: 600px) {
 
   /* Override the more specific selectors */
   .player-frame .carousel-tile {
-    flex: 0 0 40vw !important;
+    flex: 0 0 34vw !important;
   }
 
   .player-frame .carousel-tile img {
-    height: 28vw !important;
+    height: 24vw !important;
   }
 
   .player-frame .carousel-tile .tile-title {

@@ -14,39 +14,39 @@
   </script>
 
   <link rel="stylesheet" href="/style-v2.css?v=1" />
-</head>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    if (window.isPlaylistPage) return; // ← Skip global behavior on playlist page
-  
-    const tiles = document.querySelectorAll(".carousel-tile, .playlist-tile");
-    const iframe = document.querySelector(".video-wrapper iframe");
-  
-    if (!tiles.length) return;
-  
-      tiles.forEach(tile => {
-        tile.addEventListener("click", () => {
-      
-          // ⭐ DEBUG: See what the tile reports and what the lookup returns
-          console.log("Clicked tile:", tile.dataset.song);
-      
-          const songId = tile.dataset.song;
-          const song = window.allSongs?.find(s => s.song_id === songId);
-      
-          console.log("Matched song:", song);
-      
-          if (iframe && song?.youtube_id) {
-            iframe.src = "https://www.youtube.com/embed/" + song.youtube_id;
-          }
-      
-          tiles.forEach(t => t.classList.remove("active"));
-          tile.classList.add("active");
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.isPlaylistPage) return; // ← Skip global behavior on playlist page
+    
+      const tiles = document.querySelectorAll(".carousel-tile, .playlist-tile");
+      const iframe = document.querySelector(".video-wrapper iframe");
+    
+      if (!tiles.length) return;
+    
+        tiles.forEach(tile => {
+          tile.addEventListener("click", () => {
+        
+            // ⭐ DEBUG: See what the tile reports and what the lookup returns
+            console.log("Clicked tile:", tile.dataset.song);
+        
+            const songId = tile.dataset.song;
+            const song = window.allSongs?.find(s => s.song_id === songId);
+        
+            console.log("Matched song:", song);
+        
+            if (iframe && song?.youtube_id) {
+              iframe.src = "https://www.youtube.com/embed/" + song.youtube_id;
+            }
+        
+            tiles.forEach(t => t.classList.remove("active"));
+            tile.classList.add("active");
+          });
         });
+  
       });
-
     });
-  });
-</script>
+  </script>
+</head>
 <body>
   {% include header.html %}
   {% include hero.html %}

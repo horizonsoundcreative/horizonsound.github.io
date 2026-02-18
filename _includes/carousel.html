@@ -1,6 +1,6 @@
 {% assign items = include.playlist | default: include.songs %}
 
-{% if site.debug %}
+<!--{% if site.debug %} -->
 <div class="debug-block">
   <pre style="background:#111; color:#0ff; padding:1rem; white-space:pre-wrap;">
 
@@ -21,11 +21,12 @@ ITEMS (titles + URLs):
 {% for item in items %}
   - title: {{ item.title }}
     url:   {{ item.url }}
+  song_id:   {{ item.song_id }}
 {% endfor %}
 
   </pre>
 </div>
-{% endif %}
+<!--{% endif %} -->
 
 <div class="carousel" data-carousel>
 

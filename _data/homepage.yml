@@ -11,35 +11,85 @@ new_releases:
     image: "/assets/Before Midnight.jpeg"
     videostatus: "Public"
 
-  - title: "Lost in Silence"
+  - title: "A Way Back - Lost in Silence"
     url: "/music/lost-in-silence/"
     image: "/assets/lost-in-silence.jpg"
     videostatus: "Public"
 
-  - title: "Choosing Me (Her Version)"
+  - title: "A Way Back - Choosing Me (Her Version)"
     url: "/music/choosing-me-her-version/"
     image: "/assets/choosing-me-her-version.jpg"
     videostatus: "Public"
 
-  - title: "Choosing Me (His Version)"
+  - title: "A Way Back - Choosing Me (His Version)"
     url: "/music/choosing-me-his-version/"
     image: "/assets/choosing-me-his-version.jpg"
     videostatus: "Public"
 
+  - title: "A Touch of Light" # Instrumental track
+    url: "/music/instrumental-a-touch-of-light/"
+    image: "/assets/A Touch of Light.jpg"
+    videostatus: "Public"
+
+  - title: "The Moment You Breathe" # Instrumental track
+    url: "/music/instrumental-the-moment-you-breathe/"
+    image: "/assets/The Moment You Breathe.jpg"
+    videostatus: "Public"
+
+  - title: "After the Silence - The Quiet After" # After the Silence Album track
+    url: "/music/ats-1-the-quiet-after/"
+    image: "/assets/After the Silence.jpeg"
+    videostatus: "Public"
+
+  - title: "After the Silence - Borrowed Time" # After the Silence Album track
+    url: "/music/ats-2-borrowed-time/"
+    image: "/assets/After the Silence.jpeg"
+    videostatus: "Public"
+
+  - title: "After the Silence - Homesick For You" # After the Silence Album track
+    url: "/music/ats-3-homesick-for-you/"
+    image: "/assets/After the Silence.jpeg"
+    videostatus: "Public"
+  
+  - title: "After the Silence - The Way We Lied" # After the Silence Album track
+    url: "/music/ats-4-the-way-we-lied/"
+    image: "/assets/After the Silence.jpeg"
+    videostatus: "Public"
+
+  - title: "After the Silence - Paper Walls" # After the Silence Album track
+    url: "/music/ats-5-paper-walls/"
+    image: "/assets/After the Silence.jpeg"
+    videostatus: "Public"
+
+  - title: "After the Silence - Half of Me" # After the Silence Album track
+    url: "/music/ats-6-half-of-me/"
+    image: "/assets/After the Silence.jpeg"
+    videostatus: "Public"
+
 spotlight:
+  - title: "Kaleidoscope"
+    url: "/music/kaleidoscope/"
+    image: "/assets/Kaleidoscope.jpeg"
+    videostatus: "Public"
+
+  - title: "Time Capsule"
+    url: "/music/time-capsule/"
+    image: "/assets/Time Capsule.jpeg"
+    videostatus: "Public"
+
   - title: "The Man Behind the Bar"
     url: "/music/the-man-behind-the-bar/"
     image: "/assets/The Man Behind the Bar.jpeg"
     videostatus: "Public"
 
-  - title: "Until the Nightmare Ends"
-    url: "/music/until-the-nightmare-ends/"
-    image: "/assets/Until the Nightmare Ends.JPG"
-    videostatus: "Public"
-
   - title: "Total Eclipse (Years Later)"
     url: "/music/total-eclipse-years-later/"
     image: "/assets/Total Eclipse.jpeg"
+    videostatus: "Public"
+
+  - title: "Until the Nightmare Ends"
+    url: "/music/until-the-nightmare-ends/"
+    image: "/assets/Until the Nightmare Ends.JPG"
     videostatus: "Public"
 
   - title: "Already out the door"
@@ -62,19 +112,9 @@ spotlight:
     image: "/assets/One Hell of a Ride.jpeg"
     videostatus: "Public"
 
-  - title: "Time Capsule"
-    url: "/music/time-capsule/"
-    image: "/assets/Time Capsule.jpeg"
-    videostatus: "Public"
-
   - title: "Learning to Live Again"
     url: "/music/learning-to-live-again/"
     image: "/assets/Learning to Live Again.jpeg"
-    videostatus: "Public"
-
-  - title: "Kaleidoscope"
-    url: "/music/kaleidoscope/"
-    image: "/assets/Kaleidoscope.jpeg"
     videostatus: "Public"
 
 projects:

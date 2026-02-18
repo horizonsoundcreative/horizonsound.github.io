@@ -872,21 +872,13 @@ footer {
 /* ============================================
    MOBILE — CAROUSEL TILE RESIZE (FINAL)
 ============================================ */
-@media (max-width: 600px) {
-
-  /* Reduce padding so the carousel has more room */
-  .player-frame {
-    padding: 12px !important;
-    margin: 16px 12px !important;
-  }
-
-  /* Now the tile scaling becomes visible */
+@media (max-width: 450px) {
   .player-frame .carousel-tile {
-    flex: 0 0 32vw !important; /* smaller tiles */
+    flex: 0 0 32vw !important;
   }
 
   .player-frame .carousel-tile img {
-    height: 22vw !important; /* proportional image */
+    height: 22vw !important;
   }
 
   .player-frame .carousel-tile .tile-title {

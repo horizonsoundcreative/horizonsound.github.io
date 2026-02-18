@@ -94,11 +94,22 @@ SONG IDS FROM PLAYLIST:
       const lyricsEl = document.getElementById("playlist-lyrics");
       const iframe = document.querySelector(".video-wrapper iframe");
     
-      // Load first song
       const first = window.allSongs[0];
       if (first) {
+        // Load About + Lyrics
         aboutEl.innerHTML = first.description || "";
         lyricsEl.innerHTML = first.lyrics || "";
+    
+        // Load video
+        if (iframe) {
+          iframe.src = `https://www.youtube.com/embed/${first.youtube_id}`;
+        }
+    
+        // Mark first tile active
+        const firstTile = document.querySelector(`.carousel-tile[data-song="${first.song_id}"]`);
+        if (firstTile) {
+          firstTile.classList.add("active");
+        }
       }
     
       // Tile click handler

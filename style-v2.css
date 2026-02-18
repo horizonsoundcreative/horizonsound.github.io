@@ -922,3 +922,40 @@ footer {
     height: 100px !important;
   }
 }
+
+/* ============================================
+   PLAYLIST PAGE — FINAL TIGHTENING
+============================================ */
+
+/* Reduce space above About + Lyrics sections */
+.playlist-about,
+.playlist-lyrics {
+  margin-top: 0.75rem !important;
+}
+
+/* Tighten section headers */
+.playlist-about .section-header,
+.playlist-lyrics .section-header {
+  font-size: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+  margin-top: 0 !important;
+}
+
+/* Tighten paragraph spacing inside About + Lyrics */
+.playlist-about-text p,
+.playlist-lyrics-text p {
+  margin: 0.25rem 0 !important;
+  line-height: 1.35 !important;
+}
+
+/* Remove extra padding from wrappers */
+.playlist-about .centered-column,
+.playlist-lyrics .lyrics-block {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Reduce space between About → Lyrics */
+.playlist-lyrics {
+  margin-top: 0.75rem !important;
+}

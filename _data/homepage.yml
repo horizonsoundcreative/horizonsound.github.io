@@ -36,34 +36,34 @@ new_releases:
     image: "/assets/The Moment You Breathe.jpg"
     videostatus: "Public"
 
-  - title: "After the Silence - The Quiet After" # After the Silence Album track
+  - title: "After the Silence - The Quiet After - Track 1" # After the Silence Album track
     url: "/music/ats-1-the-quiet-after/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Public"
 
-  - title: "After the Silence - Borrowed Time" # After the Silence Album track
+  - title: "After the Silence - Borrowed Time - Track 2" # After the Silence Album track
     url: "/music/ats-2-borrowed-time/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Public"
 
-  - title: "After the Silence - Homesick For You" # After the Silence Album track
+  - title: "After the Silence - Homesick For You - Track 3" # After the Silence Album track
     url: "/music/ats-3-homesick-for-you/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Public"
   
-  - title: "After the Silence - The Way We Lied" # After the Silence Album track
+  - title: "After the Silence - The Way We Lied - Track 4" # After the Silence Album track
     url: "/music/ats-4-the-way-we-lied/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Public"
 
-  - title: "After the Silence - Paper Walls" # After the Silence Album track
+  - title: "After the Silence - Paper Walls - Track 5" # After the Silence Album track
     url: "/music/ats-5-paper-walls/"
     image: "/assets/After the Silence.jpeg"
     videostatus: "Public"
 
-  - title: "After the Silence - Half of Me" # After the Silence Album track
+  - title: "After the Silence - Half of Me - Track 6" # After the Silence Album track
     url: "/music/ats-6-half-of-me/"
-    image: "/assets/After the Silence.jpeg"
+    image: "/assets/After the Silence.jpeg - Track 7"
     videostatus: "Public"
 
 spotlight:

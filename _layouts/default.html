@@ -25,7 +25,6 @@
     
 tiles.forEach(tile => {
   tile.addEventListener("click", (event) => {
-    event.preventDefault(); // ⭐ Prevent navigation so console logs stay visible
 
     console.log("Clicked tile:", tile.dataset.song);
 

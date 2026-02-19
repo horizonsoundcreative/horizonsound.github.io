@@ -105,7 +105,7 @@ songs:
     primary_playlist: "Midnight Saga"
     sequence: 3
 
-    - title: "Midnight Mayhem" # Midnight Saga track
+  - title: "Midnight Mayhem" # Midnight Saga track
     song_id: "midnight-saga-midnight-mayhem"
     subtitle: "Midnight Saga | Part 2" 
     youtube_id: "Z6AGhE0K-Ro" 

@@ -170,7 +170,6 @@ SONGS MATCHED:
         <section class="playlist-section">
           <h2 class="section-header">{{ list }}</h2>
           <div class="tile-grid">
-            {# First: all public songs #}
             {% for song in playlist_sorted %}
               {% if song.videostatus == "Public" %}
                 <a class="tile" href="{{ song.url }}">
@@ -180,7 +179,6 @@ SONGS MATCHED:
               {% endif %}
             {% endfor %}
           
-            {# Second: all non-public (Coming Soon) songs #}
             {% for song in playlist_sorted %}
               {% unless song.videostatus == "Public" %}
                 <div class="tile coming-soon">

@@ -1,135 +1,4 @@
 songs:
-  - title: "Sheriff for a Night"
-    subtitle: "" 
-    youtube_id: "oMSIQ5Gv2ZI" 
-    url: "/music/sheriff-for-a-night/"
-    image: "/assets/Sheriff for the Night.jpeg"
-    videostatus: "Private"
-    primary_playlist: "Classic Country"
-
-  - title: "Wildfire"
-    subtitle: "" 
-    youtube_id: "Tc0wt00clNM" 
-    url: "/music/wildfire/"
-    image: "/assets/Wildfire.jpg"
-    videostatus: "Private"
-    primary_playlist: "Modern Country"
-
-  - title: "Venice Waters" # Venice-Missing Stamp track
-    song_id: "venice-venice-waters"
-    subtitle: "Venice | Part 3" 
-    youtube_id: "LzfM1PRxpVU" 
-    url: "/music/venice-3-venice-waters/"
-    image: "/assets/Venice Waters.jpeg"
-    videostatus: "Private"
-    primary_playlist: "Venice - Missing Stamp"
-    sequence: 3
-
-  - title: "Missing Stamp" # Venice-Missing Stamp track
-    song_id: "venice-missing-stamp"
-    subtitle: "Venice | Part 2" 
-    youtube_id: "fbBWIohiOwI" 
-    url: "/music/venice-2-missing-stamp/"
-    image: "/assets/Missing Stamp.jpeg"
-    videostatus: "Private"
-    primary_playlist: "Venice - Missing Stamp"
-    sequence: 2
-
-  - title: "Someday" # Venice-Missing Stamp track
-    song_id: "venice-someday"
-    subtitle: "Venice | Part 1" 
-    youtube_id: "2cv-H5tTygs" 
-    url: "/music/venice-1-someday/"
-    image: "/assets/Someday.jpeg"
-    videostatus: "Private"
-    primary_playlist: "Venice - Missing Stamp"
-    sequence: 1
-  
-  - title: "Rusty"
-    subtitle: "" 
-    youtube_id: "Z8VipNxTybQ" 
-    url: "/music/rusty/"
-    image: "/assets/Rusty.jpeg"
-    videostatus: "Public"
-    primary_playlist: "Emotional Ballads"
-
-  - title: "The Man Behind the Bar"
-    subtitle: "" 
-    youtube_id: "3EOLlL-P120" 
-    url: "/music/the-man-behind-the-bar/"
-    image: "/assets/The Man Behind the Bar.jpeg"
-    videostatus: "Public"
-    primary_playlist: "Modern Country"
-
-  - title: "Time Capsule"
-    subtitle: "" 
-    youtube_id: "-zbAWN1M_qo" 
-    url: "/music/time-capsule/"
-    image: "/assets/Time Capsule.jpeg"
-    videostatus: "Public"
-    primary_playlist: "Modern Country"
-
-  - title: "Put You Down"
-    subtitle: "" 
-    youtube_id: "niNtLrtDcBs" 
-    url: "/music/put-you-down/"
-    image: "/assets/Put You Down.jpeg"
-    videostatus: "Public"
-    primary_playlist: "Pop"
-
-  - title: "Rising Up"
-    subtitle: "" 
-    youtube_id: "miFZlNNAriw" 
-    url: "/music/rising-up/"
-    image: "/assets/Rising Up.jpeg"
-    videostatus: "Public"
-    primary_playlist: "Pop"
-
-  - title: "Rise Like Thunder"
-    subtitle: "" 
-    youtube_id: "g_AZ5B9ssFQ" 
-    url: "/music/rise-like-thunder/"
-    image: "/assets/Rise Like Thunder New.jpeg"
-    videostatus: "Public"
-    primary_playlist: "Pop"
-
-  - title: "Total Eclipse (Years Later)"
-    subtitle: "" 
-    youtube_id: "vlB58WPvjns" 
-    url: "/music/total-eclipse-years-later/"
-    image: "/assets/Total Eclipse.jpeg"
-    videostatus: "Public"
-    primary_playlist: "Pop"
-
-  - title: "One Hell of a Ride"
-    subtitle: "" 
-    youtube_id: "3iAmG5GLC7k" 
-    url: "/music/one-hell-of-a-ride/"
-    image: "/assets/One Hell of a Ride.jpeg"
-    videostatus: "Public"
-    primary_playlist: "Southern Rock"
-
-  - title: "Until the Nightmare Ends"
-    subtitle: "" 
-    youtube_id: "gDkCGYOpWU0" 
-    url: "/music/until-the-nightmare-ends/"
-    image: "/assets/Until the Nightmare Ends.JPG"
-    videostatus: "Public"
-    primary_playlist: "Pop"
-
-# working structure *****************************************************************
-
-
-
-
-
-
-
-
-
-
-# Everything below this point has been updated to the new structure **************************************
-
   - song_id: "a-quiet-little-voice"
     title: "A Quiet Little Voice"
     subtitle: ""
@@ -4359,3 +4228,1340 @@ songs:
       Now I'm new again
       (Now I'm new again)
       Now I’m new again… and I won’t be yours again.</p>
+  
+  - title: "Rusty"
+    subtitle: ""
+    youtube_id: "Z8VipNxTybQ"
+    url: "/music/rusty/"
+    image: "/assets/Rusty.jpeg"
+    videostatus: "Public"
+    primary_playlist: "Emotional Ballads"
+    description_html: |
+      <p><strong>Official audio for “Rusty” by Horizon Sound.</strong></p>
+  
+      <p>“Rusty” is an emotional 80s‑inspired pop ballad built on warm shimmering synth pads, bright chorus‑soaked guitars, and a steady, heartbeat‑like drum pulse. Soaring female vocals carry a hopeful, nostalgic tone, wrapped in lush reverb and airy harmonies that create a glowing, sunset‑on‑the‑beach atmosphere. The track blends bittersweet reflection with uplifting warmth, rising into a smooth, dreamy chorus that feels both intimate and cinematic.</p>
+  
+      <p>This song tells the story of someone who finds unexpected healing through the smallest companion — a soft, gentle friend who brings light back into her life. In the quiet moments, she rediscovers joy, laughter, and the version of herself she thought she’d lost. “Rusty” captures the tender transformation that happens when love arrives in an unexpected form, reminding her she’s stronger, softer, and more alive than she realized.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> emotional 80s pop, warm, nostalgic, uplifting<br>
+      🎤 <strong>Vocals:</strong> heartfelt female lead, airy harmonies, expressive delivery<br>
+      🎛️ <strong>Production:</strong> shimmering synth pads, chorus‑washed guitars, steady pulse, cinematic reverb<br>
+      ⚡ <strong>Mood:</strong> hopeful, tender, comforting, quietly triumphant</p>
+  
+    lyrics_html: |
+      <p>[Verse 1]
+      I was drifting through the days, barely holding on,
+      Lost inside the quiet where nights felt way too long.
+      Every sunrise felt a lifetime away,
+      Till a soft little friend found me one bright day.</p>
+  
+      <p>[Pre‑Chorus]
+      I didn’t know I needed something gentle, something true,
+      A reason just to wake up, something warm to pull me through.</p>
+  
+      <p>[Chorus]
+      And Rusty, you were light in the dark,
+      A tiny spark that found my heart.
+      You gave me something I could hold,
+      A little hope when life felt cold.
+      You were soft as the dawn,
+      A steady place to lean upon.
+      You helped me find the girl I’d lost inside —
+      You brought me back to life.</p>
+  
+      <p>[Verse 2]
+      Sunlight on the carpet, lighting up your fur,
+      Funny how the smallest things make the whole world right.
+      I started laughing more, living in the joy,
+      You were small, but you showed me the way.</p>
+  
+      <p>[Pre‑Chorus]
+      You taught me how to slow down, how to feel the world again,
+      How healing starts in quiet with a soft and steady friend.</p>
+  
+      <p>[Chorus]
+      And Rusty, you were light in the dark,
+      A tiny spark that found my heart.
+      You gave me something I could hold,
+      A little hope when life felt cold.
+      You were soft as the dawn,
+      A steady place to lean upon.
+      You helped me find the girl I’d lost inside —
+      You brought me back to life.</p>
+  
+      <p>[Bridge]
+      Maybe love can look like something small,
+      A tiny heartbeat in my arms.
+      You showed me I was stronger than I knew,
+      And somehow loving you helped me love me too.</p>
+  
+      <p>[Chorus]
+      And Rusty, you were light in the dark,
+      A tiny spark that found my heart.
+      You gave me something I could hold,
+      A little hope when life felt cold.
+      You were soft as the dawn,
+      A steady place to lean upon.
+      You helped me find the girl I’d lost inside —
+      You brought me back to life.</p>
+  
+  - title: "Rising Up"
+    subtitle: ""
+    youtube_id: "miFZlNNAriw"
+    url: "/music/rising-up/"
+    image: "/assets/Rising Up.jpeg"
+    videostatus: "Public"
+    primary_playlist: "Pop"
+    description_html: |
+      <p><strong>Official audio for “Rising Up” by Horizon Sound.</strong></p>
+  
+      <p>“Rising Up” is an energetic emotional pop‑rock duet driven by bright synths, clean electric guitar, and powerful male/female vocals. The track blends expressive harmonies, dynamic call‑and‑response phrasing, and anthemic choruses with a polished 90s/early‑2000s pop‑rock feel. Driving drums, melodic hooks, and a wide, electric mix create a bold, uplifting sound full of momentum and fire.</p>
+  
+      <p>This song tells the story of breaking free from fear, stepping out of the dark, and reclaiming strength after being held down. It’s about rediscovering courage, finding your voice, and rising into the person you were meant to be. Emotional, electric, and empowering, “Rising Up” captures the moment you stop surviving — and start becoming unstoppable.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> energetic pop‑rock, emotional, uplifting, anthemic<br>
+      🎤 <strong>Vocals:</strong> soaring male + female leads, expressive harmonies<br>
+      🎸 <strong>Production:</strong> bright synths, clean electric guitar, driving drums<br>
+      ⚡ <strong>Mood:</strong> powerful, electric, determined, triumphant</p>
+  
+    lyrics_html: |
+      <p>[VERSE 1]
+      I’ve been walking through the shadows with my head down low,
+      trying to find a little light on a long, dark road.
+      Every step feels heavy like I’m dragging chains,
+      but I’m done letting fear decide who I am.</p>
+  
+      <p>[PRE CHORUS]
+      There’s a voice inside that won’t stay quiet,
+      a flicker in the dark that starts a riot.
+      Something in me rising through the silence,
+      pulling me toward a fire starting to burn.</p>
+  
+      <p>[CHORUS]
+      I’m stepping out of the dark that bound me,
+      feeling light where the shadows used to be.
+      I’m standing strong with the hope around me,
+      every heartbeat steady, loud, and free.
+      And when the night tries to pull me under,
+      I’ll lift my voice and roll like thunder.
+      I’m rising up — this is where I begin.</p>
+  
+      <p>[VERSE 2]
+      I’ve been learning to breathe in a brand‑new way,
+      letting go of all the weight that I held each day.
+      There’s a fire in my chest that I can’t ignore,
+      it’s lighting up a road I’m finally ready for.</p>
+  
+      <p>[PRE CHORUS]
+      And every step I take feels a little brighter,
+      the weight I carried now feels lighter.
+      I’m finding pieces of a fighter
+      I never knew were rising deep inside.</p>
+  
+      <p>[CHORUS]
+      I’m stepping out of the dark that bound me,
+      feeling light where the shadows used to be.
+      I’m standing strong with the hope around me,
+      every heartbeat steady, loud, and free.
+      And when the night tries to pull me under,
+      I’ll lift my voice and roll like thunder.
+      I’m rising up — this is where I begin.</p>
+  
+      <p>[VERSE 3]
+      Now I’m running with a heartbeat that won’t slow down,
+      every mile I cross feels like sacred ground.
+      I’m not the person that I used to be —
+      I’m a storm breaking loose, I’m finally free.</p>
+  
+      <p>[BRIDGE]
+      I’ve been held down, pushed down, torn apart,
+      but I kept a little hope in the corner of my heart.
+      Now I’m standing in the light of a brand‑new start,
+      and I’m never going back to the dark.</p>
+  
+      <p>[CHORUS]
+      I’m stepping out of the dark that bound me,
+      feeling light where the shadows used to be.
+      I’m standing strong with the hope around me,
+      every heartbeat steady, loud, and free.
+      And when the night tries to pull me under,
+      I’ll lift my voice and roll like thunder.
+      I’m rising up — this is where I begin.</p>
+  
+      <p>[Outro]
+      I’m rising up…
+      And I won’t fall again—
+      And I won’t fall again—
+      No, I won’t fall again—</p>
+  
+  - title: "Rise Like Thunder"
+    subtitle: ""
+    youtube_id: "g_AZ5B9ssFQ"
+    url: "/music/rise-like-thunder/"
+    image: "/assets/Rise Like Thunder New.jpeg"
+    videostatus: "Public"
+    primary_playlist: "Pop"
+    description_html: |
+      <p><strong>Official audio for “Rise Like Thunder” by Horizon Sound.</strong></p>
+  
+      <p>“Rise Like Thunder” is an electrifying 1980s‑inspired rock anthem featuring powerful raspy female vocals, soaring harmonies, and driving overdriven guitars. Bright melodic riffs, big arena drums with gated reverb, and bold analog production create a high‑energy, triumphant sound that feels straight out of a classic stadium performance.</p>
+  
+      <p>The song captures the rise from obscurity to the spotlight — the grind, the fire, the loyalty, and the unshakable belief that music can turn small‑town dreams into something bigger than life. With its explosive chorus and fierce attitude, “Rise Like Thunder” celebrates the moment when passion, persistence, and raw talent collide. It’s loud, proud, and built to be sung at full volume.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> 80s arena rock, energetic, triumphant<br>
+      🎤 <strong>Vocals:</strong> powerful, raspy, harmony‑rich<br>
+      🎸 <strong>Production:</strong> overdriven guitars, melodic riffs, gated‑reverb drums<br>
+      🔥 <strong>Mood:</strong> bold, uplifting, adrenaline‑charged</p>
+  
+    lyrics_html: |
+      <p>[VERSE 1]
+      Neon turned to headlines overnight,
+      One spark lighting up a restless crowd.
+      We kept our hearts steady through the noise and the rush,
+      Never letting all the praise get loud.
+      Every open door felt wild and new,
+      But we held on tight to the fire we knew.</p>
+  
+      <p>[PRE‑CHORUS]
+      We felt the ground start shaking under our feet,
+      A rumble turning into a wildfire beat…</p>
+  
+      <p>[CHORUS]
+      We rise like thunder—coming in hot,
+      Hearts on fire with everything we’ve got.
+      From the back‑room shadows to the front‑row lights,
+      We’re the spark that explodes into glory tonight.
+      Oh, we rise—yeah, we rise like thunder.</p>
+  
+      <p>[VERSE 2]
+      Radio caught us on a midnight spin,
+      Rolling through the dark of a world gone cold.
+      One song climbing like a runaway train,
+      Every note we played turned into gold.
+      But we kept our boots on solid ground,
+      Still the same wild hearts the world sees now.</p>
+  
+      <p>[PRE‑CHORUS]
+      The crowd got louder, but we stayed true,
+      Still the same wild souls we always knew…</p>
+  
+      <p>[CHORUS]
+      We rise like thunder—coming in hot,
+      Hearts on fire with everything we’ve got.
+      From the back‑room shadows to the front‑row lights,
+      We’re the spark that explodes into glory tonight.
+      Oh, we rise—yeah, we rise like thunder.</p>
+  
+      <p>[BRIDGE]
+      Hands up, hear the roar—
+      This is what we’re fighting for.
+      Every voice, every night,
+      Turns our spark into a sky full of light.
+      We remember where we came from—always will…
+      But damn, this dream is real.</p>
+  
+      <p>[VERSE 3]
+      Now it’s stadium lights and a sea of flame,
+      Crowds singing every song we wrote.
+      Still feel that first chord shaking our bones,
+      Still feel the fire rising in our throats.
+      From the small‑town nights to the world so wide,
+      We carry every small‑town dream inside.</p>
+  
+      <p>[PRE‑CHORUS]
+      The louder it gets, the more we know—
+      This is love, this is home, this is rock‑and‑roll…</p>
+  
+      <p>[CHORUS]
+      We rise like thunder—coming in hot,
+      Hearts on fire with everything we’ve got.
+      From the back‑room shadows to the front‑row lights,
+      We’re the spark that explodes into glory tonight.
+      Oh, we rise—yeah, we rise like thunder.
+      And the world sings our name tonight.</p>
+  
+      <p>[OUTRO]
+      Still the same hearts… still the same fire…
+      Just louder now… higher now…
+      We rise like thunder…</p>
+  
+  - title: "Put You Down"
+    subtitle: ""
+    youtube_id: "niNtLrtDcBs"
+    url: "/music/put-you-down/"
+    image: "/assets/Put You Down.jpeg"
+    videostatus: "Public"
+    primary_playlist: "Pop"
+    description_html: |
+      <p><strong>Official audio for “Put You Down” by Horizon Sound.</strong></p>
+  
+      <p>“Put You Down” is a wild, high‑voltage electro‑pop banger packed with fierce attitude, distorted synth bass, and chaotic late‑night party energy. Hard‑hitting dance‑pop drums, glitchy vocal chops, and swagger‑soaked talk‑sing vocals drive the track with rebellious, unfiltered confidence. Explosive production, neon‑soaked textures, and a gritty, in‑your‑face edge make this a full‑throttle dancefloor meltdown.</p>
+  
+      <p>This song follows the story of someone who refuses to play small — a bold, unapologetic voice stepping into power, pushing boundaries, and daring someone to keep up. Sharp verses, a taunting chorus, and a fire‑lit bridge capture the tension between desire, danger, and total control. Loud, chaotic, and electrifying, “Put You Down” is the soundtrack to a midnight breakdown in the best possible way.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> high‑energy electro‑pop, chaotic, bold, rebellious<br>
+      🎤 <strong>Vocals:</strong> fierce female lead, talk‑sing swagger, glitchy vocal chops<br>
+      🎛️ <strong>Production:</strong> distorted synth bass, punchy drums, stutter FX, explosive drops<br>
+      ⚡ <strong>Mood:</strong> wild, unfiltered, confident, late‑night adrenaline</p>
+  
+    lyrics_html: |
+      <p>[Intro]
+      Ooh-ooh
+      Put you down
+      Ooh-ooh
+      Put you down</p>
+  
+      <p>[Verse 1]
+      Wanna be the sunshine in your black world
+      Wanna be the go-to in a bad girl
+      When you put your hands up
+      'Cause you think you have enough
+      I just wanna be the one to put you down</p>
+  
+      <p>[Pre-Chorus]
+      Put you down</p>
+  
+      <p>[Chorus]
+      If I let you know (No)
+      How far I'd go (Oh)
+      I don't think you would believe me
+      Wouldn't wanna be me
+      'Cause you're too scared
+      If I let you know (No)
+      How far I'd go (Oh)
+      I don't think you would believe me
+      Wouldn't wanna be me
+      'Cause you're too scared</p>
+  
+      <p>[Post-Chorus]
+      Ooh-ooh
+      Ooh-ooh
+      Ooh-ooh
+      Ooh-ooh</p>
+  
+      <p>[Verse 2]
+      Wanna be the one to make you shut up
+      Wanna be the force to make you give up
+      When you're looking at the door
+      'Cause you can't take it anymore
+      I just wanna be the one to put you out</p>
+  
+      <p>[Pre-Chorus]
+      Put you out</p>
+  
+      <p>[Bridge]
+      You say you want control
+      But you don’t wanna lose it
+      You say you want my love
+      But you’re too scared to use it
+      You’re running from the fire
+      But begging me to light it
+      If you want the real thing
+      Baby, come and try it</p>
+  
+      <p>[Chorus]
+      If I let you know (No)
+      How far I’d go (Oh)
+      I don’t think you would believe me
+      Wouldn’t wanna be me
+      ’Cause you’re too scared
+      If I let you know (No)
+      How far I’d go (Oh)
+      I don’t think you would believe me
+      Wouldn’t wanna be me
+      ’Cause you’re too scared</p>
+  
+      <p>[Chorus]
+      If I let you know (No)
+      How far I’d go (Oh)
+      You’d finally see the real me
+      But you’d never free me
+      ’Cause you’re too scared
+      If I let you know (No)
+      How far I’d go (Oh)
+      Baby, you could never keep me
+      You could never beat me
+      ’Cause you’re too scared</p>
+  
+      <p>[Outro]
+      Ooh-ooh
+      Put you down
+      Ooh-ooh
+      I’m going to put you down—
+      Now!</p>
+  
+  - title: "One Hell of a Ride"
+    subtitle: ""
+    youtube_id: "3iAmG5GLC7k"
+    url: "/music/one-hell-of-a-ride/"
+    image: "/assets/One Hell of a Ride.jpeg"
+    videostatus: "Public"
+    primary_playlist: "Southern Rock"
+    description_html: |
+      <p><strong>Official audio for “One Hell of a Ride” by Horizon Sound.</strong></p>
+  
+      <p>“One Hell of a Ride” is a gritty southern‑rock anthem packed with swagger, highway‑freedom energy, and live‑show intensity. Crunchy blues‑rock guitar riffs, warm Hammond organ, punchy live drums, and a raw, charismatic male lead vocal drive the track with attitude. The production blends classic southern‑rock grit with modern polish, delivering a rowdy, rebellious, road‑tested sound.</p>
+  
+      <p>The song follows a touring rock band tearing across the world — raising hell, trashing hotel rooms, playing wild shows, and living fast without crossing into explicit territory. It’s loud, loose, and full of momentum, capturing the chaos, camaraderie, and adrenaline of life on the road.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> southern rock, blues‑rock, gritty, energetic, rebellious<br>
+      🎤 <strong>Vocals:</strong> raw, swagger‑filled male lead<br>
+      🎸 <strong>Production:</strong> crunchy riffs, blues‑rock harmonies, Hammond organ, punchy drums<br>
+      🚗 <strong>Mood:</strong> highway freedom, rowdy, live‑show intensity</p>
+  
+    lyrics_html: |
+      <p>[Verse 1]
+      Hit London city in a rust‑bucket ride,
+      Road dust on our boots, trouble in our eyes.
+      The clerk at the counter mutters, “Oh no,”
+      ’Cause he’s seen our kind, the chaos we sow.
+      We ain’t built for quiet, ain’t wired to behave,
+      Just chasin’ that wild streak the good Lord gave.</p>
+  
+      <p>[Pre‑Chorus]
+      Last night’s just a haze we can’t recall,
+      But the crowd keeps roarin’, so we give ’em our all.</p>
+  
+      <p>[Chorus]
+      ’Cause we’re a long‑haired band on a runaway ride,
+      Burnin’ up the map with the wind at our side.
+      Raise a glass, raise some hell, let the good times roll,
+      Leavin’ miles of trouble behind us wherever we go.
+      Yeah, we live loud, love wild, and sleep when we’re old.</p>
+  
+      <p>[Verse 2]
+      From Tokyo to Rio, we’re raisin’ up dust,
+      Hotel staff bangin’ like they don’t trust us.
+      Hallway’s a mess now, lamps shattered on the floor,
+      We swear we’ll behave — then we’re breakin’ down the door.
+      There’s a grin in the shadows, someone hummin’ our tune,
+      And we’re gone with the sunrise, leavin’ way too soon.</p>
+  
+      <p>[Pre‑Chorus]
+      Every night’s a story with a twist at the end,
+      But the road keeps callin’ like a long‑lost friend.</p>
+  
+      <p>[Chorus]
+      ’Cause we’re a long‑haired band on a runaway ride,
+      Burnin’ up the map with the wind at our side.
+      Raise a glass, raise some hell, let the good times roll,
+      Leavin’ miles of trouble behind us wherever we go.
+      Yeah, we live loud, love wild, and sleep when we’re old.</p>
+  
+      <p>[Bridge]
+      Some folks say we’re reckless, some say we’re blessed,
+      But we just keep movin’ and doin’ our best.
+      If the night gets rowdy, well, that’s how it goes —
+      You can’t cage a wildfire that’s out of control.</p>
+  
+      <p>[Pre‑Chorus]
+      We’ve been raisin’ hell nightly from coast to coast,
+      And we’re hittin’ that stage givin’ everything we’ve got.</p>
+  
+      <p>[Final Chorus]
+      ’Cause we’re a long‑haired band on a runaway ride,
+      Burnin’ up the map with the wind at our side.
+      Raise a glass, raise some hell, let the good times roll,
+      Leavin’ miles of trouble behind us wherever we go.
+      Yeah, we live loud, love wild, and sleep when we’re old.</p>
+  
+      <p>[Outro]
+      Dust in the rearview, moon on the chrome,
+      We ain’t slowin’ down till the good Lord calls us home.</p>
+  
+  - title: "Until the Nightmare Ends"
+    subtitle: ""
+    youtube_id: "gDkCGYOpWU0"
+    url: "/music/until-the-nightmare-ends/"
+    image: "/assets/Until the Nightmare Ends.JPG"
+    videostatus: "Public"
+    primary_playlist: "Pop"
+    description_html: |
+      <p><strong>Official audio for “Until the Nightmare Ends” by Horizon Sound.</strong></p>
+  
+      <p>"Until the Nightmare Ends" is a cinematic 80s‑inspired synthwave track built for fans of dark nostalgia, neon tension, and the Stranger Things universe. Pulsing bass, airy pads, dramatic tom fills, and widescreen synths drive this emotional, story‑driven song about friendship, fear, and fighting back when the shadows close in.</p>
+  
+      <p>This track blends retro synthwave, cinematic scoring, and anthemic pop‑rock energy—complete with electric‑guitar accents, rising atmospheric verses, and a huge, heroic chorus. The vocals carry the emotional weight of Hawkins: fear, loyalty, and the unbreakable bond that keeps the crew standing together even when the sky turns red.</p>
+  
+      <p>🎧 <strong>About the Song</strong></p>
+  
+      <p>Until the Nightmare Ends follows the Hawkins crew through flickering streetlights, psychic warnings, Demogorgon attacks, and Vecna’s rising threat. Each verse spotlights different characters—Mike, Eleven, Max, Hopper, Nancy, Steve, and more—while the chorus becomes a rallying cry: stand together, fight back, and hold the line until the nightmare ends.</p>
+  
+    lyrics_html: |
+      <p>[Intro]
+      Lights flicker in the Hawkins night,
+      Something creeping in the dark just beyond the light.
+      Walkie‑talkies hissing keeping them in line,
+      And the shadows on the wall feel wrong tonight.</p>
+  
+      <p>[Verse 1]
+      Mike’s on his bike with a plan he swears is right,
+      Dustin’s got the jokes and the gadgets to fight.
+      Lucas keeps watch, slingshot held tight,
+      And Will hears echoes calling from the other side.
+      Eleven’s in the doorway with that far off stare,
+      Nosebleed dripping like a psychic flare.
+      She whispers softly, “It’s coming… Run!”
+      And the streetlights die one by one.</p>
+  
+      <p>[Pre‑Chorus]
+      Every compass spinning off‑track,
+      Every shadow growing hostile,
+      Every heartbeat pounding louder than the storm outside…</p>
+  
+      <p>[Chorus]
+      We’re running through the dark
+      with every shadow closing in.
+      Breathing in the fear
+      as the whole world starts to break,
+      “Friends don’t lie,” so we hold on tight,
+      ’Cause the dark might rise and we’re ready to fight.
+      When the walls start cracking and the sky turns red,
+      We will fight like hell until the nightmare ends—
+      Yeah, we’re standing together
+      with a trust that never fades.</p>
+  
+      <p>[Verse]
+      Max on her skateboard, hair in the wind,
+      Billy’s ghost in the static, once a threat now a friend.
+      Hopper’s in the fire but he won’t back down,
+      Joyce feels danger rising all across the town.
+      Demogorgons crawling through the cracks in the ground,
+      Nancy lifts the shotgun, tracking movement all around,
+      Jonathan lifts the camera, framing what’s in store,
+      Steve swings the bat like he’s ready for war.</p>
+  
+      <p>[Pre‑Chorus]
+      Every siren in the distance,
+      Every moment screams resistance,
+      Every breath feels borrowed from the other side…</p>
+  
+      <p>[Chorus]
+      We’re running through the dark
+      with every shadow closing in.
+      Breathing in the fear
+      as the whole world starts to break,
+      “Friends don’t lie,” so we hold on tight,
+      ’Cause the dark might rise and we’re ready to fight.
+      When the walls start cracking and the sky turns red,
+      We will fight like hell until the nightmare ends—
+      Yeah, we’re standing together
+      with a trust that never fades.</p>
+  
+      <p>[Verse 3]
+      Vecna’s in the attic with a mind full of screams,
+      Turning all our memories to nightmare scenes.
+      But Eleven’s got the fire and the will to rise,
+      With the crew behind her shouting, “Hold the line!”
+      Kate Bush in the headphones pulling Max back home,
+      As the whole town shakes like it’s ready to blow.
+      If the darkness wants Hawkins, it’ll come through us,
+      ’Cause we’re stronger than the evil we face.</p>
+  
+      <p>[Bridge]
+      Hold on…
+      When the world flips over and the lights go out,
+      Hold on…
+      When the monsters whisper lies in the dark,
+      We’re more than the fear, more than the night,
+      We’re the spark that brings the hope to life.</p>
+  
+      <p>[Chorus]
+      We’re running through the dark
+      with every shadow closing in.
+      Breathing in the fear
+      as the whole world starts to break,
+      “Friends don’t lie,” so we hold on tight,
+      ’Cause the dark might rise and we’re ready to fight.
+      When the walls start cracking and the sky turns red,
+      We will fight like hell until the nightmare ends—
+      Yeah, we’re standing together
+      with a trust that never fades.</p>
+  
+      <p>[Outro]
+      Walkie‑talkies fade into static and snow,
+      But the bond we made is stronger than we know.
+      If the darkness rises, we’ll answer the call—
+      ’Cause we don’t back down…
+      Not in Hawkins…
+      Not in the Upside Down.</p>
+  
+  - title: "Total Eclipse (Years Later)"
+    subtitle: ""
+    youtube_id: "vlB58WPvjns"
+    url: "/music/total-eclipse-years-later/"
+    image: "/assets/Total Eclipse.jpeg"
+    videostatus: "Public"
+    primary_playlist: "Pop"
+    description_html: |
+      <p><strong>Official audio for “Total Eclipse – Years Later” by Horizon Sound.</strong></p>
+  
+      <p>“Total Eclipse – Years Later” pays tribute to the story in “Total Eclipse of the Heart,” imagining where she might be years later. It is a piano‑driven, 80s‑inspired ballad with soft, intimate verses and a gradual emotional build. The piano stays at the center while warm strings and gated‑reverb drums rise in slowly, creating a nostalgic, cinematic atmosphere. The vocal is a strong but controlled female rock performance — expressive, warm, and raspy without shouting.</p>
+  
+      <p>The song tells the story of someone reclaiming their strength after a painful past, stepping out of old shadows and into their own light. With its reflective verses, powerful choruses, and the recurring phrase “turn around” delivered in a soft‑to‑strong dynamic, the track captures the moment of finally seeing yourself clearly and choosing a new path forward.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> 80s ballad, emotional, cinematic, empowering<br>
+      🎤 <strong>Vocals:</strong> warm, expressive female rock vocal with controlled rasp<br>
+      🎹 <strong>Production:</strong> piano‑driven, gradual build, strings, gated‑reverb drums<br>
+      🌙 <strong>Mood:</strong> reflective, triumphant, nostalgic, uplifting</p>
+  
+    lyrics_html: |
+      <p>[INTRO]
+      Turn around…
+      Every now and then I think about how close I came to breaking—
+      Turn around…
+      And every now and then it hits me how far I’ve finally come.</p>
+  
+      <p>[VERSE 1]
+      I remember how it felt then,
+      Every instinct telling me to flee,
+      You were a wildfire on the horizon,
+      A heat that swallowed me.
+      I kept losing all my courage,
+      Too afraid to stand on my own.
+      I was breaking just to keep you,
+      Terrified of facing life alone.
+      But time has a way of showing
+      What the heart can’t see at all.</p>
+  
+      <p>[PRE‑CHORUS]
+      Turn around…
+      I hear it now, my own voice breaking through the dark—
+      Turn around…
+      All the pieces I’d been hiding
+      Came rushing back to me—
+      You were never the one I needed.</p>
+  
+      <p>[CHORUS]
+      I don’t break the way I used to,
+      I don’t fall into the dark.
+      I found the strength I thought I’d lost
+      Burning deep inside my heart.
+      I’m not living in your shadow,
+      I’m standing in my own light.
+      What once pulled me under
+      Can’t hold me down tonight.</p>
+  
+      <p>[VERSE 2]
+      There was a night I finally saw it—
+      The reflection I was afraid to face.
+      All the pieces I’d been hiding
+      Fell together into place.
+      Then I walked out of the wreckage,
+      Left the ruins where they lay.
+      Took a breath that felt like freedom,
+      And let myself feel whole again.
+      And now the world looks different,
+      Bathed in colors I never knew.</p>
+  
+      <p>[PRE‑CHORUS]
+      Turn around…
+      I’m stepping from the past,
+      Toward the life I’m building today—
+      Turn around…
+      I’m finding my voice at last,
+      And learning to live in my own way.</p>
+  
+      <p>[CHORUS]
+      I don’t break the way I used to,
+      I don’t fall into the dark.
+      I found the strength I was missing
+      Every time you touched my heart.
+      I’m not living in your shadow,
+      I’ve stepped out into the light.
+      What once pulled me under
+      Can’t hold me down tonight.</p>
+  
+      <p>[BRIDGE]
+      I don’t hate the way we ended,
+      I don’t wish the past away.
+      You were thunder, you were chaos,
+      But you taught me how to rise.
+      Not with you, but with myself now—
+      And that’s the woman I grew into.</p>
+  
+      <p>[CHORUS]
+      I don’t break the way I used to,
+      I don’t fall into the dark.
+      I found the strength I was missing
+      Every time you touched my heart.
+      I’m not living in your shadow,
+      I’ve stepped out into the light.
+      What once pulled me under
+      Can’t hold me down tonight—
+      I’m finally alive.</p>
+  
+      <p>[OUTRO]
+      Turn around…
+      I know what to do now,
+      And I’m never in the dark—
+      Turn around…
+      There’s nothing left to prove,
+      And I’m finally standing on my own.</p>
+  
+  - title: "Time Capsule"
+    subtitle: ""
+    youtube_id: "-zbAWN1M_qo"
+    url: "/music/time-capsule/"
+    image: "/assets/Time Capsule.jpeg"
+    videostatus: "Public"
+    primary_playlist: "Modern Country"
+    description_html: |
+      <p><strong>Official audio for “Time Capsule” by Horizon Sound.</strong></p>
+  
+      <p>“Time Capsule” is a warm, nostalgic storytelling track built around acoustic textures, soft pop production, and an intimate male vocal. The song blends gentle guitars, subtle percussion, and a reflective melodic lift to create a cinematic, memory‑soaked atmosphere. It’s tender, observational, and deeply human — a quiet moment that turns into something life‑changing.</p>
+  
+      <p>The song follows a couple returning to her childhood home after her dad takes a fall. While she helps her parents around the farm, he’s sent upstairs to wait in her old bedroom — a space frozen in time. As he looks around, he discovers pieces of the girl she used to be: cheer ribbons, a homecoming crown, a debate trophy, worn‑out posters, a keyboard with years of fingerprints, and a corkboard full of memories she never mentioned. Each object reveals a side of her he never knew, deepening his understanding of who she was and who she’s become.</p>
+  
+      <p>When she walks in and sees him taking it all in, she’s embarrassed — but he’s moved. The room becomes a bridge between past and present, showing him the full picture of the woman he loves. With a heartfelt chorus and a quietly emotional final verse, “Time Capsule” captures the moment someone realizes they’re falling in love all over again, simply by seeing the history that shaped her.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> nostalgic, warm, emotional, reflective<br>
+      🎤 <strong>Vocals:</strong> intimate male lead, soft delivery, storytelling tone<br>
+      🎛️ <strong>Production:</strong> acoustic foundation, gentle pop elements, subtle cinematic lift<br>
+      ⚡ <strong>Mood:</strong> tender, memory‑rich, quietly romantic, heartfelt</p>
+  
+    lyrics_html: |
+      <p>[Intro]
+      Her dad took a fall but he’s okay,
+      And her mom could use a hand around the farm.</p>
+  
+      <p>[Verse 1]
+      So we packed a bag and hit the road,
+      Just took enough for a four‑day stay.
+      She pointed out the landmarks in her town,
+      And the white farmhouse glowing in the late‑day sun.
+      When we pulled into that gravel drive,
+      I felt her shoulders start to unwind—
+      Like coming home unlocked a part of her
+      She didn’t know she’d missed—</p>
+  
+      <p>[Pre Chorus]
+      Her mama thanked me for the help
+      And pulled her aside for a moment.
+      She squeezed my hand and whispered,
+      “You can wait for me up in my room—
+      Second door on the left.”</p>
+  
+      <p>[Chorus]
+      Her old room’s a time capsule,
+      Full of memories she never knew she kept.
+      Little notes and worn‑out pictures
+      Of the girl she was before she left.
+      And I swear I fell for her again
+      In that quiet, dusty place—
+      That old time capsule showed the girl
+      She was before she ever loved me.</p>
+  
+      <p>[Verse 2]
+      There were cheer ribbons on the mirror frame,
+      And a crown from when she won homecoming queen.
+      Beside it sat her debate trophy,
+      A sign she’d been deeper than I ever even knew.
+      Boy‑band posters curling at the corners,
+      And a keyboard with the keys worn down from years of use.
+      A corkboard full of pictures of a boy
+      Who must’ve been important in her world.</p>
+  
+      <p>[Pre Chorus]
+      And I don’t know what to do with it now,
+      All these pieces I can’t put down.
+      Feels like something’s pulling me closer,
+      And it’s changing how I see her now.</p>
+  
+      <p>[Chorus]
+      Her old room’s a time capsule,
+      Full of memories she never knew she kept.
+      Little notes and worn‑out pictures
+      Of the girl she was before she left.
+      And I swear I fell for her again
+      In that quiet, dusty place—
+      That old time capsule showed the girl
+      She was before she ever loved me.</p>
+  
+      <p>[Verse 3]
+      She walked in and caught me smiling,
+      And said, “Lord, I forgot all this was here.”
+      Her face went red when she saw that corkboard,
+      She laughed, a little flustered by it all.
+      I said, “Hey, it’s okay — I like this side of you.”
+      She shook her head and whispered, “I was just a kid…”
+      But I saw the woman she’d become.</p>
+  
+      <p>[Pre Chorus]
+      And I don’t know what to do with it now,
+      All these pieces I can’t put down.
+      Feels like something’s pulling me closer,
+      And it’s changing how I see her now.</p>
+  
+      <p>[Chorus]
+      Her old room’s a time capsule,
+      Full of memories she never knew she kept.
+      Little notes and worn‑out pictures
+      Of the girl she was before she left.
+      And I swear I fell for her again
+      In that quiet, dusty place—
+      That old time capsule showed the girl
+      She was before she ever loved me.</p>
+  
+      <p>[Outro]
+      Her dad took a fall but he’s okay,
+      We’re headed back home, and I’m forever changed.</p>
+  
+  - title: "The Man Behind the Bar"
+    subtitle: ""
+    youtube_id: "3EOLlL-P120"
+    url: "/music/the-man-behind-the-bar/"
+    image: "/assets/The Man Behind the Bar.jpeg"
+    videostatus: "Public"
+    primary_playlist: "Modern Country"
+    description_html: |
+      <p><strong>Official audio for “The Man Behind the Bar” by Horizon Sound.</strong></p>
+  
+      <p>“The Man Behind the Bar” is a heartfelt 90s‑country story song filled with warm acoustic guitars, light twang, steady brushed drums, and the unmistakable glow of small‑town barroom life. Fiddle and pedal steel weave through the mix, while clean electric guitar fills add that classic mid‑90s Tracy Lawrence polish. A conversational male vocal delivers the story with sincerity, heart, and lived‑in charm.</p>
+  
+      <p>This song follows the quiet hero of a little hometown bar — the bartender who listens, steadies the room, and keeps the lights on for everyone who walks through the door. From regulars sharing their troubles to strangers catching their breath, the bar becomes a place of healing, humor, and second chances. Warm, nostalgic, and deeply human, “The Man Behind the Bar” is a tribute to the people who hold communities together one story at a time.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> 90s country, warm, nostalgic, small‑town<br>
+      🎤 <strong>Vocals:</strong> conversational male lead, heartfelt, steady and sincere<br>
+      🎛️ <strong>Production:</strong> acoustic guitars, fiddle, pedal steel, brushed drums, clean electric fills, simple bass groove<br>
+      ⚡ <strong>Mood:</strong> comforting, reflective, grounded, quietly uplifting</p>
+  
+    lyrics_html: |
+      <p>[Intro]
+      Another day, another story,
+      In this little bar in this little town.
+      Unlock the door and turn on the jukebox,
+      the neon OPEN sign in the window starts to glow.</p>
+  
+      <p>[Verse 1]
+      I wipe down the bar same way I do each day,
+      Sweep the floor and stock the cooler, clean last night’s dust away.
+      My coffee in a paper cup, the jukebox humming low,
+      And right on time in walks Joe, like he always does at four.</p>
+  
+      <p>[Verse 2]
+      I’m polishing a whiskey glass while he tells me ’bout his wife,
+      Says he misses how she laughed at him, but it’s easing with the nights.
+      Then Mary from the hardware store stops in to catch her breath,
+      Says this bar’s the only place she feels she ain’t alone with all her stress.</p>
+  
+      <p>[Chorus]
+      ’Cause I pour the drinks, but they pour out their hearts,
+      Stories flow as steady as the beer.
+      I’m the one who keeps the lights on,
+      And the one who’s always here.
+      Yeah, this place is more than liquor,
+      It’s a home for broken hearts and brand‑new starts.
+      And I thank the Lord each evening
+      For the life I’m living
+      As the man behind the bar.</p>
+  
+      <p>[Verse 3]
+      Some nights it’s loud and rowdy, some nights it’s quiet as a prayer,
+      But either way I’m listening while pretending not to stare.
+      A bartender should stay busy — that’s a rule I learned real fast,
+      So I keep wiping down the counter while their troubles come to pass.</p>
+  
+      <p>[Bridge]
+      I ain’t a preacher or a doctor,
+      But I’ve seen healing in this room.
+      Sometimes all a soul really needs
+      Is a friendly ear and a stool.</p>
+  
+      <p>[Chorus]
+      ’Cause I pour the drinks, but they pour out their hearts,
+      Stories flow as steady as the beer.
+      I’m the one who keeps the lights on,
+      And the one who’s always here.
+      Yeah, this place is more than liquor,
+      It’s a home for broken hearts and brand‑new starts.
+      And I can’t imagine ever
+      Doing anything better
+      Than being the man behind the bar.</p>
+  
+      <p>[Outro]
+      So I turn that neon OPEN sign to dark,
+      Lock the door and kill the sound…
+      Another day, another story,
+      In this little bar in this little town.</p>
+  
+  - title: "Sheriff for a Night"
+    subtitle: ""
+    youtube_id: "oMSIQ5Gv2ZI"
+    url: "/music/sheriff-for-a-night/"
+    image: "/assets/Sheriff for the Night.jpeg"
+    videostatus: "Private"
+    primary_playlist: "Classic Country"
+    description_html: |
+      <p><strong>Official audio for “Sheriff for a Night” by Horizon Sound.</strong></p>
+  
+      <p>“Sheriff for a Night” is a playful, vintage‑inspired 1950s Western tune built on twangy guitars, upright bass, brushed drums, and a warm baritone vocal. Blending classic cowboy storytelling with a comedic tall‑tale twist, the track captures the dusty charm of old frontier towns and the accidental legends born in them. With its swinging rhythm, cinematic atmosphere, and nostalgic production, the song feels like a lost scene from a golden‑age Western film.</p>
+  
+      <p>This song tells the story of a drifter who rides into Red Rock City looking for nothing more than a warm meal and a place to rest — only to be thrown into chaos when the mayor slaps a sheriff’s star on him for one wild night. From breaking up bar fights to corralling drunks and staring down bandits, he somehow stumbles his way into saving the town. Now, every time he passes through, the locals cheer like he’s a hero… even though he swears he didn’t do a thing. “Sheriff for a Night” is a fun, cinematic tribute to the legends small towns love to tell.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> 1950s Western swing, warm, nostalgic, comedic<br>
+      🎤 <strong>Vocals:</strong> smooth male baritone, classic phrasing, storytelling delivery<br>
+      🎛️ <strong>Production:</strong> acoustic guitar, upright bass, brushed drums, vintage reverb<br>
+      ⚡ <strong>Mood:</strong> humorous, dusty‑trail, tall‑tale, cinematic</p>
+  
+    lyrics_html: |
+      <p>[Verse 1]
+      I rode into Red Rock City
+      just to rest my weary bones.
+      Didn’t plan on stayin’ long,
+      just a bed and somethin’ warm to eat.
+      But a fight broke out at sundown,
+      folks were runnin’ left and right,
+      and the mayor pointed straight at me
+      and said, “Son, you’re on tonight.”</p>
+  
+      <p>[Chorus]
+      I was sheriff for a night,
+      wearin’ that silver star.
+      Didn’t know the rules or nothin’,
+      barely made it out the bar.
+      But the folks in Red Rock City
+      swear I saved the whole dang town —
+      Now they tell the tale forever
+      ’bout the sheriff for a night.</p>
+  
+      <p>[Verse 2]
+      I broke up two old cowpokes
+      arguin’ over cards and pride.
+      Told a bandit with a pistol
+      he should take it back outside.
+      Locked a drunk inside the stable
+      ’til he sobered up at dawn,
+      and when the sun came creepin’ in,
+      my borrowed badge was gone.</p>
+  
+      <p>[Chorus]
+      I was sheriff for a night,
+      wearin’ that silver star.
+      Didn’t know the rules or nothin’,
+      barely made it out the bar.
+      But the folks in Red Rock City
+      swear I saved the whole dang town —
+      Now they tell the tale forever
+      ’bout the sheriff for a night.</p>
+  
+      <p>[Bridge]
+      Now every time I ride back through,
+      they cheer like I’m a king.
+      I just tip my hat and laugh,
+      ’cause I never did a thing.</p>
+  
+      <p>[Chorus]
+      I was sheriff for a night,
+      just a cowboy passin’ through.
+      Didn’t mean to be a hero,
+      but they say I saw ’em through.
+      And the folks in Red Rock City
+      still retell it with delight —
+      How a drifter saved the town
+      as the sheriff for a night.</p>
+  
+  - title: "Wildfire"
+    subtitle: ""
+    youtube_id: "Tc0wt00clNM"
+    url: "/music/wildfire/"
+    image: "/assets/Wildfire.jpg"
+    videostatus: "Private"
+    primary_playlist: "Modern Country"
+    description_html: |
+      <p><strong>Official audio for “Wildfire” by Horizon Sound.</strong></p>
+  
+      <p>“Wildfire” is a fierce, modern‑country power anthem driven by bold female vocals, big drums, electric guitars, and a cinematic, high‑octane lift. The track captures the unstoppable force of a woman who refuses to be tamed — a storm of fire, fury, and resilience rising against someone who tried to break her. With its explosive chorus, dramatic pre‑chorus, and confident Nashville production, “Wildfire” delivers the heat of a woman reclaiming her strength and burning brighter than ever.</p>
+  
+      <p>This song tells the story of a woman who’s been underestimated for the last time. Born with lightning under her skin, she finally breaks free — hitting the highway, windows down, hair flying in the Oklahoma wind. Every mile fuels her fire, turning her into a force of nature no one can outrun. With smoke on the horizon and power in her stride, she rises, fights, and refuses to be confined. “Wildfire” is her anthem — fierce, fearless, and burning hot tonight.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> fierce, empowering, modern country, cinematic<br>
+      🎤 <strong>Vocals:</strong> bold female lead, emotional grit, powerhouse delivery<br>
+      🎛️ <strong>Production:</strong> big drums, electric guitars, dramatic lift, Nashville polish<br>
+      ⚡ <strong>Mood:</strong> unstoppable, fiery, defiant, triumphant</p>
+  
+    lyrics_html: |
+      <p>[Verse 1]
+      He liked his women quiet—
+      she was anything but.
+      Thought he could tame her—
+      but he was dead wrong.
+      She was born with lightning
+      surgin’ right beneath her skin,
+      A spark he never noticed
+      ’til the fire raged.
+      He tried to hold her down,
+      tried to break her stride,
+      But all he did was feed the fire deep inside.</p>
+  
+      <p>[Pre‑Chorus]
+      She ain’t the kind you tame,
+      She ain’t the kind you cage—
+      She’s the kind that rises up
+      when you fan the flame.</p>
+  
+      <p>[Chorus]
+      He tried to hold her down,
+      she burned him to the ground.
+      ’Cause wildfire women don’t break,
+      They stand, rise, and fight.
+      She’s got fire in her veins,
+      She’s got fury in her heart—
+      Yeah, she’s wildfire,
+      and she’s burnin’ hot tonight…</p>
+  
+      <p>[Verse 2]
+      She packed her things
+      in a beat‑up bag,
+      Left his empty promises
+      and didn’t look back.
+      She hit the highway fast,
+      all the windows down,
+      Radio turned up loud,
+      hair flyin’ in that Oklahoma wind.
+      With every mile, every breath,
+      she felt her fire rage.</p>
+  
+      <p>[Pre‑Chorus]
+      She ain’t the kind you tame,
+      She ain’t the kind you cage—
+      She’s the kind that rises up
+      when you fan the flame.</p>
+  
+      <p>[Chorus]
+      He tried to hold her down,
+      she burned him to the ground.
+      ’Cause wildfire women don’t break,
+      They stand, rise, and fight.
+      She’s got fire in her veins,
+      She’s got fury in her heart—
+      Yeah, she’s wildfire,
+      and she’s burnin’ hot tonight…</p>
+  
+      <p>[Bridge]
+      She’s the smoke you see for miles,
+      she’s the heat you can’t outrun,
+      She’s the storm that finds its power
+      in the rising of the sun.
+      You can try to hold her back,
+      but she was born to shine—
+      A force of nature walkin’,
+      and she won’t be confined.</p>
+  
+      <p>[Chorus]
+      He tried to hold her down,
+      she burned him to the ground.
+      ’Cause wildfire women don’t break,
+      They stand, rise, and fight.
+      She’s got fire in her veins,
+      She’s got fury in her heart—
+      Yeah, she’s wildfire,
+      and she’s burnin’ hot tonight…</p>
+  
+      <p>[Outro]
+      No chains, no fear,
+      just a woman burnin’ bright—
+      Wildfire.
+      Still glowin’ in the dark,
+      leavin’ ashes where she’s been,
+      A heart that won’t be broken,
+      A flame that won’t give in.
+      Wildfire.</p>
+  
+  - title: "Venice Waters"
+    song_id: "venice-venice-waters"
+    subtitle: "Venice | Part 3"
+    youtube_id: "LzfM1PRxpVU"
+    url: "/music/venice-3-venice-waters/"
+    image: "/assets/Venice Waters.jpeg"
+    videostatus: "Private"
+    primary_playlist: "Venice - Missing Stamp"
+    sequence: 3
+    description_html: |
+      <p><strong>Official audio for “Venice Waters” by Horizon Sound.</strong></p>
+  
+      <p>“Venice Waters” is a warm, upbeat acoustic‑pop track with bright female vocals, energetic guitars, light drums, and cinematic strings. The production feels joyful and adventurous, capturing the excitement of two lifelong best friends finally taking the Venice trip they dreamed about as kids. The chorus lifts with movement and sunlight, celebrating the moment when a long‑delayed promise finally comes true.</p>
+  
+      <p>This song follows the reunion of two women who rediscover their friendship while traveling through Venice — riding gondolas, wandering the streets, laughing like they’re fourteen again. “Venice Waters” is the final chapter of the Venice Trilogy, the emotional payoff where the dream is fulfilled, the passport gets its stamp, and the world feels wide open again.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> upbeat acoustic‑pop, warm, adventurous<br>
+      🎤 <strong>Vocals:</strong> bright female lead, expressive, joyful<br>
+      🎛️ <strong>Production:</strong> acoustic guitars, light drums, piano, cinematic strings<br>
+      ⚡ <strong>Mood:</strong> nostalgic, uplifting, feel‑good, celebratory</p>
+  
+    lyrics_html: |
+      <p>[Intro]
+      I tucked my passport in the drawer,
+      told myself that dream was done.
+      Our lives had drifted far apart,
+      Venice didn’t feel like ours.</p>
+  
+      <p>[Verse 1]
+      We were talking over coffee, laughing at how fast life flies,
+      how someday turned to decades in the blink of tired eyes.
+      You said, “Remember Venice? — We always meant to go,”
+      I said, “Yeah… who knows, maybe someday.”
+      But then you smiled and said, “Hey… what if someday finally comes?”
+      Two women realizing some dreams don’t fade — they wait.</p>
+  
+      <p>[Pre Chorus]
+      Your husband grinned and told us, “Book it — you both deserve the break.”
+      We didn’t know until the airport he’d bumped us to first class.</p>
+  
+      <p>[Chorus]
+      We finally rode those Venice waters,
+      we finally chased the sun across the sea.
+      Two grown women keeping a solemn promise—
+      Now our passports bear the stamp we dreamed we’d see.
+      Twenty years late, but it still feels right—
+      No longer kids, but the world feels great,
+      Someday is here — Venice waters.</p>
+  
+      <p>[Verse 2]
+      We wandered through the landmarks,
+      strolling down Venice streets—
+      Took a gondola at sunset
+      as the city lights came on—
+      We talked about the lives we built
+      and how they led us different ways...
+      Remembered the girls we were,
+      the women we became—
+      How some dreams take a lifetime…
+      but they’re worth it just the same.</p>
+  
+      <p>[Pre Chorus]
+      We took photos on the bridges,
+      laughed until our sides were sore.
+      Felt fourteen again in a city
+      where imagination soars.
+      This time together is precious—
+      the kind you feel in your bones,
+      the kind that whispers softly,
+      “You finally made it home.”</p>
+  
+      <p>[Chorus]
+      We finally rode those Venice waters,
+      we finally chased the sun across the sea.
+      Two grown women keeping a solemn promise—
+      Now our passports bear the stamp we dreamed we’d see.
+      Twenty years late, but it still feels right—
+      No longer kids, but the world feels great,
+      Someday is here — Venice waters.</p>
+  
+      <p>[Bridge]
+      All those years of “maybe someday,”
+      all those pages left unturned—
+      we let the world decide the timing,
+      and then it opened up the door.
+      And suddenly the dream we made
+      wasn’t a dream anymore.</p>
+  
+      <p>[Chorus]
+      We finally rode those Venice waters,
+      we finally chased the sun across the sea.
+      Two grown women keeping a solemn promise—
+      Now our passports bear the stamp we dreamed we’d see.
+      Twenty years late, but it still feels right—
+      No longer kids, but the world feels great,
+      Someday is here — Venice waters.</p>
+  
+      <p>[Outro]
+      On the flight home we compared passports,
+      smiling like we used to—
+      two matching stamps,
+      the dream we carried finally met.
+      And as the plane touched down,
+      you whispered, “Next time… where should we go?”</p>
+  
+  - title: "Missing Stamp"
+    song_id: "venice-missing-stamp"
+    subtitle: "Venice | Part 2"
+    youtube_id: "fbBWIohiOwI"
+    url: "/music/venice-2-missing-stamp/"
+    image: "/assets/Missing Stamp.jpeg"
+    videostatus: "Private"
+    primary_playlist: "Venice - Missing Stamp"
+    sequence: 2
+    description_html: |
+      <p><strong>Official audio for “Missing Stamp” by Horizon Sound.</strong></p>
+  
+      <p>“Missing Stamp” is an emotional acoustic‑pop ballad with soft piano, warm guitars, and expressive female vocals. The production leans intimate and reflective, capturing the ache of two friends who drifted apart as life pulled them in different directions. Subtle strings and gentle percussion give the song a cinematic sadness, while the melody carries a quiet longing.</p>
+  
+      <p>This song follows the moment when one of them realizes the dream they once shared — Venice — never happened. The passport is still blank, the promise still unkept, and the distance between them feels heavier than ever. “Missing Stamp” is the middle chapter of the Venice Trilogy, the emotional low point where the dream feels lost but not forgotten.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> emotional acoustic‑pop, soft, reflective<br>
+      🎤 <strong>Vocals:</strong> warm female lead, intimate delivery, heartfelt phrasing<br>
+      🎛️ <strong>Production:</strong> piano, acoustic guitar, soft strings, cinematic melancholy<br>
+      ⚡ <strong>Mood:</strong> nostalgic, aching, honest, bittersweet</p>
+  
+    lyrics_html: |
+      <p>[Intro]
+      We once swore that someday was ours,
+      passports in hand and a world to chase.
+      Now I’m older, and my pages are full—
+      except the one I saved for you.</p>
+  
+      <p>[Verse 1]
+      I’ve filled my passport pages,
+      chased the sun from shore to shore,
+      Tokyo lights, Paris nights—
+      I always wanted more.
+      But every time I flip the pages,
+      there’s a space that pulls me back,
+      The trip we swore we’d take someday—
+      the one that never came.</p>
+  
+      <p>[Pre Chorus]
+      You built a life with love and laughter — kids’ drawings on your fridge,
+      I kept on moving, kept exploring, but one dream stayed out of reach.</p>
+  
+      <p>[Chorus]
+      There’s one empty page in the book of my travels.
+      A missing stamp that belongs to you and me.
+      One promise we made all those years ago.
+      Venice is waiting, but I won’t go without you.
+      Some dreams don’t mean a thing if we’re not together.
+      A tear rolls down as I see—
+      my missing stamp…</p>
+  
+      <p>[Verse 2]
+      I was scrolling through old notes again,
+      thinking where I’d go next spring,
+      And there it was — our Venice trip,
+      still saved the way we left it back then.
+      Hotel — Excursions — Gondola ride,
+      the notes we wrote when we were teens,
+      Two girls who swore we’d chase the sun —
+      a ghost of who we were.</p>
+  
+      <p>[Pre Chorus]
+      I almost called to ask you,
+      but your world is full and mine is free.
+      So I closed the tab—
+      closed my passport—
+      let the moment slip away.</p>
+  
+      <p>[Chorus]
+      There’s one empty page in the book of my travels.
+      A missing stamp that belongs to you and me.
+      One promise we made all those years ago.
+      Venice is waiting, but I won’t go without you.
+      Some dreams don’t mean a thing if we’re not together.
+      A tear rolls down as I see—
+      my missing stamp…</p>
+  
+      <p>[Bridge]
+      Maybe someday still belongs to us,
+      just not the way it did when we were kids.
+      You found your sun in the life you’re living,
+      I chased mine across the sea.
+      But Venice…
+      Venice was always meant for two —
+      and I can’t make that trip alone.</p>
+  
+      <p>[Chorus]
+      There’s one empty page in the book of my travels.
+      A missing stamp that belongs to you and me.
+      One promise we made all those years ago.
+      Venice is waiting, but I won’t go without you.
+      Some dreams don’t mean a thing if we’re not together.
+      A tear rolls down as I see—
+      my missing stamp…</p>
+  
+      <p>[Outro]
+      One blank page, one old promise,
+      a place I won’t go alone.
+      Someday still whispers softly,
+      but Venice isn’t mine to own.
+      So I tuck my passport gently in the drawer.</p>
+  
+  - title: "Someday"
+    song_id: "venice-someday"
+    subtitle: "Venice | Part 1"
+    youtube_id: "2cv-H5tTygs"
+    url: "/music/venice-1-someday/"
+    image: "/assets/Someday.jpeg"
+    videostatus: "Private"
+    primary_playlist: "Venice - Missing Stamp"
+    sequence: 1
+    description_html: |
+      <p><strong>Official audio for “Someday” by Horizon Sound.</strong></p>
+  
+      <p>“Someday” is a warm, nostalgic acoustic‑pop track built on gentle guitars, soft drums, and bright female vocals. The production leans intimate and cinematic, capturing the innocence of two best friends dreaming of a future adventure they’re too young to understand. Light percussion and airy harmonies give the song a hopeful lift, while the storytelling stays grounded and heartfelt.</p>
+  
+      <p>This song follows two girls who make a promise — one day, they’ll see Venice together. Life is simple, the world feels big, and the dream feels even bigger. “Someday” captures the magic of childhood imagination, the kind of promise you whisper with absolute certainty, not knowing how long life will take to fulfill it. It’s the beginning of a lifelong story, the first chapter of a dream that waits patiently for decades.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> warm acoustic‑pop, nostalgic, hopeful<br>
+      🎤 <strong>Vocals:</strong> bright female lead, soft harmonies, expressive phrasing<br>
+      🎛️ <strong>Production:</strong> acoustic guitars, light percussion, gentle lift, cinematic warmth<br>
+      ⚡ <strong>Mood:</strong> innocent, dreamy, heartfelt, reflective</p>
+  
+    lyrics_html: |
+      <p>[Verse 1]
+      We were twelve and always together,
+      maps spread on the floor,
+      Circling places we wanted to see,
+      imagining all those far off cities.
+      They’d talk about visiting Venice canals,
+      their middle school plans in sync,
+      Two girls with the whole world waiting,
+      believing we had endless time.</p>
+  
+      <p>[Pre Chorus]
+      We planned out our lives in homeroom,
+      sketched gondolas in the margins,
+      Promised we’d go together,
+      we swore we’d never forget.</p>
+  
+      <p>[Chorus]
+      Someday we’ll ride those Venice canals,
+      Someday we’ll chase, the sun to the sea.
+      Two girls with a map and a promise between us,
+      Someday feels close when it’s you and me.
+      We’re only kids and the world feels easy,
+      Someday is calling — and we can hardly wait.</p>
+  
+      <p>[Verse 2]
+      We’d practiced saying “Ciao” in accents we thought were right,
+      Pretended the hallway was a bridge in soft Italian light.
+      Every idea felt possible when we were together,
+      Two curious hearts reaching for new heights.</p>
+  
+      <p>[Pre‑Chorus]
+      We’d talked about the places we’d see,
+      checking out cities while searching online.
+      Every plan felt right in our middle school minds,
+      two kids convinced we’d see the world.</p>
+  
+      <p>[Chorus]
+      Someday we’ll ride those Venice canals,
+      Someday we’ll chase, the sun to the sea.
+      Two girls with a map and a promise between us,
+      Someday feels close when it’s you and me.
+      We’re only kids and the world feels easy,
+      Someday is calling — and we can hardly wait.</p>
+  
+      <p>[Bridge]
+      We begged our parents for passports,
+      said we needed them “just in case.”
+      Held them like precious gifts the day they finally came.
+      Two girls with brand new passports,
+      empty but full of promise,
+      ready to chase the world together,
+      hearts wide open to what comes next.</p>
+  
+      <p>[Chorus]
+      Someday we’ll ride those Venice canals,
+      Someday we’ll chase, the sun to the sea.
+      Two girls with a map and a promise between us,
+      Someday feels close when it’s you and me.
+      We’re only kids and the world feels easy,
+      Someday is calling — and we can hardly wait.</p>
+  
+      <p>[Outro]
+      Two girls with brand new passports,
+      believing someday every page would be filled.
+      Just two kids and the world feels easy,
+      Someday is calling
+      We can hardly wait…</p>
+  

@@ -247,6 +247,7 @@ footer {
   display: flex;
   flex-direction: column;
   width: 180px; /* or whatever your tile width is */
+  height: 180px; /* or whatever your tile height is */
   flex-shrink: 0;
 }
 

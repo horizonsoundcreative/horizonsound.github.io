@@ -173,21 +173,26 @@ SONGS MATCHED:
         {% if playlist_sorted.size > 0 %}
         <section class="playlist-section">
           <h2 class="section-header">{{ list }}</h2>
-  
           <div class="tile-grid">
+            {# First: all public songs #}
             {% for song in playlist_sorted %}
               {% if song.videostatus == "Public" %}
                 <a class="tile" href="{{ song.url }}">
                   <img src="{{ song.image }}" alt="{{ song.title }}">
                   <h3 class="tile-title">{{ song.title }}</h3>
                 </a>
-              {% else %}
+              {% endif %}
+            {% endfor %}
+          
+            {# Second: all non-public (Coming Soon) songs #}
+            {% for song in playlist_sorted %}
+              {% unless song.videostatus == "Public" %}
                 <div class="tile coming-soon">
                   <img src="{{ song.image }}" alt="{{ song.title }}">
                   <div class="tile-overlay">Coming Soon</div>
                   <h3 class="tile-title">{{ song.title }}</h3>
                 </div>
-              {% endif %}
+              {% endunless %}
             {% endfor %}
           </div>
         </section>

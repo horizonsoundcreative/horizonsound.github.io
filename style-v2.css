@@ -241,7 +241,7 @@ footer {
 }
 
 .carousel-tile {
-  flex: 0 0 240px;
+  flex: 0 0 180px;
   transition: transform 0.2s ease;
   border: 3px solid transparent;
   display: flex;

@@ -105,7 +105,12 @@ SONG IDS FROM PLAYLIST:
       }
     
       // ⭐ Load the first song on page load
-      const first = window.allSongs[0];
+      let first = window.allSongs.find(s => s.videostatus === "Public");
+      
+      // fallback if no public songs exist
+      if (!first) {
+        first = window.allSongs[0];
+      }
       console.log("First song object:", first);
       console.log("First song keys:", Object.keys(first));
     

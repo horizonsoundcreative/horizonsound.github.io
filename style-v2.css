@@ -296,6 +296,29 @@ footer {
   margin-left: 12px;
 }
 
+.carousel-tile.coming-soon {
+  position: relative;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.carousel-tile.coming-soon .tile-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.45);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 /* ============================================
    COMPONENTS — EMBED / VIDEO
 ============================================ */

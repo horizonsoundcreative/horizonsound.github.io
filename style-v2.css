@@ -244,6 +244,10 @@ footer {
   flex: 0 0 240px;
   transition: transform 0.2s ease;
   border: 3px solid transparent;
+  display: flex;
+  flex-direction: column;
+  width: 180px; /* or whatever your tile width is */
+  flex-shrink: 0;
 }
 
 /* Ensure tiles always have a baseline border so active state persists */
@@ -257,6 +261,19 @@ footer {
   height: 180px;
   object-fit: cover;
   display: block;
+  display: block;
+}
+
+.carousel-tile h3.tile-title {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.carousel-tile,
+.carousel-tile:link,
+.carousel-tile:visited {
+  text-decoration: none;
+  color: inherit;
 }
 
 .carousel-tile.active {
@@ -317,6 +334,12 @@ footer {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+.carousel-tile.coming-soon {
+  opacity: 0.6;
+  pointer-events: none;
+  position: relative;
 }
 
 /* ============================================

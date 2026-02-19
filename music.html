@@ -143,10 +143,18 @@ title: Music – Horizon Sound
   
           <div class="tile-grid">
             {% for song in playlist_sorted %}
-              <a class="tile" href="{{ song.url | append: '/' | replace: '//', '/' }}">
-                <img src="{{ song.image }}" alt="{{ song.title }}">
-                <h3 class="tile-title">{{ song.title }}</h3>
-              </a>
+              {% if song.videostatus == "Public" %}
+                <a class="tile" href="{{ song.url | append: '/' | replace: '//', '/' }}">
+                  <img src="{{ song.image }}" alt="{{ song.title }}">
+                  <h3 class="tile-title">{{ song.title }}</h3>
+                </a>
+              {% else %}
+                <div class="tile coming-soon">
+                  <img src="{{ song.image }}" alt="{{ song.title }}">
+                  <div class="tile-overlay">Coming Soon</div>
+                  <h3 class="tile-title">{{ song.title }}</h3>
+                </div>
+              {% endif %}
             {% endfor %}
           </div>
         </section>
@@ -166,10 +174,18 @@ title: Music – Horizon Sound
       {% assign all_sorted = all_songs | sort: "title" %}
       <div class="tile-grid">
         {% for song in all_sorted %}
-          <a class="tile" href="{{ song.url | append: '/' | replace: '//', '/' }}">
-            <img src="{{ song.image }}" alt="{{ song.title }}">
-            <h3 class="tile-title">{{ song.title }}</h3>
-          </a>
+          {% if song.videostatus == "Public" %}
+            <a class="tile" href="{{ song.url | append: '/' | replace: '//', '/' }}">
+              <img src="{{ song.image }}" alt="{{ song.title }}">
+              <h3 class="tile-title">{{ song.title }}</h3>
+            </a>
+          {% else %}
+            <div class="tile coming-soon">
+              <img src="{{ song.image }}" alt="{{ song.title }}">
+              <div class="tile-overlay">Coming Soon</div>
+              <h3 class="tile-title">{{ song.title }}</h3>
+            </div>
+          {% endif %}
         {% endfor %}
       </div>
     </section>

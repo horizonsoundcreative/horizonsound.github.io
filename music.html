@@ -171,14 +171,27 @@ title: Music – Horizon Sound
   <section id="music-view-all" style="display:none;">
     <section class="playlist-section">
       <h2 class="section-header">All Songs</h2>
-
+      
       {% assign all_sorted = all_songs | sort: "title" %}
       <div class="tile-grid">
+        {# First: all public songs #}
         {% for song in all_sorted %}
-          <a class="tile" href="{{ song.url }}">
-            <img src="{{ song.image }}" alt="{{ song.title }}">
-            <h3 class="tile-title">{{ song.title }}</h3>
-          </a>
+          {% if song.videostatus == "Public" %}
+            <a class="tile" href="{{ song.url }}">
+              <img src="{{ song.image }}" alt="{{ song.title }}">
+              <h3 class="tile-title">{{ song.title }}</h3>
+            </a>
+          {% endif %}
+        {% endfor %}
+        {# Second: all non-public (Coming Soon) songs #}
+        {% for song in all_sorted %}
+          {% unless song.videostatus == "Public" %}
+            <div class="tile coming-soon">
+              <img src="{{ song.image }}" alt="{{ song.title }}">
+              <div class="tile-overlay">Coming Soon</div>
+              <h3 class="tile-title">{{ song.title }}</h3>
+            </div>
+          {% endunless %}
         {% endfor %}
       </div>
     </section>

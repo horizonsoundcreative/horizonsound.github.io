@@ -4,7 +4,12 @@ title: Music – Horizon Sound
 ---
 
 {% assign all_songs = site.data.music.songs %}
-{% assign playlists = all_songs | map: "primary_playlist" | uniq | reject: "" | sort %}
+{% assign playlists = all_songs 
+  | map: "primary_playlist" 
+  | map: "strip" 
+  | uniq 
+  | reject: "" 
+  | sort %}
 
 <div class="music-page">
 

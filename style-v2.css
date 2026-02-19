@@ -1002,6 +1002,22 @@ footer {
   }
 }
 
+.player-frame .horizontal-strip,
+.player-frame [data-strip] {
+  overflow-x: auto !important;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+.player-frame .carousel {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.player-frame .horizontal-strip {
+  margin-left: 0 !important;
+}
+
 /* ============================================
    PLAYLIST PAGE — FINAL TIGHTENING
 ============================================ */

@@ -241,14 +241,9 @@ footer {
 }
 
 .carousel-tile {
-  flex: 0 0 180px;
+  flex: 0 0 240px;
   transition: transform 0.2s ease;
   border: 3px solid transparent;
-  display: flex;
-  flex-direction: column;
-  width: 180px; /* or whatever your tile width is */
-  height: 180px; /* or whatever your tile height is */
-  flex-shrink: 0;
 }
 
 /* Ensure tiles always have a baseline border so active state persists */
@@ -262,19 +257,6 @@ footer {
   height: 180px;
   object-fit: cover;
   display: block;
-  display: block;
-}
-
-.carousel-tile h3.tile-title {
-  margin-top: 0.5rem;
-  text-align: center;
-}
-
-.carousel-tile,
-.carousel-tile:link,
-.carousel-tile:visited {
-  text-decoration: none;
-  color: inherit;
 }
 
 .carousel-tile.active {
@@ -312,35 +294,6 @@ footer {
 
 .right-arrow {
   margin-left: 12px;
-}
-
-.carousel-tile.coming-soon {
-  position: relative;
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-.carousel-tile.coming-soon .tile-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.45);
-  color: white;
-  font-weight: 600;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.carousel-tile.coming-soon {
-  opacity: 0.6;
-  pointer-events: none;
-  position: relative;
 }
 
 /* ============================================
@@ -589,29 +542,6 @@ footer {
   border-radius: 0 0 10px 10px;
 }
 
-.tile.coming-soon {
-  position: relative;
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-.tile.coming-soon .tile-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.45);
-  color: white;
-  font-weight: 600;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
 /* ============================================
    PAGE: HOMEPAGE
 ============================================ */
@@ -739,28 +669,7 @@ footer {
 .playlist-lyrics .section-header {
   text-align: center;
   font-size: 1.8rem;
-  margin-bottom: 0.75rem;
-}
-
-.playlist-about,
-.playlist-lyrics {
-  margin-top: 1.5rem;
-}
-
-.playlist-about-text p,
-.playlist-lyrics-text p {
-  margin: 0.4rem 0;
-  line-height: 1.35;
-}
-
-.playlist-about .centered-column,
-.playlist-lyrics .lyrics-block {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.playlist-lyrics {
-  margin-top: 1.25rem;
+  margin-bottom: 12px;
 }
 
 /* ============================================
@@ -794,16 +703,6 @@ footer {
   box-shadow: 0 6px 22px rgba(0,0,0,0.35);
   margin: 32px 40px; /* matches song page spacing */
   background: rgba(0,0,0,0.35); /* default fallback */
-}
-
-.player-frame .horizontal-strip {
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-.player-frame [data-strip] {
-  overflow-x: auto;
-  overflow-y: hidden;
 }
 
 /* Dark theme (Song Page) */
@@ -970,17 +869,6 @@ footer {
   text-align: left !important;
 }
 
-/* PLAYLIST PAGE — align playlist title with player left edge */
-.playlist-header .section-header {
-  text-align: left !important;
-  margin-left: 40px !important;
-}
-
-.playlist-header .playlist-subtitle {
-  text-align: left !important;
-  margin-left: 40px !important;
-}
-
 /* ============================================
    MOBILE — CAROUSEL TILE RESIZE (FINAL)
 ============================================ */
@@ -1001,110 +889,4 @@ footer {
   .player-frame .carousel-arrow {
     height: 100px !important;
   }
-}
-
-.player-frame .horizontal-strip,
-.player-frame [data-strip] {
-  overflow-x: auto !important;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-}
-
-.player-frame .carousel {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-.player-frame .horizontal-strip {
-  margin-left: 0 !important;
-  padding: 0 !important;
-}
-
-/* FINAL FIX — PLAYLIST PAGE CAROUSEL */
-.player-frame {
-  overflow: visible !important;
-}
-
-.player-frame .carousel {
-  overflow: visible !important;
-}
-
-.player-frame .horizontal-strip,
-.player-frame [data-strip] {
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  margin-left: 0 !important;
-  scroll-behavior: smooth;
-}
-
-/* ============================================
-   PLAYLIST PAGE — FINAL TIGHTENING
-============================================ */
-
-/* Reduce space above About + Lyrics sections */
-.playlist-about,
-.playlist-lyrics {
-  margin-top: 0.75rem !important;
-}
-
-/* Tighten section headers */
-.playlist-about .section-header,
-.playlist-lyrics .section-header {
-  font-size: 1.5rem !important;
-  margin-bottom: 0.5rem !important;
-  margin-top: 0 !important;
-}
-
-/* Tighten paragraph spacing inside About + Lyrics */
-.playlist-about-text p,
-.playlist-lyrics-text p {
-  margin: 6px 0 !important;
-  line-height: 1.35 !important;
-}
-
-/* Remove extra padding from wrappers */
-.playlist-about .centered-column,
-.playlist-lyrics .lyrics-block {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* Reduce space between About → Lyrics */
-.playlist-lyrics {
-  margin-top: 0.75rem !important;
-}
-
-/* ============================================
-   PLAYLIST PAGE — CAROUSEL FIX (180px tiles)
-============================================ */
-
-/* 1. Fix tile width mismatch */
-.carousel-tile {
-  flex: 0 0 180px !important;
-  width: 180px !important;
-}
-
-/* 2. Remove padding that breaks scroll math */
-.player-frame .horizontal-strip {
-  padding: 0 !important;
-}
-
-/* 3. Ensure the strip scrolls properly */
-.player-frame .horizontal-strip,
-.player-frame [data-strip] {
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-  scroll-behavior: smooth;
-}
-
-/* 4. Prevent clipping by the player frame */
-.player-frame,
-.player-frame .carousel {
-  overflow: visible !important;
-}
-
-.playlist-carousel-test {
-  margin: 20px 40px;
 }

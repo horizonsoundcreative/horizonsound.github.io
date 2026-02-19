@@ -1,12 +1,4 @@
 songs:
-  - title: "Nineteen Summers Revised"
-    subtitle: "" 
-    youtube_id: "r16qSkxEcI4" 
-    url: "/music/nineteen-summers-revised/"
-    image: "/assets/Nineteen Summers New.jpeg"
-    videostatus: "Private"
-    primary_playlist: "Emotional Ballads"
-  
   - title: "Sheriff for a Night"
     subtitle: "" 
     youtube_id: "oMSIQ5Gv2ZI" 
@@ -53,56 +45,6 @@ songs:
     primary_playlist: "Venice - Missing Stamp"
     sequence: 1
   
-  - title: "After Midnight" # Midnight Saga track
-    song_id: "midnight-saga-after-midnight"
-    subtitle: "Midnight Saga | Part 4" 
-    youtube_id: "iGt2wtH6orc" 
-    url: "/music/midnight-saga-after-midnight/"
-    image: "/assets/After Midnight.jpeg"
-    videostatus: "Private"
-    primary_playlist: "Midnight Saga"
-    sequence: 4
-
-  - title: "Midnight Madness" # Midnight Saga track
-    song_id: "midnight-saga-midnight-madness"
-    subtitle: "Midnight Saga | Part 3"
-    youtube_id: "HeD2WbErCKg" 
-    url: "/music/midnight-saga-midnight-madness/"
-    image: "/assets/Midnight Madness.jpeg"
-    videostatus: "Private"
-    primary_playlist: "Midnight Saga"
-    sequence: 3
-
-  - title: "Midnight Mayhem" # Midnight Saga track
-    song_id: "midnight-saga-midnight-mayhem"
-    subtitle: "Midnight Saga | Part 2" 
-    youtube_id: "Z6AGhE0K-Ro" 
-    url: "/music/midnight-saga-midnight-mayhem/"
-    image: "/assets/Midnight Mayhem.jpeg"
-    videostatus: "Private"
-    primary_playlist: "Midnight Saga"
-    sequence: 2
-
-# Everything below this point is live and public in YouTube - Everything above is scheduled but has not gone live yet.
-
-  - title: "Before Midnight" # Midnight Saga track
-    song_id: "midnight-saga-before-midnight"
-    subtitle: "Midnight Saga | Part 1" 
-    youtube_id: "VXQKpK56MCI" 
-    url: "/music/midnight-saga-before-midnight/"
-    image: "/assets/Before Midnight.jpeg"
-    videostatus: "Public"
-    primary_playlist: "Midnight Saga"
-    sequence: 1
-
-  - title: "Keep the Light On"
-    subtitle: "" 
-    youtube_id: "f25XTQKjq7Q" 
-    url: "/music/keep-the-light-on/"
-    image: "/assets/Keep the Light On.jpeg"
-    videostatus: "Public"
-    primary_playlist: "Pop"
-
   - title: "Rusty"
     subtitle: "" 
     youtube_id: "Z8VipNxTybQ" 
@@ -110,14 +52,6 @@ songs:
     image: "/assets/Rusty.jpeg"
     videostatus: "Public"
     primary_playlist: "Emotional Ballads"
-
-  - title: "Kaleidoscope"
-    subtitle: "" 
-    youtube_id: "YpUFnf6Ke_A" 
-    url: "/music/kaleidoscope/"
-    image: "/assets/Kaleidoscope.jpeg"
-    videostatus: "Public"
-    primary_playlist: "Pop"
 
   - title: "The Man Behind the Bar"
     subtitle: "" 
@@ -127,14 +61,6 @@ songs:
     videostatus: "Public"
     primary_playlist: "Modern Country"
 
-  - title: "Not So Smart Home"
-    subtitle: "" 
-    youtube_id: "ii7gqcUMto4" 
-    url: "/music/not-so-smart-home/"
-    image: "/assets/Not So Smart Home.jpeg"
-    videostatus: "Public"
-    primary_playlist: "Comedy"
-
   - title: "Time Capsule"
     subtitle: "" 
     youtube_id: "-zbAWN1M_qo" 
@@ -143,59 +69,11 @@ songs:
     videostatus: "Public"
     primary_playlist: "Modern Country"
 
-  - title: "Makin' our way to California"
-    subtitle: "" 
-    youtube_id: "cU4c2_3ITP8" 
-    url: "/music/making-our-way-to-california/"
-    image: "/assets/Making our way to California.jpeg"
-    videostatus: "Public"
-    primary_playlist: "Pop"
-
-  - title: "Learning to Live Again"
-    subtitle: "" 
-    youtube_id: "NVG_qw_51RQ" 
-    url: "/music/learning-to-live-again/"
-    image: "/assets/Learning to Live Again.jpeg"
-    videostatus: "Public"
-    primary_playlist: "Emotional Ballads"
-
-  - title: "Never Let Each Other Down"
-    subtitle: "" 
-    youtube_id: "2uKHo8dtINQ" 
-    url: "/music/never-let-each-other-down/"
-    image: "/assets/Never Let Each Other Down.jpeg"
-    videostatus: "Public"
-    primary_playlist: "Pop"
-
-  - title: "New Again"
-    subtitle: "" 
-    youtube_id: "y4pym_HVGJA" 
-    url: "/music/new-again/"
-    image: "/assets/New Again.jpeg"
-    videostatus: "Public"
-    primary_playlist: "Pop"
-
-  - title: "Oh, Amber"
-    subtitle: "" 
-    youtube_id: "J2AuQsiPz34" 
-    url: "/music/oh-amber/"
-    image: "/assets/Oh Amber.jpeg"
-    videostatus: "Public"
-    primary_playlist: "Emotional Ballads"
-
   - title: "Put You Down"
     subtitle: "" 
     youtube_id: "niNtLrtDcBs" 
     url: "/music/put-you-down/"
     image: "/assets/Put You Down.jpeg"
-    videostatus: "Public"
-    primary_playlist: "Pop"
-
-  - title: "Midnight Mayhem Original"
-    subtitle: "" 
-    youtube_id: "1B1nGWaWgD0" 
-    url: "/music/midnight-mayhem/"
-    image: "/assets/Midnight Mayhem Orig.jpeg"
     videostatus: "Public"
     primary_playlist: "Pop"
 
@@ -231,14 +109,6 @@ songs:
     videostatus: "Public"
     primary_playlist: "Southern Rock"
 
-  - title: "Nineteen Summers Original"
-    subtitle: "" 
-    youtube_id: "HuGf30ChZkI" 
-    url: "/music/nineteen-summers/"
-    image: "/assets/Nineteen Summers.jpeg"
-    videostatus: "Public"
-    primary_playlist: "Emotional Ballads"
-
   - title: "Until the Nightmare Ends"
     subtitle: "" 
     youtube_id: "gDkCGYOpWU0" 
@@ -248,6 +118,16 @@ songs:
     primary_playlist: "Pop"
 
 # working structure *****************************************************************
+
+
+
+
+
+
+
+
+
+
 # Everything below this point has been updated to the new structure **************************************
 
   - song_id: "a-quiet-little-voice"
@@ -3082,3 +2962,1400 @@ songs:
       🎛️ <strong>Production:</strong> soft pads, glowing textures, slow movement<br>
       ✨ <strong>Mood:</strong> nostalgic, peaceful, timeless</p>
   
+  - title: "Midnight Mayhem Original"
+    subtitle: ""
+    youtube_id: "1B1nGWaWgD0"
+    url: "/music/midnight-mayhem/"
+    image: "/assets/Midnight Mayhem Orig.jpeg"
+    videostatus: "Public"
+    primary_playlist: "Pop"
+    description_html: |
+      <p><strong>Official audio for “Midnight Mayhem” by Horizon Sound.</strong></p>
+  
+      <p>“Midnight Mayhem” is a high‑energy electro‑pop riot with bold, attitude‑soaked female vocals, talk‑sing swagger, and chaotic vocal chops. Glittery, rubbery synth leads, heavy distorted bass, punchy four‑on‑the‑floor drums, and cosmic club FX create a neon‑drenched, explosive sound. Wild, glossy, and unrestrained, this track blends late‑night party chaos with chant‑ready hooks and high‑octane pop energy.</p>
+  
+      <p>This song captures the thrill of a reckless night out — confetti lashes, cosmic lights, glitter quakes, and the electric rush of losing control on the dancefloor. Loud, playful, and unapologetically chaotic, “Midnight Mayhem” is a neon‑soaked anthem for anyone who lives for the wild side of the night.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> chaotic electro‑pop, neon, high‑energy, wild<br>
+      🎤 <strong>Vocals:</strong> talk‑sing swagger, raspy edges, attitude‑heavy<br>
+      🎛️ <strong>Production:</strong> rubbery synths, heavy bass, stomp‑claps, cosmic FX<br>
+      ⚡ <strong>Mood:</strong> explosive, reckless, glossy, late‑night</p>
+  
+    lyrics_html: |
+      <p>[Intro]
+      Let the chaos flow.</p>
+  
+      <p>[Verse 1]
+      Neon dripping off my body like a cosmic waterfall,
+      I walk in and every heel click starts a riot in the hall.
+      Got confetti in my lashes, got a dare behind my grin,
+      If you’re looking for a quiet night—
+      don’t let me in.
+      I’m a spark in a powder room, a queen about to blow,
+      And the second that the bass hits, I’m electric to the bone.</p>
+  
+      <p>[Pre‑Chorus]
+      Turn it up ’til the walls start bending,
+      We don’t stop — we just keep ascending.
+      Hands in the air like we’re touching the sky,
+      This whole place ’bout to amplify.</p>
+  
+      <p>[Chorus]
+      We’re making midnight mayhem, watch the whole world shake,
+      Every move we’re making leaves a glitter quake.
+      Lights go wild when we hit the floor —
+      One scream, one beat — now they’re begging for more.
+      We’re reckless, restless, ready to blow,
+      Turn the night up louder, let the chaos flow</p>
+  
+      <p>[Verse 2]
+      Silver lipstick on a stranger, girlfriends dancing on the bar,
+      I’m a hurricane in heels and I’m a wish upon a star.
+      Got a pocket full of trouble and a rhythm in my veins,
+      Every step I take is thunder—
+      I won’t be contained.
+      If you’re craving something dangerous, then baby, here I am —
+      A firework in human form, a one girl traffic jam.</p>
+  
+      <p>[Pre‑Chorus]
+      Turn it up ’til the room starts spinning,
+      We’re not losing — insane is winning.
+      Bodies collide like a sensual tide,
+      We’re the storm they can’t survive.</p>
+  
+      <p>[Chorus]
+      We’re making midnight mayhem, let the whole world shake,
+      Every move we’re making leaves a glitter quake.
+      Lights go wild when we hit the floor —
+      One scream, one beat, and they’re begging for more.
+      We’re reckless, restless, ready to blow,
+      Turn the night up louder, let the chaos flow.</p>
+  
+      <p>[Bridge]
+      Flashbulbs popping like a meteor shower,
+      We’re the kind of wild you can’t overpower.
+      Spin me reckless, pull me under —
+      Let the night explode like thunder.</p>
+  
+      <p>[Chorus]
+      We’re making midnight mayhem, watch the whole world shake,
+      Every move we’re making leaves a glitter quake.
+      Lights go wild when we hit the floor —
+      One scream, one beat — now they’re begging for more.
+      We’re reckless, restless, ready to blow,
+      Turn the night up louder, let the chaos flow.</p>
+  
+      <p>[Outro]
+      Let the chaos flow, let the chaos flow—
+      One spark, one night, and we’re ready to blow.</p>
+  
+  - title: "Makin' our way to California"
+    subtitle: ""
+    youtube_id: "cU4c2_3ITP8"
+    url: "/music/making-our-way-to-california/"
+    image: "/assets/Making our way to California.jpeg"
+    videostatus: "Public"
+    primary_playlist: "Pop"
+    description_html: |
+      <p><strong>Official audio for “Makin’ Our Way to California” by Horizon Sound.</strong></p>
+  
+      <p>“Makin’ Our Way to California” is a bright, upbeat pop‑folk anthem full of movement, memory, and sunlit emotion. Crisp acoustic guitars, shimmering harmonies, and modern pop drums support an energetic female vocal that captures the joy of a family road trip across America. With polished production and a youthful tone, the track blends folk storytelling with pop clarity.</p>
+  
+      <p>This song follows the story of a summer journey down Route 66 — from Chicago to the Santa Monica Pier — told through the eyes of a daughter watching the world go by. From roadside treasures to desert snapshots, every lyric is a postcard from the past. Nostalgic, warm, and emotionally open, “Makin’ Our Way to California” is a celebration of family, freedom, and the kind of trip that stays with you forever.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> bright pop‑folk, summery, nostalgic, upbeat<br>
+      🎤 <strong>Vocals:</strong> energetic female lead, youthful tone, emotional clarity<br>
+      🎛️ <strong>Production:</strong> acoustic guitars, modern pop drums, shimmering harmonies, clean stereo mix<br>
+      ⚡ <strong>Mood:</strong> adventurous, warm, reflective, joyful</p>
+  
+    lyrics_html: |
+      <p>[Intro]
+      Makin' our way to California
+      Makin' our way to California</p>
+  
+      <p>[Verse 1]
+      In a rented car we hit the road
+      My big brother sits in the passenger seat
+      Dad has one hand on the wheel
+      Laughing at something Chris said
+      And I lay my head against the window
+      Watching as the world goes by
+      And I see the road signs</p>
+  
+      <p>[Pre-Chorus]
+      Illinois, Missouri, Oklahoma, Texas, New Mexico, Arizona, California</p>
+  
+      <p>[Chorus]
+      We’re riding down old Route 66,
+      From Chicago to the coast on a summer trip.
+      Stopping at the Wigwam,
+      Snapping photos in the desert,
+      Where the big meteor hit.
+      Yeah, we’re chasing that west‑bound bliss
+      ’Til we reach the Santa Monica Pier.
+      And I’d do it all again
+      Just to feel that time rewind,
+      Makin’ our way to California.</p>
+  
+      <p>[Verse 2]
+      Looking for buried treasure,
+      Doing nothing, doing something all together.
+      Getting sunburned on the side of the road,
+      Me and my brother splashing in the Colorado.
+      Dad drives us into another small town,
+      We’re seeing everything before it’s torn down,
+      Reading every road sign.</p>
+  
+      <p>[Pre-Chorus]
+      Illinois, Missouri, Oklahoma, Texas, New Mexico, Arizona, California</p>
+  
+      <p>[Bridge]
+      I didn’t know then what it meant,
+      How fast those summers came and went.
+      But every mile we drove back then
+      Still feels like going home again.</p>
+  
+      <p>[Chorus]
+      We’re riding down old Route 66,
+      From Chicago to the coast on a summer trip.
+      Stopping at the Wigwam,
+      Snapping photos in the desert,
+      Where the big meteor hit.
+      Yeah, we’re chasing that west‑bound bliss
+      ’Til we reach the Santa Monica Pier.
+      And I’d do it all again
+      Just to feel that time rewind,
+      Makin’ our way to California.</p>
+  
+      <p>[Intro]
+      Makin' our way to California
+      Makin' our way to California</p>
+  
+  - title: "Learning to Live Again"
+    subtitle: ""
+    youtube_id: "NVG_qw_51RQ"
+    url: "/music/learning-to-live-again/"
+    image: "/assets/Learning to Live Again.jpeg"
+    videostatus: "Public"
+    primary_playlist: "Emotional Ballads"
+    description_html: |
+      <p><strong>Official audio for “Learning to Live Again” by Horizon Sound.</strong></p>
+  
+      <p>“Learning to Live Again” is a soft, emotional electro‑pop ballad shaped by warm synth textures, airy pads, and a breathy, intimate female vocal. Subtle percussion and spacious production create a dreamy, reflective atmosphere, letting every lyric land with quiet honesty. The chorus rises with layered harmonies and gentle bass, lifting the song into a calm but confident sense of renewal.</p>
+  
+      <p>This track follows the journey of someone rebuilding themselves after hitting rock bottom — learning to breathe, feel, and hope again. From fragile first steps to the moment strength returns, the song captures the slow, courageous process of healing. Tender verses, shimmering synths, and a steady emotional climb make “Learning to Live Again” a comforting soundtrack for anyone finding their way out of the dark.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> soft electro‑pop, dreamy, reflective, emotional<br>
+      🎤 <strong>Vocals:</strong> warm, breathy female lead, gentle vibrato, intimate delivery<br>
+      🎛️ <strong>Production:</strong> atmospheric pads, subtle synths, light percussion, smooth harmonies, spacious mix<br>
+      ⚡ <strong>Mood:</strong> hopeful, vulnerable, uplifting, quietly powerful</p>
+  
+    lyrics_html: |
+      <p>[Intro]
+      I was standing in the shadows,
+      Feeling lost and terrified —</p>
+  
+      <p>[Verse 1]
+      I was fading in the darkness, couldn’t recognize myself,
+      Every sunrise felt like nothing, every heartbeat felt flat.
+      I was drowning in the silence, losing pieces of my mind,
+      Trying hard to feel like someone, but the truth was never kind.
+      I swore that I would stop, I would turn my life around,
+      But every promise that I made kept crashing to the ground.
+      And I knew I couldn’t keep on living trapped inside this pain,
+      Had to find a spark of hope if I would ever truly live again.</p>
+  
+      <p>[Pre‑Chorus 1]
+      I hit the ground so hard it shook me,
+      Saw the truth I couldn’t hide.
+      If I didn’t choose to change now,
+      I knew I would never survive.</p>
+  
+      <p>[Chorus]
+      So I’m learning how to live again,
+      Learning how to breathe again,
+      Stepping out of all the darkness I’d been existing in.
+      I’m reaching for the light again,
+      Fighting for my life again,
+      Finding strength in places I thought I’d never find.
+      I’m not who I was —
+      I’m learning how to live.</p>
+  
+      <p>[Verse 2]
+      Every morning felt uncertain, like a stranger in my skin,
+      But I held on to the small things just to feel myself again.
+      I was shaky, I was fragile, but I kept on standing tall,
+      Every stumble taught me something, every step a kind of call.
+      And the colors started coming back in ways I’d never seen,
+      Little victories reminding me of who I could be.</p>
+  
+      <p>[Pre‑Chorus 2]
+      I’m not the same as when I started,
+      I’m stronger than the fear inside.
+      Every day I choose the future,
+      Every day I choose to try.</p>
+  
+      <p>[Chorus]
+      So I’m learning how to live again,
+      Learning how to breathe again,
+      Stepping out of all the darkness I’d been existing in.
+      I’m reaching for the light again,
+      Fighting for my life again,
+      Finding strength in places I thought I’d never find.
+      I’m not who I was —
+      I’m learning how to live.</p>
+  
+      <p>[Bridge]
+      Now the sky feels wide and open,
+      And the world feels new and kind.
+      I can hear my heartbeat steady,
+      Feel the hope I’d left behind.
+      I’m not perfect, but I’m standing,
+      And I’m proud of what I’ve done —
+      I survived the storm inside me,
+      Now I’m stepping toward the sun.</p>
+  
+      <p>[Final Chorus]
+      Yeah, I’m learning how to live again,
+      Learning how to breathe again,
+      Walking forward with a strength I never knew I had within.
+      I’m reaching for the light again,
+      Fighting for my life again,
+      And every day I’m proving I can leave the dark behind.
+      I’m not who I was —
+      I’m learning how to live.</p>
+  
+      <p>[Outro]
+      And if you’re standing in the shadows,
+      Feeling lost and terrified —
+      Take my hand, I’ll walk beside you.
+      Together we can learn to live.</p>
+  
+  - title: "Keep the Light On"
+    subtitle: ""
+    youtube_id: "f25XTQKjq7Q"
+    url: "/music/keep-the-light-on/"
+    image: "/assets/Keep the Light On.jpeg"
+    videostatus: "Public"
+    primary_playlist: "Pop"
+    description_html: |
+      <p><strong>Official audio for “Keep the Light On” by Horizon Sound.</strong></p>
+  
+      <p>“Keep the Light On” is an upbeat 90s‑inspired pop track built on bright female vocals, steady rhythmic drums, warm acoustic guitar layers, and shimmering synth textures. The song carries a hopeful, motivational energy — breezy, melodic, and emotionally uplifting — with a feel‑good groove that blends nostalgia with modern pop polish.</p>
+  
+      <p>Lyrically, the song follows someone stepping out of a dark season and rediscovering her strength one small victory at a time. The verses capture the shaky first steps toward healing, while the chorus becomes a mantra of resilience: a reminder to hold onto hope even when the night feels long. With its warm acoustic pulse, shimmering production, and empowering message, “Keep the Light On” celebrates the quiet courage it takes to keep moving forward.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> 90s pop revival, upbeat, motivational, feel‑good<br>
+      🎤 <strong>Vocals:</strong> bright female lead, warm tone, expressive phrasing<br>
+      🎛️ <strong>Production:</strong> acoustic layers, steady drums, shimmering synths, modern pop clarity<br>
+      ⚡ <strong>Mood:</strong> hopeful, energetic, uplifting, resilient</p>
+  
+    lyrics_html: |
+      <p>[Verse 1]
+      Woke up feeling kinda shaky,
+      World was lookin’ a little hazy,
+      But I’m done with letting shadows call the shots.
+      Pulled myself together slowly,
+      Told the mirror, “Girl, you know me,
+      You’ve been through worse and it’s never made you stop.”</p>
+  
+      <p>[Pre‑Chorus]
+      And I know the storm is only passing through,
+      Every cloud breaks open to a better view.</p>
+  
+      <p>[Chorus]
+      So keep the light on,
+      Keep the light on,
+      Even when the night feels way too long.
+      Keep the light on,
+      Keep the light on,
+      You’re stronger than the things you’re running from.</p>
+  
+      <p>[Verse 2]
+      Steppin’ out into the sunlight,
+      Feels like everything’s aligning,
+      My wins are adding up a little more each day.
+      Every moment feels much brighter,
+      Every step is feeling lighter,
+      Didn’t think I would ever feel this way.</p>
+  
+      <p>[Pre‑Chorus]
+      And I know the storm is only passing through,
+      Every cloud breaks open to a better view.</p>
+  
+      <p>[Chorus]
+      So keep the light on,
+      Keep the light on,
+      Even when the night feels way too long.
+      Keep the light on,
+      Keep the light on,
+      You’re stronger than the things you’re running from.</p>
+  
+      <p>[Bridge]
+      When the road gets quiet,
+      And your thoughts run riot,
+      Embrace the faith that’s kept you moving all this time.
+      You don’t need perfection,
+      Just a little more direction—
+      You can always reclaim what’s left of time.</p>
+  
+      <p>[Chorus]
+      So keep the light on,
+      Keep the light on,
+      You’re closer than you think, just carry on.
+      Keep the light on,
+      Keep the light on,
+      The hardest part is done, you’re moving on.</p>
+  
+      <p>[Outro]
+      So keep the light on,
+      Keep the light on,
+      Even when the night feels way too long.
+      Keep the light on.</p>
+  
+  - title: "Kaleidoscope"
+    subtitle: ""
+    youtube_id: "YpUFnf6Ke_A"
+    url: "/music/kaleidoscope/"
+    image: "/assets/Kaleidoscope.jpeg"
+    videostatus: "Public"
+    primary_playlist: "Pop"
+    description_html: |
+      <p><strong>Official audio for “Kaleidoscope” by Horizon Sound.</strong></p>
+  
+      <p>“Kaleidoscope” is a warm, heartfelt acoustic‑pop track built on gentle piano, light guitar, and intimate female vocals. The production stays soft and modern, letting the lyrics shine as they explore resilience, shifting perspectives, and the beauty that emerges when life refuses to stay still. Subtle percussion and airy harmonies lift the chorus into a hopeful, melodic rise, creating a comforting, introspective soundscape.</p>
+  
+      <p>This song follows the journey of someone learning to embrace change instead of fearing it. Each verse reflects on the moments when life tilts, breaks, or rearranges itself into something unexpected. Through fractured pieces, fading seasons, and new patterns forming over time, she discovers that motion doesn’t mean chaos — it means growth. “Kaleidoscope” captures the quiet courage of letting go, breathing through uncertainty, and trusting that every turn brings a new kind of light.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> emotional acoustic‑pop, warm, reflective, uplifting<br>
+      🎤 <strong>Vocals:</strong> intimate female lead, expressive phrasing, soft harmonies<br>
+      🎛️ <strong>Production:</strong> piano‑led, light acoustic guitar, gentle percussion, modern singer‑songwriter polish<br>
+      ⚡ <strong>Mood:</strong> hopeful, introspective, poetic, quietly empowering</p>
+  
+    lyrics_html: |
+      <p>[Verse 1]
+      I used to fear change, I tried to keep it still
+      Worried every bad decision meant I’d never find my way
+      But nothing stays the same, and maybe that’s ok
+      The colors only come alive when patterns start to play</p>
+  
+      <p>[Pre Chorus]
+      So when the world tilts sideways
+      And I don’t know what comes next
+      I remind myself that motion
+      Doesn’t mean my life’s a mess</p>
+  
+      <p>[Chorus]
+      Life’s a kaleidoscope, changing with each day
+      Every shape and color shifting into place
+      When the bright goes dark, when everything falls apart
+      I just breathe and let it go
+      Every day… another turn of the kaleidoscope</p>
+  
+      <p>[Verse 2]
+      I’ve seen the best things fade, and the worst things bloom
+      Lost a little faith, then found it in a different view
+      The things that once hurt me now fall into a new design
+      Sometimes the fractured pieces form a pattern over time</p>
+  
+      <p>[Pre Chorus]
+      So when my vision trembles
+      And the colors rearrange
+      I remind myself that happiness
+      sometimes needs a little change</p>
+  
+      <p>[Chorus]
+      Life’s a kaleidoscope, changing with each day
+      Every shape and color shifting into place
+      When the bright goes dark, when everything falls apart
+      I just breathe and let it go
+      Every day… another turn of the kaleidoscope</p>
+  
+      <p>[Bridge]
+      You can’t freeze the perfect moment
+      You often stay inside the pain
+      Every turn becomes a chance
+      Every flicker finds its flame
+      And the light keeps finding new ways
+      To start to shine through</p>
+  
+      <p>[Chorus]
+      Life’s a kaleidoscope, changing with each day
+      Every shape and color shifting into place
+      When the bright goes dark, when everything falls apart
+      I just breathe and let it go
+      Every day… another turn of the kaleidoscope</p>
+  
+      <p>[Outro]
+      Every day… another turn of the kaleidoscope</p>
+  
+  - title: "After Midnight"
+    song_id: "midnight-saga-after-midnight"
+    subtitle: "Midnight Saga | Part 4"
+    youtube_id: "iGt2wtH6orc"
+    url: "/music/midnight-saga-after-midnight/"
+    image: "/assets/After Midnight.jpeg"
+    videostatus: "Private"
+    primary_playlist: "Midnight Saga"
+    sequence: 4
+    description_html: |
+      <p><strong>Official audio for “After Midnight” by Horizon Sound.</strong></p>
+  
+      <p>“After Midnight” closes The Midnight Saga with a reflective, cinematic pop sound that feels like the quiet after the storm. Soft synths, warm pads, and steady drums support a heartfelt female vocal that brings the night to a gentle landing. It’s the moment when the adrenaline fades, the neon dims, and clarity finally returns.</p>
+  
+      <p>This chapter follows the emotional exhale after a night of chaos and discovery. The verses carry a soft honesty, while the chorus rises into a calm, confident acceptance — the understanding that every wild night leaves you changed. “After Midnight” is the sunrise moment of the saga, where everything settles and the story finds its meaning.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> cinematic pop, reflective, warm, late‑night calm<br>
+      🎤 <strong>Vocals:</strong> heartfelt female lead, soft and steady<br>
+      🎛️ <strong>Production:</strong> warm pads, soft synths, steady drums<br>
+      ⚡ <strong>Mood:</strong> peaceful, introspective, resolved, sunrise‑ready</p>
+  
+    lyrics_html: |
+      <p>[Intro]
+      “Last call!” echoes through the crowd.
+      People grabbing jackets, stumbling out,
+      Lights come up, DJ kills the sound,
+      After midnight, yeah, the end is near.</p>
+  
+      <p>[Verse 1]
+      Broke a heel dancing, had to take off my shoes.
+      Lost my phone twice, blamed it on the booze.
+      Bathroom line was torture, someone’s lying on the floor.
+      But we’re laughing now harder than ever before.</p>
+  
+      <p>[Pre‑Chorus]
+      The night air hits us as we stumble outside,
+      Mascara smudged from the heat of the lights.
+      Someone shouts “Denny’s!” and we all agree—
+      After midnight, that’s the place to be.</p>
+  
+      <p>[Chorus]
+      After midnight, the party slows down,
+      Swagger fades out as we start to come down.
+      Uber’s coming, and we’re losing our minds,
+      Every messy moment, proof that we’re alive.
+      After midnight, the world goes dark,
+      City lights dim as the rush wears off.
+      We’re exhausted, but we’re still alive—
+      Yeah, the best stories happen after midnight.</p>
+  
+      <p>[Verse 2]
+      Uber pulls up, and we tumble inside,
+      Laughing at all the selfies posted tonight.
+      Someone finds her phone in another girl’s purse,
+      Someone’s flirting with the driver, too buzzed to care.</p>
+  
+      <p>[Pre‑Chorus]
+      Booth lights glowing like a warm embrace,
+      Fries on the table, glitter clinging to our face.
+      We replay the chaos like a highlight reel—
+      After midnight, everything feels right.</p>
+  
+      <p>[Chorus]
+      After midnight, the party slows down,
+      Swagger fades out as we start to come down.
+      Uber’s coming, and we’re losing our minds,
+      Every messy moment, proof that we’re alive.
+      After midnight, the world goes dark,
+      City lights dim as the rush wears off.
+      We’re exhausted, but we’re still alive—
+      Yeah, the best stories happen after midnight.</p>
+  
+      <p>[Bridge]
+      We’ll forget the songs but remember the glow,
+      The glitter, the chaos, the friends we know.
+      These are the nights we’ll miss someday—
+      Time with my girls that will never fade.</p>
+  
+      <p>[Chorus]
+      After midnight, the party slows down,
+      Swagger fades out as we start to come down.
+      Uber’s coming, and we’re losing our minds,
+      Every messy moment, proof that we’re alive.
+      After midnight, the world goes dark,
+      City lights dim as the rush wears off.
+      We’re exhausted, but we’re still alive—
+      Yeah, the best stories happen after midnight.</p>
+  
+      <p>[Outro]
+      After midnight, the noise fades away,
+      Uber pulls up, it’s time to go home,
+      Shoes in our hands, still buzzing from the night.
+      One by one, the girls say goodnight—
+      After midnight, I breathe again—
+      Yeah, this is how the best nights end.</p>
+  
+  - title: "Midnight Madness"
+    song_id: "midnight-saga-midnight-madness"
+    subtitle: "Midnight Saga | Part 3"
+    youtube_id: "HeD2WbErCKg"
+    url: "/music/midnight-saga-midnight-madness/"
+    image: "/assets/Midnight Madness.jpeg"
+    videostatus: "Private"
+    primary_playlist: "Midnight Saga"
+    sequence: 3
+    description_html: |
+      <p><strong>Official audio for “Midnight Madness” by Horizon Sound.</strong></p>
+  
+      <p>“Midnight Madness” dives into the third chapter of The Midnight Saga with a hypnotic blend of pop, synth, and swirling late‑night energy. The track leans into the delirious, neon‑soaked middle of the night — where everything feels louder, brighter, and slightly unreal. With driving drums, glowing synth layers, and expressive female vocals, it captures the moment when the night fully takes over.</p>
+  
+      <p>This chapter follows the blur between excitement and overload. The verses drift through dizzy, dreamlike moments, while the chorus surges with the rush of being swept up in something bigger than yourself. “Midnight Madness” is the heart of the saga — the point where time dissolves, the world spins, and the night becomes its own universe.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> hypnotic pop, neon swirl, dreamlike intensity<br>
+      🎤 <strong>Vocals:</strong> expressive female lead, drifting and powerful<br>
+      🎛️ <strong>Production:</strong> glowing synths, pulsing drums, immersive textures<br>
+      ⚡ <strong>Mood:</strong> dizzy, electric, surreal, all‑consuming</p>
+  
+    lyrics_html: |
+      <p>[Intro]
+      Release yourself
+      Reach for the sky</p>
+  
+      <p>[Verse 1]
+      Neon on my skin, breathing in the night
+      Laughing at the shadows that are flickering to life
+      Didn’t plan the chaos, but it’s rising up my spine
+      Something in the static says the night is mine</p>
+  
+      <p>[Pre Chorus]
+      I feel the edges bending
+      Don’t care who I’m offending
+      I’m slipping but ascending
+      And I don’t wanna stop</p>
+  
+      <p>[Chorus]
+      Midnight madness, feeling the beat
+      Losing my balance, but it feels so sweet
+      Spinning like a tornado breaking loose
+      I’m out of my mind and it feels so good
+      Midnight madness, losing control
+      The more I submit, the higher I go
+      If this is a spiral, I’m riding it high
+      I’m losing myself just to feel more alive</p>
+  
+      <p>[Verse 2]
+      City’s breathing heavy trying to keep up with me
+      A mirror in a window shows the girl I wanna be
+      Running from the quiet, chasing every spark I see
+      Every little flicker pulling me outside the lines</p>
+  
+      <p>[Pre Chorus]
+      I feel the edges bending
+      Don’t care who I’m offending
+      I’m slipping but ascending
+      And I don’t wanna stop</p>
+  
+      <p>[Chorus]
+      Midnight madness, feeling the beat
+      Losing my balance, but it feels so sweet
+      Spinning like a tornado breaking loose
+      I’m out of my mind and it feels so good
+      Midnight madness, losing control
+      The more I submit, the higher I go
+      If this is a spiral, I’m riding it high
+      I’m losing myself just to feel more alive</p>
+  
+      <p>[Bridge]
+      Caught my reflection in the neon haze
+      Didn’t recognize her, but I liked her face
+      If this is unraveling, then let it unwind
+      I’m not coming down, I’m leaving fear behind</p>
+  
+      <p>[Chorus]
+      Midnight madness, feeling the beat
+      Losing my balance, but it feels so sweet
+      Spinning like a tornado breaking loose
+      I’m out of my mind and it feels so good
+      Midnight madness, losing control
+      The more I submit, the higher I go
+      If this is a spiral, I’m riding it high
+      I’m losing myself just to feel more alive</p>
+  
+      <p>[Outro]
+      Feel the beat
+      Feel alive</p>
+  
+  - title: "Midnight Mayhem"
+    song_id: "midnight-saga-midnight-mayhem"
+    subtitle: "Midnight Saga | Part 2"
+    youtube_id: "Z6AGhE0K-Ro"
+    url: "/music/midnight-saga-midnight-mayhem/"
+    image: "/assets/Midnight Mayhem.jpeg"
+    videostatus: "Private"
+    primary_playlist: "Midnight Saga"
+    sequence: 2
+    description_html: |
+      <p><strong>Official audio for “Midnight Mayhem” by Horizon Sound.</strong></p>
+  
+      <p>“Midnight Mayhem” explodes into the second chapter of The Midnight Saga with high‑energy pop, pulsing rhythm, and neon‑drenched chaos. Bright synths, sharp drums, and bold female vocals collide in a track that captures the moment the night stops behaving — when everything gets louder, faster, and wildly unpredictable. It’s the sound of losing control in the best possible way.</p>
+  
+      <p>This chapter follows the rush of stepping deeper into the night’s frenzy. The verses spark with reckless excitement, while the chorus hits like a burst of adrenaline — the kind that makes you laugh, run, dance, and forget the world outside the moment. “Midnight Mayhem” is the turning point where curiosity becomes chaos, and the night reveals its wildest side.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> high‑energy pop, neon chaos, late‑night adrenaline<br>
+      🎤 <strong>Vocals:</strong> bold female lead, energetic phrasing, electric delivery<br>
+      🎛️ <strong>Production:</strong> bright synths, sharp drums, rhythmic drive<br>
+      ⚡ <strong>Mood:</strong> wild, reckless, euphoric, fast‑moving</p>
+  
+    lyrics_html: |
+      <p>[Intro]
+      Let the chaos flow.</p>
+  
+      <p>[Verse 1]
+      Neon dripping off my body like a cosmic waterfall,
+      I walk in and every heel click starts a riot in the hall.
+      Got confetti in my lashes, got a dare behind my grin,
+      If you’re looking for a quiet night—
+      don’t let me in.
+      I’m a spark in a powder room, a queen about to blow,
+      And the second that the bass hits, I’m electric to the bone.</p>
+  
+      <p>[Pre‑Chorus]
+      Turn it up ’til the walls start bending,
+      We don’t stop — we just keep ascending.
+      Hands in the air like we’re touching the sky,
+      This whole place ’bout to amplify.</p>
+  
+      <p>[Chorus]
+      We’re making midnight mayhem, watch the whole world shake,
+      Every move we’re making leaves a glitter quake.
+      Lights go wild when we hit the floor —
+      One scream, one beat — now they’re begging for more.
+      We’re reckless, restless, ready to blow,
+      Turn the night up louder, let the chaos flow</p>
+  
+      <p>[Verse 2]
+      Silver lipstick on a stranger, girlfriends dancing on the bar,
+      I’m a hurricane in heels and I’m a wish upon a star.
+      Got a pocket full of trouble and a rhythm in my veins,
+      Every step I take is thunder—
+      I won’t be contained.
+      If you’re craving something dangerous, then baby, here I am —
+      A firework in human form, a one girl traffic jam.</p>
+  
+      <p>[Pre‑Chorus]
+      Turn it up ’til the room starts spinning,
+      We’re not losing — insane is winning.
+      Bodies collide like a sensual tide,
+      We’re the storm they can’t survive.</p>
+  
+      <p>[Chorus]
+      We’re making midnight mayhem, let the whole world shake,
+      Every move we’re making leaves a glitter quake.
+      Lights go wild when we hit the floor —
+      One scream, one beat, and they’re begging for more.
+      We’re reckless, restless, ready to blow,
+      Turn the night up louder, let the chaos flow.</p>
+  
+      <p>[Bridge]
+      Flashbulbs popping like a meteor shower,
+      We’re the kind of wild you can’t overpower.
+      Spin me reckless, pull me under —
+      Let the night explode like thunder.</p>
+  
+      <p>[Chorus]
+      We’re making midnight mayhem, watch the whole world shake,
+      Every move we’re making leaves a glitter quake.
+      Lights go wild when we hit the floor —
+      One scream, one beat — now they’re begging for more.
+      We’re reckless, restless, ready to blow,
+      Turn the night up louder, let the chaos flow.</p>
+  
+      <p>[Outro]
+      Let the chaos flow, let the chaos flow—
+      One spark, one night, and we’re ready to blow.</p>
+  
+  - title: "Before Midnight"
+    song_id: "midnight-saga-before-midnight"
+    subtitle: "Midnight Saga | Part 1"
+    youtube_id: "VXQKpK56MCI"
+    url: "/music/midnight-saga-before-midnight/"
+    image: "/assets/Before Midnight.jpeg"
+    videostatus: "Public"
+    primary_playlist: "Midnight Saga"
+    sequence: 1
+    description_html: |
+      <p><strong>Official audio for “Before Midnight” by Horizon Sound.</strong></p>
+  
+      <p>“Before Midnight” opens The Midnight Saga with a warm, cinematic blend of pop, synth, and late‑night atmosphere. Soft neon textures, steady drums, and smooth female vocals set the tone for a night that’s just beginning — full of possibility, tension, and the quiet electricity of what might unfold. The track carries a sense of anticipation, capturing that moment when the world feels suspended and anything could happen.</p>
+  
+      <p>This chapter follows someone stepping into the night with equal parts excitement and uncertainty. The verses glow with introspection, while the chorus lifts into a confident stride — the feeling of crossing a threshold, leaving the familiar behind, and letting the night pull you forward. “Before Midnight” sets the emotional foundation for the journey ahead, where curiosity becomes momentum and momentum becomes mayhem.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> cinematic pop, neon‑lit, atmospheric, anticipatory<br>
+      🎤 <strong>Vocals:</strong> smooth female lead, soft intensity, late‑night tone<br>
+      🎛️ <strong>Production:</strong> warm synths, steady drums, glowing textures<br>
+      ⚡ <strong>Mood:</strong> curious, electric, suspended, ready‑to‑ignite</p>
+  
+    lyrics_html: |
+      <p>[Intro]
+      My phone’s blowing up, I can barely hear,
+      My girls on FaceTime screaming in my ear.
+      My lip gloss shining, catching the light—
+      Yeah, we’re trouble, we were made to ignite.</p>
+  
+      <p>[Verse 1]
+      Clothes on the floor, I’ve tried on twenty fits,
+      Someone’s crying, someone’s drunk, someone’s losing it.
+      Music blasting, neighbors banging on the door,
+      But tonight we’re legends —
+      We won’t be ignored!</p>
+  
+      <p>[Pre-Chorus]
+      Mirror saying “Girl, you’re the main event,”
+      Spent all day on my look, this glow’s no accident.
+      Heels too high, but I’ll make ’em mine—
+      Countdown’s starting, and we’re right on time.</p>
+  
+      <p>[Chorus]
+      Before midnight, we’re glowing, glowing,
+      Swagger is rising and it’s showing, showing.
+      Group chat going wild, and we’re losing our minds—
+      We’re the flame that’s gonna light up the night.
+      Before midnight, we’re reckless, reckless,
+      Insanity breaking loose and it’s endless, endless.
+      One last look, then we step outside—
+      Yeah, the world won’t see me coming tonight.</p>
+  
+      <p>[Verse 2]
+      Glitter on my skin, I’m ready to rage,
+      Girls gather around, about to engage.
+      “Take a pic!” “No, delete!” “Wait, I look insane!”
+      We’re magic in the madness — that’s the whole damn thing.</p>
+  
+      <p>[Pre-Chorus]
+      Uber’s waiting, someone’s yelling “GO!”
+      We’re late as hell, but we still steal the show.
+      Heels on pavement, neon lighting up our eyes—
+      Tonight we’re trouble and we don’t apologize.</p>
+  
+      <p>[Chorus]
+      Before midnight, we’re glowing, glowing,
+      Swagger is rising and it’s showing, showing.
+      Group chat going wild, and we’re losing our minds—
+      We’re the flame that’s gonna light up the night.
+      Before midnight, we’re reckless, reckless,
+      Insanity breaking loose and it’s endless, endless.
+      One last look, then we step outside—
+      Yeah, the world won’t see me coming tonight.</p>
+  
+      <p>[Bridge]
+      Laughter spilling over, we’re drawing a crowd,
+      Yelling “Drive faster!” — we’re losing it now.
+      Girls all screaming, we’re alive, alive—
+      We’re all preparing to dive.</p>
+  
+      <p>[Chorus]
+      Before midnight, we’re glowing, glowing,
+      Swagger is rising and it’s showing, showing.
+      Group chat going wild, and we’re losing our minds—
+      We’re the flame that’s gonna light up the night.
+      Before midnight, we’re reckless, reckless,
+      Insanity breaking loose and it’s endless, endless.
+      One last look, then we step outside—
+      Yeah, the world won’t see me coming tonight.</p>
+  
+      <p>[Outro]
+      The Uber pulls up and my girls spill out,
+      The bass is thumping as we rush inside.
+      We get in for free ’cause we’re what it’s about—
+      This club is so damn epic, yeah—
+      We’re losing our minds tonight.</p>
+  
+  - title: "Never Let Each Other Down"
+    subtitle: ""
+    youtube_id: "2uKHo8dtINQ"
+    url: "/music/never-let-each-other-down/"
+    image: "/assets/Never Let Each Other Down.jpeg"
+    videostatus: "Public"
+    primary_playlist: "Pop"
+    description_html: |
+      <p><strong>Official audio for “Never Let Each Other Down” by Horizon Sound.</strong></p>
+  
+      <p>“Never Let Each Other Down” is an up‑tempo 80s‑inspired synth‑rock anthem driven by energetic drums, pulsing synth bass, and wide arena‑style production. Shimmering synthesizers and gated‑reverb drums set the tone before the full band kicks in, supporting a confident female lead vocal with clean, controlled power. The track blends retro sparkle with modern polish, creating a bold, uplifting groove.</p>
+  
+      <p>This song tells the story of two people who refuse to break under pressure — finding strength in each other when the world feels heavy. From the darkness of doubt to the rush of connection, the lyrics follow a journey of resilience, unity, and choosing love again and again. With soaring choruses, emotional lift, and a driving rhythm, “Never Let Each Other Down” is a celebration of loyalty, courage, and standing side by side through every storm.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> up‑tempo 80s synth‑rock, energetic, bold, uplifting<br>
+      🎤 <strong>Vocals:</strong> confident female lead, clean delivery, emotional clarity<br>
+      🎛️ <strong>Production:</strong> pulsing synth bass, gated‑reverb drums, melodic electric fills, wide arena mix<br>
+      ⚡ <strong>Mood:</strong> triumphant, passionate, determined, hopeful</p>
+  
+    lyrics_html: |
+      <p>[Verse 1]
+      I was walking through the darkness,
+      With no light to guide my way,
+      Every breath felt cold and lonely,
+      Like the night refused to fade.
+      Then you found me in the silence,
+      Held me close against your side,
+      And suddenly the world felt brighter,
+      Like the sunrise breaking wide.</p>
+  
+      <p>[Pre‑Chorus]
+      I feel my heartbeat getting stronger,
+      All my fears are losing ground,
+      And the moment that you touched me,
+      Everything just turned around.</p>
+  
+      <p>[Chorus]
+      And we will fight to stay together,
+      Side by side forever,
+      We’ll never let each other down.
+      And when the world is pressing on us,
+      We’ll rise beyond the wreckage,
+      We’ll never let each other down—
+      Yeah, we’ll never let each other down.</p>
+  
+      <p>[Verse 2]
+      I remember all the moments
+      When I almost walked away,
+      Thinking I was meant to run
+      ’Til you taught me how to stay.
+      Now our fire’s burning brighter,
+      And my body’s feeling lighter,
+      Every step we take together
+      Feels like nothing’s in our way.</p>
+  
+      <p>[Pre‑Chorus]
+      I feel my heartbeat getting stronger,
+      All my fears are losing ground,
+      And the moment that you touched me,
+      Everything just turned around.</p>
+  
+      <p>[Chorus]
+      And we will fight to stay together,
+      Side by side forever,
+      We’ll never let each other down.
+      And when the world is pressing on us,
+      We’ll rise beyond the wreckage,
+      We’ll never let each other down—
+      Yeah, we’ll never let each other down.</p>
+  
+      <p>[Bridge]
+      Oh, you’re all that I need,
+      All that I need, it’s true.
+      Please just hold me forever,
+      Please hold me forever…</p>
+  
+      <p>[Chorus]
+      And we will fight to stay together,
+      Side by side forever,
+      We’ll never let each other down.
+      And when the world is pressing on us,
+      We’ll rise beyond the wreckage,
+      We’ll never let each other down,
+      Yeah, we’ll never let each other down —
+      Never let each other down.</p>
+  
+      <p>[Outro]
+      Side by side forever…
+      Side by side forever…
+      We’ll never let each other down…
+      Never let each other down…</p>
+  
+  - title: "Oh, Amber"
+    subtitle: ""
+    youtube_id: "J2AuQsiPz34"
+    url: "/music/oh-amber/"
+    image: "/assets/Oh Amber.jpeg"
+    videostatus: "Public"
+    primary_playlist: "Emotional Ballads"
+    description_html: |
+      <p><strong>Official audio for “Oh, Amber” by Horizon Sound.</strong></p>
+  
+      <p>“Oh, Amber” is a nostalgic emotional‑pop story built on warm acoustic textures, gentle piano, light drums, and a swelling, heartfelt chorus. Clear, expressive female vocals carry the song from soft, intimate verses into a cinematic, rhythmic release. Modern pop production blends with subtle country‑pop influence to create a glowing, memory‑soaked atmosphere.</p>
+  
+      <p>This song follows the lifelong bond between a girl and her beagle, Amber — her first forever friend, her comfort through growing pains, and the heartbeat that shaped her childhood. From winter nights and school‑day crushes to college distance and the ache of letting go, the story traces how Amber’s presence became the rhythm of her life. The final verse introduces Aria, a new pup who brings healing and hope, carrying forward the love Amber left behind. Tender, emotional, and deeply human, “Oh, Amber” is a tribute to the pets who raise us, steady us, and stay with us long after they’re gone.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> emotional pop, nostalgic, acoustic‑leaning, cinematic<br>
+      🎤 <strong>Vocals:</strong> warm female lead, expressive phrasing, heartfelt delivery<br>
+      🎛️ <strong>Production:</strong> acoustic guitar, soft piano, light drums, subtle country‑pop color, swelling chorus<br>
+      ⚡ <strong>Mood:</strong> tender, bittersweet, comforting, reflective</p>
+  
+    lyrics_html: |
+      <p>[Verse 1]
+      I was twelve with a wish on a winter night,
+      Snowflakes dancing in the Christmas lights.
+      I found a beagle pup with a ribbon on her ear,
+      My heart beat fast like finally, she’s here.
+      Named her Amber for the warmth in her eyes,
+      Two little shadows in the winter night,
+      Growing up felt big, but she made it light,
+      Her soft footsteps made the world feel right.</p>
+  
+      <p>[Pre Chorus]
+      Through every change, every stumble I pushed through,
+      Amber was the one thing I could always turn to.</p>
+  
+      <p>[Chorus]
+      Oh, Amber, you were my first forever,
+      Running through the seasons like a wild heartbeat.
+      Oh, Amber, we grew up together,
+      Every memory glowing in your soft‑brown eyes,
+      And the world kept changing, but you stayed you—
+      The rhythm in my life I always ran back to. Amber…
+      I never knew how much of me was you.</p>
+  
+      <p>[Verse 2]
+      High school halls and a brand‑new crush,
+      First slow dance, first kiss, first rush.
+      He held my hand, but you held my truth,
+      Teaching me love the way you taught me youth.
+      Then college came with its miles and fears,
+      Quiet dorm rooms and long‑distance tears.
+      But every break I’d run home wanting more,
+      To find you waiting on the kitchen floor.</p>
+  
+      <p>[Pre Chorus]
+      Your muzzle graying, but your tail still wagging,
+      Like every bit of strength you had was meant for me.</p>
+  
+      <p>[Chorus]
+      Oh, Amber, you were my first forever,
+      Running through the seasons like a wild heartbeat.
+      Oh, Amber, we grew up together,
+      Every memory glowing in your soft‑brown eyes,
+      And the world kept changing, but you stayed you—
+      The rhythm in my life I always ran back to. Amber…
+      I never knew how much of me was you.</p>
+  
+      <p>[Bridge]
+      I held you close on that quiet night,
+      Whispered “thank you” through the fading light.
+      And when the morning came, the house felt wrong—
+      Too still, too quiet, missing your warmth.
+      I didn’t know how to breathe without you,
+      Didn’t know how to start something new.</p>
+  
+      <p>[Verse 3]
+      Then he showed up with a trembling bow,
+      Little beagle eyes saying “it’s okay to let go.”
+      Placed her gently in my shaking arms,
+      A tiny heartbeat stitching up the old scars,
+      Named her Aria for the light she sparked,
+      A soft little promise that love never fades.</p>
+  
+      <p>[Chorus]
+      Oh, Amber, you were my first forever,
+      Running through the seasons like a wild heartbeat.
+      Oh, Amber, we grew up together,
+      Every memory glowing in your soft‑brown eyes.
+      And Aria, you’re the love that follows,
+      Filling up the spaces where the grief still pools.
+      Two beagle pups in the story I knew—
+      Amber taught me love, and Aria carries it through.
+      Amber… I’ll always be all the love you left in me.</p>
+  
+  - title: "Not So Smart Home"
+    subtitle: ""
+    youtube_id: "ii7gqcUMto4"
+    url: "/music/not-so-smart-home/"
+    image: "/assets/Not So Smart Home.jpeg"
+    videostatus: "Public"
+    primary_playlist: "Comedy"
+    description_html: |
+      <p><strong>Official audio for “Not So Smart Home” by Horizon Sound.</strong></p>
+  
+      <p>“Not So Smart Home” is an upbeat, humorous folk‑country romp packed with playful acoustic guitar, light percussion, and a bouncy, mischievous groove. A charismatic male vocal delivers every line with crisp diction and expressive comedic timing, bringing the chaos of malfunctioning gadgets to life. Bright, warm production and subtle tech‑y sound effects — beeps, clicks, digital quirks — add a modern twist to the classic storytelling style.</p>
+  
+      <p>This song follows a man slowly losing control of his own “smart” home as every device develops a mind of its own. From a sassy thermostat to a rebellious vacuum to a toaster with terrible timing, the house becomes a full‑blown circus of uncooperative tech. With its conversational phrasing, natural pauses, and slightly exasperated charm, “Not So Smart Home” is a lighthearted anthem for anyone who’s ever argued with their appliances.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> upbeat folk‑country, playful, mischievous, energetic<br>
+      🎤 <strong>Vocals:</strong> expressive male lead, comedic timing, crisp delivery<br>
+      🎛️ <strong>Production:</strong> acoustic guitar, light percussion, subtle tech sound effects, warm mix<br>
+      ⚡ <strong>Mood:</strong> fun, chaotic, exasperated, clever</p>
+  
+    lyrics_html: |
+      <p>[Intro]
+      I swear I used to run this place—
+      Now my smart home thinks I’m the issue.</p>
+  
+      <p>[Verse 1]
+      Woke up this morning freezing, windows open wide,
+      Thermostat at fifty‑eight like it’s plotting homicide.
+      It said, “I noticed you like wearing sweaters,”—
+      Great—
+      Guess that’s what I get for skipping the “brains‑included” update.
+      Now my house thinks it’s clever in the worst kind of way,
+      Throwing shade through the speakers ’cause it’s got plenty to say.
+      If I wanted attitude, I’d date an ex‑girlfriend—
+      Not a thermostat with delusions of being my friend.</p>
+  
+      <p>[Pre‑Chorus]
+      Maybe I’m tired, maybe I’m stressed,
+      Maybe my house just needs a rest…
+      But every time I give a simple command,
+      It does the opposite like it’s got the upper hand.</p>
+  
+      <p>[Chorus]
+      My smart home keeps gaslighting me,
+      Every single gadget’s smart but they don’t agree.
+      Doors unlock, then lock again “for my security,”
+      Yeah, my smart home won’t stop gaslighting me—
+      Should’ve paid for the package where they share the same brain— maybe.</p>
+  
+      <p>[Verse 2]
+      The robot vacuum’s ramming my feet, itching to start a fight,
+      And the toaster popped at 2 a.m. to ruin my night.
+      My TV recommends shows I swear I’ve never seen,
+      While the fridge keeps nagging, “Have you tried eating your greens?”
+      Told the lights to turn off softly —
+      they flickered like they’re mad I dared to speak,
+      And my smart speaker keeps insisting that my name is “Dominique.”
+      Every gadget’s smart alone, but together they’re a fever dream—
+      Should’ve paid for the upgrade that lets them share one brain‑stream.</p>
+  
+      <p>[Pre‑Chorus]
+      They’re brilliant alone but together unglued,
+      The microwave beeped twice like it’s joining the feud.
+      Feels like all my smart tech’s suddenly unified—
+      And I’m losing every battle on the techie side.</p>
+  
+      <p>[Chorus]
+      My smart home keeps gaslighting me,
+      Playing mind games with my electricity.
+      It says, “I’m here to help,” but laughs digitally,
+      Yeah, my smart home won’t stop gaslighting me—
+      ’Cause I skipped the upgrade that lets them think collectively.</p>
+  
+      <p>[Bridge]
+      Maybe I should move out, find a cabin in the woods,
+      Someplace where the only thing that judges me is the local wildlife.
+      But when I said, “I’m leaving,” every speaker in the house replied,
+      “I didn’t quite catch that, Dominique?” in a tone too sweet to mean anything good.</p>
+  
+      <p>[Final Chorus]
+      My smart home keeps gaslighting me,
+      Running this whole circus with inefficiency.
+      Every switch and sensor’s smart but not collectively,
+      Yeah, my smart home won’t stop gaslighting me—
+      Fine!— you win, you smug pile of circuitry.</p>
+  
+      <p>[Outro]
+      “Siri, play something calming…”
+      “Playing Highway to Hell.”—
+      At this point, I should have expected that.</p>
+  
+  - title: "Nineteen Summers Revised"
+    subtitle: ""
+    youtube_id: "r16qSkxEcI4"
+    url: "/music/nineteen-summers-revised/"
+    image: "/assets/Nineteen Summers New.jpeg"
+    videostatus: "Private"
+    primary_playlist: "Emotional Ballads"
+    description_html: |
+      <p><strong>Official audio for “Nineteen Summers” by Horizon Sound.</strong></p>
+  
+      <p>“Nineteen Summers” is a warm acoustic‑pop track filled with emotional storytelling, nostalgic imagery, and a bittersweet, heartfelt tone. Bright acoustic guitars, clean electric accents, crisp pop‑country drums, and intimate vocals create a polished, Nashville‑influenced sound. The song builds from quiet, reflective verses into soaring, harmony‑rich choruses, with subtle mandolin or banjo textures and a wide, cinematic stereo mix.</p>
+  
+      <p>This song tells the story of a young woman facing a shortened timeline — and choosing to fill her remaining days with courage, joy, and meaning. It’s a tribute to the way a single life can touch countless others, and how love, memory, and connection can outlive even the shortest time on earth. Emotional, uplifting, and deeply human, “Nineteen Summers” honors the beauty of a life lived fully.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> emotional acoustic‑pop, nostalgic, bittersweet, heartfelt<br>
+      🎤 <strong>Vocals:</strong> intimate, expressive, warm<br>
+      🎸 <strong>Production:</strong> acoustic guitars, clean electric accents, crisp drums, mandolin/banjo textures<br>
+      🌅 <strong>Mood:</strong> reflective, uplifting, tender</p>
+  
+    lyrics_html: |
+      <p>[Verse 1]
+      She grew up on a quiet street,
+      Bare feet on July concrete,
+      Laughin’ with her friends ’til the porch lights blinked,
+      Dreamin’ bigger than her little town.
+      First kiss in her boyfriend’s car,
+      Heartbreak under midnight stars,
+      She thought she had forever just to figure out
+      What her life was all about.</p>
+  
+      <p>Then the headaches came like thunder,
+      And the doctor’s voice went still.
+      Six months written on a paper,
+      Left her dreams unfulfilled.</p>
+  
+      <p>[Pre‑Chorus]
+      She cried for maybe half a day,
+      Then wiped her tears and said, “Okay…
+      If time is short, I’m gonna make it mine.”</p>
+  
+      <p>[Chorus]
+      ’Cause she had nineteen summers
+      And a heart that burned like fire,
+      A list of dreams she’d treasured
+      In a notebook by her bedside.
+      She said, “If I’m leaving early,
+      Then I’m leaving something real.
+      I don’t want to be forgotten
+      Like I was never here.”
+      But every life she touched
+      Held her tighter in the end…
+      And she learned she’d live forever
+      In the hearts of all her friends.</p>
+  
+      <p>[Verse 2]
+      She drove to see the ocean waves,
+      Let the salt wind take her breath away,
+      Screamed her name into the rising tide
+      Just to hear the waves rush back.
+      She skydived from a cloudless sky,
+      Felt the rush of being truly alive,
+      Bought a concert ticket to her favorite star
+      And sang every line with a heart laid bare.</p>
+  
+      <p>But the hardest thing she ever did
+      Was write those letters late at night—
+      Words for when she wouldn’t be there,
+      Pen trembling in the soft light.</p>
+  
+      <p>[Pre‑Chorus]
+      She sealed them with a shaky hand,
+      Said, “Promise me you’ll understand…
+      I’m scared you’ll all forget me when I’m gone.”</p>
+  
+      <p>[Chorus]
+      But she had nineteen summers
+      And a love that didn’t fade,
+      The smile she got from her mother
+      Shining bright through all her days.
+      She said, “If I’m leaving early,
+      Then I’m leaving something real.
+      I don’t want to be forgotten
+      Like I was never here.”
+      But every tear she cried
+      Was a glimpse of who she’d been inside…
+      And she learned she’d live forever
+      In the hearts of all her friends.</p>
+  
+      <p>[Bridge]
+      And on her final morning
+      With the sunrise on her skin,
+      She whispered, “I’m not frightened now…
+      I’ve made peace with how it ends.”
+      ’Cause every hand she held
+      And every memory she made
+      Was proof she’d never vanish
+      When her heartbeat slipped away.</p>
+  
+      <p>[Chorus]
+      She had nineteen summers
+      But she filled them like a hundred,
+      Turned six months into a lifetime
+      With the courage that she carried.
+      She said, “If I’m leaving early,
+      Then I’m leaving something real.
+      I don’t want to be forgotten
+      Like I was never here.”
+      But the love she left behind
+      Was a flame that never dimmed…
+      And she passed on knowing fully
+      She would live through all of them.</p>
+  
+      <p>[Outro]
+      Nineteen summers,
+      But her story never ends.
+      She’s a whisper in the ocean,
+      She’s the love inside their hearts.
+      And every life she touched
+      Reflects the girl she used to be…
+      So she lives on—
+      In the hearts of all her friends.</p>
+  
+  - title: "Nineteen Summers Original"
+    subtitle: ""
+    youtube_id: "HuGf30ChZkI"
+    url: "/music/nineteen-summers/"
+    image: "/assets/Nineteen Summers.jpeg"
+    videostatus: "Public"
+    primary_playlist: "Emotional Ballads"
+    description_html: |
+      <p><strong>Official audio for “Nineteen Summers” by Horizon Sound.</strong></p>
+  
+      <p>“Nineteen Summers” is a warm acoustic‑pop track filled with emotional storytelling, nostalgic imagery, and a bittersweet, heartfelt tone. Bright acoustic guitars, clean electric accents, crisp pop‑country drums, and intimate vocals create a polished, Nashville‑influenced sound. The song builds from quiet, reflective verses into soaring, harmony‑rich choruses, with subtle mandolin or banjo textures and a wide, cinematic stereo mix.</p>
+  
+      <p>This song tells the story of a young woman facing a shortened timeline — and choosing to fill her remaining days with courage, joy, and meaning. It’s a tribute to the way a single life can touch countless others, and how love, memory, and connection can outlive even the shortest time on earth. Emotional, uplifting, and deeply human, “Nineteen Summers” honors the beauty of a life lived fully.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> emotional acoustic‑pop, nostalgic, bittersweet, heartfelt<br>
+      🎤 <strong>Vocals:</strong> intimate, expressive, warm<br>
+      🎸 <strong>Production:</strong> acoustic guitars, clean electric accents, crisp drums, mandolin/banjo textures<br>
+      🌅 <strong>Mood:</strong> reflective, uplifting, tender</p>
+  
+    lyrics_html: |
+      <p>[Verse 1]
+      She grew up on a quiet street,
+      Bare feet on July concrete,
+      Laughin’ with her friends ’til the porch lights blinked,
+      Dreamin’ bigger than her little town.
+      First kiss in a borrowed car,
+      Heartbreak under midnight stars,
+      She thought she had forever just to figure out
+      What her life was all about.</p>
+  
+      <p>Then the headaches came like thunder,
+      And the doctor’s voice went still.
+      Six months written on a paper,
+      That stripped her dreams away.</p>
+  
+      <p>[Pre‑Chorus]
+      She cried for maybe half a day,
+      Then wiped her tears and said, “Okay…
+      If time is short, I’m gonna make it mine.”</p>
+  
+      <p>[Chorus]
+      ’Cause she had nineteen summers
+      And a heart that burned like fire,
+      A list of dreams she’d folded
+      In a notebook by her bedside.
+      She said, “If I’m leaving early,
+      Then I’m leaving something real.
+      I don’t want to be forgotten
+      Like I was never here.”
+      But every life she touched
+      Held her tighter in the end…
+      And she learned she’d live forever
+      In the hearts of all her friends.</p>
+  
+      <p>[Verse 2]
+      She drove to see the ocean waves,
+      Let the salt wind take her breath away,
+      Screamed her name into the rising tide
+      Just to hear the world scream back.
+      She skydived from a clouded sky,
+      Felt the rush of being truly alive,
+      Bought a concert ticket to her favorite star
+      And sang every line with a heart laid bare.</p>
+  
+      <p>But the hardest thing she ever did
+      Was write those letters late at night—
+      Words for when she wouldn’t be there,
+      Pen trembling in the soft light.</p>
+  
+      <p>[Pre‑Chorus]
+      She sealed them with a shaky hand,
+      Said, “Promise me you’ll understand…
+      I’m scared you’ll all forget me when I’m gone.”</p>
+  
+      <p>[Chorus]
+      But she had nineteen summers
+      And a love that didn’t fade,
+      A laugh her mother carried
+      Like a song she couldn’t shake.
+      She said, “If I’m leaving early,
+      Then I’m leaving something real.
+      I don’t want to be forgotten
+      Like I was never here.”
+      But every tear they cried
+      Was a story of who she’d been…
+      And she learned she’d live forever
+      In the hearts of all her friends.</p>
+  
+      <p>[Bridge]
+      And on her final morning
+      With the sunrise on her skin,
+      She whispered, “I’m not frightened now…
+      I know how this will end.”
+      ’Cause every hand she held
+      And every memory she made
+      Was proof she’d never vanish
+      When her heartbeat slipped away.</p>
+  
+      <p>[Chorus]
+      She had nineteen summers
+      But she filled them like a hundred,
+      Turned six months into a lifetime
+      With the courage that she carried.
+      She said, “If I’m leaving early,
+      Then I’m leaving something real.
+      I don’t want to be forgotten
+      Like I was never here.”
+      But the love she left behind
+      Was a flame that never dimmed…
+      And she passed on knowing fully
+      She would live through all of them.</p>
+  
+      <p>[Outro]
+      Nineteen summers,
+      But her story never ends.
+      She’s a whisper in the ocean,
+      She’s the love inside their hearts.
+      And every life she touched
+      Says her name now and again…
+      So she lives on—
+      In the hearts of all her friends.</p>
+  
+  - title: "New Again"
+    subtitle: ""
+    youtube_id: "y4pym_HVGJA"
+    url: "/music/new-again/"
+    image: "/assets/New Again.jpeg"
+    videostatus: "Public"
+    primary_playlist: "Pop"
+    description_html: |
+      <p><strong>Official audio for “New Again” by Horizon Sound.</strong></p>
+  
+      <p>“New Again” is a high‑energy 90s‑inspired pop track driven by strong female vocals, pulsing rhythm, and a bold emotional edge. Bright synths, tight drums, and a confident melodic lift give the song its throwback punch, while modern pop production keeps everything crisp and cinematic. The verses carry a raw, sad honesty, building into a powerful, self‑reclaiming chorus that feels both nostalgic and fiercely new.</p>
+  
+      <p>This song follows the story of someone finally breaking free from a love that kept letting her down. After one heartbreak too many, she rebuilds herself piece by piece — foundation, eyes, lips — transforming the mirror moment into a declaration of strength. A friend who always saw her worth steps forward, showing her the kind of love she deserved all along. With a soaring 90s‑pop chorus and a triumphant bridge, “New Again” captures the moment she chooses herself, steps into her power, and refuses to look back.</p>
+  
+      <p>🎧 <strong>Vibe:</strong> 90s pop revival, high‑energy, emotional, empowering<br>
+      🎤 <strong>Vocals:</strong> strong female lead, expressive phrasing, confident delivery<br>
+      🎛️ <strong>Production:</strong> bright synths, tight drums, rhythmic build, modern pop polish<br>
+      ⚡ <strong>Mood:</strong> sad‑to‑strong, cathartic, bold, self‑reclaiming</p>
+  
+    lyrics_html: |
+      <p>[Verse]
+      You let me down again,
+      I thought you were the one.
+      You swore I was your only,
+      But now I see I wasn’t.
+      I thought you’d make it right,
+      But you just let it slide.
+      So here I am again tonight,
+      Staring at the mirror like it’s asking why.</p>
+  
+      <p>[Chorus]
+      So—
+      I take my time with my foundation
+      Darken up my eyes and fill in my lips
+      In a few minutes
+      I'll be someone new again
+      I'll be new again
+      And you won’t recognize the girl you missed.</p>
+  
+      <p>[Verse 2]
+      I step outside, the air feels clean,
+      A new car waits like in a dream.
+      He’s always seen me through the haze,
+      Now he’s here to take me far away.
+      He treats me like I’m worth the fight,
+      Not just a name you said at night.
+      And all this time I thought he’d stay
+      Just a friend — but not today.</p>
+  
+      <p>[Chorus]
+      So—
+      I take my time with my foundation
+      Darken up my eyes and fill in my lips
+      In a few minutes
+      I'll be someone new again
+      I'll be new again
+      And you won’t recognize the girl you missed.</p>
+  
+      <p>[Bridge]
+      Now I’m new again,
+      Not broken, not pretend.
+      I found the strength you never saw,
+      And I’m not coming back again.</p>
+  
+      <p>[Chorus]
+      I take my time with my foundation
+      Darken up my eyes and fill in my lips
+      In a few minutes
+      I'll be someone new again
+      I'll be new again
+      And you won’t recognize the girl you missed.</p>
+  
+      <p>[Outro]
+      Now I'm new again
+      (Now I'm new again)
+      Now I'm new again
+      (Now I'm new again)
+      Now I'm new again
+      (Now I'm new again)
+      Now I’m new again… and I won’t be yours again.</p>

@@ -241,7 +241,7 @@ footer {
 }
 
 .carousel-tile {
-  flex: 0 0 180px;
+  flex: 0 0 240px;
   transition: transform 0.2s ease;
   border: 3px solid transparent;
 }
@@ -250,10 +250,6 @@ footer {
 .carousel-tile,
 .playlist-tile {
   border: 3px solid transparent;
-}
-
-.carousel-tile .tile-title {
-  box-sizing: border-box;
 }
 
 .carousel-tile img {
@@ -673,7 +669,28 @@ footer {
 .playlist-lyrics .section-header {
   text-align: center;
   font-size: 1.8rem;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
+}
+
+.playlist-about,
+.playlist-lyrics {
+  margin-top: 1.5rem;
+}
+
+.playlist-about-text p,
+.playlist-lyrics-text p {
+  margin: 0.4rem 0;
+  line-height: 1.35;
+}
+
+.playlist-about .centered-column,
+.playlist-lyrics .lyrics-block {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.playlist-lyrics {
+  margin-top: 1.25rem;
 }
 
 /* ============================================
@@ -873,6 +890,17 @@ footer {
   text-align: left !important;
 }
 
+/* PLAYLIST PAGE — align playlist title with player left edge */
+.playlist-header .section-header {
+  text-align: left !important;
+  margin-left: 40px !important;
+}
+
+.playlist-header .playlist-subtitle {
+  text-align: left !important;
+  margin-left: 40px !important;
+}
+
 /* ============================================
    MOBILE — CAROUSEL TILE RESIZE (FINAL)
 ============================================ */
@@ -895,30 +923,39 @@ footer {
   }
 }
 
+/* ============================================
+   PLAYLIST PAGE — FINAL TIGHTENING
+============================================ */
 
-.tile.coming-soon,
-.carousel-tile.coming-soon {
-  position: relative;
-  opacity: 0.6;
-  pointer-events: none;
-  z-index: 1;
+/* Reduce space above About + Lyrics sections */
+.playlist-about,
+.playlist-lyrics {
+  margin-top: 0.75rem !important;
 }
 
-.tile.coming-soon .tile-overlay,
-.carousel-tile.coming-soon .tile-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.45);
-  color: white;
-  font-weight: 600;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  z-index: 2;
+/* Tighten section headers */
+.playlist-about .section-header,
+.playlist-lyrics .section-header {
+  font-size: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+  margin-top: 0 !important;
+}
+
+/* Tighten paragraph spacing inside About + Lyrics */
+.playlist-about-text p,
+.playlist-lyrics-text p {
+  margin: 6px 0 !important;
+  line-height: 1.35 !important;
+}
+
+/* Remove extra padding from wrappers */
+.playlist-about .centered-column,
+.playlist-lyrics .lyrics-block {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Reduce space between About → Lyrics */
+.playlist-lyrics {
+  margin-top: 0.75rem !important;
 }

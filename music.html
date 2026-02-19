@@ -3,7 +3,7 @@ layout: default
 title: Music – Horizon Sound
 ---
 
-{% assign all_songs = site.data.music.songs %}
+{% assign all_songs = site.data.music.songs | where: "videostatus", "Public" %}
 {% assign playlists = all_songs | map: "primary_playlist" | uniq | reject: "" | sort %}
 
 <div class="music-page">
@@ -124,6 +124,7 @@ title: Music – Horizon Sound
          Excluding playlists already in playlist_data
     =========================================== -->
     {% assign playlist_names = playlist_data | map: "title" %}
+   
     {% for list in playlists %}
       {% unless playlist_names contains list %}
         {% assign songs_in_list = all_songs | where: "primary_playlist", list %}
@@ -139,30 +140,20 @@ title: Music – Horizon Sound
         {% if playlist_sorted.size > 0 %}
         <section class="playlist-section">
           <h2 class="section-header">{{ list }}</h2>
+  
           <div class="tile-grid">
             {% for song in playlist_sorted %}
-              {% if song.videostatus == "Public" %}
-                <a class="tile" href="{{ song.url }}">
-                  <img src="{{ song.image }}" alt="{{ song.title }}">
-                  <h3 class="tile-title">{{ song.title }}</h3>
-                </a>
-              {% endif %}
-            {% endfor %}
-          
-            {% for song in playlist_sorted %}
-              {% unless song.videostatus == "Public" %}
-                <div class="tile coming-soon">
-                  <img src="{{ song.image }}" alt="{{ song.title }}">
-                  <div class="tile-overlay">Coming Soon</div>
-                  <h3 class="tile-title">{{ song.title }}</h3>
-                </div>
-              {% endunless %}
+              <a class="tile" href="{{ song.url | append: '/' | replace: '//', '/' }}">
+                <img src="{{ song.image }}" alt="{{ song.title }}">
+                <h3 class="tile-title">{{ song.title }}</h3>
+              </a>
             {% endfor %}
           </div>
         </section>
         {% endif %}
       {% endunless %}
     {% endfor %}
+  
   </section>
 
   <!-- ------------------------------------------------
@@ -171,25 +162,14 @@ title: Music – Horizon Sound
   <section id="music-view-all" style="display:none;">
     <section class="playlist-section">
       <h2 class="section-header">All Songs</h2>
-      
+
       {% assign all_sorted = all_songs | sort: "title" %}
       <div class="tile-grid">
         {% for song in all_sorted %}
-          {% if song.videostatus == "Public" %}
-            <a class="tile" href="{{ song.url }}">
-              <img src="{{ song.image }}" alt="{{ song.title }}">
-              <h3 class="tile-title">{{ song.title }}</h3>
-            </a>
-          {% endif %}
-        {% endfor %}
-        {% for song in all_sorted %}
-          {% unless song.videostatus == "Public" %}
-            <div class="tile coming-soon">
-              <img src="{{ song.image }}" alt="{{ song.title }}">
-              <div class="tile-overlay">Coming Soon</div>
-              <h3 class="tile-title">{{ song.title }}</h3>
-            </div>
-          {% endunless %}
+          <a class="tile" href="{{ song.url | append: '/' | replace: '//', '/' }}">
+            <img src="{{ song.image }}" alt="{{ song.title }}">
+            <h3 class="tile-title">{{ song.title }}</h3>
+          </a>
         {% endfor %}
       </div>
     </section>

@@ -29,12 +29,10 @@
   order: 2
 
 - playlist_id: after-the-silence
-  title: "After the Silence"
+  title: "After the Silence – Performed by Lydia Ellington"
   image: "/assets/After the Silence Track List.jpeg"
   description: >
-    A reflective, emotional collection exploring the quiet moments after a
-    heartbreak — the healing, the reckoning, and the rediscovery of hope.
-    These songs live in the space between what was lost and what comes next.
+    A full‑album journey performed by Lydia Ellington, whose warm, expressive voice brings emotional clarity to every track. After the Silence unfolds as a cinematic exploration of healing, reflection, and the quiet strength that emerges in the moments we often overlook. Lydia’s intimate vocal tone carries the listener through themes of resilience, rediscovery, and emotional honesty, weaving each song into a cohesive narrative. With her blend of softness and power, she transforms stillness into storytelling, guiding the album from its most fragile confessions to its most hopeful resolutions. This collection stands as a unified emotional arc — thoughtful, atmospheric, and deeply human — brought to life through Lydia’s unmistakable presence.
   songs:
     - ats-1-the-quiet-after
     - ats-2-borrowed-time

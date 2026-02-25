@@ -1,0 +1,288 @@
+---
+layout: default
+title: Music – Horizon Sound
+---
+
+{% assign all_songs = site.data.music.songs %}
+{% assign playlists = all_songs | map: "primary_playlist" | uniq | reject: "" | sort %}
+
+<div class="music-page">
+  <div class="view-toggle">
+    <div class="view-toggle-buttons">
+      <button class="view-toggle-button active" data-view="grouped">Grouped by Playlist</button>
+      <button class="view-toggle-button" data-view="all">All Songs</button>
+      <button class="view-toggle-button" data-view="carousel">Carousel View</button>
+    </div>
+  
+    <h2 class="page-title">Music Catalog</h2>
+  
+    <div class="view-toggle-spacer"></div>
+  </div>
+
+<section id="music-view-grouped">
+  
+  {% assign playlist_data = site.data.playlists | sort: "order" %}
+  {% if playlist_data.size > 0 %}
+<section class="playlist-section music-collections">
+  <h2 class="section-header">Collections</h2>
+
+  {% assign active_playlists = "" | split: "" %}
+  {% assign coming_soon_playlists = "" | split: "" %}
+
+  {%- comment -%}
+    Build ordered arrays based on playlist.yml
+  {%- endcomment -%}
+  {% for pl in site.data.playlists %}
+    {% assign tile = site.data.homepage.collections | where: "playlist_id", pl.playlist_id | first %}
+
+    {% if tile %}
+      {% assign has_public = false %}
+
+      {% for sid in pl.songs %}
+        {% assign song = site.data.music.songs | where: "song_id", sid | first %}
+        {% if song and song.videostatus == "Public" %}
+          {% assign has_public = true %}
+        {% endif %}
+      {% endfor %}
+
+      {% if has_public %}
+        {% assign active_playlists = active_playlists | push: tile %}
+      {% else %}
+        {% assign coming_soon_playlists = coming_soon_playlists | push: tile %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  <div class="tile-grid">
+
+    {%- comment -%}
+      ACTIVE playlists first
+    {%- endcomment -%}
+    {% for tile in active_playlists %}
+      <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ tile.playlist_id }}/">
+        <img src="{{ site.baseurl }}{{ tile.image }}" alt="{{ tile.title }}">
+        <h3 class="tile-title">{{ tile.title }}</h3>
+      </a>
+    {% endfor %}
+
+    {%- comment -%}
+      COMING SOON playlists second
+    {%- endcomment -%}
+    {% for tile in coming_soon_playlists %}
+      <div class="tile coming-soon">
+        <img src="{{ site.baseurl }}{{ tile.image }}" alt="{{ tile.title }}">
+        <div class="tile-overlay">Coming Soon</div>
+        <h3 class="tile-title">{{ tile.title }}</h3>
+      </div>
+    {% endfor %}
+
+  </div>
+</section>
+  {% endif %}
+    
+    {% assign playlist_names = playlist_data | map: "title" %}
+    {% for list in playlists %}
+      {% unless playlist_names contains list %}
+        {% assign songs_in_list = all_songs | where: "primary_playlist", list %}
+        {% assign sorted_by_sequence = songs_in_list | sort: "sequence" %}
+        {% assign first_item = sorted_by_sequence | first %}
+  
+        {% if first_item.sequence %}
+          {% assign playlist_sorted = sorted_by_sequence %}
+        {% else %}
+          {% assign playlist_sorted = songs_in_list | sort: "title" %}
+        {% endif %}
+  
+        {% if playlist_sorted.size > 0 %}
+        <section class="playlist-section">
+          <h2 class="section-header">{{ list }}</h2>
+          <div class="tile-grid">
+            {% for song in playlist_sorted %}
+              {% if song.videostatus == "Public" %}
+                <a class="tile" href="{{ site.baseurl }}{{ song.url }}">
+                  <img src="{{ site.baseurl }}{{ song.image }}" alt="{{ song.title }}">
+                  <h3 class="tile-title">{{ song.title }}</h3>
+                </a>
+              {% endif %}
+            {% endfor %}
+          
+            {% for song in playlist_sorted %}
+              {% unless song.videostatus == "Public" %}
+                <div class="tile coming-soon">
+                  <img src="{{ site.baseurl }}{{ song.image }}" alt="{{ song.title }}">
+                  <div class="tile-overlay">Coming Soon</div>
+                  <h3 class="tile-title">{{ song.title }}</h3>
+                </div>
+              {% endunless %}
+            {% endfor %}
+          </div>
+        </section>
+        {% endif %}
+      {% endunless %}
+    {% endfor %}
+  </section>
+  <section id="music-view-all" style="display:none;">
+    <section class="playlist-section">
+      <h2 class="section-header">All Songs</h2>
+      
+      {% assign all_sorted = all_songs | sort: "title" %}
+      <div class="tile-grid">
+        {% for song in all_sorted %}
+          {% if song.videostatus == "Public" %}
+            <a class="tile" href="{{ site.baseurl }}{{ song.url }}">
+              <img src="{{ site.baseurl }}{{ song.image }}" alt="{{ song.title }}">
+              <h3 class="tile-title">{{ song.title }}</h3>
+            </a>
+          {% endif %}
+        {% endfor %}
+        {% for song in all_sorted %}
+          {% unless song.videostatus == "Public" %}
+            <div class="tile coming-soon">
+              <img src="{{ site.baseurl }}{{ song.image }}" alt="{{ song.title }}">
+              <div class="tile-overlay">Coming Soon</div>
+              <h3 class="tile-title">{{ song.title }}</h3>
+            </div>
+          {% endunless %}
+        {% endfor %}
+      </div>
+    </section>
+  </section>
+
+  <section id="music-view-carousel" style="display:none;">
+    {% for list in playlists %}
+      {% assign songs_in_list = all_songs | where: "primary_playlist", list %}
+      {% assign sorted_by_sequence = songs_in_list | sort: "sequence" %}
+      {% assign first_item = sorted_by_sequence | first %}
+
+      {% if first_item.sequence %}
+        {% assign playlist_sorted = sorted_by_sequence %}
+      {% else %}
+        {% assign playlist_sorted = songs_in_list | sort: "title" %}
+      {% endif %}
+
+      {% if playlist_sorted.size > 0 %}
+      <section class="playlist-section">
+        <h2 class="section-header">{{ list }}</h2>
+
+        {% include carousel.html songs=playlist_sorted %}
+
+      </section>
+      {% endif %}
+    {% endfor %}
+  </section>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* VIEW TOGGLE */
+  const buttons = document.querySelectorAll(".view-toggle-button");
+  const views = {
+    grouped: document.getElementById("music-view-grouped"),
+    all: document.getElementById("music-view-all"),
+    carousel: document.getElementById("music-view-carousel"),
+  };
+
+  // ⭐ Restore saved view mode
+  const savedView = localStorage.getItem("musicViewMode");
+  if (savedView && views[savedView]) {
+
+    // Set active button
+    buttons.forEach(b => {
+      b.classList.toggle("active", b.getAttribute("data-view") === savedView);
+    });
+
+    // Show correct view
+    Object.keys(views).forEach(key => {
+      views[key].style.display = (key === savedView) ? "" : "none";
+    });
+
+    // Refresh carousels if needed
+    if (savedView === "carousel") {
+      const carousels = document.querySelectorAll("[data-carousel]");
+      carousels.forEach(c => c.dispatchEvent(new Event("carousel:refresh")));
+    }
+  }
+
+  // ⭐ Save view on click
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const view = btn.getAttribute("data-view");
+
+      localStorage.setItem("musicViewMode", view);
+
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      Object.keys(views).forEach(key => {
+        views[key].style.display = (key === view) ? "" : "none";
+      });
+
+      if (view === "carousel") {
+        const carousels = document.querySelectorAll("[data-carousel]");
+        carousels.forEach(c => {
+          c.dispatchEvent(new Event("carousel:refresh"));
+        });
+      }
+    });
+  });
+
+  /* CAROUSEL ROWS */
+  const carousels = document.querySelectorAll("[data-carousel]");
+
+  carousels.forEach((carousel) => {
+    const strip = carousel.querySelector("[data-strip]");
+    const leftArrow = carousel.querySelector('[data-arrow="left"]');
+    const rightArrow = carousel.querySelector('[data-arrow="right"]');
+
+    if (!strip || !leftArrow || !rightArrow) return;
+
+    const TILE_WIDTH = 180;
+    const TILE_GAP = 16;
+    const SCROLL_AMOUNT = TILE_WIDTH + TILE_GAP;
+
+    function updateArrows() {
+      const maxScroll = strip.scrollWidth - strip.clientWidth;
+      const current = strip.scrollLeft;
+
+      if (current <= 0) leftArrow.classList.add("disabled");
+      else leftArrow.classList.remove("disabled");
+
+      if (current >= maxScroll - 1) rightArrow.classList.add("disabled");
+      else rightArrow.classList.remove("disabled");
+    }
+
+    leftArrow.addEventListener("click", () => {
+      strip.scrollBy({ left: -SCROLL_AMOUNT, behavior: "smooth" });
+    });
+
+    rightArrow.addEventListener("click", () => {
+      strip.scrollBy({ left: SCROLL_AMOUNT, behavior: "smooth" });
+    });
+
+    strip.addEventListener("scroll", updateArrows);
+
+    const images = strip.querySelectorAll("img");
+    let loaded = 0;
+
+    if (images.length === 0) {
+      updateArrows();
+    } else {
+      images.forEach(img => {
+        if (img.complete) {
+          loaded++;
+          if (loaded === images.length) updateArrows();
+        } else {
+          img.addEventListener("load", () => {
+            loaded++;
+            if (loaded === images.length) updateArrows();
+          });
+        }
+      });
+    }
+
+    carousel.addEventListener("carousel:refresh", updateArrows);
+  });
+});
+</script>

@@ -1,0 +1,9 @@
+debug: false
+detailed-debug: false
+collections:
+  songs:
+    output: true
+    permalink: /music/:name/
+  playlists:
+    output: true
+    permalink: /music/playlists/:name/

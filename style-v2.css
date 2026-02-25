@@ -1,0 +1,1147 @@
+/* ============================================
+   GLOBAL RESET + BASE TYPOGRAPHY
+============================================ */
+body {
+  background: linear-gradient(to bottom, #000 0%, #0a0a0a 100%);
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================
+   GLOBAL LAYOUT + UTILITIES
+============================================ */
+.section-header {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px; 
+  font-weight: 600;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #1a73e8;
+  padding: 12px 24px;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.btn-primary:hover {
+  background: #2a82f0;
+}
+
+nav a.active {
+  opacity: 1;
+  font-weight: 600;
+  border-bottom: 2px solid #fff;
+}
+
+/* ============================================
+   GLOBAL HEADER
+============================================ */
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(6px);
+  color: white;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  width: 70px;
+  height: auto;
+}
+
+.branding h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.main-nav {
+  margin-top: 20px;
+  border-top: 1px solid #333;
+  padding-top: 16px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ============================================
+   GLOBAL HERO
+============================================ */
+.hero-banner {
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.hero-banner img.hero-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.85) 100%);
+  pointer-events: none;
+}
+
+/* ============================================
+   GLOBAL FOOTER
+============================================ */
+footer {
+  text-align: center;
+  padding: 32px;
+  background-color: transparent;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   COMPONENTS — TILE SYSTEM
+============================================ */
+.tile {
+  display: block;
+  background: #111;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.tile img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.tile.no-title .tile-title {
+  display: none;
+}
+
+.tile-grid {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  justify-content: start;
+}
+
+.tile .tile-title,
+.carousel-tile .tile-title {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  padding: 8px 10px;
+  margin: 0;
+  border-radius: 0 0 8px 8px;
+  backdrop-filter: blur(4px);
+  box-sizing: border-box;
+  font-weight: 500;
+  text-align: center;
+
+  /* fixed visual height */
+  height: 70px;                 /* adjust to taste */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;        /* max 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ============================================
+   COMPONENTS — CAROUSEL
+============================================ */
+.carousel {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.carousel::before,
+.carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.carousel::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.8), transparent);
+}
+
+.carousel::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0,0,0,0.8), transparent);
+}
+
+.horizontal-strip {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 16px;
+  padding: 12px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.horizontal-strip::-webkit-scrollbar {
+  height: 10px;
+}
+
+.carousel-tile {
+  flex: 0 0 180px;
+  transition: transform 0.2s ease;
+  border: 3px solid transparent;
+}
+
+/* Ensure tiles always have a baseline border so active state persists */
+.carousel-tile,
+.playlist-tile {
+  border: 3px solid transparent;
+}
+
+.carousel-tile .tile-title {
+  box-sizing: border-box;
+}
+
+.carousel-tile img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-tile.active {
+  border: 3px solid rgba(180, 120, 220, 0.65);
+  box-shadow: 0 0 12px rgba(180, 120, 220, 0.45);
+}
+
+.carousel-arrow {
+  background: #ffffff;
+  border: none;
+  color: #333;
+  width: 40px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.carousel-arrow:hover {
+  background: #f0f0f0;
+}
+
+.carousel-arrow.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.left-arrow {
+  margin-right: 12px;
+}
+
+.right-arrow {
+  margin-left: 12px;
+}
+
+/* ============================================
+   COMPONENTS — EMBED / VIDEO
+============================================ */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px; /* optional, looks great inside the frame */
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ============================================
+   COMPONENTS — ABOUT BLOCK
+============================================ */
+.about-block {
+  margin: 32px 0;
+  padding: 0 40px;
+}
+
+.about-block .section-header {
+  margin-bottom: 12px;
+}
+
+.about-text {
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* ============================================
+   COMPONENTS — LYRICS BLOCK
+============================================ */
+.lyrics-block {
+  margin: 32px 0;
+  padding: 0 40px;
+  white-space: pre-wrap;   /* THIS restores all line breaks */
+  font-size: 0.95rem;      /* Matches your old pre font size */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Reduce spacing between lyric paragraphs */
+.lyrics-block p {
+  margin-bottom: 10px; /* was default ~16px */
+  line-height: 1.45;   /* slightly tighter */
+}
+
+.playlist-lyrics-text {
+  margin: 32px 0;
+  padding: 0 40px;
+  white-space: pre-wrap;   /* THIS restores all line breaks */
+  line-height: 1.55;       /* Matches your old .lyrics-pre line height */
+  font-size: 0.95rem;      /* Matches your old pre font size */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Reduce spacing between lyric paragraphs */
+.playlist-lyrics-text p {
+  margin-bottom: 10px; /* was default ~16px */
+  line-height: 1.45;   /* slightly tighter */
+}
+
+.lyrics-box {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.lyrics-pre {
+  margin-top: 12px;
+  white-space: pre-wrap;
+  font-family: inherit;
+  line-height: 1.55;
+}
+
+.lyrics-box pre {
+  font-size: 0.95rem;
+}
+
+.lyrics-box .lyrics-header {
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+/* ============================================
+   COMPONENTS — CENTERED COLUMN LAYOUT
+============================================ */
+.centered-column {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 900px) 1fr;
+  column-gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.centered-column > * {
+  grid-column: 2;
+}
+
+/* ============================================
+   PAGE: MUSIC INDEX PAGE
+============================================ */
+.music-page {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.music-page .page-title {
+  text-align: center;
+  margin: 32px 0;
+}
+
+.view-toggle {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+/* Left group of buttons */
+.view-toggle-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+/* Individual buttons */
+.view-toggle-button {
+  padding: 10px 20px;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.view-toggle-button:hover {
+  background: #333;
+  border-color: #555;
+}
+
+.view-toggle-button.active {
+  background: #1a73e8;
+  border-color: #1a73e8;
+  color: #fff;
+}
+
+/* Center title */
+.view-toggle .page-title {
+  flex: 1;
+  text-align: center;
+  margin: 0; /* IMPORTANT: remove margin auto */
+}
+
+/* Right-side spacer */
+.view-toggle-spacer {
+  width: 1px;
+}
+
+.music-page .section-header {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.music-list {
+  margin: 32px 0;
+}
+
+.music-song-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+}
+
+.music-song-list-item {
+  margin: 8px 0;
+}
+
+.music-song-list-item a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.music-song-list-item a:hover {
+  text-decoration: underline;
+}
+
+.music-page .playlist-section {
+  margin: 32px 0;
+  padding: 20px; /* was 24px */
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.music-page .playlist-section .tile-grid {
+  background: rgba(255, 255, 255, 0.035);
+  padding: 0; /* remove inner padding */
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+  align-content: start; /* default */
+  padding-top: 12px;    /* adds breathing room */
+  justify-content: center;
+  padding-top: 12px;
+  gap: 12px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+.music-page .playlist-section.music-collections {
+  background: rgba(47, 18, 61, 0.35);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+}
+
+.music-section {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.music-collections .tile-title {
+  background: rgba(180, 120, 220, 0.28);   /* light lavender glass */
+  backdrop-filter: blur(6px);              /* keeps the premium feel */
+  color: #fff;
+  border-radius: 0 0 10px 10px;
+}
+
+/* ============================================
+   PAGE: HOMEPAGE
+============================================ */
+.homepage-wrapper {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.homepage-section {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.homepage-section + .homepage-section {
+  margin-top: 32px;
+}
+
+.homepage-section .section-header {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.homepage-section .tile-grid {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  justify-items: start;
+  justify-content: start;
+}
+
+.homepage-title {
+  text-align: center;
+  margin: 16px 0;
+  font-size: 2rem;
+  opacity: 0.9;
+}
+
+.homepage-teaser {
+  position: relative;
+  z-index: 20;
+  margin-top: -100px;
+  padding: 32px 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5rem;
+  line-height: 1.55;
+  font-weight: 500;
+  text-align: center;
+}
+
+.homepage-teaser p {
+  position: relative;
+  margin: 0 0 16px;
+  text-align: left;
+  padding-left: 28px;
+}
+
+.homepage-teaser p::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.homepage-collections {
+  background: rgba(47, 18, 61, 0.35);   /* softer, less opaque */
+  backdrop-filter: blur(8px);           /* premium glassy feel */
+  border-radius: 12px;
+}
+
+.homepage-collections .tile-title {
+  background: rgba(180, 120, 220, 0.28);   /* light lavender glass */
+  backdrop-filter: blur(6px);              /* keeps the premium feel */
+  color: #fff;
+  border-radius: 0 0 10px 10px;
+}
+
+/* ============================================
+   PAGE: PLAYLIST PAGE
+============================================ */
+.playlist-list {
+  padding: 0 40px;
+  margin: 32px 0;
+}
+
+.playlist-items {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+}
+
+.playlist-item {
+  margin: 8px 0;
+}
+
+.playlist-item a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.playlist-item a:hover {
+  text-decoration: underline;
+}
+
+.playlist-section .tile-grid {
+  justify-items: start;
+  justify-content: start;
+}
+
+/* Make playlist tiles show the active state */
+.playlist-tile.active,
+.carousel-tile.active {
+  border: 3px solid rgba(180, 120, 220, 0.65);
+  box-shadow: 0 0 12px rgba(180, 120, 220, 0.45);
+}
+
+.playlist-about .section-header,
+.playlist-lyrics .section-header {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+/* ============================================
+   PAGE: ABOUT PAGE
+============================================ */
+.about-page {
+  margin-top: -120px;
+  position: relative;
+  z-index: 20;
+  padding: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-page h1 {
+  margin-bottom: 24px;
+}
+
+.about-page h2 {
+  margin-top: 40px;
+}
+
+/* ============================================
+   COMPONENT — PLAYER FRAME (Embed + Carousel)
+============================================ */
+.player-frame {
+  padding: 20px;
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 22px rgba(0,0,0,0.35);
+  margin: 32px 40px; /* matches song page spacing */
+  background: rgba(0,0,0,0.35); /* default fallback */
+}
+
+/* Dark theme (Song Page) */
+.player-frame--dark {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+}
+
+.player-frame--dark .tile-title {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(4px);
+  padding: 8px 10px;
+  border-radius: 0 0 8px 8px;
+  color: #fff;
+  height: 70px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Purple theme (Playlist Page, Collections aesthetic) */
+.player-frame--purple {
+  background: rgba(47, 18, 61, 0.35);
+}
+
+.player-frame .carousel {
+  margin-top: 16px; /* tighter, intentional */
+}
+.player-frame .carousel-arrow {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+
+.player-frame .carousel-arrow:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.player-frame .tile-title {
+  background: rgba(180, 120, 220, 0.28);
+  backdrop-filter: blur(6px);
+  border-radius: 0 0 10px 10px;
+}
+
+.player-frame .video-wrapper {
+  border-radius: 10px;
+}
+
+.player-frame .carousel-tile.active {
+  border: 3px solid rgba(180, 120, 220, 0.65);
+  box-shadow: 0 0 12px rgba(180, 120, 220, 0.45);
+}
+
+/* ============================================
+   SONG PAGE — FINAL TYPOGRAPHY OVERRIDES
+   (Placed at the bottom so they always win)
+============================================ */
+
+/* 1. Tighten spacing between About → Lyrics */
+.song-about {
+  margin-bottom: 12px !important;
+}
+
+.song-lyrics .section-header {
+  margin-top: 12px !important;
+  margin-bottom: 6px !important;
+}
+
+/* 2. Fix vibe list spacing */
+.song-description .vibe-line {
+  line-height: 1.35 !important;
+  margin-bottom: 6px !important;
+}
+
+/* 3. Fix stanza spacing in lyrics */
+.lyrics-block p {
+  margin-bottom: 6px !important;
+  line-height: 1.35 !important;
+  white-space: pre-wrap !important;
+}
+
+.lyrics-block p:first-of-type {
+  margin-top: 0 !important;
+}
+
+/* 4. Improve About + Lyrics readability */
+.song-description,
+.lyrics-block {
+  font-size: 1.15rem !important;
+  max-width: 700px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  line-height: 1 !important;
+  color: #e8e8e8; /* slightly softer white */
+}
+
+/* 5. Section headers spacing */
+.song-about .section-header,
+.song-lyrics .section-header {
+  margin-bottom: 10px !important;
+  text-align: center !important;
+  font-size: 1.8rem !important;
+  margin-bottom: 12px !important;
+}
+
+/* Reduce space between About and Lyrics */
+.song-about {
+  margin-bottom: 20px !important;
+}
+
+.song-lyrics .section-header {
+  margin-top: 20px !important;
+}
+
+/* Restore vibe list line breaks */
+.song-description {
+  white-space: pre-line !important;
+}
+
+/* Improve paragraph spacing inside About */
+.song-description p {
+  margin-bottom: 14px !important;
+}
+
+/* Restore vibe list line breaks */
+.playlist-about-text {
+  white-space: pre-line !important;
+}
+
+/* Improve paragraph spacing inside About */
+.playlist-about-text p {
+  margin-bottom: 14px !important;
+}
+
+/* SONG PAGE — Lift and align title like playlist page */
+.song-header {
+  position: relative;
+  z-index: 20;
+  margin-top: -140px;      /* same lift as playlist */
+  padding: 0 40px;         /* aligns to frame edge */
+  text-align: center;      /* matches playlist */
+}
+
+.song-header .section-header {
+  font-size: 2.4rem;
+  margin-bottom: 8px;
+}
+
+.song-header .song-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.85;
+  margin-top: 4px;
+}
+
+/* ============================================
+   PLAYLIST PAGE — DESCRIPTION TYPOGRAPHY
+============================================ */
+
+.playlist-description {
+  font-size: 2rem !important;
+  line-height: 1.5 !important;
+  max-width: 2000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 12px !important;
+  margin-bottom: 24px !important;
+  color: #e8e8e8 !important;
+  white-space: pre-line !important;
+  text-align: left !important;
+}
+/* ============================================
+   PLAYLIST PAGE — HEADER RESTORE
+============================================ */
+
+.playlist-header {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 20;
+  margin-top: -140px;   /* adjust to taste */
+  padding: 0 40px;
+  text-align: center;
+}
+
+.playlist-header .section-header {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.playlist-description {
+  text-align: center !important;
+  max-width: 900px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* ============================================
+   MOBILE — CAROUSEL TILE RESIZE (FINAL)
+============================================ */
+@media (max-width: 450px) {
+  .player-frame .carousel-tile {
+    flex: 0 0 32vw !important;
+  }
+
+  .player-frame .carousel-tile img {
+    height: 22vw !important;
+  }
+
+  .player-frame .carousel-tile .tile-title {
+    height: 42px !important;
+    font-size: 0.8rem !important;
+  }
+
+  .player-frame .carousel-arrow {
+    height: 100px !important;
+  }
+}
+
+/* Playlist page + Song page carousel tiles */
+.player-frame .carousel-tile {
+  flex: 0 0 180px !important;
+  width: 180px !important;
+  height: auto !important;
+}
+
+.tile img,
+.carousel-tile img,
+.playlist-tile img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.tile img {
+  height: 180px;
+}
+
+.carousel-tile img,
+.playlist-tile img {
+  height: 180px;
+}
+
+.carousel-tile {
+  flex: 0 0 auto !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.carousel-tile .tile-title {
+  flex-shrink: 0 !important;
+}
+
+.carousel-tile,
+.playlist-tile {
+  flex: 0 0 180px !important;
+  width: 180px !important;
+  height: auto !important;
+}
+
+/* Music page carousel tiles should match grid tile width */
+.music-page .carousel-tile {
+  flex: 0 0 240px !important;
+  width: 240px !important;
+}
+
+.player-frame .carousel {
+  overflow: visible !important;
+}
+
+.player-frame .horizontal-strip {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  width: 100% !important;
+  display: flex !important;
+}
+
+/* FINAL — restore tight paragraph spacing for About + Lyrics */
+.song-description p {
+  margin-bottom: 10px !important;
+}
+
+.lyrics-block p {
+  margin-bottom: 6px !important;
+  line-height: 1.35 !important;
+  padding: 0 !important;        /* remove the accidental 40px padding */
+  white-space: pre-wrap !important;
+}
+
+/* FINAL — tighten line-height for About + Lyrics */
+.song-description {
+  line-height: 1 !important;
+}
+
+.lyrics-block {
+  line-height: 1 !important;
+}
+
+.tile.coming-soon,
+.carousel-tile.coming-soon {
+  position: relative;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tile.coming-soon .tile-overlay,
+.carousel-tile.coming-soon .tile-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.45);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+
+/* ============================================
+   PREMIUM HOMEPAGE + TILE ENHANCEMENTS
+============================================ */
+
+/* Cinematic hero */
+.hero-banner img.hero-image {
+  height: 380px;
+  object-fit: cover;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.hero-banner::after {
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.92) 100%);
+}
+
+/* Glass teaser panel */
+.homepage-teaser {
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 32px 48px;
+}
+
+/* Glass section cards */
+.homepage-section {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Premium Collections shelf */
+.homepage-collections {
+  background: rgba(47,18,61,0.45);
+  backdrop-filter: blur(14px);
+  box-shadow: inset 0 0 40px rgba(180,120,220,0.15);
+}
+
+/* Cinematic vignette on tiles */
+.tile {
+  position: relative;
+}
+
+.tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0,0,0,0) 60%, rgba(0,0,0,0.35) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.tile img {
+  position: relative;
+  z-index: 1;
+}
+
+/* Premium hover */
+.tile:hover {
+  transform: translateY(-3px) scale(1.015);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.45);
+}
+
+/* Frosted Coming Soon tiles */
+.tile.coming-soon {
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Premium header glass */
+.site-header {
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.25)
+  );
+  backdrop-filter: blur(10px);
+}
+
+/* Scroll fade */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Header animation */
+.section-header {
+  animation: fadeInUp 0.4s ease both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Featured badge */
+.badge-new {
+  background: rgba(255,255,255,0.15);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  margin-left: 8px;
+  backdrop-filter: blur(4px);
+}

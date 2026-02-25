@@ -6,7 +6,7 @@
   </script>
   
   <!-- ENV DEBUG: [{{ site.github.repository_name }}] -->
-  {% if site.github.repository_name == "horizonsound-dev" %}
+  {% if site.github.repository_name == "development" %}
     <!-- dev-only -->
     <meta name="robots" content="noindex, nofollow">
   {% endif %}
@@ -18,7 +18,7 @@
 
       if (robotsMeta) {
         const content = robotsMeta.getAttribute('content');
-        if (content.includes('noindex') && repo !== "horizonsound-dev") {
+        if (content.includes('noindex') && repo !== "development") {
           document.documentElement.style.background = "blue";
           document.body.style.background = "blue";
         }

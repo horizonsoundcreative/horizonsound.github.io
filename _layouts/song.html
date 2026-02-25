@@ -1,0 +1,225 @@
+---
+layout: default
+---
+
+{% assign current_song = page %}
+{% assign url = current_song.url %}
+{% assign meta = site.data.music.songs | where: "url", url | first %}
+
+{%- comment -%}
+BUILD PLAYLIST FOR CAROUSEL (old system)
+{%- endcomment -%}
+
+{% assign related = site.data.music.songs | where_exp: "item", "item.primary_playlist == meta.primary_playlist" %}
+{% assign sorted_by_sequence = related | sort: "sequence" %}
+{% assign first_item = sorted_by_sequence | first %}
+
+{% if first_item.sequence %}
+  {% assign playlist_sorted = sorted_by_sequence %}
+{% else %}
+  {% assign playlist_sorted = related | sort: "title" %}
+{% endif %}
+
+<main>
+  <script>
+    window.currentSongId = "{{ page.song_id }}";
+  </script>
+  <script>
+    window.allSongs = {{ site.data.music.songs | jsonify }};
+  </script>
+
+  <!-- DEBUG BLOCK -->
+  {% if site.debug %}
+    <div class="debug-block">
+      <pre style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; white-space:pre-wrap;">
+    
+      SONG PAGE DEBUG
+      ==============================
+      
+      PAGE OBJECT
+      -----------
+      page.url:          {{ current_song.url }}
+      page.title:        {{ current_song.title }}
+      page.song_id:      {{ current_song.song_id }}
+      page.youtube_id:   {{ current_song.youtube_id }}
+      
+      META OBJECT (from music.yml)
+      ----------------------------
+       <!-- {{ meta | jsonify }} -->
+      
+      RESOLVED VALUES
+      ---------------
+      resolved.title:     {{ current_song.title | default: meta.title }}
+      resolved.youtube_id: {{ current_song.youtube_id | default: meta.youtube_id }}
+      resolved.image:      {{ meta.image }}
+      resolved.primary_playlist: {{ meta.primary_playlist }}
+      
+      PLAYLIST SORTED (final list for carousel)
+      -----------------------------------------
+      <!-- {{ playlist_sorted | jsonify }} -->
+
+      {% for s in playlist_sorted %}
+      - {
+          "title": "{{ s.title }}",
+          "song_id": "{{ s.song_id }}",
+          "url": "{{ s.url }}",
+          "image": "{{ s.image }}",
+          "youtube_id": "{{ s.youtube_id }}",
+          "videostatus": "{{ s.videostatus }}",
+          "primary_playlist": "{{ s.primary_playlist }}"
+        }
+      {% endfor %}
+
+
+      </pre>
+    </div>
+  {% endif %}
+
+  <!-- DEBUG BLOCK -->
+  {% if site.debug %}
+    <div class="debug-block">
+      <pre style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; white-space:pre-wrap;">
+    
+      PLAYLIST SORTED RAW OBJECTS
+      ---------------------------
+      <!-- {% for s in playlist_sorted %}
+        - {{ s | jsonify }}
+      {% endfor %} -->
+      {% for s in playlist_sorted %}
+        - title: {{ s.title }}
+          song_id: {{ s.song_id }}
+          url: {{ s.url }}
+          image: {{ s.image }}
+          youtube_id: {{ s.youtube_id }}
+          videostatus: {{ s.videostatus }}
+          primary_playlist: {{ s.primary_playlist }}
+      {% endfor %}
+          
+      SOURCE CHECK:
+      {% for s in playlist_sorted %}
+        - {{ s.path }}
+      {% endfor %}
+      
+      </pre>
+    </div>
+  {% endif %}
+
+  <!-- SONG TITLE -->
+  <section class="song-header">
+    <h2 class="section-header">
+      {{ current_song.title | default: meta.title }}
+    </h2>
+    {% if current_song.subtitle %}
+      <p class="song-subtitle">{{ current_song.subtitle }}</p>
+    {% endif %}
+  </section>
+
+  <!-- ⭐ PLAYER FRAME WRAPPER STARTS HERE ⭐ -->
+  <div class="player-frame player-frame--dark">
+
+    <!-- EMBED SECTION -->
+    {% assign resolved_youtube_id = current_song.youtube_id | default: meta.youtube_id %}
+    {% include embed.html youtube_id=resolved_youtube_id %}
+
+    <!-- CAROUSEL -->
+    {% include carousel.html songs=playlist_sorted %}
+  </div>
+
+  <!-- ⭐ PLAYER FRAME WRAPPER ENDS HERE ⭐ -->
+
+  <!-- ABOUT SECTION -->
+  <section class="song-about">
+    <div class="centered-column">
+      <h2 class="section-header">About the Song</h2>
+      <div class="song-description">
+        {{ meta.description_html }}
+      </div>
+    </div>
+  </section>
+
+  <!-- LYRICS SECTION -->
+  <section class="song-lyrics">
+    <div class="lyrics-block">
+      <h2 class="section-header">Lyrics</h2>
+      {{ meta.lyrics_html }}
+    </div>
+  </section>
+  
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  if (window.isPlaylistPage) return;
+
+  requestAnimationFrame(() => {
+
+    const tiles = document.querySelectorAll(".carousel-tile, .playlist-tile");
+    const iframe = document.querySelector(".video-wrapper iframe");
+
+    const carousel = document.querySelector(".player-frame .carousel");
+    const strip = carousel?.querySelector(".horizontal-strip");
+    const leftArrow = carousel?.querySelector(".left-arrow");
+    const rightArrow = carousel?.querySelector(".right-arrow");
+
+    // Arrow click handlers
+    if (strip && leftArrow && rightArrow) {
+      const scrollAmount = 220;
+
+      leftArrow.addEventListener("click", () => {
+        strip.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      });
+
+      rightArrow.addEventListener("click", () => {
+        strip.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      });
+
+      // Arrow enable/disable logic
+      function updateArrows() {
+        const maxScroll = strip.scrollWidth - strip.clientWidth;
+        leftArrow.classList.toggle("disabled", strip.scrollLeft <= 0);
+        rightArrow.classList.toggle("disabled", strip.scrollLeft >= maxScroll);
+      }
+
+      strip.addEventListener("scroll", updateArrows);
+      updateArrows();
+    }
+
+    if (!tiles.length) return;
+
+    // Tile click handlers
+    tiles.forEach(tile => {
+      tile.addEventListener("click", () => {
+
+        const songId = tile.dataset.song;
+        const song = window.allSongs?.find(s => s.song_id === songId);
+
+        if (iframe && song?.youtube_id) {
+          iframe.src = "https://www.youtube.com/embed/" + song.youtube_id;
+        }
+
+        tiles.forEach(t => t.classList.remove("active"));
+        tile.classList.add("active");
+
+        tile.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      });
+    });
+
+    // Initial selection
+    let initialId = window.currentSongId || tiles[0]?.dataset.song;
+    const initialTile = [...tiles].find(t => t.dataset.song === initialId);
+
+    if (initialTile) {
+      initialTile.classList.add("active");
+
+      const song = window.allSongs?.find(s => s.song_id === initialId);
+      if (iframe && song?.youtube_id) {
+        iframe.src = "https://www.youtube.com/embed/" + song.youtube_id;
+      }
+
+      initialTile.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    }
+
+  });
+});
+</script>

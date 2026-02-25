@@ -1,0 +1,63 @@
+- playlist_id: a-way-back
+  title: "A Way Back Trilogy"
+  image: "/assets/lost-in-silence.jpeg"
+  description: >
+    A three-part emotional arc exploring silence, self-worth, and the courage
+    to choose yourself — or choose your way back home. Told from two
+    perspectives, this trilogy follows the quiet unraveling of a relationship,
+    the rediscovery of identity, and the moment two people decide whether to
+    walk away or walk toward each other again.
+  songs:
+    - lost-in-silence
+    - choosing-me-her-version
+    - choosing-me-his-version
+  order: 1
+
+- playlist_id: midnight-saga
+  title: "Midnight Saga"
+  image: "/assets/Playlist - Midnight Saga.jpeg"
+  description: >
+    A cinematic late-night journey through identity, chaos, temptation, and
+    transformation. The Midnight Saga follows a character through escalating
+    emotional turbulence — from the moment before midnight, into mayhem and
+    madness, and finally into the clarity that comes after the storm breaks.
+  songs:
+    - midnight-saga-before-midnight
+    - midnight-saga-midnight-mayhem
+    - midnight-saga-midnight-madness
+    - midnight-saga-after-midnight
+  order: 2
+
+- playlist_id: after-the-silence
+  title: "After the Silence"
+  image: "/assets/Playlist - After the Silence.jpeg"
+  description: >
+    A reflective, emotional collection exploring the quiet moments after a
+    heartbreak — the healing, the reckoning, and the rediscovery of hope.
+    These songs live in the space between what was lost and what comes next.
+  songs:
+    - ats-1-the-quiet-after
+    - ats-2-borrowed-time
+    - ats-3-homesick-for-you
+    - ats-4-the-way-we-lied
+    - ats-5-paper-walls
+    - ats-6-half-of-me
+    - ats-7-if-youd-asked
+    - ats-8-ghostlight
+    - ats-9-after-the-silence
+    - ats-10-saltwater
+    - ats-11-the-dress-i-never-wore
+    - ats-12-unsent-letters
+    - ats-13-rise-again
+  order: 3
+
+- playlist_id: venice-trilogy
+  title: "Venice - Missing Stamp"
+  image: "/assets/Playlist - Venice Trilogy.jpeg"
+  description: >
+    A three-part 
+  songs:
+    - venice-1-someday
+    - venice-2-missing-stamp
+    - venice-3-venice-waters
+  order: 4

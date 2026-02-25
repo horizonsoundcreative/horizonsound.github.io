@@ -1,0 +1,113 @@
+teaser_message: |
+  The After the Silence album is rolling out now - thirteen Adele-inspired tracks
+  releasing one by one.
+
+  And starting this week, the Midnight Saga begins: four high-energy,
+  Kesha-inspired anthems ready to light up the channel.
+
+new_releases:
+  - title: "Midnight Saga - Before Midnight - Track 1" # Midnight Saga track
+    url: "/music/midnight-saga-before-midnight/"
+    image: "/assets/Before Midnight.jpeg"
+
+  - title: "A Way Back - Lost in Silence"
+    url: "/music/lost-in-silence/"
+    image: "/assets/lost-in-silence.jpeg"
+
+  - title: "A Way Back - Choosing Me (Her Version)"
+    url: "/music/choosing-me-her-version/"
+    image: "/assets/choosing-me-her-version.jpeg"
+
+  - title: "A Way Back - Choosing Me (His Version)"
+    url: "/music/choosing-me-his-version/"
+    image: "/assets/choosing-me-his-version.jpeg"
+
+  - title: "A Touch of Light" # Instrumental track
+    url: "/music/instrumental-a-touch-of-light/"
+    image: "/assets/A Touch of Light.jpeg"
+
+  - title: "The Moment You Breathe" # Instrumental track
+    url: "/music/instrumental-the-moment-you-breathe/"
+    image: "/assets/The Moment You Breathe.jpeg"
+
+  - title: "After the Silence - The Quiet After - Track 1" # After the Silence Album track
+    url: "/music/ats-1-the-quiet-after/"
+    image: "/assets/After the Silence.jpeg"
+
+  - title: "After the Silence - Borrowed Time - Track 2" # After the Silence Album track
+    url: "/music/ats-2-borrowed-time/"
+    image: "/assets/After the Silence.jpeg"
+
+  - title: "After the Silence - Homesick For You - Track 3" # After the Silence Album track
+    url: "/music/ats-3-homesick-for-you/"
+    image: "/assets/After the Silence.jpeg"
+  
+  - title: "After the Silence - The Way We Lied - Track 4" # After the Silence Album track
+    url: "/music/ats-4-the-way-we-lied/"
+    image: "/assets/After the Silence.jpeg"
+
+  - title: "After the Silence - Paper Walls - Track 5" # After the Silence Album track
+    url: "/music/ats-5-paper-walls/"
+    image: "/assets/After the Silence.jpeg"
+
+  - title: "After the Silence - Half of Me - Track 6" # After the Silence Album track
+    url: "/music/ats-6-half-of-me/"
+    image: "/assets/After the Silence.jpeg"
+
+spotlight:
+  - title: "Kaleidoscope"
+    url: "/music/kaleidoscope/"
+    image: "/assets/Kaleidoscope.jpeg"
+
+  - title: "Time Capsule"
+    url: "/music/time-capsule/"
+    image: "/assets/Time Capsule.jpeg"
+
+  - title: "The Man Behind the Bar"
+    url: "/music/the-man-behind-the-bar/"
+    image: "/assets/The Man Behind the Bar.jpeg"
+
+  - title: "Total Eclipse (Years Later)"
+    url: "/music/total-eclipse-years-later/"
+    image: "/assets/Total Eclipse.jpeg"
+
+  - title: "Until the Nightmare Ends"
+    url: "/music/until-the-nightmare-ends/"
+    image: "/assets/Until the Nightmare Ends.jpeg"
+
+  - title: "Already Out the Door"
+    url: "/music/already-out-the-door/"
+    image: "/assets/Already Out the Door.jpeg"
+
+  - title: "Nineteen Summers"
+    url: "/music/nineteen-summers/"
+    image: "/assets/Nineteen Summers New.jpeg"
+
+  - title: "Rise Like Thunder"
+    url: "/music/rise-like-thunder/"
+    image: "/assets/Rise Like Thunder New.jpeg"
+
+  - title: "One Hell of a Ride"
+    url: "/music/one-hell-of-a-ride/"
+    image: "/assets/One Hell of a Ride.jpeg"
+
+  - title: "Learning to Live Again"
+    url: "/music/learning-to-live-again/"
+    image: "/assets/Learning to Live Again.jpeg"
+
+collections:
+  - title: "Venice Trilogy"
+    playlist_id: "venice-trilogy"
+    image: "/assets/Playlist - Venice Trilogy.jpeg"
+
+  - title: "After the Silence – Full Album"
+    playlist_id: "after-the-silence"
+    image: "/assets/Playlist - After the Silence.jpeg"
+
+  - title: "Midnight Saga"
+    playlist_id: "midnight-saga"
+    image: "/assets/Playlist - Midnight Saga.jpeg"
+
+  - title: "A Way Back"
+    playlist_id: "a-way-back"
+    image: "/assets/lost-in-silence.jpeg"

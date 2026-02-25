@@ -1,0 +1,82 @@
+<section class="homepage-section">
+  {% if include.title %}
+    <h2 class="section-header">{{ include.title }}</h2>
+  {% endif %}
+
+  {% assign first_item = include.items[0] %}
+
+  {%- comment -%}
+    MODE 1: Song tiles (New Releases / Spotlight)
+  {%- endcomment -%}
+  {% if first_item.playlist_id == nil %}
+
+    <div class="tile-grid">
+      {% for tile in include.items %}
+        <a class="tile" href="{{ site.baseurl }}{{ tile.url }}">
+          <img src="{{ site.baseurl }}{{ tile.image }}" alt="{{ tile.title }}">
+          <h3 class="tile-title">{{ tile.title }}</h3>
+        </a>
+      {% endfor %}
+    </div>
+
+  {% else %}
+
+    {%- comment -%}
+      MODE 2: Collections (playlist tiles)
+      Ordered by playlists.yml, not homepage.yml
+    {%- endcomment -%}
+
+    {% assign active_playlists = "" | split: "" %}
+    {% assign coming_soon_playlists = "" | split: "" %}
+
+    {%- comment -%}
+      Build ordered arrays based on playlist.yml
+    {%- endcomment -%}
+    {% for pl in site.data.playlists %}
+      {% assign tile = include.items | where: "playlist_id", pl.playlist_id | first %}
+
+      {% if tile %}
+        {% assign has_public = false %}
+
+        {% for sid in pl.songs %}
+          {% assign song = site.data.music.songs | where: "song_id", sid | first %}
+          {% if song and song.videostatus == "Public" %}
+            {% assign has_public = true %}
+          {% endif %}
+        {% endfor %}
+
+        {% if has_public %}
+          {% assign active_playlists = active_playlists | push: tile %}
+        {% else %}
+          {% assign coming_soon_playlists = coming_soon_playlists | push: tile %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    <div class="tile-grid">
+
+      {%- comment -%}
+        ACTIVE playlists first
+      {%- endcomment -%}
+      {% for tile in active_playlists %}
+        <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ tile.playlist_id }}/">
+          <img src="{{ site.baseurl }}{{ tile.image }}" alt="{{ tile.title }}">
+          <h3 class="tile-title">{{ tile.title }}</h3>
+        </a>
+      {% endfor %}
+
+      {%- comment -%}
+        COMING SOON playlists second
+      {%- endcomment -%}
+      {% for tile in coming_soon_playlists %}
+        <div class="tile coming-soon">
+          <img src="{{ site.baseurl }}{{ tile.image }}" alt="{{ tile.title }}">
+          <div class="tile-overlay">Coming Soon</div>
+          <h3 class="tile-title">{{ tile.title }}</h3>
+        </div>
+      {% endfor %}
+
+    </div>
+
+  {% endif %}
+</section>

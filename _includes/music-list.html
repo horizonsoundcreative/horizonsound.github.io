@@ -1,0 +1,15 @@
+<section class="music-list">
+  <h2 class="section-header">All Songs</h2>
+
+  <ul class="song-list">
+    {% assign public_songs = include.items | where: "videostatus", "Public" %}
+    {% assign sorted = include.items | sort: "title" %}
+    {% for song in sorted %}
+      <li class="song-list-item">
+        <a href="{{ site.baseurl }}{{ song.url }}">
+          {{ song.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

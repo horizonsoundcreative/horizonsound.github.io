@@ -1,0 +1,13 @@
+<section class="playlist-list">
+  <h2 class="section-header">YouTube Playlists</h2>
+
+  <ul class="playlist-items">
+    {% for p in include.items %}
+      <li class="playlist-item">
+        <a href="{{ p.youtube_url }}" target="_blank">
+          {{ p.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

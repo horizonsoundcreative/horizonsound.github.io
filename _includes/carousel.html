@@ -1,0 +1,91 @@
+{% if site.detailed-debug %}
+<div style="background:#111; color:#0ff; padding:1rem; margin:1rem 0;">
+  <strong>CAROUSEL INPUT DEBUG</strong><br><br>
+
+  include.playlist: {{ include.playlist | jsonify }}<br><br>
+  include.songs: {{ include.songs | jsonify }}<br><br>
+
+  items (raw):<br>
+  {% assign items = include.playlist | default: include.songs %}
+  {% for i in items %}
+    - {{ i | jsonify }}<br>
+  {% endfor %}
+</div>
+{% endif %}
+
+
+{% assign items = include.playlist | default: include.songs %}
+
+{% if site.detailed-debug %}
+<div class="debug-block">
+  <pre style="background:#111; color:#0ff; padding:1rem; white-space:pre-wrap;">
+
+CAROUSEL DEBUG
+==============================
+
+include.playlist: {{ include.playlist | jsonify }}
+include.songs:    {{ include.songs | jsonify }}
+
+MODE DETECTED:
+{% if include.playlist %}
+  PLAYLIST MODE (div tiles)
+{% else %}
+  SONG MODE (a tiles)
+{% endif %}
+
+ITEMS (titles + URLs):
+{% for item in items %}
+  - title: {{ item.title }}
+    url:   {{ item.url }}
+{% endfor %}
+
+  </pre>
+</div>
+{% endif %}
+
+<div class="carousel" data-carousel>
+
+  <!-- LEFT ARROW -->
+  <button class="carousel-arrow left-arrow" data-arrow="left">‹</button>
+
+  <div class="horizontal-strip" data-strip>
+
+
+{% if site.detailed-debug %}
+<div style="background:#111; color:#0ff; padding:10px; margin:10px 0; font-size:0.85rem;">
+  <strong>CAROUSEL DEBUG</strong><br>
+  strip.scrollWidth: <span data-debug-scrollwidth></span><br>
+  strip.clientWidth: <span data-debug-clientwidth></span><br>
+  strip.scrollLeft: <span data-debug-scrollleft></span><br>
+  tiles.count: {{ items.size }}<br>
+</div>
+{% endif %}
+
+
+    
+    {% assign items = include.playlist | default: include.songs %}
+
+    {% for song1 in items %}
+      {% if song1.videostatus == "Public" %}
+        <a class="carousel-tile" data-song="{{ song1.song_id }}" href="{{ site.baseurl }}{{ song1.url }}">
+          <img src="{{ site.baseurl }}{{ song1.image }}" alt="{{ song1.title }}">
+          <h3 class="tile-title">{{ song1.title }}</h3>
+        </a>
+      {% endif %}
+    {% endfor %}
+
+    {% for song1 in items %}
+      {% unless song1.videostatus == "Public" %}
+        <div class="carousel-tile coming-soon" data-song="{{ song1.song_id }}">
+          <img src="{{ site.baseurl }}{{ song1.image }}" alt="{{ song1.title }}">
+          <div class="tile-overlay">Coming Soon</div>
+          <h3 class="tile-title">{{ song1.title }}</h3>
+        </div>
+      {% endunless %}
+    {% endfor %}
+  </div>
+
+  <!-- RIGHT ARROW -->
+  <button class="carousel-arrow right-arrow" data-arrow="right">›</button>
+
+</div>

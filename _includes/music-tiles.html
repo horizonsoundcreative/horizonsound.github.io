@@ -1,13 +1,25 @@
 <section class="music-tiles-view">
-  {% assign public_songs = include.items | where: "videostatus", "Public" %}
-  {% assign sorted = public_songs | sort: "title" %}
+  {% assign sorted = include.items | sort: "title" %}
 
   <div class="tile-grid">
     {% for song in sorted %}
-      <a class="tile" href="{{ song.url }}">
-        <img src="{{ song.image }}" alt="{{ song.title }}">
-        <h3 class="tile-title">{{ song.title }}</h3>
-      </a>
+      
+      {% if song.videostatus == "Public" %}
+        <!-- Normal clickable tile -->
+        <a class="tile" href="{{ site.baseurl }}{{ song.url }}">
+          <img src="{{ site.baseurl }}{{ song.image }}" alt="{{ song.title }}">
+          <h3 class="tile-title">{{ song.title }}</h3>
+        </a>
+
+      {% else %}
+        <!-- Coming Soon tile -->
+        <div class="tile coming-soon">
+          <img src="{{ site.baseurl }}{{ song.image }}" alt="{{ song.title }}">
+          <div class="tile-overlay">Coming Soon</div>
+          <h3 class="tile-title">{{ song.title }}</h3>
+        </div>
+      {% endif %}
+
     {% endfor %}
   </div>
 </section>

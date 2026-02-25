@@ -1,21 +1,4 @@
 ---
 layout: song
 song_id: instrumental-a-touch-of-light
-hero_image: "/assets/hero.jpg"
-
-about: |
-  Official audio for “A Touch of Light” by Horizon Sound.
-  
-  “A Touch of Light” is a gentle, uplifting instrumental built around soft glow, warm ambience, and a sense of quiet hope. Subtle chords and airy textures create the feeling of a single sunbeam breaking through clouds — small, delicate, but powerful enough to change everything. It’s peaceful, bright, and emotionally soothing.
-  
-  🎧 Vibe: warm, uplifting, cinematic
-  🎼 Style: ambient instrumental, emotional score
-  🎛️ Production: glowing pads, soft textures, gentle lift
-  ✨ Mood: hopeful, comforting, serene
-  
 ---
-<!-- ABOUT SECTION -->
-{% include about.html %}
-
-<!-- LYRICS SECTION -->
-{% include lyrics.html %}

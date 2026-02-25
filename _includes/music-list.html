@@ -6,7 +6,7 @@
     {% assign sorted = include.items | sort: "title" %}
     {% for song in sorted %}
       <li class="song-list-item">
-        <a href="{{ song.url }}">
+        <a href="{{ site.baseurl }}{{ song.url }}">
           {{ song.title }}
         </a>
       </li>

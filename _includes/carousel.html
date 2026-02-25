@@ -1,6 +1,22 @@
+{% if site.detailed-debug %}
+<div style="background:#111; color:#0ff; padding:1rem; margin:1rem 0;">
+  <strong>CAROUSEL INPUT DEBUG</strong><br><br>
+
+  include.playlist: {{ include.playlist | jsonify }}<br><br>
+  include.songs: {{ include.songs | jsonify }}<br><br>
+
+  items (raw):<br>
+  {% assign items = include.playlist | default: include.songs %}
+  {% for i in items %}
+    - {{ i | jsonify }}<br>
+  {% endfor %}
+</div>
+{% endif %}
+
+
 {% assign items = include.playlist | default: include.songs %}
 
-{% if site.debug %}
+{% if site.detailed-debug %}
 <div class="debug-block">
   <pre style="background:#111; color:#0ff; padding:1rem; white-space:pre-wrap;">
 
@@ -34,30 +50,38 @@ ITEMS (titles + URLs):
 
   <div class="horizontal-strip" data-strip>
 
-    {% for item in items %}
-      {% assign clean_url = item.url | replace: '//', '/' %}
-      {% assign segments = clean_url | split: "/" %}
-      {% assign last = segments | last %}
-      {% if last == "" %}
-        {% assign song_id = segments[segments.size - 2] %}
-      {% else %}
-        {% assign song_id = last %}
-      {% endif %}
-      {% assign song = item %}
 
-      {% if include.playlist %}
-        <!-- PLAYLIST MODE -->
-        <div class="carousel-tile" data-song="{{ song.song_id }}">
-          <img src="{{ item.image }}" alt="{{ song.title }}">
-          <h3 class="tile-title">{{ song.title }}</h3>
-        </div>
-      {% else %}
-        <!-- SONG PAGE MODE -->
-        <a class="carousel-tile" data-song="{{ song_id }}" href="{{ item.url }}">
-          <img src="{{ item.image }}" alt="{{ song.title }}">
-          <h3 class="tile-title">{{ song.title }}</h3>
+{% if site.detailed-debug %}
+<div style="background:#111; color:#0ff; padding:10px; margin:10px 0; font-size:0.85rem;">
+  <strong>CAROUSEL DEBUG</strong><br>
+  strip.scrollWidth: <span data-debug-scrollwidth></span><br>
+  strip.clientWidth: <span data-debug-clientwidth></span><br>
+  strip.scrollLeft: <span data-debug-scrollleft></span><br>
+  tiles.count: {{ items.size }}<br>
+</div>
+{% endif %}
+
+
+    
+    {% assign items = include.playlist | default: include.songs %}
+
+    {% for song1 in items %}
+      {% if song1.videostatus == "Public" %}
+        <a class="carousel-tile" data-song="{{ song1.song_id }}" href="{{ site.baseurl }}{{ song1.url }}">
+          <img src="{{ site.baseurl }}{{ song1.image }}" alt="{{ song1.title }}">
+          <h3 class="tile-title">{{ song1.title }}</h3>
         </a>
       {% endif %}
+    {% endfor %}
+
+    {% for song1 in items %}
+      {% unless song1.videostatus == "Public" %}
+        <div class="carousel-tile coming-soon" data-song="{{ song1.song_id }}">
+          <img src="{{ site.baseurl }}{{ song1.image }}" alt="{{ song1.title }}">
+          <div class="tile-overlay">Coming Soon</div>
+          <h3 class="tile-title">{{ song1.title }}</h3>
+        </div>
+      {% endunless %}
     {% endfor %}
   </div>
 

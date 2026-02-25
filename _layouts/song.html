@@ -9,15 +9,15 @@ layout: default
 {%- comment -%}
 BUILD PLAYLIST FOR CAROUSEL (old system)
 {%- endcomment -%}
-{% assign related = site.data.music.songs | where: "primary_playlist", meta.primary_playlist %}
-{% assign related_public = related | where: "videostatus", "Public" %}
-{% assign sorted_by_sequence = related_public | sort: "sequence" %}
+
+{% assign related = site.data.music.songs | where_exp: "item", "item.primary_playlist == meta.primary_playlist" %}
+{% assign sorted_by_sequence = related | sort: "sequence" %}
 {% assign first_item = sorted_by_sequence | first %}
 
 {% if first_item.sequence %}
   {% assign playlist_sorted = sorted_by_sequence %}
 {% else %}
-  {% assign playlist_sorted = related_public | sort: "title" %}
+  {% assign playlist_sorted = related | sort: "title" %}
 {% endif %}
 
 <main>
@@ -29,38 +29,80 @@ BUILD PLAYLIST FOR CAROUSEL (old system)
   </script>
 
   <!-- DEBUG BLOCK -->
-{% if site.debug %}
-<div class="debug-block">
-  <pre style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; white-space:pre-wrap;">
+  {% if site.debug %}
+    <div class="debug-block">
+      <pre style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; white-space:pre-wrap;">
+    
+      SONG PAGE DEBUG
+      ==============================
+      
+      PAGE OBJECT
+      -----------
+      page.url:          {{ current_song.url }}
+      page.title:        {{ current_song.title }}
+      page.song_id:      {{ current_song.song_id }}
+      page.youtube_id:   {{ current_song.youtube_id }}
+      
+      META OBJECT (from music.yml)
+      ----------------------------
+       <!-- {{ meta | jsonify }} -->
+      
+      RESOLVED VALUES
+      ---------------
+      resolved.title:     {{ current_song.title | default: meta.title }}
+      resolved.youtube_id: {{ current_song.youtube_id | default: meta.youtube_id }}
+      resolved.image:      {{ meta.image }}
+      resolved.primary_playlist: {{ meta.primary_playlist }}
+      
+      PLAYLIST SORTED (final list for carousel)
+      -----------------------------------------
+      <!-- {{ playlist_sorted | jsonify }} -->
 
-SONG PAGE DEBUG
-==============================
+      {% for s in playlist_sorted %}
+      - {
+          "title": "{{ s.title }}",
+          "song_id": "{{ s.song_id }}",
+          "url": "{{ s.url }}",
+          "image": "{{ s.image }}",
+          "youtube_id": "{{ s.youtube_id }}",
+          "videostatus": "{{ s.videostatus }}",
+          "primary_playlist": "{{ s.primary_playlist }}"
+        }
+      {% endfor %}
 
-PAGE OBJECT
------------
-page.url:          {{ current_song.url }}
-page.title:        {{ current_song.title }}
-page.song_id:      {{ current_song.song_id }}
-page.youtube_id:   {{ current_song.youtube_id }}
 
-META OBJECT (from music.yml)
-----------------------------
-{{ meta | jsonify }}
+      </pre>
+    </div>
+  {% endif %}
 
-RESOLVED VALUES
----------------
-resolved.title:     {{ current_song.title | default: meta.title }}
-resolved.youtube_id: {{ current_song.youtube_id | default: meta.youtube_id }}
-resolved.image:      {{ meta.image }}
-resolved.primary_playlist: {{ meta.primary_playlist }}
-
-PLAYLIST SORTED (final list for carousel)
------------------------------------------
-{{ playlist_sorted | jsonify }}
-
-  </pre>
-</div>
-{% endif %}
+  <!-- DEBUG BLOCK -->
+  {% if site.debug %}
+    <div class="debug-block">
+      <pre style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; white-space:pre-wrap;">
+    
+      PLAYLIST SORTED RAW OBJECTS
+      ---------------------------
+      <!-- {% for s in playlist_sorted %}
+        - {{ s | jsonify }}
+      {% endfor %} -->
+      {% for s in playlist_sorted %}
+        - title: {{ s.title }}
+          song_id: {{ s.song_id }}
+          url: {{ s.url }}
+          image: {{ s.image }}
+          youtube_id: {{ s.youtube_id }}
+          videostatus: {{ s.videostatus }}
+          primary_playlist: {{ s.primary_playlist }}
+      {% endfor %}
+          
+      SOURCE CHECK:
+      {% for s in playlist_sorted %}
+        - {{ s.path }}
+      {% endfor %}
+      
+      </pre>
+    </div>
+  {% endif %}
 
   <!-- SONG TITLE -->
   <section class="song-header">
@@ -81,8 +123,8 @@ PLAYLIST SORTED (final list for carousel)
 
     <!-- CAROUSEL -->
     {% include carousel.html songs=playlist_sorted %}
-
   </div>
+
   <!-- ⭐ PLAYER FRAME WRAPPER ENDS HERE ⭐ -->
 
   <!-- ABOUT SECTION -->
@@ -105,76 +147,79 @@ PLAYLIST SORTED (final list for carousel)
   
 </main>
 
-<!-- ORIGINAL SIMPLE CAROUSEL JS -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  console.log("isPlaylistPage:", window.isPlaylistPage);
+  if (window.isPlaylistPage) return;
 
-  if (window.isPlaylistPage) {
-    console.log("Skipping global song-page handler because this is a playlist page.");
-    return;
-  }
+  requestAnimationFrame(() => {
 
-  console.log("Running global song-page handler.");
+    const tiles = document.querySelectorAll(".carousel-tile, .playlist-tile");
+    const iframe = document.querySelector(".video-wrapper iframe");
 
-  const tiles = document.querySelectorAll(".carousel-tile, .playlist-tile");
-  const iframe = document.querySelector(".video-wrapper iframe");
+    const carousel = document.querySelector(".player-frame .carousel");
+    const strip = carousel?.querySelector(".horizontal-strip");
+    const leftArrow = carousel?.querySelector(".left-arrow");
+    const rightArrow = carousel?.querySelector(".right-arrow");
 
-  console.log("Found tiles:", tiles);
+    // Arrow click handlers
+    if (strip && leftArrow && rightArrow) {
+      const scrollAmount = 220;
 
-  // -----------------------------
-  // 1. CLICK HANDLERS
-  // -----------------------------
-  tiles.forEach(tile => {
-    tile.addEventListener("click", () => {
+      leftArrow.addEventListener("click", () => {
+        strip.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      });
 
-      console.log("=== SONG PAGE TILE CLICKED ===");
-      console.log("Tile element:", tile);
-      console.log("dataset.song:", tile.dataset.song);
+      rightArrow.addEventListener("click", () => {
+        strip.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      });
 
-      const songId = tile.dataset.song;
-      const song = window.allSongs?.find(s => s.song_id === songId);
-
-      console.log("Matched song:", song);
-
-      if (iframe && song?.youtube_id) {
-        console.log("Updating iframe to:", song.youtube_id);
-        iframe.src = "https://www.youtube.com/embed/" + song.youtube_id;
-      } else {
-        console.warn("Iframe update skipped — missing song or youtube_id");
+      // Arrow enable/disable logic
+      function updateArrows() {
+        const maxScroll = strip.scrollWidth - strip.clientWidth;
+        leftArrow.classList.toggle("disabled", strip.scrollLeft <= 0);
+        rightArrow.classList.toggle("disabled", strip.scrollLeft >= maxScroll);
       }
 
-      tiles.forEach(t => t.classList.remove("active"));
-      tile.classList.add("active");
-      tile.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-
-      console.log("Active tile applied.");
-    });
-  });
-
-  // -----------------------------
-  // 2. INITIAL SELECTION ON PAGE LOAD
-  // -----------------------------
-  console.log("Running initial selection logic…");
-
-  let initialId = window.currentSongId;
-
-  if (!initialId && tiles.length > 0) {
-    initialId = tiles[0].dataset.song;
-  }
-
-  const initialTile = [...tiles].find(t => t.dataset.song === initialId);
-
-  if (initialTile) {
-    initialTile.classList.add("active");
-    initialTile.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-
-    const song = window.allSongs?.find(s => s.song_id === initialId);
-    if (iframe && song?.youtube_id) {
-      iframe.src = "https://www.youtube.com/embed/" + song.youtube_id;
+      strip.addEventListener("scroll", updateArrows);
+      updateArrows();
     }
-  }
 
+    if (!tiles.length) return;
+
+    // Tile click handlers
+    tiles.forEach(tile => {
+      tile.addEventListener("click", () => {
+
+        const songId = tile.dataset.song;
+        const song = window.allSongs?.find(s => s.song_id === songId);
+
+        if (iframe && song?.youtube_id) {
+          iframe.src = "https://www.youtube.com/embed/" + song.youtube_id;
+        }
+
+        tiles.forEach(t => t.classList.remove("active"));
+        tile.classList.add("active");
+
+        tile.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      });
+    });
+
+    // Initial selection
+    let initialId = window.currentSongId || tiles[0]?.dataset.song;
+    const initialTile = [...tiles].find(t => t.dataset.song === initialId);
+
+    if (initialTile) {
+      initialTile.classList.add("active");
+
+      const song = window.allSongs?.find(s => s.song_id === initialId);
+      if (iframe && song?.youtube_id) {
+        iframe.src = "https://www.youtube.com/embed/" + song.youtube_id;
+      }
+
+      initialTile.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    }
+
+  });
 });
 </script>

@@ -24,8 +24,8 @@
       <div class="horizontal-strip">
           {% for song in playlist_sorted %}
             <a class="tile playlist-tile {% if song.url == current_song.url %}active-tile{% endif %}"
-               href="{{ song.url }}">
-              <img src="{{ song.image }}" alt="{{ song.title }}">
+               href="{{ site.baseurl }}{{ song.url }}">
+              <img src="{{ site.baseurl }}{{ song.image }}" alt="{{ song.title }}">
               <h3 class="tile-title">{{ song.title }}</h3>
             </a>
           {% endfor %}

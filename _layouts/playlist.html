@@ -5,6 +5,7 @@ layout: default
 {% comment %}
   1. Load the playlist entry from playlists.yml
 {% endcomment %}
+
 {% assign playlist = site.data.playlists | where: "playlist_id", page.playlist_id | first %}
 
 <main class="playlist-page">
@@ -15,17 +16,16 @@ layout: default
   {% if site.debug %}
   <div class="debug-block">
     <pre style="background:#111; color:#0ff; padding:1rem; white-space:pre-wrap;">
-PLAYLIST PAGE DEBUG
-==============================
-
-page.playlist_id: {{ page.playlist_id }}
-
-PLAYLIST YAML ENTRY:
-{{ playlist | jsonify }}
-
-SONG IDS FROM PLAYLIST:
-{{ playlist.songs | jsonify }}
-
+      PLAYLIST PAGE DEBUG
+      ==============================
+      
+      page.playlist_id: {{ page.playlist_id }}
+      
+      PLAYLIST YAML ENTRY:
+      {{ playlist | jsonify }}
+      
+      SONG IDS FROM PLAYLIST:
+      {{ playlist.songs | jsonify }}
     </pre>
   </div>
   {% endif %}
@@ -34,7 +34,7 @@ SONG IDS FROM PLAYLIST:
   <section class="playlist-header">
     <h2 class="section-header">{{ playlist.title }}</h2>
     {% if playlist.description %}
-      <p class="playlist-description">{{ playlist.description }}</p>
+    <p class="playlist-description">{{ playlist.description }}</p>
     {% endif %}
   </section>
 
@@ -45,33 +45,36 @@ SONG IDS FROM PLAYLIST:
 
   {% for sid in playlist.songs %}
     {% assign expected_song = site.data.music.songs | where: "song_id", sid | first %}
-    {% if expected_song and expected_song.videostatus == "Public" %}
-      {% assign playlist_songs = playlist_songs | push: expected_song %}
+    {% assign song_page = site.pages | where: "song_id", sid | first %}
+  
+    {% if expected_song %}
+      {% assign merged = expected_song | merge: song_page %}
+      {% assign playlist_songs = playlist_songs | push: merged %}
     {% endif %}
   {% endfor %}
   
   {% comment %}
     3. Sort playlist songs by sequence if present
   {% endcomment %}
-  {% assign sorted = playlist_songs | sort: "sequence" %}
 
+  {% assign sorted = playlist_songs | sort: "sequence" %}
   {% assign first_song = sorted | first %}
 
   <!-- ⭐ PLAYER FRAME WRAPPER (PURPLE THEME) ⭐ -->
   <div class="player-frame player-frame--purple">
-
+  
     <!-- EMBED -->
     {% include embed.html youtube_id=first_song.youtube_id %}
-
+  
     <!-- JS DATA -->
     <script>
       window.allSongs = {{ sorted | jsonify }};
     </script>
 
-    <!-- CAROUSEL -->
     {% include carousel.html playlist=sorted %}
   </div>
 
+  <!-- ABOUT + LYRICS stay inside frame -->
   <section class="playlist-about">
     <div class="centered-column">
       <h2 class="section-header">About the Song</h2>
@@ -85,110 +88,135 @@ SONG IDS FROM PLAYLIST:
       <div id="playlist-lyrics" class="playlist-lyrics-text"></div>
     </div>
   </section>
-
   <!-- ⭐ END PLAYER FRAME ⭐ -->
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      console.log("=== PLAYLIST INIT START ===");
-    
       const aboutEl = document.getElementById("playlist-about");
       const lyricsEl = document.getElementById("playlist-lyrics");
-      const iframe = document.querySelector(".video-wrapper iframe");
     
-      console.log("aboutEl:", aboutEl);
-      console.log("lyricsEl:", lyricsEl);
-      console.log("iframe:", iframe);
-      console.log("window.allSongs:", window.allSongs);
-    
-      if (!window.allSongs || !Array.isArray(window.allSongs) || window.allSongs.length === 0) {
-        console.warn("window.allSongs is missing or empty.");
-        return;
-      }
-    
-      // ⭐ Load the first song on page load
       const first = window.allSongs[0];
-      console.log("First song object:", first);
-      console.log("First song keys:", Object.keys(first));
-    
       if (first) {
-        const initialDescription = first.description_html || "";
-        const initialLyrics = first.lyrics_html || "";
-    
-        console.log("Setting initial About:", initialDescription);
-        console.log("Setting initial Lyrics:", initialLyrics);
-    
-        if (aboutEl) aboutEl.innerHTML = initialDescription;
-        if (lyricsEl) lyricsEl.innerHTML = initialLyrics;
-    
-        if (iframe && first.youtube_id) {
-          const initialSrc = `https://www.youtube.com/embed/${first.youtube_id}`;
-          console.log("Setting initial iframe src:", initialSrc);
-          iframe.src = initialSrc;
-        }
-    
-        const firstTileSelector = `.carousel-tile[data-song="${first.song_id}"]`;
-        const firstTile = document.querySelector(firstTileSelector);
-        console.log("First tile selector:", firstTileSelector);
-        console.log("First tile element:", firstTile);
-    
-        if (firstTile) {
-          firstTile.classList.add("active");
-          console.log("Marked first tile as active.");
-        } else {
-          console.warn("Could not find first tile to mark active.");
-        }
-      } else {
-        console.warn("No first song found in window.allSongs.");
+        aboutEl.innerHTML = first.description_html || "";
+        lyricsEl.innerHTML = first.lyrics_html || "";
       }
     
-      // ⭐ Tile click handler
-      const tiles = document.querySelectorAll(".carousel-tile");
-      console.log("Found carousel tiles:", tiles);
-    
-      tiles.forEach(tile => {
+      document.querySelectorAll(".carousel-tile").forEach(tile => {
         tile.addEventListener("click", () => {
-          console.log("=== TILE CLICKED ===");
+    
+          console.log("=== PLAYLIST TILE CLICKED ===");
           console.log("Tile element:", tile);
-          console.log("Tile dataset.song:", tile.dataset.song);
+          console.log("dataset.song:", tile.dataset.song);
+          console.log("window.allSongs:", window.allSongs);
     
           const id = tile.dataset.song;
           const song = window.allSongs.find(s => s.song_id === id);
     
-          console.log("Matched song for click:", song);
-          console.log("Clicked song keys:", Object.keys(song));
+          console.log("Matched song:", song);
     
           if (!song) {
             console.warn("NO SONG FOUND FOR ID:", id);
             return;
           }
     
-          // Update video
-          if (iframe && song.youtube_id) {
-            const newSrc = `https://www.youtube.com/embed/${song.youtube_id}`;
-            console.log("Updating iframe src to:", newSrc);
-            iframe.src = newSrc;
-          } else {
-            console.warn("No iframe or youtube_id available for clicked song.");
-          }
+          aboutEl.innerHTML = song.description || "";
+          lyricsEl.innerHTML = song.lyrics || "";
     
-          // ⭐ Update About + Lyrics using new HTML fields
-          const newDescription = song.description_html || "";
-          const newLyrics = song.lyrics_html || "";
-    
-          console.log("Updating About to:", newDescription);
-          console.log("Updating Lyrics to:", newLyrics);
-    
-          if (aboutEl) aboutEl.innerHTML = newDescription;
-          if (lyricsEl) lyricsEl.innerHTML = newLyrics;
-    
-          // Update active tile
-          tiles.forEach(t => t.classList.remove("active"));
-          tile.classList.add("active");
-          console.log("Active tile updated.");
+          console.log("About/Lyrics updated.");
         });
       });
+    });
+  </script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function initTileSelection() {
+        const tiles = document.querySelectorAll(".carousel-tile, .playlist-tile");
     
-      console.log("=== PLAYLIST INIT COMPLETE ===");
+        // Wait until tiles exist
+        if (!tiles.length) {
+          return requestAnimationFrame(initTileSelection);
+        }
+    
+        // If no tile is active, activate the first one
+        const alreadyActive = Array.from(tiles).some(t => t.classList.contains("active"));
+        if (!alreadyActive) {
+          tiles[0].classList.add("active");
+        }
+    
+        // Center it
+        tiles[0].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      }
+    
+      initTileSelection();
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const carousels = document.querySelectorAll("[data-carousel]");
+    
+      carousels.forEach(carousel => {
+        const strip = carousel.querySelector("[data-strip]");
+        if (!strip) return;
+    
+        function updateDebug() {
+          const sw = strip.scrollWidth;
+          const cw = strip.clientWidth;
+          const sl = strip.scrollLeft;
+          const canScroll = sw > cw;
+    
+          const swEl = carousel.querySelector("[data-debug-scrollwidth]");
+          const cwEl = carousel.querySelector("[data-debug-clientwidth]");
+          const slEl = carousel.querySelector("[data-debug-scrollleft]");
+          const csEl = carousel.querySelector("[data-debug-canscroll]");
+    
+          if (swEl) swEl.textContent = sw;
+          if (cwEl) cwEl.textContent = cw;
+          if (slEl) slEl.textContent = sl;
+          if (csEl) csEl.textContent = canScroll ? "YES" : "NO";
+        }
+    
+        updateDebug();
+        strip.addEventListener("scroll", updateDebug);
+        carousel.addEventListener("carousel:refresh", updateDebug);
+    
+        const left = carousel.querySelector("[data-arrow='left']");
+        const right = carousel.querySelector("[data-arrow='right']");
+    
+        if (left) {
+          left.addEventListener("click", () => {
+            strip.scrollBy({ left: -300, behavior: "smooth" });
+            setTimeout(updateDebug, 300);
+          });
+        }
+    
+        if (right) {
+          right.addEventListener("click", () => {
+            strip.scrollBy({ left: 300, behavior: "smooth" });
+            setTimeout(updateDebug, 300);
+          });
+        }
+      });
+    });
+  </script>
+ 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const aboutEl = document.getElementById("playlist-about");
+      const lyricsEl = document.getElementById("playlist-lyrics");
+    
+      function initAboutLyrics() {
+        if (!window.allSongs || !window.allSongs.length) {
+          return requestAnimationFrame(initAboutLyrics);
+        }
+    
+        const first = window.allSongs[0];
+        aboutEl.innerHTML = first.description_html || "";
+        lyricsEl.innerHTML = first.lyrics_html || "";
+      }
+    
+      initAboutLyrics();
     });
   </script>
 </main>

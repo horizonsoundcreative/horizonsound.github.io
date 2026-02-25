@@ -1,0 +1,4 @@
+---
+layout: song
+song_id: the-man-behind-the-bar
+---

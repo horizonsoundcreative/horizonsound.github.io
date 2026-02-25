@@ -1,21 +1,4 @@
 ---
 layout: song
 song_id: instrumental-lines-of-light
-hero_image: "/assets/hero.jpg"
-
-about: |
-  Official audio for “Lines of Light” by Horizon Sound.
-  
-  “Lines of Light” is a modern, atmospheric instrumental built around beams of soft brightness cutting through gentle haze. The track blends warm ambience with subtle rhythmic motion, creating a sense of clarity and quiet uplift. It feels like watching sunlight break through clouds — simple, beautiful, and full of quiet hope.
-  
-  🎧 Vibe: luminous, modern, atmospheric
-  🎼 Style: ambient instrumental, cinematic texture
-  🎛️ Production: light pulses, airy pads, soft contrast
-  ✨ Mood: hopeful, spacious, uplifting
-
 ---
-<!-- ABOUT SECTION -->
-{% include about.html %}
-
-<!-- LYRICS SECTION -->
-{% include lyrics.html %}

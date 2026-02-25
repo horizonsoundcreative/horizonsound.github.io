@@ -4,7 +4,7 @@
   <div class="tile-grid">
     {% for p in playlists_public %}
       <a class="tile" href="{{ p.youtube_url }}" target="_blank">
-        <img src="{{ p.image }}" alt="{{ p.title }}">
+        <img src="{{ site.baseurl }}{{ p.image }}" alt="{{ p.title }}">
         <h3 class="tile-title">{{ p.title }}</h3>
       </a>
     {% endfor %}

@@ -1,21 +1,4 @@
 ---
 layout: song
 song_id: instrumental-the-way-water-moves
-hero_image: "/assets/hero.jpg"
-
-about: |
-  Official audio for “The Way Water Moves” by Horizon Sound.
-  
-  “The Way Water Moves” is a calm, flowing instrumental built around soft textures, gentle motion, and a warm, reflective atmosphere. Subtle waves of sound rise and fall like ripples across a quiet shoreline, creating a sense of peaceful drift. The track captures the quiet beauty of watching water shift and shimmer — always moving, always changing, always alive.
-  
-  🎧 Vibe: calm, fluid, atmospheric
-  🎼 Style: ambient instrumental, cinematic, reflective
-  🎛️ Production: soft pads, gentle motion, warm tonal palette
-  ✨ Mood: peaceful, meditative, soothing
-    
 ---
-<!-- ABOUT SECTION -->
-{% include about.html %}
-
-<!-- LYRICS SECTION -->
-{% include lyrics.html %}

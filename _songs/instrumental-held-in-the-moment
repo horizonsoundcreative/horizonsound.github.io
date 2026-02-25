@@ -1,21 +1,4 @@
 ---
 layout: song
 song_id: instrumental-held-in-the-moment
-hero_image: "/assets/hero.jpg"
-
-about: |
-  Official audio for “Held in the Moment” by Horizon Sound.
-
-  “Held in the Moment” is a quiet, intimate instrumental built around soft ambience and gentle emotional lift. Light filters through the sound like morning sun through trees, creating a sense of stillness and presence. It’s the feeling of pausing long enough to notice the world — and letting that moment hold you in return.
-  
-  🎧 Vibe: intimate, calm, atmospheric
-  🎼 Style: ambient instrumental, cinematic minimalism
-  🎛️ Production: soft textures, warm pads, subtle movement
-  ✨ Mood: reflective, grounding, serene
-    
 ---
-<!-- ABOUT SECTION -->
-{% include about.html %}
-
-<!-- LYRICS SECTION -->
-{% include lyrics.html %}

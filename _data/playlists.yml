@@ -1,6 +1,6 @@
 - playlist_id: a-way-back
   title: "A Way Back Trilogy"
-  image: "/assets/Choosing Me (Her Version).jpeg"
+  image: "/assets/lost-in-silence.jpeg"
   description: >
     A three-part emotional arc exploring silence, self-worth, and the courage
     to choose yourself — or choose your way back home. Told from two
@@ -15,7 +15,7 @@
 
 - playlist_id: midnight-saga
   title: "Midnight Saga"
-  image: "/assets/Midnight Saga.jpeg"
+  image: "/assets/Playlist - Midnight Saga.jpeg"
   description: >
     A cinematic late-night journey through identity, chaos, temptation, and
     transformation. The Midnight Saga follows a character through escalating
@@ -29,10 +29,12 @@
   order: 2
 
 - playlist_id: after-the-silence
-  title: "After the Silence – Performed by Lydia Ellington"
-  image: "/assets/After the Silence Track List.jpeg"
+  title: "After the Silence"
+  image: "/assets/Playlist - After the Silence.jpeg"
   description: >
-    A full‑album journey performed by Lydia Ellington, whose warm, expressive voice brings emotional clarity to every track. After the Silence unfolds as a cinematic exploration of healing, reflection, and the quiet strength that emerges in the moments we often overlook. Lydia’s intimate vocal tone carries the listener through themes of resilience, rediscovery, and emotional honesty, weaving each song into a cohesive narrative. With her blend of softness and power, she transforms stillness into storytelling, guiding the album from its most fragile confessions to its most hopeful resolutions. This collection stands as a unified emotional arc — thoughtful, atmospheric, and deeply human — brought to life through Lydia’s unmistakable presence.
+    A reflective, emotional collection exploring the quiet moments after a
+    heartbreak — the healing, the reckoning, and the rediscovery of hope.
+    These songs live in the space between what was lost and what comes next.
   songs:
     - ats-1-the-quiet-after
     - ats-2-borrowed-time
@@ -48,3 +50,14 @@
     - ats-12-unsent-letters
     - ats-13-rise-again
   order: 3
+
+- playlist_id: venice-trilogy
+  title: "Venice - Missing Stamp"
+  image: "/assets/Playlist - Venice Trilogy.jpeg"
+  description: >
+    A three-part 
+  songs:
+    - venice-1-someday
+    - venice-2-missing-stamp
+    - venice-3-venice-waters
+  order: 4

@@ -7,31 +7,24 @@ title: Horizon Sound
 
   {% include homepage-teaser.html %}
 
-  {% assign new_releases_public = site.data.homepage.new_releases | where: "videostatus", "Public" %}
+  <!-- New Releases -->
+  {% assign new_releases_public = site.data.homepage.new_releases %}
   <section class="homepage-section">
     <h2 class="section-header">New Releases...</h2>
-    {% include homepage-tiles.html 
-         title=""
-         items=new_releases_public 
-    %}
+    {% include homepage-tiles.html title="" items=new_releases_public %}
   </section>
 
-  {% assign spotlight_public = site.data.homepage.spotlight | where: "videostatus", "Public" %}
+  <!-- Spotlight -->
+  {% assign spotlight_public = site.data.homepage.spotlight %}
   <section class="homepage-section">
     <h2 class="section-header">Spotlight Music</h2>
-    {% include homepage-tiles.html 
-         title=""
-         items=spotlight_public 
-    %}
+    {% include homepage-tiles.html title="" items=spotlight_public %}
   </section>
 
-  {% assign projects_public = site.data.homepage.projects | where: "videostatus", "Public" %}
+  <!-- Collections -->
   <section class="homepage-section homepage-collections">
     <h2 class="section-header">Collections</h2>
-    {% include homepage-tiles.html 
-      title=""
-      items=projects_public 
-      class="homepage-collections"
-    %}
+    {% include homepage-tiles.html title="" items=site.data.homepage.collections %}
   </section>
+
 </div>

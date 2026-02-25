@@ -1,21 +1,4 @@
 ---
 layout: song
 song_id: instrumental-forever-in-a-moment
-hero_image: "/assets/hero.jpg"
-
-about: |
-  Official audio for “Forever in a Moment” by Horizon Sound.
-  
-  “Forever in a Moment” is a warm, cinematic instrumental built around soft light, drifting textures, and a sense of timeless stillness. Gentle chords and airy ambience create the feeling of a memory suspended in time — a moment so quiet and beautiful it feels like it could last forever. It’s emotional, spacious, and deeply reflective.
-  
-  🎧 Vibe: dreamy, warm, cinematic
-  🎼 Style: ambient instrumental, emotional score
-  🎛️ Production: soft pads, glowing textures, slow movement
-  ✨ Mood: nostalgic, peaceful, timeless
-  
 ---
-<!-- ABOUT SECTION -->
-{% include about.html %}
-
-<!-- LYRICS SECTION -->
-{% include lyrics.html %}

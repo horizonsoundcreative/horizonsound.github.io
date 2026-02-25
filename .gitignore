@@ -1,2 +1,0 @@
-# Never allow dev layout files into production
-_layouts/default.html

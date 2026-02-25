@@ -3,70 +3,10 @@ layout: default
 title: Music – Horizon Sound
 ---
 
-{% assign all_songs = site.data.music.songs | where: "videostatus", "Public" %}
+{% assign all_songs = site.data.music.songs %}
 {% assign playlists = all_songs | map: "primary_playlist" | uniq | reject: "" | sort %}
 
 <div class="music-page">
-
-  {% if site.debug %}
-  <div class="debug-block">
-  <pre style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; white-space:pre-wrap;">
-  
-  MUSIC PAGE DEBUG
-  ==============================
-  
-  PLAYLIST DATA (from playlists.yml):
-  {{ playlist_data | jsonify }}
-  
-  ALL SONGS (public only):
-  {{ all_songs | jsonify }}
-  
-  --- COLLECTIONS GRID MATCH TEST ---
-  {% for pl in playlist_data %}
-  ------------------------------------------------------------
-  PLAYLIST ENTRY
-    playlist_id: {{ pl.playlist_id }}
-    title:       {{ pl.title }}
-    order:       {{ pl.order }}
-    songs (YAML): {{ pl.songs | jsonify }}
-  
-  MATCHING LOGIC
-    Matching songs where:
-      primary_playlist == "{{ pl.title }}"
-  
-  RESULTS
-  {% assign songs_in_list = all_songs | where: "primary_playlist", pl.title %}
-    songs_in_list.size: {{ songs_in_list.size }}
-    songs_in_list: {{ songs_in_list | jsonify }}
-  
-  {% if songs_in_list.size == 0 %}
-    ⚠️ WARNING: No songs matched this playlist title!
-  {% endif %}
-  
-  SORTED RESULTS
-  {% assign sorted_by_sequence = songs_in_list | sort: "sequence" %}
-    sorted_by_sequence: {{ sorted_by_sequence | jsonify }}
-  
-  FIRST SONG
-  {% assign first_song = sorted_by_sequence | first %}
-    first_song: {{ first_song | jsonify }}
-  
-  IMAGE USED
-    {% if first_song %}
-      image: {{ first_song.image }}
-    {% else %}
-      ⚠️ No first_song — image will be blank
-    {% endif %}
-  
-  ------------------------------------------------------------
-  {% endfor %}
-  
-  </pre>
-  </div>
-  {% endif %}
-  
-  
-  <!-- VIEW TOGGLE -->
   <div class="view-toggle">
     <div class="view-toggle-buttons">
       <button class="view-toggle-button active" data-view="grouped">Grouped by Playlist</button>
@@ -79,52 +19,68 @@ title: Music – Horizon Sound
     <div class="view-toggle-spacer"></div>
   </div>
 
-  <!-- ------------------------------------------------
-       VIEW 1: GROUPED BY PRIMARY PLAYLIST (DEFAULT)
-  ------------------------------------------------- -->
-  <section id="music-view-grouped">
+<section id="music-view-grouped">
   
-    <!-- ============================
-         PLAYLIST GRID (ALBUMS & ARCS)
-    ============================= -->
-    {% assign playlist_data = site.data.playlists | sort: "order" %}
-    {% if playlist_data.size > 0 %}
-    <section class="playlist-section music-collections">
-      <h2 class="section-header">Collections</h2>
-    
-      <div class="tile-grid">
-        {% for pl in playlist_data %}
-          {% assign songs_in_list = all_songs | where: "primary_playlist", pl.title | default: "" %}
-          {% if songs_in_list.size == 0 %}
-            {% assign songs_in_list = all_songs | where: "primary_playlist", pl.title | sort: "title" %}
-          {% endif %}
-          {% assign sorted_by_sequence = songs_in_list | sort: "sequence" %}
-          {% assign first_item = sorted_by_sequence | first %}
-      
-          {% if first_item.sequence %}
-            {% assign playlist_sorted = sorted_by_sequence %}
-          {% else %}
-            {% assign playlist_sorted = songs_in_list | sort: "title" %}
-          {% endif %}
-      
-          {% assign first_song = playlist_sorted | first %}
-          {% if first_song %}
-            <a class="tile" href="/music/playlists/{{ pl.playlist_id }}/">
-              <img src="{{ first_song.image }}" alt="{{ pl.title }}">
-              <h3 class="tile-title">{{ pl.title }}</h3>
-            </a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </section>
+  {% assign playlist_data = site.data.playlists | sort: "order" %}
+  {% if playlist_data.size > 0 %}
+<section class="playlist-section music-collections">
+  <h2 class="section-header">Collections</h2>
+
+  {% assign active_playlists = "" | split: "" %}
+  {% assign coming_soon_playlists = "" | split: "" %}
+
+  {%- comment -%}
+    Build ordered arrays based on playlist.yml
+  {%- endcomment -%}
+  {% for pl in site.data.playlists %}
+    {% assign tile = site.data.homepage.collections | where: "playlist_id", pl.playlist_id | first %}
+
+    {% if tile %}
+      {% assign has_public = false %}
+
+      {% for sid in pl.songs %}
+        {% assign song = site.data.music.songs | where: "song_id", sid | first %}
+        {% if song and song.videostatus == "Public" %}
+          {% assign has_public = true %}
+        {% endif %}
+      {% endfor %}
+
+      {% if has_public %}
+        {% assign active_playlists = active_playlists | push: tile %}
+      {% else %}
+        {% assign coming_soon_playlists = coming_soon_playlists | push: tile %}
+      {% endif %}
     {% endif %}
+  {% endfor %}
+
+  <div class="tile-grid">
+
+    {%- comment -%}
+      ACTIVE playlists first
+    {%- endcomment -%}
+    {% for tile in active_playlists %}
+      <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ tile.playlist_id }}/">
+        <img src="{{ site.baseurl }}{{ tile.image }}" alt="{{ tile.title }}">
+        <h3 class="tile-title">{{ tile.title }}</h3>
+      </a>
+    {% endfor %}
+
+    {%- comment -%}
+      COMING SOON playlists second
+    {%- endcomment -%}
+    {% for tile in coming_soon_playlists %}
+      <div class="tile coming-soon">
+        <img src="{{ site.baseurl }}{{ tile.image }}" alt="{{ tile.title }}">
+        <div class="tile-overlay">Coming Soon</div>
+        <h3 class="tile-title">{{ tile.title }}</h3>
+      </div>
+    {% endfor %}
+
+  </div>
+</section>
+  {% endif %}
     
-    <!-- ==========================================
-         GENRE / PRIMARY PLAYLIST GROUPS (Existing)
-         Excluding playlists already in playlist_data
-    =========================================== -->
     {% assign playlist_names = playlist_data | map: "title" %}
-   
     {% for list in playlists %}
       {% unless playlist_names contains list %}
         {% assign songs_in_list = all_songs | where: "primary_playlist", list %}
@@ -140,44 +96,58 @@ title: Music – Horizon Sound
         {% if playlist_sorted.size > 0 %}
         <section class="playlist-section">
           <h2 class="section-header">{{ list }}</h2>
-  
           <div class="tile-grid">
             {% for song in playlist_sorted %}
-              <a class="tile" href="{{ song.url | append: '/' | replace: '//', '/' }}">
-                <img src="{{ song.image }}" alt="{{ song.title }}">
-                <h3 class="tile-title">{{ song.title }}</h3>
-              </a>
+              {% if song.videostatus == "Public" %}
+                <a class="tile" href="{{ site.baseurl }}{{ song.url }}">
+                  <img src="{{ site.baseurl }}{{ song.image }}" alt="{{ song.title }}">
+                  <h3 class="tile-title">{{ song.title }}</h3>
+                </a>
+              {% endif %}
+            {% endfor %}
+          
+            {% for song in playlist_sorted %}
+              {% unless song.videostatus == "Public" %}
+                <div class="tile coming-soon">
+                  <img src="{{ site.baseurl }}{{ song.image }}" alt="{{ song.title }}">
+                  <div class="tile-overlay">Coming Soon</div>
+                  <h3 class="tile-title">{{ song.title }}</h3>
+                </div>
+              {% endunless %}
             {% endfor %}
           </div>
         </section>
         {% endif %}
       {% endunless %}
     {% endfor %}
-  
   </section>
-
-  <!-- ------------------------------------------------
-       VIEW 2: ALL SONGS (FLAT TILE GRID)
-  ------------------------------------------------- -->
   <section id="music-view-all" style="display:none;">
     <section class="playlist-section">
       <h2 class="section-header">All Songs</h2>
-
+      
       {% assign all_sorted = all_songs | sort: "title" %}
       <div class="tile-grid">
         {% for song in all_sorted %}
-          <a class="tile" href="{{ song.url | append: '/' | replace: '//', '/' }}">
-            <img src="{{ song.image }}" alt="{{ song.title }}">
-            <h3 class="tile-title">{{ song.title }}</h3>
-          </a>
+          {% if song.videostatus == "Public" %}
+            <a class="tile" href="{{ site.baseurl }}{{ song.url }}">
+              <img src="{{ site.baseurl }}{{ song.image }}" alt="{{ song.title }}">
+              <h3 class="tile-title">{{ song.title }}</h3>
+            </a>
+          {% endif %}
+        {% endfor %}
+        {% for song in all_sorted %}
+          {% unless song.videostatus == "Public" %}
+            <div class="tile coming-soon">
+              <img src="{{ site.baseurl }}{{ song.image }}" alt="{{ song.title }}">
+              <div class="tile-overlay">Coming Soon</div>
+              <h3 class="tile-title">{{ song.title }}</h3>
+            </div>
+          {% endunless %}
         {% endfor %}
       </div>
     </section>
   </section>
 
-  <!-- ------------------------------------------------
-       VIEW 3: CAROUSEL ROWS BY PLAYLIST
-  ------------------------------------------------- -->
   <section id="music-view-carousel" style="display:none;">
     {% for list in playlists %}
       {% assign songs_in_list = all_songs | where: "primary_playlist", list %}
@@ -201,11 +171,8 @@ title: Music – Horizon Sound
     {% endfor %}
   </section>
 
-</div> <!-- end .music-page -->
+</div>
 
-<!-- --------------------------------------------------
-     SCRIPT: VIEW TOGGLE + CAROUSEL ROWS
--------------------------------------------------- -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -217,9 +184,33 @@ document.addEventListener("DOMContentLoaded", function () {
     carousel: document.getElementById("music-view-carousel"),
   };
 
+  // ⭐ Restore saved view mode
+  const savedView = localStorage.getItem("musicViewMode");
+  if (savedView && views[savedView]) {
+
+    // Set active button
+    buttons.forEach(b => {
+      b.classList.toggle("active", b.getAttribute("data-view") === savedView);
+    });
+
+    // Show correct view
+    Object.keys(views).forEach(key => {
+      views[key].style.display = (key === savedView) ? "" : "none";
+    });
+
+    // Refresh carousels if needed
+    if (savedView === "carousel") {
+      const carousels = document.querySelectorAll("[data-carousel]");
+      carousels.forEach(c => c.dispatchEvent(new Event("carousel:refresh")));
+    }
+  }
+
+  // ⭐ Save view on click
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const view = btn.getAttribute("data-view");
+
+      localStorage.setItem("musicViewMode", view);
 
       buttons.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
@@ -228,7 +219,6 @@ document.addEventListener("DOMContentLoaded", function () {
         views[key].style.display = (key === view) ? "" : "none";
       });
 
-      // 🔹 When switching to carousel view, refresh all carousels
       if (view === "carousel") {
         const carousels = document.querySelectorAll("[data-carousel]");
         carousels.forEach(c => {
@@ -273,7 +263,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     strip.addEventListener("scroll", updateArrows);
 
-    // optional: keep this if you like, but it's no longer critical
     const images = strip.querySelectorAll("img");
     let loaded = 0;
 
@@ -293,8 +282,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
-    // 🔹 NEW: allow external refresh when view becomes visible
     carousel.addEventListener("carousel:refresh", updateArrows);
   });
-}); 
+});
 </script>

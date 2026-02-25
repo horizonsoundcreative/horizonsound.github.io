@@ -1,4 +1,5 @@
 debug: false
+detailed-debug: false
 collections:
   songs:
     output: true

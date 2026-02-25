@@ -1,21 +1,4 @@
 ---
 layout: song
 song_id: instrumental-the-moment-you-breathe
-hero_image: "/assets/hero.jpg"
-
-about: |
-  Official audio for “The Moment You Breathe” by Horizon Sound.
-
-  “The Moment You Breathe” is a calm, cinematic instrumental built around soft ambient textures, gentle movement, and a quiet emotional lift. Warm pads, drifting light, and subtle rhythmic pulses create a sense of stillness — the kind of moment where the world slows down just long enough for you to feel present again. It’s reflective, peaceful, and deeply atmospheric, capturing the quiet inhale before life begins to move once more.
-  
-  🎧 Vibe: calm, reflective, cinematic
-  🎼 Style: ambient instrumental, atmospheric, modern score
-  🎛️ Production: soft pads, airy textures, subtle motion, warm tonal palette
-  ✨ Mood: peaceful, introspective, luminous, grounding
-    
 ---
-<!-- ABOUT SECTION -->
-{% include about.html %}
-
-<!-- LYRICS SECTION -->
-{% include lyrics.html %}

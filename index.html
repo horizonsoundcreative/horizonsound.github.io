@@ -1,1 +1,40 @@
+---
+layout: default
+title: Horizon Sound
+---
+
+<div class="homepage-wrapper">
+
+  {% include homepage-teaser.html %}
+
+  <!-- New Releases -->
+  {% assign new_releases_public = site.data.homepage.new_releases %}
+  <section class="homepage-section">
+    <h2 class="section-header">New Releases...</h2>
+    {% include homepage-tiles.html 
+         title="" 
+         items=new_releases_public 
+         section="new_releases" %}
+  </section>
+
+  <!-- Spotlight -->
+  {% assign spotlight_public = site.data.homepage.spotlight %}
+  <section class="homepage-section">
+    <h2 class="section-header">Spotlight Music</h2>
+    {% include homepage-tiles.html 
+         title="" 
+         items=spotlight_public 
+         section="spotlight" %}
+  </section>
+
+  <!-- Collections -->
+  <section class="homepage-section homepage-collections">
+    <h2 class="section-header">Collections</h2>
+    {% include homepage-tiles.html 
+         title="" 
+         items=site.data.homepage.collections 
+         section="collections" %}
+  </section>
+
+</div>
 

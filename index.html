@@ -3,6 +3,21 @@ layout: default
 title: Horizon Sound
 ---
 
+<style>
+  /* DEBUG: force tiles to turn bright green */
+  .tile {
+    background: #00ff00 !important;
+    border: 5px solid #ff00ff !important;
+  }
+</style>
+
+<script>
+  console.log("HOMEPAGE-TILES: include loaded. section='{{ include.section }}'");
+</script>
+<div style="background:red; color:white; padding:20px; font-size:24px;">
+  DEBUG MODE ACTIVE — HOMEPAGE-TILES.HTML LOADED
+</div>
+
 <div class="homepage-wrapper">
 
   {% include homepage-teaser.html %}

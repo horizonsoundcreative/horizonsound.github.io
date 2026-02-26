@@ -11,7 +11,17 @@
       {% assign s = site.data.music.songs | where: "song_id", item.id | first %}
       {% if s and s.videostatus == "Public" %}
 
-        {% assign thumb = site.baseurl | append: "/assets/thumbnails/" | append: s.slug | append: ".jpeg" %}
+        {%- comment -%}
+          Normalize thumbnail path:
+          - If s.image already contains "/", use it as-is
+          - Otherwise prepend /<baseurl>/assets/thumbnails/
+        {%- endcomment -%}
+        {% assign raw = s.image %}
+        {% if raw contains "/" %}
+          {% assign thumb = raw %}
+        {% else %}
+          {% assign thumb = site.baseurl | append: "/assets/thumbnails/" | append: raw %}
+        {% endif %}
 
         {% assign resolved = resolved | push:
           item | merge:
@@ -46,7 +56,12 @@
       {% assign s = site.data.music.songs | where: "song_id", item.id | first %}
       {% if s and s.videostatus == "Public" %}
 
-        {% assign thumb = site.baseurl | append: "/assets/thumbnails/" | append: s.slug | append: ".jpeg" %}
+        {% assign raw = s.image %}
+        {% if raw contains "/" %}
+          {% assign thumb = raw %}
+        {% else %}
+          {% assign thumb = site.baseurl | append: "/assets/thumbnails/" | append: raw %}
+        {% endif %}
 
         {% assign resolved = resolved | push:
           item | merge:
@@ -102,6 +117,10 @@
           {% endif %}
         {% endfor %}
 
+        {%- comment -%}
+          Playlist thumbnail always follows:
+          /<baseurl>/assets/thumbnails/playlist-<id>.jpeg
+        {%- endcomment -%}
         {% assign playlist_thumb = site.baseurl | append: "/assets/thumbnails/playlist-" | append: pl.playlist_id | append: ".jpeg" %}
 
         {% assign pl = pl | merge:
@@ -145,3 +164,4 @@
   {% endif %}
 
 </section>
+

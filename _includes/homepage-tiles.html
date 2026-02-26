@@ -1,38 +1,88 @@
 <section class="homepage-section">
 
+  {% assign first_item = include.items[0] %}
+
   {%- comment -%}
-    Build a sortable list of resolved items (songs or playlists)
+    MODE 1 — NEW RELEASES (songs, date only)
+    Triggered when section is "new_releases"
   {%- endcomment -%}
+  {% if include.section == "new_releases" %}
+    {% assign resolved = "" | split: "" %}
 
-  {% assign resolved = "" | split: "" %}
-
-  {% for item in include.items %}
-
-    {% if item.type == "song" %}
+    {% for item in include.items %}
       {% assign s = site.data.music.songs | where: "song_id", item.id | first %}
-
-      {% if s %}
-        {% assign sort_date = s.published_at %}
-        {% assign is_public = s.videostatus == "Public" %}
-        {% assign is_scheduled = s.videostatus == "Scheduled" %}
-
-        {% assign resolved = resolved | push: 
-          item | merge: 
-            type: "song",
+      {% if s and s.videostatus == "Public" %}
+        {% assign resolved = resolved | push:
+          item | merge:
             title: s.title,
             image: s.image,
             url: s.url,
-            videostatus: s.videostatus,
-            sort_date: sort_date,
-            is_public: is_public,
-            is_scheduled: is_scheduled
+            published_at: s.published_at
         %}
       {% endif %}
+    {% endfor %}
 
-    {% elsif item.type == "playlist" %}
-      {% assign pl = site.data.playlists | where: "playlist_id", item.id | first %}
+    {% assign sorted = resolved | sort: "published_at" | reverse %}
 
-      {% if pl %}
+    <div class="tile-grid">
+      {% for item in sorted %}
+        <a class="tile" href="{{ site.baseurl }}{{ item.url }}">
+          <img src="{{ site.baseurl }}{{ item.image }}" alt="{{ item.title }}">
+          <h3 class="tile-title">{{ item.title }}</h3>
+        </a>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+
+
+  {%- comment -%}
+    MODE 2 — SPOTLIGHT (songs, view count only)
+    Triggered when section is "spotlight"
+  {%- endcomment -%}
+  {% if include.section == "spotlight" %}
+    {% assign resolved = "" | split: "" %}
+
+    {% for item in include.items %}
+      {% assign s = site.data.music.songs | where: "song_id", item.id | first %}
+      {% if s and s.videostatus == "Public" %}
+        {% assign resolved = resolved | push:
+          item | merge:
+            title: s.title,
+            image: s.image,
+            url: s.url,
+            view_count: s.metadata.statistics.view_count
+        %}
+      {% endif %}
+    {% endfor %}
+
+    {% assign sorted = resolved | sort: "view_count" | reverse %}
+
+    <div class="tile-grid">
+      {% for item in sorted %}
+        <a class="tile" href="{{ site.baseurl }}{{ item.url }}">
+          <img src="{{ site.baseurl }}{{ item.image }}" alt="{{ item.title }}">
+          <h3 class="tile-title">{{ item.title }}</h3>
+        </a>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+
+
+  {%- comment -%}
+    MODE 3 — COLLECTIONS (playlists, always show all)
+    Active: newest_public_date → oldest
+    Inactive: soonest_scheduled_date → latest
+  {%- endcomment -%}
+  {% if first_item.type == "playlist" %}
+    {% assign active_playlists = "" | split: "" %}
+    {% assign inactive_playlists = "" | split: "" %}
+
+    {% for pl in site.data.playlists %}
+      {% assign tile = include.items | where: "id", pl.playlist_id | first %}
+      {% if tile %}
+
         {% assign has_public = false %}
         {% assign newest_public_date = nil %}
         {% assign soonest_scheduled_date = nil %}
@@ -53,77 +103,45 @@
           {% endif %}
         {% endfor %}
 
-        {% if has_public %}
-          {% assign sort_date = newest_public_date %}
-        {% else %}
-          {% assign sort_date = soonest_scheduled_date %}
-        {% endif %}
-
         {% assign playlist_image = site.baseurl | append: "/assets/thumbnails/playlist-" | append: pl.playlist_id | append: ".jpeg" %}
 
-        {% assign resolved = resolved | push:
-          item | merge:
-            type: "playlist",
-            title: pl.title,
-            playlist_id: pl.playlist_id,
-            image: playlist_image,
-            has_public: has_public,
-            sort_date: sort_date
+        {% assign pl = pl | merge:
+          has_public: has_public,
+          newest_public_date: newest_public_date,
+          soonest_scheduled_date: soonest_scheduled_date,
+          image: playlist_image
         %}
-      {% endif %}
-    {% endif %}
 
-  {% endfor %}
-
-  {%- comment -%}
-    Sort all items by sort_date DESC for public,
-    ASC for scheduled (handled by logic below)
-  {%- endcomment -%}
-
-  {% assign public_items = resolved | where: "has_public", true %}
-  {% assign scheduled_items = resolved | where: "has_public", false %}
-
-  {% assign public_items = public_items | sort: "sort_date" | reverse %}
-  {% assign scheduled_items = scheduled_items | sort: "sort_date" %}
-
-  {% assign sorted = public_items | concat: scheduled_items %}
-
-  <div class="tile-grid">
-
-    {% for item in sorted %}
-
-      {% if item.type == "song" %}
-        {% if item.videostatus == "Scheduled" %}
-          <div class="tile coming-soon">
-            <img src="{{ site.baseurl }}{{ item.image }}" alt="{{ item.title }}">
-            <div class="tile-overlay">Coming Soon</div>
-            <h3 class="tile-title">{{ item.title }}</h3>
-          </div>
+        {% if has_public %}
+          {% assign active_playlists = active_playlists | push: pl %}
         {% else %}
-          <a class="tile" href="{{ site.baseurl }}{{ item.url }}">
-            <img src="{{ site.baseurl }}{{ item.image }}" alt="{{ item.title }}">
-            <h3 class="tile-title">{{ item.title }}</h3>
-          </a>
+          {% assign inactive_playlists = inactive_playlists | push: pl %}
         {% endif %}
-      {% endif %}
 
-      {% if item.type == "playlist" %}
-        {% if item.has_public %}
-          <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ item.playlist_id }}/">
-            <img src="{{ item.image }}" alt="{{ item.title }}">
-            <h3 class="tile-title">{{ item.title }}</h3>
-          </a>
-        {% else %}
-          <div class="tile coming-soon">
-            <img src="{{ item.image }}" alt="{{ item.title }}">
-            <div class="tile-overlay">Coming Soon</div>
-            <h3 class="tile-title">{{ item.title }}</h3>
-          </div>
-        {% endif %}
       {% endif %}
-
     {% endfor %}
 
-  </div>
+    {% assign active_playlists = active_playlists | sort: "newest_public_date" | reverse %}
+    {% assign inactive_playlists = inactive_playlists | sort: "soonest_scheduled_date" %}
+
+    <div class="tile-grid">
+
+      {% for pl in active_playlists %}
+        <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/">
+          <img src="{{ pl.image }}" alt="{{ pl.title }}">
+          <h3 class="tile-title">{{ pl.title }}</h3>
+        </a>
+      {% endfor %}
+
+      {% for pl in inactive_playlists %}
+        <div class="tile coming-soon">
+          <img src="{{ pl.image }}" alt="{{ pl.title }}">
+          <div class="tile-overlay">Coming Soon</div>
+          <h3 class="tile-title">{{ pl.title }}</h3>
+        </div>
+      {% endfor %}
+
+    </div>
+  {% endif %}
 
 </section>

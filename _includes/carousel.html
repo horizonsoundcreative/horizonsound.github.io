@@ -68,7 +68,7 @@ ITEMS (titles + URLs):
     {% for song1 in items %}
       {% if song1.videostatus == "Public" %}
         <a class="carousel-tile" data-song="{{ song1.song_id }}" href="{{ site.baseurl }}{{ song1.url }}">
-          <img src="{{ site.baseurl }}{{ song1.image }}" alt="{{ song1.title }}">
+          <img src="{{ site.baseurl }}{{ song1.thumbnail }}" alt="{{ song1.title }}">
           <h3 class="tile-title">{{ song1.title }}</h3>
         </a>
       {% endif %}
@@ -77,7 +77,7 @@ ITEMS (titles + URLs):
     {% for song1 in items %}
       {% unless song1.videostatus == "Public" %}
         <div class="carousel-tile coming-soon" data-song="{{ song1.song_id }}">
-          <img src="{{ site.baseurl }}{{ song1.image }}" alt="{{ song1.title }}">
+          <img src="{{ site.baseurl }}{{ song1.thumbnail }}" alt="{{ song1.title }}">
           <div class="tile-overlay">Coming Soon</div>
           <h3 class="tile-title">{{ song1.title }}</h3>
         </div>

@@ -13,7 +13,19 @@
     {% assign resolved = "" | split: "" %}
 
     {% for item in include.items %}
-      {% assign s = site.data.music.songs | where: "song_id", item.id | first %}
+
+  <script>
+    console.log("TILES: item BEFORE merge =", {{ item | jsonify }});
+  </script>
+
+  
+    {% assign s = site.data.music.songs | where: "song_id", item.id | first %}
+
+  <script>
+    console.log("TILES: matched song =", {{ s | jsonify }});
+  </script>
+
+  
       {% if s and s.videostatus == "Public" %}
         {% assign resolved = resolved | push:
           item | merge:
@@ -22,6 +34,12 @@
             url: s.url,
             published_at: s.published_at
         %}
+
+  <script>
+    console.log("TILES: item AFTER merge =", {{ resolved | last | jsonify }});
+  </script>
+
+  
       {% endif %}
     {% endfor %}
 
@@ -30,7 +48,12 @@
     <div class="tile-grid">
       {% for item in sorted %}
         <a class="tile" href="{{ site.baseurl }}{{ item.url }}">
-          <img src="{{ site.baseurl }}{{ item.image }}" alt="{{ item.title }}">
+<img 
+  src="{{ site.baseurl }}{{ item.image }}" 
+  alt="{{ item.title }}"
+  onerror="console.log('IMG ERROR:', this.src)"
+  onload="console.log('IMG OK:', this.src)"
+>
           <h3 class="tile-title">{{ item.title }}</h3>
         </a>
       {% endfor %}

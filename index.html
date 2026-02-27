@@ -4,6 +4,10 @@ title: Horizon Sound
 ---
 
 <div class="homepage-wrapper">
+<!-- DEBUG: homepage new_releases_public -->
+<script>
+  console.log("INDEX: new_releases_public =", {{ new_releases_public | jsonify }});
+</script>
 
   {% include homepage-teaser.html %}
 
@@ -16,6 +20,9 @@ title: Horizon Sound
          items=new_releases_public 
          section="new_releases" %}
   </section>
+<script>
+  console.log("INDEX: spotlight_public =", {{ spotlight_public | jsonify }});
+</script>
 
   <!-- Spotlight -->
   {% assign spotlight_public = site.data.homepage.spotlight %}
@@ -26,6 +33,9 @@ title: Horizon Sound
          items=spotlight_public 
          section="spotlight" %}
   </section>
+<script>
+  console.log("INDEX: collections =", {{ site.data.homepage.collections | jsonify }});
+</script>
 
   <!-- Collections -->
   <section class="homepage-section homepage-collections">

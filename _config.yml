@@ -1,5 +1,11 @@
 debug: false
 detailed-debug: false
+
+# Prevent Jekyll (and GitHub Pages) from processing the sync folder
+exclude:
+  - youtube-sync/
+  - node_modules/
+
 collections:
   songs:
     output: true

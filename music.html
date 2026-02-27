@@ -60,7 +60,7 @@ title: Music – Horizon Sound
     {%- endcomment -%}
     {% for tile in active_playlists %}
       <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ tile.playlist_id }}/">
-        <img src="{{ site.baseurl }}{{ tile.image }}" alt="{{ tile.title }}">
+        <img src="{{ site.baseurl }}{{ tile.thumbnail }}" alt="{{ tile.title }}">
         <h3 class="tile-title">{{ tile.title }}</h3>
       </a>
     {% endfor %}
@@ -70,7 +70,7 @@ title: Music – Horizon Sound
     {%- endcomment -%}
     {% for tile in coming_soon_playlists %}
       <div class="tile coming-soon">
-        <img src="{{ site.baseurl }}{{ tile.image }}" alt="{{ tile.title }}">
+        <img src="{{ site.baseurl }}{{ tile.thumbnail }}" alt="{{ tile.title }}">
         <div class="tile-overlay">Coming Soon</div>
         <h3 class="tile-title">{{ tile.title }}</h3>
       </div>
@@ -100,7 +100,7 @@ title: Music – Horizon Sound
             {% for song in playlist_sorted %}
               {% if song.videostatus == "Public" %}
                 <a class="tile" href="{{ site.baseurl }}{{ song.url }}">
-                  <img src="{{ site.baseurl }}{{ song.image }}" alt="{{ song.title }}">
+                  <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ song.title }}">
                   <h3 class="tile-title">{{ song.title }}</h3>
                 </a>
               {% endif %}
@@ -109,7 +109,7 @@ title: Music – Horizon Sound
             {% for song in playlist_sorted %}
               {% unless song.videostatus == "Public" %}
                 <div class="tile coming-soon">
-                  <img src="{{ site.baseurl }}{{ song.image }}" alt="{{ song.title }}">
+                  <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ song.title }}">
                   <div class="tile-overlay">Coming Soon</div>
                   <h3 class="tile-title">{{ song.title }}</h3>
                 </div>
@@ -130,7 +130,7 @@ title: Music – Horizon Sound
         {% for song in all_sorted %}
           {% if song.videostatus == "Public" %}
             <a class="tile" href="{{ site.baseurl }}{{ song.url }}">
-              <img src="{{ site.baseurl }}{{ song.image }}" alt="{{ song.title }}">
+              <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ song.title }}">
               <h3 class="tile-title">{{ song.title }}</h3>
             </a>
           {% endif %}
@@ -138,7 +138,7 @@ title: Music – Horizon Sound
         {% for song in all_sorted %}
           {% unless song.videostatus == "Public" %}
             <div class="tile coming-soon">
-              <img src="{{ site.baseurl }}{{ song.image }}" alt="{{ song.title }}">
+              <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ song.title }}">
               <div class="tile-overlay">Coming Soon</div>
               <h3 class="tile-title">{{ song.title }}</h3>
             </div>

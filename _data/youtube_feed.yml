@@ -48,7 +48,7 @@ songs:
       content_rating: ""
       statistics:
         view_count: "37"
-        like_count: "1"
+        like_count: "2"
         favorite_count: "0"
         comment_count: "0"
       made_for_kids: false
@@ -76,7 +76,7 @@ songs:
       region_blocked: []
       content_rating: ""
       statistics:
-        view_count: "39"
+        view_count: "38"
         like_count: "1"
         favorite_count: "0"
         comment_count: "0"
@@ -185,7 +185,7 @@ songs:
       region_blocked: []
       content_rating: ""
       statistics:
-        view_count: "151"
+        view_count: "154"
         like_count: "5"
         favorite_count: "0"
         comment_count: "0"
@@ -243,7 +243,7 @@ songs:
       region_blocked: []
       content_rating: ""
       statistics:
-        view_count: "64"
+        view_count: "63"
         like_count: "1"
         favorite_count: "0"
         comment_count: "0"
@@ -355,7 +355,7 @@ songs:
       region_blocked: []
       content_rating: ""
       statistics:
-        view_count: "174"
+        view_count: "175"
         like_count: "4"
         favorite_count: "0"
         comment_count: "3"
@@ -383,7 +383,7 @@ songs:
       region_blocked: []
       content_rating: ""
       statistics:
-        view_count: "66"
+        view_count: "67"
         like_count: "4"
         favorite_count: "0"
         comment_count: "0"
@@ -438,7 +438,7 @@ songs:
       region_blocked: []
       content_rating: ""
       statistics:
-        view_count: "47"
+        view_count: "48"
         like_count: "2"
         favorite_count: "0"
         comment_count: "1"

@@ -3,7 +3,7 @@ name: YouTube Sync
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 * * * *"   # every hour
+    - cron: "0 * * * *"
 
 permissions:
   contents: write
@@ -22,9 +22,7 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: |
-          cd youtube-sync
-          npm install
+        run: npm install --prefix youtube-sync
 
       - name: Run YouTube sync generator
         env:
@@ -32,16 +30,14 @@ jobs:
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
           GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
           REDIRECT_URI: ${{ secrets.REDIRECT_URI }}
-        run: |
-          cd youtube-sync
-          node generate-youtube-feed.js
+        run: node youtube-sync/generate-youtube-feed.js
 
       - name: Commit and push changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add _data/youtube_feed.yml || true
-          git add _songs/
-          git add assets/thumbnails/
+          git add _songs/ || true
+          git add assets/thumbnails/ || true
           git commit -m "Automated YouTube sync" || echo "No changes to commit"
           git push || echo "No changes to push"

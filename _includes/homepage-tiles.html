@@ -1,7 +1,9 @@
 <section class="homepage-section">
 
+  {% assign first_item = include.items[0] %}
+
   {%- comment -%}
-    MODE 1 — NEW RELEASES (songs sorted by published_at DESC)
+    MODE 1 — NEW RELEASES (songs, date only)
   {%- endcomment -%}
   {% if include.section == "new_releases" %}
 
@@ -10,23 +12,10 @@
     {% for item in include.items %}
       {% assign s = site.data.music.songs | where: "song_id", item.id | first %}
       {% if s and s.videostatus == "Public" %}
-
-        {%- comment -%}
-          Normalize thumbnail path:
-          - If s.image already contains "/", use it as-is
-          - Otherwise prepend /<baseurl>/assets/thumbnails/
-        {%- endcomment -%}
-        {% assign raw = s.image %}
-        {% if raw contains "/" %}
-          {% assign thumb = raw %}
-        {% else %}
-          {% assign thumb = site.baseurl | append: "/assets/thumbnails/" | append: raw %}
-        {% endif %}
-
         {% assign resolved = resolved | push:
           item | merge:
             title: s.title,
-            image: thumb,
+            image: s.image,
             url: s.url,
             published_at: s.published_at
         %}
@@ -38,35 +27,26 @@
     <div class="tile-grid">
       {% for item in sorted %}
         <a class="tile" href="{{ site.baseurl }}{{ item.url }}">
-          <img src="{{ item.image }}" alt="{{ item.title }}">
+          <img src="{{ site.baseurl }}{{ item.image }}" alt="{{ item.title }}">
           <h3 class="tile-title">{{ item.title }}</h3>
         </a>
       {% endfor %}
     </div>
 
-  {% elsif include.section == "spotlight" %}
-
   {%- comment -%}
-    MODE 2 — SPOTLIGHT (songs sorted by view_count DESC)
+    MODE 2 — SPOTLIGHT (songs, view count only)
   {%- endcomment -%}
+  {% elsif include.section == "spotlight" %}
 
     {% assign resolved = "" | split: "" %}
 
     {% for item in include.items %}
       {% assign s = site.data.music.songs | where: "song_id", item.id | first %}
       {% if s and s.videostatus == "Public" %}
-
-        {% assign raw = s.image %}
-        {% if raw contains "/" %}
-          {% assign thumb = raw %}
-        {% else %}
-          {% assign thumb = site.baseurl | append: "/assets/thumbnails/" | append: raw %}
-        {% endif %}
-
         {% assign resolved = resolved | push:
           item | merge:
             title: s.title,
-            image: thumb,
+            image: s.image,
             url: s.url,
             view_count: s.metadata.statistics.view_count
         %}
@@ -78,17 +58,16 @@
     <div class="tile-grid">
       {% for item in sorted %}
         <a class="tile" href="{{ site.baseurl }}{{ item.url }}">
-          <img src="{{ item.image }}" alt="{{ item.title }}">
+          <img src="{{ site.baseurl }}{{ item.image }}" alt="{{ item.title }}">
           <h3 class="tile-title">{{ item.title }}</h3>
         </a>
       {% endfor %}
     </div>
 
-  {% elsif include.section == "collections" %}
-
   {%- comment -%}
     MODE 3 — COLLECTIONS (playlists)
   {%- endcomment -%}
+  {% elsif include.section == "collections" %}
 
     {% assign active_playlists = "" | split: "" %}
     {% assign inactive_playlists = "" | split: "" %}
@@ -117,17 +96,13 @@
           {% endif %}
         {% endfor %}
 
-        {%- comment -%}
-          Playlist thumbnail always follows:
-          /<baseurl>/assets/thumbnails/playlist-<id>.jpeg
-        {%- endcomment -%}
-        {% assign playlist_thumb = site.baseurl | append: "/assets/thumbnails/playlist-" | append: pl.playlist_id | append: ".jpeg" %}
+        {% assign playlist_image = site.baseurl | append: "/assets/thumbnails/playlist-" | append: pl.playlist_id | append: ".jpeg" %}
 
         {% assign pl = pl | merge:
           has_public: has_public,
           newest_public_date: newest_public_date,
           soonest_scheduled_date: soonest_scheduled_date,
-          image: playlist_thumb
+          image: playlist_image
         %}
 
         {% if has_public %}
@@ -161,7 +136,47 @@
 
     </div>
 
+  {%- comment -%}
+    MODE 4 — UNIFIED FALLBACK (future sections)
+  {%- endcomment -%}
+  {% else %}
+
+    {% assign resolved = "" | split: "" %}
+
+    {% for item in include.items %}
+      {% if item.type == "song" %}
+        {% assign s = site.data.music.songs | where: "song_id", item.id | first %}
+        {% if s %}
+          {% assign resolved = resolved | push:
+            item | merge:
+              title: s.title,
+              image: s.image,
+              url: s.url,
+              sort_date: s.published_at
+          %}
+        {% endif %}
+      {% elsif item.type == "playlist" %}
+        {% assign pl = site.data.playlists | where: "playlist_id", item.id | first %}
+        {% if pl %}
+          {% assign resolved = resolved | push:
+            item | merge:
+              title: pl.title,
+              playlist_id: pl.playlist_id
+          %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {% assign sorted = resolved | sort: "sort_date" | reverse %}
+
+    <div class="tile-grid">
+      {% for item in sorted %}
+        <div class="tile">
+          <h3 class="tile-title">{{ item.title }}</h3>
+        </div>
+      {% endfor %}
+    </div>
+
   {% endif %}
 
 </section>
-

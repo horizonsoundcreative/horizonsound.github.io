@@ -2,32 +2,27 @@
 
   <div class="tile-grid">
 
-    {% for item in include.items %}
+    {% if include.section == "new_releases" %}
 
-      {% if item.type == "song" %}
+      {%- comment -%}
+        Build a simple array of song objects with published_at for sorting
+      {%- endcomment -%}
+
+      {% assign items_sorted = "" | split: "" %}
+
+      {% for item in include.items %}
         {% assign s = site.data.music.songs | where: "song_id", item.id | first %}
-
         {% if s %}
-          <a class="tile" href="{{ site.baseurl }}{{ s.url }}">
-            <img src="{{ site.baseurl }}{{ s.image }}" alt="{{ s.title }}">
-            <h3 class="tile-title">{{ s.title }}</h3>
-          </a>
+          {% assign items_sorted = items_sorted | push: s %}
         {% endif %}
+      {% endfor %}
 
-      {% elsif item.type == "playlist" %}
-        {% assign pl = site.data.playlists | where: "playlist_id", item.id | first %}
+      {%- comment -%}
+        Sort by published_at (newest first)
+      {%- endcomment -%}
+      {% assign items_sorted = items_sorted | sort: "metadata.published_at" | reverse %}
 
-        {% if pl %}
-          <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/">
-            <img src="{{ site.baseurl }}/assets/thumbnails/playlist-{{ pl.playlist_id }}.jpeg" alt="{{ pl.title }}">
-            <h3 class="tile-title">{{ pl.title }}</h3>
-          </a>
-        {% endif %}
-
-      {% endif %}
-
-    {% endfor %}
-
-  </div>
-
-</section>
+      {%- comment -%}
+        Render tiles
+      {%- endcomment -%}
+      {% for s in items_sorted %}

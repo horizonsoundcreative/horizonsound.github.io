@@ -26,8 +26,6 @@
         </a>
       {% endfor %}
 
-
-
     {% elsif include.section == "spotlight" %}
 
       {%- comment -%}
@@ -54,55 +52,74 @@
         </a>
       {% endfor %}
 
-
-
     {% elsif include.section == "collections" %}
-
-      {%- comment -%}
-        COLLECTIONS — active vs coming soon (no sorting)
-      {%- endcomment -%}
-
+    
+      {% assign active = "" | split: "" %}
+      {% assign coming_soon = "" | split: "" %}
+    
       {% for item in include.items %}
         {% assign pl = site.data.playlists | where: "playlist_id", item.id | first %}
         {% if pl %}
-
-          {%- comment -%}
-            Determine if playlist has any Public songs
-          {%- endcomment -%}
+    
           {% assign has_public = false %}
-          {% assign has_scheduled = false %}
-
+          {% assign newest_public_date = nil %}
+          {% assign soonest_scheduled_date = nil %}
+    
           {% for sid in pl.songs %}
             {% assign s = site.data.music.songs | where: "song_id", sid | first %}
             {% if s %}
               {% if s.videostatus == "Public" %}
                 {% assign has_public = true %}
+                {% if newest_public_date == nil or s.metadata.published_at > newest_public_date %}
+                  {% assign newest_public_date = s.metadata.published_at %}
+                {% endif %}
               {% elsif s.videostatus == "Scheduled" %}
-                {% assign has_scheduled = true %}
+                {% if soonest_scheduled_date == nil or s.metadata.published_at < soonest_scheduled_date %}
+                  {% assign soonest_scheduled_date = s.metadata.published_at %}
+                {% endif %}
               {% endif %}
             {% endif %}
           {% endfor %}
-
+    
           {% assign playlist_image = site.baseurl | append: "/assets/thumbnails/playlist-" | append: pl.playlist_id | append: ".jpeg" %}
-
+    
           {% if has_public %}
-            <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/">
-              <img src="{{ playlist_image }}" alt="{{ pl.title }}">
-              <h3 class="tile-title">{{ pl.title }}</h3>
-            </a>
-          {% elsif has_scheduled %}
-            <div class="tile coming-soon">
-              <img src="{{ playlist_image }}" alt="{{ pl.title }}">
-              <div class="tile-overlay">Coming Soon</div>
-              <h3 class="tile-title">{{ pl.title }}</h3>
-            </div>
+            {% assign merged = pl | merge: {"image": playlist_image, "sort_date": newest_public_date} %}
+            {% assign active = active | push: merged %}
+          {% elsif soonest_scheduled_date %}
+            {% assign merged = pl | merge: {"image": playlist_image, "sort_date": soonest_scheduled_date} %}
+            {% assign coming_soon = coming_soon | push: merged %}
           {% endif %}
-
+    
         {% endif %}
       {% endfor %}
-
+    
+      {# ACTIVE: newest → oldest #}
+      {% assign active = active | sort: "sort_date" | reverse %}
+    
+      {# COMING SOON: soonest → latest #}
+      {% assign coming_soon = coming_soon | sort: "sort_date" %}
+    
+      <div class="tile-grid">
+    
+        {# ACTIVE COLLECTIONS #}
+        {% for pl in active %}
+          <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/">
+            <img src="{{ pl.image }}" alt="{{ pl.title }}">
+            <h3 class="tile-title">{{ pl.title }}</h3>
+          </a>
+        {% endfor %}
+    
+        {# COMING SOON COLLECTIONS #}
+        {% for pl in coming_soon %}
+          <div class="tile coming-soon">
+            <img src="{{ pl.image }}" alt="{{ pl.title }}">
+            <div class="tile-overlay">Coming Soon</div>
+            <h3 class="tile-title">{{ pl.title }}</h3>
+          </div>
+        {% endfor %}
+    
+      </div>    
     {% endif %}
-
   </div>
-
 </section>

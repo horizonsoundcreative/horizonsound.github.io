@@ -26,10 +26,16 @@
         </a>
       {% endfor %}
 
+
+
     {% elsif include.section == "spotlight" %}
-      
+
+      {%- comment -%}
+        SPOTLIGHT — sort by numeric view count (highest first)
+      {%- endcomment -%}
+
       {% assign items_sorted = "" | split: "" %}
-    
+
       {% for item in include.items %}
         {% assign s = site.data.music.songs | where: "song_id", item.id | first %}
         {% if s %}
@@ -38,29 +44,60 @@
           {% assign items_sorted = items_sorted | push: merged %}
         {% endif %}
       {% endfor %}
-    
+
       {% assign items_sorted = items_sorted | sort: "view" %}
-    
+
       {% for s in items_sorted %}
         <a class="tile" href="{{ site.baseurl }}{{ s.url }}">
           <img src="{{ site.baseurl }}{{ s.image }}" alt="{{ s.title }}">
           <h3 class="tile-title">{{ s.title }}</h3>
         </a>
       {% endfor %}
-    
+
+
+
     {% elsif include.section == "collections" %}
 
       {%- comment -%}
-        COLLECTIONS — simple playlist tiles, no sorting
+        COLLECTIONS — active vs coming soon (no sorting)
       {%- endcomment -%}
 
       {% for item in include.items %}
         {% assign pl = site.data.playlists | where: "playlist_id", item.id | first %}
         {% if pl %}
-          <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/">
-            <img src="{{ site.baseurl }}/assets/thumbnails/playlist-{{ pl.playlist_id }}.jpeg" alt="{{ pl.title }}">
-            <h3 class="tile-title">{{ pl.title }}</h3>
-          </a>
+
+          {%- comment -%}
+            Determine if playlist has any Public songs
+          {%- endcomment -%}
+          {% assign has_public = false %}
+          {% assign has_scheduled = false %}
+
+          {% for sid in pl.songs %}
+            {% assign s = site.data.music.songs | where: "song_id", sid | first %}
+            {% if s %}
+              {% if s.videostatus == "Public" %}
+                {% assign has_public = true %}
+              {% elsif s.videostatus == "Scheduled" %}
+                {% assign has_scheduled = true %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+
+          {% assign playlist_image = site.baseurl | append: "/assets/thumbnails/playlist-" | append: pl.playlist_id | append: ".jpeg" %}
+
+          {% if has_public %}
+            <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/">
+              <img src="{{ playlist_image }}" alt="{{ pl.title }}">
+              <h3 class="tile-title">{{ pl.title }}</h3>
+            </a>
+          {% elsif has_scheduled %}
+            <div class="tile coming-soon">
+              <img src="{{ playlist_image }}" alt="{{ pl.title }}">
+              <div class="tile-overlay">Coming Soon</div>
+              <h3 class="tile-title">{{ pl.title }}</h3>
+            </div>
+          {% endif %}
+
         {% endif %}
       {% endfor %}
 

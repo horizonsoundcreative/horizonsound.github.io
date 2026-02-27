@@ -151,10 +151,18 @@ async function generateYouTubeFeed() {
       }
     });
 
-    const outputFile = path.join("_data", "youtube_feed.yml");
-    fs.writeFileSync(outputFile, yamlOutput, "utf8");
-
-    console.log("YouTube feed written to:", outputFile);
+   // -------------------------------------------------------
+   // WRITE FEED
+   // -------------------------------------------------------
+   const dataFolder = "_data";
+   if (!fs.existsSync(dataFolder)) {
+     fs.mkdirSync(dataFolder, { recursive: true });
+   }
+   
+   const outputFile = path.join("_data", "youtube_feed.yml");
+   fs.writeFileSync(outputFile, yamlOutput, "utf8");
+   
+   console.log("YouTube feed written to:", outputFile);
   } catch (err) {
     console.error("Error generating YouTube feed:", err);
   }

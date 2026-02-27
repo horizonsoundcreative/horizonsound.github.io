@@ -39,7 +39,6 @@
         {% endif %}
       {% endfor %}
     
-      {# Sort highest → lowest WITHOUT reverse #}
       {% assign items_sorted = items_sorted | sort: "view" %}
     
       {% for s in items_sorted %}

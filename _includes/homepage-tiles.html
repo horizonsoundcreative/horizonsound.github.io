@@ -14,36 +14,34 @@
 
     {% for item in include.items %}
 
-  <script>
-    console.log("TILES: item BEFORE merge =", {{ item | jsonify }});
-  </script>
+      <script>
+        console.log("TILES: item BEFORE merge =", {{ item | jsonify }});
+      </script>
 
-  
-    {% assign s = site.data.music.songs | where: "song_id", item.id | first %}
+      {% assign s = site.data.music.songs | where: "song_id", item.id | first %}
 
-  <script>
-    console.log("TILES: matched song =", {{ s | jsonify }});
-  </script>
+      <script>
+        console.log("TILES: matched song =", {{ s | jsonify }});
+      </script>
 
+      {% if s and s.videostatus == "Public" %}
 
-{% assign merged = "" | split: "" %}
-{% assign merged = merged | push: 
-  {
-    "type": item.type,
-    "id": item.id,
-    "title": s.title,
-    "image": s.image,
-    "url": s.url,
-    "published_at": s.published_at
-  }
-%}
-{% assign resolved = resolved | push: merged[0] %}
+        {%- comment -%}
+          Build merged object (Liquid 4.0 safe)
+        {%- endcomment -%}
 
-  <script>
-    console.log("TILES: item AFTER merge =", {{ resolved | last | jsonify }});
-  </script>
+        {% assign merged = item %}
+        {% assign merged = merged | merge: {"title": s.title} %}
+        {% assign merged = merged | merge: {"image": s.image} %}
+        {% assign merged = merged | merge: {"url": s.url} %}
+        {% assign merged = merged | merge: {"published_at": s.published_at} %}
 
-  
+        {% assign resolved = resolved | push: merged %}
+
+        <script>
+          console.log("TILES: item AFTER merge =", {{ merged | jsonify }});
+        </script>
+
       {% endif %}
     {% endfor %}
 
@@ -52,12 +50,12 @@
     <div class="tile-grid">
       {% for item in sorted %}
         <a class="tile" href="{{ site.baseurl }}{{ item.url }}">
-<img 
-  src="{{ site.baseurl }}{{ item.image }}" 
-  alt="{{ item.title }}"
-  onerror="console.log('IMG ERROR:', this.src)"
-  onload="console.log('IMG OK:', this.src)"
->
+          <img 
+            src="{{ site.baseurl }}{{ item.image }}" 
+            alt="{{ item.title }}"
+            onerror="console.log('IMG ERROR:', this.src)"
+            onload="console.log('IMG OK:', this.src)"
+          >
           <h3 class="tile-title">{{ item.title }}</h3>
         </a>
       {% endfor %}
@@ -74,13 +72,15 @@
     {% for item in include.items %}
       {% assign s = site.data.music.songs | where: "song_id", item.id | first %}
       {% if s and s.videostatus == "Public" %}
-        {% assign resolved = resolved | push:
-          item | merge:
-            title: s.title,
-            image: s.image,
-            url: s.url,
-            view_count: s.metadata.statistics.view_count
-        %}
+
+        {% assign merged = item %}
+        {% assign merged = merged | merge: {"title": s.title} %}
+        {% assign merged = merged | merge: {"image": s.image} %}
+        {% assign merged = merged | merge: {"url": s.url} %}
+        {% assign merged = merged | merge: {"view_count": s.metadata.statistics.view_count} %}
+
+        {% assign resolved = resolved | push: merged %}
+
       {% endif %}
     {% endfor %}
 
@@ -130,12 +130,10 @@
 
         {% assign playlist_image = site.baseurl | append: "/assets/thumbnails/playlist-" | append: pl.playlist_id | append: ".jpeg" %}
 
-        {% assign pl = pl | merge:
-          has_public: has_public,
-          newest_public_date: newest_public_date,
-          soonest_scheduled_date: soonest_scheduled_date,
-          image: playlist_image
-        %}
+        {% assign pl = pl | merge: {"has_public": has_public} %}
+        {% assign pl = pl | merge: {"newest_public_date": newest_public_date} %}
+        {% assign pl = pl | merge: {"soonest_scheduled_date": soonest_scheduled_date} %}
+        {% assign pl = pl | merge: {"image": playlist_image} %}
 
         {% if has_public %}
           {% assign active_playlists = active_playlists | push: pl %}
@@ -153,14 +151,14 @@
 
       {% for pl in active_playlists %}
         <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/">
-          <img src="{{ site.baseurl }}{{ pl.image }}" alt="{{ pl.title }}">
+          <img src="{{ pl.image }}" alt="{{ pl.title }}">
           <h3 class="tile-title">{{ pl.title }}</h3>
         </a>
       {% endfor %}
 
       {% for pl in inactive_playlists %}
         <div class="tile coming-soon">
-          <img src="{{ site.baseurl }}{{ pl.image }}" alt="{{ pl.title }}">
+          <img src="{{ pl.image }}" alt="{{ pl.title }}">
           <div class="tile-overlay">Coming Soon</div>
           <h3 class="tile-title">{{ pl.title }}</h3>
         </div>

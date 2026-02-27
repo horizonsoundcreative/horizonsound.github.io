@@ -25,7 +25,7 @@
     <div class="tile-grid">
       {% for item in sorted %}
         <a class="tile" href="{{ site.baseurl }}{{ item.url }}">
-          <img src="{{ site.baseurl }}/music/thumbnails/{{ item.image }}" alt="{{ item.title }}">
+          <img src="{{ site.baseurl }}/assets/thumbnails/{{ item.image }}" alt="{{ item.title }}">
           <h3 class="tile-title">{{ item.title }}</h3>
         </a>
       {% endfor %}
@@ -57,7 +57,7 @@
     <div class="tile-grid">
       {% for item in sorted %}
         <a class="tile" href="{{ site.baseurl }}{{ item.url }}">
-          <img src="{{ site.baseurl }}/music/thumbnails/{{ item.image }}" alt="{{ item.title }}">
+          <img src="{{ site.baseurl }}/assets/thumbnails/{{ item.image }}" alt="{{ item.title }}">
           <h3 class="tile-title">{{ item.title }}</h3>
         </a>
       {% endfor %}
@@ -121,14 +121,14 @@
 
       {% for pl in active_playlists %}
         <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/">
-          <img src="{{ site.baseurl }}/music/thumbnails/{{ pl.image }}" alt="{{ pl.title }}">
+          <img src="{{ site.baseurl }}/assets/thumbnails/{{ pl.image }}" alt="{{ pl.title }}">
           <h3 class="tile-title">{{ pl.title }}</h3>
         </a>
       {% endfor %}
 
       {% for pl in inactive_playlists %}
         <div class="tile coming-soon">
-          <img src="{{ site.baseurl }}/music/thumbnails/{{ pl.image }}" alt="{{ pl.title }}">
+          <img src="{{ site.baseurl }}/assets/thumbnails/{{ pl.image }}" alt="{{ pl.title }}">
           <div class="tile-overlay">Coming Soon</div>
           <h3 class="tile-title">{{ pl.title }}</h3>
         </div>

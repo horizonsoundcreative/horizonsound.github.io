@@ -11,41 +11,35 @@
   {% if include.section == "new_releases" %}
 
     {% assign resolved = "" | split: "" %}
-
     {% for item in include.items %}
-
+    
       <script>
         console.log("TILES: item BEFORE merge =", {{ item | jsonify }});
       </script>
-
+    
       {% assign s = site.data.music.songs | where: "song_id", item.id | first %}
-
+    
       <script>
         console.log("TILES: matched song =", {{ s | jsonify }});
-      </script>
-      <script>
         console.log("TILES: song keys =", Object.keys({{ s | jsonify }}));
       </script>
-
+    
       {% if s and s.videostatus == "Public" %}
-
-        {%- comment -%}
-          Build merged object (Liquid 4.0 safe)
-        {%- endcomment -%}
-
+    
         {% assign merged = item %}
         {% assign merged = merged | merge: {"title": s.title} %}
         {% assign merged = merged | merge: {"image": s.image} %}
         {% assign merged = merged | merge: {"url": s.url} %}
         {% assign merged = merged | merge: {"published_at": s.published_at} %}
-
+    
         {% assign resolved = resolved | push: merged %}
-
+    
         <script>
           console.log("TILES: item AFTER merge =", {{ merged | jsonify }});
         </script>
-
+    
       {% endif %}
+    
     {% endfor %}
 
     {% assign sorted = resolved | sort: "published_at" | reverse %}

@@ -7,15 +7,31 @@ title: Music – Horizon Sound
 {% assign overrides = site.data.playlist_overrides.overrides %}
 {% assign playlists = site.data.youtube_playlists %}
 
-{% assign playlists_with_order = "" | split: "" %}
+{%- comment -%}
+Build a list of playlist_ids sorted by override order.
+If a playlist has no override, give it a large default order (9999).
+{%- endcomment -%}
+
+{% assign playlist_order_pairs = "" | split: "" %}
+
 {% for pl in playlists %}
   {% assign ov = overrides | where: "slug", pl.playlist_id | first %}
   {% assign order_value = ov.order | default: 9999 %}
-  {% assign merged = pl | merge: {"order": order_value} %}
-  {% assign playlists_with_order = playlists_with_order | push: merged %}
+  {% assign pair = order_value | append: "|" | append: pl.playlist_id %}
+  {% assign playlist_order_pairs = playlist_order_pairs | push: pair %}
 {% endfor %}
 
-{% assign playlists_sorted = playlists_with_order | sort: "order" %}
+{% assign playlist_order_pairs = playlist_order_pairs | sort %}
+
+{%- comment -%}
+Now extract playlist_ids in sorted order.
+{%- endcomment -%}
+
+{% assign sorted_playlist_ids = "" | split: "" %}
+{% for pair in playlist_order_pairs %}
+  {% assign parts = pair | split: "|" %}
+  {% assign sorted_playlist_ids = sorted_playlist_ids | push: parts[1] %}
+{% endfor %}
 
 <div class="music-page">
   <div class="view-toggle">
@@ -29,9 +45,13 @@ title: Music – Horizon Sound
     <div class="view-toggle-spacer"></div>
   </div>
 
+<!-- ============================================================
+     GROUPED BY PLAYLIST
+============================================================ -->
 <section id="music-view-grouped">
 
-  {% for pl in playlists_sorted %}
+  {% for pid in sorted_playlist_ids %}
+    {% assign pl = playlists | where: "playlist_id", pid | first %}
     {% assign playlist_songs = site.data.youtube_feed.songs | where_exp: "item", "pl.video_ids contains item.id" %}
     {% assign playlist_songs = playlist_songs | default: empty %}
 
@@ -72,6 +92,9 @@ title: Music – Horizon Sound
 
 </section>
 
+<!-- ============================================================
+     ALL SONGS
+============================================================ -->
 <section id="music-view-all" style="display:none;">
   <section class="playlist-section">
     <h2 class="section-header">All Songs</h2>
@@ -106,9 +129,13 @@ title: Music – Horizon Sound
   </section>
 </section>
 
+<!-- ============================================================
+     CAROUSEL VIEW
+============================================================ -->
 <section id="music-view-carousel" style="display:none;">
 
-  {% for pl in playlists_sorted %}
+  {% for pid in sorted_playlist_ids %}
+    {% assign pl = playlists | where: "playlist_id", pid | first %}
     {% assign playlist_songs = site.data.youtube_feed.songs | where_exp: "item", "pl.video_ids contains item.id" %}
     {% assign playlist_songs = playlist_songs | default: empty %}
 

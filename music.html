@@ -29,6 +29,7 @@ title: Music – Horizon Sound
     {% assign playlist_songs = playlist_songs | default: empty %}
 
     {% if playlist_songs.size > 0 %}
+      {% assign playlist_songs = playlist_songs | default: empty %}
       {% assign playlist_sorted = playlist_songs | sort: "order" %}
 
       <section class="playlist-section">

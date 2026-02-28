@@ -3,36 +3,6 @@ layout: default
 title: Music – Horizon Sound
 ---
 
-{% assign all_songs = site.data.youtube_feed.songs %}
-{% assign overrides = site.data.playlist_overrides.overrides %}
-{% assign playlists = site.data.youtube_playlists %}
-
-{%- comment -%}
-Build a list of playlist_ids sorted by override order.
-If a playlist has no override, give it a large default order (9999).
-{%- endcomment -%}
-
-{% assign playlist_order_pairs = "" | split: "" %}
-
-{% for pl in playlists %}
-  {% assign ov = overrides | where: "slug", pl.playlist_id | first %}
-  {% assign order_value = ov.order | default: 9999 %}
-  {% assign pair = order_value | append: "|" | append: pl.playlist_id %}
-  {% assign playlist_order_pairs = playlist_order_pairs | push: pair %}
-{% endfor %}
-
-{% assign playlist_order_pairs = playlist_order_pairs | sort %}
-
-{%- comment -%}
-Now extract playlist_ids in sorted order.
-{%- endcomment -%}
-
-{% assign sorted_playlist_ids = "" | split: "" %}
-{% for pair in playlist_order_pairs %}
-  {% assign parts = pair | split: "|" %}
-  {% assign sorted_playlist_ids = sorted_playlist_ids | push: parts[1] %}
-{% endfor %}
-
 <div class="music-page">
   <div class="view-toggle">
     <div class="view-toggle-buttons">
@@ -45,114 +15,35 @@ Now extract playlist_ids in sorted order.
     <div class="view-toggle-spacer"></div>
   </div>
 
-<!-- ============================================================
-     GROUPED BY PLAYLIST
-============================================================ -->
-<section id="music-view-grouped">
-
-  {% for pid in sorted_playlist_ids %}
-    {% assign pl = playlists | where: "playlist_id", pid | first %}
-    {% assign playlist_songs = site.data.youtube_feed.songs | where_exp: "item", "pl.song_ids contains item.id" %}
-    {% assign playlist_songs = playlist_songs | default: empty %}
-
-    {% if playlist_songs.size > 0 %}
-      {% assign playlist_sorted = playlist_songs %}
-
-      <section class="playlist-section">
-        <h2 class="section-header">{{ pl.title }}</h2>
-        <div class="tile-grid">
-
-          {% for song in playlist_sorted %}
-            {% if song.videostatus == "Public" %}
-              <a class="tile" href="{{ site.baseurl }}{{ song.url }}">
-                <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ song.title }}">
-                {% assign override = site.data.music_overrides.overrides | where: "song_id", song.song_id | first %}
-                {% assign display_title = override.title | default: song.title %}
-                <h3 class="tile-title">{{ display_title }}</h3>
-              </a>
-            {% endif %}
-          {% endfor %}
-
-          {% for song in playlist_sorted %}
-            {% unless song.videostatus == "Public" %}
-              <div class="tile coming-soon">
-                <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ song.title }}">
-                <div class="tile-overlay">Coming Soon</div>
-                {% assign override = site.data.music_overrides.overrides | where: "song_id", song.song_id | first %}
-                {% assign display_title = override.title | default: song.title %}
-                <h3 class="tile-title">{{ display_title }}</h3>
-              </div>
-            {% endunless %}
-          {% endfor %}
-
-        </div>
-      </section>
-    {% endif %}
-  {% endfor %}
-
-</section>
-
-<!-- ============================================================
-     ALL SONGS
-============================================================ -->
-<section id="music-view-all" style="display:none;">
-  <section class="playlist-section">
-    <h2 class="section-header">All Songs</h2>
-
-    {% assign all_sorted = all_songs | sort: "title" %}
-    <div class="tile-grid">
-
-      {% for song in all_sorted %}
-        {% if song.videostatus == "Public" %}
-          <a class="tile" href="{{ site.baseurl }}{{ song.url }}">
-            <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ song.title }}">
-            {% assign override = site.data.music_overrides.overrides | where: "song_id", song.song_id | first %}
-            {% assign display_title = override.title | default: song.title %}
-            <h3 class="tile-title">{{ display_title }}</h3>
-          </a>
-        {% endif %}
-      {% endfor %}
-
-      {% for song in all_sorted %}
-        {% unless song.videostatus == "Public" %}
-          <div class="tile coming-soon">
-            <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ song.title }}">
-            <div class="tile-overlay">Coming Soon</div>
-            {% assign override = site.data.music_overrides.overrides | where: "song_id", song.song_id | first %}
-            {% assign display_title = override.title | default: song.title %}
-            <h3 class="tile-title">{{ display_title }}</h3>
-          </div>
-        {% endunless %}
-      {% endfor %}
-
-    </div>
+  <!-- ============================================================
+       GROUPED VIEW (EMPTY)
+  ============================================================ -->
+  <section id="music-view-grouped">
+    <section class="playlist-section">
+      <h2 class="section-header">Playlists</h2>
+      <p style="opacity:0.6;">No playlists loaded.</p>
+    </section>
   </section>
-</section>
 
-<!-- ============================================================
-     CAROUSEL VIEW
-============================================================ -->
-<section id="music-view-carousel" style="display:none;">
+  <!-- ============================================================
+       ALL SONGS VIEW (EMPTY)
+  ============================================================ -->
+  <section id="music-view-all" style="display:none;">
+    <section class="playlist-section">
+      <h2 class="section-header">All Songs</h2>
+      <p style="opacity:0.6;">No songs available.</p>
+    </section>
+  </section>
 
-  {% for pid in sorted_playlist_ids %}
-    {% assign pl = playlists | where: "playlist_id", pid | first %}
-    {% assign playlist_songs = site.data.youtube_feed.songs | where_exp: "item", "pl.song_ids contains item.id" %}
-    {% assign playlist_songs = playlist_songs | default: empty %}
-
-    {% if playlist_songs.size > 0 %}
-      {% assign playlist_sorted = playlist_songs %}
-
-      <section class="playlist-section">
-        <h2 class="section-header">{{ pl.title }}</h2>
-
-        {% include carousel.html songs=playlist_sorted %}
-
-      </section>
-    {% endif %}
-  {% endfor %}
-
-</section>
-
+  <!-- ============================================================
+       CAROUSEL VIEW (EMPTY)
+  ============================================================ -->
+  <section id="music-view-carousel" style="display:none;">
+    <section class="playlist-section">
+      <h2 class="section-header">Carousel</h2>
+      <p style="opacity:0.6;">No items to display.</p>
+    </section>
+  </section>
 </div>
 
 <script>

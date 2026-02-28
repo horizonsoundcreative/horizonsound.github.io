@@ -1,0 +1,91 @@
+overrides:
+- slug: classic-country
+  title: 
+  description: 
+  thumbnail:
+  order: 1
+
+- slug: calm-cinematic-horizon-sound-instrumentals
+  title: 
+  description: 
+  thumbnail:
+  order: 2
+
+- slug: missing-stamp-venice-trilogy
+  title: 
+  description: 
+  thumbnail:
+  order: 3
+
+- slug: shorts
+  title: 
+  description: 
+  thumbnail:
+  order: 4
+
+- slug: midnight-saga
+  title: 
+  description: 
+  thumbnail:
+  order: 5
+
+- slug: after-the-silence-performed-by-lydia-ellington
+  title: 
+  description: 
+  thumbnail:
+  order: 6
+
+- slug: a-way-back-trilogy
+  title: 
+  description: 
+  thumbnail:
+  order: 7
+
+- slug: acoustic-singer-songwriter
+  title: 
+  description: 
+  thumbnail:
+  order: 8
+
+- slug: emotional-ballads
+  title: 
+  description: 
+  thumbnail:
+  order: 9
+
+- slug: modern-country
+  title: 
+  description: 
+  thumbnail:
+  order: 10
+
+- slug: electro-pop-dance-pop
+  title: 
+  description: 
+  thumbnail:
+  order: 11
+
+- slug: 90s-pop-pop-rock
+  title: 
+  description: 
+  thumbnail:
+  order: 12
+
+- slug: southern-rock
+  title: 
+  description: 
+  thumbnail:
+  order: 13
+
+- slug: pop
+  title: 
+  description: 
+  thumbnail:
+  order: 14
+
+- slug: 80s-rock-pop
+  title: 
+  description: 
+  thumbnail:
+  order: 15
+

@@ -1,4 +1,32 @@
 songs:
+  - song_id: "lines-of-light-cinematic-instrumental-horizon-sound"
+    title: "Lines of Light (Cinematic Instrumental) – Horizon Sound"
+    youtube_id: "hT_epxC2G5c"
+    url: "/music/lines-of-light-cinematic-instrumental-horizon-sound/"
+    thumbnail: "/assets/thumbnails/lines-of-light-cinematic-instrumental-horizon-sound.jpeg"
+    videostatus: "Public"
+    scheduled_at: ""
+    metadata:
+      published_at: "2026-02-28T13:01:20Z"
+      channel_id: "UCiko-zjojbsoXrsEuBOPbSw"
+      channel_title: "Horizon Sound"
+      category_id: "22"
+      tags: []
+      duration: "PT3M11S"
+      definition: "hd"
+      region_allowed: []
+      region_blocked: []
+      content_rating: ""
+      statistics:
+        view_count: "1"
+        like_count: "0"
+        favorite_count: "0"
+        comment_count: "0"
+      made_for_kids: false
+      self_declared_made_for_kids: false
+      topic_categories:
+        - "https://en.wikipedia.org/wiki/Electronic_music"
+        - "https://en.wikipedia.org/wiki/Music"
   - song_id: "midnight-madness-the-midnight-saga-chapter-3-horizon-sound"
     title: "Midnight Madness (The Midnight Saga – Chapter 3) – Horizon Sound"
     youtube_id: "HeD2WbErCKg"
@@ -185,7 +213,7 @@ songs:
       region_blocked: []
       content_rating: ""
       statistics:
-        view_count: "158"
+        view_count: "159"
         like_count: "5"
         favorite_count: "0"
         comment_count: "0"
@@ -214,7 +242,7 @@ songs:
       region_blocked: []
       content_rating: ""
       statistics:
-        view_count: "30"
+        view_count: "31"
         like_count: "1"
         favorite_count: "0"
         comment_count: "0"
@@ -466,32 +494,6 @@ songs:
       content_rating: ""
       statistics:
         view_count: "0"
-        like_count: "0"
-        favorite_count: "0"
-        comment_count: "0"
-      made_for_kids: false
-      self_declared_made_for_kids: false
-      topic_categories: []
-  - song_id: "lines-of-light-cinematic-instrumental-horizon-sound"
-    title: "Lines of Light (Cinematic Instrumental) – Horizon Sound"
-    youtube_id: "hT_epxC2G5c"
-    url: "/music/lines-of-light-cinematic-instrumental-horizon-sound/"
-    thumbnail: "/assets/thumbnails/lines-of-light-cinematic-instrumental-horizon-sound.jpeg"
-    videostatus: "Scheduled"
-    scheduled_at: "2026-02-28T13:00:00Z"
-    metadata:
-      published_at: "2026-02-07T12:30:15Z"
-      channel_id: "UCiko-zjojbsoXrsEuBOPbSw"
-      channel_title: "Horizon Sound"
-      category_id: "22"
-      tags: []
-      duration: "PT3M11S"
-      definition: "hd"
-      region_allowed: []
-      region_blocked: []
-      content_rating: ""
-      statistics:
-        view_count: "1"
         like_count: "0"
         favorite_count: "0"
         comment_count: "0"

@@ -30,6 +30,7 @@ jobs:
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
           GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
           REDIRECT_URI: ${{ secrets.REDIRECT_URI }}
+          YOUTUBE_CHANNEL_ID: ${{ secrets.YOUTUBE_CHANNEL_ID }}
         run: node youtube-sync/generate-youtube-feed.js
 
       - name: Commit and push changes

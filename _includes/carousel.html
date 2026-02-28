@@ -64,12 +64,20 @@ ITEMS (titles + URLs):
 
     
     {% assign items = include.playlist | default: include.songs %}
-
+    
     {% for song1 in items %}
       {% if song1.videostatus == "Public" %}
         <a class="carousel-tile" data-song="{{ song1.song_id }}" href="{{ site.baseurl }}{{ song1.url }}">
           <img src="{{ site.baseurl }}{{ song1.thumbnail }}" alt="{{ song1.title }}">
-          <h3 class="tile-title">{{ song1.title }}</h3>
+    
+          {% assign override = site.data.music_overrides.overrides | where: "song_id", song1.song_id | first %}
+          {% if override and override.title %}
+            {% assign display_title = override.title %}
+          {% else %}
+            {% assign display_title = song1.title %}
+          {% endif %}
+          <h3 class="tile-title">{{ display_title }}</h3>
+    
         </a>
       {% endif %}
     {% endfor %}
@@ -79,7 +87,15 @@ ITEMS (titles + URLs):
         <div class="carousel-tile coming-soon" data-song="{{ song1.song_id }}">
           <img src="{{ site.baseurl }}{{ song1.thumbnail }}" alt="{{ song1.title }}">
           <div class="tile-overlay">Coming Soon</div>
-          <h3 class="tile-title">{{ song1.title }}</h3>
+    
+          {% assign override = site.data.music_overrides.overrides | where: "song_id", song1.song_id | first %}
+          {% if override and override.title %}
+            {% assign display_title = override.title %}
+          {% else %}
+            {% assign display_title = song1.title %}
+          {% endif %}
+          <h3 class="tile-title">{{ display_title }}</h3>
+    
         </div>
       {% endunless %}
     {% endfor %}

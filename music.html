@@ -3,7 +3,7 @@ layout: default
 title: Music – Horizon Sound
 ---
 
-{% assign all_songs = site.data.music.songs %}
+{% assign all_songs = site.data.youtube_feed.songs %}
 {% assign playlists = all_songs | map: "primary_playlist" | uniq | reject: "" | sort %}
 
 <div class="music-page">
@@ -39,7 +39,7 @@ title: Music – Horizon Sound
       {% assign has_public = false %}
 
       {% for sid in pl.songs %}
-        {% assign song = site.data.music.songs | where: "song_id", sid | first %}
+        {% assign song = site.data.youtube_feed.songs | where: "song_id", sid | first %}
         {% if song and song.videostatus == "Public" %}
           {% assign has_public = true %}
         {% endif %}

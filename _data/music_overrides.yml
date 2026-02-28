@@ -1,11 +1,11 @@
 overrides:
-  - title: "A Quiet Little Voice"
-    song_id: "a-quiet-little-voice"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: A Quiet Little Voice
+    song_id: a-quiet-little-voice-emotional-pop-empowering-pop-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse]
       In a crowded delivery room
@@ -43,14 +43,13 @@ overrides:
       And it was that voice that got her here today</p>
       <p>[Outro]
       A new beginning</p>
-
-  - title: "Choosing Me (His Version)" # A Way Back Trilogy track
-    song_id: "choosing-me-his-version"
-    subtitle: "A Way Back | Part 3"
-    collection: "a-way-back"
+  - title: Choosing Me (His Version)
+    song_id: choosing-me-his-version-pop-horizon-sound
+    subtitle: A Way Back | Part 3
+    collection: a-way-back
     order: 3
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       We gave it all, but sometimes love just fades,
@@ -112,14 +111,13 @@ overrides:
       Two honest hearts stepping into new light.
       No hard feelings, just a quiet release—
       And we’re both finding our own kind of peace.</p>
-  
-  - title: "Choosing Me (Her Version)" # A Way Back Trilogy track
-    song_id: "choosing-me-her-version"
-    subtitle: "A Way Back | Part 2"
-    collection: "a-way-back"
+  - title: Choosing Me (Her Version)
+    song_id: choosing-me-her-version-acoustic-pop-horizon-sound
+    subtitle: A Way Back | Part 2
+    collection: a-way-back
     order: 2
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       We gave it all, but sometimes love just fades,
@@ -181,14 +179,13 @@ overrides:
       Two honest hearts stepping into new light.
       No hard feelings, just a quiet release—
       And we’re both finding our own kind of peace.</p>
-
-  - title: "Lost in Silence" # A Way Back Trilogy track
-    song_id: "lost-in-silence"
-    subtitle: "A Way Back | Part 1"
-    collection: "a-way-back"
+  - title: Lost in Silence
+    song_id: lost-in-silence-from-a-way-back-horizon-sound
+    subtitle: A Way Back | Part 1
+    collection: a-way-back
     order: 1
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       We try so hard, but sometimes love just fades,
@@ -246,14 +243,13 @@ overrides:
       Two honest hearts stepping into new light.
       No hard feelings, just a quiet release—
       And we’re both finding our own kind of peace.</p>
-
-  - title: "All Around the World"
-    song_id: "all-around-the-world-acoustic-pop-horizon-sound"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: All Around the World
+    song_id: all-around-the-world-acoustic-pop-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse]
       You say the world is a place to explore,
@@ -314,14 +310,13 @@ overrides:
       I’m still choosing.
       All around the world…
       I’m finding me.</p>
-
-  - title: "After the Silence" # After the Silence Album track
-    song_id: "ats-9-after-the-silence"
-    subtitle: "After the Silence | Part 9"
-    collection: "after-the-silence"
+  - title: After the Silence
+    song_id: 8-ghostlight-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    subtitle: After the Silence | Part 9
+    collection: after-the-silence
     order: 9
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse 1]
       The storm has finally faded,
@@ -385,14 +380,13 @@ overrides:
       <p>[Outro]
       The quiet feels unfamiliar…
       But it’s starting to feel like mine.</p>
-  
-  - title: "Ghostlight" # After the Silence Album track
-    song_id: "ats-8-ghostlight"
-    subtitle: "After the Silence | Part 8"
-    collection: "after-the-silence"
+  - title: Ghostlight
+    song_id: 8-ghostlight-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    subtitle: After the Silence | Part 8
+    collection: after-the-silence
     order: 8
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       One light left on the stage…
@@ -460,14 +454,13 @@ overrides:
       <p>[Outro]
       One light left on the stage…
       Waiting for the day I’m ready to let go.</p>
-  
-  - title: "If You'd Asked" # After the Silence Album track
-    song_id: "ats-7-if-youd-asked"
-    subtitle: "After the Silence | Part 7"
-    collection: "after-the-silence"
+  - title: If You'd Asked
+    song_id: 7-if-youd-asked-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    subtitle: After the Silence | Part 7
+    collection: after-the-silence
     order: 7
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       I keep replaying the moment
@@ -538,14 +531,13 @@ overrides:
       <p>[Outro]
       You never asked…
       So I walked away…</p>
-  
-  - title: "Half of Me" # After the Silence Album track
-    song_id: "ats-6-half-of-me"
-    subtitle: "After the Silence | Part 6"
-    collection: "after-the-silence"
+  - title: Half of Me
+    song_id: 6-half-of-me-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    subtitle: After the Silence | Part 6
+    collection: after-the-silence
     order: 6
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       I sacrificed my edges
@@ -612,14 +604,13 @@ overrides:
       <p>[Outro]
       I’m whole again…
       And I will never turn back.</p>
-  
-  - title: "Paper Walls" # After the Silence Album track
-    song_id: "ats-5-paper-walls"
-    subtitle: "After the Silence | Part 5"
-    collection: "after-the-silence"
+  - title: Paper Walls
+    song_id: 5-paper-walls-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    subtitle: After the Silence | Part 5
+    collection: after-the-silence
     order: 5
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       I built them up so carefully…
@@ -688,14 +679,13 @@ overrides:
       <p>[Outro]
       I’m stronger now…
       Because I let them fall.</p>
-  
-  - title: "The Way We Lied" # After the Silence Album track
-    song_id: "ats-4-the-way-we-lied"
-    subtitle: "After the Silence | Part 4"
-    collection: "after-the-silence"
+  - title: The Way We Lied
+    song_id: 4-the-way-we-lied-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    subtitle: After the Silence | Part 4
+    collection: after-the-silence
     order: 4
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[INTRO]
       We said we were alright…
@@ -761,14 +751,13 @@ overrides:
       <p>[OUTRO]
       We said we were alright…
       But we never were.</p>
-  
-  - title: "Homesick For You" # After the Silence Album track
-    song_id: "ats-3-homesick-for-you"
-    subtitle: "After the Silence | Part 3"
-    collection: "after-the-silence"
+  - title: Homesick For You
+    song_id: 3-homesick-for-you-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    subtitle: After the Silence | Part 3
+    collection: after-the-silence
     order: 3
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[INTRO]
       I miss a place I can’t return to…
@@ -835,14 +824,13 @@ overrides:
       <p>[OUTRO]
       I miss her still…
       But I’m coming home.</p>
-  
-  - title: "Borrowed Time" # After the Silence Album track
-    song_id: "ats-2-borrowed-time"
-    subtitle: "After the Silence | Part 2"
-    collection: "after-the-silence"
+  - title: Borrowed Time
+    song_id: 2-borrowed-time-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    subtitle: After the Silence | Part 2
+    collection: after-the-silence
     order: 2
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[INTRO]
       I always knew the clock was ticking,
@@ -910,14 +898,13 @@ overrides:
       <p>[OUTRO]
       I always knew the clock was ticking…
       But I loved you while I could.</p>
-  
-  - title: "The Quiet After" # After the Silence Album track
-    song_id: "ats-1-the-quiet-after"
-    subtitle: "After the Silence | Part 1"
-    collection: "after-the-silence"
+  - title: The Quiet After
+    song_id: 1-the-quiet-after-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    subtitle: After the Silence | Part 1
+    collection: after-the-silence
     order: 1
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[INTRO]
       I still hear the whisper of your voice.
@@ -986,14 +973,13 @@ overrides:
       <p>[OUTRO]
       The room no longer holds your memory,
       And I’m learning how to stand here on my own.</p>
-  
-  - title: "Already out the door"
-    song_id: "already-out-the-door"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Already out the door
+    song_id: already-out-the-door-modern-country-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse 1]
       You said you were out with the girls,
@@ -1066,14 +1052,13 @@ overrides:
       <p>[Outro]
       I’m already out the door.
       Yeah, I’m already out the door…</p>
-  
-  - title: "Saltwater" # After the Silence Album track
-    song_id: "ats-10-saltwater"
-    subtitle: "After the Silence | Part 10"
-    collection: "after-the-silence"
+  - title: Saltwater
+    song_id: 10-saltwater-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    subtitle: After the Silence | Part 10
+    collection: after-the-silence
     order: 10
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       It rises without warning…
@@ -1141,14 +1126,13 @@ overrides:
       <p>[Outro]
       The tide pulls back…
       And I remain.</p>
-  
-  - title: "Unsent Letters" # After the Silence Album track
-    song_id: "ats-12-unsent-letters"
-    subtitle: "After the Silence | Part 12"
-    collection: "after-the-silence"
+  - title: Unsent Letters
+    song_id: 12-unsent-letters-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    subtitle: After the Silence | Part 12
+    collection: after-the-silence
     order: 12
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       Another page written,
@@ -1216,14 +1200,13 @@ overrides:
       <p>[Outro]
       Another page written…
       This one’s meant for me.</p>
-    
-  - title: "The Dress I Never Wore" # After the Silence Album track
-    song_id: "ats-11-the-dress-i-never-wore"
-    subtitle: "After the Silence | Part 11"
-    collection: "after-the-silence"
+  - title: The Dress I Never Wore
+    song_id: 11-the-dress-i-never-wore-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    subtitle: After the Silence | Part 11
+    collection: after-the-silence
     order: 11
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       It’s hanging in the closet
@@ -1289,14 +1272,13 @@ overrides:
       <p>[Outro]
       I close the door…
       And walk away.</p>
-  
-  - title: "Rise Again" # After the Silence Album track
-    song_id: "ats-13-rise-again"
-    subtitle: "After the Silence | Part 13"
-    collection: "after-the-silence"
+  - title: Rise Again
+    song_id: 13-rise-again-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    subtitle: After the Silence | Part 13
+    collection: after-the-silence
     order: 13
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       I’ve been sorting through the ashes
@@ -1364,14 +1346,13 @@ overrides:
       I rise again…
       And again…
       And again.</p>
-  
-  - title: "Back to Amarillo"
-    song_id: "Back to Amarillo"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Back to Amarillo
+    song_id: back-to-amarillo-50s-country-western-romance-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse 1]
       I’ve been ridin’ dusty trails,
@@ -1423,14 +1404,13 @@ overrides:
       and see her standin’ in the door,
       I swear my boots get heavier —
       I don’t wanna ride no more.</p>
-  
-  - title: "Fixed it Mostly Right"
-    song_id: "fixed-it-mostly-right"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Fixed it Mostly Right
+    song_id: fixed-it-mostly-right-country-comedy-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       If it ain’t broke,
@@ -1484,14 +1464,13 @@ overrides:
       Saw the mess that I had caused…
       She said, “What in tarnation…?”
       I said, “Relax… I fixed it mostly right.”</p>
-  
-  - title: "Don't Let the Summer End"
-    song_id: "dont-let-the-summer-end"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Don't Let the Summer End
+    song_id: dont-let-the-summer-end-upbeat-1990s-style-pop-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse 1]
       Summer days, late nights, you and me in paradise,
@@ -1538,14 +1517,13 @@ overrides:
       I don’t wanna wake up with my heart broken.
       If our fire dies when the sun sets…
       Baby, don’t you let our summer end.</p>
-  
-  - title: "Bottle on the Table"
-    song_id: "bottle-on-the-table"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Bottle on the Table
+    song_id: bottle-on-the-table-country-western-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse 1]
       I came home from the rail yard, the daylight nearly gone,
@@ -1583,14 +1561,13 @@ overrides:
       <p>[Outro]
       So I’ll finish up this whiskey while the jukebox softly plays,
       ’Cause a broken heart keeps hurtin’ long after love has walked away.</p>
-  
-  - title: "Becoming Me"
-    song_id: "becoming-me"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Becoming Me
+    song_id: becoming-me-emotional-pop-upbeat-love-song-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse 1]
       I’ve been wandering through the city with a secret in my smile,
@@ -1652,14 +1629,13 @@ overrides:
       But you’re the one that I have my eyes on.)
       (Now the world sees me, but you’re the one I’m keeping.)
       (Now the boys want me, but you’re the one I’m choosing.)</p>
-  
-  - title: "I Met Her at a Barroom Brawl"
-    song_id: "i-met-her-at-a-barroom-brawl"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: I Met Her at a Barroom Brawl
+    song_id: barroom-brawl-southern-rock-grit-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       (Spoken, low and cocky)
@@ -1745,14 +1721,13 @@ overrides:
       ’cause she didn’t want a changed man—
       she wanted someone—
       still breaking all the rules.</p>
-  
-  - title: "I'm Holding On"
-    song_id: "im-holding-on"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: I'm Holding On
+    song_id: im-holding-on-emotional-piano-ballad-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse 1]
       I lay your letters on the table,
@@ -1806,14 +1781,13 @@ overrides:
       with our daughter in your arms.
       We made it through the shadows—
       now please stay here where our love shines for you.</p>
-  
-  - title: "Hold On Revised"
-    song_id: "hold-on-revised"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Hold On Revised
+    song_id: hold-on-revised-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       Hold on
@@ -1868,14 +1842,13 @@ overrides:
       The hardest part is over
       You’re stepping into clover
       Hold on</p>
- 
-  - title: "Here's to Us!"
-    song_id: "heres-to-us"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Here's to Us!
+    song_id: heres-to-us-90s-rock-anthem-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       Raise a glass…
@@ -1946,14 +1919,13 @@ overrides:
       <p>[Outro]
       Raise a glass…
       We earned this.</p>
-  
-  - title: "Gimme Three Steps, and I'm Gone"
-    song_id: "gimme-three-steps-and-im-gone"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Gimme Three Steps, and I'm Gone
+    song_id: gimme-three-steps-and-im-gone-southern-rock-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse 1]
       I hit that back door runnin’,
@@ -2030,68 +2002,61 @@ overrides:
       thought maybe I’d outrun the night.
       Then someone hollered, “Hey, you!”
       and I whispered, “Aw hell… not tonight.”</p>
-  
-  - title: "Held in the Moment"
-    song_id: "held-in-the-moment"
-    subtitle: "Instrumental / Ambient"
-    collection: "instrumental-ambient"
+  - title: Held in the Moment
+    song_id: held-in-the-moment-cinematic-instrumental-horizon-sound
+    subtitle: Instrumental / Ambient
+    collection: instrumental-ambient
     order: 1
-    extra_title:
-    extra_html:
-    lyrics_html: |
-
-  - title: "A Touch of Light"
-    song_id: "a-touch-of-light"
-    subtitle: "Instrumental / Ambient"
-    collection: "instrumental-ambient"
+    extra_title: null
+    extra_html: null
+    lyrics_html: ''
+  - title: A Touch of Light
+    song_id: a-touch-of-light-cinematic-instrumental-horizon-sound
+    subtitle: Instrumental / Ambient
+    collection: instrumental-ambient
     order: 2
-    extra_title:
-    extra_html:
-    lyrics_html: |
-
-  - title: "The Moment You Breathe"
-    song_id: "the-moment-you-breathe"
-    subtitle: "Instrumental / Ambient"
-    collection: "instrumental-ambient"
+    extra_title: null
+    extra_html: null
+    lyrics_html: ''
+  - title: The Moment You Breathe
+    song_id: the-moment-you-breathe-cinematic-instrumental-horizon-sound
+    subtitle: Instrumental / Ambient
+    collection: instrumental-ambient
     order: 3
-    extra_title:
-    extra_html:
-    lyrics_html: |
-
-  - title: "The Way Water Moves"
-    song_id: "the-way-water-moves"
-    subtitle: "Instrumental / Ambient"
-    collection: "instrumental-ambient"
+    extra_title: null
+    extra_html: null
+    lyrics_html: ''
+  - title: The Way Water Moves
+    song_id: the-way-water-moves-cinematic-instrumental-horizon-sound
+    subtitle: Instrumental / Ambient
+    collection: instrumental-ambient
     order: 4
-    extra_title:
-    extra_html:
-    lyrics_html: |
-  
-  - title: "Lines of Light"
-    song_id: "lines-of-light"
-    subtitle: "Instrumental / Ambient"
-    collection: "instrumental-ambient"
+    extra_title: null
+    extra_html: null
+    lyrics_html: ''
+  - title: Lines of Light
+    song_id: lines-of-light-cinematic-instrumental-horizon-sound
+    subtitle: Instrumental / Ambient
+    collection: instrumental-ambient
     order: 5
-    extra_title:
-    extra_html:
-    lyrics_html: |
-  
-  - title: "Forever in a Moment"
-    song_id: "forever-in-a-moment"
-    subtitle: "Instrumental / Ambient"
-    collection: "instrumental-ambient"
+    extra_title: null
+    extra_html: null
+    lyrics_html: ''
+  - title: Forever in a Moment
+    song_id: forever-in-a-moment-cinematic-instrumental-horizon-sound
+    subtitle: Instrumental / Ambient
+    collection: instrumental-ambient
     order: 6
-    extra_title:
-    extra_html:
-    lyrics_html: |
-
-  - title: "Midnight Mayhem Original"
-    song_id: "midnight-mayhem-original"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
+    lyrics_html: ''
+  - title: Midnight Mayhem Original
+    song_id: midnight-mayhem-electro-pop-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       Let the chaos flow.</p>
@@ -2150,14 +2115,13 @@ overrides:
       <p>[Outro]
       Let the chaos flow, let the chaos flow—
       One spark, one night, and we’re ready to blow.</p>
-  
-  - title: "Makin' our way to California"
-    song_id: "makin-our-way-to-california"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Makin' our way to California
+    song_id: makin-our-way-to-california-pop-folk-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       Makin' our way to California
@@ -2212,14 +2176,13 @@ overrides:
       <p>[Intro]
       Makin' our way to California
       Makin' our way to California</p>
-  
-  - title: "Learning to Live Again"
-    song_id: "learning-to-live-again"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Learning to Live Again
+    song_id: learning-to-live-again-pop-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       I was standing in the shadows,
@@ -2291,14 +2254,13 @@ overrides:
       Feeling lost and terrified —
       Take my hand, I’ll walk beside you.
       Together we can learn to live.</p>
-  
-  - title: "Keep the Light On"
-    song_id: "keep-the-light-on"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Keep the Light On
+    song_id: keep-the-light-on-90s-pop-revival-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse 1]
       Woke up feeling kinda shaky,
@@ -2353,14 +2315,13 @@ overrides:
       Keep the light on,
       Even when the night feels way too long.
       Keep the light on.</p>
-  
-  - title: "Kaleidoscope"
-    song_id: "kaleidoscope"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Kaleidoscope
+    song_id: kaleidoscope-emotional-acoustic-pop-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse 1]
       I used to fear change, I tried to keep it still
@@ -2409,14 +2370,13 @@ overrides:
       Every day… another turn of the kaleidoscope</p>
       <p>[Outro]
       Every day… another turn of the kaleidoscope</p>
-  
-  - title: "After Midnight"
-    song_id: "midnight-saga-after-midnight"
-    subtitle: "Midnight Saga | Part 4"
-    collection: "midnight-saga"
+  - title: After Midnight
+    song_id: after-midnight-the-midnight-saga-chapter-4-horizon-sound
+    subtitle: Midnight Saga | Part 4
+    collection: midnight-saga
     order: 4
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       “Last call!” echoes through the crowd.
@@ -2482,14 +2442,13 @@ overrides:
       One by one, the girls say goodnight—
       After midnight, I breathe again—
       Yeah, this is how the best nights end.</p>
-  
-  - title: "Midnight Madness"
-    song_id: "midnight-saga-midnight-madness"
-    subtitle: "Midnight Saga | Part 3"
-    collection: "midnight-saga"
+  - title: Midnight Madness
+    song_id: midnight-madness-the-midnight-saga-chapter-3-horizon-sound
+    subtitle: Midnight Saga | Part 3
+    collection: midnight-saga
     order: 3
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       Release yourself
@@ -2549,14 +2508,13 @@ overrides:
       <p>[Outro]
       Feel the beat
       Feel alive</p>
-  
-  - title: "Midnight Mayhem"
-    song_id: "midnight-saga-midnight-mayhem"
-    subtitle: "Midnight Saga | Part 2"
-    collection: "midnight-saga"
+  - title: Midnight Mayhem
+    song_id: midnight-mayhem-electro-pop-horizon-sound
+    subtitle: Midnight Saga | Part 2
+    collection: midnight-saga
     order: 2
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       Let the chaos flow.</p>
@@ -2615,14 +2573,13 @@ overrides:
       <p>[Outro]
       Let the chaos flow, let the chaos flow—
       One spark, one night, and we’re ready to blow.</p>
-  
-  - title: "Before Midnight"
-    song_id: "midnight-saga-before-midnight"
-    subtitle: "Midnight Saga | Part 1"
-    collection: "midnight-saga"
+  - title: Before Midnight
+    song_id: before-midnight-the-midnight-saga-chapter-1-horizon-sound
+    subtitle: Midnight Saga | Part 1
+    collection: midnight-saga
     order: 1
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       My phone’s blowing up, I can barely hear,
@@ -2688,14 +2645,13 @@ overrides:
       We get in for free ’cause we’re what it’s about—
       This club is so damn epic, yeah—
       We’re losing our minds tonight.</p>
-  
-  - title: "Never Let Each Other Down"
-    song_id: "never-let-each-other-down"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Never Let Each Other Down
+    song_id: never-let-each-other-down-80s-synth-rock-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse 1]
       I was walking through the darkness,
@@ -2760,14 +2716,13 @@ overrides:
       Side by side forever…
       We’ll never let each other down…
       Never let each other down…</p>
-  
-  - title: "Oh, Amber"
-    song_id: "oh-amber"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Oh, Amber
+    song_id: oh-amber-emotional-pop-storytelling-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse 1]
       I was twelve with a wish on a winter night,
@@ -2833,14 +2788,13 @@ overrides:
       Two beagle pups in the story I knew—
       Amber taught me love, and Aria carries it through.
       Amber… I’ll always be all the love you left in me.</p>
-  
-  - title: "Not So Smart Home"
-    song_id: "not-so-smart-home"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Not So Smart Home
+    song_id: not-so-smart-home-folk-country-comedy-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       I swear I used to run this place—
@@ -2902,14 +2856,13 @@ overrides:
       “Siri, play something calming…”
       “Playing Highway to Hell.”—
       At this point, I should have expected that.</p>
-  
-  - title: "Nineteen Summers Revised"
-    song_id: "nineteen-summers-revised"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Nineteen Summers Revised
+    song_id: nineteen-summers-emotional-ballad-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse 1]
       She grew up on a quiet street,
@@ -3002,14 +2955,13 @@ overrides:
       Reflects the girl she used to be…
       So she lives on—
       In the hearts of all her friends.</p>
-  
-  - title: "Nineteen Summers Original"
-    song_id: "nineteen-summers-original"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Nineteen Summers Original
+    song_id: nineteen-summers-emotional-ballad-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse 1]
       She grew up on a quiet street,
@@ -3102,14 +3054,13 @@ overrides:
       Says her name now and again…
       So she lives on—
       In the hearts of all her friends.</p>
-  
-  - title: "New Again"
-    song_id: "new-again"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: New Again
+    song_id: new-again-90s-pop-revival-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse]
       You let me down again,
@@ -3165,14 +3116,13 @@ overrides:
       Now I'm new again
       (Now I'm new again)
       Now I’m new again… and I won’t be yours again.</p>
-  
-  - title: "Rusty"
-    song_id: "rusty"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Rusty
+    song_id: rusty-80s-emotional-pop-ballad-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse 1]
       I was drifting through the days, barely holding on,
@@ -3222,14 +3172,13 @@ overrides:
       A steady place to lean upon.
       You helped me find the girl I’d lost inside —
       You brought me back to life.</p>
-  
-  - title: "Rising Up"
-    song_id: "rising-up"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Rising Up
+    song_id: rising-up-energetic-pop-rock-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[VERSE 1]
       I’ve been walking through the shadows with my head down low,
@@ -3290,14 +3239,13 @@ overrides:
       And I won’t fall again—
       And I won’t fall again—
       No, I won’t fall again—</p>
-  
-  - title: "Rise Like Thunder"
-    song_id: "rise-like-thunder"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Rise Like Thunder
+    song_id: rise-like-thunder-80s-rock-anthem-short-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[VERSE 1]
       Neon turned to headlines overnight,
@@ -3359,14 +3307,13 @@ overrides:
       Still the same hearts… still the same fire…
       Just louder now… higher now…
       We rise like thunder…</p>
-  
-  - title: "Put You Down"
-    song_id: "put-you-down"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Put You Down
+    song_id: put-you-down-electro-pop-dance-pop-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       Ooh-ooh
@@ -3442,14 +3389,13 @@ overrides:
       Ooh-ooh
       I’m going to put you down—
       Now!</p>
-  
-  - title: "One Hell of a Ride"
-    song_id: "one-hell-of-a-ride"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: One Hell of a Ride
+    song_id: one-hell-of-a-ride-gritty-southern-rock-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse 1]
       Hit London city in a rust‑bucket ride,
@@ -3500,14 +3446,13 @@ overrides:
       <p>[Outro]
       Dust in the rearview, moon on the chrome,
       We ain’t slowin’ down till the good Lord calls us home.</p>
-  
-  - title: "Until the Nightmare Ends"
-    song_id: "until-the-nightmare-ends"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Until the Nightmare Ends
+    song_id: until-the-nightmare-ends-epic-80s-synthwave-stranger-things-inspired-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       Lights flicker in the Hawkins night,
@@ -3596,14 +3541,13 @@ overrides:
       ’Cause we don’t back down…
       Not in Hawkins…
       Not in the Upside Down.</p>
-  
-  - title: "Total Eclipse (Years Later)"
-    song_id: "total-eclipse-years-later"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Total Eclipse (Years Later)
+    song_id: total-eclipse-years-later-80s-piano-power-ballad-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[INTRO]
       Turn around…
@@ -3688,14 +3632,13 @@ overrides:
       Turn around…
       There’s nothing left to prove,
       And I’m finally standing on my own.</p>
-  
-  - title: "Time Capsule"
-    song_id: "time-capsule"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Time Capsule
+    song_id: time-capsule-emotional-country-nostalgic-storytelling-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       Her dad took a fall but he’s okay,
@@ -3772,14 +3715,13 @@ overrides:
       <p>[Outro]
       Her dad took a fall but he’s okay,
       We’re headed back home, and I’m forever changed.</p>
-  
-  - title: "The Man Behind the Bar"
-    song_id: "the-man-behind-the-bar"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: The Man Behind the Bar
+    song_id: the-man-behind-the-bar-90s-country-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       Another day, another story,
@@ -3831,14 +3773,13 @@ overrides:
       Lock the door and kill the sound…
       Another day, another story,
       In this little bar in this little town.</p>
-  
-  - title: "Sheriff for a Night"
-    song_id: "sheriff-for-a-night"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Sheriff for a Night
+    song_id: sheriff-for-a-night-50s-western-tall-tale-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse 1]
       I rode into Red Rock City
@@ -3890,14 +3831,13 @@ overrides:
       still retell it with delight —
       How a drifter saved the town
       as the sheriff for a night.</p>
-  
-  - title: "Wildfire"
-    song_id: "wildfire"
-    subtitle: ""
-    collection:
-    order: 
-    extra_title:
-    extra_html:
+  - title: Wildfire
+    song_id: wildfire-modern-country-power-anthem-horizon-sound
+    subtitle: ''
+    collection: null
+    order: null
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse 1]
       He liked his women quiet—
@@ -3977,14 +3917,13 @@ overrides:
       A heart that won’t be broken,
       A flame that won’t give in.
       Wildfire.</p>
-  
-  - title: "Venice Waters"
-    song_id: "venice-venice-waters"
-    subtitle: "Venice | Part 3"
-    collection: "venice-trilogy"
+  - title: Venice Waters
+    song_id: venice-waters-upbeat-acoustic-pop-adventure-horizon-sound
+    subtitle: Venice | Part 3
+    collection: venice-trilogy
     order: 3
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       I tucked my passport in the drawer,
@@ -4059,14 +3998,13 @@ overrides:
       the dream we carried finally met.
       And as the plane touched down,
       you whispered, “Next time… where should we go?”</p>
-  
-  - title: "Missing Stamp"
-    song_id: "venice-missing-stamp"
-    subtitle: "Venice | Part 2"
-    collection: "venice-trilogy"
+  - title: Missing Stamp
+    song_id: missing-stamp-emotional-acoustic-pop-horizon-sound
+    subtitle: Venice | Part 2
+    collection: venice-trilogy
     order: 2
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Intro]
       We once swore that someday was ours,
@@ -4138,14 +4076,13 @@ overrides:
       Someday still whispers softly,
       but Venice isn’t mine to own.
       So I tuck my passport gently in the drawer.</p>
-  
-  - title: "Someday"
-    song_id: "venice-someday"
-    subtitle: "Venice | Part 1"
-    collection: "venice-trilogy"
+  - title: Someday
+    song_id: someday-acoustic-pop-storytelling-horizon-sound
+    subtitle: Venice | Part 1
+    collection: venice-trilogy
     order: 1
-    extra_title:
-    extra_html:
+    extra_title: null
+    extra_html: null
     lyrics_html: |
       <p>[Verse 1]
       We were twelve and always together,

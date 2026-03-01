@@ -1,5 +1,6 @@
 songs:
   - song_id: shes-so-into-me-modern-country-love-song-horizon-sound
+    youtube_id: 81IXyVEd7PQ
     title: She’s So Into Me (Modern Country Love Song) – Horizon Sound
     slug: shes-so-into-me-modern-country-love-song-horizon-sound
     url: /music/shes-so-into-me-modern-country-love-song-horizon-sound/
@@ -29,6 +30,7 @@ songs:
       self_declared_made_for_kids: false
       topic_categories: []
   - song_id: vegas-in-the-sky-country-pop-party-anthem-horizon-sound
+    youtube_id: n87_yKJTcUw
     title: Vegas in the Sky (Country‑Pop Party Anthem) – Horizon Sound
     slug: vegas-in-the-sky-country-pop-party-anthem-horizon-sound
     url: /music/vegas-in-the-sky-country-pop-party-anthem-horizon-sound/
@@ -58,6 +60,7 @@ songs:
       self_declared_made_for_kids: false
       topic_categories: []
   - song_id: 6-half-of-me-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    youtube_id: GEIYkYA5Dfk
     title: >-
       6. Half of Me – Performed by Lydia Ellington (After the Silence) | Horizon
       Sound
@@ -93,6 +96,7 @@ songs:
         - https://en.wikipedia.org/wiki/Pop_music
         - https://en.wikipedia.org/wiki/Soul_music
   - song_id: 8-ghostlight-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    youtube_id: dmJyCGDSQa8
     title: >-
       8. Ghostlight – Performed by Lydia Ellington (After the Silence) | Horizon
       Sound
@@ -128,6 +132,7 @@ songs:
         - https://en.wikipedia.org/wiki/Pop_music
         - https://en.wikipedia.org/wiki/Soul_music
   - song_id: 13-rise-again-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    youtube_id: e5zhSTx7Kas
     title: >-
       13. Rise Again – Performed by Lydia Ellington (After the Silence) |
       Horizon Sound
@@ -160,6 +165,7 @@ songs:
       self_declared_made_for_kids: false
       topic_categories: []
   - song_id: wildfire-modern-country-power-anthem-horizon-sound
+    youtube_id: Tc0wt00clNM
     title: Wildfire (Modern Country Power Anthem) – Horizon Sound
     slug: wildfire-modern-country-power-anthem-horizon-sound
     url: /music/wildfire-modern-country-power-anthem-horizon-sound/
@@ -188,6 +194,7 @@ songs:
       self_declared_made_for_kids: false
       topic_categories: []
   - song_id: the-way-water-moves-cinematic-instrumental-horizon-sound
+    youtube_id: kIv8cx7JgRM
     title: The Way Water Moves (Cinematic Instrumental) – Horizon Sound
     slug: the-way-water-moves-cinematic-instrumental-horizon-sound
     url: /music/the-way-water-moves-cinematic-instrumental-horizon-sound/
@@ -217,6 +224,7 @@ songs:
       self_declared_made_for_kids: false
       topic_categories: []
   - song_id: lines-of-light-cinematic-instrumental-horizon-sound
+    youtube_id: hT_epxC2G5c
     title: Lines of Light (Cinematic Instrumental) – Horizon Sound
     slug: lines-of-light-cinematic-instrumental-horizon-sound
     url: /music/lines-of-light-cinematic-instrumental-horizon-sound/
@@ -248,6 +256,7 @@ songs:
         - https://en.wikipedia.org/wiki/Electronic_music
         - https://en.wikipedia.org/wiki/Music
   - song_id: a-touch-of-light-cinematic-instrumental-horizon-sound
+    youtube_id: 5bfNeRr2UHI
     title: A Touch of Light (Cinematic Instrumental) – Horizon Sound
     slug: a-touch-of-light-cinematic-instrumental-horizon-sound
     url: /music/a-touch-of-light-cinematic-instrumental-horizon-sound/
@@ -279,6 +288,7 @@ songs:
         - https://en.wikipedia.org/wiki/Electronic_music
         - https://en.wikipedia.org/wiki/Music
   - song_id: held-in-the-moment-cinematic-instrumental-horizon-sound
+    youtube_id: vjdOSn3ZuaI
     title: Held in the Moment (Cinematic Instrumental) – Horizon Sound
     slug: held-in-the-moment-cinematic-instrumental-horizon-sound
     url: /music/held-in-the-moment-cinematic-instrumental-horizon-sound/
@@ -308,6 +318,7 @@ songs:
       self_declared_made_for_kids: false
       topic_categories: []
   - song_id: forever-in-a-moment-cinematic-instrumental-horizon-sound
+    youtube_id: 906ItpYuLuQ
     title: Forever in a Moment (Cinematic Instrumental) – Horizon Sound
     slug: forever-in-a-moment-cinematic-instrumental-horizon-sound
     url: /music/forever-in-a-moment-cinematic-instrumental-horizon-sound/
@@ -339,6 +350,7 @@ songs:
         - https://en.wikipedia.org/wiki/Electronic_music
         - https://en.wikipedia.org/wiki/Music
   - song_id: the-moment-you-breathe-cinematic-instrumental-horizon-sound
+    youtube_id: YNrpz2S--Yk
     title: The Moment You Breathe (Cinematic Instrumental) – Horizon Sound
     slug: the-moment-you-breathe-cinematic-instrumental-horizon-sound
     url: /music/the-moment-you-breathe-cinematic-instrumental-horizon-sound/
@@ -369,6 +381,7 @@ songs:
       topic_categories:
         - https://en.wikipedia.org/wiki/Music
   - song_id: sheriff-for-a-night-50s-western-tall-tale-horizon-sound
+    youtube_id: oMSIQ5Gv2ZI
     title: Sheriff for a Night (50s Western Tall‑Tale) – Horizon Sound
     slug: sheriff-for-a-night-50s-western-tall-tale-horizon-sound
     url: /music/sheriff-for-a-night-50s-western-tall-tale-horizon-sound/
@@ -398,6 +411,7 @@ songs:
       self_declared_made_for_kids: false
       topic_categories: []
   - song_id: back-to-amarillo-50s-country-western-romance-horizon-sound
+    youtube_id: H-_2aKmiFc0
     title: Back to Amarillo (50s Country‑Western Romance) – Horizon Sound
     slug: back-to-amarillo-50s-country-western-romance-horizon-sound
     url: /music/back-to-amarillo-50s-country-western-romance-horizon-sound/
@@ -427,6 +441,7 @@ songs:
       self_declared_made_for_kids: false
       topic_categories: []
   - song_id: venice-waters-upbeat-acoustic-pop-adventure-horizon-sound
+    youtube_id: LzfM1PRxpVU
     title: Venice Waters (Upbeat Acoustic‑Pop Adventure) – Horizon Sound
     slug: venice-waters-upbeat-acoustic-pop-adventure-horizon-sound
     url: /music/venice-waters-upbeat-acoustic-pop-adventure-horizon-sound/
@@ -456,6 +471,7 @@ songs:
       self_declared_made_for_kids: false
       topic_categories: []
   - song_id: missing-stamp-emotional-acoustic-pop-horizon-sound
+    youtube_id: fbBWIohiOwI
     title: Missing Stamp (Emotional Acoustic Pop) – Horizon Sound
     slug: missing-stamp-emotional-acoustic-pop-horizon-sound
     url: /music/missing-stamp-emotional-acoustic-pop-horizon-sound/
@@ -484,6 +500,7 @@ songs:
       self_declared_made_for_kids: false
       topic_categories: []
   - song_id: someday-acoustic-pop-storytelling-horizon-sound
+    youtube_id: 2cv-H5tTygs
     title: Someday (Acoustic Pop Storytelling) – Horizon Sound
     slug: someday-acoustic-pop-storytelling-horizon-sound
     url: /music/someday-acoustic-pop-storytelling-horizon-sound/
@@ -513,6 +530,7 @@ songs:
       topic_categories: []
   - song_id: >-
       4-the-way-we-lied-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    youtube_id: ZPqhUzybOIg
     title: >-
       4. The Way We Lied – Performed by Lydia Ellington (After the Silence) |
       Horizon Sound
@@ -549,6 +567,7 @@ songs:
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: >-
       1-the-quiet-after-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    youtube_id: '-Yxig5Mq9u4'
     title: >-
       1. The Quiet After – Performed by Lydia Ellington (After the Silence) |
       Horizon Sound
@@ -585,6 +604,7 @@ songs:
         - https://en.wikipedia.org/wiki/Pop_music
         - https://en.wikipedia.org/wiki/Soul_music
   - song_id: nineteen-summers-emotional-ballad-horizon-sound
+    youtube_id: r16qSkxEcI4
     title: Nineteen Summers (Emotional Ballad) - Horizon Sound
     slug: nineteen-summers-emotional-ballad-horizon-sound
     url: /music/nineteen-summers-emotional-ballad-horizon-sound/
@@ -613,6 +633,7 @@ songs:
       self_declared_made_for_kids: false
       topic_categories: []
   - song_id: nineteen-summers-emotional-acoustic-pop-short-horizon-sound
+    youtube_id: LyfIQW5FMKw
     title: Nineteen Summers - Emotional Acoustic Pop (Short) Horizon Sound
     slug: nineteen-summers-emotional-acoustic-pop-short-horizon-sound
     url: /music/nineteen-summers-emotional-acoustic-pop-short-horizon-sound/
@@ -642,6 +663,7 @@ songs:
       self_declared_made_for_kids: false
       topic_categories: []
   - song_id: rise-like-thunder-80s-rock-anthem-short-horizon-sound
+    youtube_id: P4VGMd5Kk8Q
     title: Rise Like Thunder - 80s Rock Anthem (Short) Horizon Sound
     slug: rise-like-thunder-80s-rock-anthem-short-horizon-sound
     url: /music/rise-like-thunder-80s-rock-anthem-short-horizon-sound/
@@ -675,6 +697,7 @@ songs:
         - https://en.wikipedia.org/wiki/Rock_music
   - song_id: >-
       12-unsent-letters-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    youtube_id: H4y2StKkPyw
     title: >-
       12. Unsent Letters – Performed by Lydia Ellington (After the Silence) |
       Horizon Sound
@@ -709,6 +732,7 @@ songs:
       topic_categories: []
   - song_id: >-
       11-the-dress-i-never-wore-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    youtube_id: S40NUKvFhAc
     title: >-
       11. The Dress I Never Wore – Performed by Lydia Ellington (After the
       Silence) | Horizon Sound
@@ -742,6 +766,7 @@ songs:
       self_declared_made_for_kids: false
       topic_categories: []
   - song_id: 10-saltwater-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    youtube_id: '-yaZGULOHA0'
     title: >-
       10. Saltwater – Performed by Lydia Ellington (After the Silence) | Horizon
       Sound
@@ -775,6 +800,7 @@ songs:
       topic_categories: []
   - song_id: >-
       9-after-the-silence-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    youtube_id: kmQsqEg8ryA
     title: >-
       9. After the Silence – Performed by Lydia Ellington (After the Silence) |
       Horizon Sound
@@ -809,6 +835,7 @@ songs:
       topic_categories: []
   - song_id: >-
       7-if-youd-asked-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    youtube_id: YgcaebCs-LY
     title: >-
       7. If You’d Asked – Performed by Lydia Ellington (After the Silence) |
       Horizon Sound
@@ -834,7 +861,7 @@ songs:
       region_blocked: []
       content_rating: ''
       statistics:
-        view_count: '43'
+        view_count: '44'
         like_count: '1'
         favorite_count: '0'
         comment_count: '0'
@@ -845,6 +872,7 @@ songs:
         - https://en.wikipedia.org/wiki/Pop_music
         - https://en.wikipedia.org/wiki/Soul_music
   - song_id: 5-paper-walls-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    youtube_id: hYWaf4MIfM0
     title: >-
       5. Paper Walls – Performed by Lydia Ellington (After the Silence) |
       Horizon Sound
@@ -881,6 +909,7 @@ songs:
         - https://en.wikipedia.org/wiki/Soul_music
   - song_id: >-
       3-homesick-for-you-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    youtube_id: 8QgA5YL9nIA
     title: >-
       3. Homesick for You – Performed by Lydia Ellington (After the Silence) |
       Horizon Sound
@@ -918,6 +947,7 @@ songs:
         - https://en.wikipedia.org/wiki/Soul_music
   - song_id: >-
       2-borrowed-time-performed-by-lydia-ellington-after-the-silence-horizon-sound
+    youtube_id: BrZ1VWJ2lso
     title: >-
       2. Borrowed Time – Performed by Lydia Ellington (After the Silence) |
       Horizon Sound
@@ -955,6 +985,7 @@ songs:
         - https://en.wikipedia.org/wiki/Pop_music
         - https://en.wikipedia.org/wiki/Soul_music
   - song_id: after-midnight-the-midnight-saga-chapter-4-horizon-sound
+    youtube_id: iGt2wtH6orc
     title: After Midnight (The Midnight Saga – Chapter 4) – Horizon Sound
     slug: after-midnight-the-midnight-saga-chapter-4-horizon-sound
     url: /music/after-midnight-the-midnight-saga-chapter-4-horizon-sound/
@@ -984,6 +1015,7 @@ songs:
       self_declared_made_for_kids: false
       topic_categories: []
   - song_id: midnight-madness-the-midnight-saga-chapter-3-horizon-sound
+    youtube_id: HeD2WbErCKg
     title: Midnight Madness (The Midnight Saga – Chapter 3) – Horizon Sound
     slug: midnight-madness-the-midnight-saga-chapter-3-horizon-sound
     url: /music/midnight-madness-the-midnight-saga-chapter-3-horizon-sound/
@@ -1016,6 +1048,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: midnight-mayhem-the-midnight-saga-chapter-2-horizon-sound
+    youtube_id: Z6AGhE0K-Ro
     title: Midnight Mayhem (The Midnight Saga – Chapter 2) – Horizon Sound
     slug: midnight-mayhem-the-midnight-saga-chapter-2-horizon-sound
     url: /music/midnight-mayhem-the-midnight-saga-chapter-2-horizon-sound/
@@ -1048,6 +1081,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: before-midnight-the-midnight-saga-chapter-1-horizon-sound
+    youtube_id: VXQKpK56MCI
     title: Before Midnight (The Midnight Saga – Chapter 1) – Horizon Sound
     slug: before-midnight-the-midnight-saga-chapter-1-horizon-sound
     url: /music/before-midnight-the-midnight-saga-chapter-1-horizon-sound/
@@ -1080,6 +1114,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: choosing-me-his-version-pop-horizon-sound
+    youtube_id: nudUc7DezM0
     title: Choosing Me - His Version (Pop) – Horizon Sound
     slug: choosing-me-his-version-pop-horizon-sound
     url: /music/choosing-me-his-version-pop-horizon-sound/
@@ -1111,6 +1146,7 @@ songs:
         - https://en.wikipedia.org/wiki/Pop_music
         - https://en.wikipedia.org/wiki/Rock_music
   - song_id: keep-the-light-on-90s-pop-revival-horizon-sound
+    youtube_id: f25XTQKjq7Q
     title: Keep the Light On (90s Pop Revival) – Horizon Sound
     slug: keep-the-light-on-90s-pop-revival-horizon-sound
     url: /music/keep-the-light-on-90s-pop-revival-horizon-sound/
@@ -1141,6 +1177,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: hold-on-revised-horizon-sound
+    youtube_id: uFxPkq2B0D0
     title: Hold On (Revised) – Horizon Sound
     slug: hold-on-revised-horizon-sound
     url: /music/hold-on-revised-horizon-sound/
@@ -1172,6 +1209,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: choosing-me-her-version-acoustic-pop-horizon-sound
+    youtube_id: ddDkZl0GrWU
     title: Choosing Me - Her Version (Acoustic Pop) – Horizon Sound
     slug: choosing-me-her-version-acoustic-pop-horizon-sound
     url: /music/choosing-me-her-version-acoustic-pop-horizon-sound/
@@ -1203,6 +1241,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: lost-in-silence-from-a-way-back-horizon-sound
+    youtube_id: 59teEpeHah8
     title: Lost in Silence (From A Way Back) – Horizon Sound
     slug: lost-in-silence-from-a-way-back-horizon-sound
     url: /music/lost-in-silence-from-a-way-back-horizon-sound/
@@ -1234,6 +1273,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: rusty-80s-emotional-pop-ballad-horizon-sound
+    youtube_id: Z8VipNxTybQ
     title: Rusty (80s Emotional Pop Ballad) – Horizon Sound
     slug: rusty-80s-emotional-pop-ballad-horizon-sound
     url: /music/rusty-80s-emotional-pop-ballad-horizon-sound/
@@ -1264,6 +1304,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: kaleidoscope-emotional-acoustic-pop-horizon-sound
+    youtube_id: YpUFnf6Ke_A
     title: Kaleidoscope (Emotional Acoustic‑Pop) – Horizon Sound
     slug: kaleidoscope-emotional-acoustic-pop-horizon-sound
     url: /music/kaleidoscope-emotional-acoustic-pop-horizon-sound/
@@ -1294,6 +1335,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: barroom-brawl-southern-rock-grit-horizon-sound
+    youtube_id: 2gZPJnFPQZs
     title: Barroom Brawl (Southern Rock Grit) – Horizon Sound
     slug: barroom-brawl-southern-rock-grit-horizon-sound
     url: /music/barroom-brawl-southern-rock-grit-horizon-sound/
@@ -1326,6 +1368,7 @@ songs:
         - https://en.wikipedia.org/wiki/Pop_music
         - https://en.wikipedia.org/wiki/Rock_music
   - song_id: the-man-behind-the-bar-90s-country-horizon-sound
+    youtube_id: 3EOLlL-P120
     title: The Man Behind the Bar (90s Country) - Horizon Sound
     slug: the-man-behind-the-bar-90s-country-horizon-sound
     url: /music/the-man-behind-the-bar-90s-country-horizon-sound/
@@ -1356,6 +1399,7 @@ songs:
         - https://en.wikipedia.org/wiki/Country_music
         - https://en.wikipedia.org/wiki/Music
   - song_id: not-so-smart-home-folk-country-comedy-horizon-sound
+    youtube_id: ii7gqcUMto4
     title: Not so Smart Home (Folk‑Country Comedy) - Horizon Sound
     slug: not-so-smart-home-folk-country-comedy-horizon-sound
     url: /music/not-so-smart-home-folk-country-comedy-horizon-sound/
@@ -1387,6 +1431,7 @@ songs:
         - https://en.wikipedia.org/wiki/Country_music
         - https://en.wikipedia.org/wiki/Music
   - song_id: time-capsule-emotional-country-nostalgic-storytelling-horizon-sound
+    youtube_id: '-zbAWN1M_qo'
     title: Time Capsule (Emotional Country / Nostalgic Storytelling) – Horizon Sound
     slug: time-capsule-emotional-country-nostalgic-storytelling-horizon-sound
     url: >-
@@ -1420,6 +1465,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: fixed-it-mostly-right-country-comedy-horizon-sound
+    youtube_id: KaEMFaNR40M
     title: Fixed it Mostly Right (Country Comedy) - Horizon Sound
     slug: fixed-it-mostly-right-country-comedy-horizon-sound
     url: /music/fixed-it-mostly-right-country-comedy-horizon-sound/
@@ -1452,6 +1498,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: bottle-on-the-table-country-western-horizon-sound
+    youtube_id: lUa9SbvKg_4
     title: Bottle on the Table (Country-Western) - Horizon Sound
     slug: bottle-on-the-table-country-western-horizon-sound
     url: /music/bottle-on-the-table-country-western-horizon-sound/
@@ -1482,6 +1529,7 @@ songs:
         - https://en.wikipedia.org/wiki/Country_music
         - https://en.wikipedia.org/wiki/Music
   - song_id: makin-our-way-to-california-pop-folk-horizon-sound
+    youtube_id: cU4c2_3ITP8
     title: Makin’ Our Way to California (Pop-Folk) – Horizon Sound
     slug: makin-our-way-to-california-pop-folk-horizon-sound
     url: /music/makin-our-way-to-california-pop-folk-horizon-sound/
@@ -1512,6 +1560,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: learning-to-live-again-pop-horizon-sound
+    youtube_id: NVG_qw_51RQ
     title: Learning to Live Again (Pop) - Horizon Sound
     slug: learning-to-live-again-pop-horizon-sound
     url: /music/learning-to-live-again-pop-horizon-sound/
@@ -1542,6 +1591,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: never-let-each-other-down-80s-synth-rock-horizon-sound
+    youtube_id: 2uKHo8dtINQ
     title: Never Let Each Other Down (80s Synth-Rock) - Horizon Sound
     slug: never-let-each-other-down-80s-synth-rock-horizon-sound
     url: /music/never-let-each-other-down-80s-synth-rock-horizon-sound/
@@ -1574,6 +1624,7 @@ songs:
         - https://en.wikipedia.org/wiki/Pop_music
         - https://en.wikipedia.org/wiki/Rock_music
   - song_id: new-again-90s-pop-revival-horizon-sound
+    youtube_id: y4pym_HVGJA
     title: New Again (90s Pop Revival) - Horizon Sound
     slug: new-again-90s-pop-revival-horizon-sound
     url: /music/new-again-90s-pop-revival-horizon-sound/
@@ -1604,6 +1655,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: oh-amber-emotional-pop-storytelling-horizon-sound
+    youtube_id: J2AuQsiPz34
     title: Oh Amber (Emotional Pop Storytelling) - Horizon Sound
     slug: oh-amber-emotional-pop-storytelling-horizon-sound
     url: /music/oh-amber-emotional-pop-storytelling-horizon-sound/
@@ -1634,6 +1686,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: heres-to-us-90s-rock-anthem-horizon-sound
+    youtube_id: aY8-o0Scmjg
     title: Here's To Us (90s Rock Anthem) - Horizon Sound
     slug: heres-to-us-90s-rock-anthem-horizon-sound
     url: /music/heres-to-us-90s-rock-anthem-horizon-sound/
@@ -1665,6 +1718,7 @@ songs:
         - https://en.wikipedia.org/wiki/Pop_music
         - https://en.wikipedia.org/wiki/Rock_music
   - song_id: put-you-down-electro-pop-dance-pop-horizon-sound
+    youtube_id: niNtLrtDcBs
     title: Put You Down (Electro-Pop / Dance-Pop) - Horizon Sound
     slug: put-you-down-electro-pop-dance-pop-horizon-sound
     url: /music/put-you-down-electro-pop-dance-pop-horizon-sound/
@@ -1696,6 +1750,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: gimme-three-steps-and-im-gone-southern-rock-horizon-sound
+    youtube_id: YVOzEcUdS9E
     title: Gimme Three Steps and I'm Gone (Southern Rock) - Horizon Sound
     slug: gimme-three-steps-and-im-gone-southern-rock-horizon-sound
     url: /music/gimme-three-steps-and-im-gone-southern-rock-horizon-sound/
@@ -1728,6 +1783,7 @@ songs:
         - https://en.wikipedia.org/wiki/Pop_music
         - https://en.wikipedia.org/wiki/Rock_music
   - song_id: all-around-the-world-acoustic-pop-horizon-sound
+    youtube_id: kIth3U12KeI
     title: All Around the World (Acoustic Pop) - Horizon Sound
     slug: all-around-the-world-acoustic-pop-horizon-sound
     url: /music/all-around-the-world-acoustic-pop-horizon-sound/
@@ -1758,6 +1814,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: already-out-the-door-modern-country-horizon-sound
+    youtube_id: EfXB-Yv_XSY
     title: Already Out the Door (Modern Country) - Horizon Sound
     slug: already-out-the-door-modern-country-horizon-sound
     url: /music/already-out-the-door-modern-country-horizon-sound/
@@ -1788,6 +1845,7 @@ songs:
         - https://en.wikipedia.org/wiki/Country_music
         - https://en.wikipedia.org/wiki/Music
   - song_id: midnight-mayhem-electro-pop-horizon-sound
+    youtube_id: 1B1nGWaWgD0
     title: Midnight Mayhem (Electro Pop) - Horizon Sound
     slug: midnight-mayhem-electro-pop-horizon-sound
     url: /music/midnight-mayhem-electro-pop-horizon-sound/
@@ -1819,6 +1877,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: dont-let-the-summer-end-upbeat-1990s-style-pop-horizon-sound
+    youtube_id: g61655Q2_mw
     title: Don't Let the Summer End (Upbeat 1990s style Pop) - Horizon Sound
     slug: dont-let-the-summer-end-upbeat-1990s-style-pop-horizon-sound
     url: /music/dont-let-the-summer-end-upbeat-1990s-style-pop-horizon-sound/
@@ -1850,6 +1909,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: rising-up-energetic-pop-rock-horizon-sound
+    youtube_id: miFZlNNAriw
     title: Rising Up (Energetic Pop-Rock) - Horizon Sound
     slug: rising-up-energetic-pop-rock-horizon-sound
     url: /music/rising-up-energetic-pop-rock-horizon-sound/
@@ -1881,6 +1941,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: rise-like-thunder-80s-arena-rock-anthem-horizon-sound
+    youtube_id: g_AZ5B9ssFQ
     title: Rise Like Thunder (80s Arena Rock Anthem) - Horizon Sound
     slug: rise-like-thunder-80s-arena-rock-anthem-horizon-sound
     url: /music/rise-like-thunder-80s-arena-rock-anthem-horizon-sound/
@@ -1913,6 +1974,7 @@ songs:
         - https://en.wikipedia.org/wiki/Pop_music
         - https://en.wikipedia.org/wiki/Rock_music
   - song_id: im-holding-on-emotional-piano-ballad-horizon-sound
+    youtube_id: Y97CNIAaBIA
     title: I'm Holding On (Emotional Piano Ballad) - Horizon Sound
     slug: im-holding-on-emotional-piano-ballad-horizon-sound
     url: /music/im-holding-on-emotional-piano-ballad-horizon-sound/
@@ -1944,6 +2006,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: hold-on-pop-nostalgic-90s-energy-horizon-sound
+    youtube_id: RpuAQzywuWM
     title: Hold On (Pop / Nostalgic 90s energy) - Horizon Sound
     slug: hold-on-pop-nostalgic-90s-energy-horizon-sound
     url: /music/hold-on-pop-nostalgic-90s-energy-horizon-sound/
@@ -1974,6 +2037,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: total-eclipse-years-later-80s-piano-power-ballad-horizon-sound
+    youtube_id: vlB58WPvjns
     title: Total Eclipse - Years Later (80s Piano Power Ballad) - Horizon Sound
     slug: total-eclipse-years-later-80s-piano-power-ballad-horizon-sound
     url: /music/total-eclipse-years-later-80s-piano-power-ballad-horizon-sound/
@@ -2005,6 +2069,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: one-hell-of-a-ride-gritty-southern-rock-horizon-sound
+    youtube_id: 3iAmG5GLC7k
     title: One Hell of a Ride (Gritty Southern Rock) - Horizon Sound
     slug: one-hell-of-a-ride-gritty-southern-rock-horizon-sound
     url: /music/one-hell-of-a-ride-gritty-southern-rock-horizon-sound/
@@ -2038,6 +2103,7 @@ songs:
         - https://en.wikipedia.org/wiki/Pop_music
         - https://en.wikipedia.org/wiki/Rock_music
   - song_id: nineteen-summers-emotional-acoustic-pop-horizon-sound
+    youtube_id: HuGf30ChZkI
     title: Nineteen Summers (Emotional Acoustic Pop) - Horizon Sound
     slug: nineteen-summers-emotional-acoustic-pop-horizon-sound
     url: /music/nineteen-summers-emotional-acoustic-pop-horizon-sound/
@@ -2070,6 +2136,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: a-quiet-little-voice-emotional-pop-empowering-pop-horizon-sound
+    youtube_id: _YvJOMi6lP0
     title: A quiet Little Voice (Emotional Pop / Empowering Pop) - Horizon Sound
     slug: a-quiet-little-voice-emotional-pop-empowering-pop-horizon-sound
     url: /music/a-quiet-little-voice-emotional-pop-empowering-pop-horizon-sound/
@@ -2101,6 +2168,7 @@ songs:
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: becoming-me-emotional-pop-upbeat-love-song-horizon-sound
+    youtube_id: hIh_5AX4Gek
     title: Becoming Me (Emotional Pop / Upbeat Love Song) - Horizon Sound
     slug: becoming-me-emotional-pop-upbeat-love-song-horizon-sound
     url: /music/becoming-me-emotional-pop-upbeat-love-song-horizon-sound/
@@ -2133,6 +2201,7 @@ songs:
         - https://en.wikipedia.org/wiki/Pop_music
   - song_id: >-
       until-the-nightmare-ends-epic-80s-synthwave-stranger-things-inspired-horizon-sound
+    youtube_id: gDkCGYOpWU0
     title: >-
       Until the Nightmare Ends (Epic 80s Synthwave, Stranger Things Inspired) -
       Horizon Sound

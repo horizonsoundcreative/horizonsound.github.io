@@ -28,6 +28,13 @@ title: Horizon Sound
       Sort all songs by published_at descending.
       Filter to public videos only.
     {%- endcomment -%}
+    {% assign cutoff = "now" | date: "%s" | minus: 2592000 %}  {# 30 days in seconds #}
+    
+    {% assign new_releases = songs 
+         | where: "videostatus", "public"
+         | where_exp: "s", "s.youtube_metadata.published_at | date: '%s' >= cutoff"
+         | sort: "youtube_metadata.published_at"
+         | reverse %}
     {% assign new_releases = songs 
         | where: "videostatus", "public"
         | sort: "youtube_metadata.published_at"

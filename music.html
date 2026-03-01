@@ -4,7 +4,7 @@ title: Music – Horizon Sound
 ---
 
 {% assign all_songs = site.data.youtube_feed.songs %}
-{% assign playlists = all_songs | map: "primary_playlist" | uniq | reject: "" | sort %}
+{% assign songs_in_list = all_songs | where_exp: "s", "pl.song_ids contains s.song_id" %}
 
 <div class="music-page">
   <div class="view-toggle">
@@ -83,7 +83,7 @@ title: Music – Horizon Sound
     {% assign playlist_names = playlist_data | map: "title" %}
     {% for list in playlists %}
       {% unless playlist_names contains list %}
-        {% assign songs_in_list = all_songs | where: "primary_playlist", list %}
+        {% assign songs_in_list = all_songs | where_exp: "s", "pl.song_ids contains s.song_id" %}
         {% assign sorted_by_sequence = songs_in_list | sort: "sequence" %}
         {% assign first_item = sorted_by_sequence | first %}
   
@@ -158,7 +158,7 @@ title: Music – Horizon Sound
 
   <section id="music-view-carousel" style="display:none;">
     {% for list in playlists %}
-      {% assign songs_in_list = all_songs | where: "primary_playlist", list %}
+      {% assign songs_in_list = all_songs | where_exp: "s", "pl.song_ids contains s.song_id" %}
       {% assign sorted_by_sequence = songs_in_list | sort: "sequence" %}
       {% assign first_item = sorted_by_sequence | first %}
 

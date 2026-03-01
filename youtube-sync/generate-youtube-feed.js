@@ -42,6 +42,7 @@ function normalizeVideo(video) {
 
   return {
     song_id,
+    youtube_id: video.id,   // <-- RESTORE YOUTUBE ID HERE
     title: video.title,
     slug: video.slug,
     url: `/music/${song_id}/`,

@@ -36,7 +36,13 @@ function buildSongObject(video) {
     thumbnail: `/assets/thumbnails/${song_id}.jpeg`,
     videostatus: video.videostatus_raw,
     playlists: video.playlists || [],
-    view_count_num: parseInt(stats.viewCount || "0", 10),
+
+    // ✅ FIXED: numeric view count
+    view_count_num: parseInt(
+      video.youtube_metadata?.statistics?.view_count || "0",
+      10
+    ),
+
     youtube_metadata: {
       published_at: video.publishedAt || null,
       scheduled_at: video.scheduledAt || null,

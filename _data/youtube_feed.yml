@@ -861,7 +861,7 @@ songs:
       region_blocked: []
       content_rating: ''
       statistics:
-        view_count: '46'
+        view_count: '47'
         like_count: '1'
         favorite_count: '0'
         comment_count: '0'
@@ -897,7 +897,7 @@ songs:
       region_blocked: []
       content_rating: ''
       statistics:
-        view_count: '69'
+        view_count: '70'
         like_count: '1'
         favorite_count: '0'
         comment_count: '0'
@@ -1037,7 +1037,7 @@ songs:
       region_blocked: []
       content_rating: ''
       statistics:
-        view_count: '14'
+        view_count: '13'
         like_count: '1'
         favorite_count: '0'
         comment_count: '0'
@@ -1070,7 +1070,7 @@ songs:
       region_blocked: []
       content_rating: ''
       statistics:
-        view_count: '178'
+        view_count: '176'
         like_count: '5'
         favorite_count: '0'
         comment_count: '0'

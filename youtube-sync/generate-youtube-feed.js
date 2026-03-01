@@ -123,6 +123,8 @@ async function generate() {
 
   console.log("Downloading playlist thumbnails...");
   await processPlaylistThumbnails(playlists, THUMBNAIL_DIR);
+  
+  console.log("PLAYLIST COUNT:", playlists.length);
 
   /* -------------------------------------------------------
      ATTACH PLAYLIST MEMBERSHIP TO VIDEOS

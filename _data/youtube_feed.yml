@@ -360,7 +360,7 @@ songs:
       region_blocked: []
       content_rating: ''
       statistics:
-        view_count: '48'
+        view_count: '49'
         like_count: '2'
         favorite_count: '0'
         comment_count: '1'
@@ -1037,7 +1037,7 @@ songs:
       region_blocked: []
       content_rating: ''
       statistics:
-        view_count: '169'
+        view_count: '171'
         like_count: '5'
         favorite_count: '0'
         comment_count: '0'
@@ -1748,7 +1748,7 @@ songs:
       region_blocked: []
       content_rating: ''
       statistics:
-        view_count: '92'
+        view_count: '91'
         like_count: '2'
         favorite_count: '0'
         comment_count: '1'
@@ -1976,8 +1976,7 @@ songs:
   - song_id: total-eclipse-years-later-80s-piano-power-ballad-horizon-sound
     title: Total Eclipse - Years Later (80s Piano Power Ballad) - Horizon Sound
     slug: total-eclipse-years-later-80s-piano-power-ballad-horizon-sound
-    url: >-
-      /music/total-eclipse-years-later-80s-piano-power-ballad-horizon-sound/
+    url: /music/total-eclipse-years-later-80s-piano-power-ballad-horizon-sound/
     thumbnail: >-
       /assets/thumbnails/total-eclipse-years-later-80s-piano-power-ballad-horizon-sound.jpeg
     videostatus: Public
@@ -2073,8 +2072,7 @@ songs:
   - song_id: a-quiet-little-voice-emotional-pop-empowering-pop-horizon-sound
     title: A quiet Little Voice (Emotional Pop / Empowering Pop) - Horizon Sound
     slug: a-quiet-little-voice-emotional-pop-empowering-pop-horizon-sound
-    url: >-
-      /music/a-quiet-little-voice-emotional-pop-empowering-pop-horizon-sound/
+    url: /music/a-quiet-little-voice-emotional-pop-empowering-pop-horizon-sound/
     thumbnail: >-
       /assets/thumbnails/a-quiet-little-voice-emotional-pop-empowering-pop-horizon-sound.jpeg
     videostatus: Public

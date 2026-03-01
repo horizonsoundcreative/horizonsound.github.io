@@ -4,7 +4,6 @@ title: Music – Horizon Sound
 ---
 
 {% assign all_songs = site.data.youtube_feed.songs %}
-{% assign songs_in_list = all_songs | where_exp: "s", "pl.song_ids contains s.song_id" %}
 
 <div class="music-page">
   <div class="view-toggle">
@@ -168,7 +167,7 @@ title: Music – Horizon Sound
 
       {% if playlist_sorted.size > 0 %}
       <section class="playlist-section">
-        <h2 class="section-header">{{ list }}</h2>
+        <h2 class="section-header">{{ pl.title }}</h2>
 
         {% include carousel.html songs=playlist_sorted %}
 

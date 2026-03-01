@@ -4,28 +4,29 @@ import yaml from "js-yaml";
 
 import {
   fetchAllVideos,
-  fetchPlaylistMembership,
+  fetchPlaylistsWithMembership,
   processPlaylistThumbnails
 } from "./fetch-youtube-metadata.js";
 
 /* -------------------------------------------------------
-   DATA MODEL OVERVIEW (FINAL, LOCKED)
+   HORIZON SOUND — YOUTUBE → YAML DATA PIPELINE
    -------------------------------------------------------
-   SONGS:
+   SONG MODEL (youtube_feed.yml):
      - song_id = slug (canonical ID)
      - youtube_id = raw YouTube video ID
      - url = /music/<song_id>/
      - thumbnail = /assets/thumbnails/<song_id>.jpeg
-     - videostatus = "public" | "private" | "unlisted" | "scheduled"
+     - videostatus = lowercase canonical status
      - playlists = array of YouTube playlist IDs
-     - metadata = raw YouTube fields (no transformations)
+     - youtube_metadata = raw YouTube fields (no transformations)
 
-   PLAYLISTS:
-     - playlist_id = YouTube playlist ID (canonical)
-     - slug = URL identity
-     - title, description, published_at
-     - thumbnail = /assets/thumbnails/playlist-<slug>.jpeg
-     - song_ids = array of YouTube video IDs (raw)
+   PLAYLIST MODEL (youtube_playlists.yml):
+     playlists:
+       - playlist_id = YouTube playlist ID (canonical)
+       - slug = URL identity
+       - title, description, published_at
+       - thumbnail = /assets/thumbnails/playlist-<slug>.jpeg
+       - song_ids = array of YouTube video IDs (raw)
 
    OVERRIDES:
      - Music overrides keyed by song_id
@@ -59,11 +60,10 @@ function writeYaml(filepath, data) {
 }
 
 /* -------------------------------------------------------
-   NORMALIZE VIDEO OBJECT (SONG MODEL)
+   BUILD SONG OBJECT (FINAL SONG MODEL)
 ------------------------------------------------------- */
-function normalizeVideo(video) {
-  // song_id = slug (canonical ID)
-  const song_id = video.slug;
+function buildSongObject(video) {
+  const song_id = video.slug; // canonical ID = slug
 
   return {
     song_id,
@@ -74,36 +74,36 @@ function normalizeVideo(video) {
     url: `/music/${song_id}/`,
     thumbnail: `/assets/thumbnails/${song_id}.jpeg`,
 
-    // videostatus is already lowercase from normalizeStatus()
-    videostatus: video.status,
+    // canonical lowercase status
+    videostatus: video.videostatus_raw,
 
     // playlist membership = array of YouTube playlist IDs
     playlists: video.playlists || [],
 
-    // raw metadata (no transformations)
-    metadata: {
+    // raw YouTube metadata (no transformations)
+    youtube_metadata: {
       published_at: video.publishedAt || null,
       scheduled_at: video.scheduledAt || null,
-      channel_id: video.metadata?.channel_id || null,
-      channel_title: video.metadata?.channel_title || null,
-      category_id: video.metadata?.category_id || null,
-      tags: video.metadata?.tags || [],
-      duration: video.metadata?.duration || null,
-      definition: video.metadata?.definition || null,
-      region_allowed: video.metadata?.region_allowed || [],
-      region_blocked: video.metadata?.region_blocked || [],
-      content_rating: video.metadata?.content_rating || "",
-      statistics: video.metadata?.statistics || {
+      channel_id: video.youtube_metadata?.channel_id || null,
+      channel_title: video.youtube_metadata?.channel_title || null,
+      category_id: video.youtube_metadata?.category_id || null,
+      tags: video.youtube_metadata?.tags || [],
+      duration: video.youtube_metadata?.duration || null,
+      definition: video.youtube_metadata?.definition || null,
+      region_allowed: video.youtube_metadata?.region_allowed || [],
+      region_blocked: video.youtube_metadata?.region_blocked || [],
+      content_rating: video.youtube_metadata?.content_rating || "",
+      statistics: video.youtube_metadata?.statistics || {
         view_count: 0,
         like_count: 0,
         favorite_count: 0,
         comment_count: 0
       },
-      made_for_kids: video.metadata?.made_for_kids || false,
-      self_declared_made_for_kids: video.metadata?.self_declared_made_for_kids || false,
-      topic_categories: video.metadata?.topic_categories || [],
+      made_for_kids: video.youtube_metadata?.made_for_kids || false,
+      self_declared_made_for_kids: video.youtube_metadata?.self_declared_made_for_kids || false,
+      topic_categories: video.youtube_metadata?.topic_categories || [],
 
-      // NEW: store raw YouTube status fields for transparency
+      // raw YouTube status fields
       privacy_status: video.privacyStatus || null,
       upload_status: video.uploadStatus || null,
       publish_at: video.publishAt || null
@@ -119,14 +119,13 @@ async function generate() {
   const videos = await fetchAllVideos();
 
   console.log("Fetching playlists + membership...");
-  const playlists = await fetchPlaylistMembership();
+  const playlists = await fetchPlaylistsWithMembership();
 
   console.log("Downloading playlist thumbnails...");
   await processPlaylistThumbnails(playlists, THUMBNAIL_DIR);
 
   /* -------------------------------------------------------
      ATTACH PLAYLIST MEMBERSHIP TO VIDEOS
-     -------------------------------------------------------
      playlistMap = { youtubeVideoId: [playlistId, playlistId] }
   ------------------------------------------------------- */
   console.log("Attaching playlist membership to videos...");
@@ -145,8 +144,8 @@ async function generate() {
   /* -------------------------------------------------------
      NORMALIZE VIDEOS INTO FINAL SONG MODEL
   ------------------------------------------------------- */
-  console.log("Normalizing videos...");
-  const normalizedVideos = videos.map(normalizeVideo);
+  console.log("Building song objects...");
+  const normalizedVideos = videos.map(buildSongObject);
 
   /* -------------------------------------------------------
      WRITE SONG FEED
@@ -156,11 +155,10 @@ async function generate() {
 
   /* -------------------------------------------------------
      WRITE PLAYLIST FEED
-     -------------------------------------------------------
-     - Wrap in top-level "playlists:"
-     - Keep playlist_id (YouTube ID)
-     - Keep slug
-     - Keep YouTube video IDs in song_ids
+     - Wrapped in top-level "playlists:"
+     - playlist_id = YouTube ID
+     - slug = URL identity
+     - song_ids = raw YouTube video IDs
   ------------------------------------------------------- */
   console.log("Writing youtube_playlists.yml...");
   writeYaml(
@@ -173,7 +171,7 @@ async function generate() {
         description: pl.description,
         published_at: pl.publishedAt,
         thumbnail: pl.thumbnail,
-        song_ids: pl.videoIds // RAW YouTube IDs (correct)
+        song_ids: pl.videoIds // raw YouTube IDs (correct)
       }))
     }
   );

@@ -3,7 +3,7 @@ layout: default
 title: Horizon Sound
 ---
 
-<!-- ============================================================ -->
+<!-- ============================================================
 <div style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; white-space:pre-wrap;">
   <strong>OVERRIDES DEBUG</strong>
   {{ site.data.music_overrides.overrides | jsonify }}
@@ -54,6 +54,16 @@ title: Horizon Sound
 
   {% assign playlist_songs = playlist_songs | push: final %}
 {% endfor %}
+
+<!-- ============================================================ -->
+     SONG RESOLUTION DEBUG
+<div style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; white-space:pre-wrap;">
+  <strong>SONG RESOLUTION DEBUG</strong>
+
+  playlist_songs (raw):
+  {{ playlist_songs | jsonify }}
+</div>
+<!-- ============================================================ -->
 
 <!-- ============================================================
      DATA: Liquid outputs only the playlist songs array
@@ -228,16 +238,6 @@ document.addEventListener("DOMContentLoaded", () => {
       <strong>NO OVERRIDE FOUND for {{ sid }}</strong>
     </div>
   {% endif %}
-============================================================ -->
-
-<!-- ============================================================
-     SONG RESOLUTION DEBUG
-<div style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; white-space:pre-wrap;">
-  <strong>SONG RESOLUTION DEBUG</strong>
-
-  playlist_songs (raw):
-  {{ playlist_songs | jsonify }}
-</div>
 ============================================================ -->
 
 <!-- ============================================================

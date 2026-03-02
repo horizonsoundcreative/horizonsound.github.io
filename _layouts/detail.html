@@ -136,28 +136,24 @@ layout: default
   <!-- ⭐ END PLAYER FRAME ⭐ -->
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const aboutEl = document.getElementById("playlist-about");
-      const lyricsEl = document.getElementById("playlist-lyrics");
-
-      const first = window.allSongs && window.allSongs[0];
-      if (first) {
-        aboutEl.innerHTML = first.description || "";
-        lyricsEl.innerHTML = first.lyrics || "";
+  document.addEventListener("DOMContentLoaded", function () {
+    const aboutEl = document.getElementById("playlist-about");
+    const lyricsEl = document.getElementById("playlist-lyrics");
+  
+    function loadInitialSong() {
+      if (!window.allSongs || !window.allSongs.length) {
+        return requestAnimationFrame(loadInitialSong);
       }
-
-      document.addEventListener("DOMContentLoaded", function () {
-      const aboutEl = document.getElementById("playlist-about");
-      const lyricsEl = document.getElementById("playlist-lyrics");
-    
-      const first = window.allSongs && window.allSongs[0];
-      if (first) {
-        aboutEl.innerHTML = first.description_html || "";
-        lyricsEl.innerHTML = first.lyrics || "";
-      }
-    });
+  
+      const first = window.allSongs[0];
+      aboutEl.innerHTML = first.description_html || "";
+      lyricsEl.innerHTML = first.lyrics || "";
+    }
+  
+    loadInitialSong();
+  });
   </script>
-
+  
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       function initTileSelection() {

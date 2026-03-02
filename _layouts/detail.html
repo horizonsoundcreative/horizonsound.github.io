@@ -143,9 +143,9 @@ layout: default
   <div style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; white-space:pre-wrap;">
     <strong>Carousel FIRST SONG — KEY FIELDS</strong>
 
-    youtube_id: {{ first_song.youtube_id }}
-    videostatus: {{ first_song.videostatus }}
-    thumbnail: {{ first_song.thumbnail }}
+    youtube_id: {{ assign[1] }}
+    thumbnail: {{ assign[4] }}
+    videostatus: {{ assign[6] }}
   </div>
     
   {% include carousel.html playlist=sorted %}

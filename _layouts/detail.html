@@ -3,82 +3,51 @@ layout: default
 title: Horizon Sound
 ---
 
+<!-- ============================================================
+     1. READ PLAYLIST ID FROM URL
+============================================================ -->
 <script>
   const params = new URLSearchParams(window.location.search);
   const playlistId = params.get("playlist_id");
 
+  // Load all playlists into JS
   window.playlists = {{ site.data.collections.collections | jsonify }};
   window.playlist = window.playlists.find(p => p.playlist_id === playlistId);
 </script>
 
-<h1 class="playlist-title"><script>document.write(window.playlist.title)</script></h1>
-<p class="playlist-description"><script>document.write(window.playlist.description)</script></p>
+<!-- ============================================================
+     2. RENDER TITLE + DESCRIPTION
+============================================================ -->
+<h1 class="playlist-title">
+  <script>document.write(window.playlist.title)</script>
+</h1>
 
+<p class="playlist-description">
+  <script>document.write(window.playlist.description)</script>
+</p>
+
+<!-- ============================================================
+     3. VIEWER CONTAINER
+============================================================ -->
 <div id="viewer"></div>
 
+<!-- ============================================================
+     4. BUILD SONG OBJECTS (FEED + OVERRIDES)
+============================================================ -->
 <script>
-  // Build songs array from feed + overrides
   const feed = {{ site.data.youtube_feed.songs | jsonify }};
   const overrides = {{ site.data.music_overrides.overrides | jsonify }};
 
   window.allSongs = window.playlist.songs.map(id => {
     const base = feed.find(s => s.song_id === id);
     const override = overrides.find(o => o.song_id === id);
-    return override ? {...base, ...override} : base;
+    return override ? { ...base, ...override } : base;
   });
-
-  loadViewer(window.allSongs[0]);
 </script>
 
-{% if playlist %}
-  <h1 class="playlist-title">{{ playlist.title }}</h1>
-  <p class="playlist-description">{{ playlist.description }}</p>
-{% endif %}
-
-{% comment %}
-============================================================
-SONG RESOLUTION (INDUSTRY STANDARD)
-============================================================
-{% endcomment %}
-{% assign playlist_songs = "" | split: "" %}
-
-{% for sid in playlist.songs %}
-  {% assign base = site.data.youtube_feed.songs | where: "song_id", sid | first %}
-  {% assign override = site.data.music_overrides.overrides | where: "song_id", sid | first %}
-
-  {%- comment -%}
-  Convert Drop → real Liquid object safely
-  {%- endcomment -%}
-  {% assign final = base | jsonify | from_json %}
-
-  {% if override %}
-    {% assign final = final | merge: override %}
-  {% endif %}
-
-  {% assign playlist_songs = playlist_songs | push: final %}
-{% endfor %}
-
-{% comment %}
-============================================================
-EXPOSE SONGS TO JAVASCRIPT
-============================================================
-{% endcomment %}
-<script>
-  window.allSongs = {{ playlist_songs | jsonify }};
-</script>
-
-{% comment %}
-============================================================
-VIEWER CONTAINER
-============================================================
-{% endcomment %}
-<div id="viewer"></div>
-
-{% comment %}
-============================================================
-YOUTUBE EMBED FUNCTION
-============================================================
-{% endcomment %}
+<!-- ============================================================
+     5. YOUTUBE EMBED FUNCTION
+============================================================ -->
 <script>
 function loadViewer(song) {
   const viewer = document.getElementById('viewer');
@@ -97,29 +66,23 @@ function loadViewer(song) {
 }
 </script>
 
-{% comment %}
-============================================================
-INITIALIZE VIEWER (SAFE TIMING)
-============================================================
-{% endcomment %}
+<!-- ============================================================
+     6. INITIALIZE VIEWER
+============================================================ -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const songs = window.allSongs;
-
-  if (!songs || songs.length === 0) {
+  if (!window.allSongs || window.allSongs.length === 0) {
     console.error("No songs found for playlist.");
     return;
   }
 
-  loadViewer(songs[0]);
+  loadViewer(window.allSongs[0]);
 });
 </script>
 
-{% comment %}
-============================================================
-EMBED CSS
-============================================================
-{% endcomment %}
+<!-- ============================================================
+     7. CSS
+============================================================ -->
 <style>
 .video-embed {
   border-radius: 12px;

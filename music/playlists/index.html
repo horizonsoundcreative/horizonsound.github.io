@@ -10,7 +10,7 @@ Test
   const params = new URLSearchParams(window.location.search);
   const playlistId = params.get("playlist_id");
 
-  <script id="playlist-data" type="application/json">
+  <script> id="playlist-data" type="application/json">
     {{ site.data.collections.collections | jsonify }}
   </script>
 

@@ -60,7 +60,7 @@ songs:
     view_count_num: 0
     youtube_metadata:
       published_at: '2026-02-22T11:48:11Z'
-      scheduled_at: '2026-04-10T16:00:00Z'
+      scheduled_at: '2026-04-17T16:00:00Z'
       channel_id: UCiko-zjojbsoXrsEuBOPbSw
       channel_title: Horizon Sound
       category_id: '22'
@@ -146,7 +146,7 @@ songs:
     view_count_num: 0
     youtube_metadata:
       published_at: '2026-02-22T11:00:45Z'
-      scheduled_at: '2026-04-07T16:00:00Z'
+      scheduled_at: '2026-04-10T16:00:00Z'
       channel_id: UCiko-zjojbsoXrsEuBOPbSw
       channel_title: Horizon Sound
       category_id: '22'
@@ -292,7 +292,7 @@ songs:
     videostatus: public
     playlists:
       - PLcKs1ONZE1Pz6NzlQFL-96c_9VIgXwuVh
-    view_count_num: 40
+    view_count_num: 41
     youtube_metadata:
       published_at: '2026-02-25T17:01:07Z'
       scheduled_at: null
@@ -309,7 +309,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '40'
+        view_count: '41'
         like_count: '2'
         favorite_count: '0'
         comment_count: '0'
@@ -637,7 +637,7 @@ songs:
     videostatus: public
     playlists:
       - PLcKs1ONZE1PyTxIEXEolv_F5r7xqRr8TU
-    view_count_num: 9
+    view_count_num: 10
     youtube_metadata:
       published_at: '2026-02-28T13:01:20Z'
       scheduled_at: null
@@ -654,7 +654,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '9'
+        view_count: '10'
         like_count: '0'
         favorite_count: '0'
         comment_count: '0'
@@ -1053,7 +1053,7 @@ songs:
     view_count_num: 2
     youtube_metadata:
       published_at: '2026-02-06T22:30:51Z'
-      scheduled_at: '2026-04-21T16:00:00Z'
+      scheduled_at: '2026-04-14T16:00:00Z'
       channel_id: UCiko-zjojbsoXrsEuBOPbSw
       channel_title: Horizon Sound
       category_id: '22'
@@ -1138,7 +1138,7 @@ songs:
     view_count_num: 2
     youtube_metadata:
       published_at: '2026-02-06T21:24:13Z'
-      scheduled_at: '2026-04-21T16:00:00Z'
+      scheduled_at: '2026-04-07T16:00:00Z'
       channel_id: UCiko-zjojbsoXrsEuBOPbSw
       channel_title: Horizon Sound
       category_id: '22'
@@ -1624,7 +1624,7 @@ songs:
     view_count_num: 3
     youtube_metadata:
       published_at: '2026-02-02T21:38:14Z'
-      scheduled_at: '2026-04-14T16:00:00Z'
+      scheduled_at: '2026-04-24T16:00:00Z'
       channel_id: UCiko-zjojbsoXrsEuBOPbSw
       channel_title: Horizon Sound
       category_id: '22'
@@ -1667,7 +1667,7 @@ songs:
     view_count_num: 3
     youtube_metadata:
       published_at: '2026-02-02T21:38:04Z'
-      scheduled_at: '2026-04-14T16:00:00Z'
+      scheduled_at: '2026-04-24T16:00:00Z'
       channel_id: UCiko-zjojbsoXrsEuBOPbSw
       channel_title: Horizon Sound
       category_id: '22'
@@ -4406,7 +4406,7 @@ songs:
     videostatus: public
     playlists:
       - PLcKs1ONZE1Pwdl4fpEbkxORvona6pl8hA
-    view_count_num: 76
+    view_count_num: 77
     youtube_metadata:
       published_at: '2026-01-12T13:57:24Z'
       scheduled_at: null
@@ -4423,7 +4423,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '76'
+        view_count: '77'
         like_count: '1'
         favorite_count: '0'
         comment_count: '1'

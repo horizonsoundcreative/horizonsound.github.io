@@ -253,7 +253,7 @@ songs:
     videostatus: public
     playlists:
       - PLcKs1ONZE1PyTxIEXEolv_F5r7xqRr8TU
-    view_count_num: 4
+    view_count_num: 5
     youtube_metadata:
       published_at: '2026-02-28T13:01:20Z'
       scheduled_at: null
@@ -267,7 +267,7 @@ songs:
       region_blocked: []
       content_rating: ''
       statistics:
-        view_count: '4'
+        view_count: '5'
         like_count: '0'
         favorite_count: '0'
         comment_count: '0'
@@ -309,7 +309,7 @@ songs:
       made_for_kids: false
       self_declared_made_for_kids: false
       topic_categories:
-        - https://en.wikipedia.org/wiki/Electronic_music
+        - https://en.wikipedia.org/wiki/Christian_music
         - https://en.wikipedia.org/wiki/Music
       privacy_status: null
       upload_status: null
@@ -1144,7 +1144,7 @@ songs:
     videostatus: public
     playlists:
       - PLcKs1ONZE1PzhwIF1yE_gEUS1kZoW6oiH
-    view_count_num: 195
+    view_count_num: 198
     youtube_metadata:
       published_at: '2026-02-20T17:00:56Z'
       scheduled_at: null
@@ -1158,7 +1158,7 @@ songs:
       region_blocked: []
       content_rating: ''
       statistics:
-        view_count: '195'
+        view_count: '198'
         like_count: '5'
         favorite_count: '0'
         comment_count: '0'

@@ -83,7 +83,7 @@ layout: default
   {% endif %}
 
   {% if override %}
-    {% assign s = s | merge: override %}
+    {% assign s = s | deep_merge: override %}
   {% endif %}
 
   {% if s %}

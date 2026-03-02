@@ -159,11 +159,18 @@ document.addEventListener("DOMContentLoaded", function () {
       return requestAnimationFrame(loadInitialSong);
     }
 
-    const first = window.allSongs[0];
-    console.log("DEBUG: first song =", first);
+const first = window.allSongs[0];
 
-    aboutEl.innerHTML = first.description_html || "(no description_html)";
-    lyricsEl.innerHTML = first.lyrics_html || "(no lyrics_html)";
+// Log the whole object (what you already have)
+console.log("DEBUG: first song =", first);
+
+// Log each field individually
+Object.keys(first).forEach(key => {
+  console.log(`DEBUG: first[${key}] =`, first[key]);
+});
+
+aboutEl.innerHTML = first.description_html || "(no description_html)";
+lyricsEl.innerHTML = first.lyrics_html || "(no lyrics_html)";
   }
 
   loadInitialSong();

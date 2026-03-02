@@ -67,28 +67,36 @@ layout: default
 {% for sid in playlist.songs %}
   {% assign base = site.data.youtube_feed.songs | where: "song_id", sid | first %}
   {% assign override = site.data.music_overrides.overrides | where: "song_id", sid | first %}
-
-  {% assign final = {
-    "song_id": base.song_id,
-    "youtube_id": base.youtube_id,
-    "title": base.title,
-    "description_html": base.description_html,
-    "thumbnail": base.thumbnail,
-    "url": base.url,
-    "videostatus": base.videostatus,
-    "youtube_metadata": base.youtube_metadata,
-    "subtitle": override.subtitle,
-    "collection": override.collection,
-    "order": override.order,
-    "extra_title": override.extra_title,
-    "extra_html": override.extra_html,
-    "lyrics_html": override.lyrics_html
-  } %}
+  
+  {% assign final = "" | split: "" %}
+  
+  {% assign final = final | push: base.song_id %}
+  {% assign final = final | push: base.youtube_id %}
+  {% assign final = final | push: base.title %}
+  {% assign final = final | push: base.description_html %}
+  {% assign final = final | push: base.thumbnail %}
+  {% assign final = final | push: base.url %}
+  {% assign final = final | push: base.videostatus %}
+  {% assign final = final | push: base.youtube_metadata %}
+  
+  {% if override %}
+    {% assign final = final | push: override.subtitle %}
+    {% assign final = final | push: override.collection %}
+    {% assign final = final | push: override.order %}
+    {% assign final = final | push: override.extra_title %}
+    {% assign final = final | push: override.extra_html %}
+    {% assign final = final | push: override.lyrics_html %}
+  {% else %}
+    {% assign final = final | push: "" %}
+    {% assign final = final | push: "" %}
+    {% assign final = final | push: "" %}
+    {% assign final = final | push: "" %}
+    {% assign final = final | push: "" %}
+    {% assign final = final | push: "" %}
+  {% endif %}
   
   {% assign playlist_songs = playlist_songs | push: final %}
 {% endfor %}
-
-
   
 <!-- ============================================================
      SONG RESOLUTION DEBUG

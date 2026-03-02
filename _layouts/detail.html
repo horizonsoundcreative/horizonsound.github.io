@@ -10,8 +10,15 @@ title: Horizon Sound
 </div>
 <!-- ============================================================ -->
 
-<!-- ============================================================ -->
-     TOP‑LEVEL DEBUG
+
+{% assign mode = page.mode %}
+{% assign playlist_id = page.playlist_id %}
+
+{% assign collection = site.data.collections.collections | where: "playlist_id", playlist_id | first %}
+{% assign playlist = collection %}
+
+  <!-- ============================================================ -->
+  TOP‑LEVEL DEBUG
 
   <div style="background:#111; color:#0ff; padding:1rem; margin:1rem 0; white-space:pre-wrap;">
   <strong>DETAILS PAGE DEBUG</strong>

@@ -66,7 +66,7 @@ ITEMS (titles + URLs):
     {% assign items = include.playlist | default: include.songs %}
     
     {% for song1 in items %}
-      {% if song1.videostatus == "Public" %}
+      {% if song1.videostatus == "public" %}
         <a class="carousel-tile" data-song="{{ song1.song_id }}" href="{{ site.baseurl }}{{ song1.url }}">
           <img src="{{ site.baseurl }}{{ song1.thumbnail }}" alt="{{ song1.title }}">
     
@@ -83,7 +83,7 @@ ITEMS (titles + URLs):
     {% endfor %}
 
     {% for song1 in items %}
-      {% unless song1.videostatus == "Public" %}
+      {% unless song1.videostatus == "public" %}
         <div class="carousel-tile coming-soon" data-song="{{ song1.song_id }}">
           <img src="{{ site.baseurl }}{{ song1.thumbnail }}" alt="{{ song1.title }}">
           <div class="tile-overlay">Coming Soon</div>

@@ -25,12 +25,13 @@ title: Horizon Sound
     <h2 class="section-header">New Releases...</h2>
   
     {% assign cutoff = "now" | date: "%s" | minus: 2592000 %}
+    {% assign cutoff_num = cutoff | plus: 0 %}
     {% assign new_releases = "" | split: "" %}
   
     {% for s in songs %}
       {% if s.videostatus == "public" %}
-        {% assign published_ts = s.youtube_metadata.published_at | date: "%s" %}
-        {% if published_ts >= cutoff %}
+        {% assign published_ts = s.youtube_metadata.published_at | date: "%s" | plus: 0 %}
+        {% if published_ts >= cutoff_num %}
           {% assign new_releases = new_releases | push: s %}
         {% endif %}
       {% endif %}
@@ -44,9 +45,7 @@ title: Horizon Sound
          items=new_releases 
          section="new_releases" %}
   </section>
-
-
-
+  
   <!-- ============================================================
        SPOTLIGHT MUSIC
        Sorted by view_count (highest first)

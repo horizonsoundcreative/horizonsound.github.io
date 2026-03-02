@@ -40,18 +40,46 @@
 
     {%- comment -%}
       ============================================================
-      COLLECTIONS — curated playlists from _data/collections.yml
-      Uses playlist_id for URLs
-      Uses thumbnail field you added
+      COLLECTIONS — playlists from _data/collections.yml
+      Coming Soon if no songs in the collection are public
       ============================================================
     {%- endcomment -%}
     {% elsif include.section == "collections" %}
     
       {% for pl in include.items %}
-        <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/">
-          <img src="{{ site.baseurl }}{{ pl.thumbnail }}" alt="{{ pl.title }}">
-          <h3 class="tile-title">{{ pl.title }}</h3>
-        </a>
+    
+        {%- comment -%}
+          Determine if this collection has any public songs
+        {%- endcomment -%}
+        {% assign has_public = false %}
+    
+        {% for sid in pl.songs %}
+          {% assign song = site.data.youtube_feed.songs | where: "song_id", sid | first %}
+          {% if song and song.videostatus == "public" %}
+            {% assign has_public = true %}
+          {% endif %}
+        {% endfor %}
+    
+        {%- comment -%}
+          Render ACTIVE collection (has at least one public song)
+        {%- endcomment -%}
+        {% if has_public %}
+          <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/">
+            <img src="{{ site.baseurl }}{{ pl.thumbnail }}" alt="{{ pl.title }}">
+            <h3 class="tile-title">{{ pl.title }}</h3>
+          </a>
+    
+        {%- comment -%}
+          Render COMING SOON collection (no public songs)
+        {%- endcomment -%}
+        {% else %}
+          <div class="tile coming-soon">
+            <img src="{{ site.baseurl }}{{ pl.thumbnail }}" alt="{{ pl.title }}">
+            <div class="tile-overlay">Coming Soon</div>
+            <h3 class="tile-title">{{ pl.title }}</h3>
+          </div>
+        {% endif %}
+    
       {% endfor %}
     
     {% endif %}

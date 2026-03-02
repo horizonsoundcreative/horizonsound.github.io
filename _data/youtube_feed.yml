@@ -718,7 +718,7 @@ songs:
     videostatus: public
     playlists:
       - PLcKs1ONZE1PyTxIEXEolv_F5r7xqRr8TU
-    view_count_num: 65
+    view_count_num: 66
     youtube_metadata:
       published_at: '2026-02-14T15:28:51Z'
       scheduled_at: null
@@ -735,7 +735,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '65'
+        view_count: '66'
         like_count: '2'
         favorite_count: '0'
         comment_count: '0'

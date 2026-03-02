@@ -63,20 +63,34 @@ function loadViewer(song) {
 </script>
 
 <!-- ============================================================
-     JS: INITIALIZE VIEWER WITH FIRST SONG
+     JS: INITIALIZE VIEWER (SAFE, GUARANTEED TIMING)
 ============================================================ -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const songs = window.allSongs;
-  if (!songs || songs.length === 0) return;
+  let songs = window.allSongs;
 
-  const first = songs[0];
-  loadViewer(first);
+  // Safety: convert JSON strings → objects
+  songs = songs.map(item => {
+    if (typeof item === "string") {
+      try { return JSON.parse(item); }
+      catch(e) { return {}; }
+    }
+    return item;
+  });
+
+  // Safety: ensure we have at least one song
+  if (!songs || songs.length === 0) {
+    console.error("No songs found for playlist.");
+    return;
+  }
+
+  // Load first song
+  loadViewer(songs[0]);
 });
 </script>
 
 <!-- ============================================================
-     CSS FOR EMBED (OPTIONAL BUT NICE)
+     CSS FOR EMBED
 ============================================================ -->
 <style>
 .video-embed {

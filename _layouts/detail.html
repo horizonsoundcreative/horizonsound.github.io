@@ -3,10 +3,30 @@ layout: default
 ---
 
 {% comment %}
-  1. Load the playlist entry from playlists.yml
+  Determine if page.playlist_id is a COLLECTION or a SONG-IN-PLAYLIST.
+
+  - If page.playlist_id matches a playlist_id in _data/collections.yml
+    → COLLECTION MODE (curated collection)
+
+  - Otherwise, treat page.playlist_id as a song_id
+    → PLAYLIST MODE (load that song's playlist into the carousel)
 {% endcomment %}
 
-{% assign playlist = site.data.playlists | where: "playlist_id", page.playlist_id | first %}
+{% assign collection = site.data.collections.collections | where: "playlist_id", page.playlist_id | first %}
+
+{% if collection %}
+  {% assign mode = "collection" %}
+  {% assign playlist = collection %}
+{% else %}
+  {% assign mode = "playlist" %}
+  {% assign current_song = site.data.youtube_feed.songs | where: "song_id", page.playlist_id | first %}
+
+  {%- comment -%}
+    Find the playlist this song belongs to in youtube_playlists.yml
+    (playlist.songs is an array of song_ids)
+  {%- endcomment -%}
+  {% assign playlist = site.data.youtube_playlists.playlists | where_exp: "pl", "pl.songs contains page.playlist_id" | first %}
+{% endif %}
 
 <main class="playlist-page">
   <script>
@@ -18,54 +38,77 @@ layout: default
     <pre style="background:#111; color:#0ff; padding:1rem; white-space:pre-wrap;">
       PLAYLIST PAGE DEBUG
       ==============================
-      
+
+      mode: {{ mode }}
       page.playlist_id: {{ page.playlist_id }}
-      
-      PLAYLIST YAML ENTRY:
+
+      COLLECTION (if any):
+      {{ collection | jsonify }}
+
+      PLAYLIST (resolved):
       {{ playlist | jsonify }}
-      
-      SONG IDS FROM PLAYLIST:
-      {{ playlist.songs | jsonify }}
+
+      CURRENT SONG (playlist mode only):
+      {{ current_song | jsonify }}
     </pre>
   </div>
   {% endif %}
 
-  <!-- PLAYLIST HEADER -->
+  <!-- PLAYLIST / COLLECTION HEADER -->
   <section class="playlist-header">
     <h2 class="section-header">{{ playlist.title }}</h2>
     {% if playlist.description %}
-    <p class="playlist-description">{{ playlist.description }}</p>
+      <p class="playlist-description">{{ playlist.description }}</p>
     {% endif %}
   </section>
 
   {% comment %}
-    2. Build the list of songs for this playlist
+    Build the list of songs for this playlist/collection.
+    - playlist.songs is an array of song_ids
+    - Songs come from site.data.youtube_feed.songs
+    - Apply overrides from site.data.music_overrides.overrides when present
   {% endcomment %}
   {% assign playlist_songs = "" | split: "" %}
 
   {% for sid in playlist.songs %}
-    {% assign expected_song = site.data.youtube_feed.songs | where: "song_id", sid | first %}
-    {% assign song_page = site.pages | where: "song_id", sid | first %}
-  
-    {% if expected_song %}
-      {% assign merged = expected_song | merge: song_page %}
-      {% assign playlist_songs = playlist_songs | push: merged %}
+    {% assign s = site.data.youtube_feed.songs | where: "song_id", sid | first %}
+    {% assign override = site.data.music_overrides.overrides | where: "song_id", sid | first %}
+
+    {% if override %}
+      {% assign s = s | merge: override %}
+    {% endif %}
+
+    {% if s %}
+      {% assign playlist_songs = playlist_songs | push: s %}
     {% endif %}
   {% endfor %}
-  
+
   {% comment %}
-    3. Sort playlist songs by sequence if present
+    Determine the first song:
+    - COLLECTION MODE: first song in the collection
+    - PLAYLIST MODE: the song the user clicked (page.playlist_id),
+      falling back to the first song if not found for any reason
   {% endcomment %}
 
-  {% assign sorted = playlist_songs | sort: "sequence" %}
-  {% assign first_song = sorted | first %}
+  {% assign sorted = playlist_songs %}
+
+  {% if mode == "collection" %}
+    {% assign first_song = sorted | first %}
+  {% else %}
+    {% assign first_song = sorted | where: "song_id", page.playlist_id | first %}
+    {% if first_song == nil %}
+      {% assign first_song = sorted | first %}
+    {% endif %}
+  {% endif %}
 
   <!-- ⭐ PLAYER FRAME WRAPPER (PURPLE THEME) ⭐ -->
   <div class="player-frame player-frame--purple">
-  
+
     <!-- EMBED -->
-    {% include embed.html youtube_id=first_song.youtube_id %}
-  
+    {% if first_song %}
+      {% include embed.html youtube_id=first_song.youtube_id %}
+    {% endif %}
+
     <!-- JS DATA -->
     <script>
       window.allSongs = {{ sorted | jsonify }};
@@ -94,60 +137,47 @@ layout: default
     document.addEventListener("DOMContentLoaded", function () {
       const aboutEl = document.getElementById("playlist-about");
       const lyricsEl = document.getElementById("playlist-lyrics");
-    
-      const first = window.allSongs[0];
+
+      const first = window.allSongs && window.allSongs[0];
       if (first) {
-        aboutEl.innerHTML = first.description_html || "";
-        lyricsEl.innerHTML = first.lyrics_html || "";
+        aboutEl.innerHTML = first.description || "";
+        lyricsEl.innerHTML = first.lyrics || "";
       }
-    
+
       document.querySelectorAll(".carousel-tile").forEach(tile => {
         tile.addEventListener("click", () => {
-    
-          console.log("=== PLAYLIST TILE CLICKED ===");
-          console.log("Tile element:", tile);
-          console.log("dataset.song:", tile.dataset.song);
-          console.log("window.allSongs:", window.allSongs);
-    
           const id = tile.dataset.song;
           const song = window.allSongs.find(s => s.song_id === id);
-    
-          console.log("Matched song:", song);
-    
+
           if (!song) {
             console.warn("NO SONG FOUND FOR ID:", id);
             return;
           }
-    
+
           aboutEl.innerHTML = song.description || "";
           lyricsEl.innerHTML = song.lyrics || "";
-    
-          console.log("About/Lyrics updated.");
         });
       });
     });
   </script>
-  
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       function initTileSelection() {
         const tiles = document.querySelectorAll(".carousel-tile, .playlist-tile");
-    
-        // Wait until tiles exist
+
         if (!tiles.length) {
           return requestAnimationFrame(initTileSelection);
         }
-    
-        // If no tile is active, activate the first one
+
         const alreadyActive = Array.from(tiles).some(t => t.classList.contains("active"));
         if (!alreadyActive) {
           tiles[0].classList.add("active");
         }
-    
-        // Center it
+
         tiles[0].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
       }
-    
+
       initTileSelection();
     });
   </script>
@@ -155,42 +185,42 @@ layout: default
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const carousels = document.querySelectorAll("[data-carousel]");
-    
+
       carousels.forEach(carousel => {
         const strip = carousel.querySelector("[data-strip]");
         if (!strip) return;
-    
+
         function updateDebug() {
           const sw = strip.scrollWidth;
           const cw = strip.clientWidth;
           const sl = strip.scrollLeft;
           const canScroll = sw > cw;
-    
+
           const swEl = carousel.querySelector("[data-debug-scrollwidth]");
           const cwEl = carousel.querySelector("[data-debug-clientwidth]");
           const slEl = carousel.querySelector("[data-debug-scrollleft]");
           const csEl = carousel.querySelector("[data-debug-canscroll]");
-    
+
           if (swEl) swEl.textContent = sw;
           if (cwEl) cwEl.textContent = cw;
           if (slEl) slEl.textContent = sl;
           if (csEl) csEl.textContent = canScroll ? "YES" : "NO";
         }
-    
+
         updateDebug();
         strip.addEventListener("scroll", updateDebug);
         carousel.addEventListener("carousel:refresh", updateDebug);
-    
+
         const left = carousel.querySelector("[data-arrow='left']");
         const right = carousel.querySelector("[data-arrow='right']");
-    
+
         if (left) {
           left.addEventListener("click", () => {
             strip.scrollBy({ left: -300, behavior: "smooth" });
             setTimeout(updateDebug, 300);
           });
         }
-    
+
         if (right) {
           right.addEventListener("click", () => {
             strip.scrollBy({ left: 300, behavior: "smooth" });
@@ -200,22 +230,22 @@ layout: default
       });
     });
   </script>
- 
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const aboutEl = document.getElementById("playlist-about");
       const lyricsEl = document.getElementById("playlist-lyrics");
-    
+
       function initAboutLyrics() {
         if (!window.allSongs || !window.allSongs.length) {
           return requestAnimationFrame(initAboutLyrics);
         }
-    
+
         const first = window.allSongs[0];
-        aboutEl.innerHTML = first.description_html || "";
-        lyricsEl.innerHTML = first.lyrics_html || "";
+        aboutEl.innerHTML = first.description || "";
+        lyricsEl.innerHTML = first.lyrics || "";
       }
-    
+
       initAboutLyrics();
     });
   </script>

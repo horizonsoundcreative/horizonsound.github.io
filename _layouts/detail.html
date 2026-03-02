@@ -146,20 +146,15 @@ layout: default
         lyricsEl.innerHTML = first.lyrics || "";
       }
 
-      document.querySelectorAll(".carousel-tile").forEach(tile => {
-        tile.addEventListener("click", () => {
-          const id = tile.dataset.song;
-          const song = window.allSongs.find(s => s.song_id === id);
-
-          if (!song) {
-            console.warn("NO SONG FOUND FOR ID:", id);
-            return;
-          }
-
-          aboutEl.innerHTML = song.description || "";
-          lyricsEl.innerHTML = song.lyrics || "";
-        });
-      });
+      document.addEventListener("DOMContentLoaded", function () {
+      const aboutEl = document.getElementById("playlist-about");
+      const lyricsEl = document.getElementById("playlist-lyrics");
+    
+      const first = window.allSongs && window.allSongs[0];
+      if (first) {
+        aboutEl.innerHTML = first.description_html || "";
+        lyricsEl.innerHTML = first.lyrics || "";
+      }
     });
   </script>
 
@@ -237,18 +232,19 @@ layout: default
     document.addEventListener("DOMContentLoaded", function () {
       const aboutEl = document.getElementById("playlist-about");
       const lyricsEl = document.getElementById("playlist-lyrics");
-
+    
       function initAboutLyrics() {
         if (!window.allSongs || !window.allSongs.length) {
           return requestAnimationFrame(initAboutLyrics);
         }
-
+    
         const first = window.allSongs[0];
         aboutEl.innerHTML = first.description || "";
         lyricsEl.innerHTML = first.lyrics || "";
       }
-
+    
       initAboutLyrics();
     });
+});
   </script>
 </main>

@@ -68,6 +68,20 @@ layout: default
   {% assign s = site.data.youtube_feed.songs | where: "song_id", sid | first %}
   {% assign override = site.data.music_overrides.overrides | where: "song_id", sid | first %}
 
+  <!-- DEBUG: show every field in the override -->
+  {% if override %}
+    <div style="background:#222; color:#0ff; padding:0.5rem; margin:0.5rem 0; white-space:pre-wrap;">
+      <strong>OVERRIDE DEBUG for {{ sid }}:</strong>
+      {% for field in override %}
+        {{ field[0] }}: {{ field[1] }}
+      {% endfor %}
+    </div>
+  {% else %}
+    <div style="background:#400; color:#fff; padding:0.5rem; margin:0.5rem 0;">
+      <strong>NO OVERRIDE FOUND for {{ sid }}</strong>
+    </div>
+  {% endif %}
+
   {% if override %}
     {% assign s = s | merge: override %}
   {% endif %}

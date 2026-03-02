@@ -3,12 +3,32 @@ layout: default
 title: Horizon Sound
 ---
 
-{% comment %}
-============================================================
-PLAYLIST RESOLUTION
-============================================================
-{% endcomment %}
-{% assign playlist = site.data.collections.collections | where: "playlist_id", page.playlist_id | first %}
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const playlistId = params.get("playlist_id");
+
+  window.playlists = {{ site.data.collections.collections | jsonify }};
+  window.playlist = window.playlists.find(p => p.playlist_id === playlistId);
+</script>
+
+<h1 class="playlist-title"><script>document.write(window.playlist.title)</script></h1>
+<p class="playlist-description"><script>document.write(window.playlist.description)</script></p>
+
+<div id="viewer"></div>
+
+<script>
+  // Build songs array from feed + overrides
+  const feed = {{ site.data.youtube_feed.songs | jsonify }};
+  const overrides = {{ site.data.music_overrides.overrides | jsonify }};
+
+  window.allSongs = window.playlist.songs.map(id => {
+    const base = feed.find(s => s.song_id === id);
+    const override = overrides.find(o => o.song_id === id);
+    return override ? {...base, ...override} : base;
+  });
+
+  loadViewer(window.allSongs[0]);
+</script>
 
 {% if playlist %}
   <h1 class="playlist-title">{{ playlist.title }}</h1>

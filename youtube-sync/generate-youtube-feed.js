@@ -255,8 +255,13 @@ for (const pl of playlists) {
   const playlistMap = {};
   playlists.forEach(pl => {
     pl.videoIds.forEach(id => {
-      if (!playlistMap[id]) playlistMap[id] = [];
-      playlistMap[id].push(pl.id);
+      const slug = slugLookup[id];
+      if (!slug) {
+        console.warn(`WARNING: Playlist ${pl.title} references unknown video ID: ${id}`);
+        return;
+      }
+      if (!playlistMap[slug]) playlistMap[slug] = [];
+      playlistMap[slug].push(pl.slug);
     });
   });
 

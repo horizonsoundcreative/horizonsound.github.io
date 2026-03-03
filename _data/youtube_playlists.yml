@@ -1,7 +1,6 @@
 playlists:
-  - playlist_id: PLcKs1ONZE1Px-Bl42_MAvyaAYY2Y_9L4i
+  - playlist_id: classic-country
     title: Classic Country
-    slug: classic-country
     description: ''
     published_at: '2026-02-28T12:46:34.396745Z'
     channel_id: UCiko-zjojbsoXrsEuBOPbSw
@@ -11,9 +10,8 @@ playlists:
       - lUa9SbvKg_4
       - H-_2aKmiFc0
       - oMSIQ5Gv2ZI
-  - playlist_id: PLcKs1ONZE1PyTxIEXEolv_F5r7xqRr8TU
+  - playlist_id: calm-cinematic-horizon-sound-instrumentals
     title: Calm & Cinematic - Horizon Sound Instrumentals
-    slug: calm-cinematic-horizon-sound-instrumentals
     description: ''
     published_at: '2026-02-07T10:43:53.382218Z'
     channel_id: UCiko-zjojbsoXrsEuBOPbSw
@@ -27,9 +25,8 @@ playlists:
       - YNrpz2S--Yk
       - kIv8cx7JgRM
       - vjdOSn3ZuaI
-  - playlist_id: PLcKs1ONZE1PyAbowXjZwZ_Zhzu8eOzQnN
+  - playlist_id: missing-stamp-venice-trilogy
     title: Missing Stamp - Venice Trilogy
-    slug: missing-stamp-venice-trilogy
     description: ''
     published_at: '2026-02-06T12:31:02.78813Z'
     channel_id: UCiko-zjojbsoXrsEuBOPbSw
@@ -39,9 +36,8 @@ playlists:
       - LzfM1PRxpVU
       - 2cv-H5tTygs
       - fbBWIohiOwI
-  - playlist_id: PLcKs1ONZE1PzlnfVBkVKn_E5GccT7JiVk
+  - playlist_id: shorts
     title: Shorts
-    slug: shorts
     description: A collection of Horizon Sound shorts
     published_at: '2026-02-01T15:16:08.531871Z'
     channel_id: UCiko-zjojbsoXrsEuBOPbSw
@@ -50,9 +46,8 @@ playlists:
     song_ids:
       - P4VGMd5Kk8Q
       - LyfIQW5FMKw
-  - playlist_id: PLcKs1ONZE1PzhwIF1yE_gEUS1kZoW6oiH
+  - playlist_id: midnight-saga
     title: Midnight Saga
-    slug: midnight-saga
     description: ''
     published_at: '2026-01-27T20:06:20.884413Z'
     channel_id: UCiko-zjojbsoXrsEuBOPbSw
@@ -63,9 +58,8 @@ playlists:
       - Z6AGhE0K-Ro
       - HeD2WbErCKg
       - iGt2wtH6orc
-  - playlist_id: PLcKs1ONZE1Pz6NzlQFL-96c_9VIgXwuVh
+  - playlist_id: after-the-silence-performed-by-lydia-ellington
     title: After the Silence – Performed by Lydia Ellington
-    slug: after-the-silence-performed-by-lydia-ellington
     description: >-
       A full‑album journey performed by Lydia Ellington, whose warm, expressive
       voice brings emotional clarity to every track. After the Silence unfolds
@@ -102,9 +96,8 @@ playlists:
       - S40NUKvFhAc
       - H4y2StKkPyw
       - e5zhSTx7Kas
-  - playlist_id: PLcKs1ONZE1PzZpPNcgo40R2K0pbfTuZaH
+  - playlist_id: a-way-back-trilogy
     title: A Way Back – Trilogy
-    slug: a-way-back-trilogy
     description: >-
       Three connected songs tracing the journey from heartbreak to
       self‑discovery. One story told through stillness, her voice, and his —
@@ -117,9 +110,8 @@ playlists:
       - nudUc7DezM0
       - ddDkZl0GrWU
       - 59teEpeHah8
-  - playlist_id: PLcKs1ONZE1PxC_S8buSFa962RiMQCacXW
+  - playlist_id: acoustic-singer-songwriter
     title: Acoustic / Singer‑Songwriter
-    slug: acoustic-singer-songwriter
     description: >-
       Acoustic‑driven songs featuring honest storytelling, soft acoustic
       textures, and a warm, intimate singer‑songwriter sound.
@@ -138,9 +130,8 @@ playlists:
       - ZJgHgGT0-5g
       - 8ArjDO_Lkz0
       - QI30nFvACnI
-  - playlist_id: PLcKs1ONZE1PzzBjl-mSFvM2oM_wWIHHsi
+  - playlist_id: emotional-ballads
     title: Emotional Ballads
-    slug: emotional-ballads
     description: >-
       Emotional, heartfelt ballads featuring intimate vocals, reflective lyrics,
       and a warm, cinematic atmosphere.
@@ -160,9 +151,8 @@ playlists:
       - 8ArjDO_Lkz0
       - QI30nFvACnI
       - HuGf30ChZkI
-  - playlist_id: PLcKs1ONZE1Pw9sRUaBV_izyIqwOcwAKMz
+  - playlist_id: modern-country
     title: Modern Country
-    slug: modern-country
     description: >-
       Modern country featuring big choruses, heartfelt vocals, and a blend of
       acoustic warmth and polished production. Songs that embody today’s country
@@ -178,9 +168,8 @@ playlists:
       - Tc0wt00clNM
       - n87_yKJTcUw
       - 81IXyVEd7PQ
-  - playlist_id: PLcKs1ONZE1PzQeXDhkhPH792NQONQ0SU5
+  - playlist_id: electro-pop-dance-pop
     title: Electro-Pop & Dance-Pop
-    slug: electro-pop-dance-pop
     description: >-
       A neon‑lit mix of energetic electro‑pop featuring glossy synths, punchy
       beats, attitude‑driven vocals, and dance‑ready hooks. Futuristic textures
@@ -196,9 +185,8 @@ playlists:
       - iw3zgW3RJyY
       - Kwj4OqJRJWo
       - 62M5lR0TIaw
-  - playlist_id: PLcKs1ONZE1PzBqW6Niq31vWxQjOLfdZHO
+  - playlist_id: 90s-pop-pop-rock
     title: 90s Pop & Pop-Rock
-    slug: 90s-pop-pop-rock
     description: >-
       Feel‑good 90s‑inspired pop and pop‑rock featuring bright guitar hooks,
       heartfelt lyrics, and a warm wave of nostalgic energy.
@@ -215,9 +203,8 @@ playlists:
       - 62M5lR0TIaw
       - fYPwn4I9x0w
       - p84S5bLB2sM
-  - playlist_id: PLcKs1ONZE1Pwdl4fpEbkxORvona6pl8hA
+  - playlist_id: southern-rock
     title: Southern Rock
-    slug: southern-rock
     description: >-
       A collection of gritty, high‑energy Southern rock featuring swaggering
       guitars, barroom storytelling, and rowdy, good‑time grooves.
@@ -231,9 +218,8 @@ playlists:
       - 3iAmG5GLC7k
       - YVOzEcUdS9E
       - 2gZPJnFPQZs
-  - playlist_id: PLcKs1ONZE1Pzgel83xUYhwppTDYuYxVHE
+  - playlist_id: pop
     title: Pop
-    slug: pop
     description: >-
       Bright, modern pop featuring emotional hooks, catchy melodies, and
       feel‑good energy. A blend of acoustic‑leaning, 90s‑inspired, and
@@ -261,9 +247,8 @@ playlists:
       - ZJgHgGT0-5g
       - 8ArjDO_Lkz0
       - QI30nFvACnI
-  - playlist_id: PLcKs1ONZE1PziRS7yrFMWKrxbgQUnw_k0
+  - playlist_id: 80s-rock-pop
     title: 80's Rock & Pop
-    slug: 80s-rock-pop
     description: >-
       A tribute to the electrifying sound of the 80s, featuring big drums,
       soaring vocals, shimmering synths, and the nostalgic energy of classic 80s

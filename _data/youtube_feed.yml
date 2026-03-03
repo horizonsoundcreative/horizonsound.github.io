@@ -637,7 +637,7 @@ songs:
     videostatus: public
     playlists:
       - PLcKs1ONZE1PyTxIEXEolv_F5r7xqRr8TU
-    view_count_num: 10
+    view_count_num: 11
     youtube_metadata:
       published_at: '2026-02-28T13:01:20Z'
       scheduled_at: null
@@ -654,7 +654,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '10'
+        view_count: '11'
         like_count: '0'
         favorite_count: '0'
         comment_count: '0'
@@ -718,7 +718,7 @@ songs:
     videostatus: public
     playlists:
       - PLcKs1ONZE1PyTxIEXEolv_F5r7xqRr8TU
-    view_count_num: 66
+    view_count_num: 67
     youtube_metadata:
       published_at: '2026-02-14T15:28:51Z'
       scheduled_at: null
@@ -735,7 +735,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '66'
+        view_count: '67'
         like_count: '2'
         favorite_count: '0'
         comment_count: '0'
@@ -878,7 +878,7 @@ songs:
     videostatus: public
     playlists:
       - PLcKs1ONZE1PyTxIEXEolv_F5r7xqRr8TU
-    view_count_num: 41
+    view_count_num: 42
     youtube_metadata:
       published_at: '2026-02-21T13:00:14Z'
       scheduled_at: null
@@ -895,7 +895,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '41'
+        view_count: '42'
         like_count: '1'
         favorite_count: '0'
         comment_count: '0'
@@ -2076,7 +2076,7 @@ songs:
     videostatus: public
     playlists:
       - PLcKs1ONZE1Pz6NzlQFL-96c_9VIgXwuVh
-    view_count_num: 57
+    view_count_num: 58
     youtube_metadata:
       published_at: '2026-02-24T17:00:59Z'
       scheduled_at: null
@@ -2093,7 +2093,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '57'
+        view_count: '58'
         like_count: '2'
         favorite_count: '0'
         comment_count: '0'
@@ -2473,7 +2473,7 @@ songs:
     videostatus: public
     playlists:
       - PLcKs1ONZE1PzhwIF1yE_gEUS1kZoW6oiH
-    view_count_num: 19
+    view_count_num: 21
     youtube_metadata:
       published_at: '2026-02-27T17:00:26Z'
       scheduled_at: null
@@ -2490,7 +2490,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '19'
+        view_count: '21'
         like_count: '1'
         favorite_count: '0'
         comment_count: '0'
@@ -2558,7 +2558,7 @@ songs:
     videostatus: public
     playlists:
       - PLcKs1ONZE1PzhwIF1yE_gEUS1kZoW6oiH
-    view_count_num: 198
+    view_count_num: 199
     youtube_metadata:
       published_at: '2026-02-20T17:00:56Z'
       scheduled_at: null
@@ -2575,7 +2575,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '198'
+        view_count: '199'
         like_count: '5'
         favorite_count: '0'
         comment_count: '0'
@@ -2644,7 +2644,7 @@ songs:
     videostatus: public
     playlists:
       - PLcKs1ONZE1PzhwIF1yE_gEUS1kZoW6oiH
-    view_count_num: 167
+    view_count_num: 168
     youtube_metadata:
       published_at: '2026-02-13T17:00:50Z'
       scheduled_at: null
@@ -2661,7 +2661,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '167'
+        view_count: '168'
         like_count: '1'
         favorite_count: '0'
         comment_count: '0'
@@ -4406,7 +4406,7 @@ songs:
     videostatus: public
     playlists:
       - PLcKs1ONZE1Pwdl4fpEbkxORvona6pl8hA
-    view_count_num: 76
+    view_count_num: 78
     youtube_metadata:
       published_at: '2026-01-12T13:57:24Z'
       scheduled_at: null
@@ -4423,7 +4423,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '76'
+        view_count: '78'
         like_count: '1'
         favorite_count: '0'
         comment_count: '1'

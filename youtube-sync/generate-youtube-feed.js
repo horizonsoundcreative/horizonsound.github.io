@@ -130,7 +130,7 @@ function buildSongObject(video) {
     url: `/music/${song_id}/`,
     thumbnail: `/assets/thumbnails/${song_id}.jpeg`,
     videostatus: video.videostatus_raw,
-    playlists: (video.playlists || []).map(id => playlistSlugMap[id]).filter(Boolean),
+    playlists: video.playlists || [],
 
     // Numeric view count (normalized)
     view_count_num: parseInt(

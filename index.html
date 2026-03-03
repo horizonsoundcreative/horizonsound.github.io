@@ -4,7 +4,9 @@ title: Horizon Sound
 ---
 
 {% assign songs = site.data.youtube_feed.songs %}
-{% assign playlists = site.data.playlist_overrides.overrides %}
+{% assign playlists = site.data.playlist_overrides.overrides 
+     | where: "is_collection", true
+     | sort: "order" %}
 
 <div class="homepage-wrapper">
 

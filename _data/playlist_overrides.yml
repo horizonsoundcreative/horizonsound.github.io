@@ -2,6 +2,7 @@ overrides:
   - slug: classic-country
     is_collection: false
     title: 
+    subtitle: 
     description: 
     thumbnail:
     hero:
@@ -11,6 +12,7 @@ overrides:
   - slug: calm-cinematic-horizon-sound-instrumentals
     is_collection: false
     title: 
+    subtitle: 
     description: 
     thumbnail:
     hero:
@@ -20,6 +22,7 @@ overrides:
   - slug: missing-stamp-venice-trilogy
     is_collection: true
     title: "Venice Trilogy - Missing Stamp"
+    subtitle: 
     description: >
       A three‑chapter journey through memory, longing, and the magic of a city that 
       changes everything. The Venice Trilogy follows two lifelong friends as a single 
@@ -38,6 +41,7 @@ overrides:
   - slug: shorts
     is_collection: false
     title: 
+    subtitle: 
     description: 
     thumbnail:
     hero:
@@ -47,6 +51,7 @@ overrides:
   - slug: midnight-saga
     is_collection: true
     title: "Midnight Saga"
+    subtitle: "Ravyn"
     description: >
       A cinematic late-night journey through identity, chaos, temptation, and
       transformation. The Midnight Saga follows a character through escalating
@@ -64,6 +69,7 @@ overrides:
   - slug: after-the-silence-performed-by-lydia-ellington
     is_collection: true
     title: "After the Silence"
+    subtitle: "Lydia Ellington"
     description: >
       A reflective, emotional collection exploring the quiet moments after a
       heartbreak — the healing, the reckoning, and the rediscovery of hope.
@@ -89,6 +95,7 @@ overrides:
   - slug: a-way-back-trilogy
     is_collection: true
     title: "A Way Back Trilogy"
+    subtitle: "A breakup told from differnt perspectives"
     description: >
       A three-part emotional arc exploring silence, self-worth, and the courage
       to choose yourself — or choose your way back home. Told from two
@@ -106,6 +113,7 @@ overrides:
   - slug: acoustic-singer-songwriter
     is_collection: false
     title: 
+    subtitle: 
     description: 
     thumbnail:
     hero:
@@ -115,6 +123,7 @@ overrides:
   - slug: emotional-ballads
     is_collection: false
     title: 
+    subtitle: 
     description: 
     thumbnail:
     hero:
@@ -124,6 +133,7 @@ overrides:
   - slug: modern-country
     is_collection: false
     title: 
+    subtitle: 
     description: 
     thumbnail:
     hero:
@@ -133,6 +143,7 @@ overrides:
   - slug: electro-pop-dance-pop
     is_collection: false
     title: 
+    subtitle: 
     description: 
     thumbnail:
     hero:
@@ -142,6 +153,7 @@ overrides:
   - slug: 90s-pop-pop-rock
     is_collection: false
     title: 
+    subtitle: 
     description: 
     thumbnail:
     hero:
@@ -151,6 +163,7 @@ overrides:
   - slug: southern-rock
     is_collection: false
     title: 
+    subtitle: 
     description: 
     thumbnail:
     hero:
@@ -160,6 +173,7 @@ overrides:
   - slug: pop
     is_collection: false
     title: 
+    subtitle: 
     description: 
     thumbnail:
     hero:
@@ -169,6 +183,7 @@ overrides:
   - slug: 80s-rock-pop
     is_collection: false
     title: 
+    subtitle: 
     description: 
     thumbnail:
     hero:

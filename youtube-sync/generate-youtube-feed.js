@@ -269,9 +269,8 @@ async function generate() {
   console.log("Writing youtube_playlists.yml...");
   writeYaml(PLAYLIST_FEED_PATH, {
     playlists: playlists.map(pl => ({
-      playlist_id: pl.id,
+      playlist_id: pl.slug,
       title: pl.title,
-      slug: pl.slug,
       description: pl.description,
       published_at: pl.publishedAt,
       channel_id: pl.channel_id,        // ⭐ NEW

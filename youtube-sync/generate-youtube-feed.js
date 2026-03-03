@@ -188,6 +188,12 @@ async function generate() {
   console.log("Fetching videos...");
   const videos = await fetchAllVideos();
 
+  // Build lookup: YouTube video ID → slug
+  const slugLookup = {};
+  for (const v of videos) {
+    slugLookup[v.id] = v.slug;
+  }
+
   if (!videos || videos.length === 0) {
     console.error("ERROR: No videos returned from YouTube. Aborting.");
     process.exit(1);
@@ -283,7 +289,7 @@ for (const pl of playlists) {
       channel_id: pl.channel_id,        // ⭐ NEW
       channel_title: pl.channel_title,  // ⭐ NEW
       thumbnail: pl.thumbnail,
-      song_ids: pl.videoIds
+      song_ids: pl.videoIds.map(id => slugLookup[id])
     }))
     
   });

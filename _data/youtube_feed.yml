@@ -55,8 +55,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/she-s-so-into-me-modern-country-love-song-horizon-sound.jpeg
     videostatus: scheduled
-    playlists:
-      - modern-country
+    playlists: []
     view_count_num: 0
     youtube_metadata:
       published_at: '2026-02-22T11:48:11Z'
@@ -141,8 +140,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/vegas-in-the-sky-country-pop-party-anthem-horizon-sound.jpeg
     videostatus: scheduled
-    playlists:
-      - modern-country
+    playlists: []
     view_count_num: 0
     youtube_metadata:
       published_at: '2026-02-22T11:00:45Z'
@@ -214,8 +212,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/6-half-of-me-performed-by-lydia-ellington-after-the-silence-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - after-the-silence-performed-by-lydia-ellington
+    playlists: []
     view_count_num: 42
     youtube_metadata:
       published_at: '2026-02-18T17:00:21Z'
@@ -290,8 +287,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/8-ghostlight-performed-by-lydia-ellington-after-the-silence-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - after-the-silence-performed-by-lydia-ellington
+    playlists: []
     view_count_num: 41
     youtube_metadata:
       published_at: '2026-02-25T17:01:07Z'
@@ -388,8 +384,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/13-rise-again-performed-by-lydia-ellington-after-the-silence-horizon-sound.jpeg
     videostatus: scheduled
-    playlists:
-      - after-the-silence-performed-by-lydia-ellington
+    playlists: []
     view_count_num: 0
     youtube_metadata:
       published_at: '2026-02-16T20:19:53Z'
@@ -476,8 +471,7 @@ songs:
     url: /music/wildfire-modern-country-power-anthem-horizon-sound/
     thumbnail: /assets/thumbnails/wildfire-modern-country-power-anthem-horizon-sound.jpeg
     videostatus: scheduled
-    playlists:
-      - modern-country
+    playlists: []
     view_count_num: 2
     youtube_metadata:
       published_at: '2026-02-08T14:41:27Z'
@@ -556,8 +550,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/the-way-water-moves-cinematic-instrumental-horizon-sound.jpeg
     videostatus: scheduled
-    playlists:
-      - calm-cinematic-horizon-sound-instrumentals
+    playlists: []
     view_count_num: 0
     youtube_metadata:
       published_at: '2026-02-07T12:35:11Z'
@@ -635,8 +628,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/lines-of-light-cinematic-instrumental-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - calm-cinematic-horizon-sound-instrumentals
+    playlists: []
     view_count_num: 12
     youtube_metadata:
       published_at: '2026-02-28T13:01:20Z'
@@ -716,8 +708,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/a-touch-of-light-cinematic-instrumental-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - calm-cinematic-horizon-sound-instrumentals
+    playlists: []
     view_count_num: 68
     youtube_metadata:
       published_at: '2026-02-14T15:28:51Z'
@@ -797,8 +788,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/held-in-the-moment-cinematic-instrumental-horizon-sound.jpeg
     videostatus: scheduled
-    playlists:
-      - calm-cinematic-horizon-sound-instrumentals
+    playlists: []
     view_count_num: 0
     youtube_metadata:
       published_at: '2026-02-07T11:37:31Z'
@@ -876,8 +866,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/forever-in-a-moment-cinematic-instrumental-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - calm-cinematic-horizon-sound-instrumentals
+    playlists: []
     view_count_num: 42
     youtube_metadata:
       published_at: '2026-02-21T13:00:14Z'
@@ -959,8 +948,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/the-moment-you-breathe-cinematic-instrumental-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - calm-cinematic-horizon-sound-instrumentals
+    playlists: []
     view_count_num: 49
     youtube_metadata:
       published_at: '2026-02-07T13:03:59Z'
@@ -1048,8 +1036,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/sheriff-for-a-night-50s-western-tall-tale-horizon-sound.jpeg
     videostatus: scheduled
-    playlists:
-      - classic-country
+    playlists: []
     view_count_num: 2
     youtube_metadata:
       published_at: '2026-02-06T22:30:51Z'
@@ -1133,8 +1120,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/back-to-amarillo-50s-country-western-romance-horizon-sound.jpeg
     videostatus: scheduled
-    playlists:
-      - classic-country
+    playlists: []
     view_count_num: 2
     youtube_metadata:
       published_at: '2026-02-06T21:24:13Z'
@@ -1217,8 +1203,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/venice-waters-upbeat-acoustic-pop-adventure-horizon-sound.jpeg
     videostatus: scheduled
-    playlists:
-      - missing-stamp-venice-trilogy
+    playlists: []
     view_count_num: 4
     youtube_metadata:
       published_at: '2026-02-06T01:56:24Z'
@@ -1300,8 +1285,7 @@ songs:
     url: /music/missing-stamp-emotional-acoustic-pop-horizon-sound/
     thumbnail: /assets/thumbnails/missing-stamp-emotional-acoustic-pop-horizon-sound.jpeg
     videostatus: scheduled
-    playlists:
-      - missing-stamp-venice-trilogy
+    playlists: []
     view_count_num: 4
     youtube_metadata:
       published_at: '2026-02-05T19:04:35Z'
@@ -1384,8 +1368,7 @@ songs:
     url: /music/someday-acoustic-pop-storytelling-horizon-sound/
     thumbnail: /assets/thumbnails/someday-acoustic-pop-storytelling-horizon-sound.jpeg
     videostatus: scheduled
-    playlists:
-      - missing-stamp-venice-trilogy
+    playlists: []
     view_count_num: 3
     youtube_metadata:
       published_at: '2026-02-05T18:57:27Z'
@@ -1458,8 +1441,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/4-the-way-we-lied-performed-by-lydia-ellington-after-the-silence-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - after-the-silence-performed-by-lydia-ellington
+    playlists: []
     view_count_num: 181
     youtube_metadata:
       published_at: '2026-02-11T17:00:56Z'
@@ -1536,8 +1518,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/1-the-quiet-after-performed-by-lydia-ellington-after-the-silence-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - after-the-silence-performed-by-lydia-ellington
+    playlists: []
     view_count_num: 107
     youtube_metadata:
       published_at: '2026-02-03T17:00:01Z'
@@ -1619,8 +1600,7 @@ songs:
     url: /music/nineteen-summers-emotional-ballad-horizon-sound/
     thumbnail: /assets/thumbnails/nineteen-summers-emotional-ballad-horizon-sound.jpeg
     videostatus: scheduled
-    playlists:
-      - emotional-ballads
+    playlists: []
     view_count_num: 3
     youtube_metadata:
       published_at: '2026-02-02T21:38:14Z'
@@ -1662,8 +1642,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/nineteen-summers-emotional-acoustic-pop-short-horizon-sound.jpeg
     videostatus: scheduled
-    playlists:
-      - shorts
+    playlists: []
     view_count_num: 3
     youtube_metadata:
       published_at: '2026-02-02T21:38:04Z'
@@ -1705,8 +1684,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/rise-like-thunder-80s-rock-anthem-short-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - shorts
+    playlists: []
     view_count_num: 18
     youtube_metadata:
       published_at: '2026-02-01T15:31:56Z'
@@ -1782,8 +1760,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/12-unsent-letters-performed-by-lydia-ellington-after-the-silence-horizon-sound.jpeg
     videostatus: scheduled
-    playlists:
-      - after-the-silence-performed-by-lydia-ellington
+    playlists: []
     view_count_num: 1
     youtube_metadata:
       published_at: '2026-02-01T12:59:01Z'
@@ -1856,8 +1833,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/11-the-dress-i-never-wore-performed-by-lydia-ellington-after-the-silence-horizon-sound.jpeg
     videostatus: scheduled
-    playlists:
-      - after-the-silence-performed-by-lydia-ellington
+    playlists: []
     view_count_num: 1
     youtube_metadata:
       published_at: '2026-02-01T12:56:11Z'
@@ -1928,8 +1904,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/10-saltwater-performed-by-lydia-ellington-after-the-silence-horizon-sound.jpeg
     videostatus: scheduled
-    playlists:
-      - after-the-silence-performed-by-lydia-ellington
+    playlists: []
     view_count_num: 1
     youtube_metadata:
       published_at: '2026-02-01T12:53:12Z'
@@ -2001,8 +1976,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/9-after-the-silence-performed-by-lydia-ellington-after-the-silence-horizon-sound.jpeg
     videostatus: scheduled
-    playlists:
-      - after-the-silence-performed-by-lydia-ellington
+    playlists: []
     view_count_num: 1
     youtube_metadata:
       published_at: '2026-02-01T12:04:20Z'
@@ -2074,9 +2048,8 @@ songs:
     thumbnail: >-
       /assets/thumbnails/7-if-you-d-asked-performed-by-lydia-ellington-after-the-silence-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - after-the-silence-performed-by-lydia-ellington
-    view_count_num: 62
+    playlists: []
+    view_count_num: 61
     youtube_metadata:
       published_at: '2026-02-24T17:00:59Z'
       scheduled_at: null
@@ -2093,7 +2066,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '62'
+        view_count: '61'
         like_count: '2'
         favorite_count: '0'
         comment_count: '0'
@@ -2151,9 +2124,8 @@ songs:
     thumbnail: >-
       /assets/thumbnails/5-paper-walls-performed-by-lydia-ellington-after-the-silence-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - after-the-silence-performed-by-lydia-ellington
-    view_count_num: 74
+    playlists: []
+    view_count_num: 73
     youtube_metadata:
       published_at: '2026-02-17T17:01:06Z'
       scheduled_at: null
@@ -2170,7 +2142,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '74'
+        view_count: '73'
         like_count: '1'
         favorite_count: '0'
         comment_count: '0'
@@ -2227,8 +2199,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/3-homesick-for-you-performed-by-lydia-ellington-after-the-silence-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - after-the-silence-performed-by-lydia-ellington
+    playlists: []
     view_count_num: 72
     youtube_metadata:
       published_at: '2026-02-10T17:00:14Z'
@@ -2304,8 +2275,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/2-borrowed-time-performed-by-lydia-ellington-after-the-silence-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - after-the-silence-performed-by-lydia-ellington
+    playlists: []
     view_count_num: 83
     youtube_metadata:
       published_at: '2026-02-04T17:00:18Z'
@@ -2389,8 +2359,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/after-midnight-the-midnight-saga-chapter-4-horizon-sound.jpeg
     videostatus: scheduled
-    playlists:
-      - midnight-saga
+    playlists: []
     view_count_num: 5
     youtube_metadata:
       published_at: '2026-01-29T19:51:18Z'
@@ -2471,8 +2440,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/midnight-madness-the-midnight-saga-chapter-3-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - midnight-saga
+    playlists: []
     view_count_num: 21
     youtube_metadata:
       published_at: '2026-02-27T17:00:26Z'
@@ -2556,8 +2524,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/midnight-mayhem-the-midnight-saga-chapter-2-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - midnight-saga
+    playlists: []
     view_count_num: 199
     youtube_metadata:
       published_at: '2026-02-20T17:00:56Z'
@@ -2642,8 +2609,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/before-midnight-the-midnight-saga-chapter-1-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - midnight-saga
+    playlists: []
     view_count_num: 168
     youtube_metadata:
       published_at: '2026-02-13T17:00:50Z'
@@ -2722,8 +2688,7 @@ songs:
     url: /music/choosing-me-his-version-pop-horizon-sound/
     thumbnail: /assets/thumbnails/choosing-me-his-version-pop-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - a-way-back-trilogy
+    playlists: []
     view_count_num: 37
     youtube_metadata:
       published_at: '2026-02-06T17:01:30Z'
@@ -2807,8 +2772,7 @@ songs:
     url: /music/keep-the-light-on-90s-pop-revival-horizon-sound/
     thumbnail: /assets/thumbnails/keep-the-light-on-90s-pop-revival-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - pop
+    playlists: []
     view_count_num: 36
     youtube_metadata:
       published_at: '2026-01-29T18:09:52Z'
@@ -2890,8 +2854,7 @@ songs:
     url: /music/hold-on-revised-horizon-sound/
     thumbnail: /assets/thumbnails/hold-on-revised-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - pop
+    playlists: []
     view_count_num: 114
     youtube_metadata:
       published_at: '2026-01-27T18:33:15Z'
@@ -2971,8 +2934,7 @@ songs:
     url: /music/choosing-me-her-version-acoustic-pop-horizon-sound/
     thumbnail: /assets/thumbnails/choosing-me-her-version-acoustic-pop-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - a-way-back-trilogy
+    playlists: []
     view_count_num: 305
     youtube_metadata:
       published_at: '2026-01-30T17:01:11Z'
@@ -3053,8 +3015,7 @@ songs:
     url: /music/lost-in-silence-from-a-way-back-horizon-sound/
     thumbnail: /assets/thumbnails/lost-in-silence-from-a-way-back-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - a-way-back-trilogy
+    playlists: []
     view_count_num: 135
     youtube_metadata:
       published_at: '2026-01-23T18:17:49Z'
@@ -3137,8 +3098,7 @@ songs:
     url: /music/rusty-80s-emotional-pop-ballad-horizon-sound/
     thumbnail: /assets/thumbnails/rusty-80s-emotional-pop-ballad-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - 80s-rock-pop
+    playlists: []
     view_count_num: 23
     youtube_metadata:
       published_at: '2026-01-22T11:57:37Z'
@@ -3221,8 +3181,7 @@ songs:
     url: /music/kaleidoscope-emotional-acoustic-pop-horizon-sound/
     thumbnail: /assets/thumbnails/kaleidoscope-emotional-acoustic-pop-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - pop
+    playlists: []
     view_count_num: 32
     youtube_metadata:
       published_at: '2026-01-21T12:43:00Z'
@@ -3303,8 +3262,7 @@ songs:
     url: /music/barroom-brawl-southern-rock-grit-horizon-sound/
     thumbnail: /assets/thumbnails/barroom-brawl-southern-rock-grit-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - southern-rock
+    playlists: []
     view_count_num: 30
     youtube_metadata:
       published_at: '2026-01-20T17:28:32Z'
@@ -3388,8 +3346,7 @@ songs:
     url: /music/the-man-behind-the-bar-90s-country-horizon-sound/
     thumbnail: /assets/thumbnails/the-man-behind-the-bar-90s-country-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - modern-country
+    playlists: []
     view_count_num: 52
     youtube_metadata:
       published_at: '2026-01-19T13:09:05Z'
@@ -3472,8 +3429,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/not-so-smart-home-folk-country-comedy-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - acoustic-singer-songwriter
+    playlists: []
     view_count_num: 14
     youtube_metadata:
       published_at: '2026-01-18T23:07:09Z'
@@ -3563,8 +3519,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/time-capsule-emotional-country-nostalgic-storytelling-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - modern-country
+    playlists: []
     view_count_num: 38
     youtube_metadata:
       published_at: '2026-01-18T13:21:02Z'
@@ -3647,8 +3602,7 @@ songs:
     url: /music/fixed-it-mostly-right-country-comedy-horizon-sound/
     thumbnail: /assets/thumbnails/fixed-it-mostly-right-country-comedy-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - acoustic-singer-songwriter
+    playlists: []
     view_count_num: 10
     youtube_metadata:
       published_at: '2026-01-18T01:19:24Z'
@@ -3735,8 +3689,7 @@ songs:
     url: /music/bottle-on-the-table-country-western-horizon-sound/
     thumbnail: /assets/thumbnails/bottle-on-the-table-country-western-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - classic-country
+    playlists: []
     view_count_num: 119
     youtube_metadata:
       published_at: '2026-01-17T15:32:29Z'
@@ -3817,8 +3770,7 @@ songs:
     url: /music/makin-our-way-to-california-pop-folk-horizon-sound/
     thumbnail: /assets/thumbnails/makin-our-way-to-california-pop-folk-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - acoustic-singer-songwriter
+    playlists: []
     view_count_num: 29
     youtube_metadata:
       published_at: '2026-01-16T13:00:23Z'
@@ -3900,8 +3852,7 @@ songs:
     url: /music/learning-to-live-again-pop-horizon-sound/
     thumbnail: /assets/thumbnails/learning-to-live-again-pop-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - emotional-ballads
+    playlists: []
     view_count_num: 65
     youtube_metadata:
       published_at: '2026-01-15T12:46:45Z'
@@ -3984,8 +3935,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/never-let-each-other-down-80s-synth-rock-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - 80s-rock-pop
+    playlists: []
     view_count_num: 96
     youtube_metadata:
       published_at: '2026-01-15T00:48:49Z'
@@ -4069,8 +4019,7 @@ songs:
     url: /music/new-again-90s-pop-revival-horizon-sound/
     thumbnail: /assets/thumbnails/new-again-90s-pop-revival-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - 90s-pop-pop-rock
+    playlists: []
     view_count_num: 45
     youtube_metadata:
       published_at: '2026-01-14T12:48:50Z'
@@ -4153,8 +4102,7 @@ songs:
     url: /music/oh-amber-emotional-pop-storytelling-horizon-sound/
     thumbnail: /assets/thumbnails/oh-amber-emotional-pop-storytelling-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - emotional-ballads
+    playlists: []
     view_count_num: 85
     youtube_metadata:
       published_at: '2026-01-14T01:17:28Z'
@@ -4235,8 +4183,7 @@ songs:
     url: /music/heres-to-us-90s-rock-anthem-horizon-sound/
     thumbnail: /assets/thumbnails/heres-to-us-90s-rock-anthem-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - 90s-pop-pop-rock
+    playlists: []
     view_count_num: 32
     youtube_metadata:
       published_at: '2026-01-13T15:30:30Z'
@@ -4319,8 +4266,7 @@ songs:
     url: /music/put-you-down-electro-pop-dance-pop-horizon-sound/
     thumbnail: /assets/thumbnails/put-you-down-electro-pop-dance-pop-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - electro-pop-dance-pop
+    playlists: []
     view_count_num: 103
     youtube_metadata:
       published_at: '2026-01-13T02:00:36Z'
@@ -4404,8 +4350,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/gimme-three-steps-and-im-gone-southern-rock-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - southern-rock
+    playlists: []
     view_count_num: 78
     youtube_metadata:
       published_at: '2026-01-12T13:57:24Z'
@@ -4487,8 +4432,7 @@ songs:
     url: /music/all-around-the-world-acoustic-pop-horizon-sound/
     thumbnail: /assets/thumbnails/all-around-the-world-acoustic-pop-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - acoustic-singer-songwriter
+    playlists: []
     view_count_num: 93
     youtube_metadata:
       published_at: '2026-01-11T21:59:03Z'
@@ -4571,8 +4515,7 @@ songs:
     url: /music/already-out-the-door-modern-country-horizon-sound/
     thumbnail: /assets/thumbnails/already-out-the-door-modern-country-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - modern-country
+    playlists: []
     view_count_num: 55
     youtube_metadata:
       published_at: '2026-01-11T14:23:16Z'
@@ -4651,8 +4594,7 @@ songs:
     url: /music/midnight-mayhem-electro-pop-horizon-sound/
     thumbnail: /assets/thumbnails/midnight-mayhem-electro-pop-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - electro-pop-dance-pop
+    playlists: []
     view_count_num: 238
     youtube_metadata:
       published_at: '2026-01-10T16:15:32Z'
@@ -4734,8 +4676,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/dont-let-the-summer-end-upbeat-1990s-style-pop-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - pop
+    playlists: []
     view_count_num: 50
     youtube_metadata:
       published_at: '2026-01-10T14:15:53Z'
@@ -4815,8 +4756,7 @@ songs:
     url: /music/rising-up-energetic-pop-rock-horizon-sound/
     thumbnail: /assets/thumbnails/rising-up-energetic-pop-rock-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - pop
+    playlists: []
     view_count_num: 36
     youtube_metadata:
       published_at: '2026-01-10T12:30:51Z'
@@ -4897,8 +4837,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/rise-like-thunder-80s-arena-rock-anthem-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - 80s-rock-pop
+    playlists: []
     view_count_num: 153
     youtube_metadata:
       published_at: '2026-01-09T17:43:44Z'
@@ -4980,8 +4919,7 @@ songs:
     url: /music/im-holding-on-emotional-piano-ballad-horizon-sound/
     thumbnail: /assets/thumbnails/im-holding-on-emotional-piano-ballad-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - emotional-ballads
+    playlists: []
     view_count_num: 138
     youtube_metadata:
       published_at: '2026-01-09T16:05:03Z'
@@ -5062,8 +5000,7 @@ songs:
     url: /music/hold-on-pop-nostalgic-90s-energy-horizon-sound/
     thumbnail: /assets/thumbnails/hold-on-pop-nostalgic-90s-energy-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - pop
+    playlists: []
     view_count_num: 62
     youtube_metadata:
       published_at: '2026-01-09T14:11:29Z'
@@ -5146,8 +5083,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/total-eclipse-years-later-80s-piano-power-ballad-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - 80s-rock-pop
+    playlists: []
     view_count_num: 23
     youtube_metadata:
       published_at: '2026-01-06T18:57:03Z'
@@ -5227,8 +5163,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/one-hell-of-a-ride-gritty-southern-rock-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - southern-rock
+    playlists: []
     view_count_num: 303
     youtube_metadata:
       published_at: '2026-01-06T18:34:11Z'
@@ -5312,8 +5247,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/nineteen-summers-emotional-acoustic-pop-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - emotional-ballads
+    playlists: []
     view_count_num: 43
     youtube_metadata:
       published_at: '2026-01-06T18:22:33Z'
@@ -5395,8 +5329,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/a-quiet-little-voice-emotional-pop-empowering-pop-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - emotional-ballads
+    playlists: []
     view_count_num: 23
     youtube_metadata:
       published_at: '2026-01-06T17:13:12Z'
@@ -5476,8 +5409,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/becoming-me-emotional-pop-upbeat-love-song-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - pop
+    playlists: []
     view_count_num: 60
     youtube_metadata:
       published_at: '2026-01-06T17:03:30Z'
@@ -5563,8 +5495,7 @@ songs:
     thumbnail: >-
       /assets/thumbnails/until-the-nightmare-ends-epic-80s-synthwave-stranger-things-inspired-horizon-sound.jpeg
     videostatus: public
-    playlists:
-      - 80s-rock-pop
+    playlists: []
     view_count_num: 89
     youtube_metadata:
       published_at: '2026-01-06T16:28:57Z'

@@ -33,7 +33,9 @@ to find the matching playlist in collections data.
   {% assign all_songs = site.data.youtube_feed.songs %}
   {% assign playlist_songs = "" | split: "" %}
 
-  {% for sid in playlist.songs %}
+  {% assign song_ids = playlist.songs | default: playlist.song_ids %}
+
+  {% for sid in song_ids %}
     {% assign s = all_songs | where: "song_id", sid | first %}
     {% if s %}
       {% assign playlist_songs = playlist_songs | push: s %}

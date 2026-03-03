@@ -129,7 +129,7 @@ function buildSongObject(video) {
     url: `/music/${song_id}/`,
     thumbnail: `/assets/thumbnails/${song_id}.jpeg`,
     videostatus: video.videostatus_raw,
-    playlists: video.playlists || [],
+    playlists: (video.playlists || []).map(id => playlistSlugMap[id]).filter(Boolean),
 
     // Numeric view count (normalized)
     view_count_num: parseInt(
@@ -196,6 +196,12 @@ async function generate() {
 
   console.log("Fetching playlists + membership...");
   const playlists = await fetchPlaylistsWithMembership();
+
+  // Build a lookup: { youtubePlaylistId: slug }
+  const playlistSlugMap = {};
+  for (const pl of youtubePlaylists) {
+    playlistSlugMap[pl.youtube_id] = pl.playlist_id; // slug
+  }
 
   if (!playlists) {
     console.error("ERROR: fetchPlaylistsWithMembership() returned undefined.");

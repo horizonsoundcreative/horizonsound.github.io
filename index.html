@@ -8,18 +8,10 @@ title: Horizon Sound
 
 <div class="homepage-wrapper">
 
-  {%- comment -%}
-    HERO / TEASER SECTION
-    This include is untouched and renders the top hero area.
-  {%- endcomment -%}
   {% include homepage-teaser.html %}
-
-
 
   <!-- ============================================================
        NEW RELEASES
-       Sorted by youtube_metadata.published_at (newest first)
-       Only PUBLIC videos appear here.
   ============================================================ -->
   <section class="homepage-section">
     <h2 class="section-header">New Releases...</h2>
@@ -48,16 +40,10 @@ title: Horizon Sound
   
   <!-- ============================================================
        SPOTLIGHT MUSIC
-       Sorted by view_count (highest first)
-       Only PUBLIC videos appear here.
   ============================================================ -->
   <section class="homepage-section">
     <h2 class="section-header">Spotlight Music</h2>
 
-    {%- comment -%}
-      Sort by view_count_num descending.
-      Liquid sorts strings, so we cast to integer using "plus: 0".
-    {%- endcomment -%}
     {% assign spotlight = songs 
          | where: "videostatus", "public"
          | sort: "view_count_num"
@@ -68,25 +54,11 @@ title: Horizon Sound
     %}
   </section>
 
-
-
   <!-- ============================================================
-       COLLECTIONS (PLAYLISTS)
-       Uses youtube_playlists.yml directly.
-       Each playlist tile links to /music/playlists/<slug>/
+       COLLECTIONS (from playlist_overrides.yml)
   ============================================================ -->
   <section class="homepage-section homepage-collections">
     <h2 class="section-header">Collections</h2>
-
-    {%- comment -%}
-      Playlists already contain:
-        - playlist_id
-        - title
-        - slug
-        - thumbnail
-        - song_ids
-      No additional sorting is required unless you add "order" later.
-    {%- endcomment -%}
 
     {% include homepage-tiles.html 
          items=playlists 

@@ -285,6 +285,37 @@ for (const pl of playlists) {
       thumbnail: pl.thumbnail,
       song_ids: pl.videoIds
     }))
+    
+    /* -------------------------------------------------------------
+       GENERATE PLAYLIST PAGE FILES
+       Creates: _playlists/<slug>
+    ------------------------------------------------------------- */
+    
+    console.log("Generating playlist page files...");
+    
+    const PLAYLIST_PAGES_DIR = "./_playlists";
+    
+    for (const pl of playlists) {
+      const filepath = path.join(PLAYLIST_PAGES_DIR, pl.slug);
+    
+      // Ensure _playlists directory exists
+      ensureDir(PLAYLIST_PAGES_DIR);
+    
+      // Minimal front matter matching your working files
+      const frontMatter =
+    `---
+    layout: playlist
+    playlist_id: ${pl.slug}
+    title: "${pl.title.replace(/"/g, '\\"')}"
+    permalink: /music/playlists/${pl.slug}/
+    ---
+    `;
+    
+      fs.writeFileSync(filepath, frontMatter, "utf8");
+    
+      console.log(`  → ${filepath}`);
+    }
+
   });
   
   /* -------------------------------------------------------------

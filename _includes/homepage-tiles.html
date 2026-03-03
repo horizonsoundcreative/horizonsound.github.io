@@ -64,7 +64,10 @@
           Render ACTIVE collection (has at least one public song)
         {%- endcomment -%}
         {% if has_public %}
-          <a class="tile" href="{{ site.baseurl }}/music/playlists/?playlist_id={{ item.playlist_id }}">
+          <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/">
+            <img src="{{ site.baseurl }}{{ pl.thumbnail }}" alt="{{ pl.title }}">
+            <h3 class="tile-title">{{ pl.title }}</h3>
+          </a>
             
             <img src="{{ site.baseurl }}{{ pl.thumbnail }}" alt="{{ pl.title }}">
             <h3 class="tile-title">{{ pl.title }}</h3>

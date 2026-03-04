@@ -85,21 +85,12 @@ This is where the YouTube Player and Carousel will go
 
 <div id="selected-song-about" style="padding: 20px 20px; color: white;"></div>
 
-{% comment %}
-Song Loop — resolves title + subtitle for each song_id
-No UI yet, just resolving values safely.
-{% endcomment %}
-
 {% assign song_ids = playlist_override.songs | default: playlist.song_ids %}
-
-
-
-
-
 
 {% comment %}
 Expose raw data to JS — no merging, no conditionals
 {% endcomment %}
+
 <script>
   window.PLAYLIST = {{ playlist | jsonify }};
   window.PLAYLIST_OVERRIDE = {{ playlist_override | jsonify }};
@@ -112,10 +103,6 @@ Expose raw data to JS — no merging, no conditionals
 
 <script>
   if (window.SELECTED_SONG_ID && window.YOUTUBE_SONGS && window.MUSIC_OVERRIDES) {
-
-    // Resolve YouTube description
-    const about = song?.youtube_description || "";
-
     const songId = window.SELECTED_SONG_ID;
 
     // Find song in feed
@@ -132,6 +119,9 @@ Expose raw data to JS — no merging, no conditionals
     const extraTitle = override?.extra_title || "";
     const extraHTML = override?.extra_html || "";
 
+    // Resolve YouTube description
+    const about = song?.youtube_description || "";
+
     // Render main header
     const header = document.getElementById("selected-song-header");
     header.innerHTML = `
@@ -145,6 +135,8 @@ Expose raw data to JS — no merging, no conditionals
       ${extraTitle ? `<h4 class="selected-song-extra-title">${extraTitle}</h4>` : ""}
       ${extraHTML ? `<div class="selected-song-extra-html">${extraHTML}</div>` : ""}
     `;
+
+    // Render About (YouTube description)
     const aboutContainer = document.getElementById("selected-song-about");
     aboutContainer.innerHTML = `
       ${about ? `<div class="selected-song-about">${about}</div>` : ""}

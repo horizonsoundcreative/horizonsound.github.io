@@ -91,16 +91,6 @@ No UI yet, just resolving values safely.
 
 {% assign song_ids = playlist_override.songs | default: playlist.song_ids %}
 
-{% for song_id in song_ids %}
-  {% include song-resolve.html song_id=song_id %}
-
-  {% comment %}
-  At this point, for each song:
-    resolved_title     = correct title (override → feed)
-    resolved_subtitle  = override-only subtitle (may be blank)
-  We are not rendering UI yet.
-  {% endcomment %}
-{% endfor %}
 
 
 

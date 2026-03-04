@@ -62,18 +62,12 @@ Load override from playlist_overrides.yml
 
 {% endif %}
 
-{%- comment -%}
-DISPLAY VARIABLES — always defined, override wins, YouTube fills gaps
-{%- endcomment -%}
-{% assign display_title = override.title | default: playlist.title %}
-{% assign display_subtitle = override.subtitle %}
-{% assign display_description = override.description | default: playlist.description %}
 {% assign display_hero = override.hero %}
 
 {% if playlist %}
   {% if display_hero %}
     <div class="hero-banner">
-      <img class="hero-image" src="{{ site.baseurl }}{{ display_hero }}" alt="{{ display_title }}">
+      <img class="hero-image" src="{{ site.baseurl }}{{ display_hero }}" alt="{{ playlist.title }}">
     </div>
   {% else %}
     {% include hero.html %}
@@ -82,7 +76,7 @@ DISPLAY VARIABLES — always defined, override wins, YouTube fills gaps
 <div class="playlist-header">
 
   {%- comment -%}
-  PLAYLIST TITLE (collections only)
+  PLAYLIST TITLE + SUBTITLE (collections only)
   {%- endcomment -%}
   {% if playlist.is_collection %}
     {% if playlist.title %}
@@ -95,85 +89,83 @@ DISPLAY VARIABLES — always defined, override wins, YouTube fills gaps
   {% endif %}
 
   {%- comment -%}
-  SONG TITLE (always shown)
-  Comes from music_overrides if present, otherwise YouTube title.
-  JS will update this dynamically when a song is selected.
+  SONG TITLE (always shown, filled by JS)
   {%- endcomment -%}
   <h1 class="song-title" id="song-title"></h1>
 
   {%- comment -%}
-  SONG SUBTITLE (music_overrides only)
-  Hidden if empty.
-  JS will update this dynamically.
+  SONG SUBTITLE (from music_overrides only, filled by JS)
   {%- endcomment -%}
   <h2 class="song-subtitle" id="song-subtitle"></h2>
 
   {%- comment -%}
   PLAYLIST DESCRIPTION (playlist_overrides only)
-  Hidden if empty.
-  This is NOT the song description.
   {%- endcomment -%}
   {% if playlist.description %}
     <p class="playlist-description">{{ playlist.description }}</p>
   {% endif %}
 
 </div>
-  
-  {% comment %}
-  Build a list of this playlist's songs so JS can map song_id -> title.
-  {% endcomment %}
-  {% assign all_songs = site.data.youtube_feed.songs %}
-  {% assign playlist_songs = "" | split: "" %}
 
-  {% assign song_ids = playlist.song_ids %}
+{% comment %}
+Build a list of this playlist's songs with merged overrides
+{% endcomment %}
+{% assign all_songs = site.data.youtube_feed.songs %}
+{% assign playlist_songs = "" | split: "" %}
+{% assign overrides = site.data.music_overrides.overrides %}
 
-  {% for sid in song_ids %}
-    {% assign s = all_songs | where: "song_id", sid | first %}
-    {% if s %}
-      {% assign playlist_songs = playlist_songs | push: s %}
+{% assign song_ids = playlist.song_ids %}
+
+{% for sid in song_ids %}
+  {% assign s = all_songs | where: "song_id", sid | first %}
+  {% if s %}
+    {% assign o = overrides | where: "song_id", s.song_id | first %}
+    {% if o %}
+      {% assign s = s | merge: o %}
     {% endif %}
-  {% endfor %}
+    {% assign playlist_songs = playlist_songs | push: s %}
+  {% endif %}
+{% endfor %}
 
-  <script>
-    window.playlistSongs = [
-      {% for s in playlist_songs %}
-        {
-          id: "{{ s.song_id }}",
-          title: "{{ s.title | escape }}",
-          subtitle: "{{ s.subtitle | escape }}",
-          description: {{ s.description_html | jsonify }}
-        }
-        {% unless forloop.last %},{% endunless %}
-      {% endfor %}
-    ];
-
-      document.addEventListener("DOMContentLoaded", function () {
-      const params = new URLSearchParams(window.location.search);
-      const songId = params.get("song_id");
-    
-      const titleEl = document.getElementById("dynamic-title");
-      const subtitleEl = document.getElementById("dynamic-subtitle");
-      const descEl = document.getElementById("dynamic-description");
-    
-      if (!window.playlistSongs.length) return;
-    
-      let current = window.playlistSongs[0];
-    
-      if (songId) {
-        const match = window.playlistSongs.find(s => s.id === songId);
-        if (match) current = match;
+<script>
+  window.playlistSongs = [
+    {% for s in playlist_songs %}
+      {
+        id: "{{ s.song_id }}",
+        title: "{{ s.title | escape }}",
+        subtitle: "{{ s.subtitle | escape }}",
+        description: {{ s.description_html | jsonify }},
+        extra_title: "{{ s.extra_title | escape }}",
+        extra_html: {{ s.extra_html | jsonify }},
+        lyrics_html: {{ s.lyrics_html | jsonify }}
       }
-    
-      // Update title + subtitle + description
-      titleEl.textContent = current.title;
-      subtitleEl.textContent = current.subtitle || "";
-      descEl.innerHTML = current.description || "";
-    });
-  </script>
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const songId = params.get("song_id");
+
+    const titleEl = document.getElementById("song-title");
+    const subtitleEl = document.getElementById("song-subtitle");
+
+    if (!window.playlistSongs.length) return;
+
+    let current = window.playlistSongs[0];
+
+    if (songId) {
+      const match = window.playlistSongs.find(s => s.id === songId);
+      if (match) current = match;
+    }
+
+    titleEl.textContent = current.title;
+    subtitleEl.textContent = current.subtitle || "";
+  });
+</script>
 
 {% else %}
 
   <h1>Playlist not found</h1>
 
 {% endif %}
-

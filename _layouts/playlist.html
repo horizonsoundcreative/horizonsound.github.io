@@ -85,6 +85,8 @@ This is where the YouTube Player and Carousel will go
 
 <div id="selected-song-about" style="padding: 20px 20px; color: white;"></div>
 
+<div id="selected-song-lyrics" style="padding: 20px 20px; color: white;"></div>
+
 {% assign song_ids = playlist_override.songs | default: playlist.song_ids %}
 
 {% comment %}
@@ -119,14 +121,16 @@ Expose raw data to JS — no merging, no conditionals
     const extraTitle = override?.extra_title || "";
     const extraHTML = override?.extra_html || "";
 
-    // Resolve YouTube description
+    // Resolve About (from description_html)
     const about = song?.description_html || "";
-    const aboutFormatted = about.replace(/\n/g, "<br>");
     
+    // Resolve lyrics (override only)
+    const lyricsHTML = override?.lyrics_html || "";
+
     // Render main header
     const header = document.getElementById("selected-song-header");
     header.innerHTML = `
-      ${title ? `<h2 class="selected-song-title">${title}</h2>` : ""}
+      ${title ? `<h2 class="selected-song-title">{{ }}</h2>` : ""}
       ${subtitle ? `<h3 class="selected-song-subtitle">${subtitle}</h3>` : ""}
     `;
 
@@ -137,10 +141,16 @@ Expose raw data to JS — no merging, no conditionals
       ${extraHTML ? `<div class="selected-song-extra-html">${extraHTML}</div>` : ""}
     `;
 
-    // Render About (YouTube description)
+    // Render About
     const aboutContainer = document.getElementById("selected-song-about");
     aboutContainer.innerHTML = `
-      ${aboutFormatted ? `<div class="selected-song-about">${aboutFormatted}</div>` : ""}
+      ${about ? `<div class="selected-song-about">${about}</div>` : ""}
+    `;
+
+    // Render Lyrics
+    const lyricsContainer = document.getElementById("selected-song-lyrics");
+    lyricsContainer.innerHTML = `
+      ${lyricsHTML ? `<div class="selected-song-lyrics">${lyricsHTML}</div>` : ""}
     `;
   }
 </script>

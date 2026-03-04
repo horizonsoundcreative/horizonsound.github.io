@@ -54,12 +54,11 @@ Load override from playlist_overrides.yml
 
 {% endif %}
 
-{% comment %}
-HERO — override wins, fallback to global hero
-{% endcomment %}
-{% if playlist.hero %}
+{% assign display_hero = override.hero %}
+
+{% if display_hero %}
   <div class="hero-banner">
-    <img class="hero-image" src="{{ site.baseurl }}{{ playlist.hero }}" alt="{{ playlist.title }}">
+    <img class="hero-image" src="{{ site.baseurl }}{{ display_hero }}" alt="{{ playlist.title }}">
   </div>
 {% else %}
   {% include hero.html %}

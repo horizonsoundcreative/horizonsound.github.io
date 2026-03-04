@@ -136,10 +136,14 @@ Expose raw data to JS — no merging, no conditionals
       ${extraHTML ? `<div class="selected-song-extra-html">${extraHTML}</div>` : ""}
     `;
 
+    // Resolve YouTube description
+    const about = song?.description_html || "";
+    const aboutFormatted = about.replace(/\n/g, "<br>");
+    
     // Render About (YouTube description)
     const aboutContainer = document.getElementById("selected-song-about");
     aboutContainer.innerHTML = `
-      ${about ? `<div class="selected-song-about">${about}</div>` : ""}
+      ${aboutFormatted ? `<div class="selected-song-about">${aboutFormatted}</div>` : ""}
     `;
   }
 </script>

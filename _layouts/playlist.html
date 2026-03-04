@@ -78,11 +78,12 @@ Playlist Description — override only, hide if blank
 <div id="selected-song-header" style="padding: 20px 20px; color: white;"></div>
 
 {% comment %}
-Resolve the selected song (passed via ?song_id=)
+This is where the YouTube Player and Carousel will go
 {% endcomment %}
 
 <div id="selected-song-extra" style="padding: 10px 20px; color: white;"></div>
 
+<div id="selected-song-about" style="padding: 20px 20px; color: white;"></div>
 
 {% comment %}
 Song Loop — resolves title + subtitle for each song_id
@@ -111,6 +112,10 @@ Expose raw data to JS — no merging, no conditionals
 
 <script>
   if (window.SELECTED_SONG_ID && window.YOUTUBE_SONGS && window.MUSIC_OVERRIDES) {
+
+    // Resolve YouTube description
+    const about = song?.youtube_description || "";
+
     const songId = window.SELECTED_SONG_ID;
 
     // Find song in feed
@@ -139,6 +144,10 @@ Expose raw data to JS — no merging, no conditionals
     extra.innerHTML = `
       ${extraTitle ? `<h4 class="selected-song-extra-title">${extraTitle}</h4>` : ""}
       ${extraHTML ? `<div class="selected-song-extra-html">${extraHTML}</div>` : ""}
+    `;
+    const aboutContainer = document.getElementById("selected-song-about");
+    aboutContainer.innerHTML = `
+      ${about ? `<div class="selected-song-about">${about}</div>` : ""}
     `;
   }
 </script>

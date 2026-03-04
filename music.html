@@ -5,6 +5,22 @@ title: Music – Horizon Sound
 
 {% assign all_songs = site.data.youtube_feed.songs %}
 
+<div class="music-page">
+<div class="view-toggle">
+ <div class="view-toggle-buttons">
+   <button class="view-toggle-button active" data-view="grouped">Grouped by Playlist</button>
+   <button class="view-toggle-button" data-view="all">All Songs</button>
+   <button class="view-toggle-button" data-view="carousel">Carousel View</button>
+ </div>
+
+ <h2 class="page-title">Music Catalog</h2>
+ 
+ <div class="mode-toggle">
+   <button class="mode-toggle-button active" data-mode="playlists">Playlist View</button>
+   <button class="mode-toggle-button" data-mode="catalog">Catalog Explorer</button>
+ </div>
+<div class="view-toggle-spacer"></div>
+</div>
 
 <!-- ============================================================
      PLAYLIST VIEW (NEW DEFAULT MODE)
@@ -37,23 +53,6 @@ title: Music – Horizon Sound
 </section>
 
 <section id="music-view-catalog" style="display:none;">
-  <div class="music-page">
-    <div class="view-toggle">
-      <div class="view-toggle-buttons">
-        <button class="view-toggle-button active" data-view="grouped">Grouped by Playlist</button>
-        <button class="view-toggle-button" data-view="all">All Songs</button>
-        <button class="view-toggle-button" data-view="carousel">Carousel View</button>
-      </div>
-    
-      <h2 class="page-title">Music Catalog</h2>
-      
-      <div class="mode-toggle">
-        <button class="mode-toggle-button active" data-mode="playlists">Playlist View</button>
-        <button class="mode-toggle-button" data-mode="catalog">Catalog Explorer</button>
-      </div>
-    <div class="view-toggle-spacer"></div>
-  </div>
-  
   <!-- ============================================================
        GROUPED VIEW
   ============================================================ -->

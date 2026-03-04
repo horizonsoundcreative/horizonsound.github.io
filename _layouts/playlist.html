@@ -128,21 +128,6 @@ Build a list of this playlist's songs with merged overrides
 {% endfor %}
 
 <script>
-  window.playlistSongs = [
-    {% for s in playlist_songs %}
-      {
-        id: "{{ s.song_id }}",
-        title: "{{ s.title | escape }}",
-        subtitle: "{{ s.subtitle | escape }}",
-        description: {{ s.description_html | jsonify }},
-        extra_title: "{{ s.extra_title | escape }}",
-        extra_html: {{ s.extra_html | jsonify }},
-        lyrics_html: {{ s.lyrics_html | jsonify }}
-      }
-      {% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  ];
-
   document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
     const songId = params.get("song_id");

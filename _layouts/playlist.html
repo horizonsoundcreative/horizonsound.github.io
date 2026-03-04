@@ -55,7 +55,7 @@ Load override from playlist_overrides.yml
 {% endif %}
 
 {% comment %}
-HERO ONLY — override wins, fallback to global hero
+HERO — override wins, fallback to global hero
 {% endcomment %}
 {% if playlist.hero %}
   <div class="hero-banner">
@@ -66,6 +66,21 @@ HERO ONLY — override wins, fallback to global hero
 {% endif %}
 
 {% comment %}
-STOP — page intentionally empty except hero.
+PLAYLIST TITLE + SUBTITLE — collections only
+{% endcomment %}
+{% if playlist.is_collection %}
+  <div class="playlist-header">
+    {% if playlist.title %}
+      <h1 class="playlist-title">{{ playlist.title }}</h1>
+    {% endif %}
+
+    {% if playlist.subtitle %}
+      <h2 class="playlist-subtitle">{{ playlist.subtitle }}</h2>
+    {% endif %}
+  </div>
+{% endif %}
+
+{% comment %}
+STOP — page intentionally empty except hero + playlist title/subtitle.
 We will add fields back one at a time.
 {% endcomment %}

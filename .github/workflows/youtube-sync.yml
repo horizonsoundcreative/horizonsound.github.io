@@ -52,7 +52,7 @@ jobs:
         uses: twilio-labs/actions-sms@v1
         with:
           fromPhoneNumber: ${{ secrets.TWILIO_FROM_NUMBER }}
-          toPhoneNumber: "+19189263051"
+          toPhoneNumber: "2629601834"
           message: "YouTube Sync FAILED. Check GitHub Actions."
           accountSid: ${{ secrets.TWILIO_ACCOUNT_SID }}
           authToken: ${{ secrets.TWILIO_AUTH_TOKEN }}

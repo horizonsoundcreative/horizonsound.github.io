@@ -365,7 +365,7 @@ songs:
    youtube_id: "kmQsqEg8ryA"
    url: "/music/ats-9-after-the-silence/"
    image: "/assets/After the Silence.jpeg"
-   videostatus: "public"
+   videostatus: "Public"
    primary_playlist: "After the Silence"
    sequence: 9
    description_html: |
@@ -445,7 +445,7 @@ songs:
    youtube_id: "8ArjDO_Lkz0"
    url: "/music/ats-8-ghostlight/"
    image: "/assets/After the Silence.jpeg"
-   videostatus: "public"
+   videostatus: "Public"
    primary_playlist: "After the Silence"
    sequence: 8
    description_html: |
@@ -529,7 +529,7 @@ songs:
    youtube_id: "YgcaebCs-LY"
    url: "/music/ats-7-if-youd-asked/"
    image: "/assets/After the Silence.jpeg"
-   videostatus: "public"
+   videostatus: "Public"
    primary_playlist: "After the Silence"
    sequence: 7
    description_html: |
@@ -2286,7 +2286,7 @@ songs:
    youtube_id: "vjdOSn3ZuaI"
    url: "/music/instrumental-held-in-the-moment/"
    image: "/assets/Held in the Moment.jpeg"
-   videostatus: "public"
+   videostatus: "Public"
    primary_playlist: "Instrumentals"
    description_html: |
      <p><strong>Official audio for “Held in the Moment” by Horizon Sound.</strong></p>
@@ -2331,7 +2331,7 @@ songs:
    youtube_id: "kIv8cx7JgRM"
    url: "/music/instrumental-the-way-water-moves/"
    image: "/assets/The Way Water Moves.jpeg"
-   videostatus: "public"
+   videostatus: "Public"
    primary_playlist: "Instrumentals"
    description_html: |
      <p><strong>Official audio for “The Way Water Moves” by Horizon Sound.</strong></p>
@@ -2346,7 +2346,7 @@ songs:
    youtube_id: "hT_epxC2G5c"
    url: "/music/instrumental-lines-of-light/"
    image: "/assets/Lines of Light.jpeg"
-   videostatus: "public"
+   videostatus: "Public"
    primary_playlist: "Instrumentals"
    description_html: |
      <p><strong>Official audio for “Lines of Light” by Horizon Sound.</strong></p>
@@ -2361,7 +2361,7 @@ songs:
    youtube_id: "906ItpYuLuQ"
    url: "/music/instrumental-forever-in-a-moment/"
    image: "/assets/Forever in a Moment.jpeg"
-   videostatus: "public"
+   videostatus: "Public"
    primary_playlist: "Instrumentals"
    description_html: |
      <p><strong>Official audio for “Forever in a Moment” by Horizon Sound.</strong></p>
@@ -2823,7 +2823,7 @@ songs:
    youtube_id: "HeD2WbErCKg"
    url: "/music/midnight-saga-midnight-madness/"
    image: "/assets/Midnight Madness.jpeg"
-   videostatus: "public"
+   videostatus: "Public"
    primary_playlist: "Midnight Saga"
    sequence: 3
    description_html: |
@@ -2899,7 +2899,7 @@ songs:
    youtube_id: "Z6AGhE0K-Ro"
    url: "/music/midnight-saga-midnight-mayhem/"
    image: "/assets/Midnight Mayhem.jpeg"
-   videostatus: "public"
+   videostatus: "Public"
    primary_playlist: "Midnight Saga"
    sequence: 2
    description_html: |

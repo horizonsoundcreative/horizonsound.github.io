@@ -6,6 +6,28 @@
   <!-- STRIP -->
   <div class="horizontal-strip" data-strip>
     {% assign items = include.songs %}
+
+    
+    {% if site.detailed-debug %}
+<div style="background:#111; color:#0ff; padding:10px; margin:10px 0; font-size:0.8rem;">
+  <strong>CAROUSEL DEBUG</strong><br>
+  playlist_id: {{ include.playlist_id }}<br>
+  items.size: {{ include.songs.size }}<br><br>
+
+  {% for song in include.songs %}
+    song_id: {{ song.song_id }}<br>
+    title: {{ song.title }}<br>
+    videostatus: {{ song.videostatus | inspect }}<br>
+    is_public: {{ song.videostatus == "public" }}<br>
+    is_coming: {{ song.videostatus != "public" }}<br>
+    ---<br>
+  {% endfor %}
+</div>
+{% endif %}
+
+    
+    
+    
     {% for song in items %}
       {% assign override = site.data.music_overrides.overrides | where: "song_id", song.song_id | first %}
       {% assign display_title = override.title | default: song.title %}

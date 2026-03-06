@@ -118,16 +118,6 @@ title: Music – Horizon Sound
       {% for pl in site.data.youtube_playlists.playlists %}
         {% assign songs_in_list = all_songs | where_exp: "s", "pl.song_ids contains s.song_id" %}
         {% assign playlist_sorted = songs_in_list | sort: "title" %}
-    
-   <pre style="color:#0ff; background:#111; padding:0.5rem; white-space:pre-wrap;">
-DEBUG PLAYLIST
-playlist_id: {{ pl.playlist_id }}
-song_ids: {{ pl.song_ids | jsonify }}
-songs_in_list size: {{ songs_in_list | size }}
-first song song_id: {% if songs_in_list.first %}{{ songs_in_list.first.song_id }}{% else %}(none){% endif %}
-  </pre>
-
-      
       
         {% if playlist_sorted.size > 0 %}
         <section class="playlist-section">

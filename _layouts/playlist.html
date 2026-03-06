@@ -73,7 +73,8 @@ layout: default
   {% endcomment %}
   {% assign ordered_songs = "" | split: "" %}
   {% for sid in ordered_ids %}
-    {% assign s = site.data.youtube_feed.songs | where: "song_id", sid | first %}
+    {% assign id = sid.song_id | default: sid %}
+    {% assign s = site.data.youtube_feed.songs | where: "song_id", id | first %}
     {% if s %}
       {% assign ordered_songs = ordered_songs | push: s %}
     {% endif %}

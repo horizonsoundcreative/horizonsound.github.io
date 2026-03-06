@@ -65,24 +65,40 @@ title: Music – Horizon Sound
         {% assign active_playlists = "" | split: "" %}
         {% assign coming_soon_playlists = "" | split: "" %}
       
-        {% for pl in site.data.youtube_playlists.playlists %}
-          {% assign has_public = false %}
+        {%- comment -%}
+          Load only playlists marked as collections in playlist_overrides.yml
+        {%- endcomment -%}
+        {% assign collection_overrides = site.data.playlist_overrides | where: "is_collection", true %}
       
-          {% for vid in pl.song_ids %}
-            {% assign song = all_songs | where: "song_id", vid | first %}
-            {% if song and song.videostatus == "public" %}
-              {% assign has_public = true %}
+        {%- comment -%}
+          For each override entry, find the matching playlist in youtube_playlists.yml
+        {%- endcomment -%}
+        {% for ov in collection_overrides %}
+          {% assign pl = site.data.youtube_playlists.playlists | where: "playlist_id", ov.playlist_id | first %}
+      
+          {% if pl %}
+            {% assign has_public = false %}
+      
+            {% for vid in pl.song_ids %}
+              {% assign song = all_songs | where: "song_id", vid | first %}
+              {% if song and song.videostatus == "public" %}
+                {% assign has_public = true %}
+              {% endif %}
+            {% endfor %}
+      
+            {% if has_public %}
+              {% assign active_playlists = active_playlists | push: pl %}
+            {% else %}
+              {% assign coming_soon_playlists = coming_soon_playlists | push: pl %}
             {% endif %}
-          {% endfor %}
-      
-          {% if has_public %}
-            {% assign active_playlists = active_playlists | push: pl %}
-          {% else %}
-            {% assign coming_soon_playlists = coming_soon_playlists | push: pl %}
           {% endif %}
         {% endfor %}
       
         <div class="tile-grid">
+      
+          {%- comment -%}
+            ACTIVE collection playlists
+          {%- endcomment -%}
           {% for pl in active_playlists %}
             <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/">
               <img src="{{ site.baseurl }}{{ pl.thumbnail }}" alt="{{ pl.title }}">
@@ -90,6 +106,9 @@ title: Music – Horizon Sound
             </a>
           {% endfor %}
       
+          {%- comment -%}
+            COMING SOON collection playlists
+          {%- endcomment -%}
           {% for pl in coming_soon_playlists %}
             <div class="tile coming-soon">
               <img src="{{ site.baseurl }}{{ pl.thumbnail }}" alt="{{ pl.title }}">
@@ -97,6 +116,7 @@ title: Music – Horizon Sound
               <h3 class="tile-title">{{ pl.title }}</h3>
             </div>
           {% endfor %}
+      
         </div>
       </section>
       

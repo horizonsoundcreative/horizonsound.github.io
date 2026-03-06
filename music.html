@@ -184,10 +184,19 @@ title: Music – Horizon Sound
             {% else %}
               {% assign display_title = song.title %}
             {% endif %}
-            <a class="tile" href="{{ site.baseurl }}{{ song.url }}">
-              <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ display_title }}">
-              <h3 class="tile-title">{{ display_title }}</h3>
-            </a>
+          
+            {% if song.videostatus == "public" %}
+              <a class="tile" href="{{ site.baseurl }}{{ song.url }}">
+                <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ display_title }}">
+                <h3 class="tile-title">{{ display_title }}</h3>
+              </a>
+            {% else %}
+              <div class="tile coming-soon">
+                <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ display_title }}">
+                <div class="tile-overlay">Coming Soon</div>
+                <h3 class="tile-title">{{ display_title }}</h3>
+              </div>
+            {% endif %}
           {% endfor %}
         </div>
     

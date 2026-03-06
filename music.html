@@ -135,7 +135,7 @@ title: Music – Horizon Sound
                 {% assign display_title = song.title %}
               {% endif %}
               {% if song.videostatus == "public" %}
-                <a class="tile" href="{{ site.baseurl }}{{ song.url }}">
+                <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/?song_id={{ song.song_id }}">
                   <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ display_title }}">
                   <h3 class="tile-title">{{ display_title }}</h3>
                 </a>
@@ -186,7 +186,8 @@ title: Music – Horizon Sound
             {% endif %}
           
             {% if song.videostatus == "public" %}
-              <a class="tile" href="{{ site.baseurl }}{{ song.url }}">
+              {% assign parent_playlist = site.data.youtube_playlists.playlists | where_exp: "p", "p.song_ids contains song.song_id" | first %}
+              <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ parent_playlist.playlist_id }}/?song_id={{ song.song_id }}">
                 <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ display_title }}">
                 <h3 class="tile-title">{{ display_title }}</h3>
               </a>

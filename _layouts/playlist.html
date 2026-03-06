@@ -59,45 +59,13 @@ layout: default
   <div id="selected-song-header" class="centered-column"></div>
   <div id="selected-song-player" class="player-frame player-frame--purple"></div>
 
-  {% comment %}
-    Determine correct song order:
-    - If override.songs exists → use that order
-    - Else use playlist.song_ids order
-    - Regular playlists will be alphabetized later
-  {% endcomment %}
+  {% assign ids = playlist_override.songs | default: playlist.song_ids %}
+  {% capture ordered_json %}
+    {% include order-songs.html ids=ids is_collection=playlist_override.is_collection %}
+  {% endcapture %}
+  {% assign ordered_songs = ordered_json | from_json %}
   
-  {% assign songs = site.data.youtube_feed.songs | where_exp: "s", "playlist.song_ids contains s.song_id" %}
-  {% comment %}
-    Determine correct song order:
-    - If override.songs exists → use that order
-    - Else use playlist.song_ids order
-    - Regular playlists alphabetize later
-  {% endcomment %}
-  
-  {% assign ordered_ids = playlist_override.songs | default: playlist.song_ids %}
-  
-  {% comment %}
-    Build ordered song objects safely
-    Handles both:
-    - override.songs: [{ song_id: "abc" }, { song_id: "def" }]
-    - override.songs: ["abc", "def"]
-  {% endcomment %}
-  {% assign ordered_songs = "" | split: "" %}
-  {% for sid in ordered_ids %}
-    {% assign id = sid.song_id | default: sid %}
-    {% assign s = site.data.youtube_feed.songs | where: "song_id", id | first %}
-    {% if s %}
-      {% assign ordered_songs = ordered_songs | push: s %}
-    {% endif %}
-  {% endfor %}
-  
-  {% comment %}
-    If this is NOT a collection, alphabetize
-  {% endcomment %}
-  {% if playlist_override.is_collection != true %}
-    {% assign ordered_songs = ordered_songs | sort: "title" %}
-  {% endif %}
-  
+  {% include carousel.html songs=ordered_songs playlist_id=playlist.playlist_id %}
   {% include carousel.html songs=ordered_songs playlist_id=playlist.playlist_id %}
 
   <div id="selected-song-extra" class="about-block"></div>

@@ -66,28 +66,15 @@ layout: default
     - Regular playlists will be alphabetized later
   {% endcomment %}
   
-  {% assign ordered_ids = playlist_override.songs | default: playlist.song_ids %}
-  
-  {% comment %}
-    Build ordered song objects
-  {% endcomment %}
-  {% assign ordered_songs = "" | split: "" %}
-  {% for sid in ordered_ids %}
-    {% assign id = sid.song_id | default: sid %}
-    {% assign s = site.data.youtube_feed.songs | where: "song_id", id | first %}
-    {% if s %}
-      {% assign ordered_songs = ordered_songs | push: s %}
-    {% endif %}
-  {% endfor %}
-  
-  {% comment %}
-    If this is NOT a collection, alphabetize
-  {% endcomment %}
-  {% if playlist_override.is_collection != true %}
-    {% assign ordered_songs = ordered_songs | sort: "title" %}
-  {% endif %}
-  
-  {% include carousel.html songs=ordered_songs playlist_id=playlist.playlist_id %}
+{% comment %}
+  TEST MODE — use homepage logic exactly
+  This pulls songs directly from youtube_feed in the order they appear there.
+  Coming Soon works perfectly on the homepage with this data.
+{% endcomment %}
+
+{% assign songs = site.data.youtube_feed.songs | where_exp: "s", "playlist.song_ids contains s.song_id" %}
+
+{% include carousel.html songs=songs playlist_id=playlist.playlist_id %}
 
   <div id="selected-song-extra" class="about-block"></div>
   <div class="centered-column">

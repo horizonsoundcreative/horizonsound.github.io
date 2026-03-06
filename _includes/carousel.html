@@ -67,7 +67,9 @@ ITEMS (titles + URLs):
     
     {% for song1 in items %}
       {% if song1.videostatus == "public" %}
-        <a class="carousel-tile" data-song="{{ song1.song_id }}">
+        <a class="carousel-tile"
+           href="{{ site.baseurl }}/music/playlists/{{ include.playlist_id }}/?song_id={{ song1.song_id }}">
+          
           <img src="{{ site.baseurl }}{{ song1.thumbnail }}" alt="{{ song1.title }}">
     
           {% assign override = site.data.music_overrides.overrides | where: "song_id", song1.song_id | first %}
@@ -84,7 +86,8 @@ ITEMS (titles + URLs):
 
     {% for song1 in items %}
       {% unless song1.videostatus == "public" %}
-        <div class="carousel-tile coming-soon" data-song="{{ song1.song_id }}">
+      <div class="carousel-tile coming-soon"
+           data-song="{{ song1.song_id }}">
           <img src="{{ site.baseurl }}{{ song1.thumbnail }}" alt="{{ song1.title }}">
           <div class="tile-overlay">Coming Soon</div>
     

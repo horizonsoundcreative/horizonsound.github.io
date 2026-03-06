@@ -68,6 +68,21 @@ layout: default
   
   {% assign ordered_songs = ordered_json | from_json %}
   
+  <!-- DEBUG BLOCK -->
+  <pre style="background:#111;color:#0f0;padding:10px;font-size:0.8rem;">
+  IDS RAW:
+  {{ ids | jsonify }}
+  
+  ORDERED JSON RAW:
+  {{ ordered_json }}
+  
+  ORDERED SONGS (parsed):
+  {% for s in ordered_songs %}
+    - {{ s.song_id }}
+  {% endfor %}
+  </pre>
+  <!-- END DEBUG -->
+  
   {% include carousel.html songs=ordered_songs playlist_id=playlist.playlist_id %}
 
   <div id="selected-song-extra" class="about-block"></div>

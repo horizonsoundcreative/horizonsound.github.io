@@ -178,15 +178,39 @@ layout: default
     // Render player + carousel
     playerContainer.innerHTML = playerHTML;
     
-    // Add click behavior to tiles
-    // document.querySelectorAll(".carousel-tile").forEach(tile => {
-    //   tile.addEventListener("click", () => {
-    //     const id = tile.getAttribute("data-song-id");
-    //     const url = new URL(window.location.href);
-    //     url.searchParams.set("song_id", id);
-    //     window.location.href = url.toString();
-    //   });
-    // });
+    // --- TILE SELECTION LOGIC (new unified version) ---
+    
+    // 1. Highlight the active tile on load
+    const allTiles = document.querySelectorAll('.carousel-tile');
+    allTiles.forEach(tile => {
+      const id = tile.getAttribute('data-song-id');
+      if (id === songId) {
+        tile.classList.add('active');
+        // Scroll it into view
+        tile.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+      }
+    });
+    
+    // 2. Update active tile on click
+    allTiles.forEach(tile => {
+      tile.addEventListener('click', () => {
+        const id = tile.getAttribute('data-song-id');
+    
+        // Ignore coming soon tiles
+        if (tile.classList.contains('coming-soon')) return;
+    
+        // Remove active from all
+        allTiles.forEach(t => t.classList.remove('active'));
+    
+        // Add active to clicked tile
+        tile.classList.add('active');
+    
+        // Navigate to the new song
+        const url = new URL(window.location.href);
+        url.searchParams.set("song_id", id);
+        window.location.href = url.toString();
+      });
+    });
 
     // Extra fields
     const extra = document.getElementById("selected-song-extra");

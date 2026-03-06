@@ -60,9 +60,13 @@ layout: default
   <div id="selected-song-player" class="player-frame player-frame--purple"></div>
 
   {% assign ids = playlist_override.songs | default: playlist.song_ids %}
+  
   {% capture ordered_json %}
-    {% include order-songs.html ids=ids is_collection=playlist_override.is_collection %}
+    {% include order-songs.html 
+         ids=ids 
+         is_collection=playlist_override.is_collection | default: false %}
   {% endcapture %}
+  
   {% assign ordered_songs = ordered_json | from_json %}
   
   {% include carousel.html songs=ordered_songs playlist_id=playlist.playlist_id %}

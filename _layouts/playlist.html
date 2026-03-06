@@ -66,7 +66,6 @@ layout: default
   {% assign ordered_songs = ordered_json | from_json %}
   
   {% include carousel.html songs=ordered_songs playlist_id=playlist.playlist_id %}
-  {% include carousel.html songs=ordered_songs playlist_id=playlist.playlist_id %}
 
   <div id="selected-song-extra" class="about-block"></div>
   <div class="centered-column">

@@ -172,10 +172,13 @@ layout: default
     console.log("muteParam:", muteParam);
   
     playerContainer.innerHTML = playerHTML;
-
+    
     console.log("ACTUAL IFRAME SRC:", document.getElementById("yt-player").src);
-  
-    // Update extra section
+    
+    // Re-attach YouTube event listener for the new iframe
+    window.addEventListener("message", window._ytMessageHandler);
+
+      // Update extra section
     const extra = document.getElementById("selected-song-extra");
     extra.innerHTML = `
       ${extraTitle ? `<h3 class="section-header">${extraTitle}</h3>` : ""}

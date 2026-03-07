@@ -90,7 +90,28 @@ layout: default
   </script>
   
   <script>
+    window.removeEventListener("message", window._ytMessageHandler);
+    
+    // Auto-advance logic 
+    window._ytMessageHandler = function(event) {
+      if (!event.data || typeof event.data !== "string") return;
+    
+      try {
+        const data = JSON.parse(event.data);
+    
+        if (data.event === "onStateChange" && data.info === 0) {
+          advanceToNextSong(window.SELECTED_SONG_ID);
+        }
+      } catch (e) {}
+    };
+    
+    window.addEventListener("message", window._ytMessageHandler);
+  </script>
+    
+<script>
   function loadSong(songId) {
+    window.SELECTED_SONG_ID = songId;
+
     const song = window.YOUTUBE_SONGS.find(s => s.song_id === songId);
     const override = window.MUSIC_OVERRIDES.find(s => s.song_id === songId);
   
@@ -129,7 +150,7 @@ layout: default
       <div class="video-wrapper">
         <iframe
           id="yt-player"
-          src="https://www.youtube.com/embed/${youtubeId}?autoplay=${autoplayParam}&mute=${muteParam}&enablejsapi=1"
+          src="https://www.youtube.com/embed/${youtubeId}?autoplay=${autoplayParam}&mute=${muteParam}&enablejsapi=1&origin=${window.location.origin}"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
@@ -143,22 +164,6 @@ layout: default
   
     playerContainer.innerHTML = playerHTML;
   
-    // Auto-advance logic using YouTube postMessage events
-    window.addEventListener("message", (event) => {
-      if (!event.data || typeof event.data !== "string") return;
-    
-      try {
-        const data = JSON.parse(event.data);
-    
-        // YouTube sends {"event":"onStateChange","info":0} when video ends
-        if (data.event === "onStateChange" && data.info === 0) {
-          advanceToNextSong(songId);
-        }
-      } catch (e) {
-        // Ignore non-JSON messages
-      }
-    });
-    
     // Update extra section
     const extra = document.getElementById("selected-song-extra");
     extra.innerHTML = `

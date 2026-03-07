@@ -637,7 +637,7 @@ songs:
     videostatus: public
     playlists:
       - calm-cinematic-horizon-sound-instrumentals
-    view_count_num: 50
+    view_count_num: 49
     youtube_metadata:
       published_at: '2026-02-28T13:01:20Z'
       scheduled_at: null
@@ -654,7 +654,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '50'
+        view_count: '49'
         like_count: '0'
         favorite_count: '0'
         comment_count: '0'
@@ -878,7 +878,7 @@ songs:
     videostatus: public
     playlists:
       - calm-cinematic-horizon-sound-instrumentals
-    view_count_num: 50
+    view_count_num: 49
     youtube_metadata:
       published_at: '2026-02-21T13:00:14Z'
       scheduled_at: null
@@ -895,7 +895,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '50'
+        view_count: '49'
         like_count: '1'
         favorite_count: '0'
         comment_count: '0'
@@ -961,7 +961,7 @@ songs:
     videostatus: public
     playlists:
       - calm-cinematic-horizon-sound-instrumentals
-    view_count_num: 57
+    view_count_num: 58
     youtube_metadata:
       published_at: '2026-02-07T13:03:59Z'
       scheduled_at: null
@@ -978,7 +978,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '57'
+        view_count: '58'
         like_count: '2'
         favorite_count: '0'
         comment_count: '1'
@@ -2079,7 +2079,7 @@ songs:
     videostatus: public
     playlists:
       - after-the-silence-performed-by-lydia-ellington
-    view_count_num: 89
+    view_count_num: 90
     youtube_metadata:
       published_at: '2026-02-24T17:00:59Z'
       scheduled_at: null
@@ -2096,7 +2096,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '89'
+        view_count: '90'
         like_count: '2'
         favorite_count: '0'
         comment_count: '0'

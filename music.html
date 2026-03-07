@@ -258,11 +258,21 @@ title: Music – Horizon Sound
           return;
         }
   
-        // Replace the current <main>
-        main.replaceWith(newMain);
-  
-        // Update the URL
-        history.pushState({}, "", url);
+        // Execute all scripts inside the newly loaded <main>
+        newMain.querySelectorAll("script").forEach(oldScript => {
+          const newScript = document.createElement("script");
+        
+          if (oldScript.src) {
+            // External script (like carousel.js)
+            newScript.src = oldScript.src;
+          } else {
+            // Inline script (like loadSong, autoplay logic, etc.)
+            newScript.textContent = oldScript.textContent;
+          }
+        
+          document.body.appendChild(newScript);
+          document.body.removeChild(newScript);
+        });
   
         // Re-run the playlist JS
         const script = newMain.querySelector("script");

@@ -89,132 +89,114 @@ layout: default
 </script>
 
 <script>
-  if (window.SELECTED_SONG_ID && window.YOUTUBE_SONGS && window.MUSIC_OVERRIDES) {
-    
-    const songId = window.SELECTED_SONG_ID;
+function loadSong(songId) {
+  const song = window.YOUTUBE_SONGS.find(s => s.song_id === songId);
+  const override = window.MUSIC_OVERRIDES.find(s => s.song_id === songId);
 
-    const song = window.YOUTUBE_SONGS.find(s => s.song_id === songId);
-    const override = window.MUSIC_OVERRIDES.find(s => s.song_id === songId);
+  const title = override?.title || song?.title || "";
+  const subtitle = override?.subtitle || "";
 
-    const title = override?.title || song?.title || "";
-    const subtitle = override?.subtitle || "";
+  const extraTitle = override?.extra_title || "";
+  const extraHTML = override?.extra_html || "";
+  const about = song?.description_html || "";
+  const lyricsHTML = override?.lyrics_html || "";
 
-    const extraTitle = override?.extra_title || "";
-    const extraHTML = override?.extra_html || "";
+  console.log("=== PLAYLIST DEBUG START ===");
+  console.log("window.autoplay:", window.autoplay);
+  console.log("autoplay.enabled:", window.autoplay?.enabled);
+  console.log("SELECTED_SONG_ID:", songId);
+  console.log("Song object:", song);
+  console.log("Override object:", override);
+  console.log("YouTube ID:", song?.youtube_id);
+  console.log("About to build embed...");
 
-    
-    
-    
-    console.log("=== PLAYLIST DEBUG START ===");
+  // Update header
+  const header = document.getElementById("selected-song-header");
+  header.innerHTML = `
+    ${title ? `<h2 class="section-header">${title}</h2>` : ""}
+    ${subtitle ? `<h3 class="song-subtitle">${subtitle}</h3>` : ""}
+  `;
 
-console.log("window.autoplay:", window.autoplay);
-console.log("autoplay.enabled:", window.autoplay?.enabled);
+  // Build player
+  const playerContainer = document.getElementById("selected-song-player");
+  const youtubeId = song?.youtube_id || "";
 
-console.log("SELECTED_SONG_ID:", window.SELECTED_SONG_ID);
+  const autoplayParam = window.autoplay?.enabled ? "1" : "0";
+  const muteParam = window.autoplay?.enabled ? "0" : "1";
 
-console.log("Song object:", song);
-console.log("Override object:", override);
+  const playerHTML = `
+    <div class="video-wrapper">
+      <iframe
+        id="yt-player"
+        src="https://www.youtube.com/embed/${youtubeId}?autoplay=${autoplayParam}&mute=${muteParam}"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  `;
 
-console.log("YouTube ID:", song?.youtube_id);
+  console.log("Embed URL:", `https://www.youtube.com/embed/${youtubeId}?autoplay=${autoplayParam}&mute=${muteParam}`);
+  console.log("autoplayParam:", autoplayParam);
+  console.log("muteParam:", muteParam);
 
-console.log("About to build embed...");
+  playerContainer.innerHTML = playerHTML;
 
-    
-    
-    const about = song?.description_html || "";
-    const lyricsHTML = override?.lyrics_html || "";
+  // Update extra section
+  const extra = document.getElementById("selected-song-extra");
+  extra.innerHTML = `
+    ${extraTitle ? `<h3 class="section-header">${extraTitle}</h3>` : ""}
+    ${extraHTML ? `<div class="about-text">${extraHTML}</div>` : ""}
+  `;
 
-    // Song header 
-    const header = document.getElementById("selected-song-header");
-    header.innerHTML = `
-      ${title ? `<h2 class="section-header">${title}</h2>` : ""}
-      ${subtitle ? `<h3 class="song-subtitle">${subtitle}</h3>` : ""}
-    `;
+  // Update about section
+  const aboutContainer = document.getElementById("selected-song-about");
+  aboutContainer.innerHTML = `
+    ${about ? `<h3 class="section-header">About</h3>` : ""}
+    ${about ? `<div class="about-text">${about}</div>` : ""}
+  `;
 
-    // Build Player + Carousel
-    const playerContainer = document.getElementById("selected-song-player");
-    
-    // Build the YouTube embed
-    const youtubeId = song?.youtube_id || "";
-    
-    const autoplayParam = window.autoplay?.enabled ? "1" : "0";
-    const muteParam = window.autoplay?.enabled ? "0" : "1";
-    
-    const playerHTML = `
-      <div class="video-wrapper">
-        <iframe
-          id="yt-player"
-          src="https://www.youtube.com/embed/${youtubeId}?autoplay=${autoplayParam}&mute=${muteParam}"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-    `;
+  // Update lyrics
+  const lyricsContainer = document.getElementById("selected-song-lyrics");
+  lyricsContainer.innerHTML = lyricsHTML || "";
 
+  // Update active tile
+  const allTiles = document.querySelectorAll('.carousel-tile');
+  allTiles.forEach(t => t.classList.remove('active'));
+  allTiles.forEach(tile => {
+    if (tile.getAttribute('data-song-id') === songId) {
+      tile.classList.add('active');
+      tile.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+    }
+  });
+}
 
+// INITIAL LOAD
+if (window.SELECTED_SONG_ID) {
+  loadSong(window.SELECTED_SONG_ID);
+}
 
-console.log("Embed URL:", `https://www.youtube.com/embed/${youtubeId}?autoplay=${autoplayParam}&mute=${muteParam}`);
-console.log("autoplayParam:", autoplayParam);
-console.log("muteParam:", muteParam);
+// TILE CLICK HANDLER (no page reload)
+document.querySelectorAll('.carousel-tile').forEach(tile => {
+  tile.addEventListener('click', () => {
+    if (tile.classList.contains('coming-soon')) return;
 
+    const id = tile.getAttribute('data-song-id');
 
+    const url = new URL(window.location.href);
+    url.searchParams.set("song_id", id);
 
-    
-    // Render player + carousel
-    playerContainer.innerHTML = playerHTML;
-    
-    // --- TILE SELECTION LOGIC (final unified version) ---    
-    const allTiles = document.querySelectorAll('.carousel-tile');
-    
-    // 1. Highlight the active tile on load
-    allTiles.forEach(tile => {
-      const id = tile.getAttribute('data-song-id');
-      if (id === songId) {
-        tile.classList.add('active');
-        tile.scrollIntoView({ behavior: 'smooth', inline: 'center' });
-      }
-    });
-    
-    // 2. Update active tile on click
-    allTiles.forEach(tile => {
-      tile.addEventListener('click', () => {
-        const id = tile.getAttribute('data-song-id');
-    
-        // Ignore coming soon tiles completely
-        if (tile.classList.contains('coming-soon')) return;
-    
-        // Remove active from all
-        allTiles.forEach(t => t.classList.remove('active'));
-    
-        // Add active to clicked tile
-        tile.classList.add('active');
-    
-        // Navigate to the new song
-        const url = new URL(window.location.href);
-        url.searchParams.set("song_id", id);
-        window.location.href = url.toString();
-      });
-    });
-    
-    // Extra fields
-    const extra = document.getElementById("selected-song-extra");
-    extra.innerHTML = `
-      ${extraTitle ? `<h3 class="section-header">${extraTitle}</h3>` : ""}
-      ${extraHTML ? `<div class="about-text">${extraHTML}</div>` : ""}
-    `;
+    history.pushState({}, "", url.toString());
+    loadSong(id);
+  });
+});
 
-    // About Description
-    const aboutContainer = document.getElementById("selected-song-about");
-    aboutContainer.innerHTML = `
-      ${about ? `<h3 class="section-header">About</h3>` : ""}
-      ${about ? `<div class="about-text">${about}</div>` : ""}
-    `;
-
-    // Song Lyrics 
-    const lyricsContainer = document.getElementById("selected-song-lyrics");
-    lyricsContainer.innerHTML = lyricsHTML || "";
-  }
+// Handle back/forward navigation
+window.addEventListener("popstate", () => {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("song_id");
+  if (id) loadSong(id);
+});
 </script>
 
 <script src="{{ site.baseurl }}/assets/js/carousel.js"></script>

@@ -131,39 +131,6 @@ layout: default
         </iframe>
       </div>
     `;
-        
-    // Build the carousel tiles
-    // const carouselTiles = window.PLAYLIST.song_ids
-    // .map(id => {
-    //   const s = window.YOUTUBE_SONGS.find(x => x.song_id === id);
-    //   const o = window.MUSIC_OVERRIDES.find(x => x.song_id === id);
-  
-    //   const thumb = window.BASEURL + (o?.thumbnail || s?.thumbnail || "");
-    //   const title = o?.title || s?.title || "";
-    //   const isActive = id === songId;
-    //   const isComingSoon = s?.videostatus === "scheduled";
-  
-    //   return `
-    //     <div 
-    //       class="carousel-tile ${isActive ? "active" : ""} ${isComingSoon ? "coming-soon" : ""}" 
-    //       data-song-id="${id}"
-    //     >
-    //       <img src="${thumb}" alt="${title}">
-    //       ${isComingSoon ? `<div class="tile-overlay">Coming Soon</div>` : ""}
-    //       <div class="tile-title">${title}</div>
-    //     </div>
-    //   `;
-    // })
-    // .join("");
-      
-    // Wrap carousel in the correct structure
-    // const carouselHTML = `
-    //   <div class="carousel">
-    //     <div class="horizontal-strip">
-    //       ${carouselTiles}
-    //     </div>
-    //   </div>
-    // `;
     
     // Render player + carousel
     playerContainer.innerHTML = playerHTML;

@@ -12,6 +12,12 @@ layout: default
       | where: "playlist_id", page.playlist_id
       | first %}
     
+    <!-- Hidden bootstrap iframe to initialize YouTube API -->
+    <iframe
+      id="yt-bootstrap"
+      src="https://www.youtube.com/embed/0?enablejsapi=1&origin={{ site.url }}"
+      style="display:none; visibility:hidden; width:0; height:0; border:0;"
+    ></iframe>
     <script>
       // GLOBAL DEBUG: Log every postMessage from the YouTube iframe
       window.addEventListener("message", (event) => {

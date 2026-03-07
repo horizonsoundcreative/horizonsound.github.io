@@ -258,6 +258,9 @@ title: Music – Horizon Sound
           return;
         }
   
+        main.replaceWith(newMain);
+        history.pushState({}, "", url);
+
         // Execute all scripts inside the newly loaded <main>
         newMain.querySelectorAll("script").forEach(oldScript => {
           const newScript = document.createElement("script");

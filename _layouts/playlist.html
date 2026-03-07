@@ -60,7 +60,7 @@ layout: default
   <div id="selected-song-player" class="player-frame player-frame--purple"></div>
   
   {% assign ids = playlist_override.songs | default: playlist.song_ids %}
-  {% assign is_collection = playlist_override.overrides.is_collection | default: false %}
+  {% assign is_collection = playlist_override.is_collection | default: false %}
   
   {% capture ordered_json %}
     {% include order-songs.html ids=ids is_collection=is_collection %}

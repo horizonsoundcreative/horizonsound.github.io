@@ -10,7 +10,7 @@ title: Horizon Sound
 
 <div class="homepage-wrapper">
 
-  {% include homepage-teaser.html %}
+  {% include stage-announcements.html %}
 
   <!-- ============================================================
        NEW RELEASES
@@ -35,7 +35,7 @@ title: Horizon Sound
          | sort: "youtube_metadata.published_at"
          | reverse %}
   
-    {% include homepage-tiles.html 
+    {% include tiles.html 
          items=new_releases 
          section="new_releases" %}
   </section>
@@ -50,7 +50,7 @@ title: Horizon Sound
          | where: "videostatus", "public"
          | sort: "view_count_num"
          | reverse %}
-    {% include homepage-tiles.html 
+    {% include tiles.html 
          items=spotlight 
          section="spotlight" 
     %}
@@ -62,7 +62,7 @@ title: Horizon Sound
   <section class="homepage-section homepage-collections">
     <h2 class="section-header">Collections</h2>
 
-    {% include homepage-tiles.html 
+    {% include tiles.html 
          items=playlists 
          section="collections" 
     %}

@@ -453,3 +453,42 @@ document.querySelectorAll('.playlist-premium-tile, .tile').forEach(tile => {
   });
 });
 </script>
+
+<script>
+document.querySelectorAll('a').forEach(link => {
+  const href = link.getAttribute('href');
+  if (!href) return;
+
+  // Intercept Home → dynamic navigation
+  const isHome = href === '{{ site.baseurl }}/' || href === '{{ site.baseurl }}';
+  if (!isHome) return;
+
+  link.addEventListener('click', async (e) => {
+    e.preventDefault();
+
+    const url = link.href;
+
+    const response = await fetch(url, { credentials: 'same-origin' });
+    const html = await response.text();
+
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const newMain = doc.querySelector('main');
+
+    document.querySelector('main').replaceWith(newMain);
+    history.pushState({}, "", url);
+
+    const scripts = newMain.querySelectorAll("script");
+    scripts.forEach(oldScript => {
+      const s = document.createElement("script");
+      if (oldScript.src) {
+        s.src = oldScript.src;
+      } else {
+        s.textContent = oldScript.textContent;
+      }
+      document.body.appendChild(s);
+    });
+  });
+});
+</script>
+

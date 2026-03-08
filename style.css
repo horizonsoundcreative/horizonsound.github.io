@@ -1,9 +1,12 @@
-/* ---------------------------------------------
-   Global Body + Page Background
-   --------------------------------------------- */
-body {
+/* -------------------------------------------------------------
+   GLOBAL RESETS + BASE TYPOGRAPHY
+------------------------------------------------------------- */
+html, body {
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: "Inter", sans-serif;
   background: #0d0d0f;
   color: #ffffff;
@@ -11,15 +14,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-/* ---------------------------------------------
-   Global Layout Helpers
-   --------------------------------------------- */
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
+* {
+  box-sizing: border-box;
 }
 
 a {
@@ -27,24 +23,129 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
 }
 
 
-/* ---------------------------------------------
-   Page Wrapper (Stage)
-   --------------------------------------------- */
+/* -------------------------------------------------------------
+   HEADER
+------------------------------------------------------------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.branding .logo {
+  width: 48px;
+  height: 48px;
+}
+
+.branding h1 {
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  font-size: 1rem;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.main-nav a:hover {
+  opacity: 1;
+}
+
+.main-nav a.active {
+  font-weight: 600;
+  opacity: 1;
+}
+
+.autoplay-toggle {
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  transition: background 0.2s ease;
+}
+
+.autoplay-toggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.autoplay-toggle .icon {
+  font-size: 1.2rem;
+}
+
+
+/* -------------------------------------------------------------
+   HERO BANNER
+------------------------------------------------------------- */
+.hero-banner {
+  width: 100%;
+  max-height: 420px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* -------------------------------------------------------------
+   FOOTER
+------------------------------------------------------------- */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+  background: rgba(255, 255, 255, 0.04);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+footer p {
+  margin: 6px 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+
+/* -------------------------------------------------------------
+   STAGE WRAPPER + SECTIONS
+------------------------------------------------------------- */
 .stage-wrapper {
   max-width: 1400px;
   margin: 0 auto;
   padding: 40px 20px;
 }
 
-
-/* ---------------------------------------------
-   Section Layout
-   --------------------------------------------- */
 .stage-section {
   margin-bottom: 60px;
 }
@@ -53,10 +154,6 @@ a {
   margin-top: 80px;
 }
 
-
-/* ---------------------------------------------
-   Section Header
-   --------------------------------------------- */
 .section-header {
   font-size: 1.6rem;
   font-weight: 600;
@@ -65,9 +162,9 @@ a {
 }
 
 
-/* ---------------------------------------------
-   Announcements
-   --------------------------------------------- */
+/* -------------------------------------------------------------
+   ANNOUNCEMENTS
+------------------------------------------------------------- */
 .stage-announcements {
   background: rgba(255, 255, 255, 0.08);
   padding: 20px 24px;
@@ -82,9 +179,9 @@ a {
 }
 
 
-/* ---------------------------------------------
-   Tiles Grid
-   --------------------------------------------- */
+/* -------------------------------------------------------------
+   TILES GRID
+------------------------------------------------------------- */
 .tiles-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -92,9 +189,9 @@ a {
 }
 
 
-/* ---------------------------------------------
-   Tile Base
-   --------------------------------------------- */
+/* -------------------------------------------------------------
+   TILE BASE
+------------------------------------------------------------- */
 .tile {
   position: relative;
   border-radius: 12px;
@@ -110,9 +207,9 @@ a {
 }
 
 
-/* ---------------------------------------------
-   Tile Title
-   --------------------------------------------- */
+/* -------------------------------------------------------------
+   TILE TITLE
+------------------------------------------------------------- */
 .tile-title {
   margin-top: 12px;
   font-size: 1rem;
@@ -121,9 +218,9 @@ a {
 }
 
 
-/* ---------------------------------------------
-   Coming Soon Overlay
-   --------------------------------------------- */
+/* -------------------------------------------------------------
+   COMING SOON OVERLAY
+------------------------------------------------------------- */
 .tile--coming-soon::after {
   content: "Coming Soon";
   position: absolute;
@@ -139,9 +236,9 @@ a {
 }
 
 
-/* ---------------------------------------------
-   Tile Overlay (Hover Gradient)
-   --------------------------------------------- */
+/* -------------------------------------------------------------
+   TILE OVERLAY (HOVER GRADIENT)
+------------------------------------------------------------- */
 .tile-overlay {
   position: absolute;
   inset: 0;

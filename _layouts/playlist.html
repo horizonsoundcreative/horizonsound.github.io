@@ -11,6 +11,7 @@ layout: default
       | where: "playlist_id", page.playlist_id
       | first %}
 
+
     <!-- Load YouTube IFrame API ONCE -->
     <script src="https://www.youtube.com/iframe_api"></script>
 
@@ -159,5 +160,44 @@ layout: default
           }
         });
       }
+    </script>
+
+    <script>
+        document.querySelectorAll('.carousel-tile').forEach(tile => {
+          tile.addEventListener('click', () => {
+            if (tile.classList.contains('coming-soon')) return;
+        
+            const id = tile.getAttribute('data-song-id');
+        
+            const url = new URL(window.location.href);
+            url.searchParams.set("song_id", id);
+            history.pushState({}, "", url.toString());
+        
+            loadSong(id);
+          });
+        });
+
+        function advanceToNextSong(currentId) {
+          const tiles = Array.from(document.querySelectorAll('.carousel-tile:not(.coming-soon)'));
+          const index = tiles.findIndex(t => t.getAttribute('data-song-id') === currentId);
+        
+          if (index === -1) return;
+        
+          const nextTile = tiles[index + 1];
+          if (!nextTile) return;
+        
+          const nextId = nextTile.getAttribute('data-song-id');
+        
+          const url = new URL(window.location.href);
+          url.searchParams.set("song_id", nextId);
+          history.pushState({}, "", url.toString());
+        
+          loadSong(nextId);
+        }
+    </script>
+    <script>
+        if (window.SELECTED_SONG_ID) {
+          loadSong(window.SELECTED_SONG_ID);
+        }
     </script>
 </main>

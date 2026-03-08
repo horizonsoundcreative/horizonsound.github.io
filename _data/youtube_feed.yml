@@ -2396,7 +2396,7 @@ songs:
     videostatus: public
     playlists:
       - midnight-saga
-    view_count_num: 9
+    view_count_num: 10
     youtube_metadata:
       published_at: '2026-03-06T17:01:20Z'
       scheduled_at: null
@@ -2413,7 +2413,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '9'
+        view_count: '10'
         like_count: '1'
         favorite_count: '0'
         comment_count: '0'
@@ -4079,7 +4079,7 @@ songs:
     videostatus: public
     playlists:
       - 90s-pop-pop-rock
-    view_count_num: 45
+    view_count_num: 47
     youtube_metadata:
       published_at: '2026-01-14T12:48:50Z'
       scheduled_at: null
@@ -4096,7 +4096,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '45'
+        view_count: '47'
         like_count: '3'
         favorite_count: '0'
         comment_count: '1'
@@ -4245,7 +4245,7 @@ songs:
     videostatus: public
     playlists:
       - 90s-pop-pop-rock
-    view_count_num: 32
+    view_count_num: 34
     youtube_metadata:
       published_at: '2026-01-13T15:30:30Z'
       scheduled_at: null
@@ -4262,7 +4262,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '32'
+        view_count: '34'
         like_count: '2'
         favorite_count: '0'
         comment_count: '1'
@@ -4497,7 +4497,7 @@ songs:
     videostatus: public
     playlists:
       - acoustic-singer-songwriter
-    view_count_num: 93
+    view_count_num: 94
     youtube_metadata:
       published_at: '2026-01-11T21:59:03Z'
       scheduled_at: null
@@ -4514,7 +4514,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '93'
+        view_count: '94'
         like_count: '2'
         favorite_count: '0'
         comment_count: '1'

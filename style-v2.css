@@ -303,15 +303,6 @@ footer {
 /* ============================================
    COMPONENTS — EMBED / VIDEO
 ============================================ */
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  border-radius: 10px; /* optional, looks great inside the frame */
-}
-
 .video-wrapper iframe {
   position: absolute;
   top: 0;
@@ -1226,13 +1217,6 @@ body::before {
   font-size: 1.75rem;      /* make it visible */
   line-height: 1;
   user-select: none;
-}
-
-#selected-song-player iframe {
-  width: 100%;
-  height: 56.25vw; /* 16:9 ratio */
-  max-height: 480px;
-  border: none;
 }
 
 .player-frame {

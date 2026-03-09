@@ -2152,7 +2152,7 @@ songs:
     videostatus: public
     playlists:
       - after-the-silence-performed-by-lydia-ellington
-    view_count_num: 104
+    view_count_num: 105
     youtube_metadata:
       published_at: '2026-02-24T17:00:59Z'
       scheduled_at: null
@@ -2169,7 +2169,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '104'
+        view_count: '105'
         like_count: '2'
         favorite_count: '0'
         comment_count: '0'

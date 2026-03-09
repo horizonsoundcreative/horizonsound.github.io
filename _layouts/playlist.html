@@ -2,212 +2,256 @@
 layout: default
 ---
 
-<main class="playlist-page">
+<main>
+    <!-- Load the playlist and override data -->
+    {% assign playlist = site.data.youtube_playlists.playlists
+      | where: "playlist_id", page.playlist_id
+      | first %}
+    {% assign playlist_override = site.data.playlist_overrides.overrides
+      | where: "playlist_id", page.playlist_id
+      | first %}
 
-  {% assign playlist = site.data.youtube_playlists.playlists
-    | where: "playlist_id", page.playlist_id
-    | first %}
-  {% assign playlist_override = site.data.playlist_overrides.overrides
-    | where: "playlist_id", page.playlist_id
-    | first %}
 
-  <!-- Load YouTube API -->
-  <script src="https://www.youtube.com/iframe_api"></script>
+    <!-- Load YouTube IFrame API ONCE -->
+    <script src="https://www.youtube.com/iframe_api"></script>
 
-  <script>
-    window.YOUTUBE_SONGS = {{ site.data.youtube_feed.songs | jsonify }};
-    window.MUSIC_OVERRIDES = {{ site.data.music_overrides.overrides | jsonify }};
-    window.BASEURL = "{{ site.baseurl }}";
+    <!-- Make the data visible to JavaScript (ONLY ONCE) -->
+    <script>
+      window.YOUTUBE_SONGS = {{ site.data.youtube_feed.songs | jsonify }};
+      window.MUSIC_OVERRIDES = {{ site.data.music_overrides.overrides | jsonify }};
+      window.BASEURL = "{{ site.baseurl }}";
 
-    const params = new URLSearchParams(window.location.search);
-    window.SELECTED_SONG_ID = params.get("song_id") || null;
-  </script>
+      const params = new URLSearchParams(window.location.search);
+      window.SELECTED_SONG_ID = params.get("song_id") || null;
+    </script>
 
-  <!-- Hero -->
-  {% assign hero_image = playlist_override.hero | default: playlist.hero %}
-  {% if hero_image %}
-    <div class="hero-banner">
-      <img class="hero-image" src="{{ site.baseurl }}{{ hero_image }}" alt="{{ playlist.title }}">
+    <!-- Hero -->
+    {% assign hero_image = playlist_override.hero | default: playlist.hero %}
+    {% if hero_image %}
+      <div class="hero-banner">
+        <img class="hero-image" src="{{ site.baseurl }}{{ hero_image }}" alt="{{ playlist.title }}">
+      </div>
+    {% else %}
+      {% include hero.html %}
+    {% endif %}
+
+    <!-- Playlist Header -->
+    {% assign header_title = playlist_override.title | default: playlist.title %}
+    {% assign header_subtitle = playlist_override.subtitle %}
+    <div class="playlist-header">
+      {% if header_title %}
+        <h1 class="playlist-title">{{ header_title }}</h1>
+      {% endif %}
+      {% if header_subtitle %}
+        <h2 class="playlist-title">{{ header_subtitle }}</h2>
+      {% endif %}
     </div>
-  {% else %}
-    {% include hero.html %}
-  {% endif %}
 
-  <!-- Header -->
-  {% assign header_title = playlist_override.title | default: playlist.title %}
-  {% assign header_subtitle = playlist_override.subtitle %}
-  <div class="playlist-header">
-    {% if header_title %}
-      <h1 class="playlist-title">{{ header_title }}</h1>
+    <!-- Playlist Description -->
+    {% assign playlist_description = playlist_override.description %}
+    {% if playlist_description %}
+      <div class="playlist-description">
+        {{ playlist_description }}
+      </div>
     {% endif %}
-    {% if header_subtitle %}
-      <h2 class="playlist-title">{{ header_subtitle }}</h2>
-    {% endif %}
-  </div>
 
-  <!-- Description -->
-  {% assign playlist_description = playlist_override.description %}
-  {% if playlist_description %}
-    <div class="playlist-description">
-      {{ playlist_description }}
+    <!-- Song Sections -->
+    <div id="selected-song-header" class="centered-column"></div>
+    <div id="selected-song-player" class="player-frame player-frame--purple"></div>
+
+    {% assign ids = playlist_override.songs | default: playlist.song_ids %}
+    {% assign ordered_songs = "" | split: "" %}
+    {% for id in ids %}
+      {% assign s = site.data.youtube_feed.songs | where: "song_id", id | first %}
+      {% if s %}
+        {% assign ordered_songs = ordered_songs | push: s %}
+      {% endif %}
+    {% endfor %}
+
+    {% if playlist_override.is_collection != true %}
+      {% assign ordered_songs = ordered_songs | sort: "title" %}
+    {% endif %}
+
+    {% include carousel.html songs=ordered_songs playlist_id=playlist.playlist_id %}
+
+    <div id="selected-song-extra" class="about-block"></div>
+    <div class="centered-column">
+      <div id="selected-song-about" class="about-block"></div>
     </div>
-  {% endif %}
+    <div id="selected-song-lyrics" class="lyrics-block"></div>
 
-  <!-- Song Header -->
-  <div id="selected-song-header" class="centered-column"></div>
+    <!-- Player Logic (clean, final, working) -->
+    <script>
+      let YT_PLAYER = null;
+      let YT_READY = false;
 
-  <!-- PLAYER (only one container) -->
-  <div id="selected-song-player" class="player-frame player-frame--purple"></div>
-
-  <!-- CAROUSEL (kept OUTSIDE the frame for now) -->
-  {% assign ids = playlist_override.songs | default: playlist.song_ids %}
-  {% assign ordered_songs = "" | split: "" %}
-  {% for id in ids %}
-    {% assign s = site.data.youtube_feed.songs | where: "song_id", id | first %}
-    {% if s %}
-      {% assign ordered_songs = ordered_songs | push: s %}
-    {% endif %}
-  {% endfor %}
-
-  {% if playlist_override.is_collection != true %}
-    {% assign ordered_songs = ordered_songs | sort: "title" %}
-  {% endif %}
-
-  {% include carousel.html songs=ordered_songs playlist_id=playlist.playlist_id %}
-
-  <!-- Extra / About / Lyrics -->
-  <div id="selected-song-extra" class="about-block"></div>
-  <div class="centered-column">
-    <div id="selected-song-about" class="about-block"></div>
-  </div>
-  <div id="selected-song-lyrics" class="lyrics-block"></div>
-
-  <!-- Player Logic -->
-  <script>
-    let YT_PLAYER = null;
-    let YT_READY = false;
-
-    function onYouTubeIframeAPIReady() {
-      YT_READY = true;
-      if (window.SELECTED_SONG_ID) loadSong(window.SELECTED_SONG_ID);
-    }
-
-    function buildPlayer(youtubeId) {
-      if (!YT_READY) {
-        setTimeout(() => buildPlayer(youtubeId), 100);
-        return;
+      function onYouTubeIframeAPIReady() {
+        YT_READY = true;
       }
 
-      if (!YT_PLAYER) {
-        YT_PLAYER = new YT.Player('selected-song-player', {
-          videoId: youtubeId,
-          playerVars: { autoplay: 1, mute: 0, controls: 1, rel: 0 },
-          events: { 'onStateChange': onPlayerStateChange }
-        });
-      } else {
-        YT_PLAYER.loadVideoById(youtubeId);
-      }
-    }
-
-    function onPlayerStateChange(event) {
-      if (event.data === YT.PlayerState.ENDED) {
-        advanceToNextSong(window.SELECTED_SONG_ID);
-      }
-    }
-
-    function loadSong(songId) {
-      window.SELECTED_SONG_ID = songId;
-
-      const song = window.YOUTUBE_SONGS.find(s => s.song_id === songId);
-      const override = window.MUSIC_OVERRIDES.find(s => s.song_id === songId);
-
-      const title = override?.title || song?.title || "";
-      const subtitle = override?.subtitle || "";
-      const extraTitle = override?.extra_title || "";
-      const extraHTML = override?.extra_html || "";
-      const about = song?.description_html || "";
-      const lyricsHTML = override?.lyrics_html || "";
-      const youtubeId = song?.youtube_id || "";
-
-      document.getElementById("selected-song-header").innerHTML = `
-        ${title ? `<h2 class="section-header">${title}</h2>` : ""}
-        ${subtitle ? `<h3 class="song-subtitle">${subtitle}</h3>` : ""}
-      `;
-
-      buildPlayer(youtubeId);
-
-      document.getElementById("selected-song-extra").innerHTML = `
-        ${extraTitle ? `<h3 class="section-header">${extraTitle}</h3>` : ""}
-        ${extraHTML ? `<div class="about-text">${extraHTML}</div>` : ""}
-      `;
-
-      document.getElementById("selected-song-about").innerHTML = `
-        ${about ? `<h3 class="section-header">About</h3>` : ""}
-        ${about ? `<div class="about-text">${about}</div>` : ""}
-      `;
-
-      document.getElementById("selected-song-lyrics").innerHTML = lyricsHTML || "";
-
-      document.querySelectorAll('.carousel-tile').forEach(tile => {
-        tile.classList.remove('active');
-        if (tile.getAttribute('data-song-id') === songId) {
-          tile.classList.add('active');
-          tile.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+      function buildPlayer(youtubeId) {
+        if (!YT_READY) {
+          setTimeout(() => buildPlayer(youtubeId), 100);
+          return;
         }
+
+        if (!YT_PLAYER) {
+          YT_PLAYER = new YT.Player('selected-song-player', {
+            videoId: youtubeId,
+            playerVars: {
+              autoplay: 1,
+              mute: 0,
+              controls: 1,
+              rel: 0
+            },
+            events: {
+              'onStateChange': onPlayerStateChange
+            }
+          });
+        } else {
+          YT_PLAYER.loadVideoById(youtubeId);
+        }
+      }
+
+      function onPlayerStateChange(event) {
+        if (event.data === YT.PlayerState.ENDED) {
+          advanceToNextSong(window.SELECTED_SONG_ID);
+        }
+      }
+
+      function loadSong(songId) {
+        window.SELECTED_SONG_ID = songId;
+
+        const song = window.YOUTUBE_SONGS.find(s => s.song_id === songId);
+        const override = window.MUSIC_OVERRIDES.find(s => s.song_id === songId);
+
+        const title = override?.title || song?.title || "";
+        const subtitle = override?.subtitle || "";
+        const extraTitle = override?.extra_title || "";
+        const extraHTML = override?.extra_html || "";
+        const about = song?.description_html || "";
+        const lyricsHTML = override?.lyrics_html || "";
+        const youtubeId = song?.youtube_id || "";
+
+        document.getElementById("selected-song-header").innerHTML = `
+          ${title ? `<h2 class="section-header">${title}</h2>` : ""}
+          ${subtitle ? `<h3 class="song-subtitle">${subtitle}</h3>` : ""}
+        `;
+
+        buildPlayer(youtubeId);
+
+        document.getElementById("selected-song-extra").innerHTML = `
+          ${extraTitle ? `<h3 class="section-header">${extraTitle}</h3>` : ""}
+          ${extraHTML ? `<div class="about-text">${extraHTML}</div>` : ""}
+        `;
+
+        document.getElementById("selected-song-about").innerHTML = `
+          ${about ? `<h3 class="section-header">About</h3>` : ""}
+          ${about ? `<div class="about-text">${about}</div>` : ""}
+        `;
+
+        document.getElementById("selected-song-lyrics").innerHTML = lyricsHTML || "";
+
+        document.querySelectorAll('.carousel-tile').forEach(tile => {
+          tile.classList.remove('active');
+          if (tile.getAttribute('data-song-id') === songId) {
+            tile.classList.add('active');
+            tile.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+          }
+        });
+      }
+    </script>
+
+    <script>
+        document.querySelectorAll('.carousel-tile').forEach(tile => {
+          tile.addEventListener('click', () => {
+            if (tile.classList.contains('coming-soon')) return;
+        
+            const id = tile.getAttribute('data-song-id');
+        
+            const url = new URL(window.location.href);
+            url.searchParams.set("song_id", id);
+            history.pushState({}, "", url.toString());
+        
+            loadSong(id);
+          });
+        });
+
+        function advanceToNextSong(currentId) {
+          const tiles = Array.from(document.querySelectorAll('.carousel-tile:not(.coming-soon)'));
+          const index = tiles.findIndex(t => t.getAttribute('data-song-id') === currentId);
+        
+          if (index === -1) return;
+        
+          const nextTile = tiles[index + 1];
+          if (!nextTile) return;
+        
+          const nextId = nextTile.getAttribute('data-song-id');
+        
+          const url = new URL(window.location.href);
+          url.searchParams.set("song_id", nextId);
+          history.pushState({}, "", url.toString());
+        
+          loadSong(nextId);
+        }
+    </script>
+    <script>
+        if (window.SELECTED_SONG_ID) {
+          loadSong(window.SELECTED_SONG_ID);
+        }
+    </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('a').forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href) return;
+
+    // Intercept internal navigation (Home, Music, Playlists)
+    const isInternal =
+      href.startsWith('{{ site.baseurl }}/music') ||
+      href === '{{ site.baseurl }}/' ||
+      href === '{{ site.baseurl }}' ||
+      href === '/' ||
+      href === '/music.html'; ||
+      href === '/about.html'; ||
+      href === '/index.html';
+
+    if (!isInternal) return;
+
+    link.addEventListener('click', async (e) => {
+      e.preventDefault();
+
+      const url = link.href;
+
+      // Fetch the target page
+      const response = await fetch(url, { credentials: 'same-origin' });
+      const html = await response.text();
+
+      // Parse and extract the new <main>
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const newMain = doc.querySelector('main');
+
+      // Replace current <main>
+      document.querySelector('main').replaceWith(newMain);
+
+      // Update URL without reload
+      history.pushState({}, "", url);
+
+      // Re-run scripts inside the new <main>
+      const scripts = newMain.querySelectorAll("script");
+      scripts.forEach(oldScript => {
+        const s = document.createElement("script");
+        if (oldScript.src) {
+          s.src = oldScript.src;
+        } else {
+          s.textContent = oldScript.textContent;
+        }
+        document.body.appendChild(s);
       });
-    }
-
-  
-  document.querySelector('main').replaceWith(newMain);
-
-// re-run scripts inside newMain
-const scripts = newMain.querySelectorAll("script");
-scripts.forEach(oldScript => {
-  const s = document.createElement("script");
-  if (oldScript.src) {
-    s.src = oldScript.src;
-  } else {
-    s.textContent = oldScript.textContent;
-  }
-  document.body.appendChild(s);
-});
-    // 🔥 Force YouTube API to reinitialize AFTER new DOM exists
-if (typeof onYouTubeIframeAPIReady === "function") {
-  onYouTubeIframeAPIReady();
-}
-
-  
-  </script>
-
-  <!-- Carousel click logic -->
-  <script>
-    document.addEventListener("click", e => {
-      const tile = e.target.closest('.carousel-tile');
-      if (!tile || tile.classList.contains('coming-soon')) return;
-
-      const id = tile.getAttribute('data-song-id');
-      const url = new URL(window.location.href);
-      url.searchParams.set("song_id", id);
-      history.pushState({}, "", url.toString());
-
-      loadSong(id);
     });
-
-    function advanceToNextSong(currentId) {
-      const tiles = Array.from(document.querySelectorAll('.carousel-tile:not(.coming-soon)'));
-      const index = tiles.findIndex(t => t.getAttribute('data-song-id') === currentId);
-      if (index === -1) return;
-
-      const nextTile = tiles[index + 1];
-      if (!nextTile) return;
-
-      const nextId = nextTile.getAttribute('data-song-id');
-      const url = new URL(window.location.href);
-      url.searchParams.set("song_id", nextId);
-      history.pushState({}, "", url.toString());
-
-      loadSong(nextId);
-    }
-  </script>
-
+  });
+});
+</script>
 </main>

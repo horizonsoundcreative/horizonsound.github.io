@@ -57,11 +57,13 @@ layout: default
 
     <!-- Song Sections -->
     <div id="selected-song-header" class="centered-column"></div>
-    <div id="selected-song-player" class="player-frame player-frame--purple"></div>
-
+    
     <div class="player-frame player-frame--purple">
+    
+        <!-- The ONLY player container -->
         <div id="selected-song-player"></div>
     
+        <!-- Carousel lives inside the same frame -->
         {% assign ids = playlist_override.songs | default: playlist.song_ids %}
         {% assign ordered_songs = "" | split: "" %}
         {% for id in ids %}

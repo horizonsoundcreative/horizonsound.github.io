@@ -123,9 +123,19 @@ function formatDescriptionToHtml(desc, playlistTitleMap) {
       continue;
     }
 
-    // Playlist block
+    // Playlist block: multiple playlist URLs in one paragraph
     if (playlistUrlCount >= 2) {
-      const items = linked
+      // Split the paragraph at the first URL
+      const firstUrlIndex = linked.search(/https?:\/\//);
+    
+      // Extract header text (everything before the first URL)
+      const headerText = linked.slice(0, firstUrlIndex).trim();
+    
+      // Extract the playlist portion (everything after the header)
+      const playlistPortion = linked.slice(firstUrlIndex).trim();
+    
+      // Split playlist items on " • "
+      const items = playlistPortion
         .split(" • ")
         .map(item => {
           const match = item.match(/<a [^>]+>.*?<\/a>/);
@@ -133,9 +143,12 @@ function formatDescriptionToHtml(desc, playlistTitleMap) {
         })
         .filter(Boolean)
         .join("");
-
-      output.push(`<ul class="playlist-links">${items}</ul>`);
-      continue;
+    
+      // Emit header + list
+      return [
+        headerText ? `<p class="playlist-header">${headerText}</p>` : "",
+        `<ul class="playlist-links">${items}</ul>`
+      ].join("");
     }
 
     // Vibe block

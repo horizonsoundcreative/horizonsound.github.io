@@ -1240,3 +1240,129 @@ body::before {
   max-width: 900px;
   margin: 0 auto;
 }
+
+
+
+
+
+/* ============================================
+   PLAYLIST PAGE — FULL-WIDTH APPLE TV OVERRIDES
+============================================ */
+
+/* Full-width page */
+.playlist-page {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Full-bleed hero */
+.playlist-page .hero-banner img.hero-image {
+  width: 100%;
+  height: 480px !important;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Header */
+.playlist-page .playlist-header {
+  width: 100%;
+  max-width: 1400px;
+  margin: -160px auto 40px;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.playlist-page .playlist-header .playlist-title {
+  font-size: 3.2rem !important;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* ============================================
+   PLAYER FRAME — FULL WIDTH + CAROUSEL INSIDE
+============================================ */
+
+.playlist-page .player-frame {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 60px 0 !important;
+  border-radius: 0 !important;
+
+  background: rgba(255,255,255,0.06) !important;
+  backdrop-filter: blur(14px) !important;
+  box-shadow: inset 0 0 60px rgba(0,0,0,0.35);
+
+  /* DEBUG */
+  border: 4px solid red !important;
+}
+
+/* Center all children inside the full-width frame */
+.playlist-page .player-frame > * {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* ============================================
+   VIDEO — REMOVE ALL HEIGHT CONSTRAINTS
+============================================ */
+
+/* Remove old 16:9 padding-bottom */
+.playlist-page .player-frame .video-wrapper {
+  padding-bottom: 0 !important;
+  height: auto !important;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Remove iframe max-height and allow cinematic height */
+.playlist-page .player-frame iframe {
+  width: 100% !important;
+  height: 70vh !important;
+  max-height: none !important;
+  border: none !important;
+}
+
+/* Ensure container grows with iframe */
+.playlist-page #selected-song-player {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* ============================================
+   CAROUSEL — SHRINK TO CORRECT SIZE
+============================================ */
+
+.playlist-page .player-frame .carousel-tile {
+  flex: 0 0 160px !important;
+  width: 160px !important;
+}
+
+.playlist-page .player-frame .carousel-tile img {
+  height: 160px !important;
+  border-radius: 10px;
+}
+
+/* Carousel container */
+.playlist-page .player-frame .carousel {
+  max-width: 1400px;
+  margin: 40px auto 0 !important;
+  padding: 0 40px;
+}
+
+/* ============================================
+   TEXT SECTIONS
+============================================ */
+
+.playlist-page .playlist-description,
+.playlist-page .about-block,
+.playlist-page .lyrics-block {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 40px;
+  text-align: center;
+}

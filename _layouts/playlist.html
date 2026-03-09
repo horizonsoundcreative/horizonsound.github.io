@@ -57,27 +57,22 @@ layout: default
 
     <!-- Song Sections -->
     <div id="selected-song-header" class="centered-column"></div>
-        
-    <div class="player-frame player-frame--purple">
-    
-        <!-- The ONLY player container -->
-        <div id="selected-song-player"></div>
-    
-        {% assign ids = playlist_override.songs | default: playlist.song_ids %}
-        {% assign ordered_songs = "" | split: "" %}
-        {% for id in ids %}
-          {% assign s = site.data.youtube_feed.songs | where: "song_id", id | first %}
-          {% if s %}
-            {% assign ordered_songs = ordered_songs | push: s %}
-          {% endif %}
-        {% endfor %}
-    
-        {% if playlist_override.is_collection != true %}
-          {% assign ordered_songs = ordered_songs | sort: "title" %}
-        {% endif %}
-    
-        {% include carousel.html songs=ordered_songs playlist_id=playlist.playlist_id %}
-    </div>
+    <div id="selected-song-player" class="player-frame player-frame--purple"></div>
+
+    {% assign ids = playlist_override.songs | default: playlist.song_ids %}
+    {% assign ordered_songs = "" | split: "" %}
+    {% for id in ids %}
+      {% assign s = site.data.youtube_feed.songs | where: "song_id", id | first %}
+      {% if s %}
+        {% assign ordered_songs = ordered_songs | push: s %}
+      {% endif %}
+    {% endfor %}
+
+    {% if playlist_override.is_collection != true %}
+      {% assign ordered_songs = ordered_songs | sort: "title" %}
+    {% endif %}
+
+    {% include carousel.html songs=ordered_songs playlist_id=playlist.playlist_id %}
     
     <div id="selected-song-extra" class="about-block"></div>
     <div class="centered-column">

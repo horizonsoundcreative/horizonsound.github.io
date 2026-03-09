@@ -1225,5 +1225,9 @@ body::before {
   margin: 0 auto;
 }
 
+/* DEBUG — temporary red outline around the player frame */
+.player-frame {
+  outline: 4px solid red !important;
+}
 
 

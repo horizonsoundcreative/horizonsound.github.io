@@ -111,7 +111,6 @@ function formatDescriptionToHtml(desc, playlistTitleMap) {
     const linked = linkify(collapsed, playlistTitleMap);
 
     const playlistUrls = (linked.match(/playlist\?list=/g) || []).length;
-    const containsInlineBullets = linked.includes(" • ");
     const containsVibeEmoji = /🎧|🎤|🎛️|⚡/.test(collapsed);
 
     // --- FORMAT A: One-paragraph playlist block ---

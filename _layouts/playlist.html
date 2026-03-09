@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<main class="playlist-page">
+<main>
     <!-- Load the playlist and override data -->
     {% assign playlist = site.data.youtube_playlists.playlists
       | where: "playlist_id", page.playlist_id
@@ -73,7 +73,7 @@ layout: default
     {% endif %}
 
     {% include carousel.html songs=ordered_songs playlist_id=playlist.playlist_id %}
-    
+
     <div id="selected-song-extra" class="about-block"></div>
     <div class="centered-column">
       <div id="selected-song-about" class="about-block"></div>
@@ -233,7 +233,23 @@ document.addEventListener("DOMContentLoaded", () => {
       const doc = parser.parseFromString(html, 'text/html');
       const newMain = doc.querySelector('main');
 
+      // Replace current <main>
       document.querySelector('main').replaceWith(newMain);
+
+      // Update URL without reload
+      history.pushState({}, "", url);
+
+      // Re-run scripts inside the new <main>
+      const scripts = newMain.querySelectorAll("script");
+      scripts.forEach(oldScript => {
+        const s = document.createElement("script");
+        if (oldScript.src) {
+          s.src = oldScript.src;
+        } else {
+          s.textContent = oldScript.textContent;
+        }
+        document.body.appendChild(s);
+      });
     });
   });
 });

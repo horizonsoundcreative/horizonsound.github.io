@@ -219,6 +219,7 @@ async function generate() {
 
   console.log("Fetching playlists + membership...");
   const playlists = await fetchPlaylistsWithMembership();
+  const playlistTitleMap = {};
 
   for (const pl of playlists) {
     playlistTitleMap[pl.id] = pl.title;

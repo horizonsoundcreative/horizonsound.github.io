@@ -98,28 +98,32 @@ layout: default
         YT_READY = true;
       }
 
-      function buildPlayer(youtubeId) {
-        if (!YT_READY) {
-          setTimeout(() => buildPlayer(youtubeId), 100);
-          return;
+        function buildPlayer(youtubeId) {
+          if (!YT_READY || !ensurePlayerContainer()) {
+            setTimeout(() => buildPlayer(youtubeId), 50);
+            return;
+          }
+        
+          if (!YT_PLAYER) {
+            YT_PLAYER = new YT.Player('player-container', {
+              videoId: youtubeId,
+              playerVars: {
+                autoplay: 1,
+                mute: 0,
+                controls: 1,
+                rel: 0
+              },
+              events: {
+                'onStateChange': onPlayerStateChange
+              }
+            });
+          } else {
+            YT_PLAYER.loadVideoById(youtubeId);
+          }
         }
-          
-        if (!YT_PLAYER) {
-          YT_PLAYER = new YT.Player('player-container', {
-            videoId: youtubeId,
-            playerVars: {
-              autoplay: 1,
-              mute: 0,
-              controls: 1,
-              rel: 0
-            },
-            events: {
-              'onStateChange': onPlayerStateChange
-            }
-          });
-        } else {
-          YT_PLAYER.loadVideoById(youtubeId);
-        }
+
+      function ensurePlayerContainer() {
+        return document.getElementById("player-container") !== null;
       }
 
       function onPlayerStateChange(event) {

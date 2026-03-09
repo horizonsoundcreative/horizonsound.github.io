@@ -109,32 +109,17 @@ function formatDescriptionToHtml(desc, playlistTitleMap) {
     const collapsed = p.replace(/\n+/g, " ").trim();
     const linked = linkify(collapsed, playlistTitleMap);
 
-    const containsUrl = /https?:\/\//.test(linked);
-    const playlistUrlCount = (linked.match(/playlist\?list=/g) || []).length;
+    const playlistUrls = (linked.match(/playlist\?list=/g) || []).length;
+    const containsBullet = linked.includes(" • ");
     const containsVibeEmoji = /🎧|🎤|🎛️|⚡/.test(collapsed);
 
-    // Detect playlist header (structural)
-    const next = rawParagraphs[i + 1] || "";
-    const nextLinked = linkify(next, playlistTitleMap);
-    const nextIsPlaylist = (nextLinked.match(/playlist\?list=/g) || []).length >= 2;
-
-    if (!containsUrl && !containsVibeEmoji && nextIsPlaylist) {
-      output.push(`<p class="playlist-header">${linked}</p>`);
-      continue;
-    }
-
-    // Playlist block: multiple playlist URLs in one paragraph
-    if (playlistUrlCount >= 2) {
-      // Split the paragraph at the first URL
+    // --- PLAYLIST BLOCK ---
+    if (playlistUrls >= 2 && containsBullet) {
+      // Extract header (everything before first URL)
       const firstUrlIndex = linked.search(/https?:\/\//);
-    
-      // Extract header text (everything before the first URL)
       const headerText = linked.slice(0, firstUrlIndex).trim();
-    
-      // Extract the playlist portion (everything after the header)
       const playlistPortion = linked.slice(firstUrlIndex).trim();
-    
-      // Split playlist items on " • "
+
       const items = playlistPortion
         .split(" • ")
         .map(item => {
@@ -143,15 +128,13 @@ function formatDescriptionToHtml(desc, playlistTitleMap) {
         })
         .filter(Boolean)
         .join("");
-    
-      // Emit header + list
-      return [
-        headerText ? `<p class="playlist-header">${headerText}</p>` : "",
-        `<ul class="playlist-links">${items}</ul>`
-      ].join("");
+
+      output.push(`<p class="playlist-header">${headerText}</p>`);
+      output.push(`<ul class="playlist-links">${items}</ul>`);
+      continue;
     }
 
-    // Vibe block
+    // --- VIBE BLOCK ---
     if (containsVibeEmoji && collapsed.includes(":")) {
       const parts = collapsed.split(/ (?=🎤|🎛️|⚡)/);
       const items = parts.map(part => `<li>${part}</li>`).join("");
@@ -159,7 +142,7 @@ function formatDescriptionToHtml(desc, playlistTitleMap) {
       continue;
     }
 
-    // Normal paragraph
+    // --- NORMAL PARAGRAPH ---
     output.push(`<p>${linked}</p>`);
   }
 

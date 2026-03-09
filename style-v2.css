@@ -1224,6 +1224,6 @@ body::before {
   max-width: 900px;
   margin: 0 auto;
   outline: 4px solid red !important;
+  overflow: visible !important;
 }
-
 

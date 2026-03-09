@@ -1220,11 +1220,11 @@ body::before {
 }
 
 .player-frame {
-  width: 100%;
-  max-width: 900px;
   margin: 0 auto;
   outline: 4px solid red !important;
   overflow: visible !important;
+  max-width: none !important;
+  width: 100% !important;
 }
 
 /* PLAYER: full-width cinematic sizing */

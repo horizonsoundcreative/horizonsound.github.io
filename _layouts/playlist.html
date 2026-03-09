@@ -55,9 +55,6 @@ layout: default
       </div>
     {% endif %}
 
-    <!-- Song Sections -->
-    <div id="selected-song-header" class="centered-column"></div>
-
     {% assign ids = playlist_override.songs | default: playlist.song_ids %}
     {% assign ordered_songs = "" | split: "" %}
     {% for id in ids %}
@@ -72,6 +69,8 @@ layout: default
     {% endif %}
 
     <div id="selected-song-player" class="player-frame player-frame--purple">
+        <!-- Song Sections -->
+        <div id="selected-song-header" class="centered-column"></div>
         <div id="player-container"></div>
     
         {% include carousel.html songs=ordered_songs playlist_id=playlist.playlist_id %}

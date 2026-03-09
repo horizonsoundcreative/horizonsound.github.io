@@ -94,8 +94,7 @@ function writeYaml(filepath, data) {
    - Collapses internal newlines
    - Produces deterministic HTML
 ------------------------------------------------------------- */
-
-function formatDescriptionToHtml(desc) {
+function formatDescriptionToHtml(desc, playlistTitleMap) {
   if (!desc) return "";
 
   return desc
@@ -103,11 +102,7 @@ function formatDescriptionToHtml(desc) {
     .map(p => p.trim())
     .filter(p => p.length > 0)
     .map(p => {
-     const playlistTitleMap = {};
-     for (const pl of playlists) {
-       playlistTitleMap[pl.id] = pl.title;
-     }
-     const collapsed = p.replace(/\n+/g, " ").trim();
+      const collapsed = p.replace(/\n+/g, " ").trim();
       const linked = linkify(collapsed, playlistTitleMap);
       return `<p>${linked}</p>`;
     })
@@ -225,6 +220,10 @@ async function generate() {
   console.log("Fetching playlists + membership...");
   const playlists = await fetchPlaylistsWithMembership();
 
+  for (const pl of playlists) {
+    playlistTitleMap[pl.id] = pl.title;
+  }
+  
   if (!playlists) {
     console.error("ERROR: fetchPlaylistsWithMembership() returned undefined.");
     process.exit(1);

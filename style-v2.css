@@ -1297,3 +1297,31 @@ body::before {
   box-sizing: border-box;
 }
 
+.playlist-header {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.playlist-links {
+  margin-left: 20px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.playlist-links li {
+  margin: 4px 0;
+}
+
+.vibe-list {
+  margin-left: 20px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.vibe-list li {
+  margin: 4px 0;
+}
+
+.description p {
+  margin-bottom: 8px;
+}

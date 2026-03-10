@@ -1,3 +1,88 @@
+
+
+
+
+/* ============================================
+   MOBILE — CAROUSEL TILE RESIZE (FINAL)
+============================================ */
+@media (max-width: 450px) {
+  .player-frame .carousel-tile {
+    flex: 0 0 32vw !important;
+  }
+
+  .player-frame .carousel-tile img {
+    height: 22vw !important;
+  }
+
+  .player-frame .carousel-tile .tile-title {
+    height: 42px !important;
+    font-size: 0.8rem !important;
+  }
+
+  .player-frame .carousel-arrow {
+    height: 100px !important;
+  }
+}
+
+/* Playlist page + Song page carousel tiles */
+.player-frame .carousel-tile {
+  flex: 0 0 180px !important;
+  width: 180px !important;
+  height: auto !important;
+}
+
+.tile img,
+.carousel-tile img,
+.playlist-tile img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.tile img {
+  height: 180px;
+}
+
+.carousel-tile img,
+.playlist-tile img {
+  height: 180px;
+}
+
+.carousel-tile {
+  flex: 0 0 auto !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.carousel-tile .tile-title {
+  flex-shrink: 0 !important;
+}
+
+.carousel-tile,
+.playlist-tile {
+  flex: 0 0 180px !important;
+  width: 180px !important;
+  height: auto !important;
+}
+
+/* Music page carousel tiles should match grid tile width */
+.music-page .carousel-tile {
+  flex: 0 0 240px !important;
+  width: 240px !important;
+}
+
+.lyrics-block p {
+  margin-bottom: 6px !important;
+  line-height: 1.35 !important;
+  padding: 0 !important;        /* remove the accidental 40px padding */
+  white-space: pre-wrap !important;
+}
+
+
+
+
+
 /* FINAL — tighten line-height for About + Lyrics */
 
 .lyrics-block {

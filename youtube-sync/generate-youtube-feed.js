@@ -98,10 +98,11 @@ function writeYaml(filepath, data) {
 function formatDescriptionToHtml(desc) {
   if (!desc) return "";
 
+  // Force newline before every bullet
   desc = desc.replace(/•/g, "\n•");
 
   return desc
-    .split(/\n\s*\n/)               // split on blank lines (any amount of whitespace)
+    .split(/\n\s*\n/)               // split on blank lines
     .map(p => p.trim())             // trim whitespace
     .filter(p => p.length > 0)      // remove empty paragraphs
     .map(p => {
@@ -110,15 +111,15 @@ function formatDescriptionToHtml(desc) {
         const urlMatch = p.match(/https?:\/\/\S+/);
         if (urlMatch) {
           const url = urlMatch[0];
-          const title = p.replace(url, "").trim();
+          const title = p.replace(url, "").trim();  // keeps the bullet + title
           return `<p>${title} <a href="${url}" target="_blank" rel="noopener">▶️</a></p>`;
         }
       }
-    
+
       // Normal paragraph
       return `<p>${p}</p>`;
     })
-    .join("");                    // no blank lines between paragraphs
+    .join("");
 }
 
 /* -------------------------------------------------------------

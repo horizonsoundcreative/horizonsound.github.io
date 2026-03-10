@@ -598,72 +598,6 @@ footer {
 }
 
 /* ============================================
-   COMPONENT — PLAYER FRAME (Embed + Carousel)
-============================================ */
-.player-frame {
-  padding: 20px;
-  border-radius: 14px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 6px 22px rgba(0,0,0,0.35);
-  margin: 32px 40px; /* matches song page spacing */
-  background: rgba(0,0,0,0.35); /* default fallback */
-}
-
-/* Dark theme (Song Page) */
-.player-frame--dark {
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(10px);
-}
-
-.player-frame--dark .tile-title {
-  background: rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(4px);
-  padding: 8px 10px;
-  border-radius: 0 0 8px 8px;
-  color: #fff;
-  height: 70px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-align: center;
-  font-weight: 500;
-}
-
-/* Purple theme (Playlist Page, Collections aesthetic) */
-.player-frame--purple {
-  background: rgba(47, 18, 61, 0.35);
-}
-
-.player-frame .carousel {
-  margin-top: 16px; /* tighter, intentional */
-}
-.player-frame .carousel-arrow {
-  background: rgba(255,255,255,0.15);
-  color: #fff;
-  backdrop-filter: blur(4px);
-}
-
-.player-frame .carousel-arrow:hover {
-  background: rgba(255,255,255,0.25);
-}
-
-.player-frame .tile-title {
-  background: rgba(180, 120, 220, 0.28);
-  backdrop-filter: blur(6px);
-  border-radius: 0 0 10px 10px;
-}
-
-.player-frame .video-wrapper {
-  border-radius: 10px;
-}
-
-.player-frame .carousel-tile.active {
-  border: 3px solid rgba(180, 120, 220, 0.65);
-  box-shadow: 0 0 12px rgba(180, 120, 220, 0.45);
-}
-
-/* ============================================
    PLAYLIST PAGE — HEADER RESTORE
 ============================================ */
 
@@ -752,13 +686,6 @@ footer {
 .music-page .carousel-tile {
   flex: 0 0 240px !important;
   width: 240px !important;
-}
-
-.player-frame .horizontal-strip {
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-  width: 100% !important;
-  display: flex !important;
 }
 
 .lyrics-block p {
@@ -991,14 +918,6 @@ body::before {
   font-size: 1.75rem;      /* make it visible */
   line-height: 1;
   user-select: none;
-}
-
-.player-frame {
-  margin: 0 auto;
-  outline: 4px solid red !important;
-  overflow: visible !important;
-  max-width: none !important;
-  width: 100% !important;
 }
 
 /* PLAYER: full-width cinematic sizing */

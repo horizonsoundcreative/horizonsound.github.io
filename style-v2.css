@@ -770,7 +770,6 @@ footer {
 
 /* 2. Fix vibe list spacing */
 .song-description .vibe-line {
-  line-height: 1.35 !important;
   margin-bottom: 6px !important;
 }
 
@@ -987,9 +986,6 @@ footer {
 }
 
 /* FINAL — tighten line-height for About + Lyrics */
-.song-description {
-  line-height: 1 !important;
-}
 
 .lyrics-block {
   line-height: 1 !important;

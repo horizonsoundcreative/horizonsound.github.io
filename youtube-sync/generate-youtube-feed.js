@@ -100,6 +100,8 @@ function formatDescriptionToHtml(desc) {
 
   // Force newline before every bullet
   desc = desc.replace(/•/g, "\n•");
+  // Force newline before vibe markers
+  desc = desc.replace(/(🎧|🎤|🎛️|⚡)/g, "\n$1");
 
   return desc
     .split(/\n\s*\n/)               // split on blank lines

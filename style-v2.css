@@ -387,21 +387,6 @@ footer {
 }
 
 /* ============================================
-   COMPONENTS — CENTERED COLUMN LAYOUT
-============================================ */
-.centered-column {
-  display: grid;
-  grid-template-columns: 1fr minmax(300px, 900px) 1fr;
-  column-gap: 20px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.centered-column > * {
-  grid-column: 2;
-}
-
-/* ============================================
    PAGE: MUSIC INDEX PAGE
 ============================================ */
 .music-page {

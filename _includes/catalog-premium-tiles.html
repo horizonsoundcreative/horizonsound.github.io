@@ -1,0 +1,44 @@
+        <h3 class="catalog-section-title">Collection Explorer</h3>
+        <section id="music-view-playlists">  
+          <h2 class="section-header">Playlists</h2>
+        
+          <div class="playlist-premium-grid">
+            
+            {% assign playlist_data = site.data.youtube_playlists.playlists %}
+            {% assign overrides = site.data.playlist_overrides.overrides %}
+            
+            {% assign merged_playlists = "" | split: "" %}
+                  
+            {% for pl in playlist_data %}
+              {% assign override = overrides | where: "playlist_id", pl.playlist_id | first %}
+            
+              {% if override %}
+                {% assign merged = pl | merge: override %}
+                {% assign merged_playlists = merged_playlists | push: merged %}
+              {% else %}
+                {% assign merged_playlists = merged_playlists | push: pl %}
+              {% endif %}
+            {% endfor %}
+        
+            {% for pl in merged_playlists %}
+          
+              {% assign first_song_id = pl.song_ids | first %}
+            
+              <a 
+                class="playlist-premium-tile" 
+                href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/?song_id={{ first_song_id }}"
+              >
+                <div class="playlist-premium-image-wrapper">
+                  <img 
+                    src="{{ site.baseurl }}{{ pl.thumbnail }}" 
+                    alt="{{ pl.title }}" 
+                    class="playlist-premium-image"
+                  >
+                  <div class="playlist-premium-gradient"></div>
+                  <div class="playlist-premium-title">{{ pl.title }}</div>
+                </div>
+              </a>
+            
+            {% endfor %}
+          </div>
+        </section>

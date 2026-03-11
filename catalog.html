@@ -3,6 +3,8 @@ layout: default
 title: Catalog – Horizon Sound
 ---
 
+<main class="site-main">
+
 <style>
   .catalog-page {
     padding: 0 30px;
@@ -18,10 +20,6 @@ title: Catalog – Horizon Sound
     box-sizing: border-box;
   }
 
-  .catalog-header {
-    margin-bottom: 24px;
-  }
-
   .catalog-header-row {
     display: flex;
     align-items: center;
@@ -35,7 +33,7 @@ title: Catalog – Horizon Sound
   }
 
   .catalog-header-spacer {
-    width: 120px; /* just enough to balance the left toggle width */
+    width: 120px;
   }
 
   .catalog-page-title {
@@ -55,10 +53,6 @@ title: Catalog – Horizon Sound
     margin-top: 16px;
   }
 
-  .catalog-content {
-    margin-top: 8px;
-  }
-
   .mode-toggle-button,
   .view-toggle-button {
     border: 1px solid rgba(255, 255, 255, 0.4);
@@ -70,7 +64,6 @@ title: Catalog – Horizon Sound
     letter-spacing: 0.05em;
     text-transform: uppercase;
     cursor: pointer;
-    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   }
 
   .mode-toggle-button.active,
@@ -85,7 +78,6 @@ title: Catalog – Horizon Sound
     margin: 0 0 8px;
   }
 
-  /* Placeholder content styling */
   .catalog-placeholder {
     padding: 16px 0;
     opacity: 0.7;
@@ -96,10 +88,8 @@ title: Catalog – Horizon Sound
 <div class="catalog-page">
   <div class="catalog-panel">
 
-    <!-- HEADER -->
     <div class="catalog-header">
 
-      <!-- ROW 1: page toggles + centered title + spacer -->
       <div class="catalog-header-row">
         <div class="catalog-toggle">
           <button class="mode-toggle-button active" data-mode="collection">Collection Explorer</button>
@@ -111,7 +101,6 @@ title: Catalog – Horizon Sound
         <div class="catalog-header-spacer"></div>
       </div>
 
-      <!-- ROW 2: view toggles (only in Catalog mode) -->
       <div class="catalog-subtoggle">
         <button class="view-toggle-button active" data-view="grouped">Grouped by View</button>
         <button class="view-toggle-button" data-view="all">All Music View</button>
@@ -120,42 +109,28 @@ title: Catalog – Horizon Sound
 
     </div>
 
-    <!-- MAIN CONTENT -->
     <div class="catalog-content">
 
-      <!-- COLLECTION EXPLORER (default) -->
       <section id="catalog-view-collection">
         <h3 class="catalog-section-title">Collection Explorer</h3>
-        <div class="catalog-placeholder">
-          Collection view placeholder (content to be added later).
-        </div>
+        <div class="catalog-placeholder">Collection view placeholder.</div>
       </section>
 
-      <!-- CATALOG EXPLORER -->
       <section id="catalog-view-catalog" style="display:none;">
 
-        <!-- GROUPED VIEW -->
         <section id="catalog-view-grouped">
           <h3 class="catalog-section-title">Catalog Grouped View</h3>
-          <div class="catalog-placeholder">
-            Grouped view placeholder (content to be added later).
-          </div>
+          <div class="catalog-placeholder">Grouped view placeholder.</div>
         </section>
 
-        <!-- ALL MUSIC VIEW -->
         <section id="catalog-view-all" style="display:none;">
           <h3 class="catalog-section-title">Catalog All Music View</h3>
-          <div class="catalog-placeholder">
-            All music view placeholder (content to be added later).
-          </div>
+          <div class="catalog-placeholder">All music view placeholder.</div>
         </section>
 
-        <!-- CAROUSEL VIEW -->
         <section id="catalog-view-carousel" style="display:none;">
           <h3 class="catalog-section-title">Catalog Carousel View</h3>
-          <div class="catalog-placeholder">
-            Carousel view placeholder (content to be added later).
-          </div>
+          <div class="catalog-placeholder">Carousel view placeholder.</div>
         </section>
 
       </section>
@@ -182,51 +157,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function setMode(mode) {
     modeButtons.forEach(b => b.classList.remove("active"));
-    const activeModeBtn = document.querySelector(`[data-mode="${mode}"]`);
-    if (activeModeBtn) activeModeBtn.classList.add("active");
+    document.querySelector(`[data-mode="${mode}"]`).classList.add("active");
 
     if (mode === "catalog") {
-      if (collectionView) collectionView.style.display = "none";
-      if (catalogView)    catalogView.style.display    = "block";
-
+      collectionView.style.display = "none";
+      catalogView.style.display = "block";
       pageTitle.textContent = "Catalog Explorer";
       subToggleRow.style.display = "flex";
-
       setCatalogView("grouped");
     } else {
-      if (collectionView) collectionView.style.display = "block";
-      if (catalogView)    catalogView.style.display    = "none";
-
+      collectionView.style.display = "block";
+      catalogView.style.display = "none";
       pageTitle.textContent = "Collection Explorer";
       subToggleRow.style.display = "none";
     }
   }
 
   function setCatalogView(view) {
-    if (groupedView)  groupedView.style.display  = (view === "grouped")  ? "block" : "none";
-    if (allView)      allView.style.display      = (view === "all")      ? "block" : "none";
-    if (carouselView) carouselView.style.display = (view === "carousel") ? "block" : "none";
+    groupedView.style.display  = (view === "grouped")  ? "block" : "none";
+    allView.style.display      = (view === "all")      ? "block" : "none";
+    carouselView.style.display = (view === "carousel") ? "block" : "none";
 
     viewButtons.forEach(b => b.classList.remove("active"));
-    const activeViewBtn = document.querySelector(`[data-view="${view}"]`);
-    if (activeViewBtn) activeViewBtn.classList.add("active");
+    document.querySelector(`[data-view="${view}"]`).classList.add("active");
   }
 
-  // Initial state: Collection Explorer
   setMode("collection");
 
-  modeButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const mode = btn.dataset.mode; // "collection" | "catalog"
-      setMode(mode);
-    });
-  });
-
-  viewButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const view = btn.dataset.view; // "grouped" | "all" | "carousel"
-      setCatalogView(view);
-    });
-  });
+  modeButtons.forEach(btn => btn.addEventListener("click", () => setMode(btn.dataset.mode)));
+  viewButtons.forEach(btn => btn.addEventListener("click", () => setCatalogView(btn.dataset.view)));
 });
 </script>
+
+</main>

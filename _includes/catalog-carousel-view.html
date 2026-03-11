@@ -13,22 +13,29 @@
 {% endfor %}
 
 
-<div class="content-carousel">
+{% for pl in site.data.youtube_playlists.playlists %}
+  {% assign songs_in_list = all_songs | where_exp: "s", "pl.song_ids contains s.song_id" %}
+  {% assign playlist_sorted = songs_in_list | sort: "title" %}
 
-  <button class="content-arrow content-arrow-left">‹</button>
-
-  <div class="content-strip">
-    <div class="content-tile">
-      <img src="/path/to/thumb.jpg" alt="Example">
-      <h3 class="content-title">Example Title</h3>
+  {% if playlist_sorted.size > 0 %}
+  <div class="content-carousel">
+  
+    <button class="content-arrow content-arrow-left">‹</button>
+  
+    <div class="content-strip">
+      <div class="content-tile">
+        <img src="/path/to/thumb.jpg" alt="Example">
+        <h3 class="content-title">Example Title</h3>
+      </div>
+  
+      <div class="content-tile coming-soon">
+        <img src="/path/to/thumb.jpg" alt="Example">
+        <div class="content-overlay">Coming Soon</div>
+        <h3 class="content-title">Example Title</h3>
+      </div>
     </div>
-
-    <div class="content-tile coming-soon">
-      <img src="/path/to/thumb.jpg" alt="Example">
-      <div class="content-overlay">Coming Soon</div>
-      <h3 class="content-title">Example Title</h3>
-    </div>
-  </div>
+  {% endif %}
+{% endfor %}
 
   <button class="content-arrow content-arrow-right">›</button>
 

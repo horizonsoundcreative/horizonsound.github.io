@@ -2360,6 +2360,7 @@ songs:
       made_for_kids: false
       self_declared_made_for_kids: false
       topic_categories:
+        - https://en.wikipedia.org/wiki/Electronic_music
         - https://en.wikipedia.org/wiki/Music
         - https://en.wikipedia.org/wiki/Pop_music
         - https://en.wikipedia.org/wiki/Soul_music
@@ -2863,7 +2864,7 @@ songs:
     videostatus: public
     playlists:
       - midnight-saga
-    view_count_num: 188
+    view_count_num: 189
     youtube_metadata:
       published_at: '2026-02-13T17:00:50Z'
       scheduled_at: null
@@ -2880,7 +2881,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '188'
+        view_count: '189'
         like_count: '1'
         favorite_count: '0'
         comment_count: '0'

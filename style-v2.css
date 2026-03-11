@@ -199,6 +199,8 @@ footer {
    ============================================================ */
 
 .tile {
+  width: 180px;
+  height: 180px;
   display: block;
   background: #111;
   border-radius: 4px;

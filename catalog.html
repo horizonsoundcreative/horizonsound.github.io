@@ -6,16 +6,20 @@ title: Music – Horizon Sound
 {% assign all_songs = site.data.youtube_feed.songs %}
 {% include hero.html %}
 <div class="music-page">
-  <div class="view-toggle">
-     <h2 class="page-title">Music Catalog</h2>
- 
-     <div class="mode-toggle">
-       <button class="mode-toggle-button active" data-mode="playlists">Playlist View</button>
-       <button class="mode-toggle-button" data-mode="catalog">Catalog Explorer</button>
-     </div>
-     <div class="view-toggle-spacer"></div>
-  </div>
 
+  <div class="catalog-panel">
+
+    <div class="catalog-header">
+    
+        <h2 class="page-title">Catalog Explorer</h2>
+   
+        <div class="catalog-toggle">…
+          <button class="mode-toggle-button active" data-mode="playlists">Playlist View</button>
+          <button class="mode-toggle-button" data-mode="catalog">Catalog Explorer</button>
+        </div>
+    </div>
+  <div class="catalog-content">
+        
   <!-- ============================================================
        PLAYLIST VIEW (NEW DEFAULT MODE)
        Premium 3:1 playlist tiles
@@ -249,7 +253,10 @@ title: Music – Horizon Sound
     <script>
     /* JS unchanged */
     </script>
+
   </section>
+  </div>
+</div>
 
   <script>
   document.addEventListener("DOMContentLoaded", () => {

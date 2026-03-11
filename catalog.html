@@ -6,255 +6,251 @@ title: Music – Horizon Sound
 {% assign all_songs = site.data.youtube_feed.songs %}
 {% include hero.html %}
 <div class="music-page">
-
   <div class="catalog-panel">
-
     <div class="catalog-header">
-    
         <div class="catalog-toggle">
           <button class="mode-toggle-button active" data-mode="playlists">Playlist View</button>
           <button class="mode-toggle-button" data-mode="catalog">Catalog Explorer</button>
         </div>
        <h2 class="page-title">Catalog Explorer</h2>
-
     </div>
-  <div class="catalog-content">
+    <div class="catalog-content">
+      <!-- ============================================================
+           PLAYLIST VIEW (NEW DEFAULT MODE)
+           Premium 3:1 playlist tiles
+      ============================================================ -->
+      <section id="music-view-playlists">  
+        <h2 class="section-header">Playlists</h2>
+      
+        <div class="playlist-premium-grid">
+          
+          {% assign playlist_data = site.data.youtube_playlists.playlists %}
+          {% assign overrides = site.data.playlist_overrides.overrides %}
+          
+          {% assign merged_playlists = "" | split: "" %}
+                
+          {% for pl in playlist_data %}
+            {% assign override = overrides | where: "playlist_id", pl.playlist_id | first %}
+          
+            {% if override %}
+              {% assign merged = pl | merge: override %}
+              {% assign merged_playlists = merged_playlists | push: merged %}
+            {% else %}
+              {% assign merged_playlists = merged_playlists | push: pl %}
+            {% endif %}
+          {% endfor %}
+      
+          {% for pl in merged_playlists %}
         
-  <!-- ============================================================
-       PLAYLIST VIEW (NEW DEFAULT MODE)
-       Premium 3:1 playlist tiles
-  ============================================================ -->
-  <section id="music-view-playlists">  
-    <h2 class="section-header">Playlists</h2>
-  
-    <div class="playlist-premium-grid">
-      
-      {% assign playlist_data = site.data.youtube_playlists.playlists %}
-      {% assign overrides = site.data.playlist_overrides.overrides %}
-      
-      {% assign merged_playlists = "" | split: "" %}
-            
-      {% for pl in playlist_data %}
-        {% assign override = overrides | where: "playlist_id", pl.playlist_id | first %}
-      
-        {% if override %}
-          {% assign merged = pl | merge: override %}
-          {% assign merged_playlists = merged_playlists | push: merged %}
-        {% else %}
-          {% assign merged_playlists = merged_playlists | push: pl %}
-        {% endif %}
-      {% endfor %}
-  
-      {% for pl in merged_playlists %}
-    
-        {% assign first_song_id = pl.song_ids | first %}
-      
-        <a 
-          class="playlist-premium-tile" 
-          href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/?song_id={{ first_song_id }}"
-        >
-          <div class="playlist-premium-image-wrapper">
-            <img 
-              src="{{ site.baseurl }}{{ pl.thumbnail }}" 
-              alt="{{ pl.title }}" 
-              class="playlist-premium-image"
-            >
-            <div class="playlist-premium-gradient"></div>
-            <div class="playlist-premium-title">{{ pl.title }}</div>
-          </div>
-        </a>
-      
-      {% endfor %}
-    </div>
-  </section>
-  
-  <section id="music-view-catalog" style="display:none;">
-    <div class="view-toggle">
-      <div class="view-toggle-buttons">
-       <button class="view-toggle-button active" data-view="grouped">Grouped by Playlist</button>
-       <button class="view-toggle-button" data-view="all">All Songs</button>
-       <button class="view-toggle-button" data-view="carousel">Carousel View</button>
-      </div>
-    </div>
-    <!-- ============================================================
-         GROUPED VIEW
-    ============================================================ -->
-    <section id="music-view-grouped">
-    
-      {% assign playlist_data = site.data.youtube_playlists.playlists %}
-      <section class="playlist-section music-collections">
-        <h2 class="section-header">Collections</h2>
-      
-        {% assign active_playlists = "" | split: "" %}
-        {% assign coming_soon_playlists = "" | split: "" %}
-      
-        {% assign collection_overrides = site.data.playlist_overrides.overrides | where: "is_collection", true %}
-      
-        {% for ov in collection_overrides %}
-          {% assign pl = site.data.youtube_playlists.playlists | where: "playlist_id", ov.playlist_id | first %}
-      
-          {% if pl %}
-            {% assign has_public = false %}
-      
-            {% for vid in pl.song_ids %}
-              {% assign song = all_songs | where: "song_id", vid | first %}
-              {% if song and song.videostatus == "public" %}
-                {% assign has_public = true %}
-              {% endif %}
-            {% endfor %}
-      
-            {% if has_public %}
-              {% assign active_playlists = active_playlists | push: ov %}
-            {% else %}
-              {% assign coming_soon_playlists = coming_soon_playlists | push: ov %}
-            {% endif %}
-          {% endif %}
-        {% endfor %}
-      
-        <div class="tile-grid">
-          {% for ov in active_playlists %}
-            {% assign pl = site.data.youtube_playlists.playlists | where: "playlist_id", ov.playlist_id | first %}
             {% assign first_song_id = pl.song_ids | first %}
-            <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/?song_id={{ first_song_id }}">
-              <img src="{{ site.baseurl }}{{ pl.thumbnail }}" alt="{{ pl.title }}">
-              <h3 class="tile-title">{{ pl.title }}</h3>
-            </a>
-          {% endfor %}
-      
-          {% for ov in coming_soon_playlists %}
-            {% assign pl = site.data.youtube_playlists.playlists | where: "playlist_id", ov.playlist_id | first %}
-            <div class="tile coming-soon">
-              <img src="{{ site.baseurl }}{{ pl.thumbnail }}" alt="{{ pl.title }}">
-              <div class="tile-overlay">Coming Soon</div>
-              <h3 class="tile-title">{{ pl.title }}</h3>
-            </div>
-          {% endfor %}
-      
-        </div>
-      </section>
-      
-      {% for pl in site.data.youtube_playlists.playlists %}
-        {% assign songs_in_list = all_songs | where_exp: "s", "pl.song_ids contains s.song_id" %}
-        {% assign playlist_sorted = songs_in_list | sort: "title" %}
-      
-        {% if playlist_sorted.size > 0 %}
-        <section class="playlist-section">
-          <h2 class="section-header">{{ pl.title }}</h2>
-          <div class="tile-grid">
-    
-            {%- comment -%}
-              PUBLIC songs
-            {%- endcomment -%}
-            {% for song in playlist_sorted %}        
-              {% assign override = site.data.music_overrides.overrides | where: "song_id", song.song_id | first %}
-              {% if override and override.title %}
-                {% assign display_title = override.title %}
-              {% else %}
-                {% assign display_title = song.title %}
-              {% endif %}
-              {% if song.videostatus == "public" %}
-                <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/?song_id={{ song.song_id }}">
-                  <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ display_title }}">
-                  <h3 class="tile-title">{{ display_title }}</h3>
-                </a>
-              {% endif %}
-            {% endfor %}
-    
-            {%- comment -%}
-              COMING SOON songs
-            {%- endcomment -%}
-            {% for song in playlist_sorted %}
-              {% assign override = site.data.music_overrides.overrides | where: "song_id", song.song_id | first %}
-              {% if override and override.title %}
-                {% assign display_title = override.title %}
-              {% else %}
-                {% assign display_title = song.title %}
-              {% endif %}
-              {% if song.videostatus != "public" %}
-                <div class="tile coming-soon">
-                  <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ display_title }}">
-                  <div class="tile-overlay">Coming Soon</div>
-                  <h3 class="tile-title">{{ display_title }}</h3>
-                </div>
-              {% endif %}
-            {% endfor %}
-    
-          </div>
-        </section>
-        {% endif %}
-      {% endfor %}
-    </section>
-    
-    <!-- ============================================================
-         ALL SONGS VIEW
-    ============================================================ -->
-    <section id="music-view-all" style="display:none;">
-      <section class="playlist-section">
-        <h2 class="section-header">All Songs</h2>
-    
-        {% assign all_sorted = all_songs | sort: "title" %}
-    
-        <div class="tile-grid">
-          {% for song in all_sorted %}
-            {% assign override = site.data.music_overrides.overrides | where: "song_id", song.song_id | first %}
-            {% if override and override.title %}
-              {% assign display_title = override.title %}
-            {% else %}
-              {% assign display_title = song.title %}
-            {% endif %}
           
-            {% if song.videostatus == "public" %}
-              {% assign parent_playlist = site.data.youtube_playlists.playlists | where_exp: "p", "p.song_ids contains song.song_id" | first %}
-              <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ parent_playlist.playlist_id }}/?song_id={{ song.song_id }}">
-                <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ display_title }}">
-                <h3 class="tile-title">{{ display_title }}</h3>
-              </a>
-            {% endif %}
-          {% endfor %}
-          {% for song in all_sorted %}
-            {% assign override = site.data.music_overrides.overrides | where: "song_id", song.song_id | first %}
-            {% if override and override.title %}
-              {% assign display_title = override.title %}
-            {% else %}
-              {% assign display_title = song.title %}
-            {% endif %}
-          
-            {% if song.videostatus != "public" %}
-              <div class="tile coming-soon">
-                <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ display_title }}">
-                <div class="tile-overlay">Coming Soon</div>
-                <h3 class="tile-title">{{ display_title }}</h3>
+            <a 
+              class="playlist-premium-tile" 
+              href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/?song_id={{ first_song_id }}"
+            >
+              <div class="playlist-premium-image-wrapper">
+                <img 
+                  src="{{ site.baseurl }}{{ pl.thumbnail }}" 
+                  alt="{{ pl.title }}" 
+                  class="playlist-premium-image"
+                >
+                <div class="playlist-premium-gradient"></div>
+                <div class="playlist-premium-title">{{ pl.title }}</div>
               </div>
-            {% endif %}
+            </a>
+          
           {% endfor %}
         </div>
       </section>
-    </section>
-    
-    <!-- ============================================================
-         CAROUSEL VIEW
-    ============================================================ -->
-    <section id="music-view-carousel" style="display:none;">
-      {% for pl in site.data.youtube_playlists.playlists %}
-        {% assign songs_in_list = all_songs | where_exp: "s", "pl.song_ids contains s.song_id" %}
-        {% assign playlist_sorted = songs_in_list | sort: "title" %}
-    
-        {% if playlist_sorted.size > 0 %}
-        <section class="playlist-section">
-          <h2 class="section-header">{{ pl.title }}</h2>
-    
-          {% include carousel.html songs=playlist_sorted playlist_id=pl.playlist_id %}
-    
+      
+      <section id="music-view-catalog" style="display:none;">
+        <div class="view-toggle">
+          <div class="view-toggle-buttons">
+            <button class="view-toggle-button active" data-view="grouped">Grouped by Playlist</button>
+            <button class="view-toggle-button" data-view="all">All Songs</button>
+            <button class="view-toggle-button" data-view="carousel">Carousel View</button>
+          </div>
+        </div>
+        <!-- ============================================================
+             GROUPED VIEW
+        ============================================================ -->
+        <section id="music-view-grouped">
+        
+          {% assign playlist_data = site.data.youtube_playlists.playlists %}
+          <section class="playlist-section music-collections">
+            <h2 class="section-header">Collections</h2>
+          
+            {% assign active_playlists = "" | split: "" %}
+            {% assign coming_soon_playlists = "" | split: "" %}
+          
+            {% assign collection_overrides = site.data.playlist_overrides.overrides | where: "is_collection", true %}
+          
+            {% for ov in collection_overrides %}
+              {% assign pl = site.data.youtube_playlists.playlists | where: "playlist_id", ov.playlist_id | first %}
+          
+              {% if pl %}
+                {% assign has_public = false %}
+          
+                {% for vid in pl.song_ids %}
+                  {% assign song = all_songs | where: "song_id", vid | first %}
+                  {% if song and song.videostatus == "public" %}
+                    {% assign has_public = true %}
+                  {% endif %}
+                {% endfor %}
+          
+                {% if has_public %}
+                  {% assign active_playlists = active_playlists | push: ov %}
+                {% else %}
+                  {% assign coming_soon_playlists = coming_soon_playlists | push: ov %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          
+            <div class="tile-grid">
+              {% for ov in active_playlists %}
+                {% assign pl = site.data.youtube_playlists.playlists | where: "playlist_id", ov.playlist_id | first %}
+                {% assign first_song_id = pl.song_ids | first %}
+                <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/?song_id={{ first_song_id }}">
+                  <img src="{{ site.baseurl }}{{ pl.thumbnail }}" alt="{{ pl.title }}">
+                  <h3 class="tile-title">{{ pl.title }}</h3>
+                </a>
+              {% endfor %}
+          
+              {% for ov in coming_soon_playlists %}
+                {% assign pl = site.data.youtube_playlists.playlists | where: "playlist_id", ov.playlist_id | first %}
+                <div class="tile coming-soon">
+                  <img src="{{ site.baseurl }}{{ pl.thumbnail }}" alt="{{ pl.title }}">
+                  <div class="tile-overlay">Coming Soon</div>
+                  <h3 class="tile-title">{{ pl.title }}</h3>
+                </div>
+              {% endfor %}
+          
+            </div>
+          </section>
+          
+          {% for pl in site.data.youtube_playlists.playlists %}
+            {% assign songs_in_list = all_songs | where_exp: "s", "pl.song_ids contains s.song_id" %}
+            {% assign playlist_sorted = songs_in_list | sort: "title" %}
+          
+            {% if playlist_sorted.size > 0 %}
+            <section class="playlist-section">
+              <h2 class="section-header">{{ pl.title }}</h2>
+              <div class="tile-grid">
+        
+                {%- comment -%}
+                  PUBLIC songs
+                {%- endcomment -%}
+                {% for song in playlist_sorted %}        
+                  {% assign override = site.data.music_overrides.overrides | where: "song_id", song.song_id | first %}
+                  {% if override and override.title %}
+                    {% assign display_title = override.title %}
+                  {% else %}
+                    {% assign display_title = song.title %}
+                  {% endif %}
+                  {% if song.videostatus == "public" %}
+                    <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/?song_id={{ song.song_id }}">
+                      <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ display_title }}">
+                      <h3 class="tile-title">{{ display_title }}</h3>
+                    </a>
+                  {% endif %}
+                {% endfor %}
+        
+                {%- comment -%}
+                  COMING SOON songs
+                {%- endcomment -%}
+                {% for song in playlist_sorted %}
+                  {% assign override = site.data.music_overrides.overrides | where: "song_id", song.song_id | first %}
+                  {% if override and override.title %}
+                    {% assign display_title = override.title %}
+                  {% else %}
+                    {% assign display_title = song.title %}
+                  {% endif %}
+                  {% if song.videostatus != "public" %}
+                    <div class="tile coming-soon">
+                      <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ display_title }}">
+                      <div class="tile-overlay">Coming Soon</div>
+                      <h3 class="tile-title">{{ display_title }}</h3>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+        
+              </div>
+            </section>
+            {% endif %}
+          {% endfor %}
         </section>
-        {% endif %}
-      {% endfor %}
-    </section>
-  
-    <script>
-    /* JS unchanged */
-    </script>
+        
+        <!-- ============================================================
+             ALL SONGS VIEW
+        ============================================================ -->
+        <section id="music-view-all" style="display:none;">
+          <section class="playlist-section">
+            <h2 class="section-header">All Songs</h2>
+        
+            {% assign all_sorted = all_songs | sort: "title" %}
+        
+            <div class="tile-grid">
+              {% for song in all_sorted %}
+                {% assign override = site.data.music_overrides.overrides | where: "song_id", song.song_id | first %}
+                {% if override and override.title %}
+                  {% assign display_title = override.title %}
+                {% else %}
+                  {% assign display_title = song.title %}
+                {% endif %}
+              
+                {% if song.videostatus == "public" %}
+                  {% assign parent_playlist = site.data.youtube_playlists.playlists | where_exp: "p", "p.song_ids contains song.song_id" | first %}
+                  <a class="tile" href="{{ site.baseurl }}/music/playlists/{{ parent_playlist.playlist_id }}/?song_id={{ song.song_id }}">
+                    <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ display_title }}">
+                    <h3 class="tile-title">{{ display_title }}</h3>
+                  </a>
+                {% endif %}
+              {% endfor %}
+              {% for song in all_sorted %}
+                {% assign override = site.data.music_overrides.overrides | where: "song_id", song.song_id | first %}
+                {% if override and override.title %}
+                  {% assign display_title = override.title %}
+                {% else %}
+                  {% assign display_title = song.title %}
+                {% endif %}
+              
+                {% if song.videostatus != "public" %}
+                  <div class="tile coming-soon">
+                    <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ display_title }}">
+                    <div class="tile-overlay">Coming Soon</div>
+                    <h3 class="tile-title">{{ display_title }}</h3>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </section>
+        </section>
+        
+        <!-- ============================================================
+             CAROUSEL VIEW
+        ============================================================ -->
+        <section id="music-view-carousel" style="display:none;">
+          {% for pl in site.data.youtube_playlists.playlists %}
+            {% assign songs_in_list = all_songs | where_exp: "s", "pl.song_ids contains s.song_id" %}
+            {% assign playlist_sorted = songs_in_list | sort: "title" %}
+        
+            {% if playlist_sorted.size > 0 %}
+            <section class="playlist-section">
+              <h2 class="section-header">{{ pl.title }}</h2>
+        
+              {% include carousel.html songs=playlist_sorted playlist_id=pl.playlist_id %}
+        
+            </section>
+            {% endif %}
+          {% endfor %}
+        </section>
+      
+        <script>
+        /* JS unchanged */
+        </script>
 
-  </section>
+      </section>
+    </div>
   </div>
 </div>
 

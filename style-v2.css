@@ -1306,4 +1306,18 @@ footer {
   backdrop-filter: blur(10px);
 }
 
+.autoplay-toggle {
+  margin-left: auto;        /* pushes it all the way right */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+}
+
+.autoplay-toggle .icon {
+  font-size: 2rem;          /* increase from ~1.2rem */
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+}
 

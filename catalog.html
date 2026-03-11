@@ -424,7 +424,6 @@ title: Catalog – Horizon Sound
         pageTitle.textContent = "Catalog Explorer";
         subToggleRow.style.display = "flex";
 
-        // Only auto-switch to grouped if NOT restoring
         if (save === false) {
           setCatalogView(savedView, { save: false });
         } else {
@@ -458,14 +457,18 @@ title: Catalog – Horizon Sound
     setMode(savedMode, { save: false });
 
     // -----------------------------
-    // USER INTERACTION
+    // USER INTERACTION (FIXED)
     // -----------------------------
     modeButtons.forEach(btn =>
-      btn.addEventListener("click", () => setMode(btn.dataset.mode))
+      btn.addEventListener("click", () =>
+        setMode(btn.dataset.mode, { save: true })
+      )
     );
 
     viewButtons.forEach(btn =>
-      btn.addEventListener("click", () => setCatalogView(btn.dataset.view))
+      btn.addEventListener("click", () =>
+        setCatalogView(btn.dataset.view, { save: true })
+      )
     );
   });
 </script>

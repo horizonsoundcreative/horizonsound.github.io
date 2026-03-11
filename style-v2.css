@@ -300,8 +300,7 @@ footer {
   border: 1px solid rgba(255,255,255,0.12);
 }
 
-.carousel-tile,
-.grid-tile {
+.tile {
   width: 180px;
   height: 180px;
   flex: 0 0 180px;
@@ -309,8 +308,7 @@ footer {
   overflow: hidden;
 }
 
-.carousel-tile img,
-.grid-tile img {
+.tile img {
   width: 100%;
   height: 100%;
   object-fit: cover;   /* critical */

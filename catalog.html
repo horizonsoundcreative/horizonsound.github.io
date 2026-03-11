@@ -30,7 +30,7 @@ title: Music – Horizon Sound
       <section id="music-view-catalog" style="display:none;">
 
         <div class="view-toggle">
-          <div class="view-toggle-buttons">
+          <div class="catalog-subtoggle">
             <button class="view-toggle-button active" data-view="grouped">Grouped by Playlist</button>
             <button class="view-toggle-button" data-view="all">All Songs</button>
             <button class="view-toggle-button" data-view="carousel">Carousel View</button>
@@ -159,11 +159,13 @@ document.addEventListener("DOMContentLoaded", function () {
         catalogView.style.display = "none";
         // UPDATE TITLE
         document.querySelector(".page-title").textContent = "Playlist Explorer";
+        document.querySelector(".catalog-subtoggle").style.display = "none";
       } else {
         playlistView.style.display = "none";
         catalogView.style.display = "block";
         // UPDATE TITLE
         document.querySelector(".page-title").textContent = "Catalog Explorer";
+        document.querySelector(".catalog-subtoggle").style.display = "flex";
       }
 
       localStorage.setItem("music_mode", mode);

@@ -351,13 +351,16 @@ footer {
 
 /* Carousel tiles */
 .carousel-tile {
-  flex: 0 0 180px;
   transition: transform 0.2s ease;
   border: 3px solid transparent;
   cursor: pointer;
   display: flex !important;
   flex-direction: column !important;
   height: auto !important;
+  width: 180px; /* or whatever your tile width is */
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .carousel-tile img {
@@ -1247,6 +1250,13 @@ footer {
 
 .carousel-tile .tile-title {
   flex-shrink: 0 !important;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: break-word;
+  margin-top: 6px;
 }
 
 .carousel-tile,

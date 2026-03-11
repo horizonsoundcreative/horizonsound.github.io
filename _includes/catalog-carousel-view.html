@@ -3,12 +3,11 @@
   {% assign playlist_sorted = songs_in_list | sort: "title" %}
 
   {% if playlist_sorted.size > 0 %}
-  <section class="playlist-section">
-    <h2 class="section-header">{{ pl.title }}</h2>
-    <div class="carousel-block">
-      {% include carousel.html songs=playlist_sorted playlist_id=pl.playlist_id %}
-    </div>
-    
-  </section>
+    <section class="collection-section">
+      <h2 class="collection-section-title">{{ pl.title }}</h2>
+      <div class="collection-carousel-block">
+        {% include carousel.html songs=playlist_sorted playlist_id=pl.playlist_id %}
+      </div>
+    </section>
   {% endif %}
 {% endfor %}

@@ -199,7 +199,7 @@ footer {
    ============================================================ */
 
 .tile {
-  width: 250px;
+  width: 260px;
   height: 180px;
   display: block;
   background: #111;
@@ -217,7 +217,7 @@ footer {
 }
 
 .tile img {
-  width: 250px;
+  width: 260px;
   height: 180px;
   object-fit: cover;
   display: block;

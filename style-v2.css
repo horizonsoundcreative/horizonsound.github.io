@@ -85,6 +85,9 @@ body::before {
   color: white;
   padding: 20px 40px;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;   /* NEW */
 }
 
 .branding {
@@ -1315,7 +1318,7 @@ footer {
 }
 
 .autoplay-toggle .icon {
-  font-size: 2rem;          /* increase from ~1.2rem */
+  font-size: 2.5rem;          /* increase from ~1.2rem */
   line-height: 1;
   cursor: pointer;
   user-select: none;

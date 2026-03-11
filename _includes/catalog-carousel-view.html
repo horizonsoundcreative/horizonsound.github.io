@@ -5,9 +5,10 @@
   {% if playlist_sorted.size > 0 %}
   <section class="playlist-section">
     <h2 class="section-header">{{ pl.title }}</h2>
-
-    {% include carousel.html songs=playlist_sorted playlist_id=pl.playlist_id %}
-
+    <div class="carousel-block">
+      {% include carousel.html songs=playlist_sorted playlist_id=pl.playlist_id %}
+    </div>
+    
   </section>
   {% endif %}
 {% endfor %}

@@ -385,7 +385,46 @@ title: Catalog – Horizon Sound
   #catalog-view-grouped {
   padding: 0 48px; /* match Stage */
 }
- 
+
+  .collection-premium.shared-tile {
+  width: 260px;
+  min-width: 260px;
+  max-width: 260px;
+  height: 150px; /* exact Stage height */
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+.collection-premium .shared-tile-title {
+  background: linear-gradient(90deg, #5e1a8a 0%, #8e24aa 100%);
+  color: white;
+  font-weight: 500;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  min-height: 2.6em; /* identical title height */
+  display: flex;
+  align-items: center;
+}
+.catalog-group-panel.collection-premium-panel {
+  background: rgba(94, 26, 138, 0.18); /* Stage purple tint */
+  border-radius: 16px;
+  padding: 24px;
+  margin: 40px 0;
+  box-shadow: 0 8px 28px rgba(94, 26, 138, 0.45); /* Stage glow */
+  backdrop-filter: blur(12px);
+}
+.shared-tile-title {
+  font-size: 0.95rem;
+  line-height: 1.25;
+  min-height: 2.6em;
+  display: flex;
+  align-items: center;
+}
+#catalog-view-grouped {
+  padding: 0 48px;
+}
+
 </style>
 
 {% assign all_songs = site.data.youtube_feed.songs %}

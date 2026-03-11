@@ -15,19 +15,19 @@ title: Music – Horizon Sound
       <!-- ROW 1 -->
       <div class="catalog-header-row">
         <div class="catalog-toggle">
-          <button class="mode-toggle-button active" data-mode="playlists">Playlist View</button>
+          <button class="mode-toggle-button active" data-mode="playlists">Collection Explorer</button>
           <button class="mode-toggle-button" data-mode="catalog">Catalog Explorer</button>
         </div>
     
-        <h2 class="page-title">Playlist Explorer</h2>
+        <h2 class="page-title">Collection Explorer</h2>
     
         <div class="catalog-header-spacer"></div>
       </div>
     
       <!-- ROW 2 -->
       <div class="catalog-subtoggle">
-        <button class="view-toggle-button active" data-view="grouped">Grouped by Playlist</button>
-        <button class="view-toggle-button" data-view="all">All Songs</button>
+        <button class="view-toggle-button active" data-view="grouped">Grouped by View</button>
+        <button class="view-toggle-button" data-view="all">All Music View</button>
         <button class="view-toggle-button" data-view="carousel">Carousel View</button>
       </div>
     
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const savedMode = localStorage.getItem("music_mode") || "playlists";
 
-  if (savedMode === "catalog") {
+  if (savedMode === "catalog explorer") {
     playlistView.style.display = "none";
     catalogView.style.display = "block";
     modeButtons.forEach(b => b.classList.remove("active"));
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modeButtons.forEach(b => b.classList.remove("active"));
     document.querySelector('[data-mode="playlists"]').classList.add("active");
   document.querySelector(".catalog-subtoggle").style.display = "none";
-  document.querySelector(".page-title").textContent = "Playlist Explorer";
+  document.querySelector(".page-title").textContent = "Collection Explorer";
   }
 
   /* -----------------------------
@@ -176,11 +176,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const mode = btn.dataset.mode;
 
-      if (mode === "playlists") {
+      if (mode === "collection explorer") {
         playlistView.style.display = "block";
         catalogView.style.display = "none";
         // UPDATE TITLE
-        document.querySelector(".page-title").textContent = "Playlist Explorer";
+        document.querySelector(".page-title").textContent = "Collection Explorer";
         document.querySelector(".catalog-subtoggle").style.display = "none";
       } else {
         playlistView.style.display = "none";

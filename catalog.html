@@ -1,55 +1,197 @@
 ---
 layout: default
-title: Music – Horizon Sound
+title: Catalog – Horizon Sound
 ---
 
-{% assign all_songs = site.data.youtube_feed.songs %}
+<style>
+  .catalog-page {
+    padding: 0 30px;
+  }
+
+  .catalog-panel {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 16px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+    padding: 24px 32px 32px;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .catalog-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .catalog-toggle {
+    display: flex;
+    gap: 8px;
+  }
+
+  .catalog-header-spacer {
+    width: 120px;
+  }
+
+  .catalog-page-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 1.4rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .catalog-subtoggle {
+    display: none;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .mode-toggle-button,
+  .view-toggle-button {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .mode-toggle-button.active,
+  .view-toggle-button.active {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+  }
+
+  .catalog-section-title {
+    font-size: 1.1rem;
+    margin: 0 0 8px;
+  }
+
+  .catalog-placeholder {
+    padding: 16px 0;
+    opacity: 0.7;
+    font-size: 0.95rem;
+  }
+</style>
+
 {% include hero.html %}
-<div class="music-page">
+<div class="catalog-page">
   <div class="catalog-panel">
     <div class="catalog-header">
+      <div class="catalog-header-row">
         <div class="catalog-toggle">
-          <button class="mode-toggle-button active" data-mode="playlists">Playlist View</button>
+          <button class="mode-toggle-button active" data-mode="collection">Collection Explorer</button>
           <button class="mode-toggle-button" data-mode="catalog">Catalog Explorer</button>
         </div>
-       <h2 class="page-title">Catalog Explorer</h2>
+
+        <h2 class="catalog-page-title">Collection Explorer</h2>
+
+        <div class="catalog-header-spacer"></div>
+      </div>
+      <div class="catalog-subtoggle">
+        <button class="view-toggle-button active" data-view="grouped">Grouped by View</button>
+        <button class="view-toggle-button" data-view="all">All Music View</button>
+        <button class="view-toggle-button" data-view="carousel">Carousel View</button>
+      </div>
+
     </div>
     <div class="catalog-content">
       <!-- ============================================================
            PLAYLIST VIEW (NEW DEFAULT MODE)
            Premium 3:1 playlist tiles
       ============================================================ -->
-      <section id="music-view-playlists">  
+      <section id="catalog-view-collection">
+        <h3 class="catalog-section-title">Collection Explorer</h3>
+        <div class="catalog-placeholder">Collection view placeholder.</div>
       </section>
-      
-      <section id="music-view-catalog" style="display:none;">
-        <div class="view-toggle">
-          <div class="view-toggle-buttons">
-            <button class="view-toggle-button active" data-view="grouped">Grouped by Playlist</button>
-            <button class="view-toggle-button" data-view="all">All Songs</button>
-            <button class="view-toggle-button" data-view="carousel">Carousel View</button>
-          </div>
-        </div>
-        <!-- ============================================================
-             GROUPED VIEW
-        ============================================================ -->
-        <section id="music-view-grouped">
+
+      <section id="catalog-view-catalog" style="display:none;">
+
+        <section id="catalog-view-grouped">
+          <!-- ============================================================
+               GROUPED VIEW
+          ============================================================ -->
+          <h3 class="catalog-section-title">Catalog Grouped View</h3>
+          <div class="catalog-placeholder">Grouped view placeholder.</div>
         </section>
-        
-        <!-- ============================================================
-             ALL SONGS VIEW
-        ============================================================ -->
-        <section id="music-view-all" style="display:none;">
+
+        <section id="catalog-view-all" style="display:none;">
+          <!-- ============================================================
+               ALL SONGS VIEW
+          ============================================================ -->        
+          <h3 class="catalog-section-title">Catalog All Music View</h3>
+          <div class="catalog-placeholder">All music view placeholder.</div>
         </section>
-        
-        <!-- ============================================================
-             CAROUSEL VIEW
-        ============================================================ -->
-        <section id="music-view-carousel" style="display:none;">
+
+        <section id="catalog-view-carousel" style="display:none;">
+          <!-- ============================================================
+               CAROUSEL VIEW
+          ============================================================ -->
+          <h3 class="catalog-section-title">Catalog Carousel View</h3>
+          <div class="catalog-placeholder">Carousel view placeholder.</div>
         </section>
-      
+
       </section>
+
     </div>
+
   </div>
 </div>
-</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const modeButtons = document.querySelectorAll(".mode-toggle-button");
+    const viewButtons = document.querySelectorAll(".view-toggle-button");
+  
+    const pageTitle      = document.querySelector(".catalog-page-title");
+    const subToggleRow   = document.querySelector(".catalog-subtoggle");
+  
+    const collectionView = document.getElementById("catalog-view-collection");
+    const catalogView    = document.getElementById("catalog-view-catalog");
+  
+    const groupedView    = document.getElementById("catalog-view-grouped");
+    const allView        = document.getElementById("catalog-view-all");
+    const carouselView   = document.getElementById("catalog-view-carousel");
+  
+    function setMode(mode) {
+      modeButtons.forEach(b => b.classList.remove("active"));
+      document.querySelector(`[data-mode="${mode}"]`).classList.add("active");
+  
+      if (mode === "catalog") {
+        collectionView.style.display = "none";
+        catalogView.style.display = "block";
+        pageTitle.textContent = "Catalog Explorer";
+        subToggleRow.style.display = "flex";
+        setCatalogView("grouped");
+      } else {
+        collectionView.style.display = "block";
+        catalogView.style.display = "none";
+        pageTitle.textContent = "Collection Explorer";
+        subToggleRow.style.display = "none";
+      }
+    }
+  
+    function setCatalogView(view) {
+      groupedView.style.display  = (view === "grouped")  ? "block" : "none";
+      allView.style.display      = (view === "all")      ? "block" : "none";
+      carouselView.style.display = (view === "carousel") ? "block" : "none";
+  
+      viewButtons.forEach(b => b.classList.remove("active"));
+      document.querySelector(`[data-view="${view}"]`).classList.add("active");
+    }
+  
+    setMode("collection");
+  
+    modeButtons.forEach(btn => btn.addEventListener("click", () => setMode(btn.dataset.mode)));
+    viewButtons.forEach(btn => btn.addEventListener("click", () => setCatalogView(btn.dataset.view)));
+  });
+</script>

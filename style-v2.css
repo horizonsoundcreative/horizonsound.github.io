@@ -912,7 +912,6 @@ footer {
   padding: 30px;
   margin: 40px auto;
   width: 100%;
-  max-width: 1400px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
   backdrop-filter: blur(6px);
 }

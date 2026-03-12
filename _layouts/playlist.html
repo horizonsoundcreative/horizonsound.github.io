@@ -653,26 +653,32 @@ is_playlist_page: true
 
     <script>        
         document.querySelectorAll('.shared-tile').forEach(tile => {
-            tile.addEventListener('click', () => {
-              if (tile.classList.contains('coming-soon')) return;
-            
-              const id = tile.getAttribute('data-song-id');
-            
-              const url = new URL(window.location.href);
-              url.searchParams.set("song_id", id);
-              history.pushState({}, "", url.toString());
-            
-              loadSong(id);
-            
-              // NEW: scroll only the carousel, not the page
-              const carousel = tile.closest('.horizontal-strip');
-              if (carousel) {
-                carousel.scrollTo({
-                  left: tile.offsetLeft - carousel.offsetWidth / 2 + tile.offsetWidth / 2,
-                  behavior: 'smooth'
-                });
-              }
-            });
+tile.addEventListener('click', () => {
+  if (tile.classList.contains('coming-soon')) return;
+
+  // DEBUG: remove the image on the selected tile
+  const img = tile.querySelector("img");
+  if (img) {
+    img.style.display = "none";
+    console.log("DEBUG: removed image for tile:", tile.getAttribute("data-song-id"));
+  }
+
+  const id = tile.getAttribute('data-song-id');
+
+  const url = new URL(window.location.href);
+  url.searchParams.set("song_id", id);
+  history.pushState({}, "", url.toString());
+
+  loadSong(id);
+
+  const carousel = tile.closest('.horizontal-strip');
+  if (carousel) {
+    carousel.scrollTo({
+      left: tile.offsetLeft - carousel.offsetWidth / 2 + tile.offsetWidth / 2,
+      behavior: 'smooth'
+    });
+  }
+});
         });
 
         function advanceToNextSong(currentId) {

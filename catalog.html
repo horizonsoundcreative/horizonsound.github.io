@@ -499,7 +499,7 @@ title: Catalog – Horizon Sound
 
 
 </style>
-
+{% include spa-router.html %}
 {% assign all_songs = site.data.youtube_feed.songs %}
 {% include hero.html %}
 <div class="catalog-page">
@@ -629,107 +629,6 @@ title: Catalog – Horizon Sound
       btn.addEventListener("click", () => setCatalogView(btn.dataset.view))
     );
   });
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  /* ============================================================
-     1. SPA NAVIGATION FOR PLAYLIST LINKS
-     (Any link that goes to /music/playlists/)
-  ============================================================ */
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('a').forEach(link => {
-    const href = link.getAttribute('href');
-    if (!href) return;
-
-    // Only intercept internal navigation to Music or Playlist pages
-    const isInternalPage =
-      href.startsWith('{{ site.baseurl }}/music') ||
-      href.startsWith('/catalog') ||
-      href.startsWith('/origins');
-
-    if (!isInternalPage) return;
-
-    link.addEventListener('click', async (e) => {
-      e.preventDefault();
-
-      const url = link.href;
-
-      // Fetch the target page
-      const response = await fetch(url, { credentials: 'same-origin' });
-      const html = await response.text();
-
-      // Parse and extract the new <main>
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      const newMain = doc.querySelector('main');
-
-      // Replace current <main>
-      document.querySelector('main').replaceWith(newMain);
-
-      // Update URL without reload
-      history.pushState({}, "", url);
-
-      // Re-run scripts inside the new <main>
-      const scripts = newMain.querySelectorAll("script");
-      scripts.forEach(oldScript => {
-        const s = document.createElement("script");
-        if (oldScript.src) {
-          s.src = oldScript.src;
-        } else {
-          s.textContent = oldScript.textContent;
-        }
-        document.body.appendChild(s);
-      });
-    });
-  });
-});
-</script>
-  
-  /* ============================================================
-     2. SPA NAVIGATION FOR SHARED-TILE CLICKS
-     (Song tiles, playlist tiles, collection tiles)
-  ============================================================ */
-  document.querySelectorAll('.shared-tile').forEach(tile => {
-    tile.addEventListener("click", async (event) => {
-      if (tile.classList.contains("coming-soon")) return;
-
-      event.preventDefault();
-
-      const url = tile.getAttribute("href");
-      if (!url) return;
-
-      const response = await fetch(url, { credentials: "same-origin" });
-      const text = await response.text();
-
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(text, "text/html");
-      const newMain = doc.querySelector("main");
-
-      if (!newMain) {
-        window.location.href = url;
-        return;
-      }
-
-      document.querySelector("main").replaceWith(newMain);
-      history.pushState({}, "", url);
-
-      // Re-run scripts inside new <main>
-      newMain.querySelectorAll("script").forEach(oldScript => {
-        const s = document.createElement("script");
-        if (oldScript.src) {
-          s.src = oldScript.src;
-        } else {
-          s.textContent = oldScript.textContent;
-        }
-        document.body.appendChild(s);
-      });
-    });
-  });
-
-});
 </script>
 
 <script>

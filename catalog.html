@@ -601,3 +601,92 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* ============================================================
+     1. CAROUSEL ARROW HANDLERS
+  ============================================================ */
+  document.querySelectorAll(".content-carousel").forEach(carousel => {
+    const strip = carousel.querySelector(".content-strip");
+    const leftArrow = carousel.querySelector(".content-arrow-left");
+    const rightArrow = carousel.querySelector(".content-arrow-right");
+
+    if (!strip || !leftArrow || !rightArrow) return;
+
+    const SCROLL_AMOUNT = 260; // tile width + gap
+
+    leftArrow.addEventListener("click", () => {
+      strip.scrollBy({ left: -SCROLL_AMOUNT, behavior: "smooth" });
+    });
+
+    rightArrow.addEventListener("click", () => {
+      strip.scrollBy({ left: SCROLL_AMOUNT, behavior: "smooth" });
+    });
+  });
+
+
+  /* ============================================================
+     2. TILE CLICK HANDLING (shared-tile)
+     - Prevent full reload
+     - SPA navigation
+     - Coming-soon protection
+  ============================================================ */
+  document.querySelectorAll(".shared-tile").forEach(tile => {
+    tile.addEventListener("click", async (event) => {
+      if (tile.classList.contains("coming-soon")) return;
+
+      const url = tile.getAttribute("href");
+      if (!url) return;
+
+      event.preventDefault();
+
+      const response = await fetch(url, { credentials: "same-origin" });
+      const html = await response.text();
+
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+      const newMain = doc.querySelector("main");
+
+      if (!newMain) {
+        window.location.href = url;
+        return;
+      }
+
+      document.querySelector("main").replaceWith(newMain);
+      history.pushState({}, "", url);
+
+      // Re-run scripts inside new <main>
+      newMain.querySelectorAll("script").forEach(oldScript => {
+        const s = document.createElement("script");
+        if (oldScript.src) {
+          s.src = oldScript.src;
+        } else {
+          s.textContent = oldScript.textContent;
+        }
+        document.body.appendChild(s);
+      });
+    });
+  });
+
+
+  /* ============================================================
+     3. SCROLL SELECTED TILE INTO VIEW
+     (Used on playlist page when loading a song)
+  ============================================================ */
+  window.scrollTileIntoView = function(tile) {
+    const carousel = tile.closest(".content-carousel");
+    if (!carousel) return;
+
+    const strip = carousel.querySelector(".content-strip");
+    if (!strip) return;
+
+    strip.scrollTo({
+      left: tile.offsetLeft - strip.offsetWidth / 2 + tile.offsetWidth / 2,
+      behavior: "smooth"
+    });
+  };
+
+});
+</script>

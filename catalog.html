@@ -382,6 +382,48 @@ title: Catalog – Horizon Sound
 .content-arrow:hover {
   background: rgba(255,255,255,0.2);
 }
+
+/* ============================================================
+   CAROUSEL OVERRIDES — REQUIRED ON BOTH PAGES
+   Forces horizontal flow, prevents shrinking, prevents wrapping
+============================================================ */
+
+/* 1. The strip must be a horizontal, non-wrapping flex container */
+.content-strip {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  white-space: nowrap !important;
+  scroll-behavior: smooth;
+}
+
+/* 2. Tiles inside the carousel must NOT shrink */
+.content-strip .shared-tile {
+  flex: 0 0 auto !important;
+  width: 180px; /* or your tile width */
+  flex-shrink: 0 !important;
+}
+
+/* 3. Optional but recommended: spacing between tiles */
+.content-strip .shared-tile {
+  margin-right: 16px;
+}
+
+/* 4. Ensure arrows stay aligned and don’t collapse */
+.content-carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* 5. Arrow buttons must not affect layout width */
+.content-arrow {
+  flex: 0 0 auto;
+  z-index: 2;
+}
+
   
 </style>
 

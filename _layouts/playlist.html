@@ -2,6 +2,389 @@
 layout: default
 is_playlist_page: true
 ---
+
+<style>
+  .catalog-page {
+    padding: 0 30px;
+  }
+
+  .catalog-panel {
+    background: rgba(20, 20, 20, 0.55); /* dark glass */
+    backdrop-filter: blur(22px) saturate(140%);
+    -webkit-backdrop-filter: blur(22px) saturate(140%);
+  
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08); /* subtle glass edge */
+    padding: 24px 32px 32px;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow:
+      0 20px 40px rgba(0,0,0,0.55),
+      0 0 60px rgba(0,0,0,0.35),
+      inset 0 0 0 1px rgba(255,255,255,0.04);
+  position: relative;
+  }
+  
+  .catalog-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    border-radius: inherit;
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0)
+    );
+    pointer-events: none;
+  }
+
+  .catalog-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .catalog-toggle {
+    display: flex;
+    gap: 8px;
+  }
+
+  .catalog-header-spacer {
+    width: 120px;
+  }
+
+  .catalog-page-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 1.4rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .catalog-subtoggle {
+    display: none;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .mode-toggle-button,
+  .view-toggle-button {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 
+      background 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      color 0.2s ease;
+    backdrop-filter: blur(8px) saturate(140%);
+    -webkit-backdrop-filter: blur(8px) saturate(140%);
+    box-shadow:
+      inset 0 1px 2px rgba(255, 255, 255, 0.08),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.35);
+  }
+
+  .mode-toggle-button.active,
+  .view-toggle-button.active {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.35);
+    color: #000;
+    box-shadow:
+      inset 0 2px 4px rgba(0, 0, 0, 0.45),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.25);
+  }
+  
+  .mode-toggle-button:hover,
+  .view-toggle-button:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.22);
+  }
+
+  .catalog-section-title {
+    font-size: 1.1rem;
+    margin: 0 0 8px;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+    white-space: normal;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .catalog-placeholder {
+    padding: 16px 0;
+    opacity: 0.7;
+    font-size: 0.95rem;
+  }
+
+  .carousel-strip {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+.playlist-section .section-header {
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+  white-space: normal;
+  position: relative;
+  z-index: 2;
+}
+
+.carousel-block {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden; /* keeps the title from inheriting scroll width */
+  position: relative;
+}
+
+.horizontal-strip[data-strip] {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.playlist-section h2.collection-section-title {
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: normal;
+  position: relative;
+  z-index: 2;
+}
+
+.collection-carousel-block {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.catalog-group-panel.collection-premium-panel {
+  background: rgba(94, 26, 138, 0.18); /* Stage purple tint */
+  border-radius: 16px;
+  padding: 24px;
+  margin: 40px 0;
+  box-shadow: 0 8px 28px rgba(94, 26, 138, 0.45); /* Stage glow */
+  backdrop-filter: blur(12px);
+}
+
+.shared-tile-title {
+  font-size: 0.95rem;
+  line-height: 1.25;
+  min-height: calc(1.25em * 2); /* exactly two lines of height */
+  max-height: calc(1.25em * 2); /* prevent a third line */
+  padding: 10px 12px;
+  color: white;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;        /* limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+  
+#catalog-view-grouped {
+  padding: 0 48px;
+}
+
+  .shared-tile.coming-soon {
+  position: relative;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.collection-premium .shared-tile-title {
+  background: linear-gradient(90deg, #5e1a8a 0%, #8e24aa .55%);
+}
+
+/* ===========================
+   CATALOG TILE SYSTEM (UNIFIED)
+   =========================== */
+.shared-tile {
+  width: 260px;
+  display: block;
+  background: #111;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative; /* for vignette overlay */
+}
+
+.shared-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.shared-tile img {
+  width: 260px;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* Subtle vignette */
+.shared-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0,0,0,0) 60%, rgba(0,0,0,0.35) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Title bar */
+.shared-tile-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  min-height: 2.6em;
+  display: flex;
+  align-items: center;
+  color: white;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+  z-index: 2;
+}
+
+/* Collections: shorter tile + purple title */
+.collection-premium.shared-tile {
+  height: 180px;
+}
+
+.collection-premium .shared-tile-title {
+  font-weight: 500;
+  background: linear-gradient(
+    90deg,
+    rgba(94, 26, 138, 0.55) 0%,
+    rgba(142, 36, 170, 0.55) 100%
+  );
+  backdrop-filter: blur(8px);
+}
+  
+/* Coming Soon overlay */
+.shared-tile.coming-soon {
+  position: relative;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.shared-tile-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.45);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 3;
+}
+
+/* Group panels */
+.catalog-group-panel {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 24px;
+  margin: 40px 0;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  backdrop-filter: blur(10px);
+}
+
+.catalog-group-panel.collection-premium-panel {
+  background: rgba(94, 26, 138, 0.18);
+  box-shadow: 0 8px 28px rgba(94, 26, 138, 0.45);
+}
+
+.catalog-group-title {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.catalog-group-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Grouped view gutters */
+#catalog-view-grouped {
+  padding: 0 48px;
+}
+
+/* Carousel strip (reusing shared tiles) */
+.content-carousel {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.content-strip {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 8px 0;
+  flex: 1;
+}
+
+.content-arrow {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: background 0.2s ease;
+}
+
+.content-arrow:hover {
+  background: rgba(255,255,255,0.2);
+}
+  
+</style>
+
 <main>
     <!-- Load the playlist and override data -->
     {% assign playlist = site.data.youtube_playlists.playlists

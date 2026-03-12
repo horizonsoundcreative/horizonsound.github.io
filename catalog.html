@@ -350,16 +350,7 @@ title: Catalog – Horizon Sound
   padding: 0 48px;
 }
 
-/* Carousel strip (reusing shared tiles) */
-.content-carousel {
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.content-strip {
+ {
   display: flex;
   gap: 16px;
   overflow-x: auto;
@@ -368,28 +359,13 @@ title: Catalog – Horizon Sound
   flex: 1;
 }
 
-.content-arrow {
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
-  color: #fff;
-  padding: 8px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  backdrop-filter: blur(6px);
-  transition: background 0.2s ease;
-}
-
-.content-arrow:hover {
-  background: rgba(255,255,255,0.2);
-}
-
 /* ============================================================
    CAROUSEL OVERRIDES — REQUIRED ON BOTH PAGES
    Forces horizontal flow, prevents shrinking, prevents wrapping
 ============================================================ */
 
 /* 1. The strip must be a horizontal, non-wrapping flex container */
-.content-strip {
+ {
   display: flex !important;
   flex-direction: row !important;
   flex-wrap: nowrap !important;

@@ -515,3 +515,89 @@ title: Catalog – Horizon Sound
     );
   });
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* ============================================================
+     1. SPA NAVIGATION FOR PLAYLIST LINKS
+     (Any link that goes to /music/playlists/)
+  ============================================================ */
+  document.querySelectorAll('a[href*="/music/playlists/"]').forEach(link => {
+    link.addEventListener("click", async (event) => {
+      event.preventDefault();
+
+      const url = link.href;
+
+      const response = await fetch(url, { credentials: "same-origin" });
+      const text = await response.text();
+
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, "text/html");
+      const newMain = doc.querySelector("main");
+
+      if (!newMain) {
+        window.location.href = url;
+        return;
+      }
+
+      document.querySelector("main").replaceWith(newMain);
+      history.pushState({}, "", url);
+
+      // Re-run scripts inside new <main>
+      newMain.querySelectorAll("script").forEach(oldScript => {
+        const s = document.createElement("script");
+        if (oldScript.src) {
+          s.src = oldScript.src;
+        } else {
+          s.textContent = oldScript.textContent;
+        }
+        document.body.appendChild(s);
+      });
+    });
+  });
+
+
+  /* ============================================================
+     2. SPA NAVIGATION FOR SHARED-TILE CLICKS
+     (Song tiles, playlist tiles, collection tiles)
+  ============================================================ */
+  document.querySelectorAll('.shared-tile').forEach(tile => {
+    tile.addEventListener("click", async (event) => {
+      if (tile.classList.contains("coming-soon")) return;
+
+      event.preventDefault();
+
+      const url = tile.getAttribute("href");
+      if (!url) return;
+
+      const response = await fetch(url, { credentials: "same-origin" });
+      const text = await response.text();
+
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, "text/html");
+      const newMain = doc.querySelector("main");
+
+      if (!newMain) {
+        window.location.href = url;
+        return;
+      }
+
+      document.querySelector("main").replaceWith(newMain);
+      history.pushState({}, "", url);
+
+      // Re-run scripts inside new <main>
+      newMain.querySelectorAll("script").forEach(oldScript => {
+        const s = document.createElement("script");
+        if (oldScript.src) {
+          s.src = oldScript.src;
+        } else {
+          s.textContent = oldScript.textContent;
+        }
+        document.body.appendChild(s);
+      });
+    });
+  });
+
+});
+</script>

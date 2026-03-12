@@ -574,6 +574,14 @@ is_playlist_page: true
     YT_READY = true;
   }
 
+  function safeLoadSong(songId) {
+    if (!YT_READY) {
+      setTimeout(() => safeLoadSong(songId), 50);
+      return;
+    }
+    loadSong(songId);
+  }
+
   function buildPlayer(youtubeId) {
     if (!YT_READY || !ensurePlayerContainer()) {
       setTimeout(() => buildPlayer(youtubeId), 50);
@@ -673,7 +681,7 @@ is_playlist_page: true
     url.searchParams.set("song_id", id);
     history.pushState({}, "", url.toString());
 
-    loadSong(id);
+    safeLoadSong(id);
 
     const strip = tile.closest('.content-strip, .horizontal-strip');
     if (strip) {
@@ -699,13 +707,12 @@ is_playlist_page: true
     url.searchParams.set("song_id", nextId);
     history.pushState({}, "", url.toString());
 
-    loadSong(nextId);
+    safeLoadSong(nextId);
   }
 </script>
 
 <script>
   if (window.SELECTED_SONG_ID) {
-    loadSong(window.SELECTED_SONG_ID);
+    safeLoadSong(window.SELECTED_SONG_ID);
   }
 </script>
-</main>

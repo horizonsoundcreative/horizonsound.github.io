@@ -26,19 +26,30 @@
       {% endif %}
     {% endfor %}
 
+
     {% for pl in active_playlists %}
+      {% assign ov = site.data.playlist_overrides.overrides | where: "playlist_id", pl.playlist_id | first %}
+    
+      {% assign display_title = ov.title | default: pl.title %}
+      {% assign display_thumbnail = ov.thumbnail | default: pl.thumbnail %}
+    
       <a class="shared-tile collection-premium"
          href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/?song_id={{ pl.song_ids | first }}">
-        <img src="{{ site.baseurl }}{{ pl.thumbnail }}">
-        <div class="shared-tile-title">{{ pl.title }}</div>
+        <img src="{{ site.baseurl }}{{ display_thumbnail }}">
+        <div class="shared-tile-title">{{ display_title }}</div>
       </a>
     {% endfor %}
 
     {% for pl in coming_soon_playlists %}
+      {% assign ov = site.data.playlist_overrides.overrides | where: "playlist_id", pl.playlist_id | first %}
+    
+      {% assign display_title = ov.title | default: pl.title %}
+      {% assign display_thumbnail = ov.thumbnail | default: pl.thumbnail %}
+    
       <div class="shared-tile collection-premium coming-soon">
-        <img src="{{ site.baseurl }}{{ pl.thumbnail }}">
+        <img src="{{ site.baseurl }}{{ display_thumbnail }}">
         <div class="shared-tile-overlay">Coming Soon</div>
-        <div class="shared-tile-title">{{ pl.title }}</div>
+        <div class="shared-tile-title">{{ display_title }}</div>
       </div>
     {% endfor %}
   </div>

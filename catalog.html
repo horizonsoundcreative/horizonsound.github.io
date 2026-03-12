@@ -192,22 +192,6 @@ title: Catalog – Horizon Sound
   box-shadow: 0 8px 28px rgba(94, 26, 138, 0.45); /* Stage glow */
   backdrop-filter: blur(12px);
 }
-
-.shared-tile-title {
-  font-size: 0.95rem;
-  line-height: 1.25;
-  min-height: calc(1.25em * 2); /* exactly two lines of height */
-  max-height: calc(1.25em * 2); /* prevent a third line */
-  padding: 10px 12px;
-  color: white;
-
-  display: -webkit-box;
-  -webkit-line-clamp: 2;        /* limit to 2 lines */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
   
 #catalog-view-grouped {
   padding: 0 48px;
@@ -217,10 +201,6 @@ title: Catalog – Horizon Sound
   position: relative;
   opacity: 0.6;
   pointer-events: none;
-}
-
-.collection-premium .shared-tile-title {
-  background: linear-gradient(90deg, #5e1a8a 0%, #8e24aa .55%);
 }
 
 /* ===========================
@@ -260,61 +240,6 @@ title: Catalog – Horizon Sound
   background: radial-gradient(circle at center, rgba(0,0,0,0) 60%, rgba(0,0,0,0.35) 100%);
   pointer-events: none;
   z-index: 1;
-}
-
-/* Title bar */
-.shared-tile-title {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 10px 12px;
-  font-size: 0.95rem;
-  line-height: 1.25;
-  min-height: 2.6em;
-  display: flex;
-  align-items: center;
-  color: white;
-  background: rgba(0,0,0,0.45);
-  backdrop-filter: blur(6px);
-  z-index: 2;
-}
-
-/* Collections: shorter tile + purple title */
-.collection-premium.shared-tile {
-  height: 180px;
-}
-
-.collection-premium .shared-tile-title {
-  font-weight: 500;
-  background: linear-gradient(
-    90deg,
-    rgba(94, 26, 138, 0.55) 0%,
-    rgba(142, 36, 170, 0.55) 100%
-  );
-  backdrop-filter: blur(8px);
-}
-  
-/* Coming Soon overlay */
-.shared-tile.coming-soon {
-  position: relative;
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-.shared-tile-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.45);
-  color: white;
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  z-index: 3;
 }
 
 /* Group panels */
@@ -472,6 +397,69 @@ title: Catalog – Horizon Sound
   pointer-events: none;
 }
 
+.shared-tile-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  min-height: 2.6em;
+  color: white;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+  z-index: 2;
+
+  /* Two-line clamp */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-items: flex-start;
+}
+
+.collection-premium .shared-tile-title {
+  background: linear-gradient(90deg, #5e1a8a 0%, #8e24aa .55%);
+}
+
+/* Collections: shorter tile + purple title */
+.collection-premium.shared-tile {
+  height: 180px;
+}
+
+.collection-premium .shared-tile-title {
+  font-weight: 500;
+  background: linear-gradient(
+    90deg,
+    rgba(94, 26, 138, 0.55) 0%,
+    rgba(142, 36, 170, 0.55) 100%
+  );
+  backdrop-filter: blur(8px);
+}
+  
+/* Coming Soon overlay */
+.shared-tile.coming-soon {
+  position: relative;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.shared-tile-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.45);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 3;
+}
 
 
 

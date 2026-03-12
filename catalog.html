@@ -350,32 +350,14 @@ title: Catalog – Horizon Sound
   padding: 0 48px;
 }
 
- {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 8px 0;
-  flex: 1;
-}
-
 /* ============================================================
    CAROUSEL OVERRIDES — REQUIRED ON BOTH PAGES
    Forces horizontal flow, prevents shrinking, prevents wrapping
 ============================================================ */
 
 /* 1. The strip must be a horizontal, non-wrapping flex container */
- {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-  white-space: nowrap !important;
-  scroll-behavior: smooth;
-}
 
-/* 2. Tiles inside the carousel must NOT shrink */
+  /* 2. Tiles inside the carousel must NOT shrink */
 .content-strip .shared-tile {
   flex: 0 0 auto !important;
   width: 180px; /* or your tile width */

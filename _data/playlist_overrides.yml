@@ -21,7 +21,7 @@ overrides:
   
   - playlist_id: missing-stamp-venice-trilogy
     is_collection: true
-    title: "Venice Trilogy - Missing Stamp"
+    title: "Venice Trilogy - Missing Stamp X"
     subtitle: 
     description: >
       A three‑chapter journey through memory, longing, and the magic of a city that 
@@ -50,7 +50,7 @@ overrides:
   
   - playlist_id: midnight-saga
     is_collection: true
-    title: "Midnight Saga"
+    title: "Midnight Saga X"
     subtitle: "Ravyn"
     description: >
       A cinematic late-night journey through identity, chaos, temptation, and
@@ -68,7 +68,7 @@ overrides:
   
   - playlist_id: after-the-silence-performed-by-lydia-ellington
     is_collection: true
-    title: "After the Silence"
+    title: "After the Silence X"
     subtitle: "Lydia Ellington"
     description: >
       A reflective, emotional collection exploring the quiet moments after a
@@ -94,7 +94,7 @@ overrides:
   
   - playlist_id: a-way-back-trilogy
     is_collection: true
-    title: "A Way Back Trilogy"
+    title: "A Way Back Trilogy X"
     subtitle: "A breakup told from differnt perspectives"
     description: >
       A three-part emotional arc exploring silence, self-worth, and the courage

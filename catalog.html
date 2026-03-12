@@ -419,28 +419,23 @@ title: Catalog – Horizon Sound
 }
 
 /* 5. Arrow buttons must not affect layout width */
+/* Premium carousel arrows — match production */
 .content-arrow {
-  flex: 0 0 auto;
-  z-index: 2;
-}
-
-/* Premium arrow buttons */
-.content-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   background: rgba(0, 0, 0, 0.45);
   border: none;
   color: white;
-  font-size: 32px;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
+  font-size: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 5;
+  z-index: 10;
   transition: background 0.2s ease;
 }
 
@@ -449,14 +444,14 @@ title: Catalog – Horizon Sound
 }
 
 .content-arrow-left {
-  left: -24px;
+  left: -22px;
 }
 
 .content-arrow-right {
-  right: -24px;
+  right: -22px;
 }
 
-/* Ensure arrows don't shrink the layout */
+/* Ensure arrows don't shrink layout */
 .content-arrow {
   flex: 0 0 auto;
 }

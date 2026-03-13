@@ -19,12 +19,12 @@ playlists:
     thumbnail: >-
       /assets/thumbnails/playlist-calm-cinematic-horizon-sound-instrumentals.jpeg
     song_ids:
-      - the-way-water-moves-cinematic-instrumental-horizon-sound
-      - lines-of-light-cinematic-instrumental-horizon-sound
-      - forever-in-a-moment-cinematic-instrumental-horizon-sound
       - a-touch-of-light-cinematic-instrumental-horizon-sound
-      - the-moment-you-breathe-cinematic-instrumental-horizon-sound
+      - forever-in-a-moment-cinematic-instrumental-horizon-sound
       - held-in-the-moment-cinematic-instrumental-horizon-sound
+      - lines-of-light-cinematic-instrumental-horizon-sound
+      - the-moment-you-breathe-cinematic-instrumental-horizon-sound
+      - the-way-water-moves-cinematic-instrumental-horizon-sound
   - playlist_id: missing-stamp-venice-trilogy
     title: Missing Stamp - Venice Trilogy
     description: ''
@@ -120,9 +120,9 @@ playlists:
     channel_title: Horizon Sound
     thumbnail: /assets/thumbnails/playlist-a-way-back-trilogy.jpeg
     song_ids:
-      - choosing-me-his-version-pop-horizon-sound
-      - choosing-me-her-version-acoustic-pop-horizon-sound
       - lost-in-silence-from-a-way-back-horizon-sound
+      - choosing-me-her-version-acoustic-pop-horizon-sound
+      - choosing-me-his-version-pop-horizon-sound
   - playlist_id: acoustic-singer-songwriter
     title: Acoustic / Singer‑Songwriter
     description: >-

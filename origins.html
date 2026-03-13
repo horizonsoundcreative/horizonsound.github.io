@@ -60,21 +60,3 @@ title: About – Horizon Sound
   </p>
 </section>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("a").forEach(link => {
-    const href = link.getAttribute("href");
-    if (!href) return;
-    if (!href.startsWith("/development")) return;
-
-    link.addEventListener("click", async (e) => {
-      e.preventDefault();
-      const response = await fetch(href);
-      const html = await response.text();
-      const doc = new DOMParser().parseFromString(html, "text/html");
-      const newMain = doc.querySelector("main");
-      document.querySelector("main").replaceWith(newMain);
-    });
-  });
-});
-</script>

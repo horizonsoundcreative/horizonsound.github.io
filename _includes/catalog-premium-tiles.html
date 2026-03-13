@@ -1,21 +1,19 @@
 <section id="music-view-playlists">  
   <div class="playlist-premium-grid">
     
-    {% assign playlist_data = site.data.youtube_playlists.playlists %}
-    {% assign overrides = site.data.playlist_overrides.overrides %}
-    
-    {% assign merged_playlists = "" | split: "" %}
-          
-    {% for pl in playlist_data %}
-      {% assign override = overrides | where: "playlist_id", pl.playlist_id | first %}
-    
-      {% if override %}
-        {% assign merged = pl | merge: override %}
-        {% assign merged_playlists = merged_playlists | push: merged %}
-      {% else %}
-        {% assign merged_playlists = merged_playlists | push: pl %}
-      {% endif %}
-    {% endfor %}
+{% assign merged_playlists = "" | split: "" %}
+
+{% for pl in playlist_data %}
+  {% assign override = overrides | where: "playlist_id", pl.playlist_id | first %}
+
+  {% if override %}
+    {% assign override_hash = override | jsonify | parse_json %}
+    {% assign merged = pl | merge: override_hash %}
+    {% assign merged_playlists = merged_playlists | push: merged %}
+  {% else %}
+    {% assign merged_playlists = merged_playlists | push: pl %}
+  {% endif %}
+{% endfor %}
 
     {% for pl in merged_playlists %}
   

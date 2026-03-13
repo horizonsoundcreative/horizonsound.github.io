@@ -238,7 +238,7 @@ songs:
     videostatus: public
     playlists:
       - after-the-silence-performed-by-lydia-ellington
-    view_count_num: 86
+    view_count_num: 87
     youtube_metadata:
       published_at: '2026-02-18T17:00:21Z'
       scheduled_at: null
@@ -255,7 +255,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '86'
+        view_count: '87'
         like_count: '1'
         favorite_count: '0'
         comment_count: '0'
@@ -608,7 +608,7 @@ songs:
     videostatus: public
     playlists:
       - calm-cinematic-horizon-sound-instrumentals
-    view_count_num: 33
+    view_count_num: 32
     youtube_metadata:
       published_at: '2026-03-07T13:01:18Z'
       scheduled_at: null
@@ -625,7 +625,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '33'
+        view_count: '32'
         like_count: '1'
         favorite_count: '0'
         comment_count: '0'
@@ -2090,7 +2090,7 @@ songs:
     videostatus: public
     playlists:
       - after-the-silence-performed-by-lydia-ellington
-    view_count_num: 12
+    view_count_num: 11
     youtube_metadata:
       published_at: '2026-03-10T16:00:01Z'
       scheduled_at: null
@@ -2107,7 +2107,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '12'
+        view_count: '11'
         like_count: '1'
         favorite_count: '0'
         comment_count: '0'
@@ -2592,7 +2592,7 @@ songs:
     videostatus: public
     playlists:
       - midnight-saga
-    view_count_num: 13
+    view_count_num: 14
     youtube_metadata:
       published_at: '2026-03-06T17:01:20Z'
       scheduled_at: null
@@ -2609,7 +2609,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '13'
+        view_count: '14'
         like_count: '1'
         favorite_count: '0'
         comment_count: '0'

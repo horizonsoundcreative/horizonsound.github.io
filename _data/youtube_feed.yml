@@ -5303,7 +5303,7 @@ songs:
     videostatus: public
     playlists:
       - 80s-rock-pop
-    view_count_num: 153
+    view_count_num: 154
     youtube_metadata:
       published_at: '2026-01-09T17:43:44Z'
       scheduled_at: null
@@ -5320,7 +5320,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '153'
+        view_count: '154'
         like_count: '2'
         favorite_count: '0'
         comment_count: '1'

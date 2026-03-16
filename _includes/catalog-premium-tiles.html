@@ -36,6 +36,19 @@
       {% assign first_song_id = playlist_song_ids | first %}
 
       {% if has_public %}
+{% if playlist.playlist_id == "after-the-silence-performed-by-lydia-ellington" %}
+  <pre style="background:#111;color:#0f0;padding:1rem;font-size:0.8rem;white-space:pre-wrap;">
+  DEBUG: MERGED PLAYLIST OBJECT
+  playlist_id: {{ playlist.playlist_id }}
+  title: {{ playlist.title }}
+  subtitle: {{ playlist.subtitle }}
+  description: {{ playlist.description | truncate: 120 }}
+  thumbnail: {{ playlist.thumbnail }}
+  hero: {{ playlist.hero }}
+  override_found: {% if override %}YES{% else %}NO{% endif %}
+  override_title: {{ override.title }}
+  </pre>
+{% endif %}
         <a 
           class="playlist-premium-tile" 
           href="{{ site.baseurl }}/music/playlists/{{ playlist.playlist_id }}/?song_id={{ first_song_id }}"

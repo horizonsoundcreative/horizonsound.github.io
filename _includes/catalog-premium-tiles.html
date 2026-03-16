@@ -18,7 +18,7 @@
       {% endif %}
     {% endfor %}
 
-    {% for pl in merged_playlists %}
+    {% for playlist in merged_playlists %}
 
       {% assign override = overrides | where: "playlist_id", pl.playlist_id | first %}
       {% assign playlist_song_ids = override.songs | default: pl.song_ids %}
@@ -43,7 +43,7 @@
           <div class="playlist-premium-image-wrapper">
             <img 
               src="{{ site.baseurl }}{{ display_thumbnail }}" 
-              alt="{{ pl.title }}" 
+              alt="{{ playlist.title }}" 
               class="playlist-premium-image"
             >
             <div class="playlist-premium-gradient"></div>
@@ -55,7 +55,7 @@
           <div class="playlist-premium-image-wrapper">
             <img 
               src="{{ site.baseurl }}{{ display_thumbnail }}" 
-              alt="{{ pl.title }}" 
+              alt="{{ playlist.title }}" 
               class="playlist-premium-image"
             >
             <div class="playlist-premium-overlay">Coming Soon</div>

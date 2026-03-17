@@ -509,6 +509,27 @@ is_playlist_page: true
     inset 0 0 60px rgba(0, 0, 0, 0.55);
 }
 
+  /* Lift playlist title + subtitle onto the hero */
+.playlist-header {
+  position: relative;
+  z-index: 20;
+  margin-top: -140px; /* same lift as song page */
+  text-align: center;
+  padding: 0 40px;
+}
+
+.playlist-title {
+  font-size: 2.4rem;
+  margin: 0;
+  letter-spacing: 0.03em;
+}
+
+.playlist-header h2.playlist-title {
+  font-size: 1.3rem;
+  opacity: 0.85;
+  margin-top: 6px;
+}
+
 </style>
    
   <!-- Load the playlist and override data -->

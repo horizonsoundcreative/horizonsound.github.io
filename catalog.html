@@ -572,7 +572,40 @@ title: Catalog – Horizon Sound
   pointer-events: none;
 }
 
+  /* ============================================================
+   PREMIUM TILE — COMING SOON OVERLAY
+   ============================================================ */
+
+.playlist-premium-tile.coming-soon .playlist-premium-image-wrapper {
+  position: relative;
+  filter: grayscale(40%) brightness(0.75);
+}
+
+.playlist-premium-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  z-index: 4;
+  border-radius: 14px;
+  pointer-events: none;
+}
+
+.playlist-premium-tile.coming-soon .playlist-premium-title {
+  opacity: 0.85;
+}
 </style>
+
 {% assign all_songs = site.data.youtube_feed.songs %}
 {% include hero.html %}
 <div class="catalog-page">

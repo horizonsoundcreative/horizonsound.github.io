@@ -310,7 +310,10 @@ title: Catalog – Horizon Sound
   overflow-y: hidden;
   white-space: nowrap;
   scroll-behavior: smooth;
-  flex: 1 !important;
+
+  /* FIX: allow overflow instead of stretching */
+  min-width: 0;
+  flex: 0 1 auto;
 }
 
 /* Prevent tile shrinking */
@@ -604,6 +607,7 @@ title: Catalog – Horizon Sound
 .playlist-premium-tile.coming-soon .playlist-premium-title {
   opacity: 0.85;
 }
+
 </style>
 
 {% assign all_songs = site.data.youtube_feed.songs %}

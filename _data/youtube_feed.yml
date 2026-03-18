@@ -875,7 +875,7 @@ songs:
     videostatus: public
     playlists:
       - calm-cinematic-horizon-sound-instrumentals
-    view_count_num: 15
+    view_count_num: 16
     youtube_metadata:
       published_at: '2026-03-14T12:01:41Z'
       scheduled_at: null
@@ -892,7 +892,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '15'
+        view_count: '16'
         like_count: '0'
         favorite_count: '0'
         comment_count: '0'

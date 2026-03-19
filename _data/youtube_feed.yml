@@ -1,4 +1,48 @@
 songs:
+  - song_id: moments-between-moments
+    youtube_id: pniZGrpocpo
+    title: Moments Between Moments
+    description_html: >-
+      <p>A calm cinematic instrumental built around soft piano, warm pads, and
+      gentle strings. Perfect for studying, relaxing, or drifting into a
+      peaceful headspace.
+
+      Horizon Sound · Cinematic Ambient Series</p>
+    url: /music/moments-between-moments/
+    thumbnail: /assets/thumbnails/moments-between-moments.jpeg
+    videostatus: scheduled
+    playlists:
+      - calm-cinematic-horizon-sound-instrumentals
+    view_count_num: 0
+    youtube_metadata:
+      published_at: '2026-03-19T16:36:01Z'
+      scheduled_at: '2026-03-21T12:00:00Z'
+      channel_id: UCiko-zjojbsoXrsEuBOPbSw
+      channel_title: Horizon Sound
+      category_id: '22'
+      tags: []
+      duration: PT4M24S
+      definition: hd
+      dimension: null
+      caption: null
+      licensed_content: false
+      region_allowed: []
+      region_blocked: []
+      content_rating: {}
+      statistics:
+        view_count: '0'
+        like_count: '0'
+        favorite_count: '0'
+        comment_count: '0'
+      made_for_kids: false
+      self_declared_made_for_kids: false
+      topic_categories: []
+      privacy_status: null
+      upload_status: null
+      publish_at: null
+      license: ''
+      embeddable: true
+      public_stats_viewable: true
   - song_id: she-s-so-into-me-modern-country-love-song-horizon-sound
     youtube_id: 81IXyVEd7PQ
     title: She’s So Into Me (Modern Country Love Song) – Horizon Sound
@@ -2097,7 +2141,7 @@ songs:
     videostatus: public
     playlists:
       - after-the-silence-performed-by-lydia-ellington
-    view_count_num: 24
+    view_count_num: 25
     youtube_metadata:
       published_at: '2026-03-10T16:00:01Z'
       scheduled_at: null
@@ -2114,7 +2158,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '24'
+        view_count: '25'
         like_count: '1'
         favorite_count: '0'
         comment_count: '0'

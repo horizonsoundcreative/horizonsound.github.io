@@ -1,4 +1,254 @@
 songs:
+  - song_id: waves-of-blue
+    youtube_id: MdbY8H1BUlg
+    title: Waves of Blue
+    description_html: ''
+    url: /music/waves-of-blue/
+    thumbnail: /assets/thumbnails/waves-of-blue.jpeg
+    videostatus: private
+    playlists: []
+    view_count_num: 0
+    youtube_metadata:
+      published_at: '2026-03-20T13:31:13Z'
+      scheduled_at: null
+      channel_id: UCiko-zjojbsoXrsEuBOPbSw
+      channel_title: Horizon Sound
+      category_id: '22'
+      tags: []
+      duration: PT7M
+      definition: hd
+      dimension: null
+      caption: null
+      licensed_content: false
+      region_allowed: []
+      region_blocked: []
+      content_rating: {}
+      statistics:
+        view_count: '0'
+        like_count: '0'
+        favorite_count: '0'
+        comment_count: '0'
+      made_for_kids: false
+      self_declared_made_for_kids: false
+      topic_categories: []
+      privacy_status: null
+      upload_status: null
+      publish_at: null
+      license: ''
+      embeddable: true
+      public_stats_viewable: true
+  - song_id: running-through-the-night
+    youtube_id: Fg9Ad5YhjvE
+    title: Running Through the Night
+    description_html: >-
+      <p>A modern electric guitar instrumental with clean melodic leads and
+      atmospheric pads. Emotional, cinematic, and perfect for late-night
+      listening.
+
+      Horizon Sound · Guitar Instrumentals</p>
+    url: /music/running-through-the-night/
+    thumbnail: /assets/thumbnails/running-through-the-night.jpeg
+    videostatus: scheduled
+    playlists:
+      - electric-guitar-rock-horizon-sound-instrumentals
+    view_count_num: 0
+    youtube_metadata:
+      published_at: '2026-03-20T13:26:26Z'
+      scheduled_at: '2026-05-30T12:00:00Z'
+      channel_id: UCiko-zjojbsoXrsEuBOPbSw
+      channel_title: Horizon Sound
+      category_id: '22'
+      tags: []
+      duration: PT3M38S
+      definition: hd
+      dimension: null
+      caption: null
+      licensed_content: false
+      region_allowed: []
+      region_blocked: []
+      content_rating: {}
+      statistics:
+        view_count: '0'
+        like_count: '0'
+        favorite_count: '0'
+        comment_count: '0'
+      made_for_kids: false
+      self_declared_made_for_kids: false
+      topic_categories: []
+      privacy_status: null
+      upload_status: null
+      publish_at: null
+      license: ''
+      embeddable: true
+      public_stats_viewable: true
+  - song_id: neon-skyline
+    youtube_id: cRkc1TVX9Ww
+    title: Neon Skyline
+    description_html: >-
+      <p>A modern electric guitar instrumental with clean melodic leads and
+      atmospheric pads. Emotional, cinematic, and perfect for late-night
+      listening.
+
+      Horizon Sound · Guitar Instrumentals</p>
+    url: /music/neon-skyline/
+    thumbnail: /assets/thumbnails/neon-skyline.jpeg
+    videostatus: scheduled
+    playlists:
+      - electric-guitar-rock-horizon-sound-instrumentals
+    view_count_num: 0
+    youtube_metadata:
+      published_at: '2026-03-20T13:21:28Z'
+      scheduled_at: '2026-04-04T12:00:00Z'
+      channel_id: UCiko-zjojbsoXrsEuBOPbSw
+      channel_title: Horizon Sound
+      category_id: '22'
+      tags: []
+      duration: PT4M6S
+      definition: hd
+      dimension: null
+      caption: null
+      licensed_content: false
+      region_allowed: []
+      region_blocked: []
+      content_rating: {}
+      statistics:
+        view_count: '0'
+        like_count: '0'
+        favorite_count: '0'
+        comment_count: '0'
+      made_for_kids: false
+      self_declared_made_for_kids: false
+      topic_categories: []
+      privacy_status: null
+      upload_status: null
+      publish_at: null
+      license: ''
+      embeddable: true
+      public_stats_viewable: true
+  - song_id: fire-in-the-wires
+    youtube_id: EMyCVf_X9nI
+    title: Fire in the Wires
+    description_html: >-
+      <p>A powerful rock instrumental with driving rhythm guitars and uplifting
+      lead melodies. Energetic and cinematic with a modern edge.
+
+      Horizon Sound · Guitar Instrumentals</p>
+    url: /music/fire-in-the-wires/
+    thumbnail: /assets/thumbnails/fire-in-the-wires.jpeg
+    videostatus: scheduled
+    playlists:
+      - electric-guitar-rock-horizon-sound-instrumentals
+    view_count_num: 0
+    youtube_metadata:
+      published_at: '2026-03-20T13:16:35Z'
+      scheduled_at: '2026-07-25T12:00:00Z'
+      channel_id: UCiko-zjojbsoXrsEuBOPbSw
+      channel_title: Horizon Sound
+      category_id: '22'
+      tags: []
+      duration: PT3M52S
+      definition: hd
+      dimension: null
+      caption: null
+      licensed_content: false
+      region_allowed: []
+      region_blocked: []
+      content_rating: {}
+      statistics:
+        view_count: '0'
+        like_count: '0'
+        favorite_count: '0'
+        comment_count: '0'
+      made_for_kids: false
+      self_declared_made_for_kids: false
+      topic_categories: []
+      privacy_status: null
+      upload_status: null
+      publish_at: null
+      license: ''
+      embeddable: true
+      public_stats_viewable: true
+  - song_id: chasing-the-sparks
+    youtube_id: nRtKsW9xDno
+    title: Chasing the Sparks
+    description_html: >-
+      <p>A powerful rock instrumental with driving rhythm guitars and uplifting
+      lead melodies. Energetic and cinematic with a modern edge.
+
+      Horizon Sound · Guitar Instrumentals</p>
+    url: /music/chasing-the-sparks/
+    thumbnail: /assets/thumbnails/chasing-the-sparks.jpeg
+    videostatus: scheduled
+    playlists:
+      - electric-guitar-rock-horizon-sound-instrumentals
+    view_count_num: 0
+    youtube_metadata:
+      published_at: '2026-03-20T13:06:45Z'
+      scheduled_at: '2026-09-19T12:00:00Z'
+      channel_id: UCiko-zjojbsoXrsEuBOPbSw
+      channel_title: Horizon Sound
+      category_id: '22'
+      tags: []
+      duration: PT7M3S
+      definition: hd
+      dimension: null
+      caption: null
+      licensed_content: false
+      region_allowed: []
+      region_blocked: []
+      content_rating: {}
+      statistics:
+        view_count: '0'
+        like_count: '0'
+        favorite_count: '0'
+        comment_count: '0'
+      made_for_kids: false
+      self_declared_made_for_kids: false
+      topic_categories: []
+      privacy_status: null
+      upload_status: null
+      publish_at: null
+      license: ''
+      embeddable: true
+      public_stats_viewable: true
+  - song_id: after-the-static
+    youtube_id: EAhVmhgtbnY
+    title: After the Static
+    description_html: ''
+    url: /music/after-the-static/
+    thumbnail: /assets/thumbnails/after-the-static.jpeg
+    videostatus: private
+    playlists: []
+    view_count_num: 0
+    youtube_metadata:
+      published_at: '2026-03-20T12:58:07Z'
+      scheduled_at: null
+      channel_id: UCiko-zjojbsoXrsEuBOPbSw
+      channel_title: Horizon Sound
+      category_id: '22'
+      tags: []
+      duration: PT5M39S
+      definition: hd
+      dimension: null
+      caption: null
+      licensed_content: false
+      region_allowed: []
+      region_blocked: []
+      content_rating: {}
+      statistics:
+        view_count: '0'
+        like_count: '0'
+        favorite_count: '0'
+        comment_count: '0'
+      made_for_kids: false
+      self_declared_made_for_kids: false
+      topic_categories: []
+      privacy_status: null
+      upload_status: null
+      publish_at: null
+      license: ''
+      embeddable: true
+      public_stats_viewable: true
   - song_id: quiet-horizons
     youtube_id: gEJDri-ViGE
     title: Quiet Horizons

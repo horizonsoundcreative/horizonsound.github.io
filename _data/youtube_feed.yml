@@ -2,15 +2,20 @@ songs:
   - song_id: waves-of-blue
     youtube_id: MdbY8H1BUlg
     title: Waves of Blue
-    description_html: ''
+    description_html: >-
+      <p>An atmospheric electric guitar instrumental with delay-soaked leads and
+      emotional indie-rock energy. Dreamy, reflective, and cinematic.
+
+      Horizon Sound · Guitar Instrumentals</p>
     url: /music/waves-of-blue/
     thumbnail: /assets/thumbnails/waves-of-blue.jpeg
-    videostatus: private
-    playlists: []
+    videostatus: scheduled
+    playlists:
+      - electric-guitar-rock-horizon-sound-instrumentals
     view_count_num: 0
     youtube_metadata:
       published_at: '2026-03-20T13:31:13Z'
-      scheduled_at: null
+      scheduled_at: '2026-11-14T13:00:00Z'
       channel_id: UCiko-zjojbsoXrsEuBOPbSw
       channel_title: Horizon Sound
       category_id: '22'
@@ -214,15 +219,20 @@ songs:
   - song_id: after-the-static
     youtube_id: EAhVmhgtbnY
     title: After the Static
-    description_html: ''
+    description_html: >-
+      <p>An atmospheric electric guitar instrumental with delay-soaked leads and
+      emotional indie-rock energy. Dreamy, reflective, and cinematic.
+
+      Horizon Sound · Guitar Instrumentals</p>
     url: /music/after-the-static/
     thumbnail: /assets/thumbnails/after-the-static.jpeg
-    videostatus: private
-    playlists: []
+    videostatus: scheduled
+    playlists:
+      - electric-guitar-rock-horizon-sound-instrumentals
     view_count_num: 0
     youtube_metadata:
       published_at: '2026-03-20T12:58:07Z'
-      scheduled_at: null
+      scheduled_at: '2027-01-09T13:00:00Z'
       channel_id: UCiko-zjojbsoXrsEuBOPbSw
       channel_title: Horizon Sound
       category_id: '22'
@@ -2014,7 +2024,7 @@ songs:
     videostatus: public
     playlists:
       - classic-country
-    view_count_num: 40
+    view_count_num: 41
     youtube_metadata:
       published_at: '2026-03-13T16:00:27Z'
       scheduled_at: null
@@ -2031,7 +2041,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '40'
+        view_count: '41'
         like_count: '2'
         favorite_count: '0'
         comment_count: '0'
@@ -6170,7 +6180,7 @@ songs:
     videostatus: public
     playlists:
       - emotional-ballads
-    view_count_num: 140
+    view_count_num: 141
     youtube_metadata:
       published_at: '2026-01-09T16:05:03Z'
       scheduled_at: null
@@ -6187,7 +6197,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '140'
+        view_count: '141'
         like_count: '3'
         favorite_count: '0'
         comment_count: '1'

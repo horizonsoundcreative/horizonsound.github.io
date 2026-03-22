@@ -1461,7 +1461,7 @@ songs:
     videostatus: public
     playlists:
       - modern-country
-    view_count_num: 6
+    view_count_num: 8
     youtube_metadata:
       published_at: '2026-03-20T16:01:17Z'
       scheduled_at: null
@@ -1478,8 +1478,8 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '6'
-        like_count: '0'
+        view_count: '8'
+        like_count: '1'
         favorite_count: '0'
         comment_count: '0'
       made_for_kids: false

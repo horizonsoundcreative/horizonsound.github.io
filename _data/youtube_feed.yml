@@ -1461,7 +1461,7 @@ songs:
     videostatus: public
     playlists:
       - modern-country
-    view_count_num: 11
+    view_count_num: 16
     youtube_metadata:
       published_at: '2026-03-20T16:01:17Z'
       scheduled_at: null
@@ -1478,7 +1478,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '11'
+        view_count: '16'
         like_count: '1'
         favorite_count: '0'
         comment_count: '0'
@@ -3322,7 +3322,7 @@ songs:
     videostatus: public
     playlists:
       - after-the-silence-performed-by-lydia-ellington
-    view_count_num: 21
+    view_count_num: 22
     youtube_metadata:
       published_at: '2026-03-17T16:00:43Z'
       scheduled_at: null
@@ -3339,7 +3339,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '21'
+        view_count: '22'
         like_count: '1'
         favorite_count: '0'
         comment_count: '0'

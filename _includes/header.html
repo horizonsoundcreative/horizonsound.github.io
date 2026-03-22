@@ -8,13 +8,39 @@
       <span class="icon"></span>
     </div>
   </div>
+
   <nav class="main-nav">
     <ul>
-      <li><a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">On Stage</a></li>
-      <li><a href="{{ site.baseurl }}/catalog.html" class="{% if page.url contains '/catalog' %}active{% endif %}">Explorer</a></li>
-      <li><a href="{{ site.baseurl }}/origins.html" class="{% if page.url contains '/origins' %}active{% endif %}">Origins</a></li>
+      <li>
+        <a href="{{ site.baseurl }}/" 
+           class="{% if page.url == '/' %}active{% endif %}">
+          On Stage
+        </a>
+      </li>
+  
+      <li>
+        <a href="{{ site.baseurl }}/catalog.html" 
+           class="{% if page.url contains '/catalog' %}active{% endif %}">
+          Explorer
+        </a>
+      </li>
+  
+      <li>
+        <a href="{{ site.baseurl }}/on-the-horizon.html" 
+           class="{% if page.url contains '/on-the-horizon' %}active{% endif %}">
+          On the Horizon
+        </a>
+      </li>
+  
+      <li>
+        <a href="{{ site.baseurl }}/origins.html" 
+           class="{% if page.url contains '/origins' %}active{% endif %}">
+          Origins
+        </a>
+      </li>
     </ul>
   </nav>
+
 </header>
 
 <script>  

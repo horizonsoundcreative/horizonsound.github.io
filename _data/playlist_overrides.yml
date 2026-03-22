@@ -1,4 +1,102 @@
 overrides:
+  - playlist_id: pop-instrumental-horizon-sound-instrumentals
+    is_collection: false
+    title: Pop Instrumental – Horizon Sound Instrumentals
+    subtitle: 
+    description: ''
+    thumbnail: /assets/thumbnails/color-the-sky.jpeg
+    hero:
+    songs: []
+    order: 
+    
+  - playlist_id: synthwave-retrowave-horizon-sound-instrumentals
+    is_collection: false
+    title: Synthwave & Retrowave – Horizon Sound Instrumentals
+    subtitle: 
+    description: ''
+    thumbnail: /assets/thumbnails/retrodrive.jpeg
+    hero:
+    songs: []
+    order: 
+    
+  - playlist_id: orchestral-rock-tso-style-horizon-sound-instrumentals
+    is_collection: false
+    title: Orchestral Rock (TSO‑Style) – Horizon Sound Instrumentals
+    subtitle: 
+    description: ''
+    thumbnail: /assets/thumbnails/winterfire.jpeg
+    hero:
+    songs: []
+    order: 
+    
+  - playlist_id: piano-emotional-horizon-sound-instrumentals
+    is_collection: false
+    title: Piano Emotional – Horizon Sound Instrumentals
+    subtitle: 
+    description: ''
+    thumbnail: /assets/thumbnails/holding-the-light.jpeg
+    hero:
+    songs: []
+    order: 
+    
+  - playlist_id: workout-edm-horizon-sound-instrumentals
+    is_collection: false
+    title: Workout & EDM – Horizon Sound Instrumentals
+    subtitle: 
+    description: ''
+    thumbnail: /assets/thumbnails/electric-pulse.jpeg
+    hero:
+    songs: []
+    order: 
+    
+  - playlist_id: cinematic-ambient-horizon-sound-instrumentals
+    is_collection: false
+    title: Cinematic & Ambient – Horizon Sound Instrumentals
+    subtitle: 
+    description: ''
+    thumbnail: /assets/thumbnails/moments-between-moments.jpeg
+    hero:
+    songs:
+      - moments-between-moments
+      - where-the-air-glows
+      - echos-of-tomorrow
+      - the-space-we-keep
+      - breathing-in-color
+      - quiet-horizons
+    order: 
+    
+  - playlist_id: electric-guitar-rock-horizon-sound-instrumentals
+    is_collection: false
+    title: Electric Guitar Rock – Horizon Sound Instrumentals
+    subtitle: 
+    description: ''
+    thumbnail: /assets/thumbnails/neon-skyline.jpeg
+    hero:
+    songs:
+      - neon-skyline
+      - running-through-the-night
+      - fire-in-the-wires
+      - chasing-the-sparks
+      - waves-of-blue
+      - after-the-static
+    order: 
+    
+  - playlist_id: acoustic-guitar-horizon-sound-instrumentals
+    is_collection: false
+    title: Acoustic Guitar – Horizon Sound Instrumentals
+    subtitle: 
+    description: ''
+    thumbnail: /assets/thumbnails/sunlight-on-the-strings.jpeg
+    hero:
+    songs:
+      - sunlight-on-the-strings
+      - wanderers-heart
+      - chasing-the-daylight
+      - running-toward-the-sun
+      - the-way-home
+      - letters-in-the-wind
+    order: 
+    
   - playlist_id: classic-country
     is_collection: false
     title: 

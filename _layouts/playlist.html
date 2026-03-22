@@ -592,13 +592,31 @@ is_playlist_page: true
         {{ playlist_description }}
       </div>
     {% endif %}
-
+    
+    {% assign window_days = site.data.site.settings.coming_soon_window_days %}
+    {% assign window_seconds = window_days | times: 86400 %}
+    {% assign now_ts = 'now' | date: "%s" | plus: 0 %}
+    {% assign coming_soon_cutoff = now_ts | plus: window_seconds %}
+    
     {% assign ids = playlist_override.songs | default: playlist.song_ids %}
     {% assign ordered_songs = "" | split: "" %}
+    
     {% for id in ids %}
       {% assign s = site.data.youtube_feed.songs | where: "song_id", id | first %}
+    
       {% if s %}
-        {% assign ordered_songs = ordered_songs | push: s %}
+    
+        {% if s.videostatus == "public" %}
+          {% assign ordered_songs = ordered_songs | push: s %}
+    
+        {% elsif s.videostatus == "scheduled" and s.youtube_metadata.scheduled_at %}
+          {% assign scheduled_ts = s.youtube_metadata.scheduled_at | date: "%s" | plus: 0 %}
+          {% if scheduled_ts >= now_ts and scheduled_ts <= coming_soon_cutoff %}
+            {% assign ordered_songs = ordered_songs | push: s %}
+          {% endif %}
+    
+        {% endif %}
+    
       {% endif %}
     {% endfor %}
 

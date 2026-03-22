@@ -1,0 +1,246 @@
+---
+layout: default
+title: On the Horizon
+permalink: /on-the-horizon.html
+---
+
+<style>
+  
+  /* Page wrapper */
+  .catalog-page {
+    padding: 0 30px;
+  }
+  
+  /* Group panel container */
+  .catalog-group-panel {
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 40px 0;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Purple-tinted panel for collections */
+  .catalog-group-panel.collection-premium-panel {
+    background: rgba(94, 26, 138, 0.18);
+    box-shadow: 0 8px 28px rgba(94, 26, 138, 0.45);
+  }
+  
+  /* Section titles */
+  .catalog-group-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: white;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Tile grid */
+  .catalog-group-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  /* Shared tile */
+  .shared-tile {
+    width: 260px;
+    display: block;
+    background: #111;
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+  }
+  
+  .shared-tile img {
+    width: 260px;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+  
+    /* On the Horizon — Coming Soon tiles should NOT be dimmed */
+  .horizon-page .shared-tile.coming-soon {
+    opacity: 1;
+    pointer-events: auto;
+  }
+    
+  .shared-tile-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.45);
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 3;
+  }
+  
+  /* Tile title */
+  .shared-tile-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    line-height: 1.25;
+    min-height: 2.6em;
+    color: white;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(6px);
+    z-index: 2;
+  
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: normal;
+  }
+
+  .horizon-page .page-header {
+    margin-bottom: 48px;
+  }
+
+  .horizon-page .page-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.55;
+    opacity: 0.9;
+    max-width: 720px;
+  }
+
+  .horizon-page .catalog-group-panel.collection-premium-panel {
+    margin-top: 80px;
+  }
+</style>
+
+{% include hero.html %}
+<div class="catalog-page catalog-grouped-view horizon-page">
+  <div class="page-header">
+    <h1>On the Horizon</h1>
+    <p class="page-subtitle">
+      A curated look at the music scheduled for release in the months ahead. 
+      These tracks and collections are already in motion — here’s what’s on the horizon.
+    </p>
+  </div>
+  
+  {% assign horizon_days = site.data.site.settings.horizon_window_days %}
+  {% assign horizon_seconds = horizon_days | times: 86400 %}
+  {% assign now_ts = 'now' | date: "%s" | plus: 0 %}
+  {% assign horizon_cutoff = now_ts | plus: horizon_seconds %}
+  
+  {% assign all_songs = site.data.youtube_feed.songs %}
+  
+  {%- comment -%}
+    We reuse the grouped-by layout, but with a different window:
+    - PUBLIC songs are excluded (this page is future-only)
+    - SCHEDULED songs are included if within horizon window
+    - PRIVATE songs are excluded
+  {%- endcomment -%}
+  
+  {% assign window_days = horizon_days %}
+  {% assign window_seconds = horizon_seconds %}
+  {% assign coming_soon_cutoff = horizon_cutoff %}
+  
+  <div class="catalog-group-panel collection-premium-panel">
+    <h2 class="catalog-group-title">Upcoming Collections</h2>
+  
+    <div class="catalog-group-tiles">
+      {% assign upcoming_playlists = "" | split: "" %}
+      {% assign collection_overrides = site.data.playlist_overrides.overrides | where: "is_collection", true %}
+  
+      {% for ov in collection_overrides %}
+        {% assign pl = site.data.youtube_playlists.playlists | where: "playlist_id", ov.playlist_id | first %}
+        {% if pl %}
+  
+          {% assign show_upcoming = false %}
+  
+          {% for vid in pl.song_ids %}
+            {% assign song = all_songs | where: "song_id", vid | first %}
+  
+            {% if song and song.videostatus == "scheduled" and song.youtube_metadata.scheduled_at %}
+              {% assign scheduled_ts = song.youtube_metadata.scheduled_at | date: "%s" | plus: 0 %}
+              {% if scheduled_ts >= now_ts and scheduled_ts <= horizon_cutoff %}
+                {% assign show_upcoming = true %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+  
+          {% if show_upcoming %}
+            {% assign upcoming_playlists = upcoming_playlists | push: pl %}
+          {% endif %}
+  
+        {% endif %}
+      {% endfor %}
+  
+      {% for pl in upcoming_playlists %}
+        {% assign ov = site.data.playlist_overrides.overrides | where: "playlist_id", pl.playlist_id | first %}
+        {% assign display_title = ov.title | default: pl.title %}
+        {% assign display_thumbnail = ov.thumbnail | default: pl.thumbnail %}
+  
+        <div class="shared-tile collection-premium coming-soon">
+          <img src="{{ site.baseurl }}{{ display_thumbnail }}">
+          <div class="shared-tile-overlay">Coming Soon</div>
+          <div class="shared-tile-title">{{ display_title }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+  
+  {%- comment -%}
+    Now render all playlists with scheduled songs in the horizon window
+  {%- endcomment -%}
+  
+  {% for pl in site.data.youtube_playlists.playlists %}
+  
+    {% assign playlist_override = site.data.playlist_overrides.overrides
+      | where: "playlist_id", pl.playlist_id
+      | first %}
+  
+    {% assign ordered_ids = playlist_override.songs | default: pl.song_ids %}
+  
+    {% assign ordered_songs = "" | split: "" %}
+    {% assign has_upcoming = false %}
+  
+    {% for sid in ordered_ids %}
+      {% assign s = all_songs | where: "song_id", sid | first %}
+  
+      {% if s and s.videostatus == "scheduled" and s.youtube_metadata.scheduled_at %}
+        {% assign scheduled_ts = s.youtube_metadata.scheduled_at | date: "%s" | plus: 0 %}
+        {% if scheduled_ts >= now_ts and scheduled_ts <= horizon_cutoff %}
+          {% assign ordered_songs = ordered_songs | push: s %}
+          {% assign has_upcoming = true %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  
+    {% if has_upcoming %}
+      <div class="catalog-group-panel">
+        <h2 class="catalog-group-title">{{ pl.title }}</h2>
+  
+        <div class="catalog-group-tiles">
+  
+          {% for song in ordered_songs %}
+            {% assign override = site.data.music_overrides.overrides | where: "song_id", song.song_id | first %}
+            {% assign display_title = override.title | default: song.title %}
+  
+            <div class="shared-tile coming-soon">
+              <img src="{{ site.baseurl }}{{ song.thumbnail }}">
+              <div class="shared-tile-overlay">Coming Soon</div>
+              <div class="shared-tile-title">{{ display_title }}</div>
+            </div>
+          {% endfor %}
+  
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

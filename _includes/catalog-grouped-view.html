@@ -1,3 +1,7 @@
+{% assign window_days = site.data.site.settings.coming_soon_window_days %}
+{% assign window_seconds = window_days | times: 86400 %}
+{% assign now_ts = 'now' | date: "%s" | plus: 0 %}
+{% assign coming_soon_cutoff = now_ts | plus: window_seconds %}
 
 <div class="catalog-group-panel collection-premium-panel">
   <h2 class="catalog-group-title">Collections</h2>
@@ -10,29 +14,42 @@
     {% for ov in collection_overrides %}
       {% assign pl = site.data.youtube_playlists.playlists | where: "playlist_id", ov.playlist_id | first %}
       {% if pl %}
-        {% assign has_public = false %}
+
+        {% assign show_active = false %}
+        {% assign show_coming_soon = false %}
+
         {% for vid in pl.song_ids %}
           {% assign song = all_songs | where: "song_id", vid | first %}
-          {% if song and song.videostatus == "public" %}
-            {% assign has_public = true %}
+
+          {% if song %}
+
+            {% if song.videostatus == "public" %}
+              {% assign show_active = true %}
+
+            {% elsif song.videostatus == "scheduled" and song.youtube_metadata.scheduled_at %}
+              {% assign scheduled_ts = song.youtube_metadata.scheduled_at | date: "%s" | plus: 0 %}
+              {% if scheduled_ts >= now_ts and scheduled_ts <= coming_soon_cutoff %}
+                {% assign show_coming_soon = true %}
+              {% endif %}
+            {% endif %}
+
           {% endif %}
         {% endfor %}
 
-        {% if has_public %}
+        {% if show_active %}
           {% assign active_playlists = active_playlists | push: pl %}
-        {% else %}
+        {% elsif show_coming_soon %}
           {% assign coming_soon_playlists = coming_soon_playlists | push: pl %}
         {% endif %}
+
       {% endif %}
     {% endfor %}
 
-
     {% for pl in active_playlists %}
       {% assign ov = site.data.playlist_overrides.overrides | where: "playlist_id", pl.playlist_id | first %}
-    
       {% assign display_title = ov.title | default: pl.title %}
       {% assign display_thumbnail = ov.thumbnail | default: pl.thumbnail %}
-    
+
       <a class="shared-tile collection-premium"
          href="{{ site.baseurl }}/music/playlists/{{ pl.playlist_id }}/?song_id={{ pl.song_ids | first }}">
         <img src="{{ site.baseurl }}{{ display_thumbnail }}">
@@ -42,10 +59,9 @@
 
     {% for pl in coming_soon_playlists %}
       {% assign ov = site.data.playlist_overrides.overrides | where: "playlist_id", pl.playlist_id | first %}
-    
       {% assign display_title = ov.title | default: pl.title %}
       {% assign display_thumbnail = ov.thumbnail | default: pl.thumbnail %}
-    
+
       <div class="shared-tile collection-premium coming-soon">
         <img src="{{ site.baseurl }}{{ display_thumbnail }}">
         <div class="shared-tile-overlay">Coming Soon</div>
@@ -55,15 +71,8 @@
   </div>
 </div>
 
-{% for pl in site.data.youtube_playlists.playlists %}
 
-  {%- comment -%}
-  Determine the correct song order:
-  1. If playlist_overrides.yml defines a custom order → use it.
-  2. Else use the order in youtube_playlists.yml.
-  3. Collections do NOT alphabetize.
-  4. Regular playlists MAY alphabetize (optional).
-  {%- endcomment -%}
+{% for pl in site.data.youtube_playlists.playlists %}
 
   {% assign playlist_override = site.data.playlist_overrides.overrides
     | where: "playlist_id", pl.playlist_id
@@ -74,15 +83,23 @@
   {% assign ordered_songs = "" | split: "" %}
   {% for sid in ordered_ids %}
     {% assign s = all_songs | where: "song_id", sid | first %}
+
     {% if s %}
-      {% assign ordered_songs = ordered_songs | push: s %}
+
+      {% if s.videostatus == "public" %}
+        {% assign ordered_songs = ordered_songs | push: s %}
+
+      {% elsif s.videostatus == "scheduled" and s.youtube_metadata.scheduled_at %}
+        {% assign scheduled_ts = s.youtube_metadata.scheduled_at | date: "%s" | plus: 0 %}
+        {% if scheduled_ts >= now_ts and scheduled_ts <= coming_soon_cutoff %}
+          {% assign ordered_songs = ordered_songs | push: s %}
+        {% endif %}
+
+      {% endif %}
+
     {% endif %}
   {% endfor %}
 
-  {%- comment -%}
-  Only alphabetize if this is NOT a collection.
-  (Your collections have is_collection: true in playlist_overrides.yml)
-  {%- endcomment -%}
   {% if playlist_override.is_collection != true %}
     {% assign ordered_songs = ordered_songs | sort: "title" %}
   {% endif %}
@@ -93,9 +110,6 @@
 
       <div class="catalog-group-tiles">
 
-        {%- comment -%}
-        PUBLIC SONGS FIRST
-        {%- endcomment -%}
         {% for song in ordered_songs %}
           {% assign override = site.data.music_overrides.overrides | where: "song_id", song.song_id | first %}
           {% assign display_title = override.title | default: song.title %}
@@ -109,14 +123,11 @@
           {% endif %}
         {% endfor %}
 
-        {%- comment -%}
-        COMING SOON SONGS AFTER
-        {%- endcomment -%}
         {% for song in ordered_songs %}
           {% assign override = site.data.music_overrides.overrides | where: "song_id", song.song_id | first %}
           {% assign display_title = override.title | default: song.title %}
 
-          {% if song.videostatus != "public" %}
+          {% if song.videostatus == "scheduled" %}
             <div class="shared-tile coming-soon">
               <img src="{{ site.baseurl }}{{ song.thumbnail }}">
               <div class="shared-tile-overlay">Coming Soon</div>

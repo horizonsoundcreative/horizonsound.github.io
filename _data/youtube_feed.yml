@@ -1,4 +1,232 @@
 songs:
+  - song_id: the-frozen-overture
+    youtube_id: b0cnzGgpSZ8
+    title: The Frozen Overture
+    description_html: ''
+    url: /music/the-frozen-overture/
+    thumbnail: /assets/thumbnails/the-frozen-overture.jpeg
+    videostatus: private
+    playlists: []
+    view_count_num: 0
+    youtube_metadata:
+      published_at: '2026-03-22T13:15:00Z'
+      scheduled_at: null
+      channel_id: UCiko-zjojbsoXrsEuBOPbSw
+      channel_title: Horizon Sound
+      category_id: '22'
+      tags: []
+      duration: PT4M10S
+      definition: hd
+      dimension: null
+      caption: null
+      licensed_content: false
+      region_allowed: []
+      region_blocked: []
+      content_rating: {}
+      statistics:
+        view_count: '0'
+        like_count: '0'
+        favorite_count: '0'
+        comment_count: '0'
+      made_for_kids: false
+      self_declared_made_for_kids: false
+      topic_categories: []
+      privacy_status: null
+      upload_status: null
+      publish_at: null
+      license: ''
+      embeddable: true
+      public_stats_viewable: true
+  - song_id: the-rising-storm
+    youtube_id: GWvSxleB-BY
+    title: The Rising Storm
+    description_html: ''
+    url: /music/the-rising-storm/
+    thumbnail: /assets/thumbnails/the-rising-storm.jpeg
+    videostatus: private
+    playlists: []
+    view_count_num: 0
+    youtube_metadata:
+      published_at: '2026-03-22T13:12:08Z'
+      scheduled_at: null
+      channel_id: UCiko-zjojbsoXrsEuBOPbSw
+      channel_title: Horizon Sound
+      category_id: '22'
+      tags: []
+      duration: PT3M24S
+      definition: hd
+      dimension: null
+      caption: null
+      licensed_content: false
+      region_allowed: []
+      region_blocked: []
+      content_rating: {}
+      statistics:
+        view_count: '0'
+        like_count: '0'
+        favorite_count: '0'
+        comment_count: '0'
+      made_for_kids: false
+      self_declared_made_for_kids: false
+      topic_categories: []
+      privacy_status: null
+      upload_status: null
+      publish_at: null
+      license: ''
+      embeddable: true
+      public_stats_viewable: true
+  - song_id: fire-in-the-choir
+    youtube_id: 0w-6Vk-KMyA
+    title: Fire in the Choir
+    description_html: ''
+    url: /music/fire-in-the-choir/
+    thumbnail: /assets/thumbnails/fire-in-the-choir.jpeg
+    videostatus: private
+    playlists: []
+    view_count_num: 0
+    youtube_metadata:
+      published_at: '2026-03-22T13:08:08Z'
+      scheduled_at: null
+      channel_id: UCiko-zjojbsoXrsEuBOPbSw
+      channel_title: Horizon Sound
+      category_id: '22'
+      tags: []
+      duration: PT4M31S
+      definition: hd
+      dimension: null
+      caption: null
+      licensed_content: false
+      region_allowed: []
+      region_blocked: []
+      content_rating: {}
+      statistics:
+        view_count: '0'
+        like_count: '0'
+        favorite_count: '0'
+        comment_count: '0'
+      made_for_kids: false
+      self_declared_made_for_kids: false
+      topic_categories: []
+      privacy_status: null
+      upload_status: null
+      publish_at: null
+      license: ''
+      embeddable: true
+      public_stats_viewable: true
+  - song_id: glacierstorm
+    youtube_id: eG4S9bwsRTw
+    title: Glacierstorm
+    description_html: ''
+    url: /music/glacierstorm/
+    thumbnail: /assets/thumbnails/glacierstorm.jpeg
+    videostatus: private
+    playlists: []
+    view_count_num: 0
+    youtube_metadata:
+      published_at: '2026-03-22T13:04:13Z'
+      scheduled_at: null
+      channel_id: UCiko-zjojbsoXrsEuBOPbSw
+      channel_title: Horizon Sound
+      category_id: '22'
+      tags: []
+      duration: PT4M37S
+      definition: hd
+      dimension: null
+      caption: null
+      licensed_content: false
+      region_allowed: []
+      region_blocked: []
+      content_rating: {}
+      statistics:
+        view_count: '0'
+        like_count: '0'
+        favorite_count: '0'
+        comment_count: '0'
+      made_for_kids: false
+      self_declared_made_for_kids: false
+      topic_categories: []
+      privacy_status: null
+      upload_status: null
+      publish_at: null
+      license: ''
+      embeddable: true
+      public_stats_viewable: true
+  - song_id: winterfire
+    youtube_id: FJFPlmz-S_4
+    title: Winterfire
+    description_html: ''
+    url: /music/winterfire/
+    thumbnail: /assets/thumbnails/winterfire.jpeg
+    videostatus: private
+    playlists: []
+    view_count_num: 0
+    youtube_metadata:
+      published_at: '2026-03-22T13:00:19Z'
+      scheduled_at: null
+      channel_id: UCiko-zjojbsoXrsEuBOPbSw
+      channel_title: Horizon Sound
+      category_id: '22'
+      tags: []
+      duration: PT4M36S
+      definition: hd
+      dimension: null
+      caption: null
+      licensed_content: false
+      region_allowed: []
+      region_blocked: []
+      content_rating: {}
+      statistics:
+        view_count: '0'
+        like_count: '0'
+        favorite_count: '0'
+        comment_count: '0'
+      made_for_kids: false
+      self_declared_made_for_kids: false
+      topic_categories: []
+      privacy_status: null
+      upload_status: null
+      publish_at: null
+      license: ''
+      embeddable: true
+      public_stats_viewable: true
+  - song_id: winterfire-copy
+    youtube_id: hw6yYYE8fYc
+    title: Winterfire copy
+    description_html: ''
+    url: /music/winterfire-copy/
+    thumbnail: /assets/thumbnails/winterfire-copy.jpeg
+    videostatus: private
+    playlists: []
+    view_count_num: 0
+    youtube_metadata:
+      published_at: '2026-03-22T12:56:54Z'
+      scheduled_at: null
+      channel_id: UCiko-zjojbsoXrsEuBOPbSw
+      channel_title: Horizon Sound
+      category_id: '22'
+      tags: []
+      duration: PT4M6S
+      definition: hd
+      dimension: null
+      caption: null
+      licensed_content: false
+      region_allowed: []
+      region_blocked: []
+      content_rating: {}
+      statistics:
+        view_count: '0'
+        like_count: '0'
+        favorite_count: '0'
+        comment_count: '0'
+      made_for_kids: false
+      self_declared_made_for_kids: false
+      topic_categories: []
+      privacy_status: null
+      upload_status: null
+      publish_at: null
+      license: ''
+      embeddable: true
+      public_stats_viewable: true
   - song_id: falling-toward-the-light
     youtube_id: kyNVmUkFmXQ
     title: Falling Toward the Light
@@ -3483,7 +3711,7 @@ songs:
     videostatus: public
     playlists:
       - after-the-silence-performed-by-lydia-ellington
-    view_count_num: 33
+    view_count_num: 35
     youtube_metadata:
       published_at: '2026-03-03T17:01:12Z'
       scheduled_at: null
@@ -3500,7 +3728,7 @@ songs:
       region_blocked: []
       content_rating: {}
       statistics:
-        view_count: '33'
+        view_count: '35'
         like_count: '1'
         favorite_count: '0'
         comment_count: '0'

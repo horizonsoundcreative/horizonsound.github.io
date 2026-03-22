@@ -1,6 +1,11 @@
 <section id="music-view-playlists">  
   <div class="playlist-premium-grid">
     
+    {% assign window_days = site.data.site.settings.coming_soon_window_days %}
+    {% assign window_seconds = window_days | times: 86400 %}
+    {% assign now_ts = 'now' | date: "%s" | plus: 0 %}
+    {% assign coming_soon_cutoff = now_ts | plus: window_seconds %}
+
     {% assign playlist_data = site.data.youtube_playlists.playlists %}
     {% assign overrides = site.data.playlist_overrides.overrides %}
     
@@ -23,29 +28,34 @@
       {% assign override = overrides | where: "playlist_id", playlist.playlist_id | first %}
       {% assign playlist_song_ids = override.songs | default: playlist.song_ids %}
       
-      {% assign has_public = false %}
+      {% assign show_active = false %}
+      {% assign show_coming_soon = false %}
+
       {% for vid in playlist_song_ids %}
         {% assign song = all_songs | where: "song_id", vid | first %}
-        {% if song and song.videostatus == "public" %}
-          {% assign has_public = true %}
+
+        {% if song %}
+
+          {% if song.videostatus == "public" %}
+            {% assign show_active = true %}
+
+          {% elsif song.videostatus == "scheduled" and song.youtube_metadata.scheduled_at %}
+            {% assign scheduled_ts = song.youtube_metadata.scheduled_at | date: "%s" | plus: 0 %}
+            {% if scheduled_ts >= now_ts and scheduled_ts <= coming_soon_cutoff %}
+              {% assign show_coming_soon = true %}
+            {% endif %}
+
+          {% endif %}
+
         {% endif %}
       {% endfor %}
-      
-{% if playlist.playlist_id == "missing-stamp-venice-trilogy" %}
-  <!-- DEBUG: Venice Trilogy -->
-  {% for vid in playlist_song_ids %}
-    {% assign song = all_songs | where: "song_id", vid | first %}
-    <!-- vid: {{ vid }} | videostatus: {{ song.videostatus }} -->
-  {% endfor %}
-  <!-- has_public: {{ has_public }} -->
-{% endif %}
 
-    {% assign override_thumbnail = override.thumbnail | default: override.hero %}
+      {% assign override_thumbnail = override.thumbnail | default: override.hero %}
       {% assign display_thumbnail = override_thumbnail | default: playlist.thumbnail | default: playlist.hero | default: playlist.youtube_thumbnail %}
       {% assign first_song_id = playlist_song_ids | first %}
       {% assign display_title = override.title | default: playlist.title %}
 
-      {% if has_public %}
+      {% if show_active %}
         <a 
           class="playlist-premium-tile" 
           href="{{ site.baseurl }}/music/playlists/{{ playlist.playlist_id }}/?song_id={{ first_song_id }}"
@@ -60,7 +70,8 @@
             <div class="playlist-premium-title">{{ display_title }}</div>
           </div>
         </a>
-      {% else %}
+
+      {% elsif show_coming_soon %}
         <div class="playlist-premium-tile coming-soon">
           <div class="playlist-premium-image-wrapper">
             <img 

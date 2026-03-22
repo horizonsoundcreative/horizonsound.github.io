@@ -1,4 +1,262 @@
 songs:
+  - song_id: falling-toward-the-light
+    youtube_id: kyNVmUkFmXQ
+    title: Falling Toward the Light
+    description_html: >-
+      <p>A cinematic piano instrumental with emotional chords and warm
+      atmospheric textures. Soft, moving, and cinematic.
+
+      Horizon Sound · Piano Series</p>
+    url: /music/falling-toward-the-light/
+    thumbnail: /assets/thumbnails/falling-toward-the-light.jpeg
+    videostatus: scheduled
+    playlists:
+      - piano-emotional-horizon-sound-instrumentals
+    view_count_num: 0
+    youtube_metadata:
+      published_at: '2026-03-22T00:04:34Z'
+      scheduled_at: '2026-11-28T13:00:00Z'
+      channel_id: UCiko-zjojbsoXrsEuBOPbSw
+      channel_title: Horizon Sound
+      category_id: '22'
+      tags: []
+      duration: PT3M20S
+      definition: hd
+      dimension: null
+      caption: null
+      licensed_content: false
+      region_allowed: []
+      region_blocked: []
+      content_rating: {}
+      statistics:
+        view_count: '0'
+        like_count: '0'
+        favorite_count: '0'
+        comment_count: '0'
+      made_for_kids: false
+      self_declared_made_for_kids: false
+      topic_categories: []
+      privacy_status: null
+      upload_status: null
+      publish_at: null
+      license: ''
+      embeddable: true
+      public_stats_viewable: true
+  - song_id: still-waters
+    youtube_id: Uzs-yWGwowg
+    title: Still Waters
+    description_html: >-
+      <p>A minimalist piano instrumental built around repeating motifs and soft
+      ambience. Peaceful and introspective.
+
+      Horizon Sound · Piano Series</p>
+    url: /music/still-waters/
+    thumbnail: /assets/thumbnails/still-waters.jpeg
+    videostatus: scheduled
+    playlists:
+      - piano-emotional-horizon-sound-instrumentals
+    view_count_num: 0
+    youtube_metadata:
+      published_at: '2026-03-22T00:00:35Z'
+      scheduled_at: '2026-08-08T12:00:00Z'
+      channel_id: UCiko-zjojbsoXrsEuBOPbSw
+      channel_title: Horizon Sound
+      category_id: '22'
+      tags: []
+      duration: PT4M29S
+      definition: hd
+      dimension: null
+      caption: null
+      licensed_content: false
+      region_allowed: []
+      region_blocked: []
+      content_rating: {}
+      statistics:
+        view_count: '0'
+        like_count: '0'
+        favorite_count: '0'
+        comment_count: '0'
+      made_for_kids: false
+      self_declared_made_for_kids: false
+      topic_categories: []
+      privacy_status: null
+      upload_status: null
+      publish_at: null
+      license: ''
+      embeddable: true
+      public_stats_viewable: true
+  - song_id: the-quiet-between-us
+    youtube_id: X_617p-yOF4
+    title: The Quiet Between Us
+    description_html: >-
+      <p>A soft emotional string and piano piece with warm reverb and gentle
+      cinematic swells. Intimate, reflective, and perfect for quiet moments.
+
+      Horizon Sound · Piano Series</p>
+    url: /music/the-quiet-between-us/
+    thumbnail: /assets/thumbnails/the-quiet-between-us.jpeg
+    videostatus: scheduled
+    playlists:
+      - piano-emotional-horizon-sound-instrumentals
+    view_count_num: 0
+    youtube_metadata:
+      published_at: '2026-03-21T23:56:56Z'
+      scheduled_at: '2026-06-13T12:00:00Z'
+      channel_id: UCiko-zjojbsoXrsEuBOPbSw
+      channel_title: Horizon Sound
+      category_id: '22'
+      tags: []
+      duration: PT4M11S
+      definition: hd
+      dimension: null
+      caption: null
+      licensed_content: false
+      region_allowed: []
+      region_blocked: []
+      content_rating: {}
+      statistics:
+        view_count: '0'
+        like_count: '0'
+        favorite_count: '0'
+        comment_count: '0'
+      made_for_kids: false
+      self_declared_made_for_kids: false
+      topic_categories: []
+      privacy_status: null
+      upload_status: null
+      publish_at: null
+      license: ''
+      embeddable: true
+      public_stats_viewable: true
+  - song_id: breathing-slow
+    youtube_id: v28-c9gsbnw
+    title: Breathing Slow
+    description_html: >-
+      <p>A minimalist piano instrumental built around repeating motifs and soft
+      ambience. Peaceful and introspective.
+
+      Horizon Sound · Piano Series</p>
+    url: /music/breathing-slow/
+    thumbnail: /assets/thumbnails/breathing-slow.jpeg
+    videostatus: scheduled
+    playlists:
+      - piano-emotional-horizon-sound-instrumentals
+    view_count_num: 0
+    youtube_metadata:
+      published_at: '2026-03-21T23:52:49Z'
+      scheduled_at: '2026-10-03T12:00:00Z'
+      channel_id: UCiko-zjojbsoXrsEuBOPbSw
+      channel_title: Horizon Sound
+      category_id: '22'
+      tags: []
+      duration: PT4M42S
+      definition: hd
+      dimension: null
+      caption: null
+      licensed_content: false
+      region_allowed: []
+      region_blocked: []
+      content_rating: {}
+      statistics:
+        view_count: '0'
+        like_count: '0'
+        favorite_count: '0'
+        comment_count: '0'
+      made_for_kids: false
+      self_declared_made_for_kids: false
+      topic_categories: []
+      privacy_status: null
+      upload_status: null
+      publish_at: null
+      license: ''
+      embeddable: true
+      public_stats_viewable: true
+  - song_id: a-place-to-rest
+    youtube_id: WSrLEbGeXfQ
+    title: A Place To Rest
+    description_html: >-
+      <p>A cinematic piano instrumental with emotional chords and warm
+      atmospheric textures. Soft, moving, and cinematic.
+
+      Horizon Sound · Piano Series</p>
+    url: /music/a-place-to-rest/
+    thumbnail: /assets/thumbnails/a-place-to-rest.jpeg
+    videostatus: scheduled
+    playlists:
+      - piano-emotional-horizon-sound-instrumentals
+    view_count_num: 0
+    youtube_metadata:
+      published_at: '2026-03-21T23:49:50Z'
+      scheduled_at: '2027-01-23T13:00:00Z'
+      channel_id: UCiko-zjojbsoXrsEuBOPbSw
+      channel_title: Horizon Sound
+      category_id: '22'
+      tags: []
+      duration: PT3M23S
+      definition: hd
+      dimension: null
+      caption: null
+      licensed_content: false
+      region_allowed: []
+      region_blocked: []
+      content_rating: {}
+      statistics:
+        view_count: '0'
+        like_count: '0'
+        favorite_count: '0'
+        comment_count: '0'
+      made_for_kids: false
+      self_declared_made_for_kids: false
+      topic_categories: []
+      privacy_status: null
+      upload_status: null
+      publish_at: null
+      license: ''
+      embeddable: true
+      public_stats_viewable: true
+  - song_id: holding-the-light
+    youtube_id: o5kh0ILxXD8
+    title: Holding the Light
+    description_html: >-
+      <p>A soft emotional string and piano piece with warm reverb and gentle
+      cinematic swells. Intimate, reflective, and perfect for quiet moments.
+
+      Horizon Sound · Piano Series</p>
+    url: /music/holding-the-light/
+    thumbnail: /assets/thumbnails/holding-the-light.jpeg
+    videostatus: scheduled
+    playlists:
+      - piano-emotional-horizon-sound-instrumentals
+    view_count_num: 0
+    youtube_metadata:
+      published_at: '2026-03-21T23:45:54Z'
+      scheduled_at: '2026-04-18T12:00:00Z'
+      channel_id: UCiko-zjojbsoXrsEuBOPbSw
+      channel_title: Horizon Sound
+      category_id: '22'
+      tags: []
+      duration: PT4M21S
+      definition: hd
+      dimension: null
+      caption: null
+      licensed_content: false
+      region_allowed: []
+      region_blocked: []
+      content_rating: {}
+      statistics:
+        view_count: '0'
+        like_count: '0'
+        favorite_count: '0'
+        comment_count: '0'
+      made_for_kids: false
+      self_declared_made_for_kids: false
+      topic_categories: []
+      privacy_status: null
+      upload_status: null
+      publish_at: null
+      license: ''
+      embeddable: true
+      public_stats_viewable: true
   - song_id: break-the-gravity
     youtube_id: wbsa_dyQRHg
     title: Break the Gravity

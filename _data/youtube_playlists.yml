@@ -30,7 +30,13 @@ playlists:
     channel_id: UCiko-zjojbsoXrsEuBOPbSw
     channel_title: Horizon Sound
     thumbnail: null
-    song_ids: []
+    song_ids:
+      - holding-the-light
+      - the-quiet-between-us
+      - still-waters
+      - breathing-slow
+      - a-place-to-rest
+      - falling-toward-the-light
   - playlist_id: workout-edm-horizon-sound-instrumentals
     title: Workout & EDM – Horizon Sound Instrumentals
     description: ''

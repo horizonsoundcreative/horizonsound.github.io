@@ -1,8 +1,3 @@
-{% assign window_days = site.data.site.settings.coming_soon_window_days %}
-{% assign window_seconds = window_days | times: 86400 %}
-{% assign now_ts = 'now' | date: "%s" | plus: 0 %}
-{% assign coming_soon_cutoff = now_ts | plus: window_seconds %}
-
 {% for pl in site.data.youtube_playlists.playlists %}
 
   {% assign show_playlist = false %}
@@ -23,14 +18,36 @@
   {% endfor %}
 
   {% if show_playlist %}
-    <section class="collection-section">
-      <h2 class="collection-section-title">{{ pl.title }}</h2>
-      <div class="catalog-carousel-panel">
-        <div class="collection-carousel-block">
-          {% include carousel.html songs=ordered_songs playlist_id=pl.playlist_id %}
+
+    {% assign playlist_override = site.data.playlist_overrides.overrides
+      | where: "playlist_id", pl.playlist_id
+      | first %}
+
+    {% assign ordered_ids = playlist_override.songs | default: pl.song_ids %}
+
+    {% assign ordered_songs = "" | split: "" %}
+    {% for sid in ordered_ids %}
+      {% assign s = all_songs | where: "song_id", sid | first %}
+      {% if s %}
+        {% assign ordered_songs = ordered_songs | push: s %}
+      {% endif %}
+    {% endfor %}
+
+    {% if playlist_override.is_collection != true %}
+      {% assign ordered_songs = ordered_songs | sort: "title" %}
+    {% endif %}
+
+    {% if ordered_songs.size > 0 %}
+      <section class="collection-section">
+        <h2 class="collection-section-title">{{ pl.title }}</h2>
+        <div class="catalog-carousel-panel">
+          <div class="collection-carousel-block">
+            {% include carousel.html songs=ordered_songs playlist_id=pl.playlist_id %}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    {% endif %}
+
   {% endif %}
 
 {% endfor %}

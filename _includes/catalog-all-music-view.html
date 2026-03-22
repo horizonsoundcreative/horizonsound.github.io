@@ -2,6 +2,11 @@
 
   {% assign all_sorted = all_songs | sort: "title" %}
 
+  {% assign window_days = site.data.site.settings.coming_soon_window_days %}
+  {% assign window_seconds = window_days | times: 86400 %}
+  {% assign now_ts = 'now' | date: "%s" | plus: 0 %}
+  {% assign coming_soon_cutoff = now_ts | plus: window_seconds %}
+
   <!-- Raised panel wrapper -->
   <div class="catalog-allmusic-panel">
 
@@ -26,18 +31,22 @@
       {% endfor %}
 
       {%- comment -%}
-      COMING SOON SONGS
+      COMING SOON SONGS (within window only)
       {%- endcomment -%}
       {% for song in all_sorted %}
         {% assign override = site.data.music_overrides.overrides | where: "song_id", song.song_id | first %}
         {% assign display_title = override.title | default: song.title %}
-
-        {% if song.videostatus != "public" %}
-          <div class="shared-tile coming-soon">
-            <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ display_title }}">
-            <div class="shared-tile-overlay">Coming Soon</div>
-            <div class="shared-tile-title">{{ display_title }}</div>
-          </div>
+      
+        {% if song.videostatus == "scheduled" and song.youtube_metadata.scheduled_at %}
+          {% assign scheduled_ts = song.youtube_metadata.scheduled_at | date: "%s" | plus: 0 %}
+      
+          {% if scheduled_ts >= now_ts and scheduled_ts <= coming_soon_cutoff %}
+            <div class="shared-tile coming-soon">
+              <img src="{{ site.baseurl }}{{ song.thumbnail }}" alt="{{ display_title }}">
+              <div class="shared-tile-overlay">Coming Soon</div>
+              <div class="shared-tile-title">{{ display_title }}</div>
+            </div>
+          {% endif %}
         {% endif %}
       {% endfor %}
 

@@ -53,8 +53,20 @@
     {% assign ordered_songs = "" | split: "" %}
     {% for sid in ordered_ids %}
       {% assign s = all_songs | where: "song_id", sid | first %}
+    
       {% if s %}
-        {% assign ordered_songs = ordered_songs | push: s %}
+    
+        {% if s.videostatus == "public" %}
+          {% assign ordered_songs = ordered_songs | push: s %}
+    
+        {% elsif s.videostatus == "scheduled" and s.youtube_metadata.scheduled_at %}
+          {% assign scheduled_ts = s.youtube_metadata.scheduled_at | date: "%s" | plus: 0 %}
+          {% if scheduled_ts >= now_ts and scheduled_ts <= coming_soon_cutoff %}
+            {% assign ordered_songs = ordered_songs | push: s %}
+          {% endif %}
+    
+        {% endif %}
+    
       {% endif %}
     {% endfor %}
 

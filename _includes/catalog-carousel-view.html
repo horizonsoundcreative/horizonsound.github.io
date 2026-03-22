@@ -1,24 +1,28 @@
+{% assign window_days = site.data.site.settings.coming_soon_window_days %}
+{% assign window_seconds = window_days | times: 86400 %}
+{% assign now_ts = 'now' | date: "%s" | plus: 0 %}
+{% assign coming_soon_cutoff = now_ts | plus: window_seconds %}
+
 {% for pl in site.data.youtube_playlists.playlists %}
 
-  {% assign playlist_override = site.data.playlist_overrides.overrides
-    | where: "playlist_id", pl.playlist_id
-    | first %}
+  {% assign show_playlist = false %}
 
-  {% assign ordered_ids = playlist_override.songs | default: pl.song_ids %}
+  {% for sid in pl.song_ids %}
+    {% assign song = all_songs | where: "song_id", sid | first %}
 
-  {% assign ordered_songs = "" | split: "" %}
-  {% for sid in ordered_ids %}
-    {% assign s = all_songs | where: "song_id", sid | first %}
-    {% if s %}
-      {% assign ordered_songs = ordered_songs | push: s %}
+    {% if song %}
+      {% if song.videostatus == "public" %}
+        {% assign show_playlist = true %}
+      {% elsif song.videostatus == "scheduled" and song.youtube_metadata.scheduled_at %}
+        {% assign scheduled_ts = song.youtube_metadata.scheduled_at | date: "%s" | plus: 0 %}
+        {% if scheduled_ts >= now_ts and scheduled_ts <= coming_soon_cutoff %}
+          {% assign show_playlist = true %}
+        {% endif %}
+      {% endif %}
     {% endif %}
   {% endfor %}
 
-  {% if playlist_override.is_collection != true %}
-    {% assign ordered_songs = ordered_songs | sort: "title" %}
-  {% endif %}
-
-  {% if ordered_songs.size > 0 %}
+  {% if show_playlist %}
     <section class="collection-section">
       <h2 class="collection-section-title">{{ pl.title }}</h2>
       <div class="catalog-carousel-panel">
@@ -28,4 +32,5 @@
       </div>
     </section>
   {% endif %}
+
 {% endfor %}
